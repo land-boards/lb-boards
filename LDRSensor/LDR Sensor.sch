@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 01 Jul 2012 03:40:25 PM EDT
+EESchema Schematic File Version 2  date Sun 01 Jul 2012 04:14:58 PM EDT
 LIBS:device
 LIBS:conn
 LIBS:audio
