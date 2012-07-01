@@ -1,0 +1,236 @@
+EESchema Schematic File Version 2  date Sat 30 Jun 2012 12:26:39 PM EDT
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:special
+LIBS:audio
+LIBS:interface
+LIBS:philips
+LIBS:display
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:EXAR
+LIBS:XR2206-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "30 jun 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 4400 1500
+Wire Wire Line
+	4250 1500 4400 1500
+Connection ~ 6550 2750
+Connection ~ 5850 2650
+Wire Wire Line
+	5850 2600 5850 2750
+Wire Wire Line
+	5850 2750 6550 2750
+Wire Wire Line
+	6700 650  4400 650 
+Wire Wire Line
+	6700 650  6700 1600
+Wire Wire Line
+	6700 1600 7150 1600
+Wire Wire Line
+	4950 2400 5300 2400
+Connection ~ 4400 2400
+Wire Wire Line
+	4400 2400 4450 2400
+Wire Wire Line
+	5300 2300 5250 2300
+Wire Wire Line
+	5300 2100 5200 2100
+Connection ~ 4400 2650
+Wire Wire Line
+	4400 2650 5850 2650
+Wire Wire Line
+	5850 1100 5850 650 
+Wire Wire Line
+	4400 650  4400 700 
+Wire Wire Line
+	6550 2700 6550 2850
+Wire Wire Line
+	4750 1050 4750 950 
+Wire Wire Line
+	4750 950  5150 950 
+Wire Wire Line
+	5150 950  5150 1400
+Wire Wire Line
+	5150 1400 5300 1400
+Wire Wire Line
+	5250 1700 5300 1700
+Wire Wire Line
+	5300 1500 4750 1500
+Wire Wire Line
+	4750 1500 4750 1450
+Wire Wire Line
+	6400 2200 6550 2200
+Wire Wire Line
+	6550 2200 6550 2300
+Wire Wire Line
+	4400 2000 5300 2000
+Connection ~ 4400 2000
+Connection ~ 5850 650 
+Wire Wire Line
+	4400 2700 4400 1100
+Wire Wire Line
+	5300 2200 4650 2200
+Wire Wire Line
+	4650 2200 4650 2100
+Wire Wire Line
+	4650 2100 4700 2100
+Wire Wire Line
+	4400 2300 4750 2300
+Connection ~ 4400 2300
+Wire Wire Line
+	6500 1700 7150 1700
+Wire Wire Line
+	6550 2800 6950 2800
+Connection ~ 6550 2800
+Wire Wire Line
+	6950 2800 6950 1500
+Wire Wire Line
+	6950 1500 7150 1500
+Wire Wire Line
+	4750 1700 4250 1700
+$Comp
+L CONN_2 J2
+U 1 1 4FDCA902
+P 3900 1600
+F 0 "J2" V 3850 1600 40  0000 C CNN
+F 1 "CONN_2" V 3950 1600 40  0000 C CNN
+	1    3900 1600
+	-1   0    0    -1  
+$EndComp
+Text Notes 7650 1550 0    60   ~ 0
+G\nV\nS
+NoConn ~ 7300 2400
+$Comp
+L CONN_1 MTG1
+U 1 1 4FDBED61
+P 7450 2400
+F 0 "MTG1" H 7530 2400 40  0000 L CNN
+F 1 "CONN_1" H 7450 2455 30  0001 C CNN
+	1    7450 2400
+	1    0    0    -1  
+$EndComp
+Text Label 6150 2750 0    60   ~ 0
+GND
+Text Label 6050 650  0    60   ~ 0
++12V
+NoConn ~ 6500 1400
+NoConn ~ 5300 1900
+NoConn ~ 5300 1800
+$Comp
+L CONN_3 J1
+U 1 1 4FDBE66A
+P 7500 1600
+F 0 "J1" V 7450 1600 50  0000 C CNN
+F 1 "CONN_3" V 7550 1600 40  0000 C CNN
+	1    7500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 4FDBE59E
+P 4700 2400
+F 0 "R2" V 4780 2400 50  0000 C CNN
+F 1 "10K" V 4700 2400 50  0000 C CNN
+	1    4700 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 4FDBE58B
+P 5000 2300
+F 0 "R4" V 5080 2300 50  0000 C CNN
+F 1 "10K" V 5000 2300 50  0000 C CNN
+	1    5000 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 4FDBE56E
+P 4950 2100
+F 0 "R3" V 5030 2100 50  0000 C CNN
+F 1 "330" V 4950 2100 50  0000 C CNN
+	1    4950 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L CAPAPOL C3
+U 1 1 4FDBC84C
+P 4400 900
+F 0 "C3" H 4450 1000 50  0000 L CNN
+F 1 "1UF" H 4450 800 50  0000 L CNN
+	1    4400 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 4FDBC7B9
+P 6550 2850
+F 0 "#PWR01" H 6550 2850 30  0001 C CNN
+F 1 "GND" H 6550 2780 30  0001 C CNN
+	1    6550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAPAPOL C2
+U 1 1 4FDBC7A6
+P 6550 2500
+F 0 "C2" H 6600 2600 50  0000 L CNN
+F 1 "1UF" H 6600 2400 50  0000 L CNN
+	1    6550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 4FDBC755
+P 4750 1250
+F 0 "C1" H 4800 1350 50  0000 L CNN
+F 1 "1uF" H 4800 1150 50  0000 L CNN
+	1    4750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 4FDBC71A
+P 4400 2700
+F 0 "#PWR02" H 4400 2700 30  0001 C CNN
+F 1 "GND" H 4400 2630 30  0001 C CNN
+	1    4400 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 4FDBC393
+P 5000 1700
+F 0 "R1" V 5080 1700 50  0000 C CNN
+F 1 "R" V 5000 1700 50  0000 C CNN
+	1    5000 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L XR2206 U1
+U 1 1 4FDBC311
+P 5850 1900
+F 0 "U1" H 6370 2570 60  0000 C CNN
+F 1 "XR2206" H 6200 2670 60  0000 C CNN
+	1    5850 1900
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

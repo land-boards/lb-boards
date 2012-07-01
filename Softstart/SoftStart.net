@@ -1,0 +1,129 @@
+# EESchema Netlist Version 1.1 created  Sat 16 Jun 2012 11:19:11 PM EDT
+(
+ ( /4FDD44C3 $noname  MTG4 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FDD44C0 $noname  MTG3 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FDD44BD $noname  MTG2 MTG2 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FDD44B9 $noname  MTG1 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FAD1579 $noname  SW1 SW_PUSH {Lib=SW_PUSH}
+  (    1 /SWA )
+  (    2 /SWB )
+ )
+ ( /4FAD14E8 $noname  C1 47uF {Lib=CP}
+  (    1 N-000002 )
+  (    2 /GND )
+ )
+ ( /4FAD1492 $noname  P2 CONN_2 {Lib=CONN_2}
+  (    1 /OUT )
+  (    2 /GND )
+ )
+ ( /4FAD13A7 $noname  Q3 2N3904 {Lib=NPN}
+  (    1 /GND )
+  (    2 N-000002 )
+  (    3 /SWB )
+ )
+ ( /4FAD13A1 $noname  R4 100K {Lib=R}
+  (    1 /IN )
+  (    2 /SWB )
+ )
+ ( /4FAD139A $noname  R3 1M {Lib=R}
+  (    1 /OUT )
+  (    2 N-000002 )
+ )
+ ( /4FAD1394 $noname  R2 100K {Lib=R}
+  (    1 /OUT )
+  (    2 /SWA )
+ )
+ ( /4FAD1349 $noname  Q2 2N3904 {Lib=NPN}
+  (    1 /GND )
+  (    2 /SWA )
+  (    3 /GATE )
+ )
+ ( /4FAD1336 $noname  R1 100K {Lib=R}
+  (    1 /IN )
+  (    2 /GATE )
+ )
+ ( /4FAD12C5 $noname  P1 CONN_2 {Lib=CONN_2}
+  (    1 /IN )
+  (    2 /GND )
+ )
+ ( /4FAD125A $noname  Q1 IRF_9110 {Lib=MOSFET_P}
+  (    D /OUT )
+  (    G /GATE )
+  (    S /IN )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "/GND" "GND"
+ Q2 1
+ P1 2
+ Q3 1
+ P2 2
+ C1 2
+Net 2 "" ""
+ C1 1
+ Q3 2
+ R3 2
+Net 7 "/OUT" "OUT"
+ Q1 D
+ P2 1
+ R3 1
+ R2 1
+Net 8 "/SWA" "SWA"
+ SW1 1
+ R2 2
+ Q2 2
+Net 9 "/SWB" "SWB"
+ SW1 2
+ R4 2
+ Q3 3
+Net 10 "/GATE" "GATE"
+ Q2 3
+ R1 2
+ Q1 G
+Net 11 "/IN" "IN"
+ R1 1
+ R4 1
+ Q1 S
+ P1 1
+}
+#End

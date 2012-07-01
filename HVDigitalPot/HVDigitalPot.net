@@ -1,0 +1,96 @@
+# EESchema Netlist Version 1.1 created  Tue 26 Jun 2012 06:45:22 AM EDT
+(
+ ( /4FE90DD1 C1 C1 0.1uF
+  ( 1 GND )
+  ( 2 VDD )
+ )
+ ( /4FE90DDB C1 C2 0.1uF
+  ( 1 GND )
+  ( 2 VSS )
+ )
+ ( /4FE669F2 SIL-8 J1 CONN_8
+  ( 1 VDD )
+  ( 2 VSS )
+  ( 3 /+5V )
+  ( 4 /SD1 )
+  ( 5 /SD2 )
+  ( 6 /CLK )
+  ( 7 /~CS )
+  ( 8 GND )
+ )
+ ( /4FE66B71 SIL-3 J2 CONN_3
+  ( 1 N-000011 )
+  ( 2 N-000002 )
+  ( 3 N-000003 )
+ )
+ ( /4FE66B79 SIL-3 J3 CONN_3
+  ( 1 N-000013 )
+  ( 2 N-000010 )
+  ( 3 N-000019 )
+ )
+ ( /4FE914C0 SIL-2 J4 CONN_2
+  ( 1 VSS )
+  ( 2 GND )
+ )
+ ( /4FE70E8A MTG4 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FE70E8F MTG4 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /4FE71EB3 MTG4 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /4FE66B15 R3 R1 4.7K
+  ( 1 /PULLUP )
+  ( 2 /+5V )
+ )
+ ( /4FE6689C -SO16W U1 AD7376ARWZ50
+  ( 1 N-000011 )
+  ( 2 N-000003 )
+  ( 3 VSS )
+  ( 4 GND )
+  ( 5 /~CS )
+  ( 6 /PULLUP )
+  ( 7 /CLK )
+  ( 11 /SD1 )
+  ( 12 /PULLUP )
+  ( 13 ? )
+  ( 14 VDD )
+  ( 16 N-000002 )
+ )
+ ( /4FE668B9 -SO16W U2 AD7376ARWZ50
+  ( 1 N-000013 )
+  ( 2 N-000019 )
+  ( 3 VSS )
+  ( 4 GND )
+  ( 5 /~CS )
+  ( 6 /PULLUP )
+  ( 7 /CLK )
+  ( 11 /SD2 )
+  ( 12 /PULLUP )
+  ( 13 ? )
+  ( 14 VDD )
+  ( 16 N-000010 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

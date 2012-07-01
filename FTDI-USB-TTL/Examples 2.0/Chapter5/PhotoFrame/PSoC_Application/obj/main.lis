@@ -1,0 +1,1393 @@
+                        .module main.c
+                        .area lit(rom, con, rel)
+ 0000           _SignOn::
+ 0000 50686F746F4672616D652056302E3300  .byte 'P,'h,'o,'t,'o,'F,'r,'a,'m,'e,32,'V,48,46,51,0
+ 0010                   .dbfile ./main.c
+ 0010                   .dbsym e SignOn _SignOn A[16:16]c
+ 0010           _NoDrive::
+ 0010 4E6F20466C61736820447269766500    .byte 'N,'o,32,'F,'l,'a,'s,'h,32,'D,'r,'i,'v,'e,0
+ 001F                   .dbsym e NoDrive _NoDrive A[15:15]c
+ 001F           _NoFiles::
+ 001F 4E6F202E494D472066696C65732000    .byte 'N,'o,32,46,'I,'M,'G,32,'f,'i,'l,'e,'s,32,0
+ 002E                   .dbsym e NoFiles _NoFiles A[15:15]c
+ 002E           _SetBaudRate::
+ 002E 534244201800000D00        .byte 'S,'B,'D,32,24,0,0,13,0
+ 0037                   .dbsym e SetBaudRate _SetBaudRate A[9:9]c
+ 0037           _FileCommand::
+ 0037 444952203030302E696D670D00        .byte 'D,'I,'R,32,48,48,48,46,'i,'m,'g,13,0
+ 0044                   .dbsym e FileCommand _FileCommand A[13:13]c
+ 0044           _MP3::
+ 0044 444952200000002E6D70330D00        .byte 'D,'I,'R,32,0,0,0,46,'m,'p,51,13,0
+ 0051                   .dbsym e MP3 _MP3 A[13:13]c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000                   .dbfunc e OneMillisecond_ISR _OneMillisecond_ISR fV
+ 0000           _OneMillisecond_ISR::
+ 0000                   .dbline -1
+ 0000 08                push A
+ 0001 5100              mov A,[__r0]
+ 0003 08                push A
+ 0004 5100              mov A,[__r1]
+ 0006 08                push A
+ 0007                   .dbline 29
+ 0007           ; //----------------------------------------------------------------------------
+ 0007           ; // C main line
+ 0007           ; //----------------------------------------------------------------------------
+ 0007           ; 
+ 0007           ; #include <m8c.h>        // part specific constants and macros
+ 0007           ; #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
+ 0007           ; 
+ 0007           ; #define CR                            0x0D
+ 0007           ; #define ACK                           6
+ 0007           ; #define VC3_Interrupt 0x80
+ 0007           ; 
+ 0007           ; typedef unsigned char bool;
+ 0007           ; typedef unsigned char byte;
+ 0007           ; typedef unsigned int word;
+ 0007           ; 
+ 0007           ; const byte SignOn[] = {"PhotoFrame V0.3"};
+ 0007           ; const byte NoDrive[] = {"No Flash Drive"};
+ 0007           ; const byte NoFiles[] = {"No .IMG files "};
+ 0007           ; const byte SetBaudRate[] = {"SBD \30\0\0\r"}; // 30 octal = 24 decimal = 125000 baud
+ 0007           ; const byte FileCommand[] = {"DIR 000.img\r"};
+ 0007           ; const byte MP3[] = {"DIR \0\0\0.mp3\r"};
+ 0007           ; byte InBuffer[32];
+ 0007           ; byte OutBuffer[32];
+ 0007           ; byte Index, Delay, CurrentUART;
+ 0007           ; word PreScalar;
+ 0007           ; long FileSize;
+ 0007           ; 
+ 0007           ; #pragma interrupt_handler OneMillisecond_ISR
+ 0007           ; void OneMillisecond_ISR (void) {
+ 0007                   .dbline 31
+ 0007           ; // This is clocked by VC3.  VCx values produce an 8KHz VC3 interrupt
+ 0007           ;       if (++PreScalar > 8000) {
+ 0007 5105              mov A,[_PreScalar+1]
+ 0009 0101              add A,1
+ 000B 5300              mov [__r1],A
+ 000D 5104              mov A,[_PreScalar]
+ 000F 0900              adc A,0
+ 0011 5300              mov [__r0],A
+ 0013 5F0500            mov [_PreScalar+1],[__r1]
+ 0016 5304              mov [_PreScalar],A
+ 0018 5040              mov A,64
+ 001A 1200              sub A,[__r1]
+ 001C 501F              mov A,31
+ 001E 1A00              sbb A,[__r0]
+ 0020 D00E              jnc L2
+ 0022           X0:
+ 0022                   .dbline 31
+ 0022                   .dbline 32
+ 0022           ;               PreScalar = 1;
+ 0022 550501            mov [_PreScalar+1],1
+ 0025 550400            mov [_PreScalar],0
+ 0028                   .dbline 33
+ 0028           ;               if (Delay) Delay--;
+ 0028 3C0700            cmp [_Delay],0
+ 002B A003              jz L4
+ 002D                   .dbline 33
+ 002D 7A07              dec [_Delay]
+ 002F           L4:
+ 002F                   .dbline 34
+ 002F           L2:
+ 002F                   .dbline -2
+ 002F                   .dbline 35
+ 002F           ;               }
+ 002F           ;       }
+ 002F           L1:
+ 002F 18                pop A
+ 0030 5300              mov [__r1],A
+ 0032 18                pop A
+ 0033 5300              mov [__r0],A
+ 0035 18                pop A
+ 0036                   .dbline 0 ; func end
+ 0036 7E                reti
+ 0037                   .dbend
+ 0037                   .dbfunc e Wait _Wait fV
+ 0037           ;        Seconds -> X-4
+ 0037           _Wait::
+ 0037                   .dbline -1
+ 0037 10                push X
+ 0038 4F                mov X,SP
+ 0039                   .dbline 37
+ 0039           ; 
+ 0039           ; void Wait(byte Seconds) {
+ 0039                   .dbline 38
+ 0039           ;       PreScalar = 1;
+ 0039 550501            mov [_PreScalar+1],1
+ 003C 550400            mov [_PreScalar],0
+ 003F                   .dbline 39
+ 003F           ;       Delay = Seconds;
+ 003F 52FC              mov A,[X-4]
+ 0041 5307              mov [_Delay],A
+ 0043           L7:
+ 0043                   .dbline 40
+ 0043                   .dbline 42
+ 0043           L8:
+ 0043                   .dbline 40
+ 0043           ;       while (Delay) {
+ 0043 3C0700            cmp [_Delay],0
+ 0046 BFFC              jnz L7
+ 0048                   .dbline -2
+ 0048                   .dbline 43
+ 0048           ; // Wait, Delay is decremented in ISR
+ 0048           ;               }
+ 0048           ;       }
+ 0048           L6:
+ 0048 20                pop X
+ 0049                   .dbline 0 ; func end
+ 0049 7F                ret
+ 004A                   .dbsym l Seconds -4 c
+ 004A                   .dbend
+ 004A                   .dbfunc e SwitchUART _SwitchUART fV
+ 004A           ;          Index -> X-4
+ 004A           _SwitchUART::
+ 004A                   .dbline -1
+ 004A 10                push X
+ 004B 4F                mov X,SP
+ 004C                   .dbline 45
+ 004C           ; 
+ 004C           ; void SwitchUART(byte Index) {
+ 004C                   .dbline 47
+ 004C           ; // Index = 0, switch to Vinculum; Index != 0, switch to Display
+ 004C           ;       if (Index == CurrentUART) return;
+ 004C 52FC              mov A,[X-4]
+ 004E 3A06              cmp A,[_CurrentUART]
+ 0050 B003              jnz L11
+ 0052                   .dbline 47
+ 0052 8040              xjmp L10
+ 0054           L11:
+ 0054                   .dbline 48
+ 0054           ;       UART_Stop();
+ 0054 10                push X
+ 0055 7C0000            xcall _UART_Stop
+ 0058 20                pop X
+ 0059                   .dbline 49
+ 0059           ;       if (Index) {
+ 0059 3DFC00            cmp [X-4],0
+ 005C A017              jz L13
+ 005E                   .dbline 49
+ 005E                   .dbline 50
+ 005E           ;               RDI0LT1 |= 0xf0;                // Set V_TX high
+ 005E 43B4F0            or REG[0xb4],-16
+ 0061                   .dbline 51
+ 0061           ;               DCB03IN &= 0xef;                // RX input = D_RX
+ 0061 7110              or F,0x10  ; iopage = 1
+ 0063 412DEF            and REG[0x2d],-17
+ 0066 70EF              and F,0xEF ; iopage = 0
+ 0068                   .dbline 52
+ 0068           ;               DCB02OU &= 0xfe;                // TX drives D_TX
+ 0068 7110              or F,0x10  ; iopage = 1
+ 006A 412AFE            and REG[0x2a],-2
+ 006D 70EF              and F,0xEF ; iopage = 0
+ 006F                   .dbline 53
+ 006F           ;               RDI0LT1 &= 0xf3;                // D_TX drives IO
+ 006F 41B4F3            and REG[0xb4],-13
+ 0072                   .dbline 54
+ 0072           ;               }
+ 0072 8015              xjmp L14
+ 0074           L13:
+ 0074                   .dbline 55
+ 0074           ;       else {
+ 0074                   .dbline 56
+ 0074           ;               RDI0LT1 |= 0x0f;                // Set D_TX high
+ 0074 43B40F            or REG[0xb4],15
+ 0077                   .dbline 57
+ 0077           ;               DCB03IN |= 0x10;                // RX input = V_RX
+ 0077 7110              or F,0x10  ; iopage = 1
+ 0079 432D10            or REG[0x2d],16
+ 007C 70EF              and F,0xEF ; iopage = 0
+ 007E                   .dbline 58
+ 007E           ;               DCB02OU |= 0x01;                // TX drives V_TX
+ 007E 7110              or F,0x10  ; iopage = 1
+ 0080 432A01            or REG[0x2a],1
+ 0083 70EF              and F,0xEF ; iopage = 0
+ 0085                   .dbline 59
+ 0085           ;               RDI0LT1 &= 0x3f;                // V_TX drives IO
+ 0085 41B43F            and REG[0xb4],63
+ 0088                   .dbline 60
+ 0088           ;               }
+ 0088           L14:
+ 0088                   .dbline 61
+ 0088           ;       CurrentUART = Index;
+ 0088 52FC              mov A,[X-4]
+ 008A 5306              mov [_CurrentUART],A
+ 008C                   .dbline 62
+ 008C           ;       UART_Start(UART_PARITY_NONE);
+ 008C 10                push X
+ 008D 5000              mov A,0
+ 008F 7C0000            xcall _UART_Start
+ 0092 20                pop X
+ 0093                   .dbline -2
+ 0093                   .dbline 63
+ 0093           ;       }
+ 0093           L10:
+ 0093 20                pop X
+ 0094                   .dbline 0 ; func end
+ 0094 7F                ret
+ 0095                   .dbsym l Index -4 c
+ 0095                   .dbend
+ 0095                   .dbfunc e WriteVinculum _WriteVinculum fV
+ 0095           ;          Index -> X+0
+ 0095           ;         Length -> X-4
+ 0095           _WriteVinculum::
+ 0095                   .dbline -1
+ 0095 10                push X
+ 0096 4F                mov X,SP
+ 0097 3801              add SP,1
+ 0099                   .dbline 65
+ 0099           ;       
+ 0099           ; void WriteVinculum(byte Length) {
+ 0099                   .dbline 68
+ 0099           ;       byte Index;
+ 0099           ; // Setup interconnect to access Vinculum
+ 0099           ;       SwitchUART(0);
+ 0099 5000              mov A,0
+ 009B 08                push A
+ 009C 9FAC              xcall _SwitchUART
+ 009E 38FF              add SP,-1
+ 00A0                   .dbline 69
+ 00A0           ;       Index = 0;
+ 00A0 560000            mov [X+0],0
+ 00A3                   .dbline 71
+ 00A3           ; // Allow for RD command, only 2 letters
+ 00A3           ;       if (OutBuffer[0] == 0) Index = 1;
+ 00A3 3C0900            cmp [_OutBuffer],0
+ 00A6 B02A              jnz L19
+ 00A8                   .dbline 71
+ 00A8 560001            mov [X+0],1
+ 00AB 8025              xjmp L19
+ 00AD           L18:
+ 00AD                   .dbline 72
+ 00AD           ;       while (Length--) {
+ 00AD                   .dbline 73
+ 00AD           ;               UART_PutChar(OutBuffer[Index++]);
+ 00AD 5200              mov A,[X+0]
+ 00AF 5300              mov [__r1],A
+ 00B1 550000            mov [__r0],0
+ 00B4 0101              add A,1
+ 00B6 5400              mov [X+0],A
+ 00B8 060009            add [__r1],<_OutBuffer
+ 00BB 0E0009            adc [__r0],>_OutBuffer
+ 00BE 3E00              mvi A,[__r1]
+ 00C0 10                push X
+ 00C1 7C0000            xcall _UART_PutChar
+ 00C4 20                pop X
+ 00C5           L21:
+ 00C5                   .dbline 75
+ 00C5                   .dbline 75
+ 00C5           L22:
+ 00C5                   .dbline 75
+ 00C5 10                push X
+ 00C6 7C0000            xcall _UART_bReadTxStatus
+ 00C9 20                pop X
+ 00CA 5300              mov [__r0],A
+ 00CC 470020            tst [__r0],32
+ 00CF AFF5              jz L21
+ 00D1                   .dbline 76
+ 00D1           L19:
+ 00D1                   .dbline 72
+ 00D1 52FC              mov A,[X-4]
+ 00D3 5300              mov [__r1],A
+ 00D5 550000            mov [__r0],0
+ 00D8 1101              sub A,1
+ 00DA 54FC              mov [X-4],A
+ 00DC 3C0000            cmp [__r0],0
+ 00DF BFCD              jnz L18
+ 00E1 3C0000            cmp [__r1],0
+ 00E4 BFC8              jnz L18
+ 00E6           X1:
+ 00E6                   .dbline -2
+ 00E6                   .dbline 77
+ 00E6           ; // Wait for character to be sent
+ 00E6           ;               while (!(UART_bReadTxStatus() & UART_TX_COMPLETE)) { /* Wait */ }
+ 00E6           ;               }
+ 00E6           ;       }
+ 00E6           L15:
+ 00E6 38FF              add SP,-1
+ 00E8 20                pop X
+ 00E9                   .dbline 0 ; func end
+ 00E9 7F                ret
+ 00EA                   .dbsym l Index 0 c
+ 00EA                   .dbsym l Length -4 c
+ 00EA                   .dbend
+ 00EA                   .dbfunc e ReadVinculum _ReadVinculum fV
+ 00EA           ;          Index -> X+1
+ 00EA           ;      InputChar -> X+0
+ 00EA           _ReadVinculum::
+ 00EA                   .dbline -1
+ 00EA 10                push X
+ 00EB 4F                mov X,SP
+ 00EC 3802              add SP,2
+ 00EE                   .dbline 79
+ 00EE           ; 
+ 00EE           ; void ReadVinculum(void) {
+ 00EE                   .dbline 83
+ 00EE           ;       byte Index;
+ 00EE           ;       char InputChar;
+ 00EE           ; // Setup interconnect to access Vinculum
+ 00EE           ;       SwitchUART(0);
+ 00EE 5000              mov A,0
+ 00F0 08                push A
+ 00F1 9F57              xcall _SwitchUART
+ 00F3 38FF              add SP,-1
+ 00F5                   .dbline 85
+ 00F5           ; // Collect characters until CR, skip first character if CR
+ 00F5           ;       Index = 0;
+ 00F5 560100            mov [X+1],0
+ 00F8                   .dbline 87
+ 00F8           ; // But don't wait more than a second
+ 00F8           ;       PreScalar = 0;
+ 00F8 550500            mov [_PreScalar+1],0
+ 00FB 550400            mov [_PreScalar],0
+ 00FE                   .dbline 88
+ 00FE           ;       Delay = 1;
+ 00FE 550701            mov [_Delay],1
+ 0101                   .dbline 89
+ 0101           ;       InputChar = UART_cGetChar();
+ 0101 10                push X
+ 0102 7C0000            xcall _UART_cGetChar
+ 0105 20                pop X
+ 0106 5400              mov [X+0],A
+ 0108                   .dbline 90
+ 0108           ;       if (InputChar == CR) InputChar = UART_cGetChar();
+ 0108 3D000D            cmp [X+0],13
+ 010B B026              jnz L28
+ 010D                   .dbline 90
+ 010D 10                push X
+ 010E 7C0000            xcall _UART_cGetChar
+ 0111 20                pop X
+ 0112 5400              mov [X+0],A
+ 0114 801D              xjmp L28
+ 0116           L27:
+ 0116                   .dbline 91
+ 0116                   .dbline 92
+ 0116 5201              mov A,[X+1]
+ 0118 5300              mov [__r1],A
+ 011A 550000            mov [__r0],0
+ 011D 0101              add A,1
+ 011F 5401              mov [X+1],A
+ 0121 060029            add [__r1],<_InBuffer
+ 0124 0E0029            adc [__r0],>_InBuffer
+ 0127 5200              mov A,[X+0]
+ 0129 3F00              mvi [__r1],A
+ 012B                   .dbline 93
+ 012B 10                push X
+ 012C 7C0000            xcall _UART_cGetChar
+ 012F 20                pop X
+ 0130 5400              mov [X+0],A
+ 0132                   .dbline 94
+ 0132           L28:
+ 0132                   .dbline 91
+ 0132           ;       while ((InputChar != CR) && (Index<sizeof(InBuffer)) && Delay) {
+ 0132 3D000D            cmp [X+0],13
+ 0135 A00B              jz L31
+ 0137 3D0120            cmp [X+1],32
+ 013A D006              jnc L31
+ 013C           X2:
+ 013C 3C0700            cmp [_Delay],0
+ 013F BFD6              jnz L27
+ 0141           L31:
+ 0141                   .dbline 95
+ 0141           ;               InBuffer[Index++] = InputChar;
+ 0141           ;               InputChar = UART_cGetChar();
+ 0141           ;               }
+ 0141           ;       InBuffer[Index] = CR;
+ 0141 5201              mov A,[X+1]
+ 0143 5300              mov [__r1],A
+ 0145 550000            mov [__r0],0
+ 0148 060029            add [__r1],<_InBuffer
+ 014B 0E0029            adc [__r0],>_InBuffer
+ 014E 500D              mov A,13
+ 0150 3F00              mvi [__r1],A
+ 0152                   .dbline -2
+ 0152                   .dbline 96
+ 0152           ;       }
+ 0152           L24:
+ 0152 38FE              add SP,-2
+ 0154 20                pop X
+ 0155                   .dbline 0 ; func end
+ 0155 7F                ret
+ 0156                   .dbsym l Index 1 c
+ 0156                   .dbsym l InputChar 0 c
+ 0156                   .dbend
+ 0156                   .dbfunc e WriteDisplay _WriteDisplay fV
+ 0156           ;      InputChar -> X+0
+ 0156           ;         Length -> X-4
+ 0156           _WriteDisplay::
+ 0156                   .dbline -1
+ 0156 10                push X
+ 0157 4F                mov X,SP
+ 0158 3801              add SP,1
+ 015A                   .dbline 98
+ 015A                   .dbline 101
+ 015A 5001              mov A,1
+ 015C 08                push A
+ 015D 9EEB              xcall _SwitchUART
+ 015F 38FF              add SP,-1
+ 0161                   .dbline 102
+ 0161 10                push X
+ 0162 52FC              mov A,[X-4]
+ 0164 08                push A
+ 0165 5009              mov A,>_OutBuffer
+ 0167 08                push A
+ 0168 5009              mov A,<_OutBuffer
+ 016A 08                push A
+ 016B 7C0000            xcall _UART_Write
+ 016E 38FD              add SP,-3
+ 0170                   .dbline 103
+ 0170 7C0000            xcall _UART_cGetChar
+ 0173 20                pop X
+ 0174 5400              mov [X+0],A
+ 0176                   .dbline 104
+ 0176 3D0006            cmp [X+0],6
+ 0179 A004              jz L33
+ 017B                   .dbline 104
+ 017B                   .dbline 106
+ 017B 550800            mov [_Index],0
+ 017E                   .dbline 107
+ 017E           L33:
+ 017E                   .dbline -2
+ 017E                   .dbline 108
+ 017E           ; 
+ 017E           ; void WriteDisplay(byte Length) {
+ 017E           ; // Send command to display and wait for an ACK
+ 017E           ;       char InputChar;
+ 017E           ;       SwitchUART(1);
+ 017E           ;       UART_Write(&OutBuffer[0], Length);
+ 017E           ;       InputChar = UART_cGetChar();
+ 017E           ;       if (InputChar != ACK) {
+ 017E           ; // Set a breakpoint here to check for errors
+ 017E           ;               Index = 0;
+ 017E           ;               }
+ 017E           ;       }
+ 017E           L32:
+ 017E 38FF              add SP,-1
+ 0180 20                pop X
+ 0181                   .dbline 0 ; func end
+ 0181 7F                ret
+ 0182                   .dbsym l InputChar 0 c
+ 0182                   .dbsym l Length -4 c
+ 0182                   .dbend
+ 0182                   .dbfunc e InitializeVinculum _InitializeVinculum fV
+ 0182           ;              i -> X+0
+ 0182           _InitializeVinculum::
+ 0182                   .dbline -1
+ 0182 10                push X
+ 0183 4F                mov X,SP
+ 0184 3801              add SP,1
+ 0186                   .dbline 110
+ 0186           ; 
+ 0186           ; void InitializeVinculum(void) {
+ 0186                   .dbline 113
+ 0186           ;       byte i;
+ 0186           ; // Vinculum can send a variety of messages depending upon the hardware configuration
+ 0186           ;       ReadVinculum();
+ 0186 9F62              xcall _ReadVinculum
+ 0188                   .dbline 114
+ 0188           ;       OutBuffer[0] = 'E';             // Look for an echo
+ 0188 550945            mov [_OutBuffer],69
+ 018B                   .dbline 115
+ 018B           ;       OutBuffer[1] = CR;
+ 018B 550A0D            mov [_OutBuffer+1],13
+ 018E 800A              xjmp L38
+ 0190           L37:
+ 0190                   .dbline 116
+ 0190                   .dbline 117
+ 0190 5002              mov A,2
+ 0192 08                push A
+ 0193 9F00              xcall _WriteVinculum
+ 0195 38FF              add SP,-1
+ 0197                   .dbline 118
+ 0197 9F51              xcall _ReadVinculum
+ 0199                   .dbline 119
+ 0199           L38:
+ 0199                   .dbline 116
+ 0199           ;       while (InBuffer[0] != 'E') {
+ 0199 3C2945            cmp [_InBuffer],69
+ 019C BFF3              jnz L37
+ 019E                   .dbline 121
+ 019E 560000            mov [X+0],0
+ 01A1 802A              xjmp L43
+ 01A3           L40:
+ 01A3                   .dbline 121
+ 01A3 5200              mov A,[X+0]
+ 01A5 5300              mov [__r1],A
+ 01A7 550000            mov [__r0],0
+ 01AA 06002E            add [__r1],<_SetBaudRate
+ 01AD 0E002E            adc [__r0],>_SetBaudRate
+ 01B0 5100              mov A,[__r0]
+ 01B2 10                push X
+ 01B3 5800              mov X,[__r1]
+ 01B5 28                romx
+ 01B6 20                pop X
+ 01B7 5300              mov [__r0],A
+ 01B9 5200              mov A,[X+0]
+ 01BB 5300              mov [__r3],A
+ 01BD 550000            mov [__r2],0
+ 01C0 060009            add [__r3],<_OutBuffer
+ 01C3 0E0009            adc [__r2],>_OutBuffer
+ 01C6 5100              mov A,[__r0]
+ 01C8 3F00              mvi [__r3],A
+ 01CA           L41:
+ 01CA                   .dbline 121
+ 01CA 7700              inc [X+0]
+ 01CC           L43:
+ 01CC                   .dbline 121
+ 01CC           ;               WriteVinculum(2);
+ 01CC           ;               ReadVinculum();
+ 01CC           ;               }
+ 01CC           ; // Set Vinculum baud rate to 125000
+ 01CC           ;       for (i=0; i<sizeof(SetBaudRate); i++) OutBuffer[i] = SetBaudRate[i];
+ 01CC 3D0009            cmp [X+0],9
+ 01CF CFD3              jc L40
+ 01D1           X3:
+ 01D1                   .dbline 122
+ 01D1           ;       WriteVinculum(sizeof(SetBaudRate)-1);
+ 01D1 5008              mov A,8
+ 01D3 08                push A
+ 01D4 9EBF              xcall _WriteVinculum
+ 01D6 38FF              add SP,-1
+ 01D8                   .dbline 123
+ 01D8           ;       ReadVinculum();                 // Vinculum returns a prompt immediately
+ 01D8 9F10              xcall _ReadVinculum
+ 01DA                   .dbline -2
+ 01DA                   .dbline 124
+ 01DA           ;       }
+ 01DA           L35:
+ 01DA 38FF              add SP,-1
+ 01DC 20                pop X
+ 01DD                   .dbline 0 ; func end
+ 01DD 7F                ret
+ 01DE                   .dbsym l i 0 c
+ 01DE                   .dbend
+ 01DE                   .dbfunc e InitializeDisplay _InitializeDisplay fV
+ 01DE           ;              i -> X+0
+ 01DE           _InitializeDisplay::
+ 01DE                   .dbline -1
+ 01DE 10                push X
+ 01DF 4F                mov X,SP
+ 01E0 3801              add SP,1
+ 01E2                   .dbline 126
+ 01E2           ; 
+ 01E2           ; void InitializeDisplay(void) {
+ 01E2                   .dbline 129
+ 01E2           ;       byte i;
+ 01E2           ; // Set the Display baud rate to 125000
+ 01E2           ;       OutBuffer[0] = 'U';
+ 01E2 550955            mov [_OutBuffer],85
+ 01E5                   .dbline 130
+ 01E5           ;       WriteDisplay(1);
+ 01E5 5001              mov A,1
+ 01E7 08                push A
+ 01E8 9F6C              xcall _WriteDisplay
+ 01EA                   .dbline 132
+ 01EA           ; // Clear the screen and write a Signon
+ 01EA           ;       OutBuffer[0] = 'E';
+ 01EA 550945            mov [_OutBuffer],69
+ 01ED                   .dbline 133
+ 01ED           ;       WriteDisplay(1);
+ 01ED 5001              mov A,1
+ 01EF 08                push A
+ 01F0 9F64              xcall _WriteDisplay
+ 01F2 38FE              add SP,-2
+ 01F4                   .dbline 134
+ 01F4           ;       OutBuffer[0] = 'F';             // Choose medium font size
+ 01F4 550946            mov [_OutBuffer],70
+ 01F7                   .dbline 135
+ 01F7           ;       OutBuffer[1] = 1;
+ 01F7 550A01            mov [_OutBuffer+1],1
+ 01FA                   .dbline 136
+ 01FA           ;       WriteDisplay(2);
+ 01FA 5002              mov A,2
+ 01FC 08                push A
+ 01FD 9F57              xcall _WriteDisplay
+ 01FF                   .dbline 137
+ 01FF           ;       OutBuffer[0] = 'O';             // Set Opaque text
+ 01FF 55094F            mov [_OutBuffer],79
+ 0202                   .dbline 138
+ 0202           ;       WriteDisplay(2);
+ 0202 5002              mov A,2
+ 0204 08                push A
+ 0205 9F4F              xcall _WriteDisplay
+ 0207 38FE              add SP,-2
+ 0209                   .dbline 139
+ 0209           ;       OutBuffer[0] = 'T';
+ 0209 550954            mov [_OutBuffer],84
+ 020C                   .dbline 140
+ 020C           ;       OutBuffer[3] = 0;               // Row
+ 020C 550C00            mov [_OutBuffer+3],0
+ 020F                   .dbline 141
+ 020F           ;       OutBuffer[4] = 0;               // High byte of Blue
+ 020F 550D00            mov [_OutBuffer+4],0
+ 0212                   .dbline 142
+ 0212           ;       OutBuffer[5] = 0x1F;    // Low byte of Blue
+ 0212 550E1F            mov [_OutBuffer+5],31
+ 0215                   .dbline 143
+ 0215 560000            mov [X+0],0
+ 0218 8024              xjmp L52
+ 021A           L49:
+ 021A                   .dbline 143
+ 021A                   .dbline 144
+ 021A 5200              mov A,[X+0]
+ 021C 5300              mov [__r1],A
+ 021E 550000            mov [__r0],0
+ 0221 060000            add [__r1],<_SignOn
+ 0224 0E0000            adc [__r0],>_SignOn
+ 0227 5100              mov A,[__r0]
+ 0229 10                push X
+ 022A 5800              mov X,[__r1]
+ 022C 28                romx
+ 022D 20                pop X
+ 022E 530A              mov [_OutBuffer+1],A
+ 0230                   .dbline 145
+ 0230 5200              mov A,[X+0]
+ 0232 530B              mov [_OutBuffer+2],A
+ 0234                   .dbline 146
+ 0234 5006              mov A,6
+ 0236 08                push A
+ 0237 9F1D              xcall _WriteDisplay
+ 0239 38FF              add SP,-1
+ 023B                   .dbline 147
+ 023B           L50:
+ 023B                   .dbline 143
+ 023B 7700              inc [X+0]
+ 023D           L52:
+ 023D                   .dbline 143
+ 023D           ;       for (i=0; i<sizeof(SignOn)-1; i++) {
+ 023D 3D000F            cmp [X+0],15
+ 0240 CFD9              jc L49
+ 0242           X4:
+ 0242                   .dbline -2
+ 0242                   .dbline 148
+ 0242           ;               OutBuffer[1] = SignOn[i];
+ 0242           ;               OutBuffer[2] = i;       // Column
+ 0242           ;               WriteDisplay(6);
+ 0242           ;               }
+ 0242           ;       }
+ 0242           L44:
+ 0242 38FF              add SP,-1
+ 0244 20                pop X
+ 0245                   .dbline 0 ; func end
+ 0245 7F                ret
+ 0246                   .dbsym l i 0 c
+ 0246                   .dbend
+ 0246                   .dbfunc e ReconfigureUART _ReconfigureUART fV
+ 0246           _ReconfigureUART::
+ 0246                   .dbline -1
+ 0246                   .dbline 150
+ 0246           ; 
+ 0246           ; void ReconfigureUART(void) {
+ 0246                   .dbline 151
+ 0246           ;       UART_Stop();
+ 0246 10                push X
+ 0247 7C0000            xcall _UART_Stop
+ 024A 20                pop X
+ 024B                   .dbline 153
+ 024B           ; // Now reset my UART baudrate to 125000, change the UART clock from VC3 to VC2
+ 024B           ;       DCB02IN = (DCB02IN & 0xf0) | 6;         // VC3 = 1, VC2 = 6
+ 024B 7110              or F,0x10  ; iopage = 1
+ 024D 5D29              mov A,REG[0x29]
+ 024F 5300              mov [__r0],A
+ 0251 70EF              and F,0xEF ; iopage = 0
+ 0253 2600F0            and [__r0],-16
+ 0256 2E0006            or [__r0],6
+ 0259 7110              or F,0x10  ; iopage = 1
+ 025B 5100              mov A,[__r0]
+ 025D 6029              mov REG[0x29],A
+ 025F 70EF              and F,0xEF ; iopage = 0
+ 0261                   .dbline 154
+ 0261           ;       DCB03IN = (DCB03IN & 0xf0) | 6;         // RX too
+ 0261 7110              or F,0x10  ; iopage = 1
+ 0263 5D2D              mov A,REG[0x2d]
+ 0265 5300              mov [__r0],A
+ 0267 70EF              and F,0xEF ; iopage = 0
+ 0269 2600F0            and [__r0],-16
+ 026C 2E0006            or [__r0],6
+ 026F 7110              or F,0x10  ; iopage = 1
+ 0271 5100              mov A,[__r0]
+ 0273 602D              mov REG[0x2d],A
+ 0275 70EF              and F,0xEF ; iopage = 0
+ 0277                   .dbline 155
+ 0277           ;       UART_Start(UART_PARITY_NONE);
+ 0277 10                push X
+ 0278 5000              mov A,0
+ 027A 7C0000            xcall _UART_Start
+ 027D 20                pop X
+ 027E                   .dbline 157
+ 027E           ; // Setup VC3 so that it now overflows at 8KHz
+ 027E           ;       OSC_CR3 = 250;          // VC3 divider
+ 027E 7110              or F,0x10  ; iopage = 1
+ 0280 62DFFA            mov REG[0xdf],-6
+ 0283 70EF              and F,0xEF ; iopage = 0
+ 0285                   .dbline -2
+ 0285                   .dbline 158
+ 0285           ;       }
+ 0285           L55:
+ 0285                   .dbline 0 ; func end
+ 0285 7F                ret
+ 0286                   .dbend
+ 0286                   .dbfunc e Display_NoDrive _Display_NoDrive fV
+ 0286           ;              i -> X+0
+ 0286           _Display_NoDrive::
+ 0286                   .dbline -1
+ 0286 10                push X
+ 0287 4F                mov X,SP
+ 0288 3801              add SP,1
+ 028A                   .dbline 160
+ 028A           ; 
+ 028A           ; void Display_NoDrive(void) {
+ 028A                   .dbline 162
+ 028A           ;       byte i;
+ 028A           ;       InitializeDisplay();
+ 028A 9F52              xcall _InitializeDisplay
+ 028C                   .dbline 163
+ 028C           ;       OutBuffer[0] = 'T';
+ 028C 550954            mov [_OutBuffer],84
+ 028F                   .dbline 164
+ 028F           ;       OutBuffer[3] = 5;               // Row
+ 028F 550C05            mov [_OutBuffer+3],5
+ 0292                   .dbline 165
+ 0292           ;       OutBuffer[4] = 0xF8;    // High byte of Red
+ 0292 550DF8            mov [_OutBuffer+4],-8
+ 0295                   .dbline 166
+ 0295           ;       OutBuffer[5] = 0;               // Low byte of Red
+ 0295 550E00            mov [_OutBuffer+5],0
+ 0298                   .dbline 167
+ 0298 560000            mov [X+0],0
+ 029B 8024              xjmp L63
+ 029D           L60:
+ 029D                   .dbline 167
+ 029D                   .dbline 168
+ 029D 5200              mov A,[X+0]
+ 029F 5300              mov [__r1],A
+ 02A1 550000            mov [__r0],0
+ 02A4 060010            add [__r1],<_NoDrive
+ 02A7 0E0010            adc [__r0],>_NoDrive
+ 02AA 5100              mov A,[__r0]
+ 02AC 10                push X
+ 02AD 5800              mov X,[__r1]
+ 02AF 28                romx
+ 02B0 20                pop X
+ 02B1 530A              mov [_OutBuffer+1],A
+ 02B3                   .dbline 169
+ 02B3 5200              mov A,[X+0]
+ 02B5 530B              mov [_OutBuffer+2],A
+ 02B7                   .dbline 170
+ 02B7 5006              mov A,6
+ 02B9 08                push A
+ 02BA 9E9A              xcall _WriteDisplay
+ 02BC 38FF              add SP,-1
+ 02BE                   .dbline 171
+ 02BE           L61:
+ 02BE                   .dbline 167
+ 02BE 7700              inc [X+0]
+ 02C0           L63:
+ 02C0                   .dbline 167
+ 02C0           ;       for (i=0; i<sizeof(NoDrive)-1; i++) {
+ 02C0 3D000E            cmp [X+0],14
+ 02C3 CFD9              jc L60
+ 02C5           X5:
+ 02C5                   .dbline 172
+ 02C5           ;               OutBuffer[1] = NoDrive[i];
+ 02C5           ;               OutBuffer[2] = i;
+ 02C5           ;               WriteDisplay(6);
+ 02C5           ;               }
+ 02C5           ;       Wait(2);                // User will insert a drive or power off
+ 02C5 5002              mov A,2
+ 02C7 08                push A
+ 02C8 9D6D              xcall _Wait
+ 02CA 38FF              add SP,-1
+ 02CC                   .dbline 173
+ 02CC           ;       Index = 0;              // Reset the file pointer
+ 02CC 550800            mov [_Index],0
+ 02CF                   .dbline -2
+ 02CF                   .dbline 174
+ 02CF           ;       }
+ 02CF           L56:
+ 02CF 38FF              add SP,-1
+ 02D1 20                pop X
+ 02D2                   .dbline 0 ; func end
+ 02D2 7F                ret
+ 02D3                   .dbsym l i 0 c
+ 02D3                   .dbend
+ 02D3                   .dbfunc e Display_NoFiles _Display_NoFiles fV
+ 02D3           ;              i -> X+0
+ 02D3           _Display_NoFiles::
+ 02D3                   .dbline -1
+ 02D3 10                push X
+ 02D4 4F                mov X,SP
+ 02D5 3801              add SP,1
+ 02D7                   .dbline 176
+ 02D7           ; 
+ 02D7           ; void Display_NoFiles(void) {
+ 02D7                   .dbline 178
+ 02D7           ;       byte i;
+ 02D7           ;       InitializeDisplay();
+ 02D7 9F05              xcall _InitializeDisplay
+ 02D9                   .dbline 179
+ 02D9           ;       OutBuffer[0] = 'T';
+ 02D9 550954            mov [_OutBuffer],84
+ 02DC                   .dbline 180
+ 02DC           ;       OutBuffer[3] = 7;               // Row
+ 02DC 550C07            mov [_OutBuffer+3],7
+ 02DF                   .dbline 181
+ 02DF           ;       OutBuffer[4] = 7;               // High byte of Green
+ 02DF 550D07            mov [_OutBuffer+4],7
+ 02E2                   .dbline 182
+ 02E2           ;       OutBuffer[5] = 0xE0;    // Low byte of Green
+ 02E2 550EE0            mov [_OutBuffer+5],-32
+ 02E5                   .dbline 183
+ 02E5 560000            mov [X+0],0
+ 02E8 8024              xjmp L73
+ 02EA           L70:
+ 02EA                   .dbline 183
+ 02EA                   .dbline 184
+ 02EA 5200              mov A,[X+0]
+ 02EC 5300              mov [__r1],A
+ 02EE 550000            mov [__r0],0
+ 02F1 06001F            add [__r1],<_NoFiles
+ 02F4 0E001F            adc [__r0],>_NoFiles
+ 02F7 5100              mov A,[__r0]
+ 02F9 10                push X
+ 02FA 5800              mov X,[__r1]
+ 02FC 28                romx
+ 02FD 20                pop X
+ 02FE 530A              mov [_OutBuffer+1],A
+ 0300                   .dbline 185
+ 0300 5200              mov A,[X+0]
+ 0302 530B              mov [_OutBuffer+2],A
+ 0304                   .dbline 186
+ 0304 5006              mov A,6
+ 0306 08                push A
+ 0307 9E4D              xcall _WriteDisplay
+ 0309 38FF              add SP,-1
+ 030B                   .dbline 187
+ 030B           L71:
+ 030B                   .dbline 183
+ 030B 7700              inc [X+0]
+ 030D           L73:
+ 030D                   .dbline 183
+ 030D           ;       for (i=0; i<sizeof(NoFiles)-1; i++) {
+ 030D 3D000E            cmp [X+0],14
+ 0310 CFD9              jc L70
+ 0312           X6:
+ 0312                   .dbline -2
+ 0312                   .dbline 188
+ 0312           ;               OutBuffer[1] = NoFiles[i];
+ 0312           ;               OutBuffer[2] = i;
+ 0312           ;               WriteDisplay(6);
+ 0312           ;               }
+ 0312           ;       }
+ 0312           L66:
+ 0312 38FF              add SP,-1
+ 0314 20                pop X
+ 0315                   .dbline 0 ; func end
+ 0315 7F                ret
+ 0316                   .dbsym l i 0 c
+ 0316                   .dbend
+ 0316                   .dbfunc e ConvertToASCII _ConvertToASCII fV
+ 0316           ;              T -> X+1
+ 0316           ;              H -> X+0
+ 0316           ;          Value -> X-4
+ 0316           _ConvertToASCII::
+ 0316                   .dbline -1
+ 0316 10                push X
+ 0317 4F                mov X,SP
+ 0318 3802              add SP,2
+ 031A                   .dbline 189
+ 031A           ; void ConvertToASCII(byte Value) {
+ 031A                   .dbline 191
+ 031A           ;       byte H, T;
+ 031A           ;       H = Value/100;
+ 031A 5064              mov A,100
+ 031C 08                push A
+ 031D 52FC              mov A,[X-4]
+ 031F 08                push A
+ 0320 7C0000            xcall __divmodu_8X8_8
+ 0323 18                pop A
+ 0324 5400              mov [X+0],A
+ 0326 38FF              add SP,-1
+ 0328                   .dbline 192
+ 0328           ;       Value -= H * 100;
+ 0328 5200              mov A,[X+0]
+ 032A 60E8              mov REG[0xe8],A
+ 032C 62E964            mov REG[0xe9],100
+ 032F 40                nop
+ 0330 5DEB              mov A,REG[0xeb]
+ 0332 5300              mov [__r0],A
+ 0334 52FC              mov A,[X-4]
+ 0336 1200              sub A,[__r0]
+ 0338 54FC              mov [X-4],A
+ 033A                   .dbline 193
+ 033A           ;       T = Value/10;
+ 033A 500A              mov A,10
+ 033C 08                push A
+ 033D 52FC              mov A,[X-4]
+ 033F 08                push A
+ 0340 7C0000            xcall __divmodu_8X8_8
+ 0343 18                pop A
+ 0344 5401              mov [X+1],A
+ 0346 38FF              add SP,-1
+ 0348                   .dbline 194
+ 0348           ;       Value -= T * 10;
+ 0348 5201              mov A,[X+1]
+ 034A 60E8              mov REG[0xe8],A
+ 034C 62E90A            mov REG[0xe9],10
+ 034F 40                nop
+ 0350 5DEB              mov A,REG[0xeb]
+ 0352 5300              mov [__r0],A
+ 0354 52FC              mov A,[X-4]
+ 0356 1200              sub A,[__r0]
+ 0358 54FC              mov [X-4],A
+ 035A                   .dbline 195
+ 035A           ;       OutBuffer[4] = H + '0';
+ 035A 5200              mov A,[X+0]
+ 035C 0130              add A,48
+ 035E 530D              mov [_OutBuffer+4],A
+ 0360                   .dbline 196
+ 0360           ;       OutBuffer[5] = T + '0';
+ 0360 5201              mov A,[X+1]
+ 0362 0130              add A,48
+ 0364 530E              mov [_OutBuffer+5],A
+ 0366                   .dbline 197
+ 0366           ;       OutBuffer[6] = Value + '0';
+ 0366 52FC              mov A,[X-4]
+ 0368 0130              add A,48
+ 036A 530F              mov [_OutBuffer+6],A
+ 036C                   .dbline -2
+ 036C                   .dbline 198
+ 036C           ;       }
+ 036C           L76:
+ 036C 38FE              add SP,-2
+ 036E 20                pop X
+ 036F                   .dbline 0 ; func end
+ 036F 7F                ret
+ 0370                   .dbsym l T 1 c
+ 0370                   .dbsym l H 0 c
+ 0370                   .dbsym l Value -4 c
+ 0370                   .dbend
+ 0370                   .dbfunc e main _main fV
+ 0370           ;              i -> X+0
+ 0370           _main::
+ 0370                   .dbline -1
+ 0370 10                push X
+ 0371 4F                mov X,SP
+ 0372 3801              add SP,1
+ 0374                   .dbline 200
+ 0374           ; 
+ 0374           ; void main() {
+ 0374                   .dbline 204
+ 0374           ;       byte i;
+ 0374           ; // UART is initially connected to the Vinculum
+ 0374           ; // UART is initially set to 9600 baud to match Vinculum's power-on value
+ 0374           ;       UART_Start(UART_PARITY_NONE);
+ 0374 10                push X
+ 0375 5000              mov A,0
+ 0377 7C0000            xcall _UART_Start
+ 037A 20                pop X
+ 037B                   .dbline 205
+ 037B           ;       InitializeVinculum();
+ 037B 9E05              xcall _InitializeVinculum
+ 037D                   .dbline 206
+ 037D           ;       ReconfigureUART();
+ 037D 9EC7              xcall _ReconfigureUART
+ 037F                   .dbline 207
+ 037F           ;       InitializeDisplay();
+ 037F 9E5D              xcall _InitializeDisplay
+ 0381                   .dbline 209
+ 0381           ; // Wait for Vinculum to be ready
+ 0381           ;       ReadVinculum();                         // Vinculum will send another prompt at new baud rate
+ 0381 9D67              xcall _ReadVinculum
+ 0383                   .dbline 210
+ 0383           ;       INT_MSK0 |= VC3_Interrupt;      // Enable for Wait/Delay function
+ 0383 43E080            or REG[0xe0],-128
+ 0386                   .dbline 211
+ 0386           ;       M8C_EnableGInt;                         // This is the first time that they have been enabled
+ 0386 7101                      or  F, 01h
+ 0388           
+ 0388 81CD              xjmp L82
+ 038A           L81:
+ 038A                   .dbline 213
+ 038A           ; // Initialization complete, enter the main loop
+ 038A           ;       while (1) {
+ 038A                   .dbline 215
+ 038A           ; // Check if a flash drive is present, Vinculum responds with a prompt (=yes) or 'No Disk' (=no)
+ 038A           ;               OutBuffer[0] = CR;
+ 038A 55090D            mov [_OutBuffer],13
+ 038D                   .dbline 216
+ 038D           ;               WriteVinculum(1);
+ 038D 5001              mov A,1
+ 038F 08                push A
+ 0390 9D03              xcall _WriteVinculum
+ 0392 38FF              add SP,-1
+ 0394                   .dbline 217
+ 0394           ;               ReadVinculum();
+ 0394 9D54              xcall _ReadVinculum
+ 0396                   .dbline 218
+ 0396           ;               if (InBuffer[0] == 'N') Display_NoDrive();
+ 0396 3C294E            cmp [_InBuffer],78
+ 0399 B005              jnz L84
+ 039B                   .dbline 218
+ 039B 9EE9              xcall _Display_NoDrive
+ 039D 81B8              xjmp L85
+ 039F           L84:
+ 039F                   .dbline 219
+ 039F           ;               else {
+ 039F                   .dbline 221
+ 039F 560000            mov [X+0],0
+ 03A2 802A              xjmp L89
+ 03A4           L86:
+ 03A4                   .dbline 221
+ 03A4 5200              mov A,[X+0]
+ 03A6 5300              mov [__r1],A
+ 03A8 550000            mov [__r0],0
+ 03AB 060037            add [__r1],<_FileCommand
+ 03AE 0E0037            adc [__r0],>_FileCommand
+ 03B1 5100              mov A,[__r0]
+ 03B3 10                push X
+ 03B4 5800              mov X,[__r1]
+ 03B6 28                romx
+ 03B7 20                pop X
+ 03B8 5300              mov [__r0],A
+ 03BA 5200              mov A,[X+0]
+ 03BC 5300              mov [__r3],A
+ 03BE 550000            mov [__r2],0
+ 03C1 060009            add [__r3],<_OutBuffer
+ 03C4 0E0009            adc [__r2],>_OutBuffer
+ 03C7 5100              mov A,[__r0]
+ 03C9 3F00              mvi [__r3],A
+ 03CB           L87:
+ 03CB                   .dbline 221
+ 03CB 7700              inc [X+0]
+ 03CD           L89:
+ 03CD                   .dbline 221
+ 03CD           ; // Check if <index>.img is present using 'DIR <index>.img'
+ 03CD           ;                       for (i=0; i<sizeof(FileCommand); i++) OutBuffer[i] = FileCommand[i];
+ 03CD 3D000D            cmp [X+0],13
+ 03D0 CFD3              jc L86
+ 03D2           X8:
+ 03D2                   .dbline 222
+ 03D2           ;                       ConvertToASCII(++Index);
+ 03D2 060801            add [_Index],1
+ 03D5 5108              mov A,[_Index]
+ 03D7 08                push A
+ 03D8 9F3C              xcall _ConvertToASCII
+ 03DA                   .dbline 223
+ 03DA           ;                       WriteVinculum(sizeof(FileCommand)-1);
+ 03DA 500C              mov A,12
+ 03DC 08                push A
+ 03DD 9CB6              xcall _WriteVinculum
+ 03DF 38FE              add SP,-2
+ 03E1                   .dbline 224
+ 03E1           ;                       ReadVinculum();
+ 03E1 9D07              xcall _ReadVinculum
+ 03E3                   .dbline 226
+ 03E3           ; // Vinculum responds with "<index>.img <size>" if file is present
+ 03E3           ;                       if (InBuffer[0] == OutBuffer[4]) {
+ 03E3 5129              mov A,[_InBuffer]
+ 03E5 3A0D              cmp A,[_OutBuffer+4]
+ 03E7 B15D              jnz L90
+ 03E9                   .dbline 226
+ 03E9                   .dbline 229
+ 03E9           ; // .img file is present, get its size and copy it to the display
+ 03E9           ; // Note that PSoC is Big Endian, size is in Little Endian
+ 03E9           ;                               FileSize = InBuffer[10];
+ 03E9 5F0333            mov [_FileSize+3],[_InBuffer+10]
+ 03EC 550200            mov [_FileSize+2],0
+ 03EF 550100            mov [_FileSize+1],0
+ 03F2 550000            mov [_FileSize],0
+ 03F5                   .dbline 230
+ 03F5           ;                               FileSize = InBuffer[8] + (InBuffer[9]<<8) + (FileSize<<16) + 1;
+ 03F5 5F0000            mov [__r0],[_FileSize]
+ 03F8 5F0001            mov [__r1],[_FileSize+1]
+ 03FB 5F0002            mov [__r2],[_FileSize+2]
+ 03FE 5F0003            mov [__r3],[_FileSize+3]
+ 0401 5010              mov A,16
+ 0403           X9:
+ 0403 6500              asl [__r3]
+ 0405 6B00              rlc [__r2]
+ 0407 6B00              rlc [__r1]
+ 0409 6B00              rlc [__r0]
+ 040B 78                dec A
+ 040C BFF6              jnz X9
+ 040E 5F0032            mov [__r4],[_InBuffer+9]
+ 0411 550000            mov [__r5],0
+ 0414 5131              mov A,[_InBuffer+8]
+ 0416 0200              add A,[__r5]
+ 0418 5300              mov [__r5],A
+ 041A 5000              mov A,0
+ 041C 0A00              adc A,[__r4]
+ 041E 5F0000            mov [__r7],[__r5]
+ 0421 5300              mov [__r6],A
+ 0423 470080            tst [__r6],-128
+ 0426 A009              jz X10
+ 0428 5500FF            mov [__r5],-1
+ 042B 5500FF            mov [__r4],-1
+ 042E 8007              jmp X11
+ 0430           X10:
+ 0430 550000            mov [__r5],0
+ 0433 550000            mov [__r4],0
+ 0436           X11:
+ 0436 5100              mov A,[__r7]
+ 0438 0200              add A,[__r3]
+ 043A 5300              mov [__r3],A
+ 043C 5100              mov A,[__r6]
+ 043E 0A00              adc A,[__r2]
+ 0440 5300              mov [__r2],A
+ 0442 5100              mov A,[__r5]
+ 0444 0A00              adc A,[__r1]
+ 0446 5300              mov [__r1],A
+ 0448 5100              mov A,[__r4]
+ 044A 0A00              adc A,[__r0]
+ 044C 5300              mov [__r0],A
+ 044E 5100              mov A,[__r3]
+ 0450 0101              add A,1
+ 0452 5303              mov [_FileSize+3],A
+ 0454 5100              mov A,[__r2]
+ 0456 0900              adc A,0
+ 0458 5302              mov [_FileSize+2],A
+ 045A 5100              mov A,[__r1]
+ 045C 0900              adc A,0
+ 045E 5301              mov [_FileSize+1],A
+ 0460 5100              mov A,[__r0]
+ 0462 0900              adc A,0
+ 0464 5300              mov [_FileSize],A
+ 0466                   .dbline 231
+ 0466           ;                               OutBuffer[0] = 0;
+ 0466 550900            mov [_OutBuffer],0
+ 0469                   .dbline 232
+ 0469           ;                               OutBuffer[1] = 'R';
+ 0469 550A52            mov [_OutBuffer+1],82
+ 046C                   .dbline 233
+ 046C           ;                               OutBuffer[2] = 'D';
+ 046C 550B44            mov [_OutBuffer+2],68
+ 046F                   .dbline 234
+ 046F           ;                               WriteVinculum(sizeof(FileCommand)-2);
+ 046F 500B              mov A,11
+ 0471 08                push A
+ 0472 9C21              xcall _WriteVinculum
+ 0474 38FF              add SP,-1
+ 0476                   .dbline 236
+ 0476           ; // Change to data passthrough: data from Vinculum goes directly to Display
+ 0476           ;                               DCB03OU  = 6;                   // Enable RXout
+ 0476 7110              or F,0x10  ; iopage = 1
+ 0478 622E06            mov REG[0x2e],6
+ 047B 70EF              and F,0xEF ; iopage = 0
+ 047D                   .dbline 237
+ 047D           ;                               RDI0LT1 &= 0xf3;                // RXout drives D_TX
+ 047D 41B4F3            and REG[0xb4],-13
+ 0480 8006              xjmp L99
+ 0482           L98:
+ 0482                   .dbline 240
+ 0482 10                push X
+ 0483 7C0000            xcall _UART_cGetChar
+ 0486 20                pop X
+ 0487           L99:
+ 0487                   .dbline 240
+ 0487           ; // Note that the ap will hang if the Flash Drive is removed during this file read
+ 0487           ; // Allow for this in the next version
+ 0487           ;                               while (FileSize--) UART_cGetChar();
+ 0487 5F0000            mov [__r0],[_FileSize]
+ 048A 5F0001            mov [__r1],[_FileSize+1]
+ 048D 5F0002            mov [__r2],[_FileSize+2]
+ 0490 5F0003            mov [__r3],[_FileSize+3]
+ 0493 160301            sub [_FileSize+3],1
+ 0496 5100              mov A,[__r2]
+ 0498 1900              sbb A,0
+ 049A 5302              mov [_FileSize+2],A
+ 049C 5100              mov A,[__r1]
+ 049E 1900              sbb A,0
+ 04A0 5301              mov [_FileSize+1],A
+ 04A2 5100              mov A,[__r0]
+ 04A4 1900              sbb A,0
+ 04A6 5300              mov [_FileSize],A
+ 04A8 3C0000            cmp [__r0],0
+ 04AB BFD6              jnz L98
+ 04AD 3C0000            cmp [__r1],0
+ 04B0 BFD1              jnz L98
+ 04B2 3C0000            cmp [__r2],0
+ 04B5 BFCC              jnz L98
+ 04B7 3C0000            cmp [__r3],0
+ 04BA BFC7              jnz L98
+ 04BC           X12:
+ 04BC                   .dbline 242
+ 04BC           ; // Now switch back
+ 04BC           ;                               DCB03OU  = 0;                   // Disable RXout
+ 04BC 7110              or F,0x10  ; iopage = 1
+ 04BE 622E00            mov REG[0x2e],0
+ 04C1 70EF              and F,0xEF ; iopage = 0
+ 04C3                   .dbline 243
+ 04C3           ;                               RDI0LT1 |= 0x0f;                // Set D_TX high
+ 04C3 43B40F            or REG[0xb4],15
+ 04C6                   .dbline 244
+ 04C6           ;                               ReadVinculum();
+ 04C6 9C22              xcall _ReadVinculum
+ 04C8                   .dbline 246
+ 04C8 560000            mov [X+0],0
+ 04CB 8042              xjmp L104
+ 04CD           L101:
+ 04CD                   .dbline 246
+ 04CD           ; // Now check if an MP3 file is present
+ 04CD           ;                               for (i=0; i<sizeof(MP3); i++) if (MP3[i]) OutBuffer[i] = MP3[i];
+ 04CD 5200              mov A,[X+0]
+ 04CF 5300              mov [__r1],A
+ 04D1 550000            mov [__r0],0
+ 04D4 060044            add [__r1],<_MP3
+ 04D7 0E0044            adc [__r0],>_MP3
+ 04DA 5100              mov A,[__r0]
+ 04DC 10                push X
+ 04DD 5800              mov X,[__r1]
+ 04DF 28                romx
+ 04E0 20                pop X
+ 04E1 3900              cmp A,0
+ 04E3 A028              jz L105
+ 04E5                   .dbline 246
+ 04E5 5200              mov A,[X+0]
+ 04E7 5300              mov [__r1],A
+ 04E9 550000            mov [__r0],0
+ 04EC 060044            add [__r1],<_MP3
+ 04EF 0E0044            adc [__r0],>_MP3
+ 04F2 5100              mov A,[__r0]
+ 04F4 10                push X
+ 04F5 5800              mov X,[__r1]
+ 04F7 28                romx
+ 04F8 20                pop X
+ 04F9 5300              mov [__r0],A
+ 04FB 5200              mov A,[X+0]
+ 04FD 5300              mov [__r3],A
+ 04FF 550000            mov [__r2],0
+ 0502 060009            add [__r3],<_OutBuffer
+ 0505 0E0009            adc [__r2],>_OutBuffer
+ 0508 5100              mov A,[__r0]
+ 050A 3F00              mvi [__r3],A
+ 050C           L105:
+ 050C           L102:
+ 050C                   .dbline 246
+ 050C 7700              inc [X+0]
+ 050E           L104:
+ 050E                   .dbline 246
+ 050E 3D000D            cmp [X+0],13
+ 0511 CFBB              jc L101
+ 0513           X13:
+ 0513                   .dbline 247
+ 0513           ;                               WriteVinculum(sizeof(FileCommand)-1);
+ 0513 500C              mov A,12
+ 0515 08                push A
+ 0516 9B7D              xcall _WriteVinculum
+ 0518 38FF              add SP,-1
+ 051A                   .dbline 248
+ 051A           ;                               ReadVinculum();
+ 051A 9BCE              xcall _ReadVinculum
+ 051C                   .dbline 249
+ 051C           ;                               if (OutBuffer[4] == InBuffer[0]) {
+ 051C 510D              mov A,[_OutBuffer+4]
+ 051E 3A29              cmp A,[_InBuffer]
+ 0520 B01B              jnz L107
+ 0522                   .dbline 249
+ 0522                   .dbline 251
+ 0522           ; // MP3 file is present, play it
+ 0522           ;                                       OutBuffer[0] = 'V';
+ 0522 550956            mov [_OutBuffer],86
+ 0525                   .dbline 252
+ 0525           ;                                       OutBuffer[1] = 'P';
+ 0525 550A50            mov [_OutBuffer+1],80
+ 0528                   .dbline 253
+ 0528           ;                                       OutBuffer[2] = 'F';
+ 0528 550B46            mov [_OutBuffer+2],70
+ 052B                   .dbline 254
+ 052B           ;                                       WriteVinculum(sizeof(FileCommand)-1);
+ 052B 500C              mov A,12
+ 052D 08                push A
+ 052E 9B65              xcall _WriteVinculum
+ 0530 38FF              add SP,-1
+ 0532                   .dbline 258
+ 0532           ; // Disable timeout while the MP3 file plays
+ 0532           ; // If the flash drive is removed while the file is playing the ap will hang.
+ 0532           ; // Fix this in the next version, reset the system for now
+ 0532           ;                                       INT_MSK0 &= ~VC3_Interrupt;
+ 0532 41E07F            and REG[0xe0],127
+ 0535                   .dbline 259
+ 0535           ;                                       ReadVinculum();
+ 0535 9BB3              xcall _ReadVinculum
+ 0537                   .dbline 260
+ 0537           ;                                       INT_MSK0 |= VC3_Interrupt;
+ 0537 43E080            or REG[0xe0],-128
+ 053A                   .dbline 261
+ 053A           ;                                       }
+ 053A 801B              xjmp L91
+ 053C           L107:
+ 053C                   .dbline 262
+ 053C           ;                               else Wait(60);          // Display picture for one minute if no MP3 file
+ 053C 503C              mov A,60
+ 053E 08                push A
+ 053F 9AF6              xcall _Wait
+ 0541 38FF              add SP,-1
+ 0543                   .dbline 263
+ 0543           ;                               }
+ 0543 8012              xjmp L91
+ 0545           L90:
+ 0545                   .dbline 264
+ 0545           ;                       else {
+ 0545                   .dbline 266
+ 0545           ; // Check the special case of no .img files
+ 0545           ;                               if (Index == 1) Display_NoFiles();
+ 0545 3C0801            cmp [_Index],1
+ 0548 B003              jnz L112
+ 054A                   .dbline 266
+ 054A 9D87              xcall _Display_NoFiles
+ 054C           L112:
+ 054C                   .dbline 267
+ 054C           ;                               Wait(2);
+ 054C 5002              mov A,2
+ 054E 08                push A
+ 054F 9AE6              xcall _Wait
+ 0551 38FF              add SP,-1
+ 0553                   .dbline 268
+ 0553           ;                               Index = 0;                      // At end of files, start again
+ 0553 550800            mov [_Index],0
+ 0556                   .dbline 269
+ 0556           ;                               }
+ 0556           L91:
+ 0556                   .dbline 270
+ 0556           ;                       }
+ 0556           L85:
+ 0556                   .dbline 271
+ 0556           L82:
+ 0556                   .dbline 213
+ 0556 8E33              xjmp L81
+ 0558           X7:
+ 0558                   .dbline -2
+ 0558                   .dbline 272
+ 0558           ;               }
+ 0558           ;       }
+ 0558           L80:
+ 0558 38FF              add SP,-1
+ 055A 20                pop X
+ 055B                   .dbline 0 ; func end
+ 055B 8FFF              jmp .
+ 055D                   .dbsym l i 0 c
+ 055D                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile ./main.c
+ 0000           _FileSize::
+ 0000                   .blkb 4
+ 0004                   .dbsym e FileSize _FileSize L
+ 0004           _PreScalar::
+ 0004                   .blkb 2
+ 0006                   .dbsym e PreScalar _PreScalar i
+ 0006           _CurrentUART::
+ 0006                   .blkb 1
+ 0007                   .dbsym e CurrentUART _CurrentUART c
+ 0007           _Delay::
+ 0007                   .blkb 1
+ 0008                   .dbsym e Delay _Delay c
+ 0008           _Index::
+ 0008                   .blkb 1
+ 0009                   .dbsym e Index _Index c
+ 0009           _OutBuffer::
+ 0009                   .blkb 32
+ 0029                   .dbsym e OutBuffer _OutBuffer A[32:32]c
+ 0029           _InBuffer::
+ 0029                   .blkb 32
+ 0049                   .dbsym e InBuffer _InBuffer A[32:32]c
