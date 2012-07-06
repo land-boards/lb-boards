@@ -1,33 +1,33 @@
-# EESchema Netlist Version 1.1 created  6/28/2012 1:34:12 PM
+# EESchema Netlist Version 1.1 created  Fri 06 Jul 2012 02:34:53 PM EDT
 (
- ( /4FEC8AB7 $noname  MTG2 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /4FEC80EE PIN_ARRAY_2X1 J1 CONN_2
+  ( 1 /VCC )
+  ( 2 /GND )
  )
- ( /4FEC8AB4 $noname  MTG1 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /4FEC80FE PIN_ARRAY_3X1 J2 CONN_3
+  ( 1 /GND )
+  ( 2 /VCC-IN )
+  ( 3 /DQ )
  )
- ( /4FEC86BD $noname  R1 4.7K {Lib=R}
-  (    1 /DQ )
-  (    2 /VCC-IN )
+ ( /4FEC8105 PIN_ARRAY_3X1 J3 CONN_3
+  ( 1 /GND )
+  ( 2 /VCC-IN )
+  ( 3 /DQ )
  )
- ( /4FEC84B3 $noname  U1 DS18S20+ {Lib=DS18S20+}
-  (    1 /VCC )
-  (    2 /DQ )
-  (    3 /GND )
+ ( /4FEC8AB4 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
  )
- ( /4FEC8105 $noname  J3 CONN_3 {Lib=CONN_3}
-  (    1 /GND )
-  (    2 /VCC-IN )
-  (    3 /DQ )
+ ( /4FEC8AB7 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
  )
- ( /4FEC80FE $noname  J2 CONN_3 {Lib=CONN_3}
-  (    1 /GND )
-  (    2 /VCC-IN )
-  (    3 /DQ )
+ ( /4FEC86BD R4 R1 4.7K
+  ( 1 /DQ )
+  ( 2 /VCC-IN )
  )
- ( /4FEC80EE $noname  J1 CONN_2 {Lib=CONN_2}
-  (    1 /VCC )
-  (    2 /GND )
+ ( /4FEC84B3 TO92-123 U1 DS18S20+
+  ( 1 /VCC )
+  ( 2 /DQ )
+  ( 3 /GND )
  )
 )
 *
@@ -41,23 +41,3 @@ $component R1
 $endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-Net 3 "/GND" "GND"
- J1 2
- J2 1
- J3 1
- U1 3
-Net 4 "/VCC-IN" "VCC-IN"
- J2 2
- R1 2
- J3 2
-Net 5 "/VCC" "VCC"
- U1 1
- J1 1
-Net 6 "/DQ" "DQ"
- U1 2
- J3 3
- R1 1
- J2 3
-}
-#End
