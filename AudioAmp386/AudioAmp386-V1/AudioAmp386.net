@@ -1,0 +1,117 @@
+# EESchema Netlist Version 1.1 created  Fri 06 Jul 2012 10:42:43 PM EDT
+(
+ ( /4FDCFD43 MTG-4-40  MTG2 MTG-4-40 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FDCFD3D MTG-4-40  MTG1 MTG-4-40 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FDCEF9D RCA  J1 RCA-JACK {Lib=RCA-JACK}
+  (    1 GND )
+  (    2 GND )
+  (    3 GND )
+  (    4 /IN )
+ )
+ ( /4FDCEF97 RCA  J2 RCA-JACK {Lib=RCA-JACK}
+  (    1 GND )
+  (    2 GND )
+  (    3 GND )
+  (    4 /OUT )
+ )
+ ( /4FDCB240 SIL-2  J3 CONN_2 {Lib=CONN_2}
+  (    1 /+12V )
+  (    2 GND )
+ )
+ ( /4FDCB1B3 SIL-3  RV1 10K {Lib=POT}
+  (    1 /RESHI )
+  (    2 /RESWI )
+  (    3 GND )
+ )
+ ( /4FDCB12E C1  C1 0.1uF {Lib=C}
+  (    1 /IN )
+  (    2 /RESHI )
+ )
+ ( /4FDCB10B C2V10  C3 220uF {Lib=CP}
+  (    1 /AO )
+  (    2 /OUT )
+ )
+ ( /4FDCB0F6 R1  R1 10 {Lib=R}
+  (    1 /COMP )
+  (    2 GND )
+ )
+ ( /4FDCB0F0 C1  C2 .047uF {Lib=C}
+  (    1 /AO )
+  (    2 /COMP )
+ )
+ ( /4FDCAFD4 DIP-8__300  U1 LM386 {Lib=LM386}
+  (    1 ? )
+  (    2 GND )
+  (    3 /RESWI )
+  (    4 GND )
+  (    5 /AO )
+  (    6 /+12V )
+  (    8 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "/+12V" "+12V"
+ J3 1
+ U1 6
+Net 3 "GND" "GND"
+ RV1 3
+ J1 2
+ J1 1
+ J1 3
+ J2 2
+ J2 1
+ U1 2
+ J3 2
+ U1 4
+ J2 3
+ R1 2
+Net 5 "/COMP" "COMP"
+ C2 2
+ R1 1
+Net 6 "/OUT" "OUT"
+ J2 4
+ C3 2
+Net 7 "/IN" "IN"
+ J1 4
+ C1 1
+Net 10 "/RESHI" "RESHI"
+ RV1 1
+ C1 2
+Net 11 "/RESWI" "RESWI"
+ RV1 2
+ U1 3
+Net 12 "/AO" "AO"
+ C3 1
+ U1 5
+ C2 1
+}
+#End
