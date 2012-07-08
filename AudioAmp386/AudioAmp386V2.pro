@@ -1,5 +1,5 @@
-update=Fri 06 Jul 2012 10:45:42 PM EDT
-last_client=pcbnew
+update=Sun 08 Jul 2012 01:37:05 PM EDT
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -38,11 +38,6 @@ LibName1=power
 LibName2=device
 LibName3=conn
 LibName4=AudioAmp386
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -61,8 +56,14 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=AudioAmp386V2.net
 [pcbnew/libraries]
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
 LibName1=connect
 LibName2=discret
 LibName3=dip_sockets
 LibName4=pin_array
+LibName5=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
