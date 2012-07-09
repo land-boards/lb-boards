@@ -1,0 +1,256 @@
+EESchema Schematic File Version 2  date 7/9/2012 1:49:30 PM
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:PwrSply317-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "9 jul 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 7200 3350
+NoConn ~ 7200 3250
+NoConn ~ 7200 3150
+NoConn ~ 7200 3050
+$Comp
+L CONN_1 MTG4
+U 1 1 4FFB198C
+P 7350 3350
+F 0 "MTG4" H 7430 3350 40  0000 L CNN
+F 1 "CONN_1" H 7350 3405 30  0001 C CNN
+	1    7350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG3
+U 1 1 4FFB1989
+P 7350 3250
+F 0 "MTG3" H 7430 3250 40  0000 L CNN
+F 1 "CONN_1" H 7350 3305 30  0001 C CNN
+	1    7350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG2
+U 1 1 4FFB1986
+P 7350 3150
+F 0 "MTG2" H 7430 3150 40  0000 L CNN
+F 1 "CONN_1" H 7350 3205 30  0001 C CNN
+	1    7350 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG1
+U 1 1 4FFB1981
+P 7350 3050
+F 0 "MTG1" H 7430 3050 40  0000 L CNN
+F 1 "CONN_1" H 7350 3105 30  0001 C CNN
+	1    7350 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1200 3950 1200
+Wire Wire Line
+	7150 1400 7000 1400
+Wire Wire Line
+	7000 1400 7000 2600
+Connection ~ 6700 1200
+Wire Wire Line
+	6700 1200 6700 1700
+Connection ~ 6300 1200
+Wire Wire Line
+	6300 1200 6300 1700
+Connection ~ 5850 1200
+Wire Wire Line
+	5850 1300 5850 1200
+Connection ~ 5850 1900
+Wire Wire Line
+	5850 1900 5200 1900
+Wire Wire Line
+	5200 1900 5200 1700
+Connection ~ 4150 1200
+Connection ~ 2500 1600
+Wire Wire Line
+	2700 1600 2500 1600
+Wire Wire Line
+	2100 1500 2300 1500
+Wire Wire Line
+	2300 1500 2300 1900
+Wire Wire Line
+	2300 1900 3350 1900
+Connection ~ 3350 1600
+Wire Wire Line
+	3350 1900 3350 1600
+Connection ~ 3350 1200
+Wire Wire Line
+	3550 1200 3100 1200
+Wire Wire Line
+	2100 1300 2300 1300
+Wire Wire Line
+	2300 1300 2300 900 
+Wire Wire Line
+	2300 900  3350 900 
+Wire Wire Line
+	3350 900  3350 1200
+Wire Wire Line
+	3550 1600 3100 1600
+Wire Wire Line
+	2700 1200 2500 1200
+Wire Wire Line
+	3950 1600 4150 1600
+Wire Wire Line
+	4150 1600 4150 1200
+Wire Wire Line
+	5850 2600 5850 2500
+Wire Wire Line
+	2500 1200 2500 2600
+Wire Wire Line
+	5850 1800 5850 2000
+Wire Wire Line
+	4550 1200 4550 1700
+Connection ~ 4550 1200
+Wire Wire Line
+	4550 2100 4550 2600
+Connection ~ 4550 2600
+Wire Wire Line
+	2500 2600 7000 2600
+Connection ~ 5850 2600
+Wire Wire Line
+	6300 2100 6300 2600
+Connection ~ 6300 2600
+Wire Wire Line
+	6700 2100 6700 2600
+Connection ~ 6700 2600
+Wire Wire Line
+	5600 1200 7150 1200
+Text Label 2800 1900 0    60   ~ 0
+AC2
+Text Label 2750 900  0    60   ~ 0
+AC1
+Text Label 5950 1200 0    60   ~ 0
+DCOUT
+Text Label 4250 1200 0    60   ~ 0
+DCIN
+Text Label 4950 2600 0    60   ~ 0
+GND
+$Comp
+L CONN_2 P2
+U 1 1 4FFB0D16
+P 7500 1300
+F 0 "P2" V 7450 1300 40  0000 C CNN
+F 1 "CONN_2" V 7550 1300 40  0000 C CNN
+	1    7500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 4FFB0CA9
+P 6700 1900
+F 0 "C5" H 6750 2000 50  0000 L CNN
+F 1 "0.1uF" H 6750 1800 50  0000 L CNN
+	1    6700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C4
+U 1 1 4FFB0CA5
+P 6300 1900
+F 0 "C4" H 6350 2000 50  0000 L CNN
+F 1 "4700uF" H 6350 1800 50  0000 L CNN
+	1    6300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 4FFB0C63
+P 4550 1900
+F 0 "C1" H 4600 2000 50  0000 L CNN
+F 1 "4700uF" H 4600 1800 50  0000 L CNN
+	1    4550 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 4FFB0BFA
+P 5850 2250
+F 0 "R2" V 5930 2250 50  0000 C CNN
+F 1 "R" V 5850 2250 50  0000 C CNN
+	1    5850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 4FFB0BF4
+P 5850 1550
+F 0 "R1" V 5930 1550 50  0000 C CNN
+F 1 "R" V 5850 1550 50  0000 C CNN
+	1    5850 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L LM317 U1
+U 1 1 4FFB0BEC
+P 5200 1350
+F 0 "U1" H 5200 1650 60  0000 C CNN
+F 1 "LM317" H 5250 1100 60  0000 L CNN
+	1    5200 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D4
+U 1 1 4FFB0BA2
+P 3750 1600
+F 0 "D4" H 3750 1700 40  0000 C CNN
+F 1 "1N4004" H 3750 1500 40  0000 C CNN
+	1    3750 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D3
+U 1 1 4FFB0B9F
+P 3750 1200
+F 0 "D3" H 3750 1300 40  0000 C CNN
+F 1 "1N4004" H 3750 1100 40  0000 C CNN
+	1    3750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D2
+U 1 1 4FFB0B9B
+P 2900 1600
+F 0 "D2" H 2900 1700 40  0000 C CNN
+F 1 "1N4004" H 2900 1500 40  0000 C CNN
+	1    2900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D1
+U 1 1 4FFB0B8D
+P 2900 1200
+F 0 "D1" H 2900 1300 40  0000 C CNN
+F 1 "1N4004" H 2900 1100 40  0000 C CNN
+	1    2900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 4FFB0B77
+P 1750 1400
+F 0 "P1" V 1700 1400 40  0000 C CNN
+F 1 "CONN_2" V 1800 1400 40  0000 C CNN
+	1    1750 1400
+	-1   0    0    -1  
+$EndComp
+$EndSCHEMATC

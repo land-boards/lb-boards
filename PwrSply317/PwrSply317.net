@@ -1,0 +1,111 @@
+# EESchema Netlist Version 1.1 created  7/9/2012 2:11:30 PM
+(
+ ( /4FFB0C63 CP_22x41mm C1 4700uF
+  ( 1 /DCIN )
+  ( 2 /GND )
+ )
+ ( /4FFB0CA5 CP_5x11mm C4 47uF
+  ( 1 /DCOUT )
+  ( 2 /GND )
+ )
+ ( /4FFB0CA9 C1 C5 0.1uF
+  ( 1 /DCOUT )
+  ( 2 /GND )
+ )
+ ( /4FFB0B8D D5 D1 1N4004
+  ( 1 /GND )
+  ( 2 /AC1 )
+ )
+ ( /4FFB0B9B D5 D2 1N4004
+  ( 1 /GND )
+  ( 2 /AC2 )
+ )
+ ( /4FFB0B9F D5 D3 1N4004
+  ( 1 /AC1 )
+  ( 2 /DCIN )
+ )
+ ( /4FFB0BA2 D5 D4 1N4004
+  ( 1 /AC2 )
+  ( 2 /DCIN )
+ )
+ ( /4FFB1981 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FFB1986 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /4FFB1989 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /4FFB198C MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
+ )
+ ( /4FFB0B77 TB2-5MM P1 CONN_2
+  ( 1 /AC1 )
+  ( 2 /AC2 )
+ )
+ ( /4FFB0D16 TB2-5MM P2 CONN_2
+  ( 1 /DCOUT )
+  ( 2 /GND )
+ )
+ ( /4FFB0BF4 R4 R1 R
+  ( 1 N-000002 )
+  ( 2 /DCOUT )
+ )
+ ( /4FFB0BFA R4 R2 R
+  ( 1 N-000002 )
+  ( 2 /GND )
+ )
+ ( /4FFB0BEC TO220_VERT U1 LM317
+  ( 1 /DCIN )
+  ( 2 N-000002 )
+  ( 3 /DCOUT )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
