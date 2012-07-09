@@ -1,0 +1,102 @@
+# EESchema Netlist Version 1.1 created  Sat 16 Jun 2012 11:44:45 AM EDT
+(
+ ( /4FDBC755 C1V5 C1 1uF
+  ( 1 N-000015 )
+  ( 2 N-000014 )
+ )
+ ( /4FDBC7A6 C1V5 C2 1UF
+  ( 1 N-000001 )
+  ( 2 /GND )
+ )
+ ( /4FDBC84C C1V5 C3 1UF
+  ( 1 /+12V )
+  ( 2 /GND )
+ )
+ ( /4FDBE66A SIL-3 J1 CONN_3
+  ( 1 /GND )
+  ( 2 /+12V )
+  ( 3 N-000012 )
+ )
+ ( /4FDCA902 SIL-2 J2 CONN_2
+  ( 1 /GND )
+  ( 2 N-000016 )
+ )
+ ( /4FDBED61 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FDBC393 R3 R1 R
+  ( 1 N-000013 )
+  ( 2 N-000016 )
+ )
+ ( /4FDBE59E R3 R2 10K
+  ( 1 N-000007 )
+  ( 2 /GND )
+ )
+ ( /4FDBE56E R3 R3 330
+  ( 1 N-000009 )
+  ( 2 N-000002 )
+ )
+ ( /4FDBE58B R3 R4 10K
+  ( 1 N-000008 )
+  ( 2 /GND )
+ )
+ ( /4FDBC311 DIP-16__300 U1 XR2206
+  ( 1 /GND )
+  ( 2 N-000012 )
+  ( 3 ? )
+  ( 4 /+12V )
+  ( 5 N-000015 )
+  ( 6 N-000014 )
+  ( 7 N-000013 )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 N-000001 )
+  ( 11 ? )
+  ( 12 /GND )
+  ( 13 N-000009 )
+  ( 14 N-000002 )
+  ( 15 N-000008 )
+  ( 16 N-000007 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

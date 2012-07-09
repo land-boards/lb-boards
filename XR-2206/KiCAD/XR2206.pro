@@ -1,4 +1,4 @@
-update=Sat 23 Jun 2012 03:14:38 PM EDT
+update=Sun 08 Jul 2012 09:48:02 PM EDT
 last_client=pcbnew
 [general]
 version=1
@@ -70,7 +70,9 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=
+LastNetListRead=XR2206.net
 [pcbnew/libraries]
 LibDir=
 LibName1=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules/dip_sockets
+LibName2=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName3=pin_array

@@ -1,0 +1,180 @@
+# EESchema Netlist Version 1.1 created  Fri 06 Jul 2012 01:44:47 PM EDT
+(
+ ( /4FF581E0 C1 C1 0.1uF
+  ( 1 /AREF )
+  ( 2 GND )
+ )
+ ( /4FF58BD9 C1 C2 0.1uF
+  ( 1 /ARDRES )
+  ( 2 N-000017 )
+ )
+ ( /4FF58E38 C1 C3 0.1uF
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /4FF58E07 CP_5x11mm C4 CP
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /4FF58E5C C1 C5 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4FF574BF D3 D1 4N4004
+  ( 1 N-000017 )
+  ( 2 +5V )
+ )
+ ( /4FF5852D PIN_ARRAY-10X1 J1 CONN_10
+  ( 1 +5V )
+  ( 2 GND )
+  ( 3 /LCDRST )
+  ( 4 /LCDRS )
+  ( 5 /MISO )
+  ( 6 /MOSI )
+  ( 7 /SCK )
+  ( 8 /LCDCS )
+  ( 9 /SDCS )
+  ( 10 GND )
+ )
+ ( /4FF587FE PIN_ARRAY_3X1 J2 CONN_3
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /KEYPAD )
+ )
+ ( /4FF5886D PIN_ARRAY-8X1 J3 CONN_8
+  ( 1 +5V )
+  ( 2 GND )
+  ( 3 /GPSRX )
+  ( 4 /GPSTX )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+ )
+ ( /4FF58AEE PIN_ARRAY-6X1 J4 CONN_6
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 +5V )
+  ( 4 /D0 )
+  ( 5 /D1 )
+  ( 6 /ARDRES )
+ )
+ ( /4FF58C53 PIN_ARRAY-8X1 J5 CONN_8
+  ( 1 /AREF )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 /AD1 )
+  ( 5 /AD2 )
+  ( 6 /AD3 )
+  ( 7 /AD4 )
+  ( 8 /AD5 )
+ )
+ ( /4FF59024 PIN_ARRAY-6X1 J6 CONN_6
+  ( 1 +5V )
+  ( 2 /D4 )
+  ( 3 /D5 )
+  ( 4 /D6 )
+  ( 5 GND )
+  ( 6 GND )
+ )
+ ( /4FF58FB4 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF58FB9 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF58FBC MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF58FBF MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF574F9 R1 R1 10K
+  ( 1 +5V )
+  ( 2 N-000017 )
+ )
+ ( /4FF58F4A TB2-5MM TB1 TB-2PIN
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /4FF5745E DIP-28__300 U1 ATMEGA328-PU
+  ( 1 N-000017 )
+  ( 2 /D0 )
+  ( 3 /D1 )
+  ( 4 /GPSRX )
+  ( 5 /GPSTX )
+  ( 6 /D4 )
+  ( 7 +5V )
+  ( 8 GND )
+  ( 9 /RES0 )
+  ( 10 /RES1 )
+  ( 11 /D5 )
+  ( 12 /D6 )
+  ( 13 /SDCS )
+  ( 14 /LCDRST )
+  ( 15 /LCDRS )
+  ( 16 /LCDCS )
+  ( 17 /MOSI )
+  ( 18 /MISO )
+  ( 19 /SCK )
+  ( 20 +5V )
+  ( 21 /AREF )
+  ( 22 GND )
+  ( 23 /KEYPAD )
+  ( 24 /AD1 )
+  ( 25 /AD2 )
+  ( 26 /AD3 )
+  ( 27 /AD4 )
+  ( 28 /AD5 )
+ )
+ ( /4FF58DEE SOT223 U2 AP1117
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /VIN )
+  ( 4 +5V )
+ )
+ ( /4FF58157 SIL-3 Y1 RESONATEUR
+  ( 1 /RES0 )
+  ( 2 GND )
+  ( 3 /RES1 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

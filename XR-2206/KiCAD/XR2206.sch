@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 30 Jun 2012 12:26:39 PM EDT
+EESchema Schematic File Version 2  date Sun 08 Jul 2012 09:45:48 PM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -21,7 +21,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "30 jun 2012"
+Date "9 jul 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -29,9 +29,19 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 6650 1700 0    60   ~ 0
+OUT
+Text Label 5000 2400 0    60   ~ 0
+SYM2
+Text Label 5000 2300 0    60   ~ 0
+SYM1
+Text Label 5100 2200 0    60   ~ 0
+WA2
+Text Label 5100 2100 0    60   ~ 0
+WA1
 Connection ~ 4400 1500
 Wire Wire Line
-	4250 1500 4400 1500
+	4400 1500 4250 1500
 Connection ~ 6550 2750
 Connection ~ 5850 2650
 Wire Wire Line
@@ -50,12 +60,12 @@ Connection ~ 4400 2400
 Wire Wire Line
 	4400 2400 4450 2400
 Wire Wire Line
-	5300 2300 5250 2300
+	5300 2300 4950 2300
 Wire Wire Line
-	5300 2100 5200 2100
+	5300 2100 5050 2100
 Connection ~ 4400 2650
 Wire Wire Line
-	4400 2650 5850 2650
+	5850 2650 4400 2650
 Wire Wire Line
 	5850 1100 5850 650 
 Wire Wire Line
@@ -71,7 +81,7 @@ Wire Wire Line
 Wire Wire Line
 	5150 1400 5300 1400
 Wire Wire Line
-	5250 1700 5300 1700
+	5000 1700 5300 1700
 Wire Wire Line
 	5300 1500 4750 1500
 Wire Wire Line
@@ -87,13 +97,13 @@ Connection ~ 5850 650
 Wire Wire Line
 	4400 2700 4400 1100
 Wire Wire Line
-	5300 2200 4650 2200
+	5300 2200 4500 2200
 Wire Wire Line
-	4650 2200 4650 2100
+	4500 2200 4500 2100
 Wire Wire Line
-	4650 2100 4700 2100
+	4500 2100 4550 2100
 Wire Wire Line
-	4400 2300 4750 2300
+	4400 2300 4450 2300
 Connection ~ 4400 2300
 Wire Wire Line
 	6500 1700 7150 1700
@@ -105,7 +115,16 @@ Wire Wire Line
 Wire Wire Line
 	6950 1500 7150 1500
 Wire Wire Line
-	4750 1700 4250 1700
+	4500 1700 4250 1700
+Text Label 4950 1500 0    60   ~ 0
+TC2
+Text Label 4950 950  0    60   ~ 0
+TC1
+Text Label 5050 1700 0    60   ~ 0
+TR1
+Text Label 6450 2200 0    60   ~ 0
+BIAS
+NoConn ~ 6500 1800
 $Comp
 L CONN_2 J2
 U 1 1 4FDCA902
@@ -147,7 +166,7 @@ $Comp
 L R R2
 U 1 1 4FDBE59E
 P 4700 2400
-F 0 "R2" V 4780 2400 50  0000 C CNN
+F 0 "R2" V 4750 2600 50  0000 C CNN
 F 1 "10K" V 4700 2400 50  0000 C CNN
 	1    4700 2400
 	0    1    1    0   
@@ -155,19 +174,19 @@ $EndComp
 $Comp
 L R R4
 U 1 1 4FDBE58B
-P 5000 2300
-F 0 "R4" V 5080 2300 50  0000 C CNN
-F 1 "10K" V 5000 2300 50  0000 C CNN
-	1    5000 2300
+P 4700 2300
+F 0 "R4" V 4750 2500 50  0000 C CNN
+F 1 "10K" V 4700 2300 50  0000 C CNN
+	1    4700 2300
 	0    1    1    0   
 $EndComp
 $Comp
 L R R3
 U 1 1 4FDBE56E
-P 4950 2100
-F 0 "R3" V 5030 2100 50  0000 C CNN
-F 1 "330" V 4950 2100 50  0000 C CNN
-	1    4950 2100
+P 4800 2100
+F 0 "R3" V 4880 2100 50  0000 C CNN
+F 1 "330" V 4800 2100 50  0000 C CNN
+	1    4800 2100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -218,10 +237,10 @@ $EndComp
 $Comp
 L R R1
 U 1 1 4FDBC393
-P 5000 1700
-F 0 "R1" V 5080 1700 50  0000 C CNN
-F 1 "R" V 5000 1700 50  0000 C CNN
-	1    5000 1700
+P 4750 1700
+F 0 "R1" V 4830 1700 50  0000 C CNN
+F 1 "R" V 4750 1700 50  0000 C CNN
+	1    4750 1700
 	0    1    1    0   
 $EndComp
 $Comp
