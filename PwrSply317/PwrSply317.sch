@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 7/9/2012 2:10:59 PM
+EESchema Schematic File Version 2  date 7/9/2012 4:29:25 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -20,6 +20,94 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 4150 2600
+Wire Wire Line
+	4550 1600 4550 1200
+Wire Wire Line
+	3950 1200 4800 1200
+Wire Wire Line
+	7150 1400 7000 1400
+Wire Wire Line
+	7000 1400 7000 2600
+Connection ~ 6700 1200
+Wire Wire Line
+	6700 1700 6700 1200
+Connection ~ 6300 1200
+Wire Wire Line
+	6300 1200 6300 1700
+Connection ~ 5850 1200
+Wire Wire Line
+	5850 1200 5850 1300
+Connection ~ 5850 1900
+Wire Wire Line
+	5850 1900 5200 1900
+Wire Wire Line
+	5200 1900 5200 1700
+Connection ~ 4150 1200
+Connection ~ 2500 1600
+Wire Wire Line
+	2700 1600 2500 1600
+Wire Wire Line
+	2100 1500 2300 1500
+Wire Wire Line
+	2300 1500 2300 1900
+Wire Wire Line
+	2300 1900 3350 1900
+Connection ~ 3350 1600
+Wire Wire Line
+	3350 1900 3350 1600
+Connection ~ 3350 1200
+Wire Wire Line
+	3100 1200 3550 1200
+Wire Wire Line
+	2100 1300 2300 1300
+Wire Wire Line
+	2300 1300 2300 900 
+Wire Wire Line
+	2300 900  3350 900 
+Wire Wire Line
+	3350 900  3350 1200
+Wire Wire Line
+	3100 1600 3550 1600
+Wire Wire Line
+	2700 1200 2500 1200
+Wire Wire Line
+	3950 1600 4150 1600
+Wire Wire Line
+	5850 2600 5850 2500
+Wire Wire Line
+	2500 1200 2500 2600
+Wire Wire Line
+	5850 2000 5850 1800
+Connection ~ 4550 1200
+Wire Wire Line
+	4150 2300 4150 2600
+Connection ~ 4550 2600
+Wire Wire Line
+	2500 2600 7000 2600
+Connection ~ 5850 2600
+Wire Wire Line
+	6300 2100 6300 2600
+Connection ~ 6300 2600
+Wire Wire Line
+	6700 2100 6700 2600
+Connection ~ 6700 2600
+Wire Wire Line
+	7150 1200 5600 1200
+Wire Wire Line
+	4150 1200 4150 1900
+Connection ~ 4150 1600
+Wire Wire Line
+	4550 2000 4550 2600
+$Comp
+L C C2
+U 1 1 4FFB3AE0
+P 4550 1800
+F 0 "C2" H 4600 1900 50  0000 L CNN
+F 1 "0.1uF" H 4600 1700 50  0000 L CNN
+	1    4550 1800
+	1    0    0    -1  
+$EndComp
 NoConn ~ 7200 3350
 NoConn ~ 7200 3250
 NoConn ~ 7200 3150
@@ -60,81 +148,6 @@ F 1 "CONN_1" H 7350 3105 30  0001 C CNN
 	1    7350 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4800 1200 3950 1200
-Wire Wire Line
-	7150 1400 7000 1400
-Wire Wire Line
-	7000 1400 7000 2600
-Connection ~ 6700 1200
-Wire Wire Line
-	6700 1200 6700 1700
-Connection ~ 6300 1200
-Wire Wire Line
-	6300 1200 6300 1700
-Connection ~ 5850 1200
-Wire Wire Line
-	5850 1300 5850 1200
-Connection ~ 5850 1900
-Wire Wire Line
-	5850 1900 5200 1900
-Wire Wire Line
-	5200 1900 5200 1700
-Connection ~ 4150 1200
-Connection ~ 2500 1600
-Wire Wire Line
-	2700 1600 2500 1600
-Wire Wire Line
-	2100 1500 2300 1500
-Wire Wire Line
-	2300 1500 2300 1900
-Wire Wire Line
-	2300 1900 3350 1900
-Connection ~ 3350 1600
-Wire Wire Line
-	3350 1900 3350 1600
-Connection ~ 3350 1200
-Wire Wire Line
-	3550 1200 3100 1200
-Wire Wire Line
-	2100 1300 2300 1300
-Wire Wire Line
-	2300 1300 2300 900 
-Wire Wire Line
-	2300 900  3350 900 
-Wire Wire Line
-	3350 900  3350 1200
-Wire Wire Line
-	3550 1600 3100 1600
-Wire Wire Line
-	2700 1200 2500 1200
-Wire Wire Line
-	3950 1600 4150 1600
-Wire Wire Line
-	4150 1600 4150 1200
-Wire Wire Line
-	5850 2600 5850 2500
-Wire Wire Line
-	2500 1200 2500 2600
-Wire Wire Line
-	5850 1800 5850 2000
-Wire Wire Line
-	4550 1200 4550 1700
-Connection ~ 4550 1200
-Wire Wire Line
-	4550 2100 4550 2600
-Connection ~ 4550 2600
-Wire Wire Line
-	2500 2600 7000 2600
-Connection ~ 5850 2600
-Wire Wire Line
-	6300 2100 6300 2600
-Connection ~ 6300 2600
-Wire Wire Line
-	6700 2100 6700 2600
-Connection ~ 6700 2600
-Wire Wire Line
-	5600 1200 7150 1200
 Text Label 2800 1900 0    60   ~ 0
 AC2
 Text Label 2750 900  0    60   ~ 0
@@ -175,10 +188,10 @@ $EndComp
 $Comp
 L CP C1
 U 1 1 4FFB0C63
-P 4550 1900
-F 0 "C1" H 4600 2000 50  0000 L CNN
-F 1 "4700uF" H 4600 1800 50  0000 L CNN
-	1    4550 1900
+P 4150 2100
+F 0 "C1" H 4200 2200 50  0000 L CNN
+F 1 "4700uF" H 4200 2000 50  0000 L CNN
+	1    4150 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -186,7 +199,7 @@ L R R2
 U 1 1 4FFB0BFA
 P 5850 2250
 F 0 "R2" V 5930 2250 50  0000 C CNN
-F 1 "R" V 5850 2250 50  0000 C CNN
+F 1 "4.7K" V 5850 2250 50  0000 C CNN
 	1    5850 2250
 	1    0    0    -1  
 $EndComp
@@ -195,7 +208,7 @@ L R R1
 U 1 1 4FFB0BF4
 P 5850 1550
 F 0 "R1" V 5930 1550 50  0000 C CNN
-F 1 "R" V 5850 1550 50  0000 C CNN
+F 1 "560" V 5850 1550 50  0000 C CNN
 	1    5850 1550
 	-1   0    0    1   
 $EndComp

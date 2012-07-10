@@ -1,6 +1,10 @@
-# EESchema Netlist Version 1.1 created  7/9/2012 2:11:30 PM
+# EESchema Netlist Version 1.1 created  7/9/2012 4:21:12 PM
 (
  ( /4FFB0C63 CP_22x41mm C1 4700uF
+  ( 1 /DCIN )
+  ( 2 /GND )
+ )
+ ( /4FFB3AE0 C1 C2 0.1uF
   ( 1 /DCIN )
   ( 2 /GND )
  )
@@ -48,17 +52,17 @@
   ( 1 /DCOUT )
   ( 2 /GND )
  )
- ( /4FFB0BF4 R4 R1 R
-  ( 1 N-000002 )
+ ( /4FFB0BF4 R4 R1 560
+  ( 1 N-000007 )
   ( 2 /DCOUT )
  )
- ( /4FFB0BFA R4 R2 R
-  ( 1 N-000002 )
+ ( /4FFB0BFA R4 R2 4.7K
+  ( 1 N-000007 )
   ( 2 /GND )
  )
  ( /4FFB0BEC TO220_VERT U1 LM317
   ( 1 /DCIN )
-  ( 2 N-000002 )
+  ( 2 N-000007 )
   ( 3 /DCOUT )
  )
 )
@@ -67,6 +71,11 @@
 $component C1
  CP*
  SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
 $endlist
 $component C4
  CP*

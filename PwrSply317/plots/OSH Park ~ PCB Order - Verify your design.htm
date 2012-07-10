@@ -1,0 +1,144 @@
+  * Doug Gilliland.
+  * Home </> Design Rules </guidelines> Pricing & Specs </pricing>
+    Projects </users/current> Profile </users/edit> Log out
+    </users/sign_out>
+
+OSH Park
+
+
+  OSH Park
+
+
+    PCB Order - Verify your design
+
+[Board Top]
+
+
+    Board Top
+
+This is an render of what we think your board will look like after
+fabrication as viewed from the top.
+
+[Board Bottom]
+
+
+    Board Bottom
+
+This is an render of what we think your board will look like after
+fabrication as viewed from the bottom.
+
+[Bottom Layer]
+
+Rendered from "PwrSply317-Back.gbl"
+
+
+    Bottom Layer
+
+  * This is the bottom copper layer of your board.
+
+[Top Layer]
+
+Rendered from "PwrSply317-Front.gtl"
+
+
+    Top Layer
+
+  * This is the top layer of copper on your PCB.
+
+[Bottom Solder Mask]
+
+Rendered from "PwrSply317-Mask_Back.gbs"
+
+
+    Bottom Solder Mask
+
+  * Soldermask layers are "negative" layers. This layer really
+    designates where there /shouldn't/ be solder mask. If you draw on
+    the soldermask layer ("tStop" and "bStop" in Eagle), those areas
+    won't have soldermask.
+  * If you don't provide a soldermask layer here, this entire side of
+    the board will be coated in soldermask. You probably don't want this.
+
+[Top Solder Mask]
+
+Rendered from "PwrSply317-Mask_Front.gts"
+
+
+    Top Solder Mask
+
+  * Soldermask layers are "negative" layers. This layer really
+    designates where there /shouldn't/ be solder mask. If you draw on
+    the soldermask layer ("tStop" and "bStop" in Eagle), those areas
+    won't have soldermask.
+  * If you don't provide a soldermask layer here, this entire side of
+    the board will be coated in soldermask. You probably don't want this.
+
+[Board Outline]
+
+Rendered from "PwrSply317-PCB_Edges.gbr"
+
+
+    Board Outline
+
+  * The board outline needs to go all the way around the edge of the
+    board such that it's "water tight" (no gaps).
+  * Non-rectangular board shapes are allowed, but you'll be billed for
+    the smallest rectangle that would enclose your design. So a circle
+    two inches in diameter would be billed at 4 square inches.
+  * Cutouts aren't officially supported, but the fab has been doing them
+    pretty regularly as long as they're drawn on the board outline
+    layer, and are at least 100 mils wide.
+  * To try making a cutout, draw the outline of the cutout on the board
+    outline layer, or draw the path you'd like the milling tool to make
+    using a 0.1" wide line. Cutouts won't be plated.
+
+[Bottom Silk Screen]
+
+Rendered from "PwrSply317-SilkS_Back.gbo"
+
+
+    Bottom Silk Screen
+
+  * The silkscreen is put on with what is basically a 200 dpi printer.
+    Lines thinner than 5 mils will be fattened to 5 mils before printing.
+  * Try to keep your silkscreen inside the board outline. It's okay if
+    it goes out of the board outline, but it will be trimmed with
+    sometimes unpredictable results.
+  * The fab will automatically remove any silkscreen that crosses
+    drilled holes or exposed metal.
+
+[Top Silk Screen]
+
+Rendered from "PwrSply317-SilkS_Front.gto"
+
+
+    Top Silk Screen
+
+  * The silkscreen is put on with what is basically a 200 dpi printer.
+    Lines thinner than 5 mils will be fattened to 5 mils before printing.
+  * Try to keep your silkscreen inside the board outline. It's okay if
+    it goes out of the board outline, but it will be trimmed with
+    sometimes unpredictable results.
+  * The fab will automatically remove any silkscreen that crosses
+    drilled holes or exposed metal.
+
+[Drills]
+
+Rendered from "PwrSply317.drl"
+
+
+    Drills
+
+  * Your drill file needs to be in text "NC Drills" or "Excellon"
+    format, generated with "2:4" precision, and with "no zero suppression".
+  * Make sure the center of your drill hits are all inside the board
+    outline. Anything outside of the board outline is automatically removed.
+  * Overlapping drill hits aren't allowed.
+  * Minimum drill size is 13 mils. Maximum is 360 mils.
+  * Plated slots aren't supported.
+
+Start Over ↺ Approve and Continue →
+
+[Sociable Limited.] Designed and developed by Sociable Limited
+<http://sociable.co.nz/>.
+
