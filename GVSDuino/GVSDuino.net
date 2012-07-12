@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sat 07 Jul 2012 07:47:35 AM EDT
+# EESchema Netlist Version 1.1 created  Wed 11 Jul 2012 07:50:05 PM EDT
 (
  ( /4FF581E0 C1 C1 0.1uF
   ( 1 /AREF )
@@ -6,7 +6,7 @@
  )
  ( /4FF58BD9 C1 C2 0.1uF
   ( 1 /ARDRES )
-  ( 2 N-000018 )
+  ( 2 N-000025 )
  )
  ( /4FF58E38 C1 C3 0.1uF
   ( 1 /VIN )
@@ -20,8 +20,8 @@
   ( 1 +5V )
   ( 2 GND )
  )
- ( /4FF574BF D3 D1 4N4004
-  ( 1 N-000018 )
+ ( /4FF574BF D4 D1 4N4004
+  ( 1 N-000025 )
   ( 2 +5V )
  )
  ( /4FF58AEE PIN_ARRAY-6X1 J4 CONN_6
@@ -34,32 +34,32 @@
  )
  ( /4FF81C91 PIN_ARRAY_3X1 K1 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD0 )
  )
  ( /4FF81C90 PIN_ARRAY_3X1 K2 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD1 )
  )
  ( /4FF81C8F PIN_ARRAY_3X1 K3 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD2 )
  )
  ( /4FF81C8E PIN_ARRAY_3X1 K4 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD3 )
  )
  ( /4FF81C8C PIN_ARRAY_3X1 K5 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD4 )
  )
  ( /4FF81C8D PIN_ARRAY_3X1 K6 CONN_3
   ( 1 GND )
-  ( 2 /AREF )
+  ( 2 N-000031 )
   ( 3 /AD5 )
  )
  ( /4FF81C44 PIN_ARRAY_3X1 K7 CONN_3
@@ -132,6 +132,11 @@
   ( 2 +5V )
   ( 3 /D13 )
  )
+ ( /4FFE104A PIN_ARRAY_3X1 K21 CONN_3
+  ( 1 +5V )
+  ( 2 N-000031 )
+  ( 3 /AREF )
+ )
  ( /4FF58FB4 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
  )
@@ -144,16 +149,16 @@
  ( /4FF58FBF MTG-4-40 MTG4 CONN_1
   ( 1 ? )
  )
- ( /4FF574F9 R1 R1 10K
+ ( /4FF574F9 R4 R1 10K
   ( 1 +5V )
-  ( 2 N-000018 )
+  ( 2 N-000025 )
  )
  ( /4FF58F4A TB2-5MM TB1 TB-2PIN
   ( 1 /VIN )
   ( 2 GND )
  )
  ( /4FF5745E DIP-28__300 U1 ATMEGA328-PU
-  ( 1 N-000018 )
+  ( 1 N-000025 )
   ( 2 /D0 )
   ( 3 /D1 )
   ( 4 /D2 )
