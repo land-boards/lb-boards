@@ -1,7 +1,35 @@
-update=Thu 05 Jul 2012 10:05:48 PM EDT
-last_client=pcbnew
+update=Thu 12 Jul 2012 09:00:38 PM EDT
+last_client=eeschema
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
+[pcbnew]
+version=1
+PadDrlX=320
+PadDimH=600
+PadDimV=600
+BoardThickness=630
+TxtPcbV=800
+TxtPcbH=600
+TxtModV=600
+TxtModH=600
+TxtModW=120
+VEgarde=100
+DrawLar=150
+EdgeLar=150
+TxtLar=120
+MSegLar=150
+LastNetListRead=HVDigitalPotV2.net
+[pcbnew/libraries]
+LibDir=/home/doug/PCB Designs/KiCAD/modules
+LibName1=connect
+LibName2=discret
+LibName3=MTG-4-40
+LibName4=pin_array
 [eeschema]
 version=1
 LibDir=/home/doug/PCB Designs/KiCAD/library
@@ -40,31 +68,4 @@ LibName3=ad7376arwz50
 LibName4=power
 LibName5=conn
 LibName6=device
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=HVDigitalPotV2.net
-[pcbnew/libraries]
-LibDir=/home/doug/PCB Designs/KiCAD/modules
-LibName1=connect
-LibName2=discret
-LibName3=MTG-4-40
-LibName4=pin_array
+LibName7=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch

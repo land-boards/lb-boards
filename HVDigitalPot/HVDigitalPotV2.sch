@@ -1,15 +1,18 @@
-EESchema Schematic File Version 2  date Thu 05 Jul 2012 10:03:24 PM EDT
+EESchema Schematic File Version 2  date Thu 12 Jul 2012 09:03:11 PM EDT
 LIBS:xicor-eepot
 LIBS:HVDigitalPot-cache
+LIBS:ad7376arwz50
 LIBS:power
 LIBS:conn
 LIBS:device
+LIBS:DougsSch
+LIBS:HVDigitalPotV2-cache
 EELAYER 25  0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "High Voltage Potentiometer"
 Date "26 jun 2012"
 Rev ""
 Comp ""
