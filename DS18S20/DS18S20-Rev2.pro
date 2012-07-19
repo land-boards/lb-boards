@@ -1,6 +1,6 @@
-update=Fri 06 Jul 2012 02:33:35 PM EDT
+update=Wed 18 Jul 2012 09:22:21 AM EDT
 version=1
-last_client=cvpcb
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -64,10 +64,10 @@ LibName4=libcms
 LibName5=pin_array
 LibName6=MTG-4-40
 LibDir=
-[general]
-version=1
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[general]
+version=1
