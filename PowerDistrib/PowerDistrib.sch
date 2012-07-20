@@ -1,0 +1,172 @@
+EESchema Schematic File Version 2  date Fri 20 Jul 2012 08:44:10 AM EDT
+LIBS:power
+LIBS:conn
+LIBS:DougsSch
+LIBS:PowerDistrib-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "20 jul 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_1 MTG4
+U 1 1 50095280
+P 3550 4650
+F 0 "MTG4" H 3630 4650 40  0000 L CNN
+F 1 "CONN_1" H 3550 4705 30  0001 C CNN
+	1    3550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG3
+U 1 1 5009527D
+P 3550 4550
+F 0 "MTG3" H 3630 4550 40  0000 L CNN
+F 1 "CONN_1" H 3550 4605 30  0001 C CNN
+	1    3550 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG2
+U 1 1 50095275
+P 3550 4450
+F 0 "MTG2" H 3630 4450 40  0000 L CNN
+F 1 "CONN_1" H 3550 4505 30  0001 C CNN
+	1    3550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG1
+U 1 1 5009526E
+P 3550 4350
+F 0 "MTG1" H 3630 4350 40  0000 L CNN
+F 1 "CONN_1" H 3550 4405 30  0001 C CNN
+	1    3550 4350
+	1    0    0    -1  
+$EndComp
+Text Label 2900 3400 0    60   ~ 0
+GND-A
+Text Label 2950 2650 0    60   ~ 0
+GND
+Text Label 2950 1850 0    60   ~ 0
++12V
+Text Label 2950 1100 0    60   ~ 0
+VCC
+$Comp
+L CONN_6 P3
+U 1 1 500951E2
+P 2500 2900
+F 0 "P3" V 2450 2900 60  0000 C CNN
+F 1 "CONN_6" V 2550 2900 60  0000 C CNN
+	1    2500 2900
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3000 2950
+Wire Wire Line
+	2850 2950 3000 2950
+Connection ~ 3000 2750
+Wire Wire Line
+	2850 2750 3000 2750
+Wire Wire Line
+	3000 2650 2850 2650
+Wire Wire Line
+	3000 3150 3000 2650
+Wire Wire Line
+	2850 3150 3000 3150
+Wire Wire Line
+	3000 2850 2850 2850
+Connection ~ 3000 2850
+Wire Wire Line
+	3000 3050 2850 3050
+Connection ~ 3000 3050
+Connection ~ 3000 3800
+Wire Wire Line
+	3000 3800 2850 3800
+Connection ~ 3000 3600
+Wire Wire Line
+	3000 3600 2850 3600
+Wire Wire Line
+	2850 3900 3000 3900
+Wire Wire Line
+	3000 3900 3000 3400
+Wire Wire Line
+	3000 3400 2850 3400
+Wire Wire Line
+	2850 3500 3000 3500
+Connection ~ 3000 3500
+Wire Wire Line
+	2850 3700 3000 3700
+Connection ~ 3000 3700
+$Comp
+L CONN_6 P4
+U 1 1 500951E1
+P 2500 3650
+F 0 "P4" V 2450 3650 60  0000 C CNN
+F 1 "CONN_6" V 2550 3650 60  0000 C CNN
+	1    2500 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_6 P2
+U 1 1 500951DB
+P 2500 2100
+F 0 "P2" V 2450 2100 60  0000 C CNN
+F 1 "CONN_6" V 2550 2100 60  0000 C CNN
+	1    2500 2100
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3000 2150
+Wire Wire Line
+	2850 2150 3000 2150
+Connection ~ 3000 1950
+Wire Wire Line
+	2850 1950 3000 1950
+Wire Wire Line
+	3000 1850 2850 1850
+Wire Wire Line
+	3000 2350 3000 1850
+Wire Wire Line
+	2850 2350 3000 2350
+Wire Wire Line
+	3000 2050 2850 2050
+Connection ~ 3000 2050
+Wire Wire Line
+	3000 2250 2850 2250
+Connection ~ 3000 2250
+Connection ~ 3000 1500
+Wire Wire Line
+	3000 1500 2850 1500
+Connection ~ 3000 1300
+Wire Wire Line
+	3000 1300 2850 1300
+Wire Wire Line
+	2850 1600 3000 1600
+Wire Wire Line
+	3000 1600 3000 1100
+Wire Wire Line
+	3000 1100 2850 1100
+Wire Wire Line
+	2850 1200 3000 1200
+Connection ~ 3000 1200
+Wire Wire Line
+	2850 1400 3000 1400
+Connection ~ 3000 1400
+$Comp
+L CONN_6 P1
+U 1 1 5009519E
+P 2500 1350
+F 0 "P1" V 2450 1350 60  0000 C CNN
+F 1 "CONN_6" V 2550 1350 60  0000 C CNN
+	1    2500 1350
+	-1   0    0    -1  
+$EndComp
+$EndSCHEMATC
