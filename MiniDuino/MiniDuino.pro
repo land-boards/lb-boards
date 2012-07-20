@@ -1,6 +1,6 @@
-update=Sun 08 Jul 2012 08:17:56 PM EDT
+update=Thu 19 Jul 2012 07:31:06 AM EDT
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -29,6 +29,11 @@ LibName5=pin_array
 LibName6=dip_sockets
 LibName7=capacitors
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -61,18 +66,14 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=linear
-LibName5=regul
-LibName6=microcontrollers
-LibName7=atmel
-LibName8=atmega8
-LibName9=Resonator_3pins
-LibName10=BrBdPwrSply
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName1=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=linear
+LibName6=regul
+LibName7=microcontrollers
+LibName8=atmel
+LibName9=atmega8
+LibName10=Resonator_3pins
+LibName11=BrBdPwrSply

@@ -1,4 +1,5 @@
-EESchema Schematic File Version 2  date Sun 08 Jul 2012 08:15:18 PM EDT
+EESchema Schematic File Version 2  date Thu 19 Jul 2012 08:50:48 AM EDT
+LIBS:DougsSch
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -16,7 +17,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "9 jul 2012"
+Date "19 jul 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -24,6 +25,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 9700 5500 0    60   ~ 0
+GND\nCTS\n+5V\nTX\nRX\nRTS
+Text Notes 2300 6450 2    60   ~ 0
+GND
+Text Notes 2300 6250 2    60   ~ 0
++VIN
 Text Notes 6100 1700 0    60   ~ 0
 I2C I/F
 $Comp
