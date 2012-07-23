@@ -1,13 +1,9 @@
-# EESchema Netlist Version 1.1 created  Thu 05 Jul 2012 11:16:47 PM EDT
+# EESchema Netlist Version 1.1 created  Sun 22 Jul 2012 02:17:25 PM EDT
 (
  ( /4FF082B1 PIN_ARRAY_3X1 JP1 JUMPER3
   ( 1 /GND )
   ( 2 /VC )
   ( 3 /SENS )
- )
- ( /4FF082D2 SIL-2 LDR1 RVAR
-  ( 1 /SENS )
-  ( 2 /GND )
  )
  ( /4FF0846C MTG-4-40 MTG1 CONN_1
   ( 1 ? )
@@ -15,9 +11,13 @@
  ( /4FF08479 MTG-4-40 MTG2 CONN_1
   ( 1 ? )
  )
- ( /4FF082C2 R5 R1 480K
+ ( /4FF082C2 R5 R1 56K
   ( 1 /SENS )
   ( 2 /VC )
+ )
+ ( /4FF082D2 LDR-3.5MM VT90N2 RVAR
+  ( 1 /SENS )
+  ( 2 /GND )
  )
 )
 *

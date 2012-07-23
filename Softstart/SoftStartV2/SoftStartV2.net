@@ -1,0 +1,98 @@
+# EESchema Netlist Version 1.1 created  Fri 06 Jul 2012 12:35:07 PM EDT
+(
+ ( /4FAD14E8 C1V8 C1 47uF
+  ( 1 N-000001 )
+  ( 2 /GND )
+ )
+ ( /4FDD44B9 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FDD44BD MTG-4-40 MTG2 MTG2
+  ( 1 ? )
+ )
+ ( /4FDD44C0 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /4FDD44C3 MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
+ )
+ ( /4FAD12C5 PIN_ARRAY_2X1 P1 CONN_2
+  ( 1 /IN )
+  ( 2 /GND )
+ )
+ ( /4FAD1492 PIN_ARRAY_2X1 P2 CONN_2
+  ( 1 /OUT )
+  ( 2 /GND )
+ )
+ ( /4FAD125A IRFD9110 Q1 IRF_9110
+  ( D /OUT )
+  ( G /GATE )
+  ( S /IN )
+ )
+ ( /4FAD1349 TO92 Q2 2N3904
+  ( 1 /GND )
+  ( 2 /SWA )
+  ( 3 /GATE )
+ )
+ ( /4FAD13A7 TO92 Q3 2N3904
+  ( 1 /GND )
+  ( 2 N-000001 )
+  ( 3 /SWB )
+ )
+ ( /4FAD1336 R1 R1 100K
+  ( 1 /IN )
+  ( 2 /GATE )
+ )
+ ( /4FAD1394 R1 R2 100K
+  ( 1 /OUT )
+  ( 2 /SWA )
+ )
+ ( /4FAD139A R1 R3 1M
+  ( 1 /OUT )
+  ( 2 N-000001 )
+ )
+ ( /4FAD13A1 R1 R4 100K
+  ( 1 /IN )
+  ( 2 /SWB )
+ )
+ ( /4FAD1579 SW_PUSH_SMALL SW1 SW_PUSH
+  ( 1 /SWA )
+  ( 2 /SWB )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

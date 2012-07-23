@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 17 Jun 2012 12:03:03 PM EDT
+EESchema Schematic File Version 2  date Sun 22 Jul 2012 06:44:39 AM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,11 +30,12 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:SoftStart-cache
-EELAYER 24  0
+EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
+encoding utf-8
 Sheet 1 1
-Title ""
+Title "Soft Start Switch"
 Date "17 jun 2012"
 Rev ""
 Comp ""

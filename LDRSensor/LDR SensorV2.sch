@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 04 Jul 2012 01:04:42 PM EDT
+EESchema Schematic File Version 2  date Sun 22 Jul 2012 01:43:41 PM EDT
 LIBS:device
 LIBS:conn
 LIBS:audio
@@ -6,14 +6,13 @@ LIBS:interface
 LIBS:opto
 LIBS:atmel
 LIBS:contrib
-LIBS:LDR Sensor-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "4 jul 2012"
+Title "Light Dependent Resistor (LDR)"
+Date "22 jul 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -76,7 +75,7 @@ L R R1
 U 1 1 4FF082C2
 P 4200 3300
 F 0 "R1" V 4280 3300 50  0000 C CNN
-F 1 "39K" V 4200 3300 50  0000 C CNN
+F 1 "56K" V 4200 3300 50  0000 C CNN
 	1    4200 3300
 	0    1    1    0   
 $EndComp

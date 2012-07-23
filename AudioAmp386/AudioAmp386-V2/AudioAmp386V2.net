@@ -1,0 +1,80 @@
+# EESchema Netlist Version 1.1 created  Wed 18 Jul 2012 08:03:33 AM EDT
+(
+ ( /4FDCB12E C1 C1 0.1uF
+  ( 1 /IN )
+  ( 2 /RESHI )
+ )
+ ( /4FDCB0F0 C1 C2 .047uF
+  ( 1 /AO )
+  ( 2 /COMP )
+ )
+ ( /4FDCB10B C2V8 C3 220uF
+  ( 1 /AO )
+  ( 2 /OUT )
+ )
+ ( /4FDCEF9D RCA J1 RCA-JACK
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 /IN )
+ )
+ ( /4FDCEF97 RCA J2 RCA-JACK
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 /OUT )
+ )
+ ( /4FDCB240 TB2-5MM J3 CONN_2
+  ( 1 /+12V )
+  ( 2 GND )
+ )
+ ( /4FDCFD3D MTG-4-40 MTG1 MTG-4-40
+  ( 1 ? )
+ )
+ ( /4FDCFD43 MTG-4-40 MTG2 MTG-4-40
+  ( 1 ? )
+ )
+ ( /4FDCB0F6 R1 R1 10
+  ( 1 /COMP )
+  ( 2 GND )
+ )
+ ( /4FDCB1B3 PIN_ARRAY_3X1 RV1 10K
+  ( 1 /RESHI )
+  ( 2 /RESWI )
+  ( 3 GND )
+ )
+ ( /4FDCAFD4 DIP-8__300 U1 LM386
+  ( 1 ? )
+  ( 2 GND )
+  ( 3 /RESWI )
+  ( 4 GND )
+  ( 5 /AO )
+  ( 6 /+12V )
+  ( 8 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
