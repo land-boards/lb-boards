@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  7/24/2012 1:35:57 PM
+# EESchema Netlist Version 1.1 created  7/24/2012 1:57:44 PM
 (
  ( /4FEC80EE PIN_ARRAY_2X1 J1 CONN_2
   ( 1 /VCC )
@@ -17,17 +17,14 @@
  ( /4FEC8AB4 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
  )
- ( /4FEC8AB7 MTG-4-40 MTG2 CONN_1
-  ( 1 ? )
- )
  ( /4FEC86BD R4 R1 4.7K
   ( 1 /DQ )
   ( 2 /VCC-IN )
  )
  ( /4FEC84B3 TO92-INVERT U1 DS18S20+
-  ( 1 /VCC )
+  ( 1 /GND )
   ( 2 /DQ )
-  ( 3 /GND )
+  ( 3 /VCC )
  )
 )
 *

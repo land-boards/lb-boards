@@ -1,6 +1,6 @@
-update=Wed 18 Jul 2012 09:22:21 AM EDT
+update=7/24/2012 1:57:13 PM
 version=1
-last_client=kicad
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=
@@ -39,6 +39,8 @@ LibName3=transistors
 LibName4=conn
 LibName5=1wire
 LibName6=ds18s20+
+[general]
+version=1
 [pcbnew]
 version=1
 PadDrlX=320
@@ -55,19 +57,17 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=DS18S20-Rev2.net
+LastNetListRead=DS18S20-Rev3.net
 [pcbnew/libraries]
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=libcms
-LibName5=pin_array
-LibName6=MTG-4-40
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=sockets
+LibName3=connect
+LibName4=discret
+LibName5=libcms
+LibName6=pin_array
 LibDir=
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
