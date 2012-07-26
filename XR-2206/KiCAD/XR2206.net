@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sun 08 Jul 2012 09:47:20 PM EDT
+# EESchema Netlist Version 1.1 created  Thu 26 Jul 2012 07:11:34 AM EDT
 (
  ( /4FDBC755 C1V5 C1 1uF
   ( 1 /TC1 )
@@ -19,31 +19,46 @@
  )
  ( /4FDCA902 PIN_ARRAY_2X1 J2 CONN_2
   ( 1 GND )
-  ( 2 N-000009 )
+  ( 2 N-000014 )
  )
  ( /4FDBED61 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
  )
- ( /4FDBC393 R3 R1 R
-  ( 1 /TR1 )
-  ( 2 N-000009 )
+ ( /501125B1 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
  )
- ( /4FDBE59E R3 R2 10K
+ ( /4FDBC393 R4 R1 R
+  ( 1 /TR1 )
+  ( 2 N-000014 )
+ )
+ ( /4FDBE59E R4 R2 10K
   ( 1 /SYM2 )
   ( 2 GND )
  )
- ( /4FDBE56E R3 R3 330
+ ( /4FDBE56E R4 R3 330
   ( 1 /WA1 )
   ( 2 /WA2 )
  )
- ( /4FDBE58B R3 R4 10K
+ ( /4FDBE58B R4 R4 10K
   ( 1 /SYM1 )
   ( 2 GND )
+ )
+ ( /501123D0 R4 R5 22K
+  ( 1 N-000018 )
+  ( 2 N-000013 )
+ )
+ ( /501123BB R4 R6 5.1K
+  ( 1 /+12V )
+  ( 2 N-000018 )
+ )
+ ( /501123C8 R4 R7 5.1K
+  ( 1 GND )
+  ( 2 N-000018 )
  )
  ( /4FDBC311 DIP-16__300 U1 XR2206
   ( 1 GND )
   ( 2 /OUT )
-  ( 3 ? )
+  ( 3 N-000013 )
   ( 4 /+12V )
   ( 5 /TC1 )
   ( 6 /TC2 )
@@ -96,6 +111,27 @@ $component R3
  SM1206
 $endlist
 $component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
  R?
  SM0603
  SM0805

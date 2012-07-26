@@ -1,5 +1,5 @@
-update=Sun 08 Jul 2012 09:48:02 PM EDT
-last_client=pcbnew
+update=Thu 26 Jul 2012 07:06:19 AM EDT
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -49,11 +49,6 @@ LibName12=opto
 LibName13=atmel
 LibName14=contrib
 LibName15=EXAR
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -72,7 +67,13 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=XR2206.net
 [pcbnew/libraries]
-LibDir=
 LibName1=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules/dip_sockets
 LibName2=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName3=pin_array
+LibName4=discret
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
