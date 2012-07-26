@@ -1,4 +1,4 @@
-update=Thu 26 Jul 2012 07:06:19 AM EDT
+update=7/26/2012 7:36:49 AM
 last_client=cvpcb
 [general]
 version=1
@@ -67,10 +67,9 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=XR2206.net
 [pcbnew/libraries]
-LibName1=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules/dip_sockets
-LibName2=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName3=pin_array
-LibName4=discret
+LibName1=pin_array
+LibName2=discret
+LibName3=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibDir=
 [cvpcb]
 version=1

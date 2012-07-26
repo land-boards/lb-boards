@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 18 Jul 2012 09:47:36 AM EDT
+EESchema Schematic File Version 2  date 7/26/2012 5:06:39 PM
 LIBS:power
 LIBS:conn
 LIBS:device
@@ -10,18 +10,20 @@ LIBS:usb-mini-b
 LIBS:FTDI-USB-TTLv2-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "18 jul 2012"
-Rev ""
+Title "FTDI USB-TTL Cable"
+Date "26 jul 2012"
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 8600 2350 0    60   ~ 0
+GND\nCTS(I)\nVCCIO\nTX(O)\nRX(I)\nDTR(O)
 Connection ~ 3150 5500
 Wire Wire Line
 	3050 4000 3050 5500

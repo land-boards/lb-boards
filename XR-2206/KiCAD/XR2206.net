@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Thu 26 Jul 2012 07:11:34 AM EDT
+# EESchema Netlist Version 1.1 created  7/26/2012 8:45:34 AM
 (
  ( /4FDBC755 C1V5 C1 1uF
   ( 1 /TC1 )
@@ -19,7 +19,7 @@
  )
  ( /4FDCA902 PIN_ARRAY_2X1 J2 CONN_2
   ( 1 GND )
-  ( 2 N-000014 )
+  ( 2 /POT )
  )
  ( /4FDBED61 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
@@ -29,7 +29,7 @@
  )
  ( /4FDBC393 R4 R1 R
   ( 1 /TR1 )
-  ( 2 N-000014 )
+  ( 2 /POT )
  )
  ( /4FDBE59E R4 R2 10K
   ( 1 /SYM2 )
@@ -44,21 +44,21 @@
   ( 2 GND )
  )
  ( /501123D0 R4 R5 22K
-  ( 1 N-000018 )
-  ( 2 N-000013 )
+  ( 1 /SC )
+  ( 2 /M )
  )
  ( /501123BB R4 R6 5.1K
   ( 1 /+12V )
-  ( 2 N-000018 )
+  ( 2 /SC )
  )
  ( /501123C8 R4 R7 5.1K
   ( 1 GND )
-  ( 2 N-000018 )
+  ( 2 /SC )
  )
  ( /4FDBC311 DIP-16__300 U1 XR2206
   ( 1 GND )
   ( 2 /OUT )
-  ( 3 N-000013 )
+  ( 3 /M )
   ( 4 /+12V )
   ( 5 /TC1 )
   ( 6 /TC2 )

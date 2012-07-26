@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 26 Jul 2012 07:10:52 AM EDT
+EESchema Schematic File Version 2  date 7/26/2012 8:45:00 AM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +29,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 4000 1700 0    60   ~ 0
+POT
+Text Label 7150 1900 0    60   ~ 0
+SC
+Text Label 6550 1800 0    60   ~ 0
+M
 $Comp
 L CONN_1 MTG2
 U 1 1 501125B1
@@ -42,20 +48,24 @@ NoConn ~ 7300 3200
 Wire Wire Line
 	6500 1800 6600 1800
 Wire Wire Line
-	7200 1450 7150 1450
+	7150 1450 7200 1450
 Wire Wire Line
-	7150 1450 7150 2000
+	7150 1450 7150 1800
+Wire Wire Line
+	7150 1800 7150 2000
 Wire Wire Line
 	7150 2000 7200 2000
 Connection ~ 7800 1450
 Wire Wire Line
 	7700 1450 7800 1450
 Wire Wire Line
-	4500 1700 4250 1700
+	4500 1700 3900 1700
 Wire Wire Line
-	8050 1500 7900 1500
+	7900 1500 8050 1500
 Wire Wire Line
-	7900 1500 7900 2800
+	7900 1500 7900 2000
+Wire Wire Line
+	7900 2000 7900 2800
 Connection ~ 6550 2800
 Wire Wire Line
 	7900 2800 6550 2800
@@ -71,7 +81,17 @@ Wire Wire Line
 Wire Wire Line
 	4500 2200 5300 2200
 Wire Wire Line
-	4400 1100 4400 2700
+	4400 1100 4400 1500
+Wire Wire Line
+	4400 1500 4400 2000
+Wire Wire Line
+	4400 2000 4400 2300
+Wire Wire Line
+	4400 2300 4400 2400
+Wire Wire Line
+	4400 2400 4400 2650
+Wire Wire Line
+	4400 2650 4400 2700
 Connection ~ 5850 650 
 Connection ~ 4400 2000
 Wire Wire Line
@@ -95,9 +115,13 @@ Wire Wire Line
 Wire Wire Line
 	4750 950  4750 1050
 Wire Wire Line
-	6550 2850 6550 2700
+	6550 2850 6550 2800
 Wire Wire Line
-	4400 700  4400 650 
+	6550 2800 6550 2750
+Wire Wire Line
+	6550 2750 6550 2700
+Wire Wire Line
+	4400 650  4400 700 
 Wire Wire Line
 	5850 1100 5850 650 
 Wire Wire Line
@@ -113,19 +137,25 @@ Connection ~ 4400 2400
 Wire Wire Line
 	4950 2400 5300 2400
 Wire Wire Line
-	8050 1600 7800 1600
+	7800 1600 8050 1600
 Wire Wire Line
-	7800 1600 7800 650 
+	7800 650  7800 1450
 Wire Wire Line
-	7800 650  4400 650 
+	7800 1450 7800 1600
 Wire Wire Line
-	6550 2750 5850 2750
+	4400 650  5850 650 
 Wire Wire Line
-	5850 2750 5850 2600
+	5850 650  7800 650 
+Wire Wire Line
+	5850 2750 6550 2750
+Wire Wire Line
+	5850 2600 5850 2650
+Wire Wire Line
+	5850 2650 5850 2750
 Connection ~ 5850 2650
 Connection ~ 6550 2750
 Wire Wire Line
-	4400 1500 4250 1500
+	4400 1500 3900 1500
 Connection ~ 4400 1500
 Wire Wire Line
 	7700 2000 7900 2000
@@ -181,10 +211,10 @@ BIAS
 $Comp
 L CONN_2 J2
 U 1 1 4FDCA902
-P 3900 1600
-F 0 "J2" V 3850 1600 40  0000 C CNN
-F 1 "CONN_2" V 3950 1600 40  0000 C CNN
-	1    3900 1600
+P 3550 1600
+F 0 "J2" V 3500 1600 40  0000 C CNN
+F 1 "CONN_2" V 3600 1600 40  0000 C CNN
+	1    3550 1600
 	-1   0    0    -1  
 $EndComp
 Text Notes 8550 1550 0    60   ~ 0
@@ -252,10 +282,10 @@ F 1 "1UF" H 4450 800 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR2
+L GND #PWR01
 U 1 1 4FDBC7B9
 P 6550 2850
-F 0 "#PWR2" H 6550 2850 30  0001 C CNN
+F 0 "#PWR01" H 6550 2850 30  0001 C CNN
 F 1 "GND" H 6550 2780 30  0001 C CNN
 	1    6550 2850
 	1    0    0    -1  
@@ -279,10 +309,10 @@ F 1 "1uF" H 4800 1150 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR02
 U 1 1 4FDBC71A
 P 4400 2700
-F 0 "#PWR1" H 4400 2700 30  0001 C CNN
+F 0 "#PWR02" H 4400 2700 30  0001 C CNN
 F 1 "GND" H 4400 2630 30  0001 C CNN
 	1    4400 2700
 	1    0    0    -1  
@@ -292,7 +322,7 @@ L R R1
 U 1 1 4FDBC393
 P 4750 1700
 F 0 "R1" V 4830 1700 50  0000 C CNN
-F 1 "R" V 4750 1700 50  0000 C CNN
+F 1 "10K" V 4750 1700 50  0000 C CNN
 	1    4750 1700
 	0    1    1    0   
 $EndComp
