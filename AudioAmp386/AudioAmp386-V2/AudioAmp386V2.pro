@@ -1,7 +1,5 @@
-update=Sun 08 Jul 2012 01:37:05 PM EDT
-last_client=cvpcb
-[general]
-version=1
+update=Thu 26 Jul 2012 10:52:25 PM EDT
+last_client=kicad
 [eeschema]
 version=1
 LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
@@ -67,3 +65,5 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[general]
+version=1
