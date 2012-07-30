@@ -1,6 +1,6 @@
-update=Sat 30 Jun 2012 02:46:46 PM EDT
+update=7/30/2012 12:14:02 PM
 version=1
-last_client=kicad
+last_client=eeschema
 [cvpcb]
 version=1
 NetITyp=0
@@ -77,6 +77,8 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -109,36 +111,5 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=74xx
-LibName8=cmos4000
-LibName9=adc-dac
-LibName10=memory
-LibName11=xilinx
-LibName12=special
-LibName13=microcontrollers
-LibName14=dsp
-LibName15=microchip
-LibName16=analog_switches
-LibName17=motorola
-LibName18=texas
-LibName19=intel
-LibName20=audio
-LibName21=interface
-LibName22=digital-audio
-LibName23=philips
-LibName24=display
-LibName25=cypress
-LibName26=siliconi
-LibName27=opto
-LibName28=atmel
-LibName29=contrib
-LibName30=valves
-LibName31=ThereminBoards
-[general]
-version=1
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=ThereminBoards

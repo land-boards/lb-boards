@@ -1,213 +1,336 @@
-EESchema Schematic File Version 2  date Sat 30 Jun 2012 01:42:57 PM EDT
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 2  date 7/30/2012 1:27:27 PM
+LIBS:DougsSch
 LIBS:ThereminBoards
 LIBS:theremin-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "30 jun 2012"
-Rev ""
+Title "Modular Theremin"
+Date "30 jul 2012"
+Rev "X1"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	3400 1500 4000 1500
+Wire Wire Line
+	5200 1500 6400 1500
+Connection ~ 5950 4250
+Wire Wire Line
+	5850 4250 5950 4250
+Connection ~ 6050 3250
+Wire Wire Line
+	5850 3950 6050 3950
+Wire Wire Line
+	6050 3950 6050 3150
+Wire Wire Line
+	5850 4150 6250 4150
+Wire Wire Line
+	6250 4150 6250 3850
+Wire Wire Line
+	6250 3850 6400 3850
+Wire Wire Line
+	6400 3650 6150 3650
+Wire Wire Line
+	6150 3650 6150 3450
+Wire Wire Line
+	6150 3450 5850 3450
+Wire Wire Line
+	8000 2300 8200 2300
+Wire Wire Line
+	8000 2100 8200 2100
+Wire Wire Line
+	8000 1900 8200 1900
+Wire Wire Line
+	8000 1700 8200 1700
+Wire Wire Line
+	8000 1500 8200 1500
+Wire Wire Line
+	6200 2900 6400 2900
+Wire Wire Line
+	6400 2800 6200 2800
+Wire Wire Line
+	6400 2350 6200 2350
+Wire Wire Line
+	6400 2150 6200 2150
+Wire Wire Line
+	6400 1950 6200 1950
+Wire Wire Line
+	8550 3900 8000 3900
+Wire Wire Line
+	8550 2950 8000 2950
+Connection ~ 2000 7500
+Wire Wire Line
+	2000 7500 2000 6900
+Wire Wire Line
+	2000 6900 2100 6900
+Wire Wire Line
+	1300 7100 2100 7100
+Wire Wire Line
+	1300 7300 2100 7300
+Wire Wire Line
+	2100 7500 1850 7500
+Connection ~ 3850 5900
+Wire Wire Line
+	2100 6800 2000 6800
+Wire Wire Line
+	4050 5900 2000 5900
+Connection ~ 3450 7000
+Connection ~ 3450 7800
+Wire Wire Line
+	3450 7800 3450 6100
+Wire Wire Line
+	3350 7400 5450 7400
+Wire Wire Line
+	5450 7400 5450 6350
+Wire Wire Line
+	5450 6350 5600 6350
+Wire Wire Line
+	3350 7300 5350 7300
+Wire Wire Line
+	5350 7300 5350 6250
+Connection ~ 3600 6800
+Wire Wire Line
+	3350 6800 3600 6800
+Wire Wire Line
+	3350 7000 3450 7000
+Wire Wire Line
+	3450 6100 4050 6100
+Wire Wire Line
+	3850 5900 3850 6550
+Wire Wire Line
+	3850 6550 5600 6550
+Wire Wire Line
+	7600 5850 7250 5850
+Wire Wire Line
+	5600 5850 5300 5850
+Wire Wire Line
+	7250 5950 7400 5950
+Wire Wire Line
+	7400 5950 7400 6050
+Wire Wire Line
+	7400 6050 7600 6050
+Wire Wire Line
+	5600 6650 3750 6650
+Wire Wire Line
+	4050 5800 3750 5800
+Wire Wire Line
+	4050 6200 3600 6200
+Wire Wire Line
+	3600 6200 3600 6900
+Wire Wire Line
+	3600 6900 3350 6900
+Wire Wire Line
+	5600 6150 5250 6150
+Wire Wire Line
+	5250 6150 5250 7200
+Wire Wire Line
+	5250 7200 3350 7200
+Wire Wire Line
+	5350 6250 5600 6250
+Wire Wire Line
+	3750 5800 3750 7800
+Wire Wire Line
+	3750 7800 1850 7800
+Wire Wire Line
+	1850 7800 1850 7500
+Connection ~ 3750 6650
+Wire Wire Line
+	5600 5950 5150 5950
+Wire Wire Line
+	5150 5950 5150 6650
+Connection ~ 5150 6650
+Wire Wire Line
+	2000 6800 2000 5600
+Connection ~ 2000 5900
+Wire Wire Line
+	1300 7400 2100 7400
+Wire Wire Line
+	1300 7200 2100 7200
+Wire Wire Line
+	2100 7000 1850 7000
+Wire Wire Line
+	1850 7000 1850 6500
+Wire Wire Line
+	8000 2850 8550 2850
+Wire Wire Line
+	8550 3800 8000 3800
+Wire Wire Line
+	6200 1850 6400 1850
+Wire Wire Line
+	6200 2050 6400 2050
+Wire Wire Line
+	6200 2250 6400 2250
+Wire Wire Line
+	6200 2700 6400 2700
+Wire Wire Line
+	8000 1400 8200 1400
+Wire Wire Line
+	8200 1600 8000 1600
+Wire Wire Line
+	8200 1800 8000 1800
+Wire Wire Line
+	8200 2000 8000 2000
+Wire Wire Line
+	8200 2200 8000 2200
+Wire Wire Line
+	5850 3350 6250 3350
+Wire Wire Line
+	6250 3350 6250 3550
+Wire Wire Line
+	6250 3550 6400 3550
+Wire Wire Line
+	5850 4050 6150 4050
+Wire Wire Line
+	6150 4050 6150 3750
+Wire Wire Line
+	6150 3750 6400 3750
+Wire Wire Line
+	5850 3250 6050 3250
+Wire Wire Line
+	5850 3550 5950 3550
+Wire Wire Line
+	5950 3550 5950 4450
+Wire Wire Line
+	6400 1400 5200 1400
+Wire Wire Line
+	3400 1400 4000 1400
 $Comp
-L +5V #PWR?
-U 1 1 4FEF37EE
-P 3500 3500
-F 0 "#PWR?" H 3500 3590 20  0001 C CNN
-F 1 "+5V" H 3500 3590 30  0000 C CNN
-	1    3500 3500
+L PS317 BRD?
+U 1 1 5016C3CE
+P 4450 1600
+F 0 "BRD?" H 4400 1950 60  0000 C CNN
+F 1 "PS317" H 4450 1600 60  0000 C CNN
+	1    4450 1600
 	1    0    0    -1  
 $EndComp
-Connection ~ 3750 4500
-Wire Wire Line
-	3750 4500 3750 3900
-Wire Wire Line
-	3750 3900 3850 3900
-Wire Wire Line
-	2700 4100 3850 4100
-Wire Wire Line
-	2700 4300 3850 4300
-Connection ~ 3700 4500
-Wire Wire Line
-	2700 4500 3700 4500
-Wire Wire Line
-	3700 4500 3750 4500
-Wire Wire Line
-	3750 4500 3850 4500
-Connection ~ 5900 2900
-Wire Wire Line
-	3850 3800 3700 3800
-Wire Wire Line
-	3700 2900 5900 2900
-Wire Wire Line
-	5900 2900 6100 2900
-Connection ~ 5500 4000
-Connection ~ 5500 4800
-Wire Wire Line
-	5500 4800 5500 4000
-Wire Wire Line
-	5500 4000 5500 3100
-Wire Wire Line
-	5100 4400 7500 4400
-Wire Wire Line
-	7500 4400 7500 3350
-Wire Wire Line
-	7500 3350 7650 3350
-Wire Wire Line
-	5100 4300 7400 4300
-Wire Wire Line
-	7400 4300 7400 3250
-Connection ~ 5650 3800
-Wire Wire Line
-	5100 3800 5650 3800
-Wire Wire Line
-	5500 4000 5100 4000
-Wire Wire Line
-	5500 3100 6100 3100
-Wire Wire Line
-	5900 2900 5900 3550
-Wire Wire Line
-	5900 3550 7650 3550
-Wire Wire Line
-	9650 2850 9300 2850
-Wire Wire Line
-	7650 2850 7350 2850
-Wire Wire Line
-	9300 2950 9450 2950
-Wire Wire Line
-	9450 2950 9450 3050
-Wire Wire Line
-	9450 3050 9650 3050
-Wire Wire Line
-	5800 3650 7200 3650
-Wire Wire Line
-	7200 3650 7650 3650
-Wire Wire Line
-	6100 2800 5800 2800
-Wire Wire Line
-	6100 3200 5650 3200
-Wire Wire Line
-	5650 3200 5650 3800
-Wire Wire Line
-	5650 3800 5650 3900
-Wire Wire Line
-	5650 3900 5100 3900
-Wire Wire Line
-	7650 3150 7300 3150
-Wire Wire Line
-	7300 3150 7300 4200
-Wire Wire Line
-	7300 4200 5100 4200
-Wire Wire Line
-	7400 3250 7650 3250
-Wire Wire Line
-	5800 2800 5800 3650
-Wire Wire Line
-	5800 3650 5800 4800
-Wire Wire Line
-	5800 4800 5500 4800
-Wire Wire Line
-	5500 4800 3700 4800
-Wire Wire Line
-	3700 4800 3700 4500
-Connection ~ 5800 3650
-Wire Wire Line
-	7650 2950 7200 2950
-Wire Wire Line
-	7200 2950 7200 3650
-Connection ~ 7200 3650
-Wire Wire Line
-	3700 3800 3700 2900
-Wire Wire Line
-	3700 2900 3700 2600
-Connection ~ 3700 2900
-Wire Wire Line
-	2700 4400 3850 4400
-Wire Wire Line
-	2700 4200 3850 4200
-Wire Wire Line
-	3850 4000 3500 4000
-Wire Wire Line
-	3500 4000 3500 3500
+Text Label 8200 3900 0    60   ~ 0
+HVCS0
+Text Label 8200 3800 0    60   ~ 0
+HVCLK
+Text Label 8200 2950 0    60   ~ 0
+SD2
+Text Label 8200 2850 0    60   ~ 0
+SD1
+Text Label 1400 7400 0    60   ~ 0
+HVCS0
+Text Label 1400 7300 0    60   ~ 0
+HVCLK
+Text Label 1400 7200 0    60   ~ 0
+SD2
+Text Label 1400 7100 0    60   ~ 0
+SD1
 $Comp
-L +12V #PWR?
+L USONIC BRD2
+U 1 1 5016C0D5
+P 5350 4350
+F 0 "BRD2" H 5450 4900 60  0000 C CNN
+F 1 "USONIC" H 5350 4300 60  0000 C CNN
+	1    5350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L USONIC BRD1
+U 1 1 5016C0CD
+P 5350 3650
+F 0 "BRD1" H 5450 4200 60  0000 C CNN
+F 1 "USONIC" H 5350 3600 60  0000 C CNN
+	1    5350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MINIDUINO_V1 BRD5
+U 1 1 5016BFB6
+P 7250 4450
+F 0 "BRD5" H 7550 7800 60  0000 C CNN
+F 1 "MINIDUINO_V1" H 7550 4400 60  0000 C CNN
+	1    7250 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L TFT_LCD BRD6
+U 1 1 5016B3A5
+P 8700 1850
+F 0 "BRD6" H 8750 2450 60  0000 C CNN
+F 1 "TFT_LCD" H 8700 1250 60  0000 C CNN
+	1    8700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEYPAD BRD4
+U 1 1 5016B394
+P 5700 3000
+F 0 "BRD4" H 5750 3450 60  0000 C CNN
+F 1 "KEYPAD" H 5700 2950 60  0000 C CNN
+	1    5700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FTDI BRD3
+U 1 1 5016B387
+P 5700 2450
+F 0 "BRD3" H 5800 3200 60  0000 C CNN
+F 1 "FTDI" H 5800 2400 60  0000 C CNN
+	1    5700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR1
+U 1 1 4FEF37EE
+P 1850 6500
+F 0 "#PWR1" H 1850 6590 20  0001 C CNN
+F 1 "+5V" H 1850 6590 30  0000 C CNN
+	1    1850 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR2
 U 1 1 4FEF37AB
-P 3700 2600
-F 0 "#PWR?" H 3700 2550 20  0001 C CNN
-F 1 "+12V" H 3700 2700 30  0000 C CNN
-	1    3700 2600
+P 2000 5600
+F 0 "#PWR2" H 2000 5550 20  0001 C CNN
+F 1 "+12V" H 2000 5700 30  0000 C CNN
+	1    2000 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L HVPOT B1
 U 1 1 4FEF3697
-P 4500 4700
-F 0 "B1" H 4500 5750 60  0000 C CNN
-F 1 "HVPOT" H 4500 4750 60  0000 C CNN
-	1    4500 4700
+P 2750 7700
+F 0 "B1" H 2750 8750 60  0000 C CNN
+F 1 "HVPOT" H 2750 7750 60  0000 C CNN
+	1    2750 7700
 	1    0    0    -1  
 $EndComp
 $Comp
 L SPEAKER SP1
 U 1 1 4FEF3458
-P 9950 2950
-F 0 "SP1" H 9850 3200 70  0000 C CNN
-F 1 "SPEAKER" H 9850 2700 70  0000 C CNN
-	1    9950 2950
+P 7900 5950
+F 0 "SP1" H 7800 6200 70  0000 C CNN
+F 1 "SPEAKER" H 7800 5700 70  0000 C CNN
+	1    7900 5950
 	1    0    0    -1  
 $EndComp
 $Comp
 L XR2206 B2
 U 1 1 4FEF3429
-P 6700 2900
-F 0 "B2" H 6750 3200 60  0000 C CNN
-F 1 "XR2206" H 6850 2400 60  0000 C CNN
-	1    6700 2900
+P 4650 5900
+F 0 "B2" H 4700 6200 60  0000 C CNN
+F 1 "XR2206" H 4800 5400 60  0000 C CNN
+	1    4650 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L AUDIOAMP386 B3
 U 1 1 4FEF320E
-P 8450 3200
-F 0 "B3" H 8450 3750 60  0000 C CNN
-F 1 "AUDIOAMP386" H 8550 2550 60  0000 C CNN
-	1    8450 3200
+P 6400 6200
+F 0 "B3" H 6400 6750 60  0000 C CNN
+F 1 "AUDIOAMP386" H 6500 5550 60  0000 C CNN
+	1    6400 6200
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
