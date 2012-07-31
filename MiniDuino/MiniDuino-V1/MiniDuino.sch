@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 08 Jul 2012 09:36:58 PM EDT
+EESchema Schematic File Version 2  date 7/30/2012 12:06:41 PM
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -12,12 +12,12 @@ LIBS:BrBdPwrSply
 LIBS:MiniDuino-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "MiniDuino"
 Date "6 jul 2012"
-Rev ""
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""
