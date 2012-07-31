@@ -1,7 +1,34 @@
-update=Mon 25 Jun 2012 09:21:04 PM EDT
-last_client=cvpcb
+update=Sun 29 Jul 2012 03:34:52 PM EDT
+last_client=eeschema
 [general]
 version=1
+[pcbnew]
+version=1
+PadDrlX=320
+PadDimH=600
+PadDimV=600
+BoardThickness=630
+TxtPcbV=800
+TxtPcbH=600
+TxtModV=600
+TxtModH=600
+TxtModW=120
+VEgarde=100
+DrawLar=150
+EdgeLar=150
+TxtLar=120
+MSegLar=150
+LastNetListRead=HVDigitalPot.net
+[pcbnew/libraries]
+LibName1=connect
+LibName2=MTG-HOLES
+LibName3=discret
+LibDir=/home/doug/PCB Designs/KiCAD/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=/home/doug/PCB Designs/KiCAD/library
@@ -36,34 +63,7 @@ LabSize=60
 [eeschema/libraries]
 LibName1=xicor-eepot
 LibName2=HVDigitalPot-cache
-LibName3=ad7376arwz50
-LibName4=power
-LibName5=conn
-LibName6=device
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=HVDigitalPot.net
-[pcbnew/libraries]
-LibName1=connect
-LibName2=MTG-HOLES
-LibName3=discret
-LibDir=/home/doug/PCB Designs/KiCAD/modules
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName3=power
+LibName4=conn
+LibName5=device
+LibName6=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch

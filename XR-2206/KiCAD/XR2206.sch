@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 26 Jul 2012 10:58:25 PM EDT
+EESchema Schematic File Version 2  date Fri 27 Jul 2012 05:39:31 PM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -17,12 +17,12 @@ LIBS:EXAR
 LIBS:XR2206-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "XR-2206"
 Date "27 jul 2012"
-Rev ""
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""

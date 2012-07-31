@@ -1,12 +1,8 @@
-update=Sun 29 Jul 2012 11:59:28 AM EDT
-last_client=eeschema
+update=Fri 27 Jul 2012 07:07:04 PM EDT
+version=1
+last_client=cvpcb
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -23,16 +19,20 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=HVDigitalPotV2.net
+LastNetListRead=GVSDuino.net
 [pcbnew/libraries]
-LibDir=/home/doug/PCB Designs/KiCAD/modules
-LibName1=connect
-LibName2=discret
-LibName3=MTG-4-40
+LibName1=sockets
+LibName2=connect
+LibName3=discret
 LibName4=pin_array
+LibName5=dip_sockets
+LibName6=capacitors
+LibName7=screwduino
+LibName8=MTG-4-40
+LibDir=
 [eeschema]
 version=1
-LibDir=/home/doug/PCB Designs/KiCAD/library
+LibDir=
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -62,10 +62,18 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=xicor-eepot
-LibName2=HVDigitalPot-cache
-LibName3=ad7376arwz50
-LibName4=power
-LibName5=conn
-LibName6=device
-LibName7=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=linear
+LibName5=regul
+LibName6=microcontrollers
+LibName7=atmel
+LibName8=atmega8
+LibName9=Resonator_3pins
+LibName10=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

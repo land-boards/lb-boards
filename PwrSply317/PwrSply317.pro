@@ -1,6 +1,6 @@
-update=7/9/2012 2:16:17 PM
+update=Sat 28 Jul 2012 09:39:16 AM EDT
 version=1
-last_client=kicad
+last_client=cvpcb
 [pcbnew]
 version=1
 PadDrlX=320
@@ -67,7 +67,7 @@ LibName8=valves
 LibName9=led
 LibName10=dip_sockets
 LibName11=capacitors
-LibName12=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName12=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibDir=
 [eeschema]
 version=1
@@ -107,10 +107,10 @@ LibName3=transistors
 LibName4=conn
 LibName5=linear
 LibName6=regul
+[general]
+version=1
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
