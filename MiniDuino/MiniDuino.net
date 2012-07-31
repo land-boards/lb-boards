@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sun 08 Jul 2012 08:18:01 PM EDT
+# EESchema Netlist Version 1.1 created  Tue 31 Jul 2012 07:07:45 AM EDT
 (
  ( /4FF581E0 C1 C1 0.1uF
   ( 1 /AREF )
@@ -17,7 +17,7 @@
   ( 2 GND )
  )
  ( /4FF58E5C C1 C5 0.1uF
-  ( 1 +5V )
+  ( 1 /VLDO )
   ( 2 GND )
  )
  ( /4FF574BF D3 D1 4N4004
@@ -54,7 +54,7 @@
  ( /4FF58AEE PIN_ARRAY-6X1 J4 CONN_6
   ( 1 GND )
   ( 2 GND )
-  ( 3 +5V )
+  ( 3 /VFTDI )
   ( 4 /D0 )
   ( 5 /D1 )
   ( 6 /ARDRES )
@@ -80,6 +80,11 @@
   ( 2 +5V )
   ( 3 /AD4 )
   ( 4 /AD5 )
+ )
+ ( /5017BBA4 PIN_ARRAY_3X1 J8 CONN_3
+  ( 1 /VFTDI )
+  ( 2 +5V )
+  ( 3 /VLDO )
  )
  ( /4FF58FB4 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
@@ -133,9 +138,9 @@
  )
  ( /4FF58DEE SOT223 U2 AP1117
   ( 1 GND )
-  ( 2 +5V )
+  ( 2 /VLDO )
   ( 3 /VIN )
-  ( 4 +5V )
+  ( 4 /VLDO )
  )
  ( /4FF58157 SIL-3 Y1 16MHz
   ( 1 /RES0 )
