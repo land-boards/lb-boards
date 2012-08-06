@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3  29/04/2008-12:24:20
+# Converted with eagle2kicad.ulp Version 0.9
+# Device count = 1
+#
+# Dev Name: TRANSCEIVER
+# Package Name: TRANSCEIVER
+# Dev Tech: ''
+# Dev Prefix: 
+# Gate count = 1
+#
+DEF TRANSCEIVER ?? 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: TRANSCEIVER
+DRAW
+P 8 1 1 0      0 100 100 100 100 100 100 -100 100 -100 0 -100 0 -100 0 100 F
+P 2 1 0 0 0 100 0 -100
+P 2 1 0 0 0 -100 100 -100
+P 2 1 0 0 100 -100 100 100
+P 2 1 0 0 100 100 0 100
+P 2 1 0 0 100 100 400 400
+P 2 1 0 0 400 400 400 -400
+P 2 1 0 0 400 -400 100 -100
+T 0 -165 235 70 0 1 0 +
+T 0 -165 -165 70 0 1 0 -
+X P$1 P$2 -200 100 200 R 40 40 1 1 B 
+X P$2 P$1 -200 -100 200 R 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#End Library

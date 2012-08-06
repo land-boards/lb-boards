@@ -1,0 +1,188 @@
+EESchema-LIBRARY Version 2.3  29/04/2008-12:22:19
+# Converted with eagle2kicad.ulp Version 0.9
+# Device count = 7
+#
+# Dev Name: MMA1220D
+# Package Name: 16SOIC
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA1220D U 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA2260
+F0 "U" -200 100 50 H V L B
+F1 "MMA1220D" -200 -200 50 H V L B
+F2 "freescale-accelerometer-16SOIC" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -400 600 400 600
+P 2 1 0 0 400 600 400 -600
+P 2 1 0 0 400 -600 -400 -600
+P 2 1 0 0 -400 -600 -400 600
+X ST 4 -600 0 200 R 40 40 1 1 B 
+X STATUS 6 600 300 200 L 40 40 1 1 B 
+X VDD 8 -100 800 200 D 40 40 1 1 B 
+X VOUT 5 600 -300 200 L 40 40 1 1 B 
+X VSS 7 -100 -800 200 U 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA2260D
+# Package Name: 16SOIC
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA2260D U 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA2260
+F0 "U" -200 100 50 H V L B
+F1 "MMA2260D" -200 -200 50 H V L B
+F2 "freescale-accelerometer-16SOIC" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -400 600 400 600
+P 2 1 0 0 400 600 400 -600
+P 2 1 0 0 400 -600 -400 -600
+P 2 1 0 0 -400 -600 -400 600
+X ST 8 -600 0 200 R 40 40 1 1 B 
+X STATUS 5 600 300 200 L 40 40 1 1 B 
+X VDD 6 -100 800 200 D 40 40 1 1 B 
+X VOUT 4 600 -300 200 L 40 40 1 1 B 
+X VSS 7 -100 -800 200 U 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA3202D
+# Package Name: 20SOIC
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA3202D U 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA3202
+F0 "U" -100 100 50 H V L B
+F1 "MMA3202D" -200 -200 50 H V L B
+F2 "freescale-accelerometer-20SOIC" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -500 -600 500 -600
+P 2 1 0 0 500 -600 500 600
+P 2 1 0 0 500 600 -500 600
+P 2 1 0 0 -500 600 -500 -600
+X AVDD 10 -700 300 200 R 40 40 1 1 B 
+X ST 5 -700 -300 200 R 40 40 1 1 B 
+X STATUS 7 700 300 200 L 40 40 1 1 B 
+X VDD 9 0 800 200 D 40 40 1 1 B 
+X VSS 8 0 -800 200 U 40 40 1 1 B 
+X XOUT 11 700 -300 200 L 40 40 1 1 B 
+X YOUT 6 700 0 200 L 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA6231Q
+# Package Name: 16QFN
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA6231Q U 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA6200
+F0 "U" 200 600 50 H V L B
+F1 "MMA6231Q" 200 300 50 H V L B
+F2 "freescale-accelerometer-16QFN" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 0 1100 800 1100
+P 2 1 0 0 800 1100 800 -100
+P 2 1 0 0 800 -100 0 -100
+P 2 1 0 0 0 -100 0 1100
+X ST 12 -200 500 200 R 40 40 1 1 B 
+X VDD 3 400 1300 200 D 40 40 1 1 B 
+X VSS 4 400 -300 200 U 40 40 1 1 B 
+X XOUT 15 1000 200 200 L 40 40 1 1 B 
+X YOUT 14 1000 800 200 L 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA6233Q
+# Package Name: 16QFN
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA6233Q U 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA6200
+F0 "U" 200 600 50 H V L B
+F1 "MMA6233Q" 200 300 50 H V L B
+F2 "freescale-accelerometer-16QFN" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 0 1100 800 1100
+P 2 1 0 0 800 1100 800 -100
+P 2 1 0 0 800 -100 0 -100
+P 2 1 0 0 0 -100 0 1100
+X ST 12 -200 500 200 R 40 40 1 1 B 
+X VDD 3 400 1300 200 D 40 40 1 1 B 
+X VSS 4 400 -300 200 U 40 40 1 1 B 
+X XOUT 15 1000 200 200 L 40 40 1 1 B 
+X YOUT 14 1000 800 200 L 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA6260Q
+# Package Name: 16QFN
+# Dev Tech: ''
+# Dev Prefix: 
+# Gate count = 1
+#
+DEF MMA6260Q ?? 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MMA6200
+DRAW
+P 2 1 0 0 0 1100 800 1100
+P 2 1 0 0 800 1100 800 -100
+P 2 1 0 0 800 -100 0 -100
+P 2 1 0 0 0 -100 0 1100
+X ST 12 -200 500 200 R 40 40 1 1 B 
+X VDD 3 400 1300 200 D 40 40 1 1 B 
+X VSS 4 400 -300 200 U 40 40 1 1 B 
+X XOUT 15 1000 200 200 L 40 40 1 1 B 
+X YOUT 14 1000 800 200 L 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: MMA7260Q
+# Package Name: 16QFN
+# Dev Tech: ''
+# Dev Prefix: U
+# Gate count = 1
+#
+DEF MMA7260Q U 0 40 Y Y 1 L N
+# Gate Name: >NAME
+# Symbol Name: MMA7260
+F0 "U" -100 100 50 H V L B
+F1 "MMA7260Q" -200 -200 50 H V L B
+F2 "freescale-accelerometer-16QFN" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -500 -600 500 -600
+P 2 1 0 0 500 -600 500 600
+P 2 1 0 0 500 600 -500 600
+P 2 1 0 0 -500 600 -500 -600
+X /SLEEP 12 -700 -300 200 R 40 40 1 1 B 
+X G-S1 1 -700 300 200 R 40 40 1 1 B 
+X G-S2 2 -700 0 200 R 40 40 1 1 B 
+X VDD 3 0 800 200 D 40 40 1 1 B 
+X VSS 4 0 -800 200 U 40 40 1 1 B 
+X XOUT 15 700 -300 200 L 40 40 1 1 B 
+X YOUT 14 700 0 200 L 40 40 1 1 B 
+X ZOUT 13 700 300 200 L 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#End Library

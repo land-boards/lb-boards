@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Fri 12 Nov 2010 01:09:32 PM ICT
+EESchema-DOCLIB  Version 2.0  Date: 18/08/2009 11:36:39
 #
 $CMP 2130
 D biPort RAM (1Ko)
@@ -116,9 +116,17 @@ D RAM 128 Ko
 K RAM 128KO
 $ENDCMP
 #
+$CMP AM29PDL128G
+D 128 Megabit (8 M x 16-Bit/4 M x 32-Bit), Simultaneous Operation Flash Memory with VersatileIO™ Control
+$ENDCMP
+#
 $CMP DRAM_1MX16_SOJ
 D DRAM 16 MBits (1M x 16bits)
 K DRAM 2MO
+$ENDCMP
+#
+$CMP IDT71V65903S
+D 165 pins BGA 3.3V high-speed 9 Megabit synchronous SRAMs 512K x 18 (or  256K x 36)
 $ENDCMP
 #
 $CMP M29W004
@@ -151,7 +159,7 @@ D Barrette SIMM 1 Mo ( 1M x 9 bits)
 K DRAM 1MO
 $ENDCMP
 #
-$CMP SRAM_512KO
+$CMP SRAM_512Ko
 D SRAM 512Kbytes 32 pins
 K RAM
 $ENDCMP

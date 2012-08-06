@@ -1,0 +1,132 @@
+EESchema-LIBRARY Version 2.3  29/04/2008-12:21:53
+# Converted with eagle2kicad.ulp Version 0.9
+# Device count = 4
+#
+# Dev Name: DCJ0202
+# Package Name: DCJ0202
+# Dev Tech: ''
+# Dev Prefix: J
+# Gate count = 1
+#
+DEF DCJ0202 J 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: DC-JACK-SWITCH
+F0 "J" -100 150 50 H V L B
+F1 "DCJ0202" -100 -250 50 H V L B
+F2 "con-jack-DCJ0202" 0 150 50 H I C C
+DRAW
+P 6 1 1 0     100 -100 80 -50 80 -50 120 -50 120 -50 100 -100 F
+P 2 1 0 0 200 100 -100 100
+P 2 1 0 0 -100 100 -100 50
+P 2 1 0 0 200 0 100 0
+P 2 1 0 0 100 0 100 -100
+P 2 1 0 0 200 -100 100 -100
+P 2 1 0 0 100 -100 30 -100
+P 2 1 0 0 30 -100 0 -40
+P 2 1 0 0 0 -40 -30 -100
+S -130 -100 -70 50 1 1 0 F
+X 1 1 300 100 100 L 40 40 1 1 P 
+X 2 2 300 0 100 L 40 40 1 1 P 
+X 3 3 300 -100 100 L 40 40 1 1 P 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: DCJ0303
+# Package Name: DCJ0303
+# Dev Tech: ''
+# Dev Prefix: J
+# Gate count = 1
+#
+DEF DCJ0303 J 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: DC-JACK-SWITCH
+F0 "J" -100 150 50 H V L B
+F1 "DCJ0303" -100 -250 50 H V L B
+F2 "con-jack-DCJ0303" 0 150 50 H I C C
+DRAW
+P 6 1 1 0     100 -100 80 -50 80 -50 120 -50 120 -50 100 -100 F
+P 2 1 0 0 200 100 -100 100
+P 2 1 0 0 -100 100 -100 50
+P 2 1 0 0 200 0 100 0
+P 2 1 0 0 100 0 100 -100
+P 2 1 0 0 200 -100 100 -100
+P 2 1 0 0 100 -100 30 -100
+P 2 1 0 0 30 -100 0 -40
+P 2 1 0 0 0 -40 -30 -100
+S -130 -100 -70 50 1 1 0 F
+X 1 1 300 100 100 L 40 40 1 1 P 
+X 2 2 300 0 100 L 40 40 1 1 P 
+X 3 3 300 -100 100 L 40 40 1 1 P 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: JACK-PLUG0
+# Package Name: SPC4077
+# Dev Tech: ''
+# Dev Prefix: J
+# Gate count = 1
+#
+DEF JACK-PLUG0 J 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: JACK-PLUG
+F0 "J" -300 200 50 H V L B
+F1 "JACK-PLUG0" -300 -200 50 H V L B
+F2 "con-jack-SPC4077" 0 150 50 H I C C
+DRAW
+P 6 1 1 0     0 -100 -20 -50 -20 -50 20 -50 20 -50 0 -100 F
+A -225 100 50 -2699 -901 1 1 0 N -225 150 -225 50
+P 2 1 0 0 -225 150 -50 150
+P 2 1 0 0 -50 150 -50 50
+P 2 1 0 0 -50 50 -225 50
+P 2 1 0 0 -50 50 -50 25
+P 2 1 0 0 -50 25 0 25
+P 2 1 0 0 0 25 0 175
+P 2 1 0 0 0 175 -50 175
+P 2 1 0 0 -50 175 -50 150
+P 2 1 0 0 0 -100 -225 -100
+P 2 1 0 0 -225 -100 -250 -50
+P 2 1 0 0 -250 -50 -275 -100
+P 2 1 0 0 0 0 0 -100
+X 1 1 200 -100 200 L 40 40 1 1 P 
+X 2 2 200 0 200 L 40 40 1 1 P 
+X 3 3 200 100 200 L 40 40 1 1 P 
+ENDDRAW
+ENDDEF
+
+#
+# Dev Name: JACK-PLUG1
+# Package Name: SPC4078
+# Dev Tech: ''
+# Dev Prefix: J
+# Gate count = 1
+#
+DEF JACK-PLUG1 J 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: JACK-PLUG
+F0 "J" -300 200 50 H V L B
+F1 "JACK-PLUG1" -300 -200 50 H V L B
+F2 "con-jack-SPC4078" 0 150 50 H I C C
+DRAW
+P 6 1 1 0     0 -100 -20 -50 -20 -50 20 -50 20 -50 0 -100 F
+A -225 100 50 -2699 -901 1 1 0 N -225 150 -225 50
+P 2 1 0 0 -225 150 -50 150
+P 2 1 0 0 -50 150 -50 50
+P 2 1 0 0 -50 50 -225 50
+P 2 1 0 0 -50 50 -50 25
+P 2 1 0 0 -50 25 0 25
+P 2 1 0 0 0 25 0 175
+P 2 1 0 0 0 175 -50 175
+P 2 1 0 0 -50 175 -50 150
+P 2 1 0 0 0 -100 -225 -100
+P 2 1 0 0 -225 -100 -250 -50
+P 2 1 0 0 -250 -50 -275 -100
+P 2 1 0 0 0 0 0 -100
+X 1 1 200 -100 200 L 40 40 1 1 P 
+X 2 2 200 0 200 L 40 40 1 1 P 
+X 3 3 200 100 200 L 40 40 1 1 P 
+ENDDRAW
+ENDDEF
+
+#End Library

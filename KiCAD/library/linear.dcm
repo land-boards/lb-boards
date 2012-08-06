@@ -1,8 +1,14 @@
-EESchema-DOCLIB  Version 2.0  Date: Mon 15 Nov 2010 09:18:43 AM ICT
+EESchema-DOCLIB  Version 2.0  Date: 19/11/2011 08:24:18
 #
 $CMP 1408
 D CDA 8 bits
 K CDA
+$ENDCMP
+#
+$CMP AD620
+D Instrumentation amplifier
+K INSTRUMENTATION
+F analog-dev/AD620.pdf
 $ENDCMP
 #
 $CMP AD813
@@ -50,6 +56,12 @@ F op_amps/lm324.pdf
 $ENDCMP
 #
 $CMP LM2903
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP LM2903SMALL
 D Dual Voltage Comparator
 K Comp
 F ns/lm193.pdf
@@ -103,6 +115,12 @@ $CMP LM324N
 D Quad Op amp.
 K AmpliOp
 F op_amps/lm324.pdf
+$ENDCMP
+#
+$CMP LM339
+D Quad comparator.
+K Comp
+F op_amps/lm139.pdf
 $ENDCMP
 #
 $CMP LM358
@@ -184,13 +202,15 @@ F maxim/max471-max472.pdf
 $ENDCMP
 #
 $CMP MC33178
-D Dual audio Op amp (ultra low noise)
-K ampliop audio
+D Dual Op amp (low power)
+K ampliop
 F onsemi/mc33178.pdf
 $ENDCMP
 #
 $CMP OP275
-F analog-dev/op275.pdf
+D Dual Op amp (low power)
+K ampliop
+F ns/lm158.pdf
 $ENDCMP
 #
 $CMP TL071

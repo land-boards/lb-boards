@@ -1,8 +1,7 @@
-EESchema Schematic File Version 2  date Fri 22 Jun 2012 07:14:47 PM EDT
+EESchema Schematic File Version 2  date Sun 05 Aug 2012 01:21:15 PM EDT
 LIBS:v-reg
 LIBS:v-reg-lowdrop
 LIBS:regul
-LIBS:Power-in
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -33,9 +32,9 @@ LIBS:atmega8
 LIBS:con-amp
 LIBS:murata-resonators
 LIBS:con-molex
-LIBS:Cer_reso
 LIBS:Resonator_3pins
 LIBS:freescale-accelerometer
+LIBS:DougsSch
 LIBS:screwduinov2p1-cache
 EELAYER 25  0
 EELAYER END
@@ -43,14 +42,24 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Screwduino"
-Date "22 jun 2012"
-Rev "1"
+Date "5 aug 2012"
+Rev "X2"
 Comp "douglasgilliland.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L ATMEGA8-P IC?
+U 1 1 501EA8E9
+P 5300 3100
+F 0 "IC?" H 4600 4350 50  0000 L BNN
+F 1 "ATMEGA8-P" H 5650 1700 50  0000 L BNN
+F 2 "DIL28" H 4700 1750 50  0001 C CNN
+	1    5300 3100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	2550 6300 2650 6300
 Wire Wire Line
@@ -111,25 +120,25 @@ Wire Wire Line
 Wire Wire Line
 	8750 1400 9250 1400
 Wire Wire Line
-	6800 4300 6300 4300
+	6800 2500 6300 2500
 Wire Wire Line
-	6800 4100 6300 4100
+	6800 2300 6300 2300
 Wire Wire Line
-	6800 3900 6300 3900
+	6800 2100 6300 2100
 Wire Wire Line
-	6750 3600 6300 3600
+	6750 4100 6300 4100
 Wire Wire Line
-	6750 3400 6300 3400
+	6750 3900 6300 3900
+Wire Wire Line
+	6750 3700 6300 3700
+Wire Wire Line
+	6750 3500 6300 3500
 Wire Wire Line
 	6750 3200 6300 3200
 Wire Wire Line
 	6750 3000 6300 3000
 Wire Wire Line
-	6750 2500 6300 2500
-Wire Wire Line
-	6750 2300 6300 2300
-Wire Wire Line
-	6300 2100 6750 2100
+	6300 2800 6750 2800
 Connection ~ 4300 6900
 Wire Wire Line
 	4300 6900 4300 6850
@@ -295,25 +304,25 @@ Wire Wire Line
 	4650 6900 4650 6850
 Connection ~ 4650 6900
 Wire Wire Line
-	6750 2000 6300 2000
-Wire Wire Line
-	6750 2200 6300 2200
-Wire Wire Line
-	6750 2400 6300 2400
+	6750 2700 6300 2700
 Wire Wire Line
 	6750 2900 6300 2900
 Wire Wire Line
 	6750 3100 6300 3100
 Wire Wire Line
-	6750 3300 6300 3300
+	6750 3400 6300 3400
 Wire Wire Line
-	6750 3500 6300 3500
+	6750 3600 6300 3600
 Wire Wire Line
-	6800 3800 6300 3800
+	6750 3800 6300 3800
 Wire Wire Line
-	6800 4000 6300 4000
+	6750 4000 6300 4000
 Wire Wire Line
-	6800 4200 6300 4200
+	6800 2000 6300 2000
+Wire Wire Line
+	6800 2200 6300 2200
+Wire Wire Line
+	6800 2400 6300 2400
 Wire Wire Line
 	8750 1300 9250 1300
 Wire Wire Line
@@ -567,45 +576,45 @@ Text Label 8850 1400 0    60   ~ 0
 SDA
 Text Label 8850 1300 0    60   ~ 0
 SCK
-Text Label 6550 4300 0    60   ~ 0
+Text Label 6550 2500 0    60   ~ 0
 D13
-Text Label 6550 4200 0    60   ~ 0
+Text Label 6550 2400 0    60   ~ 0
 D12
-Text Label 6550 4100 0    60   ~ 0
+Text Label 6550 2300 0    60   ~ 0
 D11
-Text Label 6550 4000 0    60   ~ 0
+Text Label 6550 2200 0    60   ~ 0
 D10
-Text Label 6550 3900 0    60   ~ 0
+Text Label 6550 2100 0    60   ~ 0
 D9
-Text Label 6550 3800 0    60   ~ 0
+Text Label 6550 2000 0    60   ~ 0
 D8
-Text Label 6550 3600 0    60   ~ 0
+Text Label 6550 4100 0    60   ~ 0
 D7
-Text Label 6550 3500 0    60   ~ 0
+Text Label 6550 4000 0    60   ~ 0
 D6
-Text Label 6550 3400 0    60   ~ 0
+Text Label 6550 3900 0    60   ~ 0
 D5
-Text Label 6550 3300 0    60   ~ 0
+Text Label 6550 3800 0    60   ~ 0
 D4
-Text Label 6550 3200 0    60   ~ 0
+Text Label 6550 3700 0    60   ~ 0
 D3
-Text Label 6550 3100 0    60   ~ 0
+Text Label 6550 3600 0    60   ~ 0
 D2
-Text Label 6550 3000 0    60   ~ 0
+Text Label 6550 3500 0    60   ~ 0
 D1
-Text Label 6550 2900 0    60   ~ 0
+Text Label 6550 3400 0    60   ~ 0
 D0
-Text Label 6500 2500 0    60   ~ 0
+Text Label 6500 3200 0    60   ~ 0
 SCK
-Text Label 6500 2400 0    60   ~ 0
+Text Label 6500 3100 0    60   ~ 0
 SDA
-Text Label 6500 2300 0    60   ~ 0
+Text Label 6500 3000 0    60   ~ 0
 AD3
-Text Label 6500 2200 0    60   ~ 0
+Text Label 6500 2900 0    60   ~ 0
 AD2
-Text Label 6500 2100 0    60   ~ 0
+Text Label 6500 2800 0    60   ~ 0
 AD1
-Text Label 6500 2000 0    60   ~ 0
+Text Label 6500 2700 0    60   ~ 0
 AD0
 $Comp
 L GND #PWR08
@@ -931,16 +940,6 @@ P 9600 1650
 F 0 "JP5" H 9550 2100 60  0000 C CNN
 F 1 "CONN_8" H 9650 1200 60  0000 C CNN
 	1    9600 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L ATMEGA8-P U1
-U 1 1 4F80C46C
-P 5300 3100
-F 0 "U1" H 4600 4300 50  0000 L BNN
-F 1 "ATMEGA8-P" H 5550 1700 50  0000 L BNN
-F 2 "DIL28" H 5800 1625 50  0001 C CNN
-	1    5300 3100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

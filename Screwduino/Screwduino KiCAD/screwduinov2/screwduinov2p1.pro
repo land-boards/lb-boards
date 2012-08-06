@@ -1,5 +1,5 @@
-update=Sun 22 Jul 2012 02:47:02 PM EDT
-last_client=pcbnew
+update=Sun 05 Aug 2012 01:25:43 PM EDT
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -7,9 +7,38 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[pcbnew]
+version=1
+PadDrlX=320
+PadDimH=600
+PadDimV=600
+BoardThickness=630
+TxtPcbV=800
+TxtPcbH=600
+TxtModV=600
+TxtModH=600
+TxtModW=120
+VEgarde=100
+DrawLar=150
+EdgeLar=150
+TxtLar=120
+MSegLar=150
+LastNetListRead=screwduinov2p1.net
+[pcbnew/libraries]
+LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
+LibName1=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=SW-pb-6mm
+LibName3=MTG-HOLES
+LibName4=TB-5MM
+LibName5=sockets
+LibName6=connect
+LibName7=discret
+LibName8=pin_array
+LibName9=divers
+LibName10=led
 [eeschema]
 version=1
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
+LibDir=../../../KiCAD/library
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -77,32 +106,3 @@ LibName35=Cer_reso
 LibName36=Resonator_3pins
 LibName37=freescale-accelerometer
 LibName38=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=screwduinov2p1.net
-[pcbnew/libraries]
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
-LibName1=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName2=SW-pb-6mm
-LibName3=MTG-HOLES
-LibName4=TB-5MM
-LibName5=sockets
-LibName6=connect
-LibName7=discret
-LibName8=pin_array
-LibName9=divers
-LibName10=led

@@ -187,3 +187,4 @@ Ne 0 ""
 Po -750 -1311 
 $EndPAD
 $EndMODULE SO-08M
+$EndLIBRARY

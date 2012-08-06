@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3  29/04/2008-12:24:02
+# Converted with eagle2kicad.ulp Version 0.9
+# Device count = 1
+#
+# Dev Name: MINI-SO
+# Package Name: MINI-SO
+# Dev Tech: ''
+# Dev Prefix: 
+# Gate count = 1
+#
+DEF MINI-SO ?? 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: MINI-SO
+DRAW
+P 2 1 0 0 0 236 413 236
+P 2 1 0 0 0 236 0 -413
+P 2 1 0 0 0 -413 413 -413
+P 2 1 0 0 413 236 413 -413
+T 0 245 330 70 0 1 0 Mini-SO
+X 1 1 0 177 200 L 40 40 1 1 B 
+X 2 2 0 0 200 L 40 40 1 1 B 
+X 3 3 0 -177 200 L 40 40 1 1 B 
+X 4 4 0 -354 200 L 40 40 1 1 B 
+X 5 5 413 -354 200 R 40 40 1 1 B 
+X 6 6 413 -177 200 R 40 40 1 1 B 
+X 7 7 413 0 200 R 40 40 1 1 B 
+X 8 8 413 177 200 R 40 40 1 1 B 
+ENDDRAW
+ENDDEF
+
+#End Library
