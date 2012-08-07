@@ -1,219 +1,191 @@
-# EESchema Netlist Version 1.1 created  Sun 22 Jul 2012 05:51:08 PM EDT
+# EESchema Netlist Version 1.1 created  8/7/2012 1:29:38 PM
 (
- ( /4F80DE2B C1 C1 0.1uF
-  ( 1 /RST* )
-  ( 2 /DTR* )
+ ( /500C5989 $noname  U2 AP1117 {Lib=AP1117}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /VIN )
+  (    4 +5V )
  )
- ( /4F80EAD4 C1V5 C2 10uF
-  ( 1 /VIN )
-  ( 2 GND )
+ ( /500C5944 POWER-IN-JACK-PMS  K1 JACK-3.5MM {Lib=JACK-3.5MM}
+  (    1 /VIN )
+  (    2 GND )
+  (    3 GND )
  )
- ( /4F80EC1F C1 C3 0,1uF
-  ( 1 /VIN )
-  ( 2 GND )
+ ( /4FE4E7D0 $noname  SW1 SW_PUSH_OMRON {Lib=SW_PUSH_OMRON}
+  (    1 /RST* )
+  (    2 /RST* )
+  (    3 GND )
+  (    4 GND )
  )
- ( /4F80ED93 C1V5 C4 10uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE4E111 $noname  X1 16MHz {Lib=RESONATEUR}
+  (    1 /CX1 )
+  (    2 GND )
+  (    3 /CX2 )
  )
- ( /4F80EE02 C1 C5 0.1uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE21130 $noname  MTG4 CONN_1 {Lib=CONN_1}
+  (    1 ? )
  )
- ( /4F80EE08 C1 C6 0.1uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE2112C $noname  MTG3 CONN_1 {Lib=CONN_1}
+  (    1 ? )
  )
- ( /4F80EE13 C1 C7 0.1uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE21129 $noname  MTG2 CONN_1 {Lib=CONN_1}
+  (    1 ? )
  )
- ( /4F80EE1A C1 C8 0.1uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE21125 $noname  MTG1 CONN_1 {Lib=CONN_1}
+  (    1 ? )
  )
- ( /4F80EE24 C1 C9 0.1uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4F80EE24 $noname  C9 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80DFA9 D4 D1 1N4001
-  ( 1 /RST* )
-  ( 2 +5V )
+ ( /4F80EE1A $noname  C8 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80E0E5 PIN_ARRAY-6X1 JP1 CONN_6
-  ( 1 GND )
-  ( 2 GND )
-  ( 3 /PSW )
-  ( 4 /D0 )
-  ( 5 /D1 )
-  ( 6 /DTR* )
+ ( /4F80EE13 $noname  C7 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80E263 PIN_ARRAY_2X1 JP2 CONN_2
-  ( 1 +5V )
-  ( 2 /PSW )
+ ( /4F80EE08 $noname  C6 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80E5CC pin_array_3x2 JP3 CONN_3X2
-  ( 1 /D12 )
-  ( 2 +5V )
-  ( 3 /D13 )
-  ( 4 /D11 )
-  ( 5 /RST* )
-  ( 6 GND )
+ ( /4F80EE02 $noname  C5 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80C52A TB8-5MM JP4 CONN_8
-  ( 1 GND )
-  ( 2 GND )
-  ( 3 +5V )
-  ( 4 +5V )
-  ( 5 /RST* )
-  ( 6 /D8 )
-  ( 7 /D7 )
-  ( 8 /D6 )
+ ( /4F80ED93 $noname  C4 10uF {Lib=CAPAPOL}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /4F80C523 TB8-5MM JP5 CONN_8
-  ( 1 /SCK )
-  ( 2 /SDA )
-  ( 3 /AD3 )
-  ( 4 /AD2 )
-  ( 5 /AD1 )
-  ( 6 /AD0 )
-  ( 7 GND )
-  ( 8 /AREF )
+ ( /4F80EC1F $noname  C3 0,1uF {Lib=C}
+  (    1 /VIN )
+  (    2 GND )
  )
- ( /4F80C535 TB8-5MM JP6 CONN_8
-  ( 1 /D13 )
-  ( 2 /D12 )
-  ( 3 /D11 )
-  ( 4 /D10 )
-  ( 5 /D9 )
-  ( 6 /VIN )
-  ( 7 +5V )
-  ( 8 GND )
+ ( /4F80EAD4 $noname  C2 10uF {Lib=CAPAPOL}
+  (    1 /VIN )
+  (    2 GND )
  )
- ( /4F80C53C TB8-5MM JP7 CONN_8
-  ( 1 GND )
-  ( 2 +5V )
-  ( 3 /D5 )
-  ( 4 /D4 )
-  ( 5 /D3 )
-  ( 6 /D2 )
-  ( 7 /D1 )
-  ( 8 /D0 )
+ ( /4F80E83B $noname  R3 10K {Lib=R}
+  (    1 +5V )
+  (    2 /SDA )
  )
- ( /4F80E6EA PIN_ARRAY_4x1 JP8 CONN_4
-  ( 1 /SCK )
-  ( 2 /SDA )
-  ( 3 +5V )
-  ( 4 GND )
+ ( /4F80E834 $noname  R2 10K {Lib=R}
+  (    1 +5V )
+  (    2 /SCK )
  )
- ( /500C5944 JACK_3.5MM K1 JACK-3.5MM
-  ( 1 /VIN )
-  ( 2 GND )
-  ( 3 GND )
+ ( /4F80E6EA $noname  JP8 CONN_4 {Lib=CONN_4}
+  (    1 /SCK )
+  (    2 /SDA )
+  (    3 +5V )
+  (    4 GND )
  )
- ( /4FE21125 MTG-4-40 MTG1 CONN_1
-  ( 1 ? )
+ ( /4F80E5CC $noname  JP3 CONN_3X2 {Lib=CONN_3X2}
+  (    1 /D12 )
+  (    2 +5V )
+  (    3 /D13 )
+  (    4 /D11 )
+  (    5 /RST* )
+  (    6 GND )
  )
- ( /4FE21129 MTG-4-40 MTG2 CONN_1
-  ( 1 ? )
+ ( /4F80E263 $noname  JP2 CONN_2 {Lib=CONN_2}
+  (    1 +5V )
+  (    2 /PSW )
  )
- ( /4FE2112C MTG-4-40 MTG3 CONN_1
-  ( 1 ? )
+ ( /4F80E0E5 $noname  JP1 CONN_6 {Lib=CONN_6}
+  (    1 GND )
+  (    2 GND )
+  (    3 /PSW )
+  (    4 /D0 )
+  (    5 /D1 )
+  (    6 /DTR* )
  )
- ( /4FE21130 MTG-4-40 MTG4 CONN_1
-  ( 1 ? )
+ ( /4F80DFA9 $noname  D1 1N4001 {Lib=DIODE}
+  (    1 /RST* )
+  (    2 +5V )
  )
- ( /4F80D566 R3-5 R1 10K
-  ( 1 +5V )
-  ( 2 /RST* )
+ ( /4F80DE2B $noname  C1 0.1uF {Lib=C}
+  (    1 /RST* )
+  (    2 /DTR* )
  )
- ( /4F80E834 R3-5 R2 10K
-  ( 1 +5V )
-  ( 2 /SCK )
+ ( /4F80D566 $noname  R1 10K {Lib=R}
+  (    1 +5V )
+  (    2 /RST* )
  )
- ( /4F80E83B R3-5 R3 10K
-  ( 1 +5V )
-  ( 2 /SDA )
+ ( /4F80C53C $noname  JP7 CONN_8 {Lib=CONN_8}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /D5 )
+  (    4 /D4 )
+  (    5 /D3 )
+  (    6 /D2 )
+  (    7 /D1 )
+  (    8 /D0 )
  )
- ( /4FE4E7D0 SW-PB-6MM SW1 SW_PUSH_OMRON
-  ( 1 /RST* )
-  ( 2 /RST* )
-  ( 3 GND )
-  ( 4 GND )
+ ( /4F80C535 $noname  JP6 CONN_8 {Lib=CONN_8}
+  (    1 /D13 )
+  (    2 /D12 )
+  (    3 /D11 )
+  (    4 /D10 )
+  (    5 /D9 )
+  (    6 /VIN )
+  (    7 +5V )
+  (    8 GND )
  )
- ( /4F80C46C DIP-28__300_ELL U1 ATMEGA328-P
-  ( 1 /RST* )
-  ( 2 /D0 )
-  ( 3 /D1 )
-  ( 4 /D2 )
-  ( 5 /D3 )
-  ( 6 /D4 )
-  ( 7 +5V )
-  ( 8 GND )
-  ( 9 /CX2 )
-  ( 10 /CX1 )
-  ( 11 /D5 )
-  ( 12 /D6 )
-  ( 13 /D7 )
-  ( 14 /D8 )
-  ( 15 /D9 )
-  ( 16 /D10 )
-  ( 17 /D11 )
-  ( 18 /D12 )
-  ( 19 /D13 )
-  ( 20 ? )
-  ( 21 /AREF )
-  ( 22 +5V )
-  ( 23 /AD0 )
-  ( 24 /AD1 )
-  ( 25 /AD2 )
-  ( 26 /AD3 )
-  ( 27 /SDA )
-  ( 28 /SCK )
+ ( /4F80C52A $noname  JP4 CONN_8 {Lib=CONN_8}
+  (    1 GND )
+  (    2 GND )
+  (    3 +5V )
+  (    4 +5V )
+  (    5 /RST* )
+  (    6 /D8 )
+  (    7 /D7 )
+  (    8 /D6 )
  )
- ( /500C5989 SOT223 U2 AP1117
-  ( 1 GND )
-  ( 2 +5V )
-  ( 3 /VIN )
-  ( 4 +5V )
+ ( /4F80C523 $noname  JP5 CONN_8 {Lib=CONN_8}
+  (    1 /SCK )
+  (    2 /SDA )
+  (    3 /AD3 )
+  (    4 /AD2 )
+  (    5 /AD1 )
+  (    6 /AD0 )
+  (    7 GND )
+  (    8 /AREF )
  )
- ( /4FE4E111 RESON_3PIN X1 16MHz
-  ( 1 /CX1 )
-  ( 2 GND )
-  ( 3 /CX2 )
+ ( /4F80C46C DIL28  U1 ATMEGA328-P {Lib=ATMEGA8-P}
+  (    1 /RST* )
+  (    2 /D0 )
+  (    3 /D1 )
+  (    4 /D2 )
+  (    5 /D3 )
+  (    6 /D4 )
+  (    7 +5V )
+  (    8 GND )
+  (    9 /CX2 )
+  (   10 /CX1 )
+  (   11 /D5 )
+  (   12 /D6 )
+  (   13 /D7 )
+  (   14 /D8 )
+  (   15 /D9 )
+  (   16 /D10 )
+  (   17 /D11 )
+  (   18 /D12 )
+  (   19 /D13 )
+  (   20 +5V )
+  (   21 /AREF )
+  (   22 GND )
+  (   23 /AD0 )
+  (   24 /AD1 )
+  (   25 /AD2 )
+  (   26 /AD3 )
+  (   27 /SDA )
+  (   28 /SCK )
  )
 )
 *
 { Allowed footprints by component:
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- CP*
- SM*
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C4
- CP*
- SM*
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$component C6
- SM*
- C?
- C1-1
-$endlist
-$component C7
+$component C9
  SM*
  C?
  C1-1
@@ -223,16 +195,35 @@ $component C8
  C?
  C1-1
 $endlist
-$component C9
+$component C7
  SM*
  C?
  C1-1
 $endlist
-$component D1
- D?
- S*
+$component C6
+ SM*
+ C?
+ C1-1
 $endlist
-$component R1
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component R3
  R?
  SM0603
  SM0805
@@ -244,7 +235,16 @@ $component R2
  SM0805
  R?-*
 $endlist
-$component R3
+$component D1
+ D?
+ S*
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
  R?
  SM0603
  SM0805
@@ -256,3 +256,153 @@ $component U1
 $endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "/D1" "D1"
+ U1 3
+ JP1 5
+ JP7 7
+Net 2 "/D0" "D0"
+ JP1 4
+ U1 2
+ JP7 8
+Net 3 "/AREF" "AREF"
+ JP5 8
+ U1 21
+Net 4 "/D2" "D2"
+ U1 4
+ JP7 6
+Net 5 "/VIN" "VIN"
+ K1 1
+ C2 1
+ C3 1
+ U2 3
+ JP6 6
+Net 6 "/D9" "D9"
+ JP6 5
+ U1 15
+Net 7 "/D10" "D10"
+ U1 16
+ JP6 4
+Net 8 "/D7" "D7"
+ JP4 7
+ U1 13
+Net 9 "/SCK" "SCK"
+ U1 28
+ R2 2
+ JP5 1
+ JP8 1
+Net 10 "/SDA" "SDA"
+ JP8 2
+ JP5 2
+ U1 27
+ R3 2
+Net 11 "/AD3" "AD3"
+ U1 26
+ JP5 3
+Net 12 "/AD2" "AD2"
+ U1 25
+ JP5 4
+Net 13 "/AD1" "AD1"
+ U1 24
+ JP5 5
+Net 14 "/D8" "D8"
+ JP4 6
+ U1 14
+Net 15 "/AD0" "AD0"
+ JP5 6
+ U1 23
+Net 16 "/D6" "D6"
+ U1 12
+ JP4 8
+Net 17 "/D5" "D5"
+ JP7 3
+ U1 11
+Net 18 "/CX2" "CX2"
+ U1 9
+ X1 3
+Net 19 "/D4" "D4"
+ U1 6
+ JP7 4
+Net 20 "/D3" "D3"
+ JP7 5
+ U1 5
+Net 21 "/PSW" "PSW"
+ JP1 3
+ JP2 2
+Net 22 "/RST*" "RST*"
+ JP3 5
+ C1 1
+ R1 2
+ D1 1
+ SW1 2
+ SW1 1
+ U1 1
+ JP4 5
+Net 23 "/D11" "D11"
+ JP3 4
+ JP6 3
+ U1 17
+Net 24 "/D13" "D13"
+ JP3 3
+ JP6 1
+ U1 19
+Net 25 "/D12" "D12"
+ JP3 1
+ JP6 2
+ U1 18
+Net 26 "/DTR*" "DTR*"
+ C1 2
+ JP1 6
+Net 27 "/CX1" "CX1"
+ X1 1
+ U1 10
+Net 32 "+5V" "+5V"
+ JP4 4
+ U2 4
+ JP4 3
+ U2 2
+ JP6 7
+ U1 20
+ U1 7
+ C7 1
+ C4 1
+ JP8 3
+ R2 1
+ C8 1
+ R3 1
+ C9 1
+ C6 1
+ R1 1
+ D1 2
+ C5 1
+ JP2 1
+ JP3 2
+ JP7 2
+Net 33 "GND" "GND"
+ X1 2
+ SW1 3
+ SW1 4
+ K1 3
+ U2 1
+ JP1 2
+ JP5 7
+ JP4 2
+ JP4 1
+ JP6 8
+ U1 22
+ U1 8
+ JP1 1
+ JP3 6
+ JP7 1
+ C2 2
+ C5 2
+ C6 2
+ C7 2
+ C8 2
+ C9 2
+ C3 2
+ C4 2
+ JP8 4
+ K1 2
+}
+#End

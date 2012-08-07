@@ -1,5 +1,5 @@
-update=Sun 22 Jul 2012 02:47:02 PM EDT
-last_client=pcbnew
+update=8/7/2012 1:07:44 PM
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -7,6 +7,35 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[pcbnew]
+version=1
+PadDrlX=320
+PadDimH=600
+PadDimV=600
+BoardThickness=630
+TxtPcbV=800
+TxtPcbH=600
+TxtModV=600
+TxtModH=600
+TxtModW=120
+VEgarde=100
+DrawLar=150
+EdgeLar=150
+TxtLar=120
+MSegLar=150
+LastNetListRead=screwduinov2p1.net
+[pcbnew/libraries]
+LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
+LibName1=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=SW-pb-6mm
+LibName3=MTG-HOLES
+LibName4=TB-5MM
+LibName5=sockets
+LibName6=connect
+LibName7=discret
+LibName8=pin_array
+LibName9=divers
+LibName10=led
 [eeschema]
 version=1
 LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
@@ -66,43 +95,12 @@ LibName24=display
 LibName25=cypress
 LibName26=siliconi
 LibName27=opto
-LibName28=atmel
-LibName29=contrib
-LibName30=valves
-LibName31=atmega8
-LibName32=con-amp
-LibName33=murata-resonators
-LibName34=con-molex
-LibName35=Cer_reso
-LibName36=Resonator_3pins
-LibName37=freescale-accelerometer
-LibName38=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=screwduinov2p1.net
-[pcbnew/libraries]
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
-LibName1=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName2=SW-pb-6mm
-LibName3=MTG-HOLES
-LibName4=TB-5MM
-LibName5=sockets
-LibName6=connect
-LibName7=discret
-LibName8=pin_array
-LibName9=divers
-LibName10=led
+LibName28=contrib
+LibName29=valves
+LibName30=con-amp
+LibName31=murata-resonators
+LibName32=con-molex
+LibName33=Cer_reso
+LibName34=Resonator_3pins
+LibName35=freescale-accelerometer
+LibName36=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch

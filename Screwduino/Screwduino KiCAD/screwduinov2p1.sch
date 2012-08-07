@@ -1,8 +1,7 @@
-EESchema Schematic File Version 2  date Fri 22 Jun 2012 07:14:47 PM EDT
+EESchema Schematic File Version 2  date 8/7/2012 12:51:49 PM
 LIBS:v-reg
 LIBS:v-reg-lowdrop
 LIBS:regul
-LIBS:Power-in
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -33,7 +32,6 @@ LIBS:atmega8
 LIBS:con-amp
 LIBS:murata-resonators
 LIBS:con-molex
-LIBS:Cer_reso
 LIBS:Resonator_3pins
 LIBS:freescale-accelerometer
 LIBS:screwduinov2p1-cache
@@ -43,7 +41,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Screwduino"
-Date "22 jun 2012"
+Date "7 aug 2012"
 Rev "1"
 Comp "douglasgilliland.com"
 Comment1 ""
@@ -111,19 +109,19 @@ Wire Wire Line
 Wire Wire Line
 	8750 1400 9250 1400
 Wire Wire Line
-	6800 4300 6300 4300
+	6800 3200 6300 3200
 Wire Wire Line
-	6800 4100 6300 4100
+	6800 3000 6300 3000
 Wire Wire Line
-	6800 3900 6300 3900
+	6800 2800 6300 2800
 Wire Wire Line
-	6750 3600 6300 3600
+	6750 4100 6300 4100
 Wire Wire Line
-	6750 3400 6300 3400
+	6750 3900 6300 3900
 Wire Wire Line
-	6750 3200 6300 3200
+	6750 3700 6300 3700
 Wire Wire Line
-	6750 3000 6300 3000
+	6750 3500 6300 3500
 Wire Wire Line
 	6750 2500 6300 2500
 Wire Wire Line
@@ -301,19 +299,19 @@ Wire Wire Line
 Wire Wire Line
 	6750 2400 6300 2400
 Wire Wire Line
-	6750 2900 6300 2900
+	6750 3400 6300 3400
 Wire Wire Line
-	6750 3100 6300 3100
+	6750 3600 6300 3600
 Wire Wire Line
-	6750 3300 6300 3300
+	6750 3800 6300 3800
 Wire Wire Line
-	6750 3500 6300 3500
+	6750 4000 6300 4000
 Wire Wire Line
-	6800 3800 6300 3800
+	6800 2700 6300 2700
 Wire Wire Line
-	6800 4000 6300 4000
+	6800 2900 6300 2900
 Wire Wire Line
-	6800 4200 6300 4200
+	6800 3100 6300 3100
 Wire Wire Line
 	8750 1300 9250 1300
 Wire Wire Line
@@ -567,33 +565,33 @@ Text Label 8850 1400 0    60   ~ 0
 SDA
 Text Label 8850 1300 0    60   ~ 0
 SCK
-Text Label 6550 4300 0    60   ~ 0
-D13
-Text Label 6550 4200 0    60   ~ 0
-D12
-Text Label 6550 4100 0    60   ~ 0
-D11
-Text Label 6550 4000 0    60   ~ 0
-D10
-Text Label 6550 3900 0    60   ~ 0
-D9
-Text Label 6550 3800 0    60   ~ 0
-D8
-Text Label 6550 3600 0    60   ~ 0
-D7
-Text Label 6550 3500 0    60   ~ 0
-D6
-Text Label 6550 3400 0    60   ~ 0
-D5
-Text Label 6550 3300 0    60   ~ 0
-D4
 Text Label 6550 3200 0    60   ~ 0
-D3
+D13
 Text Label 6550 3100 0    60   ~ 0
-D2
+D12
 Text Label 6550 3000 0    60   ~ 0
-D1
+D11
 Text Label 6550 2900 0    60   ~ 0
+D10
+Text Label 6550 2800 0    60   ~ 0
+D9
+Text Label 6550 2700 0    60   ~ 0
+D8
+Text Label 6550 4100 0    60   ~ 0
+D7
+Text Label 6550 4000 0    60   ~ 0
+D6
+Text Label 6550 3900 0    60   ~ 0
+D5
+Text Label 6550 3800 0    60   ~ 0
+D4
+Text Label 6550 3700 0    60   ~ 0
+D3
+Text Label 6550 3600 0    60   ~ 0
+D2
+Text Label 6550 3500 0    60   ~ 0
+D1
+Text Label 6550 3400 0    60   ~ 0
 D0
 Text Label 6500 2500 0    60   ~ 0
 SCK
