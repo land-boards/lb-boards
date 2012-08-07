@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date Sun 22 Jul 2012 04:03:58 PM EDT
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 8/7/2012 1:29:31 PM
 LIBS:screwduinov2p1-schlib
 LIBS:power
 LIBS:device
@@ -11,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Screwduino V3"
-Date "22 jul 2012"
+Date "7 aug 2012"
 Rev "1"
 Comp "douglasgilliland.com"
 Comment1 ""
@@ -19,25 +18,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L AP1117 U2
-U 1 1 500C5989
-P 3300 6250
-F 0 "U2" H 3400 6400 60  0000 C CNN
-F 1 "AP1117" H 3550 6000 60  0000 C CNN
-	1    3300 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L JACK-3.5MM K1
-U 1 1 500C5944
-P 1350 6500
-F 0 "K1" H 1474 6239 50  0000 L BNN
-F 1 "JACK-3.5MM" H 1350 6500 50  0000 L BNN
-F 2 "POWER-IN-JACK-PMS" H 1350 6650 50  0001 C CNN
-	1    1350 6500
-	1    0    0    -1  
-$EndComp
+NoConn ~ 6450 5250
+NoConn ~ 6450 5150
+NoConn ~ 6450 5050
+NoConn ~ 6450 4950
+Connection ~ 4200 2200
+Wire Wire Line
+	4400 2200 4200 2200
 Wire Wire Line
 	2650 6300 2550 6300
 Wire Wire Line
@@ -59,8 +46,6 @@ Wire Wire Line
 	3750 3100 3450 3100
 Wire Wire Line
 	3450 3100 3450 3000
-Wire Wire Line
-	4300 1650 4300 2200
 Wire Wire Line
 	8700 5950 9250 5950
 Wire Wire Line
@@ -168,7 +153,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 5200 2350 5200
 Wire Wire Line
-	3350 4900 2350 4900
+	2350 4900 3350 4900
 Wire Wire Line
 	1650 3900 1200 3900
 Wire Wire Line
@@ -196,25 +181,23 @@ Wire Wire Line
 	3550 1850 3450 1850
 Connection ~ 3450 2000
 Wire Wire Line
-	4400 2000 3050 2000
+	3050 2000 4400 2000
 Wire Wire Line
 	3650 2300 4400 2300
 Wire Wire Line
-	4200 2800 3750 2800
+	3750 2800 4200 2800
 Wire Wire Line
 	4400 2700 3750 2700
 Wire Wire Line
 	5300 4600 5300 4950
 Wire Wire Line
-	5300 1700 5300 1600
+	5300 1600 5300 1700
 Wire Wire Line
 	3750 2900 4400 2900
 Connection ~ 4200 2800
 Wire Wire Line
-	5300 1650 4000 1650
+	4000 1650 5300 1650
 Connection ~ 5300 1650
-Wire Wire Line
-	4200 2400 4400 2400
 Wire Wire Line
 	4050 1850 4300 1850
 Connection ~ 4300 1850
@@ -239,13 +222,13 @@ Wire Wire Line
 Wire Wire Line
 	2450 3800 3000 3800
 Wire Wire Line
-	3350 5000 2350 5000
+	2350 5000 3350 5000
 Wire Wire Line
 	2350 5100 2500 5100
 Wire Wire Line
 	2500 5100 2500 4750
 Wire Wire Line
-	2900 4300 2900 4100
+	2900 4100 2900 4300
 Connection ~ 2900 4200
 Wire Wire Line
 	2900 4800 2900 5000
@@ -271,12 +254,12 @@ Wire Wire Line
 	5000 6350 5000 6450
 Connection ~ 5000 6350
 Wire Wire Line
-	5700 6450 5700 6350
+	5700 6350 5700 6450
 Connection ~ 5700 6350
 Wire Wire Line
 	6000 6900 6000 7000
 Wire Wire Line
-	5350 6850 5350 6900
+	5350 6900 5350 6850
 Connection ~ 5350 6900
 Wire Wire Line
 	4650 6900 4650 6850
@@ -340,8 +323,6 @@ Wire Wire Line
 Wire Wire Line
 	8700 5850 9250 5850
 Wire Wire Line
-	4300 2200 4400 2200
-Wire Wire Line
 	3450 2600 3450 2500
 Wire Wire Line
 	3450 2500 3750 2500
@@ -351,7 +332,7 @@ Wire Wire Line
 	3450 1350 3500 1350
 Connection ~ 3450 1350
 Wire Wire Line
-	4100 1350 4200 1350
+	4200 1350 4100 1350
 Connection ~ 4200 1350
 Wire Wire Line
 	9150 2150 9150 1900
@@ -362,6 +343,29 @@ Wire Wire Line
 Wire Wire Line
 	3850 6250 3850 6350
 Connection ~ 3850 6350
+Wire Wire Line
+	4300 1650 4300 2400
+Wire Wire Line
+	4300 2400 4400 2400
+$Comp
+L AP1117 U2
+U 1 1 500C5989
+P 3300 6250
+F 0 "U2" H 3400 6400 60  0000 C CNN
+F 1 "AP1117" H 3550 6000 60  0000 C CNN
+	1    3300 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L JACK-3.5MM K1
+U 1 1 500C5944
+P 1350 6500
+F 0 "K1" H 1474 6239 50  0000 L BNN
+F 1 "JACK-3.5MM" H 1350 6500 50  0000 L BNN
+F 2 "POWER-IN-JACK-PMS" H 1350 6650 50  0001 C CNN
+	1    1350 6500
+	1    0    0    -1  
+$EndComp
 $Comp
 L SW_PUSH_OMRON SW1
 U 1 1 4FE4E7D0
