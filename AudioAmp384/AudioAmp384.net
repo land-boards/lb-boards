@@ -1,0 +1,103 @@
+# EESchema Netlist Version 1.1 created  Wed 08 Aug 2012 10:08:23 PM EDT
+(
+ ( /5023101F C1 C1 0.1uF
+  ( 1 N-000006 )
+  ( 2 /IN )
+ )
+ ( /50230F9C C1V5 C2 5uF
+  ( 1 N-000004 )
+  ( 2 /GND )
+ )
+ ( /502310F7 C1 C3 0.1uF
+  ( 1 N-000002 )
+  ( 2 /GND )
+ )
+ ( /5023108F C2V10 C4 470uF
+  ( 1 N-000001 )
+  ( 2 /OUT )
+ )
+ ( /502311E6 C1 C5 0.1uF
+  ( 1 /VCC )
+  ( 2 /GND )
+ )
+ ( /50230FF9 PIN_ARRAY_2X1 J1 RCA
+  ( 1 /IN )
+  ( 2 /GND )
+ )
+ ( /50231181 TB2-5MM J2 CONN_2
+  ( 1 /VCC )
+  ( 2 /GND )
+ )
+ ( /50231064 PIN_ARRAY_2X1 J3 RCA
+  ( 1 /OUT )
+  ( 2 /GND )
+ )
+ ( /50230F47 PIN_ARRAY_3X1 J4 CONN_3
+  ( 1 N-000006 )
+  ( 2 N-000005 )
+  ( 3 /GND )
+ )
+ ( /50231505 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /5023150E MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /50231511 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /50231515 MTG-4-40 MTG\4 CONN_1
+  ( 1 ? )
+ )
+ ( /502310DF R4 R1 2.7
+  ( 1 N-000001 )
+  ( 2 N-000002 )
+ )
+ ( /50230F31 DIP-14__300 U1 LM384
+  ( 1 N-000004 )
+  ( 2 /GND )
+  ( 3 /GND )
+  ( 4 /GND )
+  ( 5 /GND )
+  ( 6 N-000005 )
+  ( 7 /GND )
+  ( 8 N-000001 )
+  ( 10 /GND )
+  ( 11 /GND )
+  ( 12 /GND )
+  ( 14 /VCC )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}
