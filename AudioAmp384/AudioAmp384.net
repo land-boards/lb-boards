@@ -1,19 +1,19 @@
-# EESchema Netlist Version 1.1 created  Wed 08 Aug 2012 10:08:23 PM EDT
+# EESchema Netlist Version 1.1 created  Thu 09 Aug 2012 06:41:04 PM EDT
 (
  ( /5023101F C1 C1 0.1uF
-  ( 1 N-000006 )
+  ( 1 N-000004 )
   ( 2 /IN )
  )
  ( /50230F9C C1V5 C2 5uF
-  ( 1 N-000004 )
+  ( 1 /BYP )
   ( 2 /GND )
  )
  ( /502310F7 C1 C3 0.1uF
-  ( 1 N-000002 )
+  ( 1 N-000001 )
   ( 2 /GND )
  )
- ( /5023108F C2V10 C4 470uF
-  ( 1 N-000001 )
+ ( /5023108F C1V8 C4 470uF
+  ( 1 /VO )
   ( 2 /OUT )
  )
  ( /502311E6 C1 C5 0.1uF
@@ -33,8 +33,8 @@
   ( 2 /GND )
  )
  ( /50230F47 PIN_ARRAY_3X1 J4 CONN_3
-  ( 1 N-000006 )
-  ( 2 N-000005 )
+  ( 1 N-000004 )
+  ( 2 /AN-M )
   ( 3 /GND )
  )
  ( /50231505 MTG-4-40 MTG1 CONN_1
@@ -50,18 +50,18 @@
   ( 1 ? )
  )
  ( /502310DF R4 R1 2.7
-  ( 1 N-000001 )
-  ( 2 N-000002 )
+  ( 1 /VO )
+  ( 2 N-000001 )
  )
  ( /50230F31 DIP-14__300 U1 LM384
-  ( 1 N-000004 )
+  ( 1 /BYP )
   ( 2 /GND )
   ( 3 /GND )
   ( 4 /GND )
   ( 5 /GND )
-  ( 6 N-000005 )
+  ( 6 /AN-M )
   ( 7 /GND )
-  ( 8 N-000001 )
+  ( 8 /VO )
   ( 10 /GND )
   ( 11 /GND )
   ( 12 /GND )

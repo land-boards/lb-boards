@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 08 Aug 2012 09:50:41 PM EDT
+EESchema Schematic File Version 2  date Wed 08 Aug 2012 09:50:48 PM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -95,9 +95,7 @@ F 1 "CONN_1" H 7400 3555 30  0001 C CNN
 $EndComp
 Connection ~ 4250 2100
 Wire Wire Line
-	4250 4100 4250 2100
-Wire Wire Line
-	4250 2100 4250 1900
+	4250 1900 4250 4100
 Wire Wire Line
 	4250 1900 4350 1900
 Connection ~ 4250 4100
@@ -105,7 +103,7 @@ Wire Wire Line
 	4250 2100 5450 2100
 Connection ~ 5850 4100
 Wire Wire Line
-	5850 4000 5850 4100
+	5850 4100 5850 4000
 Connection ~ 5850 3000
 Wire Wire Line
 	5850 3050 5850 3000
@@ -132,7 +130,7 @@ Wire Wire Line
 Wire Wire Line
 	5150 4100 5150 3400
 Wire Wire Line
-	3550 3100 3550 4100
+	3550 4100 3550 3100
 Wire Wire Line
 	5250 4100 5250 3350
 Connection ~ 5150 4100
@@ -142,46 +140,28 @@ Connection ~ 4600 4100
 Wire Wire Line
 	4750 2900 4400 2900
 Wire Wire Line
-	4400 2900 4400 4100
+	4400 4100 4400 2900
 Connection ~ 4400 4100
 Wire Wire Line
-	3650 3100 3550 3100
-Wire Wire Line
-	3550 3100 2650 3100
+	3650 3100 2650 3100
 Connection ~ 3550 3100
 Wire Wire Line
 	2850 2900 2650 2900
 Wire Wire Line
-	3550 4100 4250 4100
-Wire Wire Line
-	4250 4100 4400 4100
-Wire Wire Line
-	4400 4100 4600 4100
-Wire Wire Line
-	4600 4100 5150 4100
-Wire Wire Line
-	5150 4100 5250 4100
-Wire Wire Line
-	5250 4100 5850 4100
-Wire Wire Line
-	5850 4100 6850 4100
+	3550 4100 6850 4100
 Wire Wire Line
 	6850 4100 6850 3200
 Wire Wire Line
 	6850 3200 7050 3200
 Connection ~ 5250 4100
 Wire Wire Line
-	5750 3000 5850 3000
-Wire Wire Line
-	5850 3000 6000 3000
+	5750 3000 6000 3000
 Wire Wire Line
 	5850 3550 5850 3600
 Wire Wire Line
-	5250 1900 5250 2650
+	5250 2650 5250 1900
 Wire Wire Line
-	4750 1900 5250 1900
-Wire Wire Line
-	5250 1900 5450 1900
+	4750 1900 5450 1900
 Connection ~ 5250 1900
 $Comp
 L C C5

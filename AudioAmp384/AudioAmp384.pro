@@ -1,6 +1,6 @@
-update=Wed 08 Aug 2012 09:38:37 PM EDT
+update=Thu 09 Aug 2012 06:41:14 PM EDT
 version=1
-last_client=pcbnew
+last_client=kicad
 [eeschema]
 version=1
 LibDir=
@@ -69,8 +69,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [pcbnew]
 version=1
 PadDrlX=320
@@ -96,3 +94,5 @@ LibName3=discret
 LibName4=pin_array
 LibName5=divers
 LibName6=dip_sockets
+[general]
+version=1
