@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Mon 13 Aug 2012 08:22:34 AM EDT
+# EESchema Netlist Version 1.1 created  Fri 22 Jun 2012 07:14:58 PM EDT
 (
  ( /4F80DE2B C1 C1 0.1uF
   ( 1 /RST* )
@@ -40,17 +40,17 @@
   ( 1 /RST* )
   ( 2 +5V )
  )
- ( /4F80E0E5 PIN_ARRAY-6X1 JP1 CONN_6
+ ( /4F80E0E5 SIL-6 JP1 CONN_6
   ( 1 GND )
   ( 2 GND )
-  ( 3 +5V )
+  ( 3 /PSW )
   ( 4 /D0 )
   ( 5 /D1 )
   ( 6 /DTR* )
  )
- ( /4F80E263 PIN_ARRAY_2X1 JP2 CONN_2
+ ( /4F80E263 SIL-2 JP2 CONN_2
   ( 1 +5V )
-  ( 2 N-000027 )
+  ( 2 /PSW )
  )
  ( /4F80E5CC pin_array_3x2 JP3 CONN_3X2
   ( 1 /D12 )
@@ -60,7 +60,7 @@
   ( 5 /RST* )
   ( 6 GND )
  )
- ( /4F80C52A TB8-5MM JP4 CONN_8
+ ( /4F80C52A TB-5MM-8 JP4 CONN_8
   ( 1 GND )
   ( 2 GND )
   ( 3 +5V )
@@ -70,7 +70,7 @@
   ( 7 /D7 )
   ( 8 /D6 )
  )
- ( /4F80C523 TB8-5MM JP5 CONN_8
+ ( /4F80C523 TB-5MM-8 JP5 CONN_8
   ( 1 /SCK )
   ( 2 /SDA )
   ( 3 /AD3 )
@@ -80,7 +80,7 @@
   ( 7 GND )
   ( 8 /AREF )
  )
- ( /4F80C535 TB8-5MM JP6 CONN_8
+ ( /4F80C535 TB-5MM-8 JP6 CONN_8
   ( 1 /D13 )
   ( 2 /D12 )
   ( 3 /D11 )
@@ -90,7 +90,7 @@
   ( 7 +5V )
   ( 8 GND )
  )
- ( /4F80C53C TB8-5MM JP7 CONN_8
+ ( /4F80C53C TB-5MM-8 JP7 CONN_8
   ( 1 GND )
   ( 2 +5V )
   ( 3 /D5 )
@@ -100,13 +100,13 @@
   ( 7 /D1 )
   ( 8 /D0 )
  )
- ( /4F80E6EA PIN_ARRAY_4x1 JP8 CONN_4
+ ( /4F80E6EA SIL-4 JP8 CONN_4
   ( 1 /SCK )
   ( 2 /SDA )
   ( 3 +5V )
   ( 4 GND )
  )
- ( /500C5944 JACK_2.1MM K1 JACK-3.5MM
+ ( /4FE4E0CC JACK_ALIM K1 JACK-PMS
   ( 1 /VIN )
   ( 2 GND )
   ( 3 GND )
@@ -141,7 +141,7 @@
   ( 3 GND )
   ( 4 GND )
  )
- ( /4F80C46C DIP-28__300_ELL U1 ATMEGA328-P
+ ( /4F80C46C DIP-28__300_ELL U1 ATMEGA8-P
   ( 1 /RST* )
   ( 2 /D0 )
   ( 3 /D1 )
@@ -161,9 +161,9 @@
   ( 17 /D11 )
   ( 18 /D12 )
   ( 19 /D13 )
-  ( 20 +5V )
+  ( 20 ? )
   ( 21 /AREF )
-  ( 22 GND )
+  ( 22 +5V )
   ( 23 /AD0 )
   ( 24 /AD1 )
   ( 25 /AD2 )
@@ -171,13 +171,13 @@
   ( 27 /SDA )
   ( 28 /SCK )
  )
- ( /500C5989 SOT223 U2 AP1117
+ ( /4FE4FABD SOT223 U2 AP1117
   ( 1 GND )
-  ( 2 N-000027 )
+  ( 2 +5V )
   ( 3 /VIN )
-  ( 4 N-000027 )
+  ( 4 +5V )
  )
- ( /4FE4E111 RESON_3PIN X1 16MHz
+ ( /4FE4E111 SIL-3 X1 16MHz
   ( 1 /CX1 )
   ( 2 GND )
   ( 3 /CX2 )

@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date Sat 28 Jul 2012 12:36:23 PM EDT
-LIBS:con-jack
+EESchema Schematic File Version 2  date Mon 13 Aug 2012 04:09:53 PM EDT
 LIBS:conn
 LIBS:DougsSch
 LIBS:BrBdPwrSplyV2-cache

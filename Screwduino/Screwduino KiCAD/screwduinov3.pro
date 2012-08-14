@@ -1,10 +1,35 @@
-update=Sun 22 Jul 2012 04:23:27 PM EDT
+update=Mon 13 Aug 2012 08:21:39 AM EDT
 last_client=cvpcb
 [general]
 version=1
+[pcbnew]
+version=1
+PadDrlX=320
+PadDimH=600
+PadDimV=600
+BoardThickness=630
+TxtPcbV=800
+TxtPcbH=600
+TxtModV=600
+TxtModH=600
+TxtModW=120
+VEgarde=100
+DrawLar=150
+EdgeLar=150
+TxtLar=120
+MSegLar=150
+LastNetListRead=screwduinov3.net
+[pcbnew/libraries]
+LibName1=sockets
+LibName2=connect
+LibName3=discret
+LibName4=pin_array
+LibName5=led
+LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
 [eeschema]
 version=1
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
+LibDir=../../KiCAD/library
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -39,31 +64,6 @@ LibName2=screwduinov2/screwduinov2p1-schlib
 LibName3=power
 LibName4=device
 LibName5=conn
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=screwduinov3.net
-[pcbnew/libraries]
-LibName1=/home/doug/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName2=sockets
-LibName3=connect
-LibName4=discret
-LibName5=pin_array
-LibName6=led
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
 [cvpcb]
 version=1
 NetIExt=net
