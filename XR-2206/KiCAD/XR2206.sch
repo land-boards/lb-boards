@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 27 Jul 2012 05:39:31 PM EDT
+EESchema Schematic File Version 2  date Sat 18 Aug 2012 11:44:37 AM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,6 @@ LIBS:display
 LIBS:opto
 LIBS:atmel
 LIBS:contrib
-LIBS:EXAR
 LIBS:XR2206-cache
 EELAYER 25  0
 EELAYER END

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 7/31/2012 8:55:25 AM
+EESchema Schematic File Version 2  date Tue 14 Aug 2012 08:25:11 AM EDT
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -6,9 +6,8 @@ LIBS:linear
 LIBS:regul
 LIBS:microcontrollers
 LIBS:atmel
-LIBS:atmega8
-LIBS:Resonator_3pins
 LIBS:BrBdPwrSply
+LIBS:DougsSch
 LIBS:MiniDuino-cache
 EELAYER 25  0
 EELAYER END
