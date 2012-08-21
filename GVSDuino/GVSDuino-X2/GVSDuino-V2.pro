@@ -1,6 +1,6 @@
-update=Fri 27 Jul 2012 07:07:04 PM EDT
+update=Fri 17 Aug 2012 07:10:18 PM EDT
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -30,6 +30,11 @@ LibName6=capacitors
 LibName7=screwduino
 LibName8=MTG-4-40
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -72,8 +77,3 @@ LibName7=atmel
 LibName8=atmega8
 LibName9=Resonator_3pins
 LibName10=/home/doug/DougsPCBDesigns/KiCAD/library/DougsSch
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
