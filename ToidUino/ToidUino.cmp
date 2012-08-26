@@ -1,51 +1,9 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Tue 14 Aug 2012 04:35:42 PM EDT
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sun 26 Aug 2012 12:28:08 PM EDT
 
 BeginCmp
-TimeStamp = /502A4A52;
+TimeStamp = /502AF0A1;
 Reference = C1;
-ValeurCmp = 0.1uF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A49C9;
-Reference = C2;
-ValeurCmp = 22uF;
-IdModule  = SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A4991;
-Reference = C3;
-ValeurCmp = 0.1uF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A4998;
-Reference = C4;
-ValeurCmp = 0.1uF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A49A9;
-Reference = C5;
-ValeurCmp = 0.1uF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A4C17;
-Reference = C6;
-ValeurCmp = 0.1uF;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A4A22;
-Reference = C7;
-ValeurCmp = 0.1uF;
+ValeurCmp = 1uF;
 IdModule  = SM0805;
 EndCmp
 
@@ -71,8 +29,8 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A7414;
-Reference = Ds1;
+TimeStamp = /503A49C7;
+Reference = D2;
 ValeurCmp = LED;
 IdModule  = SM0805;
 EndCmp
@@ -85,10 +43,10 @@ IdModule  = USB-B-MINI;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A4B13;
-Reference = K1;
-ValeurCmp = CONN_3;
-IdModule  = PIN_ARRAY_3X1;
+TimeStamp = /502A4A94;
+Reference = J2;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -120,13 +78,6 @@ IdModule  = MTG-4-40;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A4A94;
-Reference = P1;
-ValeurCmp = CONN_2;
-IdModule  = TB2-5MM;
-EndCmp
-
-BeginCmp
 TimeStamp = /502A745E;
 Reference = R1;
 ValeurCmp = 1K;
@@ -141,17 +92,24 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A47F1;
-Reference = SW1;
-ValeurCmp = SW_PUSH_OMRON;
-IdModule  = SW-PB-6MM;
+TimeStamp = /502AF043;
+Reference = R3;
+ValeurCmp = 1K;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A403C;
+TimeStamp = /502AEFEF;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /502AEFB8;
 Reference = U1;
-ValeurCmp = AP1117-3.3V;
-IdModule  = SOT223;
+ValeurCmp = MCP73822;
+IdModule  = MSOP10-0.5;
 EndCmp
 
 BeginCmp
@@ -169,17 +127,10 @@ IdModule  = SSOP28;
 EndCmp
 
 BeginCmp
-TimeStamp = /502A4720;
+TimeStamp = /503A4A27;
 Reference = U4;
-ValeurCmp = ATMEGA328-PU;
-IdModule  = DIP-28__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /502A400B;
-Reference = Y1;
-ValeurCmp = RESONATOR;
-IdModule  = RESON_3PIN;
+ValeurCmp = ATTINY85;
+IdModule  = DIP-8__300;
 EndCmp
 
 EndListe
