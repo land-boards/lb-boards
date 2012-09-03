@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 26 Aug 2012 01:18:55 PM EDT
+EESchema Schematic File Version 2  date Sat 01 Sep 2012 08:13:11 AM EDT
 LIBS:DougsSch
 LIBS:conn
 LIBS:device
@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "ToidUino"
-Date "26 aug 2012"
+Date "1 sep 2012"
 Rev "X1"
 Comp ""
 Comment1 ""
@@ -52,18 +52,12 @@ Wire Wire Line
 Wire Wire Line
 	3100 2100 3100 2200
 Wire Wire Line
-	2000 1500 2000 1500
+	2600 1500 2000 1500
 Wire Wire Line
-	2000 1500 2250 1500
-Wire Wire Line
-	2250 1500 2600 1500
-Wire Wire Line
-	4100 7200 4000 7200
+	4000 7200 4100 7200
 Connection ~ 1700 6600
 Wire Wire Line
-	1800 6600 1700 6600
-Wire Wire Line
-	1700 6600 1350 6600
+	1800 6600 1350 6600
 Connection ~ 3500 7600
 Wire Wire Line
 	3500 7400 3500 7600
@@ -75,19 +69,13 @@ Connection ~ 3200 7600
 Wire Wire Line
 	3200 7600 3200 7500
 Wire Wire Line
-	2600 7000 2700 7000
+	2700 7000 2600 7000
 Connection ~ 4000 7600
 Wire Wire Line
-	4000 7600 3500 7600
-Wire Wire Line
-	3500 7600 3200 7600
-Wire Wire Line
-	3200 7600 2900 7600
-Wire Wire Line
-	2900 7600 2700 7600
+	4000 7600 2700 7600
 Connection ~ 2700 6600
 Wire Wire Line
-	2700 6600 2700 6700
+	2700 6700 2700 6600
 Wire Wire Line
 	2700 6700 2600 6700
 Connection ~ 2100 2600
@@ -101,13 +89,9 @@ Wire Wire Line
 Wire Wire Line
 	5650 3200 4700 3200
 Wire Wire Line
-	3900 2800 3900 2600
+	3900 2600 3900 2800
 Wire Wire Line
-	3900 2600 2450 2600
-Wire Wire Line
-	2450 2600 2100 2600
-Wire Wire Line
-	2100 2600 1850 2600
+	3900 2600 1850 2600
 Wire Wire Line
 	1850 2600 1850 3200
 Wire Wire Line
@@ -126,16 +110,14 @@ Wire Wire Line
 Wire Wire Line
 	4100 5650 4100 5300
 Wire Wire Line
-	1200 3800 1200 5650
+	1200 5650 1200 3800
 Wire Wire Line
 	2900 3300 1800 3300
 Wire Wire Line
 	3800 1350 5100 1350
 Connection ~ 8500 3600
 Wire Wire Line
-	8500 3500 8500 3600
-Wire Wire Line
-	8500 3600 8500 3650
+	8500 3500 8500 3650
 Connection ~ 8700 3600
 Wire Wire Line
 	8700 3600 8700 3500
@@ -148,9 +130,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 1500 2000 1350
 Wire Wire Line
-	2000 800  2000 850 
-Wire Wire Line
-	2000 850  2000 950 
+	2000 800  2000 950 
 Connection ~ 2250 1500
 Wire Wire Line
 	2250 1400 2250 1500
@@ -164,11 +144,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 3000 10350 3000
 Wire Wire Line
-	8500 3600 8600 3600
-Wire Wire Line
-	8600 3600 8700 3600
-Wire Wire Line
-	8700 3600 8800 3600
+	8500 3600 8800 3600
 Wire Wire Line
 	8800 3600 8800 3500
 Wire Wire Line
@@ -197,32 +173,14 @@ Wire Wire Line
 Wire Wire Line
 	2900 4900 2850 4900
 Wire Wire Line
-	2850 4900 2850 5650
+	2850 5650 2850 4900
 Connection ~ 2850 5650
 Wire Wire Line
 	4700 3100 5650 3100
 Wire Wire Line
-	4700 3300 4850 3300
+	4850 3300 4700 3300
 Wire Wire Line
-	1200 5650 1300 5650
-Wire Wire Line
-	1300 5650 1850 5650
-Wire Wire Line
-	1850 5650 2100 5650
-Wire Wire Line
-	2100 5650 2450 5650
-Wire Wire Line
-	2450 5650 2850 5650
-Wire Wire Line
-	2850 5650 3500 5650
-Wire Wire Line
-	3500 5650 3700 5650
-Wire Wire Line
-	3700 5650 3900 5650
-Wire Wire Line
-	3900 5650 4100 5650
-Wire Wire Line
-	4100 5650 4850 5650
+	1200 5650 4850 5650
 Connection ~ 4100 5650
 Wire Wire Line
 	2450 5650 2450 4500
@@ -231,20 +189,12 @@ Wire Wire Line
 	2450 2600 2450 4100
 Connection ~ 2450 2600
 Wire Wire Line
-	4850 3300 4850 5650
-Wire Wire Line
-	4850 5650 4850 5700
+	4850 5700 4850 3300
 Connection ~ 4850 5650
 Wire Wire Line
-	2600 6600 2700 6600
+	2600 6600 4000 6600
 Wire Wire Line
-	2700 6600 3500 6600
-Wire Wire Line
-	3500 6600 4000 6600
-Wire Wire Line
-	4000 7200 4000 7600
-Wire Wire Line
-	4000 7600 4000 7650
+	4000 7650 4000 7200
 Wire Wire Line
 	2600 6800 3200 6800
 Wire Wire Line
@@ -260,23 +210,17 @@ Wire Wire Line
 Wire Wire Line
 	1700 6700 1700 6600
 Wire Wire Line
-	4100 7000 4000 7000
+	4000 7000 4100 7000
 Wire Wire Line
-	2700 7000 2700 7600
-Wire Wire Line
-	2700 7600 2700 7750
+	2700 7750 2700 7000
 Connection ~ 2700 7600
 Wire Wire Line
-	2000 850  2250 850 
-Wire Wire Line
-	2250 850  3150 850 
+	2000 850  3150 850 
 Wire Wire Line
 	3150 850  3150 950 
 Connection ~ 2250 850 
 Wire Wire Line
-	4000 7000 4000 6600
-Wire Wire Line
-	4000 6600 4000 6450
+	4000 6450 4000 7000
 Connection ~ 4000 6600
 Text Label 2550 3600 0    60   ~ 0
 USBP
@@ -372,7 +316,7 @@ L MCP73822 U1
 U 1 1 502AEFB8
 P 2200 7100
 F 0 "U1" H 2100 7750 60  0000 C CNN
-F 1 "MCP73822" H 2100 7050 60  0000 C CNN
+F 1 "MCP73833" H 2200 7050 60  0000 C CNN
 	1    2200 7100
 	1    0    0    -1  
 $EndComp

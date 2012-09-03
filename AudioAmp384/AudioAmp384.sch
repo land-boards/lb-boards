@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 09 Aug 2012 06:40:21 PM EDT
+EESchema Schematic File Version 2  date Fri 31 Aug 2012 04:55:22 PM EDT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -33,12 +33,12 @@ LIBS:DougsSch
 LIBS:AudioAmp384-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "AudioAmp384"
 Date "9 aug 2012"
-Rev ""
+Rev "X1"
 Comp ""
 Comment1 ""
 Comment2 ""
