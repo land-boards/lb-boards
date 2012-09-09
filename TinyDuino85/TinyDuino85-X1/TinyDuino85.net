@@ -1,0 +1,159 @@
+# EESchema Netlist Version 1.1 created  Sun 19 Aug 2012 10:53:00 AM EDT
+(
+ ( /5030E7F8 C1 C1 0.1uF
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /5030EFB9 C1 C2 0.1uF
+  ( 1 /RST* )
+  ( 2 GND )
+ )
+ ( /5030E7EC C1.5V8V C3 10uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /5030E7F2 C1 C4 0.1uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /5030F313 PIN_ARRAY_3X1 K1 CONN_3
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /D4 )
+ )
+ ( /5030F2FB PIN_ARRAY_3X1 K2 CONN_3
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /D3 )
+ )
+ ( /5030F305 PIN_ARRAY_3X1 K3 CONN_3
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /D2 )
+ )
+ ( /5030F30B PIN_ARRAY_3X1 K4 CONN_3
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /D1 )
+ )
+ ( /5030F30A PIN_ARRAY_3X1 K5 CONN_3
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /D0 )
+ )
+ ( /5030F2A7 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /5030F2BD MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /5030F2C2 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /5030F2C1 MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
+ )
+ ( /5030E7AE PIN_ARRAY_2X1 P1 CONN_2
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /5030EFB3 R1 R1 10K
+  ( 1 VCC )
+  ( 2 /RST* )
+ )
+ ( /5030F3BB R1 R2 R
+  ( 1 VCC )
+  ( 2 /D4 )
+ )
+ ( /5030F3C4 R1 R3 R
+  ( 1 VCC )
+  ( 2 /D3 )
+ )
+ ( /5030F3C8 R1 R4 R
+  ( 1 VCC )
+  ( 2 /D2 )
+ )
+ ( /5030F3CC R1 R5 R
+  ( 1 VCC )
+  ( 2 /D1 )
+ )
+ ( /5030F3D0 R1 R6 R
+  ( 1 VCC )
+  ( 2 /D0 )
+ )
+ ( /5030E794 SOT223 U1 AP1117
+  ( 1 GND )
+  ( 2 VCC )
+  ( 3 /VIN )
+  ( 4 VCC )
+ )
+ ( /5030EBB2 DIP-8__300 U2 ATTINY85
+  ( 1 /RST* )
+  ( 2 /D3 )
+  ( 3 /D4 )
+  ( 4 GND )
+  ( 5 /D0 )
+  ( 6 /D1 )
+  ( 7 /D2 )
+  ( 8 VCC )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

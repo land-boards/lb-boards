@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sun 19 Aug 2012 10:53:00 AM EDT
+# EESchema Netlist Version 1.1 created  Sun 09 Sep 2012 11:14:29 AM EDT
 (
  ( /5030E7F8 C1 C1 0.1uF
   ( 1 /VIN )
@@ -8,7 +8,7 @@
   ( 1 /RST* )
   ( 2 GND )
  )
- ( /5030E7EC C1.5V8V C3 10uF
+ ( /5030E7EC C1V5 C3 10uF
   ( 1 VCC )
   ( 2 GND )
  )
@@ -53,9 +53,10 @@
  ( /5030F2C1 MTG-4-40 MTG4 CONN_1
   ( 1 ? )
  )
- ( /5030E7AE PIN_ARRAY_2X1 P1 CONN_2
-  ( 1 /VIN )
-  ( 2 GND )
+ ( /504C944B PIN_ARRAY_3X1 P1 CONN_3
+  ( 1 GND )
+  ( 2 /VIN )
+  ( 3 /RST* )
  )
  ( /5030EFB3 R1 R1 10K
   ( 1 VCC )
@@ -70,8 +71,8 @@
   ( 2 /D3 )
  )
  ( /5030F3C8 R1 R4 R
-  ( 1 VCC )
-  ( 2 /D2 )
+  ( 1 /D2 )
+  ( 2 VCC )
  )
  ( /5030F3CC R1 R5 R
   ( 1 VCC )
