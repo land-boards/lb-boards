@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 08 Sep 2012 10:52:31 AM EDT
+EESchema Schematic File Version 2  date Tue 11 Sep 2012 08:03:58 PM EDT
 LIBS:atmega32u4bb-from_eagle
 LIBS:transistors
 LIBS:special
@@ -25,7 +25,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "atmega32u4bb.sch"
-Date "8 sep 2012"
+Date "12 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -105,14 +105,6 @@ Wire Wire Line
 	2650 1750 3200 1750
 Connection ~ 1700 1350
 Wire Wire Line
-	4850 1250 4950 1250
-Wire Wire Line
-	4850 2150 4850 1250
-Wire Wire Line
-	4800 950  4800 1150
-Wire Wire Line
-	4800 1150 4950 1150
-Wire Wire Line
 	6000 6800 6500 6800
 Wire Wire Line
 	9150 1850 9850 1850
@@ -128,14 +120,6 @@ Wire Wire Line
 	7000 1850 7600 1850
 Wire Wire Line
 	7000 1400 7600 1400
-Wire Wire Line
-	4250 1850 4950 1850
-Wire Wire Line
-	4250 1650 4950 1650
-Wire Wire Line
-	4250 1550 4950 1550
-Wire Wire Line
-	4250 1350 4950 1350
 Wire Wire Line
 	1400 3550 1400 3700
 Wire Wire Line
@@ -241,14 +225,6 @@ Wire Wire Line
 Wire Wire Line
 	9500 4800 9500 4950
 Wire Wire Line
-	4250 1450 4950 1450
-Wire Wire Line
-	4250 1750 4950 1750
-Wire Wire Line
-	4250 1950 4950 1950
-Wire Wire Line
-	4950 2050 4850 2050
-Wire Wire Line
 	8500 2600 8500 2350
 Wire Wire Line
 	8300 2450 8300 2350
@@ -257,7 +233,6 @@ Wire Wire Line
 	8450 900  8450 750 
 Wire Wire Line
 	6500 6900 6000 6900
-Connection ~ 4850 2050
 Wire Wire Line
 	1700 1450 1850 1450
 Wire Wire Line
@@ -538,21 +513,6 @@ F 2 "MSOP10-0.5" H 2250 1850 60  0001 C CNN
 	1    2250 1850
 	1    0    0    -1  
 $EndComp
-Text Label 4300 1450 0    60   ~ 0
-LCDRS
-Text Label 4300 1950 0    60   ~ 0
-SDCS
-Text Label 4300 1850 0    60   ~ 0
-LCDCS
-$Comp
-L +3.3V #PWR09
-U 1 1 504A9157
-P 4800 950
-F 0 "#PWR09" H 4800 910 30  0001 C CNN
-F 1 "+3.3V" H 4800 1060 30  0000 C CNN
-	1    4800 950 
-	1    0    0    -1  
-$EndComp
 Text Label 7100 1400 0    60   ~ 0
 RST
 Text Label 6150 6900 0    60   ~ 0
@@ -579,25 +539,6 @@ P 8500 2600
 F 0 "#PWR011" H 8500 2600 30  0001 C CNN
 F 1 "GND" H 8500 2530 30  0001 C CNN
 	1    8500 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR012
-U 1 1 504A8FE8
-P 4850 2150
-F 0 "#PWR012" H 4850 2150 30  0001 C CNN
-F 1 "GND" H 4850 2080 30  0001 C CNN
-	1    4850 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L TFT_LCD J3
-U 1 1 504A8F43
-P 5450 1600
-F 0 "J3" H 5500 2200 60  0000 C CNN
-F 1 "TFT_LCD" H 5450 1000 60  0000 C CNN
-F 2 "PIN_ARRAY-10X1" H 5450 1600 60  0001 C CNN
-	1    5450 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -903,24 +844,16 @@ Text Label 6100 4900 0    70   ~ 0
 HWB
 Text Label 8900 5400 0    70   ~ 0
 HWB
-Text Label 4300 1550 0    70   ~ 0
-MISO
 Text Label 6100 5900 0    70   ~ 0
 MISO
-Text Label 4300 1650 0    70   ~ 0
-MOSI
 Text Label 6100 6000 0    70   ~ 0
 MOSI
 Text Label 9550 3500 0    70   ~ 0
 PE6
 Text Label 6100 5000 0    70   ~ 0
 PE6
-Text Label 4300 1350 0    70   ~ 0
-RST
 Text Label 3850 4200 0    70   ~ 0
 RST
-Text Label 4300 1750 0    70   ~ 0
-SCK
 Text Label 6100 6100 0    70   ~ 0
 SCK
 $EndSCHEMATC
