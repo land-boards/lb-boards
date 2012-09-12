@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Tue 11 Sep 2012 08:04:21 PM EDT
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 9/12/2012 1:55:05 PM
 
 BeginCmp
 TimeStamp = /4EE20DB8;
@@ -57,9 +57,9 @@ IdModule  = adafruit-C0805K;
 EndCmp
 
 BeginCmp
-TimeStamp = /504A941F;
-Reference = D1;
-ValeurCmp = DIODE;
+TimeStamp = /5050C798;
+Reference = C8;
+ValeurCmp = 1uF;
 IdModule  = SM0805;
 EndCmp
 
@@ -155,29 +155,43 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /504A9353;
+TimeStamp = /5050C144;
 Reference = R6;
-ValeurCmp = R;
+ValeurCmp = 10K;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /504A934B;
 Reference = R7;
-ValeurCmp = R;
+ValeurCmp = 2.2K;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /504A935C;
 Reference = R8;
-ValeurCmp = R;
+ValeurCmp = NTC;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /504A9412;
 Reference = R9;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5050C13E;
+Reference = R10;
+ValeurCmp = 10K;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5050C134;
+Reference = R11;
 ValeurCmp = 10K;
 IdModule  = SM0805;
 EndCmp
@@ -190,16 +204,9 @@ IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DC4;
-Reference = SJ2;
-ValeurCmp = VBUS;
-IdModule  = PIN_ARRAY_2X1;
-EndCmp
-
-BeginCmp
 TimeStamp = /504A91E2;
 Reference = U1;
-ValeurCmp = MCP73822;
+ValeurCmp = MCP73833;
 IdModule  = MSOP10-0.5;
 EndCmp
 
