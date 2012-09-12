@@ -1,17 +1,10 @@
-Cmp-Mod V01 Created by CvPCB (2011-07-08)-stable date = Fri 09 Dec 2011 17:01:30 GMT
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sat 08 Sep 2012 10:53:35 AM EDT
 
 BeginCmp
 TimeStamp = /4EE20DB8;
 Reference = 500mA1;
 ValeurCmp = L1;
 IdModule  = adafruit-R1206;
-EndCmp
-
-BeginCmp
-TimeStamp = /4EE20DCD;
-Reference = BOOT1;
-ValeurCmp = EVQQ2;
-IdModule  = adafruit-EVQ-Q2;
 EndCmp
 
 BeginCmp
@@ -64,128 +57,177 @@ IdModule  = adafruit-C0805K;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB0;
-Reference = CN1;
-ValeurCmp = MiniB_USB;
-IdModule  = adafruit-USB-MINIB;
+TimeStamp = /504A941F;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB3;
-Reference = IC1;
-ValeurCmp = ATMEGA32U4-AU;
-IdModule  = atmel-TQFP44;
+TimeStamp = /504B5AF7;
+Reference = DS1;
+ValeurCmp = LED;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB4;
-Reference = ISP6;
-ValeurCmp = PINHD-2X3THM;
-IdModule  = pin_array_3x2;
+TimeStamp = /504B5B06;
+Reference = DS2;
+ValeurCmp = LED;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB5;
-Reference = JP1;
-ValeurCmp = Breakout_1;
-IdModule  = adafruit-1X15;
+TimeStamp = /504B3CCB;
+Reference = J1;
+ValeurCmp = USB-B;
+IdModule  = USB-B-MINI;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB6;
-Reference = JP5;
-ValeurCmp = Breakout_2;
-IdModule  = adafruit-1X15;
+TimeStamp = /504A923A;
+Reference = J2;
+ValeurCmp = JST_2;
+IdModule  = adafruit-JST-PH-2-SMT;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DB7;
-Reference = L1;
-ValeurCmp = RED;
-IdModule  = adafruit-CHIPLED_0805;
+TimeStamp = /504A8F43;
+Reference = J3;
+ValeurCmp = TFT_LCD;
+IdModule  = PIN_ARRAY-10X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DBD;
-Reference = PWR1;
-ValeurCmp = GREEN;
-IdModule  = adafruit-CHIPLED_0805;
+TimeStamp = /504A9CFE;
+Reference = MTG1;
+ValeurCmp = CONN_1;
+IdModule  = MTG-4-40;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A9D02;
+Reference = MTG2;
+ValeurCmp = CONN_1;
+IdModule  = MTG-4-40;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A9D05;
+Reference = MTG3;
+ValeurCmp = CONN_1;
+IdModule  = MTG-4-40;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A9D08;
+Reference = MTG4;
+ValeurCmp = CONN_1;
+IdModule  = MTG-4-40;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DBE;
 Reference = R1;
 ValeurCmp = 22;
-IdModule  = adafruit-R0805;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DBF;
 Reference = R2;
 ValeurCmp = 22;
-IdModule  = adafruit-R0805;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC0;
 Reference = R3;
 ValeurCmp = 1K;
-IdModule  = adafruit-R0805;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC1;
 Reference = R4;
 ValeurCmp = 10K;
-IdModule  = adafruit-R0805;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC2;
 Reference = R5;
 ValeurCmp = 1K;
-IdModule  = adafruit-R0805;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A9353;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A934B;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A935C;
+Reference = R8;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /504A9412;
+Reference = R9;
+ValeurCmp = 10K;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC3;
 Reference = SJ1;
 ValeurCmp = HWB;
-IdModule  = jumper-SJ;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC4;
 Reference = SJ2;
-ValeurCmp = VCC;
-IdModule  = jumper-SJ;
+ValeurCmp = VBUS;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DC7;
-Reference = U$1;
-ValeurCmp = ~;
-IdModule  = adafruit-FIDUCIAL_1MM;
+TimeStamp = /504A91E2;
+Reference = U1;
+ValeurCmp = MCP73822;
+IdModule  = MSOP10-0.5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DC6;
-Reference = U$2;
-ValeurCmp = ~;
-IdModule  = adafruit-FIDUCIAL_1MM;
+TimeStamp = /504A8F12;
+Reference = U2;
+ValeurCmp = FGPMMOPA6H;
+IdModule  = FGPMMOPA6H;
 EndCmp
 
 BeginCmp
-TimeStamp = /4EE20DC5;
-Reference = U$3;
-ValeurCmp = ~;
-IdModule  = adafruit-FIDUCIAL_1MM;
+TimeStamp = /4EE20DB3;
+Reference = U3;
+ValeurCmp = ATMEGA32U4-AU;
+IdModule  = TQFP44;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EE20DC8;
 Reference = X3;
-ValeurCmp = 16MHz;
+ValeurCmp = 8MHz;
 IdModule  = adafruit-NX5032;
 EndCmp
 
