@@ -1,4 +1,4 @@
-update=Wed 12 Sep 2012 06:17:10 PM EDT
+update=9/13/2012 1:42:54 PM
 last_client=eeschema
 [pcbnew]
 version=1
@@ -25,13 +25,13 @@ LibName4=pin_array
 LibName5=divers
 LibName6=libcms
 LibName7=display
-LibName8=valves
-LibName9=led
-LibName10=dip_sockets
-LibName11=adafruit
-LibName12=atmel
-LibName13=jumper
-LibName14=dougsLib
+LibName8=led
+LibName9=dip_sockets
+LibName10=adafruit
+LibName11=atmel
+LibName12=jumper
+LibName13=dougsLib
+LibName14=crystal-epson
 LibDir=../ATMega32U4;../KiCAD/modules
 [cvpcb]
 version=1
@@ -40,7 +40,7 @@ NetIExt=net
 EquName1=devcms
 [eeschema]
 version=1
-LibDir=../ATMega32U4
+LibDir=../ATMega32U4;../KiCAD/library
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -86,5 +86,5 @@ LibName13=contrib
 LibName14=conn
 LibName15=audio
 LibName16=atmel
-LibName17=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName18=atmega32u4bb-from_eagle
+LibName17=atmega32u4bb-from_eagle
+LibName18=DougsSch

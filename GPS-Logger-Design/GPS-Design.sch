@@ -1,0 +1,79 @@
+EESchema Schematic File Version 2  date 9/5/2012 1:08:37 PM
+LIBS:device
+LIBS:GPS-Design-cache
+EELAYER 25  0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "GPS LOGGER DESIGN"
+Date "5 sep 2012"
+Rev "1"
+Comp "AA6PR"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 5600 3250
+Wire Wire Line
+	6050 3250 5250 3250
+Wire Wire Line
+	5250 3250 5250 3550
+Wire Wire Line
+	5250 3550 5200 3550
+Wire Wire Line
+	5200 3650 5350 3650
+Wire Wire Line
+	5350 3650 5350 3450
+Wire Wire Line
+	5350 3450 6050 3450
+Wire Wire Line
+	5600 3250 5600 4100
+Wire Wire Line
+	5600 4100 4700 4100
+Wire Wire Line
+	4700 4800 4700 4900
+Wire Wire Line
+	5200 3350 6050 3350
+Wire Wire Line
+	4700 4100 4700 4200
+Wire Wire Line
+	4700 4900 5800 4900
+Wire Wire Line
+	5800 4900 5800 3350
+Connection ~ 5800 3350
+Wire Wire Line
+	6050 3550 5450 3550
+Wire Wire Line
+	5450 3550 5450 3750
+Wire Wire Line
+	5450 3750 5200 3750
+$Comp
+L FTDI BRD1
+U 1 1 50080359
+P 4700 3950
+F 0 "BRD1" H 4350 4550 60  0000 C CNN
+F 1 "FTDI" H 4800 3900 60  0000 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L BATTERY BT1
+U 1 1 500808D3
+P 4700 4500
+F 0 "BT1" H 4700 4700 50  0000 C CNN
+F 1 "BATTERY" H 4700 4310 50  0000 C CNN
+	1    4700 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L GPS BRD2
+U 1 1 50080397
+P 6500 4050
+F 0 "BRD2" H 6900 4900 60  0000 C CNN
+F 1 "GPS" H 6550 4000 60  0000 C CNN
+	1    6500 4050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
