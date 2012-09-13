@@ -1,4 +1,4 @@
-update=9/12/2012 5:12:29 PM
+update=Wed 12 Sep 2012 06:17:10 PM EDT
 last_client=eeschema
 [pcbnew]
 version=1
@@ -86,5 +86,5 @@ LibName13=contrib
 LibName14=conn
 LibName15=audio
 LibName16=atmel
-LibName17=atmega32u4bb-from_eagle
-LibName18=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName17=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName18=atmega32u4bb-from_eagle
