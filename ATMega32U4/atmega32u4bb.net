@@ -1,202 +1,202 @@
-# EESchema Netlist Version 1.1 created  9/13/2012 1:43:16 PM
+# EESchema Netlist Version 1.1 created  Fri 14 Sep 2012 07:37:38 AM EDT
 (
- ( /50521190 $noname  J3 CONN_2 {Lib=CONN_2}
-  (    1 +3.3V )
-  (    2 /VBATT )
+ ( /50510C92 SM0805 C1 1uF
+  ( 1 +3.3V )
+  ( 2 GND )
  )
- ( /50510D40 $noname  X3 8MHz {Lib=CRYSTAL}
-  (    1 /X0 )
-  (    2 /X1 )
+ ( /50510CD9 SM0805 C2 18pF
+  ( 1 /X0 )
+  ( 2 GND )
  )
- ( /50510CE0 $noname  C3 18pF {Lib=C}
-  (    1 /X1 )
-  (    2 GND )
+ ( /50510CE0 SM0805 C3 18pF
+  ( 1 /X1 )
+  ( 2 GND )
  )
- ( /50510CD9 $noname  C2 18pF {Lib=C}
-  (    1 /X0 )
-  (    2 GND )
+ ( /50510B10 SM1210 C4 10uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /50510C92 $noname  C1 1uF {Lib=C}
-  (    1 +3.3V )
-  (    2 GND )
+ ( /50510B0C SM0805 C5 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /50510C3F $noname  R2 22 {Lib=R}
-  (    1 /BUSBP )
-  (    2 /USB-DP )
+ ( /50510B08 SM0805 C6 0.1uF
+  ( 1 +3.3V )
+  ( 2 GND )
  )
- ( /50510C3A $noname  R1 22 {Lib=R}
-  (    1 /BUSPM )
-  (    2 /USB-DM )
+ ( /50510B03 SM0805 C7 0.1uF
+  ( 1 +3.3V )
+  ( 2 GND )
  )
- ( /50510C17 $noname  L1 FUSE {Lib=FUSE}
-  (    1 +5V )
-  (    2 /USB5V )
+ ( /50510B21 SM0805 C8 1uF
+  ( 1 +3.3V )
+  ( 2 GND )
  )
- ( /50510B21 $noname  C8 1uF {Lib=CP}
-  (    1 +3.3V )
-  (    2 GND )
+ ( /504B5AF7 LED-0805 DS1 LED
+  ( 1 /P6R )
+  ( 2 GND )
  )
- ( /50510B10 $noname  C4 10uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /504B5B06 LED-0805 DS2 LED
+  ( 1 /PW5 )
+  ( 2 GND )
  )
- ( /50510B0C $noname  C5 0.1uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /504B3CCB USB-B-MINI J1 USB-B
+  ( 1 /USB5V )
+  ( 2 /USB-DM )
+  ( 3 /USB-DP )
+  ( 4 GND )
+  ( G1 GND )
+  ( G2 GND )
+  ( NC ? )
  )
- ( /50510B08 $noname  C6 0.1uF {Lib=C}
-  (    1 +3.3V )
-  (    2 GND )
+ ( /504A923A adafruit-JST-PH-2-SMT J2 JST_2
+  ( 1 /VBATT )
+  ( 2 GND )
  )
- ( /50510B03 $noname  C7 0.1uF {Lib=C}
-  (    1 +3.3V )
-  (    2 GND )
+ ( /50521190 PIN_ARRAY_2X1 J3 CONN_2
+  ( 1 +3.3V )
+  ( 2 /VBATT )
  )
- ( /50510A98 $noname  R4 10K {Lib=R}
-  (    1 +3.3V )
-  (    2 /HWB )
+ ( /50510C17 SM1210 L1 FUSE
+  ( 1 +5V )
+  ( 2 /USB5V )
  )
- ( /50510A6B $noname  SJ1 HDR2 {Lib=CONN_2}
-  (    1 /HWB )
-  (    2 ? )
+ ( /504A9CFE MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
  )
- ( /50510A02 $noname  R3 1K {Lib=R}
-  (    1 +5V )
-  (    2 /PW5 )
+ ( /504A9D02 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
  )
- ( /505109FB $noname  R5 1K {Lib=R}
-  (    1 /PE6 )
-  (    2 /P6R )
+ ( /504A9D05 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
  )
- ( /5050C144 $noname  R6 10K {Lib=R}
-  (    1 +3.3V )
-  (    2 /STAT1 )
+ ( /504A9D08 MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
  )
- ( /5050C13E $noname  R10 10K {Lib=R}
-  (    1 +3.3V )
-  (    2 /STAT2 )
+ ( /50510C3A SM0805 R1 22
+  ( 1 /BUSPM )
+  ( 2 /USB-DM )
  )
- ( /5050C134 $noname  R11 10K {Lib=R}
-  (    1 +3.3V )
-  (    2 /PG )
+ ( /50510C3F SM0805 R2 22
+  ( 1 /BUSBP )
+  ( 2 /USB-DP )
  )
- ( /504B5B06 $noname  DS2 LED {Lib=LED}
-  (    1 /PW5 )
-  (    2 GND )
+ ( /50510A02 SM0805 R3 1K
+  ( 1 +5V )
+  ( 2 /PW5 )
  )
- ( /504B5AF7 $noname  DS1 LED {Lib=LED}
-  (    1 /P6R )
-  (    2 GND )
+ ( /50510A98 SM0805 R4 10K
+  ( 1 +3.3V )
+  ( 2 /HWB )
  )
- ( /504B3CCB USB-B-MINI  J1 USB-B {Lib=USB-B}
-  (    1 /USB5V )
-  (    2 /USB-DM )
-  (    3 /USB-DP )
-  (    4 GND )
-  (   G1 GND )
-  (   G2 GND )
-  (   NC ? )
+ ( /505109FB SM0805 R5 1K
+  ( 1 /PE6 )
+  ( 2 /P6R )
  )
- ( /504A9D08 MTG-4-40  MTG4 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /5050C144 SM0805 R6 10K
+  ( 1 +3.3V )
+  ( 2 /STAT1 )
  )
- ( /504A9D05 MTG-4-40  MTG3 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /504A934B SM0805 R7 2.2K
+  ( 1 /PRG )
+  ( 2 GND )
  )
- ( /504A9D02 MTG-4-40  MTG2 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /504A935C SM0805 R8 NTC
+  ( 1 /THM )
+  ( 2 GND )
  )
- ( /504A9CFE MTG-4-40  MTG1 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /504A9412 SM0805 R9 10K
+  ( 1 +3.3V )
+  ( 2 /RST )
  )
- ( /504A9412 SM0805  R9 10K {Lib=R}
-  (    1 +3.3V )
-  (    2 /RST )
+ ( /5050C13E SM0805 R10 10K
+  ( 1 +3.3V )
+  ( 2 /STAT2 )
  )
- ( /504A935C SM0805  R8 NTC {Lib=R}
-  (    1 /THM )
-  (    2 GND )
+ ( /5050C134 SM0805 R11 10K
+  ( 1 +3.3V )
+  ( 2 /PG )
  )
- ( /504A934B SM0805  R7 2.2K {Lib=R}
-  (    1 /PRG )
-  (    2 GND )
+ ( /50510A6B PIN_ARRAY_2X1 SJ1 HDR2
+  ( 1 /HWB )
+  ( 2 ? )
  )
- ( /504A923A adafruit-JST-PH-2-SMT  J2 JST_2 {Lib=CONN_2}
-  (    1 /VBATT )
-  (    2 GND )
+ ( /504A91E2 MSOP10-0.5 U1 MCP73833
+  ( 1 +5V )
+  ( 2 +5V )
+  ( 3 /STAT1 )
+  ( 4 /STAT2 )
+  ( 5 GND )
+  ( 6 /PRG )
+  ( 7 /PG )
+  ( 8 /THM )
+  ( 9 /VBATT )
+  ( 10 /VBATT )
  )
- ( /504A91E2 MSOP10-0.5  U1 MCP73833 {Lib=MCP73822}
-  (    1 +5V )
-  (    2 +5V )
-  (    3 /STAT1 )
-  (    4 /STAT2 )
-  (    5 GND )
-  (    6 /PRG )
-  (    7 /PG )
-  (    8 /THM )
-  (    9 /VBATT )
-  (   10 /VBATT )
+ ( /504A8F12 FGPMMOPA6H U2 FGPMMOPA6H
+  ( 1 +3.3V )
+  ( 2 /RST )
+  ( 3 GND )
+  ( 4 +3.3V )
+  ( 5 /3DFIX )
+  ( 8 GND )
+  ( 9 /GPSTX )
+  ( 10 /GPSRX )
+  ( 11 ? )
+  ( 12 GND )
+  ( 13 /1PPS )
+  ( 14 ? )
+  ( 19 GND )
  )
- ( /504A8F12 FGPMMOPA6H  U2 FGPMMOPA6H {Lib=FGPMMOPA6H}
-  (    1 +3.3V )
-  (    2 /RST )
-  (    3 GND )
-  (    4 +3.3V )
-  (    5 /3DFIX )
-  (    8 GND )
-  (    9 /GPSTX )
-  (   10 /GPSRX )
-  (   11 ? )
-  (   12 GND )
-  (   13 /1PPS )
-  (   14 ? )
-  (   19 GND )
+ ( /4EE20DB3 TQFP44 U3 ATMEGA32U4-AU
+  ( 1 /PE6 )
+  ( 2 +5V )
+  ( 3 /BUSPM )
+  ( 4 /BUSBP )
+  ( 5 GND )
+  ( 6 +3.3V )
+  ( 7 +3.3V )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 /RST )
+  ( 14 +3.3V )
+  ( 15 GND )
+  ( 16 /X1 )
+  ( 17 /X0 )
+  ( 18 ? )
+  ( 19 ? )
+  ( 20 /GPSTX )
+  ( 21 /GPSRX )
+  ( 22 ? )
+  ( 23 GND )
+  ( 24 +3.3V )
+  ( 25 ? )
+  ( 26 ? )
+  ( 27 ? )
+  ( 28 /1PPS )
+  ( 29 ? )
+  ( 30 /3DFIX )
+  ( 31 ? )
+  ( 32 ? )
+  ( 33 /HWB )
+  ( 34 +3.3V )
+  ( 35 GND )
+  ( 36 ? )
+  ( 37 ? )
+  ( 38 /PG )
+  ( 39 /STAT2 )
+  ( 40 /STAT1 )
+  ( 41 ? )
+  ( 42 ? )
+  ( 43 GND )
+  ( 44 +3.3V )
  )
- ( /4EE20DB3 TQFP44  U3 ATMEGA32U4-AU {Lib=adaprog_ATMEGA32U4}
-  (    1 /PE6 )
-  (    2 +5V )
-  (    3 /BUSPM )
-  (    4 /BUSBP )
-  (    5 GND )
-  (    6 +3.3V )
-  (    7 +3.3V )
-  (    8 ? )
-  (    9 ? )
-  (   10 ? )
-  (   11 ? )
-  (   12 ? )
-  (   13 /RST )
-  (   14 +3.3V )
-  (   15 GND )
-  (   16 /X1 )
-  (   17 /X0 )
-  (   18 ? )
-  (   19 ? )
-  (   20 /GPSTX )
-  (   21 /GPSRX )
-  (   22 ? )
-  (   23 GND )
-  (   24 +3.3V )
-  (   25 ? )
-  (   26 ? )
-  (   27 ? )
-  (   28 /1PPS )
-  (   29 ? )
-  (   30 /3DFIX )
-  (   31 ? )
-  (   32 ? )
-  (   33 /HWB )
-  (   34 +3.3V )
-  (   35 GND )
-  (   36 ? )
-  (   37 ? )
-  (   38 /PG )
-  (   39 /STAT2 )
-  (   40 /STAT1 )
-  (   41 ? )
-  (   42 ? )
-  (   43 GND )
-  (   44 +3.3V )
+ ( /50510D40 HC-49V X3 8MHz
+  ( 1 /X0 )
+  ( 2 /X1 )
  )
 )
 *
@@ -204,15 +204,6 @@
 $component C8
  CP*
  SM*
-$endlist
-$component DS2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
 $endlist
 $component DS1
  LED-3MM
@@ -223,137 +214,14 @@ $component DS1
  LED-1206
  LEDV
 $endlist
+$component DS2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-Net 18 "GND" "GND"
- U2 8
- C1 2
- U2 12
- U3 35
- U3 23
- C2 2
- C3 2
- U2 3
- U3 43
- U3 15
- U3 5
- J2 2
- J1 4
- U2 19
- R8 2
- DS2 2
- DS1 2
- J1 G2
- J1 G1
- R7 2
- C8 2
- C4 2
- C5 2
- U1 5
- C6 2
- C7 2
-Net 19 "/THM" "THM"
- U1 8
- R8 1
-Net 20 "+3.3V" "+3.3V"
- U2 4
- J3 1
- U3 7
- U3 6
- U2 1
- R4 1
- C7 1
- R9 1
- C1 1
- C6 1
- U3 14
- U3 24
- U3 34
- U3 44
- R6 1
- R10 1
- R11 1
- C8 1
-Net 26 "/P6R" "P6R"
- R5 2
- DS1 1
-Net 27 "/PW5" "PW5"
- R3 2
- DS2 1
-Net 28 "/STAT1" "STAT1"
- U3 40
- R6 2
- U1 3
-Net 32 "/PG" "PG"
- U3 38
- U1 7
- R11 2
-Net 33 "/GPSRX" "GPSRX"
- U3 21
- U2 10
-Net 34 "/GPSTX" "GPSTX"
- U2 9
- U3 20
-Net 35 "/VBATT" "VBATT"
- J2 1
- U1 10
- U1 9
- J3 2
-Net 36 "/RST" "RST"
- U3 13
- R9 2
- U2 2
-Net 38 "/PE6" "PE6"
- U3 1
- R5 1
-Net 39 "+5V" "+5V"
- L1 1
- C4 1
- C5 1
- R3 1
- U1 1
- U1 2
- U3 2
-Net 40 "/PRG" "PRG"
- R7 1
- U1 6
-Net 41 "/USB5V" "USB5V"
- L1 2
- J1 1
-Net 42 "/3DFIX" "3DFIX"
- U3 30
- U2 5
-Net 43 "/1PPS" "1PPS"
- U3 28
- U2 13
-Net 44 "/USB-DM" "USB-DM"
- J1 2
- R1 2
-Net 45 "/USB-DP" "USB-DP"
- J1 3
- R2 2
-Net 46 "/BUSBP" "BUSBP"
- R2 1
- U3 4
-Net 47 "/BUSPM" "BUSPM"
- U3 3
- R1 1
-Net 48 "/X0" "X0"
- C2 1
- U3 17
- X3 1
-Net 49 "/HWB" "HWB"
- U3 33
- R4 2
- SJ1 1
-Net 50 "/X1" "X1"
- X3 2
- C3 1
- U3 16
-Net 51 "/STAT2" "STAT2"
- U1 4
- R10 2
- U3 39
-}
-#End

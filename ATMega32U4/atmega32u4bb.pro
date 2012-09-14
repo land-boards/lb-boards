@@ -1,4 +1,4 @@
-update=9/13/2012 1:42:54 PM
+update=Thu 13 Sep 2012 05:55:26 PM EDT
 last_client=eeschema
 [pcbnew]
 version=1
@@ -72,19 +72,11 @@ LabSize=60
 [eeschema/libraries]
 LibName1=transistors
 LibName2=special
-LibName3=regul
-LibName4=pspice
-LibName5=power
-LibName6=microcontrollers
-LibName7=memory
-LibName8=linear
-LibName9=interface
-LibName10=intel
-LibName11=device
-LibName12=cypress
-LibName13=contrib
-LibName14=conn
-LibName15=audio
-LibName16=atmel
-LibName17=atmega32u4bb-from_eagle
-LibName18=DougsSch
+LibName3=power
+LibName4=microcontrollers
+LibName5=device
+LibName6=contrib
+LibName7=conn
+LibName8=atmel
+LibName9=atmega32u4bb-from_eagle
+LibName10=DougsSch
