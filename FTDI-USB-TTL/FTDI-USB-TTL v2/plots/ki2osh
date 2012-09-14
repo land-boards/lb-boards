@@ -1,0 +1,13 @@
+#!/bin/bash
+rm *.ger
+rm *.xln
+mv *.gtl "Top Layer.ger"
+mv *.gbl "Bottom Layer.ger"
+mv *.gts "Top Solder Mask.ger"
+mv *.gbs "Bottom Solder Mask.ger"
+mv *.gto "Top Silk Screen.ger"
+mv *.gbo "Bottom Silk Screen.ger"
+mv *.gbr "Board Outline.ger"
+mv *.drl "Drills.xln"
+zip ftdi-usb-ttl-x2 *.ger Drills.xln
+

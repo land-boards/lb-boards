@@ -1,0 +1,108 @@
+# EESchema Netlist Version 1.1 created  9/14/2012 4:46:45 PM
+(
+ ( /4FF312AD SM1210 C1 10uF
+  ( 1 /+5V )
+  ( 2 GND )
+ )
+ ( /4FF31376 SM0805 C2 0.1uF
+  ( 1 /+3.3V )
+  ( 2 GND )
+ )
+ ( /4FF31320 PIN_ARRAY_3X1 H1 CONN_3
+  ( 1 /+3.3V )
+  ( 2 /VCCIO )
+  ( 3 /+5V )
+ )
+ ( /4FF314D8 PIN_ARRAY_4x1 H2 CONN_4
+  ( 1 /PUP0 )
+  ( 2 /~LED0 )
+  ( 3 /PUP1 )
+  ( 4 /~LED1 )
+ )
+ ( /4FF30F9A SSOP28 IC1 FT232RL
+  ( 1 /TX )
+  ( 2 /DTR )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 /RX )
+  ( 6 ? )
+  ( 7 GND )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 /CTS )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 /DP )
+  ( 16 /DM )
+  ( 17 /+3.3V )
+  ( 18 GND )
+  ( 19 ? )
+  ( 20 /+5V )
+  ( 21 GND )
+  ( 22 /~LED1 )
+  ( 23 /~LED0 )
+  ( 25 GND )
+  ( 26 GND )
+  ( 27 ? )
+  ( 28 ? )
+ )
+ ( /4FF311FD J1 J1 USB-B
+  ( 1 /+5V )
+  ( 2 /DM )
+  ( 3 /DP )
+  ( 4 GND )
+  ( G1 GND )
+  ( G2 GND )
+  ( NC ? )
+ )
+ ( /4FF369A7 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF369AF MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /4FF312DA PIN_ARRAY-6X1 P1 CONN_6
+  ( 1 GND )
+  ( 2 /CTS )
+  ( 3 /VCCIO )
+  ( 4 /TX )
+  ( 5 /RX )
+  ( 6 /DTR )
+ )
+ ( /4FF314CB SM0805 R1 270
+  ( 1 /+5V )
+  ( 2 /PUP0 )
+ )
+ ( /4FF314D2 SM0805 R2 270
+  ( 1 /+5V )
+  ( 2 /PUP1 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
