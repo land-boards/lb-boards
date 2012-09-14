@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Fri 14 Sep 2012 07:37:38 AM EDT
+# EESchema Netlist Version 1.1 created  9/14/2012 2:23:23 PM
 (
  ( /50510C92 SM0805 C1 1uF
   ( 1 +3.3V )
@@ -32,13 +32,18 @@
   ( 1 +3.3V )
   ( 2 GND )
  )
- ( /504B5AF7 LED-0805 DS1 LED
+ ( /505246C8 SOT23 DS1 LED2C
   ( 1 /P6R )
   ( 2 GND )
+  ( 3 /P6G )
  )
  ( /504B5B06 LED-0805 DS2 LED
   ( 1 /PW5 )
   ( 2 GND )
+ )
+ ( /50510C17 SM1206 F1 FUSE
+  ( 1 +5V )
+  ( 2 /USB5V )
  )
  ( /504B3CCB USB-B-MINI J1 USB-B
   ( 1 /USB5V )
@@ -50,16 +55,12 @@
   ( NC ? )
  )
  ( /504A923A adafruit-JST-PH-2-SMT J2 JST_2
-  ( 1 /VBATT )
-  ( 2 GND )
+  ( 1 GND )
+  ( 2 /VBATT )
  )
  ( /50521190 PIN_ARRAY_2X1 J3 CONN_2
   ( 1 +3.3V )
   ( 2 /VBATT )
- )
- ( /50510C17 SM1210 L1 FUSE
-  ( 1 +5V )
-  ( 2 /USB5V )
  )
  ( /504A9CFE MTG-4-40 MTG1 CONN_1
   ( 1 ? )
@@ -90,7 +91,7 @@
   ( 2 /HWB )
  )
  ( /505109FB SM0805 R5 1K
-  ( 1 /PE6 )
+  ( 1 /PE6R )
   ( 2 /P6R )
  )
  ( /5050C144 SM0805 R6 10K
@@ -117,9 +118,13 @@
   ( 1 +3.3V )
   ( 2 /PG )
  )
+ ( /505246F2 SM0805 R12 1K
+  ( 1 /PE6G )
+  ( 2 /P6G )
+ )
  ( /50510A6B PIN_ARRAY_2X1 SJ1 HDR2
   ( 1 /HWB )
-  ( 2 ? )
+  ( 2 GND )
  )
  ( /504A91E2 MSOP10-0.5 U1 MCP73833
   ( 1 +5V )
@@ -149,7 +154,7 @@
   ( 19 GND )
  )
  ( /4EE20DB3 TQFP44 U3 ATMEGA32U4-AU
-  ( 1 /PE6 )
+  ( 1 ? )
   ( 2 +5V )
   ( 3 /BUSPM )
   ( 4 /BUSBP )
@@ -157,8 +162,8 @@
   ( 6 +3.3V )
   ( 7 +3.3V )
   ( 8 ? )
-  ( 9 ? )
-  ( 10 ? )
+  ( 9 /PE6R )
+  ( 10 /PE6G )
   ( 11 ? )
   ( 12 ? )
   ( 13 /RST )
@@ -187,20 +192,55 @@
   ( 36 ? )
   ( 37 ? )
   ( 38 /PG )
-  ( 39 /STAT2 )
-  ( 40 /STAT1 )
+  ( 39 /STAT1 )
+  ( 40 /STAT2 )
   ( 41 ? )
   ( 42 ? )
   ( 43 GND )
   ( 44 +3.3V )
  )
- ( /50510D40 HC-49V X3 8MHz
+ ( /50510D40 Crystal_HC49-SD_SMD_RevA_09Aug2010 X1 8MHz
   ( 1 /X0 )
   ( 2 /X1 )
  )
 )
 *
 { Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
 $component C8
  CP*
  SM*
@@ -222,6 +262,90 @@ $component DS2
  LED-0805
  LED-1206
  LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $endfootprintlist
 }

@@ -1,5 +1,5 @@
-update=Thu 13 Sep 2012 05:55:26 PM EDT
-last_client=eeschema
+update=9/14/2012 2:20:39 PM
+last_client=cvpcb
 [pcbnew]
 version=1
 PadDrlX=320
@@ -32,12 +32,8 @@ LibName11=atmel
 LibName12=jumper
 LibName13=dougsLib
 LibName14=crystal-epson
+LibName15=Crystals_RevB_25Apr2012
 LibDir=../ATMega32U4;../KiCAD/modules
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=../ATMega32U4;../KiCAD/library
@@ -80,3 +76,8 @@ LibName7=conn
 LibName8=atmel
 LibName9=atmega32u4bb-from_eagle
 LibName10=DougsSch
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
