@@ -1,6 +1,11 @@
-update=9/14/2012 4:46:43 PM
+update=Fri 14 Sep 2012 10:47:28 PM EDT
 version=1
-last_client=cvpcb
+last_client=kicad
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -36,11 +41,7 @@ LabSize=60
 LibName1=power
 LibName2=conn
 LibName3=device
-LibName4=ftdi
-LibName5=ftdichip-1
-LibName6=ftdichip-2
-LibName7=ftdichip-3
-LibName8=usb-mini-b
+LibName4=usb-mini-b
 [pcbnew]
 version=1
 PadDrlX=320
@@ -57,19 +58,14 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=FTDI-USB-TTLv2.net
+LastNetListRead=FTDI-USB-TTLv3.net
 [pcbnew/libraries]
+LibDir=
 LibName1=connect
 LibName2=discret
 LibName3=MTG-4-40
 LibName4=USB-MINI-B
 LibName5=pin_array
 LibName6=dougsLib
-LibDir=
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
