@@ -1,270 +1,270 @@
-# EESchema Netlist Version 1.1 created  9/17/2012 12:49:46 PM
+# EESchema Netlist Version 1.1 created  Sat 22 Sep 2012 08:18:16 AM EDT
 (
- ( /5055E701 $noname  C3 C {Lib=C}
-  (    1 /VREG )
-  (    2 GND )
+ ( /50510C92 SM0805 C1 1uF
+  ( 1 +3.3V )
+  ( 2 GND )
  )
- ( /5055E6FB $noname  C2 C {Lib=C}
-  (    1 /VIN )
-  (    2 GND )
+ ( /5055E6FB SM0805 C2 0.1uF
+  ( 1 /VIN )
+  ( 2 GND )
  )
- ( /5055E6F2 $noname  P1 CONN_2 {Lib=CONN_2}
-  (    1 /VIN )
-  (    2 GND )
+ ( /5055E701 SM0805 C3 0.1uF
+  ( 1 /VREG )
+  ( 2 GND )
  )
- ( /5055E6DD $noname  K27 CONN_3 {Lib=CONN_3}
-  (    1 /VFUSE )
-  (    2 +5V )
-  (    3 /VREG )
+ ( /50510B10 SM1210 C4 10uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /5055E6CC $noname  U2 AP1117 {Lib=AP1117}
-  (    1 GND )
-  (    2 /VREG )
-  (    3 /VIN )
-  (    4 /VREG )
+ ( /50510B0C SM0805 C5 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /5055DFE8 $noname  X1 16MHz {Lib=RESONATOR}
-  (    1 N-000004 )
-  (    2 GND )
-  (    3 N-000026 )
+ ( /504B5B06 LED-0805 DS2 LED
+  ( 1 /PW5 )
+  ( 2 GND )
  )
- ( /5055D697 $noname  K25 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PC6 )
+ ( /50510C17 SM1206 F1 FUSE
+  ( 1 /VFUSE )
+  ( 2 /USB5V )
  )
- ( /5055D696 $noname  K26 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PC7 )
+ ( /504B3CCB USB-B-MINI J1 USB-B
+  ( 1 /USB5V )
+  ( 2 /USB-DM )
+  ( 3 /USB-DP )
+  ( 4 GND )
+  ( G1 GND )
+  ( G2 GND )
+  ( NC ? )
  )
- ( /5055D48C $noname  K5 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF4 )
+ ( /505DAA36 PIN_ARRAY_3X1 J2 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF0 )
  )
- ( /5055D48B $noname  K6 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF5 )
+ ( /505DAA35 PIN_ARRAY_3X1 J3 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF1 )
  )
- ( /5055D48A $noname  K8 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PE6 )
+ ( /505DAA34 PIN_ARRAY_3X1 J4 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF2 )
  )
- ( /5055D489 $noname  K7 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PE2 )
+ ( /505DAA33 PIN_ARRAY_3X1 J5 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF3 )
  )
- ( /5055D488 $noname  K3 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF2 )
+ ( /505DAA32 PIN_ARRAY_3X1 J6 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF4 )
  )
- ( /5055D487 $noname  K4 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF3 )
+ ( /505DAA31 PIN_ARRAY_3X1 J7 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PF5 )
  )
- ( /5055D486 $noname  K2 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF1 )
+ ( /505DAA30 PIN_ARRAY_3X1 J8 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PE2 )
  )
- ( /5055D485 $noname  K1 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PF0 )
+ ( /505DAA2F PIN_ARRAY_3X1 J9 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PE6 )
  )
- ( /5055D484 $noname  K9 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB0 )
+ ( /505DA9A0 PIN_ARRAY_3X1 J10 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB0 )
  )
- ( /5055D483 $noname  K10 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB1 )
+ ( /505DA99F PIN_ARRAY_3X1 J11 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB1 )
  )
- ( /5055D482 $noname  K12 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB3 )
+ ( /505DA99E PIN_ARRAY_3X1 J12 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB2 )
  )
- ( /5055D481 $noname  K11 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB2 )
+ ( /505DA99D PIN_ARRAY_3X1 J13 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB3 )
  )
- ( /5055D480 $noname  K15 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB6 )
+ ( /505DA99C PIN_ARRAY_3X1 J14 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB4 )
  )
- ( /5055D47F $noname  K16 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB7 )
+ ( /505DA99B PIN_ARRAY_3X1 J15 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB5 )
  )
- ( /5055D47E $noname  K14 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB5 )
+ ( /505DA99A PIN_ARRAY_3X1 J16 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB6 )
  )
- ( /5055D47D $noname  K13 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PB4 )
+ ( /505DA999 PIN_ARRAY_3X1 J17 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PB7 )
  )
- ( /5055D37A $noname  K21 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD4 )
+ ( /505DA8AA PIN_ARRAY_3X1 J18 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD1 )
  )
- ( /5055D379 $noname  K22 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD5 )
+ ( /505DA8D8 PIN_ARRAY_3X1 J19 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD0 )
  )
- ( /5055D378 $noname  K24 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD7 )
+ ( /505DA8DC PIN_ARRAY_3X1 J20 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD2 )
  )
- ( /5055D377 $noname  K23 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD6 )
+ ( /505DA8E4 PIN_ARRAY_3X1 J21 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD3 )
  )
- ( /5055D36C $noname  K19 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD2 )
+ ( /505DA8E6 PIN_ARRAY_3X1 J22 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD4 )
  )
- ( /5055D36B $noname  K20 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD3 )
+ ( /505DA8EB PIN_ARRAY_3X1 J23 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD5 )
  )
- ( /5055D35E $noname  K18 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD0 )
+ ( /505DA8EE PIN_ARRAY_3X1 J24 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD6 )
  )
- ( /5055D351 $noname  K17 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /PD1 )
+ ( /505DA8F4 PIN_ARRAY_3X1 J25 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PD7 )
  )
- ( /50510C92 SM0805  C1 1uF {Lib=C}
-  (    1 +3.3V )
-  (    2 GND )
+ ( /505DAAAE PIN_ARRAY_3X1 J26 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PC6 )
  )
- ( /50510C3F SM0805  R2 22 {Lib=R}
-  (    1 /BUSBP )
-  (    2 /USB-DP )
+ ( /505DAAAD PIN_ARRAY_3X1 J27 GVS
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /PC7 )
  )
- ( /50510C3A SM0805  R1 22 {Lib=R}
-  (    1 /BUSPM )
-  (    2 /USB-DM )
+ ( /5055E6DD PIN_ARRAY_3X1 J28 CONN_3
+  ( 1 /VFUSE )
+  ( 2 +5V )
+  ( 3 /VREG )
  )
- ( /50510C17 SM1206  F1 FUSE {Lib=FUSE}
-  (    1 /VFUSE )
-  (    2 /USB5V )
+ ( /5055E6F2 PIN_ARRAY_2X1 J29 CONN_2
+  ( 1 /VIN )
+  ( 2 GND )
  )
- ( /50510B10 SM1210  C4 10uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /504A9CFE MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
  )
- ( /50510B0C SM0805  C5 0.1uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /504A9D02 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
  )
- ( /50510A02 SM0805  R3 270 {Lib=R}
-  (    1 +5V )
-  (    2 /PW5 )
+ ( /504A9D05 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
  )
- ( /504B5B06 LED-0805  DS2 LED {Lib=LED}
-  (    1 /PW5 )
-  (    2 GND )
+ ( /504A9D08 MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
  )
- ( /504B3CCB USB-B-MINI  J1 USB-B {Lib=USB-B}
-  (    1 /USB5V )
-  (    2 /USB-DM )
-  (    3 /USB-DP )
-  (    4 GND )
-  (   G1 GND )
-  (   G2 GND )
-  (   NC ? )
+ ( /50510C3A SM0805 R1 22
+  ( 1 /BUSPM )
+  ( 2 /USB-DM )
  )
- ( /504A9D08 MTG-4-40  MTG4 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /50510C3F SM0805 R2 22
+  ( 1 /BUSBP )
+  ( 2 /USB-DP )
  )
- ( /504A9D05 MTG-4-40  MTG3 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /50510A02 SM0805 R3 270
+  ( 1 +5V )
+  ( 2 /PW5 )
  )
- ( /504A9D02 MTG-4-40  MTG2 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /504A9412 SM0805 R9 10K
+  ( 1 +5V )
+  ( 2 /RST )
  )
- ( /504A9CFE MTG-4-40  MTG1 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /4EE20DB3 TQFP44 U1 ATMEGA32U4-AU
+  ( 1 /PE6 )
+  ( 2 +5V )
+  ( 3 /BUSPM )
+  ( 4 /BUSBP )
+  ( 5 GND )
+  ( 6 +3.3V )
+  ( 7 +5V )
+  ( 8 /PB0 )
+  ( 9 /PB1 )
+  ( 10 /PB2 )
+  ( 11 /PB3 )
+  ( 12 /PB7 )
+  ( 13 /RST )
+  ( 14 +5V )
+  ( 15 GND )
+  ( 16 N-000009 )
+  ( 17 N-000010 )
+  ( 18 /PD0 )
+  ( 19 /PD1 )
+  ( 20 /PD2 )
+  ( 21 /PD3 )
+  ( 22 /PD5 )
+  ( 23 GND )
+  ( 24 +5V )
+  ( 25 /PD4 )
+  ( 26 /PD6 )
+  ( 27 /PD7 )
+  ( 28 /PB4 )
+  ( 29 /PB5 )
+  ( 30 /PB6 )
+  ( 31 /PC6 )
+  ( 32 /PC7 )
+  ( 33 /PE2 )
+  ( 34 +5V )
+  ( 35 GND )
+  ( 36 /PF5 )
+  ( 37 /PF4 )
+  ( 38 /PF3 )
+  ( 39 /PF2 )
+  ( 40 /PF1 )
+  ( 41 /PF0 )
+  ( 42 ? )
+  ( 43 GND )
+  ( 44 +5V )
  )
- ( /504A9412 SM0805  R9 10K {Lib=R}
-  (    1 +5V )
-  (    2 /RST )
+ ( /5055E6CC SOT223 U2 AP1117
+  ( 1 GND )
+  ( 2 /VREG )
+  ( 3 /VIN )
+  ( 4 /VREG )
  )
- ( /4EE20DB3 TQFP44  U1 ATMEGA32U4-AU {Lib=adaprog_ATMEGA32U4}
-  (    1 /PE6 )
-  (    2 +5V )
-  (    3 /BUSPM )
-  (    4 /BUSBP )
-  (    5 GND )
-  (    6 +3.3V )
-  (    7 +5V )
-  (    8 /PB0 )
-  (    9 /PB1 )
-  (   10 /PB2 )
-  (   11 /PB3 )
-  (   12 /PB7 )
-  (   13 /RST )
-  (   14 +5V )
-  (   15 GND )
-  (   16 N-000026 )
-  (   17 N-000004 )
-  (   18 /PD0 )
-  (   19 /PD1 )
-  (   20 /PD2 )
-  (   21 /PD3 )
-  (   22 /PD5 )
-  (   23 GND )
-  (   24 +5V )
-  (   25 /PD4 )
-  (   26 /PD6 )
-  (   27 /PD7 )
-  (   28 /PB4 )
-  (   29 /PB5 )
-  (   30 /PB6 )
-  (   31 /PC6 )
-  (   32 /PC7 )
-  (   33 /PE2 )
-  (   34 +5V )
-  (   35 GND )
-  (   36 /PF5 )
-  (   37 /PF4 )
-  (   38 /PF3 )
-  (   39 /PF2 )
-  (   40 /PF1 )
-  (   41 /PF0 )
-  (   42 ? )
-  (   43 GND )
-  (   44 +5V )
+ ( /5055DFE8 RESON_3PIN X1 16MHz
+  ( 1 N-000010 )
+  ( 2 GND )
+  ( 3 N-000009 )
  )
 )
 *
 { Allowed footprints by component:
-$component C3
+$component C1
  SM*
  C?
  C1-1
@@ -274,24 +274,10 @@ $component C2
  C?
  C1-1
 $endlist
-$component C1
+$component C3
  SM*
  C?
  C1-1
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
 $endlist
 $component C4
  SM*
@@ -303,13 +289,6 @@ $component C5
  C?
  C1-1
 $endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
 $component DS2
  LED-3MM
  LED-5MM
@@ -318,6 +297,27 @@ $component DS2
  LED-0805
  LED-1206
  LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $component R9
  R?
@@ -328,208 +328,3 @@ $component R9
 $endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-Net 1 "GND" "GND"
- K21 1
- K24 1
- K22 1
- U2 1
- K23 1
- X1 2
- C4 2
- U1 23
- U1 43
- C5 2
- DS2 2
- U1 5
- J1 4
- J1 G1
- J1 G2
- K19 1
- C1 2
- K5 1
- C2 2
- K17 1
- K16 1
- C3 2
- K14 1
- K18 1
- K4 1
- K8 1
- P1 2
- K7 1
- K3 1
- K13 1
- K20 1
- K2 1
- K1 1
- K6 1
- K9 1
- K12 1
- K10 1
- K25 1
- K26 1
- U1 35
- K11 1
- U1 15
- K15 1
-Net 2 "+5V" "+5V"
- K22 2
- K19 2
- K23 2
- K21 2
- K24 2
- R3 1
- K27 2
- C5 1
- C4 1
- K5 2
- K14 2
- K10 2
- K2 2
- K12 2
- K4 2
- K11 2
- K3 2
- K25 2
- K26 2
- K6 2
- K1 2
- K13 2
- K9 2
- K15 2
- U1 2
- K7 2
- R9 1
- U1 14
- K8 2
- K20 2
- K18 2
- K17 2
- U1 24
- U1 34
- U1 44
- K16 2
- U1 7
-Net 3 "/PB7" "PB7"
- K16 3
- U1 12
-Net 4 "" ""
- U1 17
- X1 1
-Net 5 "/PE6" "PE6"
- K8 3
- U1 1
-Net 7 "/PF1" "PF1"
- U1 40
- K2 3
-Net 8 "/PB3" "PB3"
- U1 11
- K12 3
-Net 9 "/PC6" "PC6"
- U1 31
- K25 3
-Net 10 "/PF0" "PF0"
- K1 3
- U1 41
-Net 11 "/PC7" "PC7"
- K26 3
- U1 32
-Net 12 "/PB6" "PB6"
- K15 3
- U1 30
-Net 13 "/PE2" "PE2"
- K7 3
- U1 33
-Net 14 "/PB2" "PB2"
- K11 3
- U1 10
-Net 15 "/PB1" "PB1"
- K10 3
- U1 9
-Net 16 "/PB0" "PB0"
- K9 3
- U1 8
-Net 17 "/BUSPM" "BUSPM"
- R1 1
- U1 3
-Net 18 "/RST" "RST"
- U1 13
- R9 2
-Net 20 "/PF2" "PF2"
- K3 3
- U1 39
-Net 21 "/PB5" "PB5"
- K14 3
- U1 29
-Net 22 "/PF3" "PF3"
- U1 38
- K4 3
-Net 23 "/PB4" "PB4"
- U1 28
- K13 3
-Net 24 "/PF4" "PF4"
- U1 37
- K5 3
-Net 25 "/PF5" "PF5"
- K6 3
- U1 36
-Net 26 "" ""
- X1 3
- U1 16
-Net 27 "/PD3" "PD3"
- K20 3
- U1 21
-Net 28 "/PD0" "PD0"
- K18 3
- U1 18
-Net 29 "/PD1" "PD1"
- U1 19
- K17 3
-Net 30 "/PD2" "PD2"
- K19 3
- U1 20
-Net 31 "/PD6" "PD6"
- K23 3
- U1 26
-Net 32 "/PD7" "PD7"
- U1 27
- K24 3
-Net 33 "/PD5" "PD5"
- U1 22
- K22 3
-Net 34 "/PD4" "PD4"
- U1 25
- K21 3
-Net 39 "/PW5" "PW5"
- DS2 1
- R3 2
-Net 40 "/USB5V" "USB5V"
- J1 1
- F1 2
-Net 41 "/USB-DM" "USB-DM"
- J1 2
- R1 2
-Net 42 "/BUSBP" "BUSBP"
- U1 4
- R2 1
-Net 43 "/VFUSE" "VFUSE"
- K27 1
- F1 1
-Net 44 "/VIN" "VIN"
- P1 1
- U2 3
- C2 1
-Net 45 "/USB-DP" "USB-DP"
- R2 2
- J1 3
-Net 46 "/VREG" "VREG"
- C3 1
- U2 4
- U2 2
- K27 3
-Net 47 "+3.3V" "+3.3V"
- U1 6
- C1 1
-}
-#End
