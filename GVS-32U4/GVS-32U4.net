@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sat 22 Sep 2012 08:18:16 AM EDT
+# EESchema Netlist Version 1.1 created  Fri 26 Oct 2012 07:35:32 AM EDT
 (
  ( /50510C92 SM0805 C1 1uF
   ( 1 +3.3V )
@@ -47,10 +47,9 @@
   ( 2 +5V )
   ( 3 /PF1 )
  )
- ( /505DAA34 PIN_ARRAY_3X1 J4 GVS
+ ( /508A750B PIN_ARRAY_2X1 J4 CONN_2
   ( 1 GND )
-  ( 2 +5V )
-  ( 3 /PF2 )
+  ( 2 /PF2 )
  )
  ( /505DAA33 PIN_ARRAY_3X1 J5 GVS
   ( 1 GND )
@@ -176,6 +175,10 @@
   ( 1 /VIN )
   ( 2 GND )
  )
+ ( /508A74C8 PIN_ARRAY_2X1 J30 CONN_2
+  ( 1 GND )
+  ( 2 /RST )
+ )
  ( /504A9CFE MTG-4-40 MTG1 CONN_1
   ( 1 ? )
  )
@@ -220,8 +223,8 @@
   ( 13 /RST )
   ( 14 +5V )
   ( 15 GND )
-  ( 16 N-000009 )
-  ( 17 N-000010 )
+  ( 16 N-000044 )
+  ( 17 N-000002 )
   ( 18 /PD0 )
   ( 19 /PD1 )
   ( 20 /PD2 )
@@ -257,9 +260,9 @@
   ( 4 /VREG )
  )
  ( /5055DFE8 RESON_3PIN X1 16MHz
-  ( 1 N-000010 )
+  ( 1 N-000002 )
   ( 2 GND )
-  ( 3 N-000009 )
+  ( 3 N-000044 )
  )
 )
 *
