@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sat 10 Nov 2012 10:34:22 AM EST
+# EESchema Netlist Version 1.1 created  Sun 11 Nov 2012 12:22:41 PM EST
 (
  ( /509A633C PIN_ARRAY_2X1  J4 HDR2 {Lib=CONN_2}
   (    1 /RST )
@@ -13,7 +13,7 @@
   (    2 GND )
  )
  ( /505246F2 SM0805  R12 150 {Lib=R}
-  (    1 /PB2 )
+  (    1 /DS2 )
   (    2 /PB2A )
  )
  ( /50521190 PIN_ARRAY_2X1  J3 HDR2 {Lib=CONN_2}
@@ -81,7 +81,7 @@
   (    2 N-000035 )
  )
  ( /505109FB SM0805  R5 150 {Lib=R}
-  (    1 /PB1 )
+  (    1 /DS3 )
   (    2 /PB1A )
  )
  ( /504B5B06 LED-0805  DS1 LED {Lib=LED}
@@ -155,8 +155,8 @@
   (    6 +3.3V )
   (    7 +3.3V )
   (    8 ? )
-  (    9 /PB1 )
-  (   10 /PB2 )
+  (    9 /DS3 )
+  (   10 /DS2 )
   (   11 ? )
   (   12 ? )
   (   13 /RST )
@@ -404,7 +404,7 @@ Net 34 "/GPSTX" "GPSTX"
 Net 35 "" ""
  R3 2
  U1 7
-Net 36 "/PB1" "PB1"
+Net 36 "/DS3" "DS3"
  U3 9
  R5 1
 Net 39 "/BUSBP" "BUSBP"
@@ -439,7 +439,7 @@ Net 47 "/3DFIX" "3DFIX"
 Net 48 "/1PPS" "1PPS"
  U3 28
  U2 13
-Net 49 "/PB2" "PB2"
+Net 49 "/DS2" "DS2"
  R12 1
  U3 10
 Net 50 "/PB1A" "PB1A"

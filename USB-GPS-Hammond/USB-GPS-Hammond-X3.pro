@@ -1,5 +1,5 @@
-update=Sat 10 Nov 2012 08:39:51 AM EST
-last_client=pcbnew
+update=Sun 11 Nov 2012 12:17:29 PM EST
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -81,3 +81,5 @@ LibName12=jumper
 LibName13=dougsLib
 LibName14=crystal-epson
 LibName15=Crystals_RevB_25Apr2012
+[general]
+version=1
