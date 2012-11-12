@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 11/8/2012 8:20:34 AM
+EESchema Schematic File Version 2  date 11/9/2012 12:22:27 PM
 LIBS:transistors
 LIBS:special
 LIBS:power
@@ -16,7 +16,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "USB-GPS (Datalogger)"
-Date "7 nov 2012"
+Date "9 nov 2012"
 Rev "X1"
 Comp ""
 Comment1 ""
