@@ -1,10 +1,5 @@
-update=11/30/2012 5:22:41 PM
+update=11/8/2012 8:20:29 AM
 last_client=eeschema
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -21,9 +16,8 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=GVS-32U4-X2.net
+LastNetListRead=atmega32u4bb.net
 [pcbnew/libraries]
-LibDir=../ATMega32U4;../KiCAD/modules
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -39,6 +33,12 @@ LibName12=jumper
 LibName13=dougsLib
 LibName14=crystal-epson
 LibName15=Crystals_RevB_25Apr2012
+LibDir=../ATMega32U4;../KiCAD/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=../ATMega32U4;../KiCAD/library

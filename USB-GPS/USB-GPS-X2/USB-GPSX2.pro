@@ -1,10 +1,5 @@
-update=11/30/2012 5:22:41 PM
-last_client=eeschema
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+update=12/5/2012 9:36:52 AM
+last_client=kicad
 [pcbnew]
 version=1
 PadDrlX=320
@@ -21,9 +16,8 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=GVS-32U4-X2.net
+LastNetListRead=atmega32u4bb.net
 [pcbnew/libraries]
-LibDir=../ATMega32U4;../KiCAD/modules
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -39,6 +33,12 @@ LibName12=jumper
 LibName13=dougsLib
 LibName14=crystal-epson
 LibName15=Crystals_RevB_25Apr2012
+LibDir=../ATMega32U4;../KiCAD/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=../ATMega32U4;../KiCAD/library
@@ -71,13 +71,13 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=transistors
-LibName2=special
-LibName3=power
-LibName4=microcontrollers
-LibName5=device
-LibName6=contrib
-LibName7=conn
-LibName8=atmel
-LibName9=atmega32u4bb-from_eagle
-LibName10=DougsSch
+LibName1=special
+LibName2=power
+LibName3=microcontrollers
+LibName4=device
+LibName5=contrib
+LibName6=conn
+LibName7=atmel
+LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+[general]
+version=1

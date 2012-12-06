@@ -1,4 +1,4 @@
-update=9/17/2012 12:41:38 PM
+update=12/5/2012 9:34:10 AM
 last_client=eeschema
 [pcbnew]
 version=1
@@ -79,5 +79,5 @@ LibName5=device
 LibName6=contrib
 LibName7=conn
 LibName8=atmel
-LibName9=atmega32u4bb-from_eagle
-LibName10=DougsSch
+LibName9=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName10=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/USB-GPS/atmega32u4bb-cache
