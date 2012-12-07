@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 12/6/2012 1:09:26 PM
+EESchema Schematic File Version 2  date 12/7/2012 9:04:30 AM
 LIBS:transistors
 LIBS:special
 LIBS:power
@@ -16,7 +16,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "USB-GPS (Datalogger)"
-Date "6 dec 2012"
+Date "7 dec 2012"
 Rev "X3"
 Comp ""
 Comment1 ""
@@ -50,9 +50,7 @@ Wire Wire Line
 Connection ~ 700  1500
 Connection ~ 700  1400
 Wire Wire Line
-	9900 5150 9900 5200
-Wire Wire Line
-	9900 5200 9900 5300
+	9900 5150 9900 5300
 Connection ~ 9900 5200
 Wire Wire Line
 	9550 4650 9550 4750
@@ -77,25 +75,15 @@ Connection ~ 2650 3450
 Wire Wire Line
 	1000 3450 1000 3300
 Wire Wire Line
-	1000 3450 1450 3450
-Wire Wire Line
-	1450 3450 1850 3450
-Wire Wire Line
-	1850 3450 2250 3450
-Wire Wire Line
-	2250 3450 2650 3450
+	1000 3450 2650 3450
 Connection ~ 2250 2750
 Wire Wire Line
-	2250 2700 2250 2750
-Wire Wire Line
-	2250 2750 2250 2950
+	2250 2700 2250 2950
 Connection ~ 1450 2750
 Wire Wire Line
 	1450 2950 1450 2750
 Wire Wire Line
-	1850 2750 1450 2750
-Wire Wire Line
-	1450 2750 1000 2750
+	1850 2750 1000 2750
 Wire Wire Line
 	1850 2750 1850 2950
 Wire Wire Line
@@ -135,29 +123,21 @@ Wire Wire Line
 Wire Wire Line
 	3950 6700 3950 6300
 Wire Wire Line
-	3300 6700 3650 6700
+	3300 6700 3950 6700
 Wire Wire Line
-	3650 6700 3950 6700
-Wire Wire Line
-	3800 3450 3800 3550
-Wire Wire Line
-	3800 3550 3800 4200
+	3800 3450 3800 4200
 Connection ~ 3600 2450
 Wire Wire Line
 	3600 2350 3600 2450
 Connection ~ 3850 2450
 Wire Wire Line
-	3850 2450 3600 2450
-Wire Wire Line
-	3600 2450 3350 2450
+	3850 2450 3350 2450
 Wire Wire Line
 	2950 1700 3350 1700
 Wire Wire Line
 	3350 1700 3350 1850
 Wire Wire Line
-	2950 1500 3050 1500
-Wire Wire Line
-	3050 1500 3900 1500
+	2950 1500 3900 1500
 Connection ~ 3050 1500
 Wire Wire Line
 	2950 1400 3050 1400
@@ -174,11 +154,7 @@ Connection ~ 8500 2450
 Wire Wire Line
 	8200 2450 8200 2350
 Wire Wire Line
-	8200 2450 8300 2450
-Wire Wire Line
-	8300 2450 8400 2450
-Wire Wire Line
-	8400 2450 8500 2450
+	8200 2450 8500 2450
 Wire Wire Line
 	7000 1850 7600 1850
 Wire Wire Line
@@ -186,22 +162,12 @@ Wire Wire Line
 Wire Wire Line
 	2500 5800 2500 5600
 Wire Wire Line
-	4100 7300 4100 7100
-Wire Wire Line
-	4100 7100 4100 7000
-Wire Wire Line
-	4100 7000 4100 6900
-Wire Wire Line
-	4100 6900 4100 6800
-Wire Wire Line
-	4100 6800 4100 6600
+	4100 7300 4100 6600
 Wire Wire Line
 	4100 4900 3950 4900
 Connection ~ 3500 4800
 Wire Wire Line
-	3500 5000 4000 5000
-Wire Wire Line
-	4000 5000 4100 5000
+	3500 5000 4100 5000
 Wire Wire Line
 	3500 4800 4100 4800
 Wire Wire Line
@@ -215,22 +181,16 @@ Wire Wire Line
 Wire Wire Line
 	9900 3900 9150 3900
 Wire Wire Line
-	4100 6000 3650 6000
-Wire Wire Line
-	3650 6000 3300 6000
+	4100 6000 3300 6000
 Wire Wire Line
 	3900 5100 3150 5100
 Wire Wire Line
-	7950 4650 8400 4650
-Wire Wire Line
-	8400 4650 8550 4650
+	7950 4650 8550 4650
 Wire Wire Line
 	6000 4900 6600 4900
 Connection ~ 2750 6700
 Wire Wire Line
-	2750 6800 2750 6700
-Wire Wire Line
-	2750 6700 2750 6000
+	2750 6800 2750 6000
 Connection ~ 4100 7100
 Connection ~ 4100 7000
 Connection ~ 4100 6900
@@ -242,32 +202,20 @@ Wire Wire Line
 Wire Wire Line
 	3050 5600 4100 5600
 Wire Wire Line
-	2050 5900 2050 5700
-Wire Wire Line
-	2050 5700 2050 5300
+	2050 5900 2050 5300
 Wire Wire Line
 	8450 4850 8450 5150
 Wire Wire Line
-	3500 4250 3500 4400
-Wire Wire Line
-	3500 4400 3500 4700
-Wire Wire Line
-	3500 4700 3500 4800
-Wire Wire Line
-	3500 4800 3500 5000
+	3500 4250 3500 5000
 Wire Wire Line
 	8400 3950 8400 4050
 Wire Wire Line
-	8500 2350 8500 2450
-Wire Wire Line
-	8500 2450 8500 2600
+	8500 2350 8500 2600
 Wire Wire Line
 	8300 2450 8300 2350
 Connection ~ 8300 2450
 Wire Wire Line
-	8450 750  8450 850 
-Wire Wire Line
-	8450 850  8450 900 
+	8450 750  8450 900 
 Wire Wire Line
 	6600 6900 6000 6900
 Wire Wire Line
@@ -277,11 +225,7 @@ Wire Wire Line
 Wire Wire Line
 	3850 1700 3900 1700
 Wire Wire Line
-	3850 2550 3850 2450
-Wire Wire Line
-	3850 2450 3850 1800
-Wire Wire Line
-	3850 1800 3850 1700
+	3850 2550 3850 1700
 Connection ~ 3850 1800
 Wire Wire Line
 	2950 1600 3600 1600
@@ -300,16 +244,12 @@ Wire Wire Line
 Wire Wire Line
 	9900 4650 9900 4750
 Wire Wire Line
-	3050 1500 3050 1400
-Wire Wire Line
-	3050 1400 3050 1150
+	3050 1500 3050 1150
 Connection ~ 3050 1400
 Wire Wire Line
 	1350 5700 1350 5600
 Wire Wire Line
-	2050 5700 1450 5700
-Wire Wire Line
-	1450 5700 1350 5700
+	2050 5700 1350 5700
 Connection ~ 2050 5700
 Connection ~ 8450 850 
 Wire Wire Line
@@ -324,18 +264,14 @@ Wire Wire Line
 	8400 4550 8400 4650
 Connection ~ 8400 4650
 Wire Wire Line
-	1000 2900 1000 2750
-Wire Wire Line
-	1000 2750 1000 2700
+	1000 2900 1000 2700
 Connection ~ 1000 2750
 Wire Wire Line
 	2250 2750 2650 2750
 Wire Wire Line
 	2650 2750 2650 2950
 Wire Wire Line
-	2650 3350 2650 3450
-Wire Wire Line
-	2650 3450 2650 3500
+	2650 3350 2650 3500
 Wire Wire Line
 	1450 3450 1450 3350
 Connection ~ 1450 3450
@@ -361,11 +297,7 @@ Wire Wire Line
 Wire Wire Line
 	700  1600 750  1600
 Wire Wire Line
-	700  1350 700  1400
-Wire Wire Line
-	700  1400 700  1500
-Wire Wire Line
-	700  1500 700  1600
+	700  1350 700  1600
 Wire Wire Line
 	4200 3550 3800 3550
 Connection ~ 3800 3550
@@ -392,9 +324,10 @@ P 950 1600
 F 0 "DS2" H 750 1450 50  0000 C CNN
 F 1 "LED2C_CA" H 950 1300 50  0000 C CNN
 F 2 "SOT23_LED2C" H 950 1400 50  0001 C CNN
-F 4 "SML-LX15IGC-TR" H 950 1600 60  0001 C CNN "MfgPN"
-F 5 "Mouser" H 950 1600 60  0001 C CNN "Vendor"
-F 6 "696-SML-LX15IGC-TR" H 950 1600 60  0001 C CNN "VendorPN"
+F 4 "Lumex" H 950 1600 60  0001 C CNN "Mfg"
+F 5 "SML-LX15IGC-TR" H 950 1600 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 950 1600 60  0001 C CNN "Vendor"
+F 7 "696-SML-LX15IGC-TR" H 950 1600 60  0001 C CNN "VendorPN"
 	1    950  1600
 	1    0    0    -1  
 $EndComp
@@ -791,6 +724,8 @@ P 10200 7300
 F 0 "MTG4" H 10280 7300 40  0000 L CNN
 F 1 "CONN_1" H 10200 7355 30  0001 C CNN
 F 2 "MTG-4-40" H 10200 7300 60  0001 C CNN
+F 4 "None" H 10200 7300 60  0001 C CNN "Mfg"
+F 5 "Mtg-Hole" H 10200 7300 60  0001 C CNN "MfgPN"
 	1    10200 7300
 	1    0    0    -1  
 $EndComp
@@ -801,6 +736,8 @@ P 10200 7200
 F 0 "MTG3" H 10280 7200 40  0000 L CNN
 F 1 "CONN_1" H 10200 7255 30  0001 C CNN
 F 2 "MTG-4-40" H 10200 7200 60  0001 C CNN
+F 4 "None" H 10200 7200 60  0001 C CNN "Mfg"
+F 5 "Mtg-Hole" H 10200 7200 60  0001 C CNN "MfgPN"
 	1    10200 7200
 	1    0    0    -1  
 $EndComp
@@ -811,6 +748,8 @@ P 10200 7100
 F 0 "MTG2" H 10280 7100 40  0000 L CNN
 F 1 "CONN_1" H 10200 7155 30  0001 C CNN
 F 2 "MTG-4-40" H 10200 7100 60  0001 C CNN
+F 4 "None" H 10200 7100 60  0001 C CNN "Mfg"
+F 5 "Mtg-Hole" H 10200 7100 60  0001 C CNN "MfgPN"
 	1    10200 7100
 	1    0    0    -1  
 $EndComp
@@ -821,6 +760,8 @@ P 10200 7000
 F 0 "MTG1" H 10280 7000 40  0000 L CNN
 F 1 "CONN_1" H 10200 7055 30  0001 C CNN
 F 2 "MTG-4-40" H 10200 7000 60  0001 C CNN
+F 4 "None" H 10200 7000 60  0001 C CNN "Mfg"
+F 5 "Mtg-Hole" H 10200 7000 60  0001 C CNN "MfgPN"
 	1    10200 7000
 	1    0    0    -1  
 $EndComp
