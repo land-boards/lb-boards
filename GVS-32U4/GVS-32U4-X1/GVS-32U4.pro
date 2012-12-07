@@ -1,4 +1,4 @@
-update=Tue 18 Sep 2012 07:12:25 PM EDT
+update=Tue 04 Dec 2012 07:22:17 PM EST
 last_client=eeschema
 [cvpcb]
 version=1
@@ -72,12 +72,8 @@ RptLab=1
 LabSize=60
 [eeschema/libraries]
 LibName1=transistors
-LibName2=special
-LibName3=power
-LibName4=microcontrollers
-LibName5=device
-LibName6=contrib
-LibName7=conn
-LibName8=atmel
-LibName9=atmega32u4bb-from_eagle
-LibName10=DougsSch
+LibName2=microcontrollers
+LibName3=device
+LibName4=conn
+LibName5=atmel
+LibName6=GVS-32U4
