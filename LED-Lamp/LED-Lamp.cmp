@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Sat 08 Dec 2012 04:31:09 PM EST
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 12/14/2012 3:21:18 PM
 
 BeginCmp
 TimeStamp = /50C3984E;
@@ -71,48 +71,6 @@ IdModule  = diode-DO201-15;
 EndCmp
 
 BeginCmp
-TimeStamp = /50C3987C;
-Reference = D9;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /50C39897;
-Reference = D10;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /50C398A2;
-Reference = D11;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /50C39A89;
-Reference = D46;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /50C39A88;
-Reference = D47;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /50C39A87;
-Reference = D48;
-ValeurCmp = LED;
-IdModule  = LED-5MM;
-EndCmp
-
-BeginCmp
 TimeStamp = /50C39457;
 Reference = P1;
 ValeurCmp = CONN_1;
@@ -127,23 +85,30 @@ IdModule  = TESTPOINT;
 EndCmp
 
 BeginCmp
+TimeStamp = /50CB76D7;
+Reference = P3;
+ValeurCmp = CONN_5;
+IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
 TimeStamp = /50C39603;
 Reference = Q1;
-ValeurCmp = NPN;
+ValeurCmp = 1N3904;
 IdModule  = TO92-123;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C396B2;
 Reference = Q2;
-ValeurCmp = MOSFET_N;
+ValeurCmp = IRFU420;
 IdModule  = TO-251;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C391FB;
 Reference = R1;
-ValeurCmp = R;
+ValeurCmp = 10;
 IdModule  = R3-LARGE_PADS;
 EndCmp
 
@@ -165,7 +130,7 @@ BeginCmp
 TimeStamp = /50C3954B;
 Reference = R4;
 ValeurCmp = 50K;
-IdModule  = POT_CMS;
+IdModule  = PIN_ARRAY_3X1;
 EndCmp
 
 BeginCmp
@@ -179,7 +144,7 @@ BeginCmp
 TimeStamp = /50C3961E;
 Reference = R6;
 ValeurCmp = 10K;
-IdModule  = R3;
+IdModule  = RES-TRIM;
 EndCmp
 
 BeginCmp

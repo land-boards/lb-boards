@@ -1,68 +1,44 @@
-# EESchema Netlist Version 1.1 created  Sat 08 Dec 2012 04:31:09 PM EST
+# EESchema Netlist Version 1.1 created  12/14/2012 3:21:18 PM
 (
  ( /50C3984E C1V5 C1 100UuF
-  ( 1 N-000001 )
-  ( 2 N-000003 )
+  ( 1 N-000007 )
+  ( 2 /GND )
  )
  ( /50C39A46 C1 C2 0.1uF
-  ( 1 N-000019 )
-  ( 2 N-000001 )
+  ( 1 N-000014 )
+  ( 2 N-000007 )
  )
  ( /50C3920C DO-41 D1 1N4006
-  ( 1 N-000021 )
-  ( 2 N-000009 )
+  ( 1 N-000002 )
+  ( 2 /V+ )
  )
  ( /50C39226 DO-41 D2 1N4006
   ( 1 /NEUTRAL )
-  ( 2 N-000009 )
+  ( 2 /V+ )
  )
  ( /50C39214 DO-41 D3 1N4006
-  ( 1 N-000003 )
-  ( 2 N-000021 )
+  ( 1 /GND )
+  ( 2 N-000002 )
  )
  ( /50C39230 DO-41 D4 1N4006
-  ( 1 N-000003 )
+  ( 1 /GND )
   ( 2 /NEUTRAL )
  )
  ( /50C3979B DO-41 D5 1N4148
-  ( 1 N-000020 )
-  ( 2 N-000014 )
+  ( 1 /LSTR1TOP )
+  ( 2 N-000005 )
  )
  ( /50C3999E DO-41 D6 1N4148
-  ( 1 N-000006 )
-  ( 2 N-000019 )
+  ( 1 N-000013 )
+  ( 2 N-000014 )
  )
  ( /50C39654 DO-35 D7 ZD9V1
-  ( 1 N-000001 )
-  ( 2 N-000019 )
+  ( 1 N-000007 )
+  ( 2 N-000014 )
  )
  ( /50C393F6 diode-DO201-15 D8 TVS400V
-  ( A N-000021 )
+  ( A N-000002 )
   ( C /NEUTRAL )
- )
- ( /50C3987C LED-5MM D9 LED
-  ( 1 N-000020 )
-  ( 2 N-000013 )
- )
- ( /50C39897 LED-5MM D10 LED
-  ( 1 N-000013 )
-  ( 2 N-000004 )
- )
- ( /50C398A2 LED-5MM D11 LED
-  ( 1 N-000004 )
-  ( 2 N-000003 )
- )
- ( /50C39A89 LED-5MM D46 LED
-  ( 1 N-000005 )
-  ( 2 N-000008 )
- )
- ( /50C39A88 LED-5MM D47 LED
-  ( 1 N-000008 )
-  ( 2 N-000007 )
- )
- ( /50C39A87 LED-5MM D48 LED
-  ( 1 N-000007 )
-  ( 2 N-000003 )
  )
  ( /50C39457 TESTPOINT P1 CONN_1
   ( 1 /HOT )
@@ -70,57 +46,64 @@
  ( /50C3945C TESTPOINT P2 CONN_1
   ( 1 /NEUTRAL )
  )
- ( /50C39603 TO92-123 Q1 NPN
-  ( 1 N-000011 )
-  ( 2 N-000015 )
-  ( 3 N-000002 )
+ ( /50CB76D7 PIN_ARRAY_5x1 P3 CONN_5
+  ( 1 /LSTR1MID )
+  ( 2 /LSTR1TOP )
+  ( 3 /GND )
+  ( 4 /L2STRTOP )
+  ( 5 /GND )
  )
- ( /50C396B2 TO-251 Q2 MOSFET_N
-  ( D N-000009 )
-  ( G N-000002 )
-  ( S N-000001 )
+ ( /50C39603 TO92-123 Q1 1N3904
+  ( 1 N-000009 )
+  ( 2 N-000010 )
+  ( 3 N-000016 )
  )
- ( /50C391FB R3-LARGE_PADS R1 R
-  ( 1 N-000021 )
+ ( /50C396B2 TO-251 Q2 IRFU420
+  ( D /V+ )
+  ( G N-000016 )
+  ( S N-000007 )
+ )
+ ( /50C391FB R3-LARGE_PADS R1 10
+  ( 1 N-000002 )
   ( 2 /HOT )
  )
  ( /50C39520 R3 R2 100K
-  ( 1 N-000009 )
-  ( 2 N-000006 )
+  ( 1 /V+ )
+  ( 2 N-000013 )
  )
  ( /50C3952C R3 R3 330K
-  ( 1 N-000006 )
-  ( 2 N-000016 )
+  ( 1 N-000013 )
+  ( 2 N-000012 )
  )
- ( /50C3954B POT_CMS R4 50K
-  ( 1 N-000017 )
-  ( 2 N-000015 )
-  ( 3 N-000016 )
+ ( /50C3954B PIN_ARRAY_3X1 R4 50K
+  ( 1 N-000011 )
+  ( 2 N-000010 )
+  ( 3 N-000012 )
  )
  ( /50C39536 R3 R5 220K
-  ( 1 N-000017 )
-  ( 2 N-000013 )
+  ( 1 N-000011 )
+  ( 2 /LSTR1MID )
  )
- ( /50C3961E R3 R6 10K
-  ( 1 N-000012 )
-  ( 2 N-000011 )
-  ( 3 N-000014 )
+ ( /50C3961E RES-TRIM R6 10K
+  ( 1 N-000008 )
+  ( 2 N-000009 )
+  ( 3 N-000005 )
  )
  ( /50C3966F R3 R7 1K
-  ( 1 N-000012 )
-  ( 2 N-000013 )
+  ( 1 N-000008 )
+  ( 2 /LSTR1MID )
  )
  ( /50C396D8 R3 R8 220
-  ( 1 N-000001 )
-  ( 2 N-000020 )
+  ( 1 N-000007 )
+  ( 2 /LSTR1TOP )
  )
  ( /50C39903 R3 R9 220K
-  ( 1 N-000002 )
-  ( 2 N-000019 )
+  ( 1 N-000016 )
+  ( 2 N-000014 )
  )
  ( /50C39AB3 R3 R10 220
-  ( 1 N-000001 )
-  ( 2 N-000005 )
+  ( 1 N-000007 )
+  ( 2 /L2STRTOP )
  )
 )
 *
@@ -163,107 +146,61 @@ $component D7
  SO*
  SM*
 $endlist
-$component D9
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D10
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D11
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D46
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D47
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D48
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
 $component R1
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R2
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R3
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R5
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R7
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R8
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R9
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $component R10
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
 $endfootprintlist
 }
