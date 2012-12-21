@@ -4,7 +4,7 @@ WorldInfo {
 }
 Transform {
   scale 0.00254 0.00254 0.00254
-  translation -162.075 94.8436 0.0
+  translation -168.445 98.0313 0.0
   children [
 Transform {
   rotation 0 0 1 4.71239
@@ -230,6 +230,14 @@ Transform {
   children [
     Inline {
       url "C:/Program Files (x86)/KiCad/share/modules/packages3d/smd/resistors/R0603.wrl"
+    } ]
+  }
+Transform {
+  scale 1000 1000 1000
+  translation 70750 -38750 315
+  children [
+    Inline {
+      url "../KiCAD/modules/packages3d/smd/pqfp100.wrl"
     } ]
   }
 Transform {
