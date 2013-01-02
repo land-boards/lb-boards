@@ -1,6 +1,6 @@
-update=Sun 22 Jul 2012 01:46:01 PM EDT
+update=Mon 31 Dec 2012 09:19:05 PM EST
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -28,6 +28,11 @@ LibName4=discret
 LibName5=pin_array
 LibName6=MTG-4-40
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -67,8 +72,3 @@ LibName4=interface
 LibName5=opto
 LibName6=atmel
 LibName7=contrib
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms

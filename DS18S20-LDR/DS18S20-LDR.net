@@ -1,0 +1,54 @@
+# EESchema Netlist Version 1.1 created  Mon 31 Dec 2012 10:06:12 PM EST
+(
+ ( /4FEC8AB4 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /50E24904 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /50E24937 pin_array_4x1 P1 CONN_4
+  ( 1 /GND )
+  ( 2 /VCC-IN )
+  ( 3 /DQ )
+  ( 4 N-000003 )
+ )
+ ( /4FEC86BD adafruit-R0805 R1 4.7K
+  ( 1 /DQ )
+  ( 2 /VCC-IN )
+ )
+ ( /50E249BE LDR-3.5MM R2 LDR
+  ( 1 N-000003 )
+  ( 2 /GND )
+ )
+ ( /50E249AE adafruit-R0805 R3 56K
+  ( 1 /VCC-IN )
+  ( 2 N-000003 )
+ )
+ ( /4FEC84B3 TO92-INVERT U1 DS18S20+
+  ( 1 /GND )
+  ( 2 /DQ )
+  ( 3 /GND )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

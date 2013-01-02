@@ -1,0 +1,163 @@
+EESchema Schematic File Version 2  date Mon 31 Dec 2012 09:52:50 PM EST
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:ds18s20+
+LIBS:DS18S20-LDR-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "1 jan 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 5000 2750
+Wire Wire Line
+	5000 1500 5000 3750
+Connection ~ 4150 3050
+Wire Wire Line
+	5400 2300 5300 2300
+Wire Wire Line
+	5300 2300 5300 2850
+Wire Wire Line
+	5300 2850 4150 2850
+Wire Wire Line
+	4150 2850 4150 3150
+Connection ~ 5100 2100
+Wire Wire Line
+	4900 3050 5100 3050
+Wire Wire Line
+	5100 3050 5100 1650
+Wire Wire Line
+	5000 1500 3900 1500
+Wire Wire Line
+	3900 1500 3900 1800
+Wire Wire Line
+	4050 1650 4000 1650
+Wire Wire Line
+	4000 1650 4000 1850
+Wire Wire Line
+	4000 1850 4550 1850
+Connection ~ 4550 2200
+Wire Wire Line
+	4550 1850 4550 2200
+Wire Wire Line
+	5400 2100 5100 2100
+Connection ~ 5000 2000
+Wire Wire Line
+	5400 2000 5000 2000
+Wire Wire Line
+	5000 2750 3950 2750
+Wire Wire Line
+	3950 2750 3950 2600
+Wire Wire Line
+	5400 2200 4450 2200
+Wire Wire Line
+	5100 1650 4550 1650
+Wire Wire Line
+	4150 3050 4400 3050
+Wire Wire Line
+	5000 3750 4150 3750
+Wire Wire Line
+	4150 3750 4150 3650
+$Comp
+L R R2
+U 1 1 50E249BE
+P 4150 3400
+F 0 "R2" V 4230 3400 50  0000 C CNN
+F 1 "LDR" V 4150 3400 50  0000 C CNN
+	1    4150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 50E249AE
+P 4650 3050
+F 0 "R3" V 4730 3050 50  0000 C CNN
+F 1 "56K" V 4650 3050 50  0000 C CNN
+	1    4650 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_4 P1
+U 1 1 50E24937
+P 5750 2150
+F 0 "P1" V 5700 2150 50  0000 C CNN
+F 1 "CONN_4" V 5800 2150 50  0000 C CNN
+	1    5750 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG2
+U 1 1 50E24904
+P 6150 4550
+F 0 "MTG2" H 6230 4550 40  0000 L CNN
+F 1 "CONN_1" H 6150 4605 30  0001 C CNN
+F 2 "MTG-4-40" H 6150 4550 60  0001 C CNN
+F 4 "N/A" H 6150 4550 60  0001 C CNN "Mfg"
+F 5 "N/A" H 6150 4550 60  0001 C CNN "MfgPN"
+F 6 "N/A" H 6150 4550 60  0001 C CNN "Vendor"
+F 7 "N/A" H 6150 4550 60  0001 C CNN "VendorPN"
+	1    6150 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6000 4450
+$Comp
+L CONN_1 MTG1
+U 1 1 4FEC8AB4
+P 6150 4450
+F 0 "MTG1" H 6230 4450 40  0000 L CNN
+F 1 "CONN_1" H 6150 4505 30  0001 C CNN
+F 2 "MTG-4-40" H 6150 4450 60  0001 C CNN
+F 4 "N/A" H 6150 4450 60  0001 C CNN "Mfg"
+F 5 "N/A" H 6150 4450 60  0001 C CNN "MfgPN"
+F 6 "N/A" H 6150 4450 60  0001 C CNN "Vendor"
+F 7 "N/A" H 6150 4450 60  0001 C CNN "VendorPN"
+	1    6150 4450
+	1    0    0    -1  
+$EndComp
+Text Label 4600 1650 0    60   ~ 0
+VCC-IN
+Text Label 4600 2200 0    60   ~ 0
+DQ
+Text Label 4400 2750 0    60   ~ 0
+GND
+$Comp
+L R R1
+U 1 1 4FEC86BD
+P 4300 1650
+F 0 "R1" V 4380 1650 50  0000 C CNN
+F 1 "4.7K" V 4300 1650 50  0000 C CNN
+F 2 "R4" H 4300 1650 60  0001 C CNN
+F 4 "Xicon" H 4300 1650 60  0001 C CNN "Mfg"
+F 5 "291-4.7K-RC" H 4300 1650 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 4300 1650 60  0001 C CNN "Vendor"
+F 7 "291-4.7K-RC" H 4300 1650 60  0001 C CNN "VendorPN"
+	1    4300 1650
+	0    -1   -1   0   
+$EndComp
+Text Notes 5850 2050 0    60   ~ 0
+G\nV\nS(temp)\nS(LDR)
+$Comp
+L DS18S20+ U1
+U 1 1 4FEC84B3
+P 4000 2350
+F 0 "U1" H 4050 2650 60  0000 C CNN
+F 1 "DS18S20+" H 4250 2350 60  0000 C CNN
+F 2 "TO92-123" H 4000 2350 60  0001 C CNN
+F 4 "Maxim" H 4000 2350 60  0001 C CNN "Mfg"
+F 5 "DS18S20 +" H 4000 2350 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 4000 2350 60  0001 C CNN "Vendor"
+F 7 "700-DS18S20 " H 4000 2350 60  0001 C CNN "VendorPN"
+	1    4000 2350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
