@@ -1,0 +1,450 @@
+# EESchema Netlist Version 1.1 created  Sun 20 Jan 2013 12:56:19 PM EST
+(
+ ( /50FC1694 $noname  R2 10K {Lib=R}
+  (    1 +5V )
+  (    2 N-000055 )
+ )
+ ( /50FC1369 $noname  P2 CONN_5 {Lib=CONN_5}
+  (    1 +12V )
+  (    2 N-000021 )
+  (    3 N-000019 )
+  (    4 N-000051 )
+  (    5 GND )
+ )
+ ( /50FC1364 $noname  P1 CONN_5 {Lib=CONN_5}
+  (    1 +12V )
+  (    2 N-000018 )
+  (    3 N-000054 )
+  (    4 N-000017 )
+  (    5 GND )
+ )
+ ( /50FC10D3 $noname  U4 AD7376ARWZ50 {Lib=AD7376ARWZ50}
+  (    1 N-000021 )
+  (    2 N-000051 )
+  (    3 GND )
+  (    4 GND )
+  (    5 /D5 )
+  (    6 N-000055 )
+  (    7 /D4 )
+  (   11 /D3 )
+  (   12 N-000055 )
+  (   13 ? )
+  (   14 +12V )
+  (   16 N-000019 )
+ )
+ ( /50FC10CA $noname  U3 AD7376ARWZ50 {Lib=AD7376ARWZ50}
+  (    1 N-000018 )
+  (    2 N-000017 )
+  (    3 GND )
+  (    4 GND )
+  (    5 /D5 )
+  (    6 N-000055 )
+  (    7 /D4 )
+  (   11 /D2 )
+  (   12 N-000055 )
+  (   13 ? )
+  (   14 +12V )
+  (   16 N-000054 )
+ )
+ ( /50FC0C27 $noname  C6 10uF {Lib=CP1}
+  (    1 /VUSB )
+  (    2 GND )
+ )
+ ( /50FC0C05 $noname  C7 0.1uF {Lib=C}
+  (    1 /VCCIO )
+  (    2 GND )
+ )
+ ( /50FC0B5E $noname  J3 USB-B {Lib=USB-B}
+  (    1 /VUSB )
+  (    2 /DM )
+  (    3 /DP )
+  (    4 GND )
+  (   G1 GND )
+  (   G2 GND )
+  (   NC ? )
+ )
+ ( /50FC0B0A ftdichip-1-SSOP28DB  IC1 FT232RL {Lib=FT232RL}
+  (    1 /RXCPU )
+  (    2 /ARDRES )
+  (    3 ? )
+  (    4 /VCCIO )
+  (    5 /TXCPU )
+  (    6 ? )
+  (    7 GND )
+  (    9 ? )
+  (   10 ? )
+  (   11 GND )
+  (   12 ? )
+  (   13 ? )
+  (   14 ? )
+  (   15 /DP )
+  (   16 /DM )
+  (   17 /VCCIO )
+  (   18 GND )
+  (   19 ? )
+  (   20 /VUSB )
+  (   21 GND )
+  (   22 ? )
+  (   23 ? )
+  (   25 GND )
+  (   26 GND )
+  (   27 ? )
+  (   28 ? )
+ )
+ ( /50FC062E PIN_ARRAY_3X1  J10 CONN_3 {Lib=CONN_3}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /FRQ_SENS )
+ )
+ ( /50FC056C PIN_ARRAY_3X1  J9 CONN_3 {Lib=CONN_3}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /VOL_SENS )
+ )
+ ( /50FC0390 atmega8-DIL28-3  U1 ATMEGA328-PU {Lib=ATMEGA328-PU}
+  (    1 N-000034 )
+  (    2 /RXCPU )
+  (    3 /TXCPU )
+  (    4 /D2 )
+  (    5 /D3 )
+  (    6 /D4 )
+  (    7 +5V )
+  (    8 GND )
+  (    9 /RES0 )
+  (   10 /RES1 )
+  (   11 /D5 )
+  (   12 ? )
+  (   13 /SDCS )
+  (   14 /LCDRST )
+  (   15 /LCDRS )
+  (   16 /LCDCS )
+  (   17 /MOSI )
+  (   18 /MISO )
+  (   19 /SCK )
+  (   20 +5V )
+  (   21 /AREF )
+  (   22 GND )
+  (   23 /KEYPAD )
+  (   24 /VOL_SENS )
+  (   25 /FRQ_SENS )
+  (   26 /AD3 )
+  (   27 /AD4 )
+  (   28 /AD5 )
+ )
+ ( /5017BBA4 PIN_ARRAY_3X1  J8 CONN_3 {Lib=CONN_3}
+  (    1 /VUSB )
+  (    2 +5V )
+  (    3 /VLDO )
+ )
+ ( /4FFA1634 PIN_ARRAY-6X1  J5 CONN_6 {Lib=CONN_6}
+  (    1 +5V )
+  (    2 /AREF )
+  (    3 GND )
+  (    4 /AD3 )
+  (    5 /AD4 )
+  (    6 /AD5 )
+ )
+ ( /4FF58FBF MTG-4-40  MTG4 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FF58FBC MTG-4-40  MTG3 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FF58FB9 MTG-4-40  MTG2 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FF58FB4 MTG-4-40  MTG1 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FF58F4A TB2-5MM  TB1 TB-2PIN {Lib=CONN_2}
+  (    1 +12V )
+  (    2 GND )
+ )
+ ( /4FF58E5C C1  C5 0.1uF {Lib=C}
+  (    1 /VLDO )
+  (    2 GND )
+ )
+ ( /4FF58E38 C1  C3 0.1uF {Lib=C}
+  (    1 +12V )
+  (    2 GND )
+ )
+ ( /4FF58E07 CP_5x11mm  C4 10uF {Lib=CP}
+  (    1 +12V )
+  (    2 GND )
+ )
+ ( /4FF58DEE SOT223  U2 AP1117 {Lib=AP1117}
+  (    1 GND )
+  (    2 /VLDO )
+  (    3 +12V )
+  (    4 /VLDO )
+ )
+ ( /4FF58BD9 C1  C2 0.1uF {Lib=C}
+  (    1 /ARDRES )
+  (    2 N-000034 )
+ )
+ ( /4FF587FE PIN_ARRAY_3X1  J2 CONN_3 {Lib=CONN_3}
+  (    1 GND )
+  (    2 +5V )
+  (    3 /KEYPAD )
+ )
+ ( /4FF5852D PIN_ARRAY-10X1  J1 CONN_10 {Lib=CONN_10}
+  (    1 +5V )
+  (    2 GND )
+  (    3 /LCDRST )
+  (    4 /LCDRS )
+  (    5 /MISO )
+  (    6 /MOSI )
+  (    7 /SCK )
+  (    8 /LCDCS )
+  (    9 /SDCS )
+  (   10 GND )
+ )
+ ( /4FF581E0 C1  C1 0.1uF {Lib=C}
+  (    1 +5V )
+  (    2 GND )
+ )
+ ( /4FF58157 SIL-3  Y1 16MHz {Lib=RESONATEUR}
+  (    1 /RES0 )
+  (    2 GND )
+  (    3 /RES1 )
+ )
+ ( /4FF574F9 R1  R1 10K {Lib=R}
+  (    1 +5V )
+  (    2 N-000034 )
+ )
+ ( /4FF574BF D3  D1 4N4004 {Lib=DIODE}
+  (    1 N-000034 )
+  (    2 +5V )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component C6
+ CP*
+ SM*
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 11 "/DM" "DM"
+ IC1 16
+ J3 2
+Net 12 "/VOL_SENS" "VOL_SENS"
+ U1 24
+ J9 3
+Net 13 "/FRQ_SENS" "FRQ_SENS"
+ J10 3
+ U1 25
+Net 17 "" ""
+ P1 4
+ U3 2
+Net 18 "" ""
+ U3 1
+ P1 2
+Net 19 "" ""
+ U4 16
+ P2 3
+Net 21 "" ""
+ P2 2
+ U4 1
+Net 22 "/D3" "D3"
+ U1 5
+ U4 11
+Net 23 "/VUSB" "VUSB"
+ J8 1
+ IC1 20
+ J3 1
+ C6 1
+Net 24 "/RXCPU" "RXCPU"
+ IC1 1
+ U1 2
+Net 25 "/TXCPU" "TXCPU"
+ IC1 5
+ U1 3
+Net 26 "/ARDRES" "ARDRES"
+ IC1 2
+ C2 1
+Net 28 "/DP" "DP"
+ IC1 15
+ J3 3
+Net 29 "+12V" "+12V"
+ TB1 1
+ C3 1
+ C4 1
+ U2 3
+ P1 1
+ P2 1
+ U4 14
+ U3 14
+Net 31 "/D2" "D2"
+ U3 11
+ U1 4
+Net 32 "/LCDRST" "LCDRST"
+ U1 14
+ J1 3
+Net 33 "/KEYPAD" "KEYPAD"
+ U1 23
+ J2 3
+Net 34 "" ""
+ R1 2
+ U1 1
+ D1 1
+ C2 2
+Net 35 "/RES1" "RES1"
+ U1 10
+ Y1 3
+Net 36 "/RES0" "RES0"
+ Y1 1
+ U1 9
+Net 37 "/AREF" "AREF"
+ J5 2
+ U1 21
+Net 38 "/LCDCS" "LCDCS"
+ U1 16
+ J1 8
+Net 39 "/SCK" "SCK"
+ J1 7
+ U1 19
+Net 40 "/MISO" "MISO"
+ J1 5
+ U1 18
+Net 41 "/AD4" "AD4"
+ U1 27
+ J5 5
+Net 42 "/MOSI" "MOSI"
+ J1 6
+ U1 17
+Net 43 "/AD3" "AD3"
+ J5 4
+ U1 26
+Net 44 "/LCDRS" "LCDRS"
+ J1 4
+ U1 15
+Net 45 "/SDCS" "SDCS"
+ U1 13
+ J1 9
+Net 46 "/AD5" "AD5"
+ U1 28
+ J5 6
+Net 51 "" ""
+ U4 2
+ P2 4
+Net 52 "/D5" "D5"
+ U1 11
+ U4 5
+ U3 5
+Net 53 "/D4" "D4"
+ U1 6
+ U4 7
+ U3 7
+Net 54 "" ""
+ U3 16
+ P1 3
+Net 55 "" ""
+ R2 2
+ U3 12
+ U3 6
+ U4 6
+ U4 12
+Net 56 "/VCCIO" "VCCIO"
+ C7 1
+ IC1 4
+ IC1 17
+Net 59 "+5V" "+5V"
+ R2 1
+ U1 20
+ R1 1
+ D1 2
+ U1 7
+ C1 1
+ J2 2
+ J5 1
+ J9 2
+ J10 2
+ J1 1
+ J8 2
+Net 60 "GND" "GND"
+ IC1 25
+ P2 5
+ J9 1
+ IC1 18
+ J10 1
+ P1 5
+ IC1 21
+ IC1 11
+ IC1 7
+ U1 8
+ J3 G2
+ J3 G1
+ J3 4
+ C7 2
+ TB1 2
+ J1 10
+ J2 1
+ Y1 2
+ C1 2
+ C6 2
+ J5 3
+ U1 22
+ J1 2
+ U2 1
+ C4 2
+ C3 2
+ C5 2
+ U4 3
+ U4 4
+ U3 3
+ U3 4
+ IC1 26
+Net 61 "/VLDO" "VLDO"
+ U2 2
+ U2 4
+ C5 1
+ J8 3
+}
+#End

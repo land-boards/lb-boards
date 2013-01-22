@@ -1,4 +1,4 @@
-update=7/30/2012 12:14:02 PM
+update=Sat 19 Jan 2013 01:49:50 PM EST
 version=1
 last_client=eeschema
 [cvpcb]
@@ -113,3 +113,6 @@ LabSize=60
 [eeschema/libraries]
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
 LibName2=ThereminBoards
+LibName3=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName4=conn
+LibName5=device
