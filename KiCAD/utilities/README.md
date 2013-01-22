@@ -1,10 +1,18 @@
 DougsPCBDesigns
 ===============
 
-Doug's Printed Circuit Board Designs
-------------------------------------
+Doug's KiCad Utilities
+----------------------
 
-Design files are kept here. Most are KiCad based layouts.
+KiCAD utilities are kept here.
+KiCAD is short on support utilities, but the file format is wide open.
 
-See [my PCB Designs Wiki][myWiki].
+- OSH Script - convert KiCAD default file names into OSH Park preferred name and zip up.
+- fixKiMods - Fixes KiCAD PCB Module files
+- fixKiSymbol - Fixes KiCAD Schematic symbol files
+- kiPL - Parts list processing for KiCAD
+- mergeKiLibs - Merge together two schematic libraries and deal with duplicates
+- mergKiMods - Merge together two PCB module libraries and deal with duplicates
+
+See [Doug's PCB Designs Wiki][myWiki].
 [myWiki]: http://dougspcbdesigns.pbworks.com/ "Doug's PCB Wiki"
