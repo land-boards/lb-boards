@@ -11,4 +11,4 @@ Doug's FixKiMods
 - If a -s command is passed to the program, any modules with spaces will be removed.
 
 See [Doug's PCB Designs Wiki][myWiki].
-[myWiki]: http://dougspcbdesigns.pbworks.com/ "Doug's PCB Wiki"
+[myWiki]: dougspcbdesigns.pbworks.com/fixKiMods "Doug's PCB Wiki fixKiMods page"
