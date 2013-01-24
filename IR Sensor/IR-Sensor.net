@@ -1,0 +1,78 @@
+# EESchema Netlist Version 1.1 created  23/01/2013 13:20:22
+(
+ ( /51002141 LED-5MM D1 IR_TX_LED
+  ( 1 N-000005 )
+  ( 2 GND )
+ )
+ ( /5100215F LED-5MM D2 IR_RX
+  ( 1 N-000007 )
+  ( 2 GND )
+ )
+ ( /51002211 PIN_ARRAY_4x1 J1 CONN_4
+  ( 1 GND )
+  ( 2 N-000006 )
+  ( 3 N-000004 )
+  ( 4 N-000007 )
+ )
+ ( /510024C8 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /5100260A MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /510023FF R4-5 R1 68
+  ( 1 N-000006 )
+  ( 2 N-000005 )
+ )
+ ( /51002134 R4-5 R2 68
+  ( 1 N-000006 )
+  ( 2 N-000005 )
+ )
+ ( /51002139 R4-5 R3 1M
+  ( 1 N-000004 )
+  ( 2 N-000007 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
