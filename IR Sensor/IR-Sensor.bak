@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/01/2013 09:18:27
+EESchema Schematic File Version 2  date 05/02/2013 15:49:49
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "25 jan 2013"
+Date "5 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +44,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DIODE D2
+U 1 1 51117026
+P 3900 2950
+F 0 "D2" H 3900 3050 40  0000 C CNN
+F 1 "IR RX" H 3900 2850 40  0000 C CNN
+	1    3900 2950
+	1    0    0    -1  
+$EndComp
 Text Notes 1800 2700 2    60   ~ 0
 G\nVT\nVR\nS
 Wire Wire Line
@@ -138,15 +147,6 @@ P 4200 3150
 F 0 "#PWR?" H 4200 3150 30  0001 C CNN
 F 1 "GND" H 4200 3080 30  0001 C CNN
 	1    4200 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED D2
-U 1 1 5100215F
-P 3900 2950
-F 0 "D2" H 3900 3050 50  0000 C CNN
-F 1 "IR RX" H 3900 2850 50  0000 C CNN
-	1    3900 2950
 	1    0    0    -1  
 $EndComp
 $Comp

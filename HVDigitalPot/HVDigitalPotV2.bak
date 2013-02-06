@@ -1,11 +1,10 @@
-EESchema Schematic File Version 2  date Thu 12 Jul 2012 09:02:24 PM EDT
+EESchema Schematic File Version 2  date 06/02/2013 14:56:37
 LIBS:xicor-eepot
 LIBS:HVDigitalPot-cache
 LIBS:ad7376arwz50
 LIBS:power
 LIBS:conn
 LIBS:device
-LIBS:DougsSch
 LIBS:HVDigitalPotV2-cache
 EELAYER 25  0
 EELAYER END
@@ -13,14 +12,16 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "High Voltage Potentiometer"
-Date "26 jun 2012"
-Rev ""
+Date "6 feb 2013"
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 3400 2350 2    60   ~ 0
++12V\nGND\n+5V\nSD1\nSD2\nCLK\nCSN\nGND
 Text Label 4150 2700 0    60   ~ 0
 SD2
 Wire Wire Line

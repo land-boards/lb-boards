@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/01/2013 09:18:31
+EESchema Schematic File Version 2  date 06/02/2013 12:26:21
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "25 jan 2013"
+Date "6 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +44,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DIODE D2
+U 1 1 51117026
+P 3900 2950
+F 0 "D2" H 3900 3050 40  0000 C CNN
+F 1 "IR RX" H 3900 2850 40  0000 C CNN
+	1    3900 2950
+	1    0    0    -1  
+$EndComp
 Text Notes 1800 2700 2    60   ~ 0
 G\nVT\nVR\nS
 Wire Wire Line
@@ -56,7 +65,7 @@ Wire Wire Line
 	2450 2800 4200 2800
 Connection ~ 2600 2650
 Wire Wire Line
-	2700 2500 2600 2500
+	2700 2450 2600 2450
 Wire Wire Line
 	2700 2950 2600 2950
 Wire Wire Line
@@ -67,15 +76,23 @@ Connection ~ 4200 2950
 Wire Wire Line
 	4100 2950 4200 2950
 Wire Wire Line
-	3200 2650 3700 2650
+	3200 2650 3300 2650
+Wire Wire Line
+	3300 2650 3700 2650
 Wire Wire Line
 	4100 2650 4200 2650
 Wire Wire Line
-	4200 2650 4200 3100
+	4200 2650 4200 2800
+Wire Wire Line
+	4200 2800 4200 2950
+Wire Wire Line
+	4200 2950 4200 3100
 Wire Wire Line
 	4200 2950 4200 3150
 Wire Wire Line
-	3200 2950 3700 2950
+	3200 2950 3450 2950
+Wire Wire Line
+	3450 2950 3700 2950
 Connection ~ 4200 2800
 Wire Wire Line
 	3450 2950 3450 3100
@@ -87,14 +104,16 @@ Wire Wire Line
 Wire Wire Line
 	2500 2950 2300 2950
 Wire Wire Line
-	3200 2500 3300 2500
+	3200 2450 3300 2450
 Wire Wire Line
-	3300 2500 3300 2650
+	3300 2450 3300 2650
 Connection ~ 3300 2650
 Wire Wire Line
 	2300 2750 2600 2750
 Wire Wire Line
-	2600 2750 2600 2500
+	2600 2750 2600 2650
+Wire Wire Line
+	2600 2650 2600 2450
 $Comp
 L CONN_1 MTG2
 U 1 1 5100260A
@@ -116,10 +135,10 @@ $EndComp
 $Comp
 L R R1
 U 1 1 510023FF
-P 2950 2500
-F 0 "R1" V 3030 2500 50  0000 C CNN
-F 1 "82" V 2950 2500 50  0000 C CNN
-	1    2950 2500
+P 2950 2450
+F 0 "R1" V 3030 2450 50  0000 C CNN
+F 1 "82" V 2950 2450 50  0000 C CNN
+	1    2950 2450
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -138,15 +157,6 @@ P 4200 3150
 F 0 "#PWR?" H 4200 3150 30  0001 C CNN
 F 1 "GND" H 4200 3080 30  0001 C CNN
 	1    4200 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED D2
-U 1 1 5100215F
-P 3900 2950
-F 0 "D2" H 3900 3050 50  0000 C CNN
-F 1 "IR RX" H 3900 2850 50  0000 C CNN
-	1    3900 2950
 	1    0    0    -1  
 $EndComp
 $Comp
