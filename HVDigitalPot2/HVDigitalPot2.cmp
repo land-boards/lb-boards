@@ -1,17 +1,31 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Thu 05 Jul 2012 10:16:50 PM EDT
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Wed 06 Feb 2013 09:39:35 PM EST
 
 BeginCmp
 TimeStamp = /4FE90DD1;
 Reference = C1;
 ValeurCmp = 0.1uF;
-IdModule  = C1;
+IdModule  = adafruit-R0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FE90DDB;
 Reference = C2;
 ValeurCmp = 0.1uF;
-IdModule  = C1;
+IdModule  = adafruit-R0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /51130CCD;
+Reference = C3;
+ValeurCmp = 1uF;
+IdModule  = adafruit-R0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /51130CD4;
+Reference = C4;
+ValeurCmp = 1uF;
+IdModule  = adafruit-R0805;
 EndCmp
 
 BeginCmp
@@ -33,13 +47,6 @@ TimeStamp = /4FE66B79;
 Reference = J3;
 ValeurCmp = CONN_3;
 IdModule  = PIN_ARRAY_3X1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FE914C0;
-Reference = J4;
-ValeurCmp = CONN_2;
-IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
@@ -67,21 +74,21 @@ BeginCmp
 TimeStamp = /4FE66B15;
 Reference = R1;
 ValeurCmp = 4.7K;
-IdModule  = R4;
+IdModule  = adafruit-R0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FE6689C;
+TimeStamp = /5112BC60;
 Reference = U1;
-ValeurCmp = AD7376ARWZ50;
-IdModule  = -SO16W;
+ValeurCmp = AD5292;
+IdModule  = tssop-14;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FE668B9;
+TimeStamp = /5112BDD5;
 Reference = U2;
-ValeurCmp = AD7376ARWZ50;
-IdModule  = -SO16W;
+ValeurCmp = AD5292;
+IdModule  = tssop-14;
 EndCmp
 
 EndListe

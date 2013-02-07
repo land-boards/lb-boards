@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date 06/02/2013 16:53:46
-LIBS:xicor-eepot
+EESchema Schematic File Version 2  date Wed 06 Feb 2013 09:39:09 PM EST
 LIBS:power
 LIBS:conn
 LIBS:device
@@ -11,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "High Voltage Potentiometer"
-Date "6 feb 2013"
+Date "7 feb 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -19,10 +18,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 6600 5350
-NoConn ~ 6600 5200
-NoConn ~ 6600 3200
-NoConn ~ 6600 3050
+Wire Wire Line
+	6850 3300 6850 3200
+Wire Wire Line
+	6850 3200 6600 3200
+Wire Wire Line
+	6850 5500 6850 5350
+Wire Wire Line
+	6850 5350 6600 5350
 Connection ~ 6000 5850
 Wire Wire Line
 	6000 5850 5900 5850
@@ -36,10 +39,6 @@ Wire Wire Line
 	5300 2550 5100 2550
 Wire Wire Line
 	5300 2850 4900 2850
-Wire Wire Line
-	5750 1300 5750 1200
-Wire Wire Line
-	5750 1200 5850 1200
 Connection ~ 6950 2000
 Wire Wire Line
 	6800 2000 6950 2000
@@ -134,10 +133,6 @@ Wire Wire Line
 Wire Wire Line
 	6950 1750 6950 2150
 Wire Wire Line
-	5850 1000 5550 1000
-Wire Wire Line
-	5550 1000 5550 1300
-Wire Wire Line
 	4900 2800 3900 2800
 Wire Wire Line
 	4450 4850 4450 2700
@@ -150,7 +145,37 @@ Wire Wire Line
 	5900 3700 6000 3700
 Connection ~ 6000 3700
 Wire Wire Line
-	6000 5950 6000 5800
+	6000 6000 6000 5800
+Wire Wire Line
+	6850 5900 6850 5950
+Wire Wire Line
+	6850 5950 6000 5950
+Connection ~ 6000 5950
+Wire Wire Line
+	6850 3700 6850 3750
+Wire Wire Line
+	6850 3750 6000 3750
+Connection ~ 6000 3750
+$Comp
+L CP1 C4
+U 1 1 51130CD4
+P 6850 5700
+F 0 "C4" H 6900 5800 50  0000 L CNN
+F 1 "1uF" H 6900 5600 50  0000 L CNN
+	1    6850 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C3
+U 1 1 51130CCD
+P 6850 3500
+F 0 "C3" H 6900 3600 50  0000 L CNN
+F 1 "1uF" H 6900 3400 50  0000 L CNN
+	1    6850 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6600 5200
+NoConn ~ 6600 3050
 $Comp
 L AD5292 U2
 U 1 1 5112BDD5
@@ -169,39 +194,10 @@ F 1 "AD5292" H 6300 2200 60  0000 C CNN
 	1    5950 2800
 	1    0    0    -1  
 $EndComp
-Text Notes 6350 1050 0    60   ~ 0
-ANALOG &\nDIGITAL\nGROUND
 Text Notes 3400 2350 2    60   ~ 0
 +12V\nGND\n+5V\nSD1\nSD2\nCLK\nCSN\nGND
 Text Label 4150 2700 0    60   ~ 0
 SD2
-$Comp
-L VSS #PWR01
-U 1 1 4FE91689
-P 5550 1300
-F 0 "#PWR01" H 5550 1300 30  0001 C CNN
-F 1 "VSS" H 5550 1230 30  0000 C CNN
-	1    5550 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 4FE91521
-P 5750 1300
-F 0 "#PWR02" H 5750 1300 30  0001 C CNN
-F 1 "GND" H 5750 1230 30  0001 C CNN
-	1    5750 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 J4
-U 1 1 4FE914C0
-P 6200 1100
-F 0 "J4" V 6150 1100 40  0000 C CNN
-F 1 "CONN_2" V 6250 1100 40  0000 C CNN
-	1    6200 1100
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR03
 U 1 1 4FE90E45
@@ -377,10 +373,10 @@ $EndComp
 $Comp
 L GND #PWR011
 U 1 1 4FE6681B
-P 6000 5950
-F 0 "#PWR011" H 6000 5950 30  0001 C CNN
-F 1 "GND" H 6000 5880 30  0001 C CNN
-	1    6000 5950
+P 6000 6000
+F 0 "#PWR011" H 6000 6000 30  0001 C CNN
+F 1 "GND" H 6000 5930 30  0001 C CNN
+	1    6000 6000
 	1    0    0    -1  
 $EndComp
 $Comp

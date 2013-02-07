@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date 06/02/2013 16:53:27
-LIBS:xicor-eepot
+EESchema Schematic File Version 2  date Wed 06 Feb 2013 09:13:21 PM EST
 LIBS:power
 LIBS:conn
 LIBS:device
@@ -11,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "High Voltage Potentiometer"
-Date "6 feb 2013"
+Date "7 feb 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -19,10 +18,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 6600 5350
-NoConn ~ 6600 5200
-NoConn ~ 6600 3200
-NoConn ~ 6600 3050
+Wire Wire Line
+	6850 3300 6850 3200
+Wire Wire Line
+	6850 3200 6600 3200
+Wire Wire Line
+	6850 5500 6850 5350
+Wire Wire Line
+	6850 5350 6600 5350
 Connection ~ 6000 5850
 Wire Wire Line
 	6000 5850 5900 5850
@@ -150,21 +153,51 @@ Wire Wire Line
 	5900 3700 6000 3700
 Connection ~ 6000 3700
 Wire Wire Line
-	6000 5950 6000 5800
+	6000 6000 6000 5800
+Wire Wire Line
+	6850 5900 6850 5950
+Wire Wire Line
+	6850 5950 6000 5950
+Connection ~ 6000 5950
+Wire Wire Line
+	6850 3700 6850 3750
+Wire Wire Line
+	6850 3750 6000 3750
+Connection ~ 6000 3750
 $Comp
-L AD5292 U?
+L CP1 C4
+U 1 1 51130CD4
+P 6850 5700
+F 0 "C4" H 6900 5800 50  0000 L CNN
+F 1 "1uF" H 6900 5600 50  0000 L CNN
+	1    6850 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C3
+U 1 1 51130CCD
+P 6850 3500
+F 0 "C3" H 6900 3600 50  0000 L CNN
+F 1 "1uF" H 6900 3400 50  0000 L CNN
+	1    6850 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6600 5200
+NoConn ~ 6600 3050
+$Comp
+L AD5292 U2
 U 1 1 5112BDD5
 P 5950 4950
-F 0 "U?" H 5650 5450 60  0000 C CNN
+F 0 "U2" H 5650 5450 60  0000 C CNN
 F 1 "AD5292" H 6300 4350 60  0000 C CNN
 	1    5950 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L AD5292 U?
+L AD5292 U1
 U 1 1 5112BC60
 P 5950 2800
-F 0 "U?" H 5650 3300 60  0000 C CNN
+F 0 "U1" H 5650 3300 60  0000 C CNN
 F 1 "AD5292" H 6300 2200 60  0000 C CNN
 	1    5950 2800
 	1    0    0    -1  
@@ -377,10 +410,10 @@ $EndComp
 $Comp
 L GND #PWR011
 U 1 1 4FE6681B
-P 6000 5950
-F 0 "#PWR011" H 6000 5950 30  0001 C CNN
-F 1 "GND" H 6000 5880 30  0001 C CNN
-	1    6000 5950
+P 6000 6000
+F 0 "#PWR011" H 6000 6000 30  0001 C CNN
+F 1 "GND" H 6000 5930 30  0001 C CNN
+	1    6000 6000
 	1    0    0    -1  
 $EndComp
 $Comp

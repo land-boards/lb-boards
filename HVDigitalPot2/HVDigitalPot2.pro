@@ -1,12 +1,7 @@
-update=06/02/2013 15:03:01
-last_client=eeschema
+update=Wed 06 Feb 2013 09:17:56 PM EST
+last_client=cvpcb
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -23,13 +18,17 @@ DrawLar=150
 EdgeLar=150
 TxtLar=120
 MSegLar=150
-LastNetListRead=HVDigitalPotV2.net
+LastNetListRead=HVDigitalPot2.net
 [pcbnew/libraries]
-LibDir=/home/doug/PCB Designs/KiCAD/modules
 LibName1=connect
 LibName2=discret
-LibName3=MTG-4-40
-LibName4=pin_array
+LibName3=pin_array
+LibName4=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName5=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_dil
+LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/adafruit
+LibName7=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_capacitors
+LibName8=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_resistors
+LibDir=/home/doug/PCB Designs/KiCAD/modules
 [eeschema]
 version=1
 LibDir=/home/doug/PCB Designs/KiCAD/library
@@ -62,8 +61,12 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=xicor-eepot
-LibName2=power
-LibName3=conn
-LibName4=device
-LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName1=power
+LibName2=conn
+LibName3=device
+LibName4=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
