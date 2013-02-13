@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3  Date: Sat 18 Aug 2012 11:44:37 AM EDT
+EESchema-LIBRARY Version 2.3  Date: 13/02/2013 09:23:48
 #encoding utf-8
 #
 # C
@@ -12,8 +12,8 @@ $FPLIST
  C1-1
 $ENDFPLIST
 DRAW
-P 2 0 1 10  -100 -30  100 -30 N
-P 2 0 1 10  -100 30  100 30 N
+P 2 0 1 20  -100 -30  100 -30 N
+P 2 0 1 20  -100 30  100 30 N
 X ~ 1 0 200 170 D 40 40 1 1 P
 X ~ 2 0 -200 170 U 40 40 1 1 P
 ENDDRAW
@@ -74,6 +74,24 @@ X ~ 2 0 -200 150 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
+# CP1
+#
+DEF CP1 C 0 10 N N 1 F N
+F0 "C" 50 100 50 H V L CNN
+F1 "CP1" 50 -100 50 H V L CNN
+$FPLIST
+ CP*
+ SM*
+$ENDFPLIST
+DRAW
+T 0 -50 100 80 0 0 0 +  Normal 0 C C
+A 0 -200 180 563 1236 0 1 15 N 100 -50 -100 -50
+P 4 0 1 15  -100 50  100 50  50 50  50 50 N
+X ~ 1 0 200 150 D 40 40 1 1 P
+X ~ 2 0 -200 180 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
 # GND
 #
 DEF ~GND #PWR 0 0 Y Y 1 F P
@@ -95,6 +113,7 @@ $FPLIST
  SM0603
  SM0805
  R?-*
+ SM1206
 $ENDFPLIST
 DRAW
 S -40 150 40 -150 0 1 12 N
@@ -109,13 +128,13 @@ DEF XR2206 U 0 40 Y Y 1 F N
 F0 "U" 520 670 60 H V C CNN
 F1 "XR2206" 350 770 60 H V C CNN
 DRAW
-T 0 300 -150 30 0 0 0 +1  Normal 1 C C
-T 0 10 -230 15 0 0 0 And~Sine  Normal 1 C C
-T 0 -50 180 20 0 0 0 Current  Normal 1 C C
-T 0 10 -180 15 0 0 0 Multiplier  Normal 1 C C
-T 0 -10 -280 15 0 0 0 Shaper  Normal 1 C C
-T 0 -50 130 15 0 0 0 Switches  Normal 1 C C
-T 0 -40 450 30 0 0 0 VCO  Normal 1 C C
+T 0 300 -150 30 0 0 0 +1  Normal 0 C C
+T 0 10 -230 15 0 0 0 And~Sine  Normal 0 C C
+T 0 -50 180 20 0 0 0 Current  Normal 0 C C
+T 0 10 -180 15 0 0 0 Multiplier  Normal 0 C C
+T 0 -10 -280 15 0 0 0 Shaper  Normal 0 C C
+T 0 -50 130 15 0 0 0 Switches  Normal 0 C C
+T 0 -40 450 30 0 0 0 VCO  Normal 0 C C
 P 2 0 0 0  540 -300  550 -300 N
 P 3 0 0 0  -180 -400  -150 -400  -150 -400 N
 P 3 0 0 0  -180 -310  -150 -310  -150 -310 N

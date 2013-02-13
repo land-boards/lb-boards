@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date Fri 31 Aug 2012 01:56:45 PM EDT
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 13/02/2013 09:14:30
 LIBS:power
 LIBS:device
 LIBS:conn
