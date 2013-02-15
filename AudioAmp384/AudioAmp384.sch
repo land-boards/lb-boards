@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 19 Jan 2013 01:19:07 PM EST
+EESchema Schematic File Version 2  date 14/02/2013 12:59:56
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:DougsSch
 LIBS:AudioAmp384-cache
 EELAYER 25  0
 EELAYER END
@@ -37,7 +36,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "AudioAmp384"
-Date "19 jan 2013"
+Date "14 feb 2013"
 Rev "X1"
 Comp ""
 Comment1 ""
@@ -45,6 +44,24 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CP1 C2
+U 1 1 511D2594
+P 5400 4500
+F 0 "C2" H 5450 4600 50  0000 L CNN
+F 1 "4.7uF" H 5450 4400 50  0000 L CNN
+	1    5400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C4
+U 1 1 511D254E
+P 7000 4100
+F 0 "C4" V 7100 3900 50  0000 L CNN
+F 1 "470uF" V 6900 3800 50  0000 L CNN
+	1    7000 4100
+	0    -1   -1   0   
+$EndComp
 Text Label 6600 4100 0    60   ~ 0
 VO
 Text Label 5450 3500 0    60   ~ 0
@@ -175,8 +192,8 @@ $Comp
 L C C5
 U 1 1 502311E6
 P 5350 3000
-F 0 "C5" V 5250 3150 50  0000 L CNN
-F 1 "0.1uF" V 5450 3200 50  0000 L CNN
+F 0 "C5" V 5250 3100 50  0000 L CNN
+F 1 "0.1uF" V 5450 3100 50  0000 L CNN
 	1    5350 3000
 	0    1    1    0   
 $EndComp
@@ -208,15 +225,6 @@ F 1 "2.7" V 6650 4400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C4
-U 1 1 5023108F
-P 7000 4100
-F 0 "C4" V 7100 3950 50  0000 L CNN
-F 1 "470uF" V 6850 3900 50  0000 L CNN
-	1    7000 4100
-	0    -1   -1   0   
-$EndComp
-$Comp
 L CONN_2 J3
 U 1 1 50231064
 P 8200 4200
@@ -229,8 +237,8 @@ $Comp
 L C C1
 U 1 1 5023101F
 P 3850 4000
-F 0 "C1" H 3900 4100 50  0000 L CNN
-F 1 "0.1uF" H 3900 3900 50  0000 L CNN
+F 0 "C1" V 3750 4100 50  0000 L CNN
+F 1 "0.1uF" V 3950 4100 50  0000 L CNN
 	1    3850 4000
 	0    1    1    0   
 $EndComp
@@ -242,15 +250,6 @@ F 0 "J1" V 3050 4100 40  0000 C CNN
 F 1 "HDR2" V 3150 4100 40  0000 C CNN
 	1    3100 4100
 	-1   0    0    -1  
-$EndComp
-$Comp
-L CP C2
-U 1 1 50230F9C
-P 5400 4500
-F 0 "C2" H 5450 4600 50  0000 L CNN
-F 1 "5uF" H 5450 4400 50  0000 L CNN
-	1    5400 4500
-	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_3 J4
