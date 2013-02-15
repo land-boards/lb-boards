@@ -1,9 +1,9 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 7/26/2012 8:45:34 AM
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 15/02/2013 13:57:13
 
 BeginCmp
 TimeStamp = /4FDBC755;
 Reference = C1;
-ValeurCmp = 1uF;
+ValeurCmp = 0.1uF;
 IdModule  = C1V5;
 EndCmp
 
@@ -15,22 +15,29 @@ IdModule  = C1V5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FDBC84C;
+TimeStamp = /511BA085;
 Reference = C3;
-ValeurCmp = 1UF;
+ValeurCmp = 1uF;
 IdModule  = C1V5;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FDBE66A;
+TimeStamp = /511E7A25;
 Reference = J1;
-ValeurCmp = CONN_3;
-IdModule  = PIN_ARRAY_3X1;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDCA902;
 Reference = J2;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /511E7A29;
+Reference = J3;
 ValeurCmp = CONN_2;
 IdModule  = PIN_ARRAY_2X1;
 EndCmp
@@ -50,15 +57,15 @@ IdModule  = MTG-4-40;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FDBC393;
-Reference = R1;
-ValeurCmp = R;
-IdModule  = R4;
+TimeStamp = /511E84D9;
+Reference = MTG3;
+ValeurCmp = CONN_1;
+IdModule  = MTG-4-40;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FDBE59E;
-Reference = R2;
+TimeStamp = /4FDBC393;
+Reference = R1;
 ValeurCmp = 10K;
 IdModule  = R4;
 EndCmp
@@ -67,13 +74,6 @@ BeginCmp
 TimeStamp = /4FDBE56E;
 Reference = R3;
 ValeurCmp = 330;
-IdModule  = R4;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FDBE58B;
-Reference = R4;
-ValeurCmp = 10K;
 IdModule  = R4;
 EndCmp
 
@@ -96,6 +96,13 @@ TimeStamp = /501123C8;
 Reference = R7;
 ValeurCmp = 5.1K;
 IdModule  = R4;
+EndCmp
+
+BeginCmp
+TimeStamp = /511E791A;
+Reference = RV1;
+ValeurCmp = 25K;
+IdModule  = POT-6MM;
 EndCmp
 
 BeginCmp

@@ -1,0 +1,142 @@
+# EESchema Netlist Version 1.1 created  7/26/2012 8:45:34 AM
+(
+ ( /4FDBC755 C1V5 C1 1uF
+  ( 1 /TC1 )
+  ( 2 /TC2 )
+ )
+ ( /4FDBC7A6 C1V5 C2 1UF
+  ( 1 /BIAS )
+  ( 2 GND )
+ )
+ ( /4FDBC84C C1V5 C3 1UF
+  ( 1 /+12V )
+  ( 2 GND )
+ )
+ ( /4FDBE66A PIN_ARRAY_3X1 J1 CONN_3
+  ( 1 GND )
+  ( 2 /+12V )
+  ( 3 /OUT )
+ )
+ ( /4FDCA902 PIN_ARRAY_2X1 J2 CONN_2
+  ( 1 GND )
+  ( 2 /POT )
+ )
+ ( /4FDBED61 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
+ )
+ ( /501125B1 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
+ )
+ ( /4FDBC393 R4 R1 R
+  ( 1 /TR1 )
+  ( 2 /POT )
+ )
+ ( /4FDBE59E R4 R2 10K
+  ( 1 /SYM2 )
+  ( 2 GND )
+ )
+ ( /4FDBE56E R4 R3 330
+  ( 1 /WA1 )
+  ( 2 /WA2 )
+ )
+ ( /4FDBE58B R4 R4 10K
+  ( 1 /SYM1 )
+  ( 2 GND )
+ )
+ ( /501123D0 R4 R5 22K
+  ( 1 /SC )
+  ( 2 /M )
+ )
+ ( /501123BB R4 R6 5.1K
+  ( 1 /+12V )
+  ( 2 /SC )
+ )
+ ( /501123C8 R4 R7 5.1K
+  ( 1 GND )
+  ( 2 /SC )
+ )
+ ( /4FDBC311 DIP-16__300 U1 XR2206
+  ( 1 GND )
+  ( 2 /OUT )
+  ( 3 /M )
+  ( 4 /+12V )
+  ( 5 /TC1 )
+  ( 6 /TC2 )
+  ( 7 /TR1 )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 /BIAS )
+  ( 11 ? )
+  ( 12 GND )
+  ( 13 /WA1 )
+  ( 14 /WA2 )
+  ( 15 /SYM1 )
+  ( 16 /SYM2 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ CP*
+ SM*
+$endlist
+$component C3
+ CP*
+ SM*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

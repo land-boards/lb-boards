@@ -1,6 +1,6 @@
-# EESchema Netlist Version 1.1 created  7/26/2012 8:45:34 AM
+# EESchema Netlist Version 1.1 created  15/02/2013 13:57:13
 (
- ( /4FDBC755 C1V5 C1 1uF
+ ( /4FDBC755 C1V5 C1 0.1uF
   ( 1 /TC1 )
   ( 2 /TC2 )
  )
@@ -8,18 +8,21 @@
   ( 1 /BIAS )
   ( 2 GND )
  )
- ( /4FDBC84C C1V5 C3 1UF
+ ( /511BA085 C1V5 C3 1uF
   ( 1 /+12V )
   ( 2 GND )
  )
- ( /4FDBE66A PIN_ARRAY_3X1 J1 CONN_3
-  ( 1 GND )
-  ( 2 /+12V )
-  ( 3 /OUT )
+ ( /511E7A25 PIN_ARRAY_2X1 J1 CONN_2
+  ( 1 /+12V )
+  ( 2 GND )
  )
  ( /4FDCA902 PIN_ARRAY_2X1 J2 CONN_2
   ( 1 GND )
   ( 2 /POT )
+ )
+ ( /511E7A29 PIN_ARRAY_2X1 J3 CONN_2
+  ( 1 /OUT )
+  ( 2 GND )
  )
  ( /4FDBED61 MTG-4-40 MTG1 CONN_1
   ( 1 ? )
@@ -27,21 +30,16 @@
  ( /501125B1 MTG-4-40 MTG2 CONN_1
   ( 1 ? )
  )
- ( /4FDBC393 R4 R1 R
+ ( /511E84D9 MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
+ )
+ ( /4FDBC393 R4 R1 10K
   ( 1 /TR1 )
   ( 2 /POT )
- )
- ( /4FDBE59E R4 R2 10K
-  ( 1 /SYM2 )
-  ( 2 GND )
  )
  ( /4FDBE56E R4 R3 330
   ( 1 /WA1 )
   ( 2 /WA2 )
- )
- ( /4FDBE58B R4 R4 10K
-  ( 1 /SYM1 )
-  ( 2 GND )
  )
  ( /501123D0 R4 R5 22K
   ( 1 /SC )
@@ -54,6 +52,11 @@
  ( /501123C8 R4 R7 5.1K
   ( 1 GND )
   ( 2 /SC )
+ )
+ ( /511E791A POT-6MM RV1 25K
+  ( 1 /SYM1 )
+  ( 2 GND )
+  ( 3 /SYM2 )
  )
  ( /4FDBC311 DIP-16__300 U1 XR2206
   ( 1 GND )
@@ -96,21 +99,7 @@ $component R1
  R?-*
  SM1206
 $endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
 $component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R4
  R?
  SM0603
  SM0805
