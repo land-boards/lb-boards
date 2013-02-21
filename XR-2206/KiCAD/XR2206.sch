@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 15/02/2013 13:58:34
+EESchema Schematic File Version 2  date Fri 15 Feb 2013 06:24:37 PM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,6 @@ LIBS:display
 LIBS:opto
 LIBS:atmel
 LIBS:contrib
-LIBS:EXAR
 LIBS:XR2206-cache
 EELAYER 25  0
 EELAYER END
@@ -29,6 +28,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 2850 3700 2    60   ~ 0
+G\n\nADJ
 NoConn ~ 6950 5750
 $Comp
 L CONN_1 MTG3

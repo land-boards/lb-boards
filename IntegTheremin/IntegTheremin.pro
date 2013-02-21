@@ -1,6 +1,6 @@
-update=Sun 20 Jan 2013 11:31:52 AM EST
+update=Sat 16 Feb 2013 09:30:08 AM EST
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -42,11 +42,6 @@ LibName4=atmel
 LibName5=power
 LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
 LibName7=/home/doug/Documents/DougsPCBDesigns/MiniDuino/MiniDuino-cache
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -65,7 +60,6 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=IntegTheremin.net
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -73,11 +67,16 @@ LibName4=pin_array
 LibName5=divers
 LibName6=libcms
 LibName7=display
-LibName8=valves
-LibName9=led
-LibName10=dip_sockets
-LibName11=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName12=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-1
-LibName13=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-2
-LibName14=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-3
-LibName15=/home/doug/Documents/DougsPCBDesigns/MiniDuino/screwduino
+LibName8=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName9=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-1
+LibName10=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-2
+LibName11=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-3
+LibName12=/home/doug/Documents/DougsPCBDesigns/MiniDuino/screwduino
+LibName13=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_dil
+LibName14=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd-special
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
