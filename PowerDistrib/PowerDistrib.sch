@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 20 Jul 2012 08:44:10 AM EDT
+EESchema Schematic File Version 2  date 21/02/2013 13:15:25
 LIBS:power
 LIBS:conn
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "20 jul 2012"
+Date "21 feb 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -17,6 +17,114 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 3400 4650
+NoConn ~ 3400 4550
+NoConn ~ 3400 4450
+NoConn ~ 3400 4350
+Connection ~ 4250 1650
+Wire Wire Line
+	4550 1650 4100 1650
+Connection ~ 4250 2050
+Wire Wire Line
+	4250 2050 4100 2050
+Connection ~ 4250 2250
+Wire Wire Line
+	4250 2250 4100 2250
+Connection ~ 4250 1150
+Wire Wire Line
+	4550 1150 4100 1150
+Connection ~ 3150 1950
+Connection ~ 3150 1850
+Wire Wire Line
+	3150 1850 3150 2350
+Connection ~ 3150 2150
+Connection ~ 3150 1450
+Connection ~ 3150 1250
+Wire Wire Line
+	3150 2150 3300 2150
+Wire Wire Line
+	3150 1450 3300 1450
+Wire Wire Line
+	3150 1250 3300 1250
+Wire Wire Line
+	2800 1150 3300 1150
+Wire Wire Line
+	3300 1650 3150 1650
+Wire Wire Line
+	3150 1350 3300 1350
+Wire Wire Line
+	3300 1550 3150 1550
+Wire Wire Line
+	3150 2250 3300 2250
+Wire Wire Line
+	3150 2050 3300 2050
+Wire Wire Line
+	3150 2350 3300 2350
+Wire Wire Line
+	3300 1850 2800 1850
+Wire Wire Line
+	3150 1950 3300 1950
+Connection ~ 4250 1550
+Wire Wire Line
+	4100 1550 4250 1550
+Connection ~ 4250 1350
+Wire Wire Line
+	4250 1350 4100 1350
+Wire Wire Line
+	4250 1650 4250 1150
+Wire Wire Line
+	4100 1250 4250 1250
+Connection ~ 4250 1250
+Wire Wire Line
+	4250 1450 4100 1450
+Connection ~ 4250 1450
+Connection ~ 3150 1150
+Connection ~ 3150 1350
+Wire Wire Line
+	3150 1650 3150 1150
+Connection ~ 3150 1550
+Connection ~ 3150 2250
+Connection ~ 3150 2050
+Wire Wire Line
+	4100 1850 4550 1850
+Wire Wire Line
+	4250 1850 4250 2350
+Wire Wire Line
+	4250 2350 4100 2350
+Connection ~ 4250 1850
+Wire Wire Line
+	4100 2150 4250 2150
+Connection ~ 4250 2150
+Wire Wire Line
+	4100 1950 4250 1950
+Connection ~ 4250 1950
+$Comp
+L CONN_2 H3
+U 1 1 512662B9
+P 4900 1750
+F 0 "H3" V 4850 1750 40  0000 C CNN
+F 1 "CONN_2" V 4950 1750 40  0000 C CNN
+	1    4900 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_6X2 H2
+U 1 1 512661EB
+P 3700 2100
+F 0 "H2" H 3700 2450 60  0000 C CNN
+F 1 "CONN_6X2" V 3700 2100 60  0000 C CNN
+	1    3700 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_6X2 H1
+U 1 1 512661E5
+P 3700 1400
+F 0 "H1" H 3700 1750 60  0000 C CNN
+F 1 "CONN_6X2" V 3700 1400 60  0000 C CNN
+	1    3700 1400
+	1    0    0    -1  
+$EndComp
 $Comp
 L CONN_1 MTG4
 U 1 1 50095280
@@ -53,120 +161,10 @@ F 1 "CONN_1" H 3550 4405 30  0001 C CNN
 	1    3550 4350
 	1    0    0    -1  
 $EndComp
-Text Label 2900 3400 0    60   ~ 0
-GND-A
-Text Label 2950 2650 0    60   ~ 0
+Text Label 4300 1150 0    60   ~ 0
 GND
-Text Label 2950 1850 0    60   ~ 0
+Text Label 2850 1850 0    60   ~ 0
 +12V
-Text Label 2950 1100 0    60   ~ 0
+Text Label 2900 1150 0    60   ~ 0
 VCC
-$Comp
-L CONN_6 P3
-U 1 1 500951E2
-P 2500 2900
-F 0 "P3" V 2450 2900 60  0000 C CNN
-F 1 "CONN_6" V 2550 2900 60  0000 C CNN
-	1    2500 2900
-	-1   0    0    -1  
-$EndComp
-Connection ~ 3000 2950
-Wire Wire Line
-	2850 2950 3000 2950
-Connection ~ 3000 2750
-Wire Wire Line
-	2850 2750 3000 2750
-Wire Wire Line
-	3000 2650 2850 2650
-Wire Wire Line
-	3000 3150 3000 2650
-Wire Wire Line
-	2850 3150 3000 3150
-Wire Wire Line
-	3000 2850 2850 2850
-Connection ~ 3000 2850
-Wire Wire Line
-	3000 3050 2850 3050
-Connection ~ 3000 3050
-Connection ~ 3000 3800
-Wire Wire Line
-	3000 3800 2850 3800
-Connection ~ 3000 3600
-Wire Wire Line
-	3000 3600 2850 3600
-Wire Wire Line
-	2850 3900 3000 3900
-Wire Wire Line
-	3000 3900 3000 3400
-Wire Wire Line
-	3000 3400 2850 3400
-Wire Wire Line
-	2850 3500 3000 3500
-Connection ~ 3000 3500
-Wire Wire Line
-	2850 3700 3000 3700
-Connection ~ 3000 3700
-$Comp
-L CONN_6 P4
-U 1 1 500951E1
-P 2500 3650
-F 0 "P4" V 2450 3650 60  0000 C CNN
-F 1 "CONN_6" V 2550 3650 60  0000 C CNN
-	1    2500 3650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_6 P2
-U 1 1 500951DB
-P 2500 2100
-F 0 "P2" V 2450 2100 60  0000 C CNN
-F 1 "CONN_6" V 2550 2100 60  0000 C CNN
-	1    2500 2100
-	-1   0    0    -1  
-$EndComp
-Connection ~ 3000 2150
-Wire Wire Line
-	2850 2150 3000 2150
-Connection ~ 3000 1950
-Wire Wire Line
-	2850 1950 3000 1950
-Wire Wire Line
-	3000 1850 2850 1850
-Wire Wire Line
-	3000 2350 3000 1850
-Wire Wire Line
-	2850 2350 3000 2350
-Wire Wire Line
-	3000 2050 2850 2050
-Connection ~ 3000 2050
-Wire Wire Line
-	3000 2250 2850 2250
-Connection ~ 3000 2250
-Connection ~ 3000 1500
-Wire Wire Line
-	3000 1500 2850 1500
-Connection ~ 3000 1300
-Wire Wire Line
-	3000 1300 2850 1300
-Wire Wire Line
-	2850 1600 3000 1600
-Wire Wire Line
-	3000 1600 3000 1100
-Wire Wire Line
-	3000 1100 2850 1100
-Wire Wire Line
-	2850 1200 3000 1200
-Connection ~ 3000 1200
-Wire Wire Line
-	2850 1400 3000 1400
-Connection ~ 3000 1400
-$Comp
-L CONN_6 P1
-U 1 1 5009519E
-P 2500 1350
-F 0 "P1" V 2450 1350 60  0000 C CNN
-F 1 "CONN_6" V 2550 1350 60  0000 C CNN
-	1    2500 1350
-	-1   0    0    -1  
-$EndComp
 $EndSCHEMATC
