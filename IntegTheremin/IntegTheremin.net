@@ -1,254 +1,323 @@
-# EESchema Netlist Version 1.1 created  Thu 21 Feb 2013 08:41:19 PM EST
+# EESchema Netlist Version 1.1 created  22/02/2013 14:01:17
 (
- ( /5126C9C4 $noname  J7 CONN_2 {Lib=CONN_2}
-  (    1 N-000059 )
-  (    2 GND )
+ ( /51276262/4FDCB12E SM0805 C1 0.1uF
+  ( 1 N-000068 )
+  ( 2 /Amplifier/RESHI )
  )
- ( /5126C9BE $noname  J6 CONN_2 {Lib=CONN_2}
-  (    1 +12V )
-  (    2 N-000059 )
+ ( /51276262/4FDCB0F0 SM0805 C2 .047uF
+  ( 1 /Amplifier/AO )
+  ( 2 /Amplifier/COMP )
  )
- ( /5126C8E4 $noname  J8 CONN_3 {Lib=CONN_3}
-  (    1 N-000052 )
-  (    2 N-000061 )
-  (    3 N-000064 )
+ ( /51276262/500C93F2 SM0805 C3 220uF
+  ( 1 /Amplifier/AO )
+  ( 2 /Amplifier/OUT )
  )
- ( /5126C8DF $noname  J4 CONN_3 {Lib=CONN_3}
-  (    1 N-000063 )
-  (    2 N-000019 )
-  (    3 N-000062 )
+ ( /51276262/500C93CD SM1206 C4 100uF
+  ( 1 +12V )
+  ( 2 GNDA )
  )
- ( /511F931E $noname  C4 10uF {Lib=CP1}
-  (    1 N-000065 )
-  (    2 GND )
+ ( /51275F78/511BA085 SM0805 C5 1uF
+  ( 1 +12V )
+  ( 2 GNDA )
  )
- ( /511F917C $noname  R2 10K {Lib=R}
-  (    1 +5V )
-  (    2 N-000060 )
+ ( /51275F78/4FDBC755 SM1206 C6 0.1uF
+  ( 1 /XR-2206_VCO/TC1 )
+  ( 2 /XR-2206_VCO/TC2 )
  )
- ( /511F9067 $noname  U4 AD5292 {Lib=AD5292}
-  (    1 N-000060 )
-  (    2 N-000059 )
-  (    3 N-000052 )
-  (    4 N-000061 )
-  (    5 N-000064 )
-  (    6 +12V )
-  (    7 ? )
-  (    8 +5V )
-  (    9 GND )
-  (   10 /D3 )
-  (   11 /D4 )
-  (   12 /D5 )
-  (   13 ? )
-  (   14 ? )
+ ( /51275F78/4FDBC7A6 SM0805 C7 1UF
+  ( 1 /XR-2206_VCO/BIAS )
+  ( 2 GNDA )
  )
- ( /511F903D $noname  U3 AD5292 {Lib=AD5292}
-  (    1 N-000060 )
-  (    2 N-000059 )
-  (    3 N-000063 )
-  (    4 N-000019 )
-  (    5 N-000062 )
-  (    6 +12V )
-  (    7 ? )
-  (    8 +5V )
-  (    9 GND )
-  (   10 /D2 )
-  (   11 /D4 )
-  (   12 /D5 )
-  (   13 ? )
-  (   14 ? )
+ ( /51275E41/4FF58BD9 SM0805 C8 0.1uF
+  ( 1 /Digital/ARDRES )
+  ( 2 N-000029 )
  )
- ( /511F8DF0 $noname  J10 CONN_4 {Lib=CONN_4}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /AREF )
-  (    4 /FRQ_SENS )
+ ( /51275E41/4FF581E0 SM0805 C9 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /511F8DEC $noname  J9 CONN_4 {Lib=CONN_4}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /AREF )
-  (    4 /VOL_SENS )
+ ( /51275E41/50FC0C27 SM1206 C10 10uF
+  ( 1 /Digital/VUSB )
+  ( 2 GND )
  )
- ( /50FC0C27 $noname  C6 10uF {Lib=CP1}
-  (    1 /VUSB )
-  (    2 GND )
+ ( /51275E41/50FC0C05 SM0805 C11 0.1uF
+  ( 1 /Digital/VCCIO )
+  ( 2 GND )
  )
- ( /50FC0C05 $noname  C7 0.1uF {Lib=C}
-  (    1 /VCCIO )
-  (    2 GND )
+ ( /51275E41/4FF58E38 SM0805 C12 0.1uF
+  ( 1 N-000028 )
+  ( 2 GND )
  )
- ( /50FC0B5E $noname  J3 USB-B {Lib=USB-B}
-  (    1 /VUSB )
-  (    2 /DM )
-  (    3 /DP )
-  (    4 GND )
-  (   G1 GND )
-  (   G2 GND )
-  (   NC ? )
+ ( /51275E41/511F931E SM1206 C13 10uF
+  ( 1 N-000028 )
+  ( 2 GND )
  )
- ( /50FC0B0A ftdichip-1-SSOP28DB  IC1 FT232RL {Lib=FT232RL}
-  (    1 /RXCPU )
-  (    2 /ARDRES )
-  (    3 ? )
-  (    4 /VCCIO )
-  (    5 /TXCPU )
-  (    6 ? )
-  (    7 GND )
-  (    9 ? )
-  (   10 ? )
-  (   11 GND )
-  (   12 ? )
-  (   13 ? )
-  (   14 ? )
-  (   15 /DP )
-  (   16 /DM )
-  (   17 /VCCIO )
-  (   18 GND )
-  (   19 ? )
-  (   20 /VUSB )
-  (   21 GND )
-  (   22 ? )
-  (   23 ? )
-  (   25 GND )
-  (   26 GND )
-  (   27 ? )
-  (   28 ? )
+ ( /51275E41/4FF58E5C SM0805 C14 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
  )
- ( /50FC0390 atmega8-DIL28-3  U1 ATMEGA328-PU {Lib=ATMEGA328-PU}
-  (    1 N-000040 )
-  (    2 /RXCPU )
-  (    3 /TXCPU )
-  (    4 /D2 )
-  (    5 /D3 )
-  (    6 /D4 )
-  (    7 +5V )
-  (    8 GND )
-  (    9 /RES0 )
-  (   10 /RES1 )
-  (   11 /D5 )
-  (   12 ? )
-  (   13 /SDCS )
-  (   14 /LCDRST )
-  (   15 /LCDRS )
-  (   16 /LCDCS )
-  (   17 /MOSI )
-  (   18 /MISO )
-  (   19 /SCK )
-  (   20 +5V )
-  (   21 /AREF )
-  (   22 GND )
-  (   23 /KEYPAD )
-  (   24 /VOL_SENS )
-  (   25 /FRQ_SENS )
-  (   26 /AD3 )
-  (   27 /AD4 )
-  (   28 /AD5 )
+ ( /51275E41/4FF574BF D3 D1 4N4004
+  ( 1 N-000029 )
+  ( 2 +5V )
  )
- ( /4FFA1634 PIN_ARRAY-6X1  J5 CONN_6 {Lib=CONN_6}
-  (    1 /AD5 )
-  (    2 /AD4 )
-  (    3 /AD3 )
-  (    4 GND )
-  (    5 /AREF )
-  (    6 +5V )
+ ( /51275E41/50FC0B0A ftdichip-1-SSOP28DB IC1 FT232RL
+  ( 1 /Digital/RXCPU )
+  ( 2 /Digital/ARDRES )
+  ( 3 ? )
+  ( 4 /Digital/VCCIO )
+  ( 5 /Digital/TXCPU )
+  ( 6 ? )
+  ( 7 GND )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 GND )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 /Digital/DP )
+  ( 16 /Digital/DM )
+  ( 17 /Digital/VCCIO )
+  ( 18 GND )
+  ( 19 ? )
+  ( 20 /Digital/VUSB )
+  ( 21 GND )
+  ( 22 ? )
+  ( 23 ? )
+  ( 25 GND )
+  ( 26 GND )
+  ( 27 ? )
+  ( 28 ? )
  )
- ( /4FF58FBF MTG-4-40  MTG4 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /51276262/4FDCB240 PIN_ARRAY-10X1 J1 CONN_2
+  ( 1 +12V )
+  ( 2 GNDA )
  )
- ( /4FF58FBC MTG-4-40  MTG3 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /51276262/4FDCEF97 PIN_ARRAY_3X1 J2 RCA-JACK
+  ( 1 GNDA )
+  ( 2 GNDA )
+  ( 3 GNDA )
+  ( 4 /Amplifier/OUT )
  )
- ( /4FF58FB9 MTG-4-40  MTG2 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /51275E41/50FC0B5E USB-B-MINI J3 USB-B
+  ( 1 /Digital/VUSB )
+  ( 2 /Digital/DM )
+  ( 3 /Digital/DP )
+  ( 4 GND )
+  ( G1 GND )
+  ( G2 GND )
+  ( NC ? )
  )
- ( /4FF58FB4 MTG-4-40  MTG1 CONN_1 {Lib=CONN_1}
-  (    1 ? )
+ ( /51275E41/4FF587FE PIN_ARRAY_3X1 J4 CONN_3
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /Digital/KEYPAD )
  )
- ( /4FF58F4A TB2-5MM  TB1 TB-2PIN {Lib=CONN_2}
-  (    1 N-000065 )
-  (    2 GND )
+ ( /51275E41/511F8DEC PIN_ARRAY_4x1 J5 CONN_4
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /Digital/AREF )
+  ( 4 /Digital/VOL_SENS )
  )
- ( /4FF58E5C C1  C5 0.1uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /51275E41/511F8DF0 PIN_ARRAY_4x1 J6 CONN_4
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 /Digital/AREF )
+  ( 4 /Digital/FRQ_SENS )
  )
- ( /4FF58E38 C1  C3 0.1uF {Lib=C}
-  (    1 N-000065 )
-  (    2 GND )
+ ( /51275E41/4FFA1634 PIN_ARRAY-6X1 J7 CONN_6
+  ( 1 /Digital/AD5 )
+  ( 2 /Digital/AD4 )
+  ( 3 /Digital/AD3 )
+  ( 4 GND )
+  ( 5 /Digital/AREF )
+  ( 6 +5V )
  )
- ( /4FF58DEE SOT223  U2 AP1117 {Lib=AP1117}
-  (    1 GND )
-  (    2 +5V )
-  (    3 N-000065 )
-  (    4 +5V )
+ ( /51275E41/4FF5852D PIN_ARRAY-10X1 J8 CONN_10
+  ( 1 +5V )
+  ( 2 GND )
+  ( 3 /Digital/LCDRST )
+  ( 4 /Digital/LCDRS )
+  ( 5 /Digital/MISO )
+  ( 6 /Digital/MOSI )
+  ( 7 /Digital/SCK )
+  ( 8 /Digital/LCDCS )
+  ( 9 /Digital/SDCS )
+  ( 10 GND )
  )
- ( /4FF58BD9 C1  C2 0.1uF {Lib=C}
-  (    1 /ARDRES )
-  (    2 N-000040 )
+ ( /5127B574/5127B01C PIN_ARRAY_2X1 J9 CONN_2
+  ( 1 +12V )
+  ( 2 GNDA )
  )
- ( /4FF587FE PIN_ARRAY_3X1  J2 CONN_3 {Lib=CONN_3}
-  (    1 GND )
-  (    2 +5V )
-  (    3 /KEYPAD )
+ ( /5127B574/5126C9C4 PIN_ARRAY_2X1 J10 CONN_2
+  ( 1 GNDA )
+  ( 2 GND )
  )
- ( /4FF5852D PIN_ARRAY-10X1  J1 CONN_10 {Lib=CONN_10}
-  (    1 +5V )
-  (    2 GND )
-  (    3 /LCDRST )
-  (    4 /LCDRS )
-  (    5 /MISO )
-  (    6 /MOSI )
-  (    7 /SCK )
-  (    8 /LCDCS )
-  (    9 /SDCS )
-  (   10 GND )
+ ( /51275E41/4FF58FB4 MTG-4-40 MTG1 CONN_1
+  ( 1 ? )
  )
- ( /4FF581E0 C1  C1 0.1uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
+ ( /51275E41/4FF58FB9 MTG-4-40 MTG2 CONN_1
+  ( 1 ? )
  )
- ( /4FF58157 SIL-3  Y1 16MHz {Lib=RESONATEUR}
-  (    1 /RES0 )
-  (    2 GND )
-  (    3 /RES1 )
+ ( /51275E41/4FF58FBC MTG-4-40 MTG3 CONN_1
+  ( 1 ? )
  )
- ( /4FF574F9 R1  R1 10K {Lib=R}
-  (    1 +5V )
-  (    2 N-000040 )
+ ( /51275E41/4FF58FBF MTG-4-40 MTG4 CONN_1
+  ( 1 ? )
  )
- ( /4FF574BF D3  D1 4N4004 {Lib=DIODE}
-  (    1 N-000040 )
-  (    2 +5V )
+ ( /51276262/512763B7 SM0805 R1 2.2M
+  ( 1 N-000068 )
+  ( 2 /HV_Pots/AUDIO-OUT )
+ )
+ ( /51276262/4FDCB0F6 SM0805 R2 10
+  ( 1 /Amplifier/COMP )
+  ( 2 GNDA )
+ )
+ ( /51275F78/4FDBC393 SM0805 R3 10K
+  ( 1 /XR-2206_VCO/TR1 )
+  ( 2 /XR-2206_VCO/FREQ-W )
+ )
+ ( /51275F78/4FDBE56E SM0805 R4 330
+  ( 1 /XR-2206_VCO/WA1 )
+  ( 2 /XR-2206_VCO/WA2 )
+ )
+ ( /51275F78/501123D0 SM0805 R5 22K
+  ( 1 /XR-2206_VCO/SC )
+  ( 2 /XR-2206_VCO/M )
+ )
+ ( /51275F78/501123BB SM0805 R6 5.1K
+  ( 1 /XR-2206_VCO/SC )
+  ( 2 +12V )
+ )
+ ( /51275F78/501123C8 SM0805 R7 5.1K
+  ( 1 GNDA )
+  ( 2 /XR-2206_VCO/SC )
+ )
+ ( /51275E41/4FF574F9 SM0805 R8 10K
+  ( 1 +5V )
+  ( 2 N-000029 )
+ )
+ ( /5127B574/511F917C SM0805 R9 10K
+  ( 1 +5V )
+  ( 2 N-000082 )
+ )
+ ( /51276262/4FDCB1B3 RV2 RV1 10K
+  ( 1 /Amplifier/RESHI )
+  ( 2 /Amplifier/RESWI )
+  ( 3 GNDA )
+ )
+ ( /51275F78/511E791A RV2 RV2 25K
+  ( 1 /XR-2206_VCO/SYM1 )
+  ( 2 GNDA )
+  ( 3 /XR-2206_VCO/SYM2 )
+ )
+ ( /51275E41/4FF58F4A TB2-5MM TB1 TB-2PIN
+  ( 1 N-000028 )
+  ( 2 GND )
+ )
+ ( /51276262/4FDCAFD4 DIP-8__300 U1 LM386
+  ( 1 ? )
+  ( 2 GNDA )
+  ( 3 /Amplifier/RESWI )
+  ( 4 GNDA )
+  ( 5 /Amplifier/AO )
+  ( 6 +12V )
+  ( 8 ? )
+ )
+ ( /51275F78/4FDBC311 DIP-16__300 U2 XR2206
+  ( 1 GNDA )
+  ( 2 /HV_Pots/AUDIO_IN )
+  ( 3 /XR-2206_VCO/M )
+  ( 4 +12V )
+  ( 5 /XR-2206_VCO/TC1 )
+  ( 6 /XR-2206_VCO/TC2 )
+  ( 7 /XR-2206_VCO/TR1 )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 /XR-2206_VCO/BIAS )
+  ( 11 ? )
+  ( 12 GNDA )
+  ( 13 /XR-2206_VCO/WA1 )
+  ( 14 /XR-2206_VCO/WA2 )
+  ( 15 /XR-2206_VCO/SYM1 )
+  ( 16 /XR-2206_VCO/SYM2 )
+ )
+ ( /51275E41/50FC0390 DIP-28__300 U3 ATMEGA328-PU
+  ( 1 N-000029 )
+  ( 2 /Digital/RXCPU )
+  ( 3 /Digital/TXCPU )
+  ( 4 /Digital/D2 )
+  ( 5 /Digital/D3 )
+  ( 6 /Digital/D4 )
+  ( 7 +5V )
+  ( 8 GND )
+  ( 9 /Digital/RES0 )
+  ( 10 /Digital/RES1 )
+  ( 11 /HV_Pots/D5 )
+  ( 12 ? )
+  ( 13 /Digital/SDCS )
+  ( 14 /Digital/LCDRST )
+  ( 15 /Digital/LCDRS )
+  ( 16 /Digital/LCDCS )
+  ( 17 /Digital/MOSI )
+  ( 18 /Digital/MISO )
+  ( 19 /Digital/SCK )
+  ( 20 +5V )
+  ( 21 /Digital/AREF )
+  ( 22 GND )
+  ( 23 /Digital/KEYPAD )
+  ( 24 /Digital/VOL_SENS )
+  ( 25 /Digital/FRQ_SENS )
+  ( 26 /Digital/AD3 )
+  ( 27 /Digital/AD4 )
+  ( 28 /Digital/AD5 )
+ )
+ ( /51275E41/4FF58DEE SOT223 U4 AP1117
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 N-000028 )
+  ( 4 +5V )
+ )
+ ( /5127B574/511F903D tssop-14 U5 AD5292
+  ( 1 N-000082 )
+  ( 2 GNDA )
+  ( 3 /HV_Pots/AUDIO_IN )
+  ( 4 /HV_Pots/AUDIO-OUT )
+  ( 5 GNDA )
+  ( 6 +12V )
+  ( 7 ? )
+  ( 8 +5V )
+  ( 9 GND )
+  ( 10 /Digital/D2 )
+  ( 11 /Digital/D4 )
+  ( 12 /HV_Pots/D5 )
+  ( 13 ? )
+  ( 14 ? )
+ )
+ ( /5127B574/511F9067 tssop-14 U6 AD5292
+  ( 1 N-000082 )
+  ( 2 GNDA )
+  ( 3 ? )
+  ( 4 /XR-2206_VCO/FREQ-W )
+  ( 5 GNDA )
+  ( 6 +12V )
+  ( 7 ? )
+  ( 8 +5V )
+  ( 9 GND )
+  ( 10 /Digital/D3 )
+  ( 11 /Digital/D4 )
+  ( 12 /HV_Pots/D5 )
+  ( 13 ? )
+  ( 14 ? )
+ )
+ ( /51275E41/4FF58157 SIL-3 Y1 16MHz
+  ( 1 /Digital/RES0 )
+  ( 2 GND )
+  ( 3 /Digital/RES1 )
  )
 )
 *
 { Allowed footprints by component:
-$component C4
- CP*
- SM*
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
-$endlist
-$component C6
- CP*
- SM*
-$endlist
-$component C7
- SM*
- C?
- C1-1
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$component C3
+$component C1
  SM*
  C?
  C1-1
@@ -258,198 +327,126 @@ $component C2
  C?
  C1-1
 $endlist
-$component C1
+$component C3
+ CP*
+ SM*
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
  SM*
  C?
  C1-1
+$endlist
+$component C7
+ CP*
+ SM*
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ CP*
+ SM*
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
+$endlist
+$component C13
+ CP*
+ SM*
+$endlist
+$component C14
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
 $endlist
 $component R1
  R?
  SM0603
  SM0805
  R?-*
+ SM1206
 $endlist
-$component D1
- D?
- S*
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-Net 4 "/RXCPU" "RXCPU"
- U1 2
- IC1 1
-Net 5 "/TXCPU" "TXCPU"
- U1 3
- IC1 5
-Net 6 "/ARDRES" "ARDRES"
- C2 1
- IC1 2
-Net 14 "/VCCIO" "VCCIO"
- IC1 17
- C7 1
- IC1 4
-Net 18 "GND" "GND"
- C5 2
- J1 2
- U2 1
- J1 10
- C3 2
- U1 22
- U1 8
- J5 4
- Y1 2
- C1 2
- C7 2
- TB1 2
- J2 1
- IC1 7
- IC1 18
- IC1 25
- IC1 21
- IC1 11
- J10 1
- U3 9
- IC1 26
- C6 2
- J3 4
- J3 G1
- J3 G2
- J9 1
- C4 2
- U4 9
- J7 2
-Net 19 "" ""
- U3 4
- J4 2
-Net 20 "/FRQ_SENS" "FRQ_SENS"
- U1 25
- J10 4
-Net 26 "/D5" "D5"
- U1 11
- U4 12
- U3 12
-Net 28 "/DP" "DP"
- J3 3
- IC1 15
-Net 29 "/D2" "D2"
- U1 4
- U3 10
-Net 30 "/D3" "D3"
- U1 5
- U4 10
-Net 31 "+5V" "+5V"
- J2 2
- R1 1
- D1 2
- C1 1
- J1 1
- R2 1
- U4 8
- J9 2
- U3 8
- C5 1
- U2 2
- U2 4
- J5 6
- U1 20
- J10 2
- U1 7
-Net 32 "+12V" "+12V"
- U3 6
- U4 6
- J6 1
-Net 36 "/VOL_SENS" "VOL_SENS"
- J9 4
- U1 24
-Net 37 "/LCDRST" "LCDRST"
- U1 14
- J1 3
-Net 38 "/LCDCS" "LCDCS"
- J1 8
- U1 16
-Net 39 "/KEYPAD" "KEYPAD"
- U1 23
- J2 3
-Net 40 "" ""
- U1 1
- D1 1
- C2 2
- R1 2
-Net 41 "/SCK" "SCK"
- J1 7
- U1 19
-Net 42 "/MISO" "MISO"
- U1 18
- J1 5
-Net 43 "/MOSI" "MOSI"
- U1 17
- J1 6
-Net 44 "/AD3" "AD3"
- U1 26
- J5 3
-Net 45 "/LCDRS" "LCDRS"
- U1 15
- J1 4
-Net 46 "/SDCS" "SDCS"
- U1 13
- J1 9
-Net 47 "/AREF" "AREF"
- J10 3
- U1 21
- J5 5
- J9 3
-Net 48 "/RES1" "RES1"
- U1 10
- Y1 3
-Net 49 "/RES0" "RES0"
- U1 9
- Y1 1
-Net 50 "/AD4" "AD4"
- U1 27
- J5 2
-Net 51 "/AD5" "AD5"
- J5 1
- U1 28
-Net 52 "" ""
- J8 1
- U4 3
-Net 57 "/DM" "DM"
- IC1 16
- J3 2
-Net 58 "/D4" "D4"
- U1 6
- U3 11
- U4 11
-Net 59 "" ""
- U3 2
- J6 2
- J7 1
- U4 2
-Net 60 "" ""
- U3 1
- R2 2
- U4 1
-Net 61 "" ""
- U4 4
- J8 2
-Net 62 "" ""
- U3 5
- J4 3
-Net 63 "" ""
- J4 1
- U3 3
-Net 64 "" ""
- U4 5
- J8 3
-Net 65 "" ""
- C4 1
- TB1 1
- C3 1
- U2 3
-Net 66 "/VUSB" "VUSB"
- J3 1
- C6 1
- IC1 20
-}
-#End

@@ -1,43 +1,121 @@
-EESchema Schematic File Version 2  date Fri 22 Feb 2013 07:30:45 AM EST
-LIBS:device
-LIBS:conn
-LIBS:regul
-LIBS:atmel
-LIBS:power
+EESchema Schematic File Version 2  date 22/02/2013 14:03:56
 LIBS:DougsSch
-LIBS:EXAR
-LIBS:AudioAmp386V3-cache
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A 11000 8500
 encoding utf-8
-Sheet 1 4
-Title ""
+Sheet 1 5
+Title "Integrated Theremin"
 Date "22 feb 2013"
-Rev ""
-Comp ""
+Rev "X1"
+Comp "DougsBoardDesigns"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Wire Wire Line
+	2850 2300 2700 2300
+Wire Wire Line
+	2700 2300 2700 1550
+Wire Wire Line
+	2700 1550 5600 1550
+Connection ~ 5800 2550
+Wire Wire Line
+	6050 3750 5800 3750
+Wire Wire Line
+	5800 3750 5800 2450
+Wire Wire Line
+	5800 2450 6050 2450
+Wire Wire Line
+	5400 2550 5800 2550
+Wire Wire Line
+	7100 1950 7300 1950
+Wire Wire Line
+	7300 1950 7300 1550
+Wire Wire Line
+	7300 1550 5700 1550
+Wire Wire Line
+	5700 1550 5700 2100
+Wire Wire Line
+	5700 2100 5400 2100
+Wire Wire Line
+	3900 2550 4300 2550
+Wire Wire Line
+	3900 2000 4300 2000
+Wire Wire Line
+	3900 1800 4300 1800
+Wire Wire Line
+	5400 1850 6050 1850
+Wire Wire Line
+	4300 1900 3900 1900
+Wire Wire Line
+	4300 2100 3900 2100
+Wire Wire Line
+	3900 2650 4300 2650
+Wire Wire Line
+	5400 2300 5700 2300
+Wire Wire Line
+	5700 2300 5700 3300
+Wire Wire Line
+	5700 3300 6050 3300
+Wire Wire Line
+	6050 2600 5950 2600
+Wire Wire Line
+	5950 2650 5400 2650
+Wire Wire Line
+	5950 2600 5950 3900
+Wire Wire Line
+	5950 3900 6050 3900
+Connection ~ 5950 2650
 $Sheet
-S 5150 1650 1150 1000
-U 51276262
-F0 "Amplifier" 60
-F1 "IntegTheremin4.sch" 60
-$EndSheet
-$Sheet
-S 3750 1650 1050 1000
+S 6050 1750 1050 1000
 U 51275F78
 F0 "XR-2206 VCO" 60
 F1 "IntegTheremin3.sch" 60
+F2 "GNDA" U L 6050 2600 60 
+F3 "VCO_OUT" O R 7100 1950 60 
+F4 "FREQ-W" I L 6050 1850 60 
+F5 "+12V" U L 6050 2450 60 
 $EndSheet
 $Sheet
-S 2350 1650 1050 1000
+S 4300 1700 1100 1050
+U 5127B574
+F0 "HV Pots" 60
+F1 "IntegTheremin5.sch" 60
+F2 "+5V" I L 4300 2550 60 
+F3 "+12V" O R 5400 2550 60 
+F4 "AUDIO-OUT" O R 5400 2300 60 
+F5 "AUDIO_IN" I R 5400 2100 60 
+F6 "D3" I L 4300 1900 60 
+F7 "D5" I L 4300 2100 60 
+F8 "D4" I L 4300 2000 60 
+F9 "D2" I L 4300 1800 60 
+F10 "GNDA" O R 5400 2650 60 
+F11 "FREQ-W" U R 5400 1850 60 
+F12 "GNDD" U L 4300 2650 60 
+$EndSheet
+$Sheet
+S 6050 3050 1150 1000
+U 51276262
+F0 "Amplifier" 60
+F1 "IntegTheremin4.sch" 60
+F2 "GNDA" U L 6050 3900 60 
+F3 "+12V" U L 6050 3750 60 
+F4 "AUDIO_IN" I L 6050 3300 60 
+$EndSheet
+$Sheet
+S 2850 1650 1050 1100
 U 51275E41
 F0 "Digital" 60
 F1 "IntegTheremin2.sch" 60
+F2 "+5V" U R 3900 2550 60 
+F3 "D5" O R 3900 2100 60 
+F4 "D4" O R 3900 2000 60 
+F5 "D3" O R 3900 1900 60 
+F6 "D2" O R 3900 1800 60 
+F7 "GNDD" U R 3900 2650 60 
+F8 "VCO_ANALOG" I L 2850 2300 60 
 $EndSheet
 $EndSCHEMATC

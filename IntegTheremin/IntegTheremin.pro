@@ -1,6 +1,6 @@
-update=Fri 22 Feb 2013 07:24:09 AM EST
+update=22/02/2013 13:58:13
 version=1
-last_client=eeschema
+last_client=cvpcb
 [general]
 version=1
 [pcbnew]
@@ -21,26 +21,11 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=IntegTheremin.net
 [pcbnew/libraries]
-LibName1=sockets
-LibName2=connect
-LibName3=discret
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=dip_sockets
+LibName3=smd_dil
 LibName4=pin_array
-LibName5=divers
-LibName6=libcms
-LibName7=display
-LibName8=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName9=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-1
-LibName10=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-2
-LibName11=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-3
-LibName12=/home/doug/Documents/DougsPCBDesigns/MiniDuino/screwduino
-LibName13=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_dil
-LibName14=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd-special
 LibDir=
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -73,11 +58,10 @@ RptD_Y=100
 RptLab=1
 LabSize=60
 [eeschema/libraries]
-LibName1=device
-LibName2=conn
-LibName3=regul
-LibName4=atmel
-LibName5=power
-LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName7=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/EXAR
-LibName8=/home/doug/Documents/DougsPCBDesigns/AudioAmp386/AudioAmp386V3-cache
+LibName1=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

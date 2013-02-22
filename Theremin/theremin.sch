@@ -1,8 +1,5 @@
-EESchema Schematic File Version 2  date 21/02/2013 12:59:56
+EESchema Schematic File Version 2  date 22/02/2013 13:07:29
 LIBS:DougsSch
-LIBS:ThereminBoards
-LIBS:conn
-LIBS:device
 LIBS:theremin-cache
 EELAYER 25  0
 EELAYER END
@@ -10,7 +7,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "Modular Theremin"
-Date "21 feb 2013"
+Date "22 feb 2013"
 Rev "X1"
 Comp ""
 Comment1 ""
@@ -18,6 +15,33 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L XR2206BRD BRD9
+U 1 1 5127AEA1
+P 10900 5050
+F 0 "BRD9" H 10950 5350 60  0000 C CNN
+F 1 "XR2206BRD" H 11050 4550 60  0000 C CNN
+	1    10900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEYPADNOPINS BRD5
+U 1 1 5127AE6C
+P 3800 5550
+F 0 "BRD5" H 3850 6000 60  0000 C CNN
+F 1 "KEYPADNOPINS" H 3800 5500 60  0000 C CNN
+	1    3800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L FTDINOPINS BRD2
+U 1 1 5127AE40
+P 3650 5000
+F 0 "BRD2" H 3750 5750 60  0000 C CNN
+F 1 "FTDINOPINS" H 3750 4950 60  0000 C CNN
+	1    3650 5000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	10050 6300 10050 5600
 Wire Wire Line
@@ -455,24 +479,6 @@ F 1 "MINIDUINO_V1" H 6050 6950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L KEYPAD BRD5
-U 1 1 5016B394
-P 3800 5550
-F 0 "BRD5" H 3700 6000 60  0000 C CNN
-F 1 "KEYPAD" H 3800 5500 60  0000 C CNN
-	1    3800 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L FTDI BRD2
-U 1 1 5016B387
-P 3650 5000
-F 0 "BRD2" H 3600 5750 60  0000 C CNN
-F 1 "FTDI" H 3600 5050 60  0000 C CNN
-	1    3650 5000
-	1    0    0    -1  
-$EndComp
-$Comp
 L HVPOT BRD8
 U 1 1 4FEF3697
 P 8700 5950
@@ -488,15 +494,6 @@ P 14050 6100
 F 0 "SP1" H 13950 6350 70  0000 C CNN
 F 1 "SPEAKER" H 13950 5850 70  0000 C CNN
 	1    14050 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L XR2206 BRD9
-U 1 1 4FEF3429
-P 10900 5050
-F 0 "BRD9" H 10950 5350 60  0000 C CNN
-F 1 "XR2206" H 11050 4550 60  0000 C CNN
-	1    10900 5050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

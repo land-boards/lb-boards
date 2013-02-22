@@ -1,18 +1,11 @@
-EESchema Schematic File Version 2  date Fri 22 Feb 2013 07:30:45 AM EST
-LIBS:device
-LIBS:conn
-LIBS:regul
-LIBS:atmel
-LIBS:power
+EESchema Schematic File Version 2  date 22/02/2013 14:03:56
 LIBS:DougsSch
-LIBS:EXAR
-LIBS:AudioAmp386V3-cache
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 4
+Sheet 4 5
 Title "AUDIO AMP 386 V1"
 Date "22 feb 2013"
 Rev ""
@@ -22,12 +15,23 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 4500 3350 0    60   UnSpc ~ 0
+GNDA
+Text HLabel 5450 1450 0    60   UnSpc ~ 0
++12V
+Text HLabel 3350 1550 0    60   Input ~ 0
+AUDIO_IN
+$Comp
+L GNDA #PWR012
+U 1 1 5127AFE7
+P 6300 3400
+F 0 "#PWR012" H 6300 3400 40  0001 C CNN
+F 1 "GNDA" H 6300 3330 40  0000 C CNN
+	1    6300 3400
+	1    0    0    -1  
+$EndComp
 NoConn ~ 5650 2500
 NoConn ~ 5750 2500
-Text GLabel 3350 1550 0    60   Input ~ 0
-W2
-Text GLabel 4500 3350 0    60   Input ~ 0
-GND
 Connection ~ 4850 3350
 Wire Wire Line
 	6300 3350 4500 3350
@@ -94,8 +98,6 @@ Connection ~ 5150 3350
 Wire Wire Line
 	5450 1450 7050 1450
 Connection ~ 5550 1450
-Text GLabel 5450 1450 0    60   Input ~ 0
-+12V
 $Comp
 L R R1
 U 1 1 512763B7
@@ -181,8 +183,8 @@ $Comp
 L C C1
 U 1 1 4FDCB12E
 P 4300 1550
-F 0 "C1" V 4350 1450 50  0000 L CNN
-F 1 "0.1uF" V 4200 1400 50  0000 L CNN
+F 0 "C1" V 4400 1400 50  0000 L CNN
+F 1 "0.1uF" V 4200 1250 50  0000 L CNN
 F 2 "C1" H 4300 1550 60  0001 C CNN
 F 4 "Vishay" V 4300 1550 60  0001 C CNN "Mfg"
 F 5 "1C10Z5U104M050B" V 4300 1550 60  0001 C CNN "MfgPN"
@@ -190,15 +192,6 @@ F 6 "Mouser" V 4300 1550 60  0001 C CNN "Vendor"
 F 7 "75-1C10Z5U104M050B" V 4300 1550 60  0001 C CNN "VendorPN"
 	1    4300 1550
 	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR01
-U 1 1 4FDCB11B
-P 6300 3400
-F 0 "#PWR01" H 6300 3400 30  0001 C CNN
-F 1 "GND" H 6300 3330 30  0001 C CNN
-	1    6300 3400
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
