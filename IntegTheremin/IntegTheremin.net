@@ -1,19 +1,37 @@
-# EESchema Netlist Version 1.1 created  Sat 16 Feb 2013 11:32:53 AM EST
+# EESchema Netlist Version 1.1 created  Thu 21 Feb 2013 08:41:19 PM EST
 (
- ( /511F931E $noname  C4 10uF {Lib=CP1}
+ ( /5126C9C4 $noname  J7 CONN_2 {Lib=CONN_2}
+  (    1 N-000059 )
+  (    2 GND )
+ )
+ ( /5126C9BE $noname  J6 CONN_2 {Lib=CONN_2}
   (    1 +12V )
+  (    2 N-000059 )
+ )
+ ( /5126C8E4 $noname  J8 CONN_3 {Lib=CONN_3}
+  (    1 N-000052 )
+  (    2 N-000061 )
+  (    3 N-000064 )
+ )
+ ( /5126C8DF $noname  J4 CONN_3 {Lib=CONN_3}
+  (    1 N-000063 )
+  (    2 N-000019 )
+  (    3 N-000062 )
+ )
+ ( /511F931E $noname  C4 10uF {Lib=CP1}
+  (    1 N-000065 )
   (    2 GND )
  )
  ( /511F917C $noname  R2 10K {Lib=R}
   (    1 +5V )
-  (    2 N-000054 )
+  (    2 N-000060 )
  )
  ( /511F9067 $noname  U4 AD5292 {Lib=AD5292}
-  (    1 N-000054 )
-  (    2 GND )
-  (    3 N-000033 )
-  (    4 N-000057 )
-  (    5 N-000032 )
+  (    1 N-000060 )
+  (    2 N-000059 )
+  (    3 N-000052 )
+  (    4 N-000061 )
+  (    5 N-000064 )
   (    6 +12V )
   (    7 ? )
   (    8 +5V )
@@ -25,11 +43,11 @@
   (   14 ? )
  )
  ( /511F903D $noname  U3 AD5292 {Lib=AD5292}
-  (    1 N-000054 )
-  (    2 GND )
-  (    3 N-000031 )
-  (    4 N-000030 )
-  (    5 N-000056 )
+  (    1 N-000060 )
+  (    2 N-000059 )
+  (    3 N-000063 )
+  (    4 N-000019 )
+  (    5 N-000062 )
   (    6 +12V )
   (    7 ? )
   (    8 +5V )
@@ -51,20 +69,6 @@
   (    2 +5V )
   (    3 /AREF )
   (    4 /VOL_SENS )
- )
- ( /50FC1369 $noname  P2 CONN_5 {Lib=CONN_5}
-  (    1 +12V )
-  (    2 N-000033 )
-  (    3 N-000057 )
-  (    4 N-000032 )
-  (    5 GND )
- )
- ( /50FC1364 $noname  P1 CONN_5 {Lib=CONN_5}
-  (    1 +12V )
-  (    2 N-000031 )
-  (    3 N-000030 )
-  (    4 N-000056 )
-  (    5 GND )
  )
  ( /50FC0C27 $noname  C6 10uF {Lib=CP1}
   (    1 /VUSB )
@@ -112,7 +116,7 @@
   (   28 ? )
  )
  ( /50FC0390 atmega8-DIL28-3  U1 ATMEGA328-PU {Lib=ATMEGA328-PU}
-  (    1 N-000036 )
+  (    1 N-000040 )
   (    2 /RXCPU )
   (    3 /TXCPU )
   (    4 /D2 )
@@ -162,7 +166,7 @@
   (    1 ? )
  )
  ( /4FF58F4A TB2-5MM  TB1 TB-2PIN {Lib=CONN_2}
-  (    1 +12V )
+  (    1 N-000065 )
   (    2 GND )
  )
  ( /4FF58E5C C1  C5 0.1uF {Lib=C}
@@ -170,18 +174,18 @@
   (    2 GND )
  )
  ( /4FF58E38 C1  C3 0.1uF {Lib=C}
-  (    1 +12V )
+  (    1 N-000065 )
   (    2 GND )
  )
  ( /4FF58DEE SOT223  U2 AP1117 {Lib=AP1117}
   (    1 GND )
   (    2 +5V )
-  (    3 +12V )
+  (    3 N-000065 )
   (    4 +5V )
  )
  ( /4FF58BD9 C1  C2 0.1uF {Lib=C}
   (    1 /ARDRES )
-  (    2 N-000036 )
+  (    2 N-000040 )
  )
  ( /4FF587FE PIN_ARRAY_3X1  J2 CONN_3 {Lib=CONN_3}
   (    1 GND )
@@ -211,10 +215,10 @@
  )
  ( /4FF574F9 R1  R1 10K {Lib=R}
   (    1 +5V )
-  (    2 N-000036 )
+  (    2 N-000040 )
  )
  ( /4FF574BF D3  D1 4N4004 {Lib=DIODE}
-  (    1 N-000036 )
+  (    1 N-000040 )
   (    2 +5V )
  )
 )
@@ -272,178 +276,180 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 3 "/VUSB" "VUSB"
- IC1 20
- J3 1
- C6 1
 Net 4 "/RXCPU" "RXCPU"
  U1 2
  IC1 1
 Net 5 "/TXCPU" "TXCPU"
- IC1 5
  U1 3
+ IC1 5
 Net 6 "/ARDRES" "ARDRES"
  C2 1
  IC1 2
-Net 23 "/VOL_SENS" "VOL_SENS"
- J9 4
- U1 24
-Net 24 "/FRQ_SENS" "FRQ_SENS"
- J10 4
+Net 14 "/VCCIO" "VCCIO"
+ IC1 17
+ C7 1
+ IC1 4
+Net 18 "GND" "GND"
+ C5 2
+ J1 2
+ U2 1
+ J1 10
+ C3 2
+ U1 22
+ U1 8
+ J5 4
+ Y1 2
+ C1 2
+ C7 2
+ TB1 2
+ J2 1
+ IC1 7
+ IC1 18
+ IC1 25
+ IC1 21
+ IC1 11
+ J10 1
+ U3 9
+ IC1 26
+ C6 2
+ J3 4
+ J3 G1
+ J3 G2
+ J9 1
+ C4 2
+ U4 9
+ J7 2
+Net 19 "" ""
+ U3 4
+ J4 2
+Net 20 "/FRQ_SENS" "FRQ_SENS"
  U1 25
-Net 27 "/DM" "DM"
- J3 2
- IC1 16
+ J10 4
+Net 26 "/D5" "D5"
+ U1 11
+ U4 12
+ U3 12
 Net 28 "/DP" "DP"
  J3 3
  IC1 15
 Net 29 "/D2" "D2"
  U1 4
  U3 10
-Net 30 "" ""
- U3 4
- P1 3
-Net 31 "" ""
- P1 2
- U3 3
-Net 32 "" ""
- U4 5
- P2 4
-Net 33 "" ""
- P2 2
- U4 3
-Net 34 "/LCDRST" "LCDRST"
- J1 3
+Net 30 "/D3" "D3"
+ U1 5
+ U4 10
+Net 31 "+5V" "+5V"
+ J2 2
+ R1 1
+ D1 2
+ C1 1
+ J1 1
+ R2 1
+ U4 8
+ J9 2
+ U3 8
+ C5 1
+ U2 2
+ U2 4
+ J5 6
+ U1 20
+ J10 2
+ U1 7
+Net 32 "+12V" "+12V"
+ U3 6
+ U4 6
+ J6 1
+Net 36 "/VOL_SENS" "VOL_SENS"
+ J9 4
+ U1 24
+Net 37 "/LCDRST" "LCDRST"
  U1 14
-Net 35 "/KEYPAD" "KEYPAD"
- J2 3
- U1 23
-Net 36 "" ""
- R1 2
- C2 2
- D1 1
- U1 1
-Net 37 "/RES1" "RES1"
- Y1 3
- U1 10
-Net 38 "/RES0" "RES0"
- Y1 1
- U1 9
-Net 39 "/LCDCS" "LCDCS"
+ J1 3
+Net 38 "/LCDCS" "LCDCS"
  J1 8
  U1 16
-Net 40 "/LCDRS" "LCDRS"
- U1 15
- J1 4
+Net 39 "/KEYPAD" "KEYPAD"
+ U1 23
+ J2 3
+Net 40 "" ""
+ U1 1
+ D1 1
+ C2 2
+ R1 2
 Net 41 "/SCK" "SCK"
- U1 19
  J1 7
+ U1 19
 Net 42 "/MISO" "MISO"
  U1 18
  J1 5
-Net 43 "/AD4" "AD4"
- U1 27
- J5 2
-Net 44 "/MOSI" "MOSI"
+Net 43 "/MOSI" "MOSI"
  U1 17
  J1 6
-Net 45 "/AD3" "AD3"
+Net 44 "/AD3" "AD3"
  U1 26
  J5 3
+Net 45 "/LCDRS" "LCDRS"
+ U1 15
+ J1 4
 Net 46 "/SDCS" "SDCS"
- J1 9
  U1 13
+ J1 9
 Net 47 "/AREF" "AREF"
  J10 3
- J9 3
  U1 21
  J5 5
-Net 48 "/AD5" "AD5"
- U1 28
+ J9 3
+Net 48 "/RES1" "RES1"
+ U1 10
+ Y1 3
+Net 49 "/RES0" "RES0"
+ U1 9
+ Y1 1
+Net 50 "/AD4" "AD4"
+ U1 27
+ J5 2
+Net 51 "/AD5" "AD5"
  J5 1
-Net 53 "/D5" "D5"
- U4 12
- U1 11
- U3 12
-Net 54 "" ""
- R2 2
- U3 1
- U4 1
-Net 55 "+12V" "+12V"
- U2 3
- P2 1
- C3 1
- TB1 1
- C4 1
- U3 6
- U4 6
- P1 1
-Net 56 "" ""
- P1 4
- U3 5
-Net 57 "" ""
- U4 4
- P2 3
-Net 58 "/VCCIO" "VCCIO"
- C7 1
- IC1 4
- IC1 17
-Net 60 "/D4" "D4"
- U4 11
- U3 11
+ U1 28
+Net 52 "" ""
+ J8 1
+ U4 3
+Net 57 "/DM" "DM"
+ IC1 16
+ J3 2
+Net 58 "/D4" "D4"
  U1 6
-Net 61 "/D3" "D3"
- U1 5
- U4 10
-Net 63 "+5V" "+5V"
- U2 2
- U1 20
- C5 1
- J2 2
- U3 8
- R1 1
- J10 2
- U2 4
- J9 2
- D1 2
- C1 1
- J5 6
- U1 7
- R2 1
- J1 1
- U4 8
-Net 64 "GND" "GND"
- IC1 18
- C6 2
- C7 2
- J3 4
- J3 G1
- J3 G2
- IC1 11
- J10 1
- J9 1
- IC1 7
- U3 9
- IC1 21
- IC1 25
- IC1 26
- C4 2
- TB1 2
+ U3 11
+ U4 11
+Net 59 "" ""
  U3 2
- C5 2
- P2 5
- J2 1
- J1 2
- P1 5
- U4 9
+ J6 2
+ J7 1
  U4 2
- C3 2
- U2 1
- U1 8
- U1 22
- J5 4
- J1 10
- C1 2
- Y1 2
+Net 60 "" ""
+ U3 1
+ R2 2
+ U4 1
+Net 61 "" ""
+ U4 4
+ J8 2
+Net 62 "" ""
+ U3 5
+ J4 3
+Net 63 "" ""
+ J4 1
+ U3 3
+Net 64 "" ""
+ U4 5
+ J8 3
+Net 65 "" ""
+ C4 1
+ TB1 1
+ C3 1
+ U2 3
+Net 66 "/VUSB" "VUSB"
+ J3 1
+ C6 1
+ IC1 20
 }
 #End
