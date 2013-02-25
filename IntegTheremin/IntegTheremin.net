@@ -1,7 +1,7 @@
-# EESchema Netlist Version 1.1 created  Sun 24 Feb 2013 12:54:04 PM EST
+# EESchema Netlist Version 1.1 created  25/02/2013 13:02:26
 (
  ( /51276262/4FDCB12E SM0805 C1 0.1uF
-  ( 1 N-000054 )
+  ( 1 N-000058 )
   ( 2 /Amplifier/RESHI )
  )
  ( /51276262/4FDCB0F0 SM0805 C2 .047uF
@@ -29,8 +29,8 @@
   ( 2 GNDA )
  )
  ( /51275E41/4FF58BD9 SM0805 C8 0.1uF
-  ( 1 /FTDI/~ARDRES )
-  ( 2 N-000018 )
+  ( 1 /Digital/~ARDRES )
+  ( 2 N-000022 )
  )
  ( /51275E41/4FF581E0 SM0805 C9 0.1uF
   ( 1 +5V )
@@ -57,20 +57,20 @@
   ( 2 GND )
  )
  ( /512A40AD/512A47B3 SM0805 C15 0.01uF
-  ( 1 N-000068 )
-  ( 2 N-000067 )
+  ( 1 /Power_Supply/SW )
+  ( 2 /Power_Supply/B )
  )
  ( /512A40AD/512A48B1 SM1206 C16 10uF
   ( 1 +5V )
   ( 2 GNDA )
  )
- ( /51275E41/4FF574BF SM1210 D1 4N4004
-  ( 1 N-000018 )
+ ( /51275E41/4FF574BF SOD-123 D1 4N4004
+  ( 1 N-000022 )
   ( 2 +5V )
  )
- ( /512A40AD/512A477F SM1210 D2 DIODE
+ ( /512A40AD/512A477F SOD-123 D2 DIODE
   ( 1 GNDA )
-  ( 2 N-000068 )
+  ( 2 /Power_Supply/SW )
  )
  ( /512A40AD/512A4A49 TB2-5MM J1 CONN_2
   ( 1 +12V )
@@ -132,24 +132,24 @@
   ( 1 GNDA )
   ( 2 GND )
  )
- ( /512A40AD/512A4874 INDUCTOR_V L1 68uH
-  ( 1 N-000068 )
+ ( /512A40AD/512A4874 IND-6MM L1 68uH
+  ( 1 /Power_Supply/SW )
   ( 2 +5V )
  )
- ( /51275E41/4FF58FB4 MTG-4-40 MTG1 CONN_1
+ ( /512B898C MTG-4-40 MTG1 CONN_1
   ( 1 ? )
  )
- ( /51275E41/4FF58FB9 MTG-4-40 MTG2 CONN_1
+ ( /512B8991 MTG-4-40 MTG2 CONN_1
   ( 1 ? )
  )
- ( /51275E41/4FF58FBC MTG-4-40 MTG3 CONN_1
+ ( /512B8994 MTG-4-40 MTG3 CONN_1
   ( 1 ? )
  )
- ( /51275E41/4FF58FBF MTG-4-40 MTG4 CONN_1
+ ( /512B8996 MTG-4-40 MTG4 CONN_1
   ( 1 ? )
  )
  ( /51276262/512763B7 SM0805 R1 2.2M
-  ( 1 N-000054 )
+  ( 1 N-000058 )
   ( 2 /HV_Pots/AUDIO-OUT )
  )
  ( /51276262/4FDCB0F6 SM0805 R2 10
@@ -178,19 +178,19 @@
  )
  ( /51275E41/4FF574F9 SM0805 R8 10K
   ( 1 +5V )
-  ( 2 N-000018 )
+  ( 2 N-000022 )
  )
  ( /5127B574/511F917C SM0805 R9 10K
   ( 1 +5V )
-  ( 2 N-000060 )
+  ( 2 N-000062 )
  )
  ( /51275E41/5128D8D7 SM0805 R10 2.2K
-  ( 1 N-000017 )
+  ( 1 N-000021 )
   ( 2 GND )
  )
  ( /51275E41/5128D8E3 SM0805 R11 4.7K
   ( 1 /Digital/VCO_ANALOG )
-  ( 2 N-000017 )
+  ( 2 N-000021 )
  )
  ( /51275F78/5128DC76 SM0805 R12 4.7K
   ( 1 /HV_Pots/AUDIO_IN )
@@ -233,12 +233,12 @@
   ( 16 /XR-2206_VCO/SYM2 )
  )
  ( /51275E41/50FC0390 DIP-28__300 U3 ATMEGA328-PU
-  ( 1 N-000018 )
+  ( 1 N-000022 )
   ( 2 /Digital/RXCPU )
   ( 3 /FTDI/RXFTDI )
-  ( 4 /Digital/D2 )
-  ( 5 /HV_Pots/D3 )
-  ( 6 /HV_Pots/D4 )
+  ( 4 /HV_Pots/D2 )
+  ( 5 /Digital/D3 )
+  ( 6 /Digital/D4 )
   ( 7 +5V )
   ( 8 GND )
   ( 9 /Digital/RES0 )
@@ -258,20 +258,21 @@
   ( 23 /Digital/KEYPAD )
   ( 24 /Digital/VOL_SENS )
   ( 25 /Digital/FRQ_SENS )
-  ( 26 N-000017 )
+  ( 26 N-000021 )
   ( 27 /Digital/AD4 )
   ( 28 /Digital/AD5 )
  )
- ( /512A40AD/512A468E MSOP_8 U4 LM22674-5,0
-  ( 1 N-000067 )
+ ( /512A40AD/512B9EA3 DDA0008B U4 LM22674-5.0
+  ( 1 /Power_Supply/B )
   ( 4 +5V )
   ( 5 ? )
   ( 6 GNDA )
   ( 7 +12V )
-  ( 8 N-000068 )
+  ( 8 /Power_Supply/SW )
+  ( 9 GNDA )
  )
  ( /5127B574/511F903D tssop-14 U5 AD5292
-  ( 1 N-000060 )
+  ( 1 N-000062 )
   ( 2 GNDA )
   ( 3 /HV_Pots/AUDIO_IN )
   ( 4 /HV_Pots/AUDIO-OUT )
@@ -280,14 +281,14 @@
   ( 7 ? )
   ( 8 +5V )
   ( 9 GND )
-  ( 10 /Digital/D2 )
-  ( 11 /HV_Pots/D4 )
+  ( 10 /HV_Pots/D2 )
+  ( 11 /Digital/D4 )
   ( 12 /Digital/D5 )
   ( 13 ? )
   ( 14 ? )
  )
  ( /5127B574/511F9067 tssop-14 U6 AD5292
-  ( 1 N-000060 )
+  ( 1 N-000062 )
   ( 2 GNDA )
   ( 3 /XR-2206_VCO/FREQ-W )
   ( 4 /XR-2206_VCO/FREQ-W )
@@ -296,15 +297,15 @@
   ( 7 ? )
   ( 8 +5V )
   ( 9 GND )
-  ( 10 /HV_Pots/D3 )
-  ( 11 /HV_Pots/D4 )
+  ( 10 /Digital/D3 )
+  ( 11 /Digital/D4 )
   ( 12 /Digital/D5 )
   ( 13 ? )
   ( 14 ? )
  )
  ( /512A4240/50FC0B0A ftdichip-1-SSOP28DB U7 FT232RL
   ( 1 /Digital/RXCPU )
-  ( 2 /FTDI/~ARDRES )
+  ( 2 /Digital/~ARDRES )
   ( 3 ? )
   ( 4 /FTDI/VCCIO )
   ( 5 /FTDI/RXFTDI )

@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date Sun 24 Feb 2013 12:53:15 PM EST
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 25/02/2013 12:45:27
 LIBS:power
 LIBS:device
+LIBS:DougsSch
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
@@ -9,14 +9,54 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 7
 Title "Integrated Theremin"
-Date "24 feb 2013"
+Date "25 feb 2013"
 Rev "X1"
-Comp "DougsBoardDesigns"
+Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 10000 7200
+NoConn ~ 10000 7100
+NoConn ~ 10000 7000
+NoConn ~ 10000 6900
+$Comp
+L CONN_1 MTG4
+U 1 1 512B8996
+P 10150 7200
+F 0 "MTG4" H 10230 7200 40  0000 L CNN
+F 1 "CONN_1" H 10150 7255 30  0001 C CNN
+	1    10150 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG3
+U 1 1 512B8994
+P 10150 7100
+F 0 "MTG3" H 10230 7100 40  0000 L CNN
+F 1 "CONN_1" H 10150 7155 30  0001 C CNN
+	1    10150 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG2
+U 1 1 512B8991
+P 10150 7000
+F 0 "MTG2" H 10230 7000 40  0000 L CNN
+F 1 "CONN_1" H 10150 7055 30  0001 C CNN
+	1    10150 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG1
+U 1 1 512B898C
+P 10150 6900
+F 0 "MTG1" H 10230 6900 40  0000 L CNN
+F 1 "CONN_1" H 10150 6955 30  0001 C CNN
+	1    10150 6900
+	1    0    0    -1  
+$EndComp
 Connection ~ 5700 3750
 Wire Wire Line
 	3900 3750 6050 3750

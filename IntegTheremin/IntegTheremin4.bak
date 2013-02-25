@@ -1,17 +1,17 @@
-EESchema Schematic File Version 2  date Sun 24 Feb 2013 12:52:56 PM EST
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 25/02/2013 12:26:25
 LIBS:power
 LIBS:device
+LIBS:DougsSch
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 6 7
-Title "AUDIO AMP 386 V1"
-Date "24 feb 2013"
-Rev ""
-Comp ""
+Title "AUDIO AMP 386"
+Date "25 feb 2013"
+Rev "X1"
+Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -24,10 +24,10 @@ Text HLabel 5250 1450 0    60   UnSpc ~ 0
 Text HLabel 3450 2000 0    60   Input ~ 0
 AUDIO_IN
 $Comp
-L GNDA #PWR012
+L GNDA #PWR12
 U 1 1 5127AFE7
 P 6300 3400
-F 0 "#PWR012" H 6300 3400 40  0001 C CNN
+F 0 "#PWR12" H 6300 3400 40  0001 C CNN
 F 1 "GNDA" H 6300 3330 40  0000 C CNN
 	1    6300 3400
 	1    0    0    -1  
@@ -48,7 +48,7 @@ Wire Wire Line
 	7900 3300 7900 2450
 Connection ~ 6950 3300
 Wire Wire Line
-	8000 3300 6300 3300
+	6300 3300 8000 3300
 Wire Wire Line
 	8000 3300 8000 2450
 Wire Wire Line
