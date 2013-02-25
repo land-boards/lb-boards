@@ -1,8 +1,13 @@
-update=22/02/2013 13:58:13
+update=Sun 24 Feb 2013 12:05:43 PM EST
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -21,11 +26,16 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=IntegTheremin.net
 [pcbnew/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName2=dip_sockets
-LibName3=smd_dil
-LibName4=pin_array
 LibDir=
+LibName1=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_resistors
+LibName3=dip_sockets
+LibName4=pin_array
+LibName5=libcms
+LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/audioamp386
+LibName7=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_dil
+LibName8=discret
+LibName9=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-1
 [eeschema]
 version=1
 LibDir=
@@ -59,9 +69,5 @@ RptLab=1
 LabSize=60
 [eeschema/libraries]
 LibName1=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName2=power
+LibName3=device

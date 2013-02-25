@@ -1,13 +1,15 @@
-EESchema Schematic File Version 2  date 22/02/2013 14:04:13
+EESchema Schematic File Version 2  date Sun 24 Feb 2013 12:53:15 PM EST
 LIBS:DougsSch
+LIBS:power
+LIBS:device
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 3 5
+Sheet 5 7
 Title "MiniDuino"
-Date "22 feb 2013"
+Date "24 feb 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -15,104 +17,123 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 4500 5700 0    60   UnSpc ~ 0
-GNDD
-Connection ~ 4750 5700
+NoConn ~ 5400 1850
+Connection ~ 5650 3700
 Wire Wire Line
-	4500 5700 4750 5700
+	6200 3600 6200 3700
 Wire Wire Line
-	5450 2950 5600 2950
-Connection ~ 5600 3750
+	6200 3700 5650 3700
 Wire Wire Line
-	5600 2950 5600 3750
-Connection ~ 5650 5700
+	5000 2050 4850 2050
+Connection ~ 4050 1850
 Wire Wire Line
-	4850 5700 6500 5700
+	4050 1850 3600 1850
+Connection ~ 5650 4900
 Wire Wire Line
-	6500 5200 6500 5250
+	5650 4900 5450 4900
+Connection ~ 5650 4000
+Connection ~ 5650 3750
 Wire Wire Line
-	6500 5250 6450 5250
+	5650 4000 5900 4000
 Wire Wire Line
-	5850 4300 5850 4200
-Wire Wire Line
-	5850 4200 5900 4200
-Wire Wire Line
-	5900 3550 5700 3550
-Wire Wire Line
-	5700 3550 5700 3500
-Wire Wire Line
-	4850 5700 4850 5650
-Connection ~ 3850 3100
-Wire Wire Line
-	4150 5050 3850 5050
-Wire Wire Line
-	3850 5050 3850 3100
-Connection ~ 4050 2600
-Wire Wire Line
-	4150 2600 4050 2600
-Wire Wire Line
-	4050 2400 4050 4550
-Wire Wire Line
-	4050 4550 4150 4550
-Wire Wire Line
-	4150 3100 3550 3100
-Wire Wire Line
-	4150 2750 3550 2750
-Wire Wire Line
-	4850 4050 4850 4000
-Wire Wire Line
-	4850 2050 4850 2100
-Wire Wire Line
-	4750 4000 4750 4050
-Wire Wire Line
-	5450 4750 5900 4750
-Wire Wire Line
-	5450 2650 5850 2650
-Wire Wire Line
-	5850 2800 5450 2800
-Wire Wire Line
-	4750 2100 4750 2050
-Wire Wire Line
-	4150 2900 3550 2900
-Wire Wire Line
-	4150 4700 3550 4700
-Wire Wire Line
-	4050 1800 4050 1900
-Wire Wire Line
-	3950 2900 3950 4850
-Wire Wire Line
-	3950 4850 4150 4850
-Connection ~ 3950 2900
-Wire Wire Line
-	4850 3700 4850 3750
-Wire Wire Line
-	4750 3700 4750 3800
+	5650 3750 4850 3750
 Wire Wire Line
 	4750 5650 4750 5750
 Wire Wire Line
-	4850 3750 5900 3750
+	4750 3700 4750 3800
 Wire Wire Line
-	5900 4000 5650 4000
+	4850 3750 4850 3700
+Connection ~ 3950 2900
+Wire Wire Line
+	4150 4850 3950 4850
+Wire Wire Line
+	3950 4850 3950 2900
+Wire Wire Line
+	4050 1800 4050 1900
+Wire Wire Line
+	4150 4700 3550 4700
+Wire Wire Line
+	4150 2900 3550 2900
+Wire Wire Line
+	4750 2100 4750 2000
+Wire Wire Line
+	5850 2800 5450 2800
+Wire Wire Line
+	5450 2650 5850 2650
+Wire Wire Line
+	5450 4750 5900 4750
+Wire Wire Line
+	4750 4000 4750 4050
+Wire Wire Line
+	4850 2000 4850 2100
+Wire Wire Line
+	4850 4050 4850 4000
+Wire Wire Line
+	4150 2750 3550 2750
+Wire Wire Line
+	4150 3100 3550 3100
+Wire Wire Line
+	4150 4550 4050 4550
+Wire Wire Line
+	4050 4550 4050 2400
+Wire Wire Line
+	4150 2600 4050 2600
+Connection ~ 4050 2600
+Wire Wire Line
+	3850 3100 3850 5050
+Wire Wire Line
+	3850 5050 4150 5050
+Connection ~ 3850 3100
+Wire Wire Line
+	4850 5650 4850 5700
+Wire Wire Line
+	5900 4200 5850 4200
+Wire Wire Line
+	5850 4200 5850 4300
+Wire Wire Line
+	4850 5700 5750 5700
+Connection ~ 5650 5700
+Wire Wire Line
+	5650 5700 5650 2950
 Connection ~ 5650 3750
 Wire Wire Line
-	5650 3750 5650 5700
-Connection ~ 5650 4000
+	5650 2950 5450 2950
 Wire Wire Line
-	6450 5450 6500 5450
+	4500 5700 4750 5700
+Connection ~ 4750 5700
 Wire Wire Line
-	6500 5450 6500 5700
+	5450 4600 5550 4600
 Wire Wire Line
-	5650 4900 5450 4900
-Connection ~ 5650 4900
+	5550 4600 5550 4750
+Connection ~ 5550 4750
+Connection ~ 4850 2050
 Wire Wire Line
-	4050 1850 3600 1850
-Connection ~ 4050 1850
-NoConn ~ 5450 4600
+	6200 3200 6200 3150
+$Comp
+L CAPAPOL C4
+U 1 1 51292022
+P 6200 3400
+F 0 "C4" H 6250 3500 50  0000 L CNN
+F 1 "100uF" H 6250 3300 50  0000 L CNN
+	1    6200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR03
+U 1 1 51292006
+P 6200 3150
+F 0 "#PWR03" H 6200 3100 20  0001 C CNN
+F 1 "+12V" H 6200 3250 30  0000 C CNN
+	1    6200 3150
+	1    0    0    -1  
+$EndComp
+Text HLabel 4500 5700 0    60   UnSpc ~ 0
+GNDD
 Text HLabel 5900 4750 2    60   UnSpc ~ 0
 FREQ-W
-Text HLabel 5900 3750 2    60   Output ~ 0
+Text HLabel 5750 5700 2    60   Output ~ 0
 GNDA
-Text HLabel 5900 3550 2    60   Output ~ 0
+Text HLabel 5000 2050 2    60   Output ~ 0
 +12V
 Text HLabel 5850 2800 2    60   Output ~ 0
 AUDIO-OUT
@@ -128,31 +149,11 @@ Text HLabel 3550 2750 0    60   Input ~ 0
 D2
 Text HLabel 3600 1850 0    60   Input ~ 0
 +5V
-Text Notes 5950 5300 2    60   ~ 0
-+12V\n\nGND
 $Comp
-L +12V #PWR02
-U 1 1 5127B029
-P 6500 5200
-F 0 "#PWR02" H 6500 5150 20  0001 C CNN
-F 1 "+12V" H 6500 5300 30  0000 C CNN
-	1    6500 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_2 J9
-U 1 1 5127B01C
-P 6100 5350
-F 0 "J9" V 6050 5350 40  0000 C CNN
-F 1 "CONN_2" V 6150 5350 40  0000 C CNN
-	1    6100 5350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L GND #PWR03
+L GND #PWR04
 U 1 1 5126CA08
 P 5850 4300
-F 0 "#PWR03" H 5850 4300 30  0001 C CNN
+F 0 "#PWR04" H 5850 4300 30  0001 C CNN
 F 1 "GND" H 5850 4230 30  0001 C CNN
 	1    5850 4300
 	1    0    0    -1  
@@ -163,25 +164,17 @@ U 1 1 5126C9C4
 P 6250 4100
 F 0 "J10" V 6200 4100 40  0000 C CNN
 F 1 "CONN_2" V 6300 4100 40  0000 C CNN
+F 2 "PIN_ARRAY_2X1" H 6250 4100 60  0001 C CNN
 	1    6250 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L +12V #PWR04
-U 1 1 5126C9A6
-P 5700 3500
-F 0 "#PWR04" H 5700 3450 20  0001 C CNN
-F 1 "+12V" H 5700 3600 30  0000 C CNN
-	1    5700 3500
 	1    0    0    -1  
 $EndComp
 $Comp
 L +12V #PWR05
 U 1 1 5126C980
-P 4850 2050
-F 0 "#PWR05" H 4850 2000 20  0001 C CNN
-F 1 "+12V" H 4850 2150 30  0000 C CNN
-	1    4850 2050
+P 4850 2000
+F 0 "#PWR05" H 4850 1950 20  0001 C CNN
+F 1 "+12V" H 4850 2100 30  0000 C CNN
+	1    4850 2000
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5450 3250
@@ -200,10 +193,10 @@ $EndComp
 $Comp
 L +5V #PWR07
 U 1 1 511F9636
-P 4750 2050
-F 0 "#PWR07" H 4750 2140 20  0001 C CNN
-F 1 "+5V" H 4750 2140 30  0000 C CNN
-	1    4750 2050
+P 4750 2000
+F 0 "#PWR07" H 4750 2090 20  0001 C CNN
+F 1 "+5V" H 4750 2090 30  0000 C CNN
+	1    4750 2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -212,6 +205,7 @@ U 1 1 511F917C
 P 4050 2150
 F 0 "R9" V 4130 2150 50  0000 C CNN
 F 1 "10K" V 4050 2150 50  0000 C CNN
+F 2 "SM0805" H 4050 2150 60  0001 C CNN
 	1    4050 2150
 	1    0    0    -1  
 $EndComp
@@ -221,6 +215,7 @@ U 1 1 511F9067
 P 4800 4800
 F 0 "U6" H 4500 5300 60  0000 C CNN
 F 1 "AD5292" H 5150 4200 60  0000 C CNN
+F 2 "tssop-14" H 4800 4800 60  0001 C CNN
 	1    4800 4800
 	1    0    0    -1  
 $EndComp
@@ -230,6 +225,7 @@ U 1 1 511F903D
 P 4800 2850
 F 0 "U5" H 4500 3350 60  0000 C CNN
 F 1 "AD5292" H 5150 2250 60  0000 C CNN
+F 2 "tssop-14" H 4800 2850 60  0001 C CNN
 	1    4800 2850
 	1    0    0    -1  
 $EndComp
