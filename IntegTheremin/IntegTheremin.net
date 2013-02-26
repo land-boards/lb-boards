@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  25/02/2013 13:02:26
+# EESchema Netlist Version 1.1 created  26/02/2013 16:30:47
 (
  ( /51276262/4FDCB12E SM0805 C1 0.1uF
   ( 1 N-000058 )
@@ -11,10 +11,6 @@
  ( /51276262/500C93F2 C1V8 C3 220uF
   ( 1 /Amplifier/AO )
   ( 2 /Amplifier/OUT )
- )
- ( /5127B574/51292022 C1V8 C4 100uF
-  ( 1 +12V )
-  ( 2 GNDA )
  )
  ( /51275F78/511BA085 SM0805 C5 1uF
   ( 1 +12V )
@@ -36,7 +32,7 @@
   ( 1 +5V )
   ( 2 GND )
  )
- ( /512A4240/50FC0C27 SM1206 C10 10uF
+ ( /512A4240/50FC0C27 SM1210 C10 10uF
   ( 1 /FTDI/VUSB )
   ( 2 GND )
  )
@@ -48,7 +44,7 @@
   ( 1 +12V )
   ( 2 GNDA )
  )
- ( /512A40AD/512A46D2 SM1206 C13 1uF
+ ( /512A40AD/512A46D2 SM0805 C13 1uF
   ( 1 +12V )
   ( 2 GNDA )
  )
@@ -60,7 +56,7 @@
   ( 1 /Power_Supply/SW )
   ( 2 /Power_Supply/B )
  )
- ( /512A40AD/512A48B1 SM1206 C16 10uF
+ ( /512A40AD/512A48B1 SM1210 C16 10uF
   ( 1 +5V )
   ( 2 GNDA )
  )
@@ -68,7 +64,7 @@
   ( 1 N-000022 )
   ( 2 +5V )
  )
- ( /512A40AD/512A477F SOD-123 D2 DIODE
+ ( /512A40AD/512A477F SOD-123 D2 MBR0520LT1G
   ( 1 GNDA )
   ( 2 /Power_Supply/SW )
  )
@@ -182,7 +178,7 @@
  )
  ( /5127B574/511F917C SM0805 R9 10K
   ( 1 +5V )
-  ( 2 N-000062 )
+  ( 2 N-000063 )
  )
  ( /51275E41/5128D8D7 SM0805 R10 2.2K
   ( 1 N-000021 )
@@ -236,14 +232,14 @@
   ( 1 N-000022 )
   ( 2 /Digital/RXCPU )
   ( 3 /FTDI/RXFTDI )
-  ( 4 /HV_Pots/D2 )
+  ( 4 /Digital/D2 )
   ( 5 /Digital/D3 )
   ( 6 /Digital/D4 )
   ( 7 +5V )
   ( 8 GND )
   ( 9 /Digital/RES0 )
   ( 10 /Digital/RES1 )
-  ( 11 /Digital/D5 )
+  ( 11 /HV_Pots/D5 )
   ( 12 ? )
   ( 13 /Digital/SDCS )
   ( 14 /Digital/LCDRST )
@@ -262,7 +258,7 @@
   ( 27 /Digital/AD4 )
   ( 28 /Digital/AD5 )
  )
- ( /512A40AD/512B9EA3 DDA0008B U4 LM22674-5.0
+ ( /512A40AD/512B9EA3 DDA0008B U4 LM22674MR-5.0
   ( 1 /Power_Supply/B )
   ( 4 +5V )
   ( 5 ? )
@@ -272,7 +268,7 @@
   ( 9 GNDA )
  )
  ( /5127B574/511F903D tssop-14 U5 AD5292
-  ( 1 N-000062 )
+  ( 1 N-000063 )
   ( 2 GNDA )
   ( 3 /HV_Pots/AUDIO_IN )
   ( 4 /HV_Pots/AUDIO-OUT )
@@ -281,14 +277,14 @@
   ( 7 ? )
   ( 8 +5V )
   ( 9 GND )
-  ( 10 /HV_Pots/D2 )
+  ( 10 /Digital/D2 )
   ( 11 /Digital/D4 )
-  ( 12 /Digital/D5 )
+  ( 12 /HV_Pots/D5 )
   ( 13 ? )
   ( 14 ? )
  )
  ( /5127B574/511F9067 tssop-14 U6 AD5292
-  ( 1 N-000062 )
+  ( 1 N-000063 )
   ( 2 GNDA )
   ( 3 /XR-2206_VCO/FREQ-W )
   ( 4 /XR-2206_VCO/FREQ-W )
@@ -299,7 +295,7 @@
   ( 9 GND )
   ( 10 /Digital/D3 )
   ( 11 /Digital/D4 )
-  ( 12 /Digital/D5 )
+  ( 12 /HV_Pots/D5 )
   ( 13 ? )
   ( 14 ? )
  )
@@ -350,10 +346,6 @@ $component C2
  C1-1
 $endlist
 $component C3
- CP*
- SM*
-$endlist
-$component C4
  CP*
  SM*
 $endlist

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/02/2013 12:45:27
+EESchema Schematic File Version 2  date 26/02/2013 16:28:09
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "FTDI Interface"
-Date "25 feb 2013"
+Date "26 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -143,10 +143,10 @@ F 2 "SM0805" H 4600 2250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR01
 U 1 1 50FC0BB0
 P 6500 4850
-F 0 "#PWR1" H 6500 4850 30  0001 C CNN
+F 0 "#PWR01" H 6500 4850 30  0001 C CNN
 F 1 "GND" H 6500 4780 30  0001 C CNN
 	1    6500 4850
 	1    0    0    -1  

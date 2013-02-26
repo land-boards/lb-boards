@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/02/2013 12:26:25
+EESchema Schematic File Version 2  date 26/02/2013 16:27:55
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 5 7
 Title "HIGH VOLTAGE POTENTIOMETERS"
-Date "25 feb 2013"
+Date "26 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -18,11 +18,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 NoConn ~ 5400 1850
-Connection ~ 5650 3700
-Wire Wire Line
-	6200 3600 6200 3700
-Wire Wire Line
-	6200 3700 5650 3700
 Wire Wire Line
 	5000 2050 4850 2050
 Connection ~ 4050 1850
@@ -107,26 +102,6 @@ Wire Wire Line
 	5550 4600 5550 4750
 Connection ~ 5550 4750
 Connection ~ 4850 2050
-Wire Wire Line
-	6200 3200 6200 3150
-$Comp
-L CAPAPOL C4
-U 1 1 51292022
-P 6200 3400
-F 0 "C4" H 6250 3500 50  0000 L CNN
-F 1 "100uF" H 6250 3300 50  0000 L CNN
-	1    6200 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L +12V #PWR11
-U 1 1 51292006
-P 6200 3150
-F 0 "#PWR11" H 6200 3100 20  0001 C CNN
-F 1 "+12V" H 6200 3250 30  0000 C CNN
-	1    6200 3150
-	1    0    0    -1  
-$EndComp
 Text HLabel 4500 5700 0    60   UnSpc ~ 0
 GNDD
 Text HLabel 5900 4750 2    60   UnSpc ~ 0
@@ -206,6 +181,8 @@ P 4050 2150
 F 0 "R9" V 4130 2150 50  0000 C CNN
 F 1 "10K" V 4050 2150 50  0000 C CNN
 F 2 "SM0805" H 4050 2150 60  0001 C CNN
+F 4 "Vishay" H 4050 2150 60  0001 C CNN "Mfg"
+F 5 "CRCW080510K0JNEB" H 4050 2150 60  0001 C CNN "MfgPN"
 	1    4050 2150
 	1    0    0    -1  
 $EndComp

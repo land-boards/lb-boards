@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/02/2013 12:26:25
+EESchema Schematic File Version 2  date 26/02/2013 16:27:55
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 7 7
 Title "MICROPROCESSOR AND I/O PINS"
-Date "25 feb 2013"
+Date "26 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -233,6 +233,8 @@ P 5150 2100
 F 0 "R10" V 5050 2100 50  0000 C CNN
 F 1 "2.2K" V 5150 2100 50  0000 C CNN
 F 2 "SM0805" H 5150 2100 60  0001 C CNN
+F 4 "Xicon" H 5150 2100 60  0001 C CNN "Mfg"
+F 5 "260-2.2K-RC" H 5150 2100 60  0001 C CNN "MfgPN"
 	1    5150 2100
 	0    1    1    0   
 $EndComp
@@ -512,6 +514,8 @@ P 2100 3250
 F 0 "Y1" H 2120 3450 60  0000 C CNN
 F 1 "16MHz" V 2350 3050 60  0000 C CNN
 F 2 "RESON_3PIN" H 2100 3250 60  0001 C CNN
+F 4 "Murata" H 2100 3250 60  0001 C CNN "Mfg"
+F 5 "CSTLS16M0X51-A0" H 2100 3250 60  0001 C CNN "MfgPN"
 	1    2100 3250
 	0    1    1    0   
 $EndComp
@@ -540,6 +544,8 @@ P 2650 2350
 F 0 "R8" V 2730 2350 50  0000 C CNN
 F 1 "10K" V 2650 2350 50  0000 C CNN
 F 2 "SM0805" H 2650 2350 60  0001 C CNN
+F 4 "Vishay" H 2650 2350 60  0001 C CNN "Mfg"
+F 5 "CRCW080510K0JNEB" H 2650 2350 60  0001 C CNN "MfgPN"
 	1    2650 2350
 	1    0    0    -1  
 $EndComp
@@ -549,7 +555,7 @@ U 1 1 4FF574BF
 P 2900 2400
 F 0 "D1" H 2900 2500 40  0000 C CNN
 F 1 "4N4004" H 2900 2300 40  0000 C CNN
-F 2 "D3" H 2900 2400 60  0001 C CNN
+F 2 "SOD-123" H 2900 2400 60  0001 C CNN
 	1    2900 2400
 	0    -1   -1   0   
 $EndComp

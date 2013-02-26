@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/02/2013 12:45:27
+EESchema Schematic File Version 2  date 26/02/2013 16:28:09
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 6 7
 Title "AUDIO AMP 386"
-Date "25 feb 2013"
+Date "26 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -24,17 +24,17 @@ Text HLabel 5250 1450 0    60   UnSpc ~ 0
 Text HLabel 3450 2000 0    60   Input ~ 0
 AUDIO_IN
 $Comp
-L GNDA #PWR12
+L GNDA #PWR011
 U 1 1 5127AFE7
 P 6300 3400
-F 0 "#PWR12" H 6300 3400 40  0001 C CNN
+F 0 "#PWR011" H 6300 3400 40  0001 C CNN
 F 1 "GNDA" H 6300 3330 40  0000 C CNN
 	1    6300 3400
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5450 2500
 NoConn ~ 5550 2500
-Connection ~ 4650 3350
+Connection ~ 4950 3350
 Wire Wire Line
 	6300 3350 4300 3350
 Wire Wire Line
@@ -46,9 +46,8 @@ Wire Wire Line
 Connection ~ 7900 3300
 Wire Wire Line
 	7900 3300 7900 2450
-Connection ~ 6950 3300
 Wire Wire Line
-	6300 3300 8000 3300
+	8000 3300 6300 3300
 Wire Wire Line
 	8000 3300 8000 2450
 Wire Wire Line
@@ -84,6 +83,8 @@ P 3800 2000
 F 0 "R1" V 3880 2000 50  0000 C CNN
 F 1 "2.2M" V 3800 2000 50  0000 C CNN
 F 2 "SM0805" H 3800 2000 60  0001 C CNN
+F 4 "Xicon" H 3800 2000 60  0001 C CNN "Mfg"
+F 5 "260-2.2M-RC" H 3800 2000 60  0001 C CNN "MfgPN"
 	1    3800 2000
 	0    1    1    0   
 $EndComp
@@ -92,8 +93,10 @@ L CP1 C3
 U 1 1 500C93F2
 P 6550 2100
 F 0 "C3" V 6600 1950 50  0000 L CNN
-F 1 "220uF" V 6450 1900 50  0000 L CNN
+F 1 "220uF" V 6500 1800 50  0000 L CNN
 F 2 "C1V8" H 6550 2100 60  0001 C CNN
+F 4 "United Chemi-Con" H 6550 2100 60  0001 C CNN "Mfg"
+F 5 "EKMG250ELL221MHB5D" H 6550 2100 60  0001 C CNN "MfgPN"
 	1    6550 2100
 	0    -1   -1   0   
 $EndComp
@@ -154,6 +157,8 @@ P 6300 2450
 F 0 "C2" H 6350 2550 50  0000 L CNN
 F 1 ".047uF" H 6350 2350 50  0000 L CNN
 F 2 "SM0805" H 6300 2450 60  0001 C CNN
+F 4 "Vishay" H 6300 2450 60  0001 C CNN "Mfg"
+F 5 "VJ0805Y473JXAPW1BC" H 6300 2450 60  0001 C CNN "MfgPN"
 	1    6300 2450
 	1    0    0    -1  
 $EndComp
