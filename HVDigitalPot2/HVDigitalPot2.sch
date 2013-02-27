@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 08/02/2013 11:54:21
+EESchema Schematic File Version 2  date 27/02/2013 15:14:14
 LIBS:power
 LIBS:conn
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "High Voltage Potentiometer"
-Date "8 feb 2013"
+Date "27 feb 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -211,7 +211,7 @@ F 1 "AD5292" H 6300 2200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 3200 2350 2    60   ~ 0
-+12V\nGND\n+5V\nSD1\nSD2\nCLK\nCSN\nGND
++12V\nGND\n+5V\nSD1\nSD2\nCLK\n~SYNC\nGND
 Text Label 4150 2700 0    60   ~ 0
 SD2
 $Comp
