@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date 26/02/2013 16:28:09
+EESchema Schematic File Version 2  date Tue 26 Feb 2013 07:39:27 PM EST
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 7 7
 Title "MICROPROCESSOR AND I/O PINS"
-Date "26 feb 2013"
+Date "27 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -18,31 +18,48 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	9250 6800 9250 6700
-Connection ~ 5550 2100
+	9250 6800 9250 6750
 Wire Wire Line
-	4500 2950 5550 2950
+	9250 6750 9250 6700
 Wire Wire Line
-	5550 2950 5550 2100
-Wire Wire Line
-	4700 2250 4700 2100
-Wire Wire Line
-	4700 2100 4900 2100
+	4500 2950 5200 2950
 Connection ~ 9250 6750
 Wire Wire Line
-	9250 6200 9250 6300
+	9250 6200 9250 6250
+Wire Wire Line
+	9250 6250 9250 6300
 Connection ~ 8750 3600
 Wire Wire Line
-	8750 3600 8750 2600
+	8750 3600 8750 3150
+Wire Wire Line
+	8750 3150 8750 2600
 Wire Wire Line
 	8750 2600 9050 2600
 Wire Wire Line
-	8950 5300 8950 1950
+	8950 5300 8950 5150
+Wire Wire Line
+	8950 5150 8950 4350
+Wire Wire Line
+	8950 4350 8950 3700
+Wire Wire Line
+	8950 3700 8950 2950
+Wire Wire Line
+	8950 2950 8950 2400
+Wire Wire Line
+	8950 2400 8950 1950
 Connection ~ 8850 3500
 Wire Wire Line
 	9050 4250 8850 4250
 Wire Wire Line
-	8850 4250 8850 1800
+	8850 4250 8850 3500
+Wire Wire Line
+	8850 3500 8850 3050
+Wire Wire Line
+	8850 3050 8850 2500
+Wire Wire Line
+	8850 2500 8850 2050
+Wire Wire Line
+	8850 2050 8850 1800
 Wire Wire Line
 	8850 3500 9050 3500
 Wire Wire Line
@@ -66,7 +83,9 @@ Wire Wire Line
 Wire Wire Line
 	9250 6750 9400 6750
 Wire Wire Line
-	8150 3600 9050 3600
+	8150 3600 8750 3600
+Wire Wire Line
+	8750 3600 9050 3600
 Wire Wire Line
 	5200 3050 4500 3050
 Wire Wire Line
@@ -112,7 +131,11 @@ Wire Wire Line
 Wire Wire Line
 	2900 2650 2900 2600
 Wire Wire Line
-	2850 4500 2850 4850
+	2850 4500 2850 4550
+Wire Wire Line
+	2850 4550 2850 4750
+Wire Wire Line
+	2850 4750 2850 4850
 Wire Wire Line
 	3000 4750 2850 4750
 Connection ~ 2850 4750
@@ -120,7 +143,9 @@ Wire Wire Line
 	2650 2600 2650 2650
 Connection ~ 2900 2650
 Wire Wire Line
-	2900 2000 2900 2200
+	2900 2000 2900 2050
+Wire Wire Line
+	2900 2050 2900 2200
 Connection ~ 2900 2050
 Wire Wire Line
 	3000 3250 2550 3250
@@ -161,7 +186,11 @@ Wire Wire Line
 Wire Wire Line
 	4500 3350 5200 3350
 Wire Wire Line
-	2500 2650 3000 2650
+	2500 2650 2650 2650
+Wire Wire Line
+	2650 2650 2900 2650
+Wire Wire Line
+	2900 2650 3000 2650
 Connection ~ 2650 2650
 Wire Wire Line
 	4500 2750 5200 2750
@@ -174,7 +203,11 @@ Wire Wire Line
 Wire Wire Line
 	5200 3850 4500 3850
 Wire Wire Line
-	2850 3650 2850 4100
+	2850 3650 2850 3700
+Wire Wire Line
+	2850 3700 2850 4000
+Wire Wire Line
+	2850 4000 2850 4100
 Connection ~ 2850 3700
 Connection ~ 8950 2400
 Wire Wire Line
@@ -195,10 +228,6 @@ Wire Wire Line
 	9250 6250 9400 6250
 Connection ~ 9250 6250
 Wire Wire Line
-	5600 2100 5400 2100
-Wire Wire Line
-	6100 2100 6200 2100
-Wire Wire Line
 	2650 2050 2900 2050
 Text HLabel 1650 2650 0    60   Input ~ 0
 ~ARDRES
@@ -207,38 +236,7 @@ TXCPU
 Text HLabel 5200 3350 2    60   Input ~ 0
 RXCPU
 NoConn ~ 9050 3800
-$Comp
-L GND #PWR012
-U 1 1 5128D979
-P 4700 2250
-F 0 "#PWR012" H 4700 2250 30  0001 C CNN
-F 1 "GND" H 4700 2180 30  0001 C CNN
-	1    4700 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R11
-U 1 1 5128D8E3
-P 5850 2100
-F 0 "R11" V 5750 2100 50  0000 C CNN
-F 1 "4.7K" V 5850 2100 50  0000 C CNN
-F 2 "SM0805" H 5850 2100 60  0001 C CNN
-	1    5850 2100
-	0    1    1    0   
-$EndComp
-$Comp
-L R R10
-U 1 1 5128D8D7
-P 5150 2100
-F 0 "R10" V 5050 2100 50  0000 C CNN
-F 1 "2.2K" V 5150 2100 50  0000 C CNN
-F 2 "SM0805" H 5150 2100 60  0001 C CNN
-F 4 "Xicon" H 5150 2100 60  0001 C CNN "Mfg"
-F 5 "260-2.2K-RC" H 5150 2100 60  0001 C CNN "MfgPN"
-	1    5150 2100
-	0    1    1    0   
-$EndComp
-Text HLabel 6200 2100 2    60   Input ~ 0
+Text HLabel 5200 2950 2    60   Input ~ 0
 VCO_ANALOG
 Text HLabel 9400 6750 2    60   Input ~ 0
 GNDD
@@ -291,13 +289,13 @@ FRQ_SENS
 Text Label 8200 3250 0    60   ~ 0
 FRQ_SENS
 Text Notes 9100 3400 0    60   ~ 0
-FREQ GVS
+FREQ GVVS
 Text Label 4650 2750 0    60   ~ 0
 VOL_SENS
 Text Label 8200 2700 0    60   ~ 0
 VOL_SENS
 Text Notes 9100 2850 0    60   ~ 0
-VOLUME GVS
+VOLUME GVVS
 $Comp
 L ATMEGA328-PU U3
 U 1 1 50FC0390

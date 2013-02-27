@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date 26/02/2013 16:27:55
+EESchema Schematic File Version 2  date Tue 26 Feb 2013 07:38:06 PM EST
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
 LIBS:IntegTheremin-cache
 EELAYER 25  0
 EELAYER END
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 6 7
 Title "AUDIO AMP 386"
-Date "26 feb 2013"
+Date "27 feb 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -24,10 +24,10 @@ Text HLabel 5250 1450 0    60   UnSpc ~ 0
 Text HLabel 3450 2000 0    60   Input ~ 0
 AUDIO_IN
 $Comp
-L GNDA #PWR12
+L GNDA #PWR011
 U 1 1 5127AFE7
 P 6300 3400
-F 0 "#PWR12" H 6300 3400 40  0001 C CNN
+F 0 "#PWR011" H 6300 3400 40  0001 C CNN
 F 1 "GNDA" H 6300 3330 40  0000 C CNN
 	1    6300 3400
 	1    0    0    -1  
@@ -36,13 +36,7 @@ NoConn ~ 5450 2500
 NoConn ~ 5550 2500
 Connection ~ 4950 3350
 Wire Wire Line
-	6300 3350 5350 3350
-Wire Wire Line
-	5350 3350 4950 3350
-Wire Wire Line
-	4950 3350 4950 3350
-Wire Wire Line
-	4950 3350 4300 3350
+	6300 3350 4300 3350
 Wire Wire Line
 	3550 2000 3450 2000
 Wire Wire Line
@@ -53,13 +47,7 @@ Connection ~ 7900 3300
 Wire Wire Line
 	7900 3300 7900 2450
 Wire Wire Line
-	6300 3300 7800 3300
-Wire Wire Line
-	7800 3300 7800 3300
-Wire Wire Line
-	7800 3300 7900 3300
-Wire Wire Line
-	7900 3300 8000 3300
+	8000 3300 6300 3300
 Wire Wire Line
 	8000 3300 8000 2450
 Wire Wire Line
@@ -70,18 +58,12 @@ Wire Wire Line
 	6300 2250 6300 2100
 Connection ~ 5350 3350
 Wire Wire Line
-	6300 3250 6300 3300
-Wire Wire Line
-	6300 3300 6300 3350
-Wire Wire Line
-	6300 3350 6300 3400
+	6300 3250 6300 3400
 Wire Wire Line
 	5350 2500 5350 3350
 Connection ~ 6300 3350
 Wire Wire Line
-	5950 2100 6300 2100
-Wire Wire Line
-	6300 2100 6350 2100
+	5950 2100 6350 2100
 Wire Wire Line
 	6300 2650 6300 2750
 Wire Wire Line
