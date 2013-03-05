@@ -13,7 +13,7 @@ Doug's mergeKiLibs
 - The result is _not_ alphabetically sorted.
 - The parts that have matching part names are not written out.
 - The parts that have matching part names result in an warning message.
-- Eng Library is automatically written even if it was not in the original file.
+- #End Library is automatically written to the end of the file.
 
 See [Doug's PCB Designs Wiki][myWiki].
 [myWiki]: http://dougspcbdesigns.pbworks.com/ "Doug's PCB Wiki"
