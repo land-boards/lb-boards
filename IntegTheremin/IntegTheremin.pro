@@ -1,6 +1,6 @@
-update=04/03/2013 17:10:48
+update=05/03/2013 12:53:11
 version=1
-last_client=kicad
+last_client=pcbnew
 [eeschema]
 version=1
 LibDir=
@@ -42,35 +42,26 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[pcbnew]
-version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
-LastNetListRead=IntegTheremin.net
-[pcbnew/libraries]
-LibDir=
-LibName1=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName2=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_resistors
-LibName3=dip_sockets
-LibName4=pin_array
-LibName5=libcms
-LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/audioamp386
-LibName7=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_dil
-LibName8=discret
-LibName9=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/ftdichip-1
-LibName10=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName11=IntegTheremin
 [general]
 version=1
+[pcbnew]
+version=1
+LastNetListRead=IntegTheremin.net
+UseCmpFile=1
+PadDrill=0.8128
+PadSizeH=1.524
+PadSizeV=1.524
+PcbTextSizeV=2.032
+PcbTextSizeH=1.524
+PcbTextThickness=0.3048
+ModuleTextSizeV=1.524
+ModuleTextSizeH=1.524
+ModuleTextSizeThickness=0.3048
+SolderMaskClearance=0.254
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.381
+BoardOutlineThickness=0.381
+ModuleOutlineThickness=0.381
+[pcbnew/libraries]
+LibDir=
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/utilities/mergeKiMods/mergeDoug
