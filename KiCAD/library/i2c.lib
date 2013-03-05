@@ -1,12 +1,7 @@
-EESchema-LIBRARY Version 2.3  29/04/2008-12:22:23
-# Converted with eagle2kicad.ulp Version 0.9
-# Device count = 33
+EESchema-LIBRARY Version 2.3  Date: 25/05/2011 21:47:41
+#encoding utf-8
 #
-# Dev Name: 82B715PN
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# 82B715PN
 #
 DEF 82B715PN ?? 0 40 Y Y 2 L N
 # Gate Name: G$2
@@ -26,13 +21,8 @@ X SX 3 -500 100 200 R 40 40 2 1 B
 X SY 6 -500 -100 200 R 40 40 2 1 B 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 82B715TD
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# 82B715TD
 #
 DEF 82B715TD ?? 0 40 Y Y 2 L N
 # Gate Name: G$2
@@ -52,13 +42,8 @@ X SX 3 -500 100 200 R 40 40 2 1 B
 X SY 6 -500 -100 200 R 40 40 2 1 B 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: LM75AD
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# LM75AD
 #
 DEF LM75AD ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -80,13 +65,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA24S08
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA24S08
 #
 DEF PCA24S08 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -106,13 +86,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA8581CP
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA8581CP
 #
 DEF PCA8581CP ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -134,13 +109,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA8581CT
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA8581CT
 #
 DEF PCA8581CT ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -162,13 +132,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA8581P
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA8581P
 #
 DEF PCA8581P ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -190,13 +155,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA8581T
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA8581T
 #
 DEF PCA8581T ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -218,13 +178,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCA9564D
-# Package Name: SO20W
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCA9564D
 #
 DEF PCA9564D ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -257,13 +212,136 @@ X GND 10 0 -300 200 U 40 40 2 1 W
 X VCC 20 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8570P
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF85102C-2P/03
+#
+DEF PCF85102C-2P/03 ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85102
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X A0 1 400 200 100 L 40 40 1 1 I 
+X A1 2 400 100 100 L 40 40 1 1 I 
+X A2 3 400 0 100 L 40 40 1 1 I 
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF85102C-2T/03
+#
+DEF PCF85102C-2T/03 ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85102
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X A0 1 400 200 100 L 40 40 1 1 I 
+X A1 2 400 100 100 L 40 40 1 1 I 
+X A2 3 400 0 100 L 40 40 1 1 I 
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF85103C-2P/00
+#
+DEF PCF85103C-2P/00 ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85103
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X A0 1 400 200 100 L 40 40 1 1 I 
+X A1 2 400 100 100 L 40 40 1 1 I 
+X A2 3 400 0 100 L 40 40 1 1 I 
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF85103C-2T/00
+#
+DEF PCF85103C-2T/00 ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85103
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X A0 1 400 200 100 L 40 40 1 1 I 
+X A1 2 400 100 100 L 40 40 1 1 I 
+X A2 3 400 0 100 L 40 40 1 1 I 
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF85116C-3N
+#
+DEF PCF85116C-3N ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85116
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+X WP 7 -400 -200 100 R 40 40 1 1 I 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF85116C-3P
+#
+DEF PCF85116C-3P ?? 0 40 Y Y 2 L N
+# Gate Name: IC$1
+# Symbol Name: PCF85116
+DRAW
+P 2 1 0 0 -300 300 300 300
+P 2 1 0 0 300 300 300 -300
+P 2 1 0 0 300 -300 -300 -300
+P 2 1 0 0 -300 -300 -300 300
+X SCL 6 -400 200 100 R 40 40 1 1 I 
+X SDA 5 -400 100 100 R 40 40 1 1 B 
+X WP 7 -400 -200 100 R 40 40 1 1 I 
+T 1 50 -155 50 0 2 0 GND
+T 1 50 175 50 0 2 0 VCC
+X GND 4 0 -300 200 U 40 40 2 1 W 
+X VCC 8 0 300 200 D 40 40 2 1 W 
+ENDDRAW
+ENDDEF
+#
+# PCF8570P
 #
 DEF PCF8570P ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -285,13 +363,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8570T
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8570T
 #
 DEF PCF8570T ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -313,13 +386,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8574AP
-# Package Name: DIL16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8574AP
 #
 DEF PCF8574AP ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -349,13 +417,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8574AT
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8574AT
 #
 DEF PCF8574AT ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -385,13 +448,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8574P
-# Package Name: DIL16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8574P
 #
 DEF PCF8574P ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -421,13 +479,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8574T
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8574T
 #
 DEF PCF8574T ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -457,13 +510,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8582C-2P/03
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8582C-2P/03
 #
 DEF PCF8582C-2P/03 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -485,13 +533,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8582C-2T/03
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8582C-2T/03
 #
 DEF PCF8582C-2T/03 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -513,13 +556,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8583P
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8583P
 #
 DEF PCF8583P ?? 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -541,13 +579,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8583T
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8583T
 #
 DEF PCF8583T ?? 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -569,13 +602,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8584P
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8584P
 #
 DEF PCF8584P ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -609,13 +637,8 @@ X GND 10 0 -300 200 U 40 40 2 1 W
 X VCC 20 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8584T
-# Package Name: SO20W
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8584T
 #
 DEF PCF8584T ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -649,13 +672,8 @@ X GND 10 0 -300 200 U 40 40 2 1 W
 X VCC 20 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8591P
-# Package Name: DIL16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8591P
 #
 DEF PCF8591P ?? 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -685,13 +703,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8591T
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8591T
 #
 DEF PCF8591T ?? 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -721,13 +734,8 @@ X GND 8 0 -300 200 U 40 40 2 1 W
 X VCC 16 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8594C-2P/02
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8594C-2P/02
 #
 DEF PCF8594C-2P/02 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -749,13 +757,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8594C-2T/02
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8594C-2T/02
 #
 DEF PCF8594C-2T/02 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -777,13 +780,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8598C-2P/02
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8598C-2P/02
 #
 DEF PCF8598C-2P/02 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -804,13 +802,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF8598C-2T/02
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
+# PCF8598C-2T/02
 #
 DEF PCF8598C-2T/02 ?? 0 40 Y Y 2 L N
 # Gate Name: IC$1
@@ -831,163 +824,5 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: PCF85102C-2P/03
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85102C-2P/03 ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85102
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X A0 1 400 200 100 L 40 40 1 1 I 
-X A1 2 400 100 100 L 40 40 1 1 I 
-X A2 3 400 0 100 L 40 40 1 1 I 
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: PCF85102C-2T/03
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85102C-2T/03 ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85102
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X A0 1 400 200 100 L 40 40 1 1 I 
-X A1 2 400 100 100 L 40 40 1 1 I 
-X A2 3 400 0 100 L 40 40 1 1 I 
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: PCF85103C-2P/00
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85103C-2P/00 ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85103
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X A0 1 400 200 100 L 40 40 1 1 I 
-X A1 2 400 100 100 L 40 40 1 1 I 
-X A2 3 400 0 100 L 40 40 1 1 I 
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: PCF85103C-2T/00
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85103C-2T/00 ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85103
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X A0 1 400 200 100 L 40 40 1 1 I 
-X A1 2 400 100 100 L 40 40 1 1 I 
-X A2 3 400 0 100 L 40 40 1 1 I 
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: PCF85116C-3N
-# Package Name: DIL08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85116C-3N ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85116
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-X WP 7 -400 -200 100 R 40 40 1 1 I 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: PCF85116C-3P
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: 
-# Gate count = 2
-#
-DEF PCF85116C-3P ?? 0 40 Y Y 2 L N
-# Gate Name: IC$1
-# Symbol Name: PCF85116
-DRAW
-P 2 1 0 0 -300 300 300 300
-P 2 1 0 0 300 300 300 -300
-P 2 1 0 0 300 -300 -300 -300
-P 2 1 0 0 -300 -300 -300 300
-X SCL 6 -400 200 100 R 40 40 1 1 I 
-X SDA 5 -400 100 100 R 40 40 1 1 B 
-X WP 7 -400 -200 100 R 40 40 1 1 I 
-T 1 50 -155 50 0 2 0 GND
-T 1 50 175 50 0 2 0 VCC
-X GND 4 0 -300 200 U 40 40 2 1 W 
-X VCC 8 0 300 200 D 40 40 2 1 W 
-ENDDRAW
-ENDDEF
-
 #End Library

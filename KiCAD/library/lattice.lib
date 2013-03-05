@@ -1,12 +1,7 @@
-EESchema-LIBRARY Version 2.3  29/04/2008-12:22:28
-# Converted with eagle2kicad.ulp Version 0.9
-# Device count = 5
+EESchema-LIBRARY Version 2.3  Date: 25/05/2011 21:47:41
+#encoding utf-8
 #
-# Dev Name: ISP2032
-# Package Name: PLCC-44
-# Dev Tech: ''
-# Dev Prefix: U
-# Gate count = 2
+# ISP2032
 #
 DEF ISP2032 U 0 40 Y Y 2 L N
 # Gate Name: A
@@ -69,13 +64,8 @@ X VCC@1 12 -100 400 300 D 40 40 2 1 W
 X VCC@2 34 100 400 300 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ISP2064
-# Package Name: PLCC-84
-# Dev Tech: ''
-# Dev Prefix: U
-# Gate count = 2
+# ISP2064
 #
 DEF ISP2064 U 0 40 Y Y 2 L N
 # Gate Name: A
@@ -174,13 +164,8 @@ X VCC@1 21 -200 400 300 D 40 40 2 1 W
 X VCC@2 65 0 400 300 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ISPGAL
-# Package Name: PLCC-28
-# Dev Tech: ''
-# Dev Prefix: U
-# Gate count = 2
+# ISPGAL
 #
 DEF ISPGAL U 0 40 Y Y 2 L N
 # Gate Name: A
@@ -225,13 +210,8 @@ X GND 14 -100 -400 300 U 40 40 2 1 W
 X VCC 28 -100 400 300 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ISPHDR
-# Package Name: 1X08
-# Dev Tech: ''
-# Dev Prefix: J
-# Gate count = 1
+# ISPHDR
 #
 DEF ISPHDR J 0 40 Y Y 1 L N
 # Gate Name: A1
@@ -261,13 +241,8 @@ X SDO 7 -100 300 100 R 40 40 1 1 I I
 X VCC 8 -100 400 100 R 40 40 1 1 W I
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ISPRJ45
-# Package Name: RJ45-90
-# Dev Tech: ''
-# Dev Prefix: J
-# Gate count = 1
+# ISPRJ45
 #
 DEF ISPRJ45 J 0 40 Y Y 1 L N
 # Gate Name: A1
@@ -297,5 +272,5 @@ X SDO 2 -100 300 100 R 40 40 1 1 I I
 X VCC 1 -100 400 100 R 40 40 1 1 W I
 ENDDRAW
 ENDDEF
-
+#
 #End Library

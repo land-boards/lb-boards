@@ -1,12 +1,7 @@
-EESchema-LIBRARY Version 2.3  29/04/2008-12:24:00
-# Converted with eagle2kicad.ulp Version 0.9
-# Device count = 38
+EESchema-LIBRARY Version 2.3  Date: 25/05/2011 21:47:41
+#encoding utf-8
 #
-# Dev Name: 2NBS08-7
-# Package Name: SO8
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2NBS08-7
 #
 DEF 2NBS08-7 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -97,13 +92,8 @@ X 7 7 400 100 100 L 40 40 1 1 P
 X 8 8 400 200 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2NBS08-7E
-# Package Name: SO8
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 7
+# 2NBS08-7E
 #
 DEF 2NBS08-7E R 0 40 Y Y 7 L N
 # Gate Name: A
@@ -168,143 +158,8 @@ P 2 7 0 0 90 0 110 20
 X 1 7 -200 0 100 R 40 40 7 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2NBS16-8
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
-#
-DEF 2NBS16-8 R 0 40 Y Y 1 L N
-# Gate Name: B
-# Symbol Name: RX08
-F0 "R" -150 370 50 H V L B
-F1 "2NBS16-8" -180 -540 50 H V L B
-F2 "resistor-bourns-SO16" 0 150 50 H I C C
-DRAW
-P 2 1 0 0 -100 330 -100 270
-P 2 1 0 0 -100 270 100 270
-P 2 1 0 0 100 270 100 330
-P 2 1 0 0 100 330 -100 330
-P 2 1 0 0 -100 230 -100 170
-P 2 1 0 0 -100 170 100 170
-P 2 1 0 0 100 170 100 230
-P 2 1 0 0 100 230 -100 230
-P 2 1 0 0 -100 130 -100 70
-P 2 1 0 0 -100 70 100 70
-P 2 1 0 0 100 70 100 130
-P 2 1 0 0 100 130 -100 130
-P 2 1 0 0 -100 30 -100 -30
-P 2 1 0 0 -100 -30 100 -30
-P 2 1 0 0 100 -30 100 30
-P 2 1 0 0 100 30 -100 30
-P 2 1 0 0 -100 -70 -100 -130
-P 2 1 0 0 -100 -130 100 -130
-P 2 1 0 0 100 -130 100 -70
-P 2 1 0 0 100 -70 -100 -70
-P 2 1 0 0 -100 -170 -100 -230
-P 2 1 0 0 -100 -230 100 -230
-P 2 1 0 0 100 -230 100 -170
-P 2 1 0 0 100 -170 -100 -170
-P 2 1 0 0 -100 -270 -100 -330
-P 2 1 0 0 -100 -330 100 -330
-P 2 1 0 0 100 -330 100 -270
-P 2 1 0 0 100 -270 -100 -270
-P 2 1 0 0 -100 -370 -100 -430
-P 2 1 0 0 -100 -430 100 -430
-P 2 1 0 0 100 -430 100 -370
-P 2 1 0 0 100 -370 -100 -370
-X 1 1 -200 300 100 R 40 40 1 1 P 
-X 2 2 -200 200 100 R 40 40 1 1 P 
-X 3 3 -200 100 100 R 40 40 1 1 P 
-X 4 4 -200 0 100 R 40 40 1 1 P 
-X 5 5 -200 -100 100 R 40 40 1 1 P 
-X 6 6 -200 -200 100 R 40 40 1 1 P 
-X 7 7 -200 -300 100 R 40 40 1 1 P 
-X 8 8 -200 -400 100 R 40 40 1 1 P 
-X 9 9 200 -400 100 L 40 40 1 1 P 
-X 10 10 200 -300 100 L 40 40 1 1 P 
-X 11 11 200 -200 100 L 40 40 1 1 P 
-X 12 12 200 -100 100 L 40 40 1 1 P 
-X 13 13 200 0 100 L 40 40 1 1 P 
-X 14 14 200 100 100 L 40 40 1 1 P 
-X 15 15 200 200 100 L 40 40 1 1 P 
-X 16 16 200 300 100 L 40 40 1 1 P 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: 2NBS16-8E
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 8
-#
-DEF 2NBS16-8E R 0 40 Y Y 8 L N
-# Gate Name: A
-# Symbol Name: R1NV
-F0 "R" -200 -110 50 H V L B
-F1 "2NBS16-8E" 100 -110 50 H V L B
-F2 "resistor-bourns-SO16" 0 150 50 H I C C
-DRAW
-P 2 1 0 0 -100 -30 100 -30
-P 2 1 0 0 100 30 -100 30
-P 2 1 0 0 100 -30 100 30
-P 2 1 0 0 -100 30 -100 -30
-X 1 1 -200 0 100 R 40 40 1 1 P 
-X 2 16 200 0 100 L 40 40 1 1 P 
-P 2 2 0 0 -100 -30 100 -30
-P 2 2 0 0 100 30 -100 30
-P 2 2 0 0 100 -30 100 30
-P 2 2 0 0 -100 30 -100 -30
-X 1 2 -200 0 100 R 40 40 2 1 P 
-X 2 15 200 0 100 L 40 40 2 1 P 
-P 2 3 0 0 -100 -30 100 -30
-P 2 3 0 0 100 30 -100 30
-P 2 3 0 0 100 -30 100 30
-P 2 3 0 0 -100 30 -100 -30
-X 1 3 -200 0 100 R 40 40 3 1 P 
-X 2 14 200 0 100 L 40 40 3 1 P 
-P 2 4 0 0 -100 -30 100 -30
-P 2 4 0 0 100 30 -100 30
-P 2 4 0 0 100 -30 100 30
-P 2 4 0 0 -100 30 -100 -30
-X 1 4 -200 0 100 R 40 40 4 1 P 
-X 2 13 200 0 100 L 40 40 4 1 P 
-P 2 5 0 0 -100 -30 100 -30
-P 2 5 0 0 100 30 -100 30
-P 2 5 0 0 100 -30 100 30
-P 2 5 0 0 -100 30 -100 -30
-X 1 5 -200 0 100 R 40 40 5 1 P 
-X 2 12 200 0 100 L 40 40 5 1 P 
-P 2 6 0 0 -100 -30 100 -30
-P 2 6 0 0 100 30 -100 30
-P 2 6 0 0 100 -30 100 30
-P 2 6 0 0 -100 30 -100 -30
-X 1 6 -200 0 100 R 40 40 6 1 P 
-X 2 11 200 0 100 L 40 40 6 1 P 
-P 2 7 0 0 -100 -30 100 -30
-P 2 7 0 0 100 30 -100 30
-P 2 7 0 0 100 -30 100 30
-P 2 7 0 0 -100 30 -100 -30
-X 1 7 -200 0 100 R 40 40 7 1 P 
-X 2 10 200 0 100 L 40 40 7 1 P 
-P 2 8 0 0 -100 -30 100 -30
-P 2 8 0 0 100 30 -100 30
-P 2 8 0 0 100 -30 100 30
-P 2 8 0 0 -100 30 -100 -30
-X 1 8 -200 0 100 R 40 40 8 1 P 
-X 2 9 200 0 100 L 40 40 8 1 P 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: 2NBS16-15
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2NBS16-15
 #
 DEF 2NBS16-15 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -479,13 +334,8 @@ X 15 15 400 300 100 L 40 40 1 1 P
 X 16 16 400 400 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2NBS16-15E
-# Package Name: SO16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 15
+# 2NBS16-15E
 #
 DEF 2NBS16-15E R 0 40 Y Y 15 L N
 # Gate Name: A
@@ -614,20 +464,15 @@ P 2 15 0 0 90 0 110 20
 X 1 15 -200 0 100 R 40 40 15 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP16-8
-# Package Name: 2QSP16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2NBS16-8
 #
-DEF 2QSP16-8 R 0 40 Y Y 1 L N
-# Gate Name: A
+DEF 2NBS16-8 R 0 40 Y Y 1 L N
+# Gate Name: B
 # Symbol Name: RX08
 F0 "R" -150 370 50 H V L B
-F1 "2QSP16-8" -180 -540 50 H V L B
-F2 "resistor-bourns-2QSP16" 0 150 50 H I C C
+F1 "2NBS16-8" -180 -540 50 H V L B
+F2 "resistor-bourns-SO16" 0 150 50 H I C C
 DRAW
 P 2 1 0 0 -100 330 -100 270
 P 2 1 0 0 -100 270 100 270
@@ -679,20 +524,15 @@ X 15 15 200 200 100 L 40 40 1 1 P
 X 16 16 200 300 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP16-8E
-# Package Name: 2QSP16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 8
+# 2NBS16-8E
 #
-DEF 2QSP16-8E R 0 40 Y Y 8 L N
+DEF 2NBS16-8E R 0 40 Y Y 8 L N
 # Gate Name: A
 # Symbol Name: R1NV
 F0 "R" -200 -110 50 H V L B
-F1 "2QSP16-8E" 100 -110 50 H V L B
-F2 "resistor-bourns-2QSP16" 0 150 50 H I C C
+F1 "2NBS16-8E" 100 -110 50 H V L B
+F2 "resistor-bourns-SO16" 0 150 50 H I C C
 DRAW
 P 2 1 0 0 -100 -30 100 -30
 P 2 1 0 0 100 30 -100 30
@@ -744,13 +584,8 @@ X 1 8 -200 0 100 R 40 40 8 1 P
 X 2 9 200 0 100 L 40 40 8 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP16-15
-# Package Name: 2QSP16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2QSP16-15
 #
 DEF 2QSP16-15 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -925,13 +760,8 @@ X 15 15 400 300 100 L 40 40 1 1 P
 X 16 16 400 400 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP16-15E
-# Package Name: 2QSP16
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 15
+# 2QSP16-15E
 #
 DEF 2QSP16-15E R 0 40 Y Y 15 L N
 # Gate Name: A
@@ -1060,13 +890,128 @@ P 2 15 0 0 90 0 110 20
 X 1 15 -200 0 100 R 40 40 15 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP20-10
-# Package Name: 2QSP20
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2QSP16-8
+#
+DEF 2QSP16-8 R 0 40 Y Y 1 L N
+# Gate Name: A
+# Symbol Name: RX08
+F0 "R" -150 370 50 H V L B
+F1 "2QSP16-8" -180 -540 50 H V L B
+F2 "resistor-bourns-2QSP16" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -100 330 -100 270
+P 2 1 0 0 -100 270 100 270
+P 2 1 0 0 100 270 100 330
+P 2 1 0 0 100 330 -100 330
+P 2 1 0 0 -100 230 -100 170
+P 2 1 0 0 -100 170 100 170
+P 2 1 0 0 100 170 100 230
+P 2 1 0 0 100 230 -100 230
+P 2 1 0 0 -100 130 -100 70
+P 2 1 0 0 -100 70 100 70
+P 2 1 0 0 100 70 100 130
+P 2 1 0 0 100 130 -100 130
+P 2 1 0 0 -100 30 -100 -30
+P 2 1 0 0 -100 -30 100 -30
+P 2 1 0 0 100 -30 100 30
+P 2 1 0 0 100 30 -100 30
+P 2 1 0 0 -100 -70 -100 -130
+P 2 1 0 0 -100 -130 100 -130
+P 2 1 0 0 100 -130 100 -70
+P 2 1 0 0 100 -70 -100 -70
+P 2 1 0 0 -100 -170 -100 -230
+P 2 1 0 0 -100 -230 100 -230
+P 2 1 0 0 100 -230 100 -170
+P 2 1 0 0 100 -170 -100 -170
+P 2 1 0 0 -100 -270 -100 -330
+P 2 1 0 0 -100 -330 100 -330
+P 2 1 0 0 100 -330 100 -270
+P 2 1 0 0 100 -270 -100 -270
+P 2 1 0 0 -100 -370 -100 -430
+P 2 1 0 0 -100 -430 100 -430
+P 2 1 0 0 100 -430 100 -370
+P 2 1 0 0 100 -370 -100 -370
+X 1 1 -200 300 100 R 40 40 1 1 P 
+X 2 2 -200 200 100 R 40 40 1 1 P 
+X 3 3 -200 100 100 R 40 40 1 1 P 
+X 4 4 -200 0 100 R 40 40 1 1 P 
+X 5 5 -200 -100 100 R 40 40 1 1 P 
+X 6 6 -200 -200 100 R 40 40 1 1 P 
+X 7 7 -200 -300 100 R 40 40 1 1 P 
+X 8 8 -200 -400 100 R 40 40 1 1 P 
+X 9 9 200 -400 100 L 40 40 1 1 P 
+X 10 10 200 -300 100 L 40 40 1 1 P 
+X 11 11 200 -200 100 L 40 40 1 1 P 
+X 12 12 200 -100 100 L 40 40 1 1 P 
+X 13 13 200 0 100 L 40 40 1 1 P 
+X 14 14 200 100 100 L 40 40 1 1 P 
+X 15 15 200 200 100 L 40 40 1 1 P 
+X 16 16 200 300 100 L 40 40 1 1 P 
+ENDDRAW
+ENDDEF
+#
+# 2QSP16-8E
+#
+DEF 2QSP16-8E R 0 40 Y Y 8 L N
+# Gate Name: A
+# Symbol Name: R1NV
+F0 "R" -200 -110 50 H V L B
+F1 "2QSP16-8E" 100 -110 50 H V L B
+F2 "resistor-bourns-2QSP16" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -100 -30 100 -30
+P 2 1 0 0 100 30 -100 30
+P 2 1 0 0 100 -30 100 30
+P 2 1 0 0 -100 30 -100 -30
+X 1 1 -200 0 100 R 40 40 1 1 P 
+X 2 16 200 0 100 L 40 40 1 1 P 
+P 2 2 0 0 -100 -30 100 -30
+P 2 2 0 0 100 30 -100 30
+P 2 2 0 0 100 -30 100 30
+P 2 2 0 0 -100 30 -100 -30
+X 1 2 -200 0 100 R 40 40 2 1 P 
+X 2 15 200 0 100 L 40 40 2 1 P 
+P 2 3 0 0 -100 -30 100 -30
+P 2 3 0 0 100 30 -100 30
+P 2 3 0 0 100 -30 100 30
+P 2 3 0 0 -100 30 -100 -30
+X 1 3 -200 0 100 R 40 40 3 1 P 
+X 2 14 200 0 100 L 40 40 3 1 P 
+P 2 4 0 0 -100 -30 100 -30
+P 2 4 0 0 100 30 -100 30
+P 2 4 0 0 100 -30 100 30
+P 2 4 0 0 -100 30 -100 -30
+X 1 4 -200 0 100 R 40 40 4 1 P 
+X 2 13 200 0 100 L 40 40 4 1 P 
+P 2 5 0 0 -100 -30 100 -30
+P 2 5 0 0 100 30 -100 30
+P 2 5 0 0 100 -30 100 30
+P 2 5 0 0 -100 30 -100 -30
+X 1 5 -200 0 100 R 40 40 5 1 P 
+X 2 12 200 0 100 L 40 40 5 1 P 
+P 2 6 0 0 -100 -30 100 -30
+P 2 6 0 0 100 30 -100 30
+P 2 6 0 0 100 -30 100 30
+P 2 6 0 0 -100 30 -100 -30
+X 1 6 -200 0 100 R 40 40 6 1 P 
+X 2 11 200 0 100 L 40 40 6 1 P 
+P 2 7 0 0 -100 -30 100 -30
+P 2 7 0 0 100 30 -100 30
+P 2 7 0 0 100 -30 100 30
+P 2 7 0 0 -100 30 -100 -30
+X 1 7 -200 0 100 R 40 40 7 1 P 
+X 2 10 200 0 100 L 40 40 7 1 P 
+P 2 8 0 0 -100 -30 100 -30
+P 2 8 0 0 100 30 -100 30
+P 2 8 0 0 100 -30 100 30
+P 2 8 0 0 -100 30 -100 -30
+X 1 8 -200 0 100 R 40 40 8 1 P 
+X 2 9 200 0 100 L 40 40 8 1 P 
+ENDDRAW
+ENDDEF
+#
+# 2QSP20-10
 #
 DEF 2QSP20-10 R 0 40 Y Y 1 L N
 # Gate Name: A
@@ -1137,13 +1082,8 @@ X 31 19 200 -500 100 L 40 40 1 1 P
 X 32 20 200 -400 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP20-10E
-# Package Name: 2QSP20
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 10
+# 2QSP20-10E
 #
 DEF 2QSP20-10E R 0 40 Y Y 10 L N
 # Gate Name: A
@@ -1214,13 +1154,8 @@ X 1 10 -200 0 100 R 40 40 10 1 P
 X 2 11 200 0 100 L 40 40 10 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP20-19
-# Package Name: 2QSP20
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 2QSP20-19
 #
 DEF 2QSP20-19 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1435,13 +1370,8 @@ X 19 19 400 300 100 L 40 40 1 1 P
 X 20 20 400 400 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 2QSP20-19E
-# Package Name: 2QSP20
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 19
+# 2QSP20-19E
 #
 DEF 2QSP20-19E R 0 40 Y Y 19 L N
 # Gate Name: A
@@ -1602,13 +1532,8 @@ P 2 19 0 0 90 0 110 20
 X 1 19 -200 0 100 R 40 40 19 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266
-# Package Name: P250SQ
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 3266
 #
 DEF 3266 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1636,13 +1561,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-101
-# Package Name: P250SQ
-# Dev Tech: P-1-101
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-101
 #
 DEF 3266P-1-101 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1670,13 +1590,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-102
-# Package Name: P250SQ
-# Dev Tech: P-1-102
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-102
 #
 DEF 3266P-1-102 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1704,13 +1619,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-103
-# Package Name: P250SQ
-# Dev Tech: P-1-103
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-103
 #
 DEF 3266P-1-103 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1738,13 +1648,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-104
-# Package Name: P250SQ
-# Dev Tech: P-1-104
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-104
 #
 DEF 3266P-1-104 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1772,13 +1677,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-105
-# Package Name: P250SQ
-# Dev Tech: P-1-105
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-105
 #
 DEF 3266P-1-105 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1806,13 +1706,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-200
-# Package Name: P250SQ
-# Dev Tech: P-1-200
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-200
 #
 DEF 3266P-1-200 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1840,13 +1735,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-201
-# Package Name: P250SQ
-# Dev Tech: P-1-201
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-201
 #
 DEF 3266P-1-201 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1874,13 +1764,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-202
-# Package Name: P250SQ
-# Dev Tech: P-1-202
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-202
 #
 DEF 3266P-1-202 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1908,13 +1793,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-203
-# Package Name: P250SQ
-# Dev Tech: P-1-203
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-203
 #
 DEF 3266P-1-203 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1942,13 +1822,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-204
-# Package Name: P250SQ
-# Dev Tech: P-1-204
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-204
 #
 DEF 3266P-1-204 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1976,13 +1851,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-253
-# Package Name: P250SQ
-# Dev Tech: P-1-253
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-253
 #
 DEF 3266P-1-253 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2010,13 +1880,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-254
-# Package Name: P250SQ
-# Dev Tech: P-1-254
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-254
 #
 DEF 3266P-1-254 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2044,13 +1909,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-500
-# Package Name: P250SQ
-# Dev Tech: P-1-500
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-500
 #
 DEF 3266P-1-500 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2078,13 +1938,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-501
-# Package Name: P250SQ
-# Dev Tech: P-1-501
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-501
 #
 DEF 3266P-1-501 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2112,13 +1967,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-502
-# Package Name: P250SQ
-# Dev Tech: P-1-502
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-502
 #
 DEF 3266P-1-502 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2146,13 +1996,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-503
-# Package Name: P250SQ
-# Dev Tech: P-1-503
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-503
 #
 DEF 3266P-1-503 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2180,13 +2025,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 3266P-1-504
-# Package Name: P250SQ
-# Dev Tech: P-1-504
-# Dev Prefix: R
-# Gate count = 1
+# 3266P-1-504
 #
 DEF 3266P-1-504 R 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2214,13 +2054,8 @@ X 2 2 -200 0 100 R 40 40 1 1 P
 X 3 3 0 300 100 D 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4814P-T01
-# Package Name: 4814P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 4814P-T01
 #
 DEF 4814P-T01 R 0 40 Y Y 1 L N
 # Gate Name: A
@@ -2273,13 +2108,8 @@ X 13 13 200 200 100 L 40 40 1 1 P
 X 14 14 200 300 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4814P-T01E
-# Package Name: 4814P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 7
+# 4814P-T01E
 #
 DEF 4814P-T01E R 0 40 Y Y 7 L N
 # Gate Name: A
@@ -2332,13 +2162,8 @@ X 1 7 -200 0 100 R 40 40 7 1 P
 X 2 8 200 0 100 L 40 40 7 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4816P-T01
-# Package Name: 4816P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 4816P-T01
 #
 DEF 4816P-T01 R 0 40 Y Y 1 L N
 # Gate Name: A
@@ -2397,13 +2222,8 @@ X 15 15 200 200 100 L 40 40 1 1 P
 X 16 16 200 300 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4816P-T01E
-# Package Name: 4816P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 8
+# 4816P-T01E
 #
 DEF 4816P-T01E R 0 40 Y Y 8 L N
 # Gate Name: A
@@ -2462,13 +2282,8 @@ X 1 8 -200 0 100 R 40 40 8 1 P
 X 2 9 200 0 100 L 40 40 8 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4816P-T02
-# Package Name: 4816P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 1
+# 4816P-T02
 #
 DEF 4816P-T02 R 0 40 Y Y 1 L N
 # Gate Name: A
@@ -2643,13 +2458,8 @@ X 15 15 400 300 100 L 40 40 1 1 P
 X 16 16 400 400 100 L 40 40 1 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: 4816P-TO2E
-# Package Name: 4816P
-# Dev Tech: ''
-# Dev Prefix: R
-# Gate count = 15
+# 4816P-TO2E
 #
 DEF 4816P-TO2E R 0 40 Y Y 15 L N
 # Gate Name: A
@@ -2778,5 +2588,5 @@ P 2 15 0 0 90 0 110 20
 X 1 15 -200 0 100 R 40 40 15 1 P 
 ENDDRAW
 ENDDEF
-
+#
 #End Library

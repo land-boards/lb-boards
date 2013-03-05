@@ -1,12 +1,7 @@
-EESchema-LIBRARY Version 2.3  29/04/2008-12:24:03
-# Converted with eagle2kicad.ulp Version 0.9
-# Device count = 54
+EESchema-LIBRARY Version 2.3  Date: 25/05/2011 21:47:41
+#encoding utf-8
 #
-# Dev Name: DA108S1
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: D
-# Gate count = 6
+# DA108S1
 #
 DEF DA108S1 D 0 40 Y Y 6 L N
 # Gate Name: -1
@@ -87,13 +82,8 @@ X REF1 7 0 -300 200 U 40 40 6 1 P
 X REF2 6 0 300 200 D 40 40 6 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: DA112S1
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: D
-# Gate count = 7
+# DA112S1
 #
 DEF DA112S1 D 0 40 Y Y 7 L N
 # Gate Name: -1
@@ -207,13 +197,8 @@ X REF1 8 0 -300 200 U 40 40 7 1 P
 X REF2 6 0 300 200 D 40 40 7 1 P 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L293D
-# Package Name: DIL16
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L293D
 #
 DEF L293D IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -244,13 +229,8 @@ X VCC1 16 600 700 200 L 40 40 1 1 W
 X VCC2 8 -600 -700 200 R 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L297
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L297
 #
 DEF L297 IC 0 40 Y Y 1 L N
 # Gate Name: L297
@@ -285,13 +265,8 @@ X VCC 12 -700 600 200 R 40 40 1 1 W
 X VREF 15 700 400 200 L 40 40 1 1 I 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L298
-# Package Name: MULTIWATT-15
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L298
 #
 DEF L298 IC 0 40 Y Y 1 L N
 # Gate Name: L298
@@ -321,91 +296,8 @@ X VCC 9 -600 600 100 R 40 40 1 1 W
 X VS 4 600 600 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6201
-# Package Name: SO20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
-#
-DEF L6201 IC 0 40 Y Y 1 L N
-# Gate Name: G$1
-# Symbol Name: L620X
-F0 "IC" -600 350 50 H V L B
-F1 "L6201" -600 -500 50 H V L B
-F2 "st-microelectronics-SO20" 0 150 50 H I C C
-DRAW
-P 2 1 0 0 -600 300 700 300
-P 2 1 0 0 700 300 700 -400
-P 2 1 0 0 700 -400 -600 -400
-P 2 1 0 0 -600 -400 -600 300
-T 0 410 240 60 0 1 0 VS
-T 0 420 -330 60 0 1 0 GND
-X CBOOT1 12 800 100 100 L 40 40 1 1 I 
-X CBOOT2 19 800 -200 100 L 40 40 1 1 I 
-X ENABLE 2 -700 100 100 R 40 40 1 1 I 
-X GND 4 600 -500 100 U 40 40 1 1 W 
-X GND@1 5 500 -500 100 U 40 40 1 1 W 
-X GND@2 6 400 -500 100 U 40 40 1 1 W 
-X GND@3 14 300 -500 100 U 40 40 1 1 W 
-X GND@4 15 200 -500 100 U 40 40 1 1 W 
-X GND@5 16 100 -500 100 U 40 40 1 1 W 
-X IN1 13 -700 0 100 R 40 40 1 1 I 
-X IN2 18 -700 -100 100 R 40 40 1 1 I 
-X OUT1 11 800 0 100 L 40 40 1 1 O 
-X OUT2 9 800 -100 100 L 40 40 1 1 O 
-X SENSE 1 -700 -200 100 R 40 40 1 1 I 
-X VREF 20 -700 200 100 R 40 40 1 1 I 
-X VS 10 400 400 100 D 40 40 1 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: L6202
-# Package Name: DIL18
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
-#
-DEF L6202 IC 0 40 Y Y 1 L N
-# Gate Name: G$1
-# Symbol Name: L620X
-F0 "IC" -600 350 50 H V L B
-F1 "L6202" -600 -500 50 H V L B
-F2 "st-microelectronics-DIL18" 0 150 50 H I C C
-DRAW
-P 2 1 0 0 -600 300 700 300
-P 2 1 0 0 700 300 700 -400
-P 2 1 0 0 700 -400 -600 -400
-P 2 1 0 0 -600 -400 -600 300
-T 0 410 240 60 0 1 0 VS
-T 0 420 -330 60 0 1 0 GND
-X CBOOT1 11 800 100 100 L 40 40 1 1 I 
-X CBOOT2 17 800 -200 100 L 40 40 1 1 I 
-X ENABLE 2 -700 100 100 R 40 40 1 1 I 
-X GND 4 600 -500 100 U 40 40 1 1 W 
-X GND@1 5 500 -500 100 U 40 40 1 1 W 
-X GND@2 6 400 -500 100 U 40 40 1 1 W 
-X GND@3 13 300 -500 100 U 40 40 1 1 W 
-X GND@4 14 200 -500 100 U 40 40 1 1 W 
-X GND@5 15 100 -500 100 U 40 40 1 1 W 
-X IN1 12 -700 0 100 R 40 40 1 1 I 
-X IN2 16 -700 -100 100 R 40 40 1 1 I 
-X OUT1 10 800 0 100 L 40 40 1 1 O 
-X OUT2 8 800 -100 100 L 40 40 1 1 O 
-X SENSE 1 -700 -200 100 R 40 40 1 1 I 
-X VREF 18 -700 200 100 R 40 40 1 1 I 
-X VS 9 400 400 100 D 40 40 1 1 W 
-ENDDRAW
-ENDDEF
-
-#
-# Dev Name: L6114
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 6
+# L6114
 #
 DEF L6114 IC 0 40 Y Y 6 L N
 # Gate Name: G$1
@@ -442,13 +334,8 @@ X GND 19 0 -100 100 U 40 40 5 1 W
 X GND 20 0 -100 100 U 40 40 6 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6115
-# Package Name: MULTIWATT-15
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6115
 #
 DEF L6115 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -480,13 +367,8 @@ X S4 15 600 -600 100 L 40 40 1 1 P
 X VCC 5 200 800 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6122
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 6
+# L6122
 #
 DEF L6122 IC 0 40 Y Y 6 L N
 # Gate Name: G$1
@@ -520,13 +402,8 @@ X GND 19 0 -100 100 U 40 40 5 1 W
 X GND 20 0 -100 100 U 40 40 6 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6123
-# Package Name: MULTIWATT-15
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6123
 #
 DEF L6123 IC 0 40 Y Y 1 L N
 # Gate Name: P1
@@ -555,13 +432,42 @@ X S3 5 600 -300 100 L 40 40 1 1 P
 X VCC 6 200 700 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6201PS
-# Package Name: POWERSO-20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6201
+#
+DEF L6201 IC 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: L620X
+F0 "IC" -600 350 50 H V L B
+F1 "L6201" -600 -500 50 H V L B
+F2 "st-microelectronics-SO20" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -600 300 700 300
+P 2 1 0 0 700 300 700 -400
+P 2 1 0 0 700 -400 -600 -400
+P 2 1 0 0 -600 -400 -600 300
+T 0 410 240 60 0 1 0 VS
+T 0 420 -330 60 0 1 0 GND
+X CBOOT1 12 800 100 100 L 40 40 1 1 I 
+X CBOOT2 19 800 -200 100 L 40 40 1 1 I 
+X ENABLE 2 -700 100 100 R 40 40 1 1 I 
+X GND 4 600 -500 100 U 40 40 1 1 W 
+X GND@1 5 500 -500 100 U 40 40 1 1 W 
+X GND@2 6 400 -500 100 U 40 40 1 1 W 
+X GND@3 14 300 -500 100 U 40 40 1 1 W 
+X GND@4 15 200 -500 100 U 40 40 1 1 W 
+X GND@5 16 100 -500 100 U 40 40 1 1 W 
+X IN1 13 -700 0 100 R 40 40 1 1 I 
+X IN2 18 -700 -100 100 R 40 40 1 1 I 
+X OUT1 11 800 0 100 L 40 40 1 1 O 
+X OUT2 9 800 -100 100 L 40 40 1 1 O 
+X SENSE 1 -700 -200 100 R 40 40 1 1 I 
+X VREF 20 -700 200 100 R 40 40 1 1 I 
+X VS 10 400 400 100 D 40 40 1 1 W 
+ENDDRAW
+ENDDEF
+#
+# L6201PS
 #
 DEF L6201PS IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -592,13 +498,42 @@ X VREF 15 -600 200 100 R 40 40 1 1 I
 X VS 5 200 400 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6203
-# Package Name: MULTIWATT-11
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6202
+#
+DEF L6202 IC 0 40 Y Y 1 L N
+# Gate Name: G$1
+# Symbol Name: L620X
+F0 "IC" -600 350 50 H V L B
+F1 "L6202" -600 -500 50 H V L B
+F2 "st-microelectronics-DIL18" 0 150 50 H I C C
+DRAW
+P 2 1 0 0 -600 300 700 300
+P 2 1 0 0 700 300 700 -400
+P 2 1 0 0 700 -400 -600 -400
+P 2 1 0 0 -600 -400 -600 300
+T 0 410 240 60 0 1 0 VS
+T 0 420 -330 60 0 1 0 GND
+X CBOOT1 11 800 100 100 L 40 40 1 1 I 
+X CBOOT2 17 800 -200 100 L 40 40 1 1 I 
+X ENABLE 2 -700 100 100 R 40 40 1 1 I 
+X GND 4 600 -500 100 U 40 40 1 1 W 
+X GND@1 5 500 -500 100 U 40 40 1 1 W 
+X GND@2 6 400 -500 100 U 40 40 1 1 W 
+X GND@3 13 300 -500 100 U 40 40 1 1 W 
+X GND@4 14 200 -500 100 U 40 40 1 1 W 
+X GND@5 15 100 -500 100 U 40 40 1 1 W 
+X IN1 12 -700 0 100 R 40 40 1 1 I 
+X IN2 16 -700 -100 100 R 40 40 1 1 I 
+X OUT1 10 800 0 100 L 40 40 1 1 O 
+X OUT2 8 800 -100 100 L 40 40 1 1 O 
+X SENSE 1 -700 -200 100 R 40 40 1 1 I 
+X VREF 18 -700 200 100 R 40 40 1 1 I 
+X VS 9 400 400 100 D 40 40 1 1 W 
+ENDDRAW
+ENDDEF
+#
+# L6203
 #
 DEF L6203 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -626,13 +561,8 @@ X VREF 9 -600 200 100 R 40 40 1 1 I
 X VS 2 200 400 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6204
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6204
 #
 DEF L6204 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -670,13 +600,8 @@ X VS1 17 300 700 100 D 40 40 1 1 W
 X VS2 14 500 700 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6204D
-# Package Name: SO28
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6204D
 #
 DEF L6204D IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -714,13 +639,8 @@ X VS1 23 300 700 100 D 40 40 1 1 W
 X VS2 20 500 700 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6205D
-# Package Name: SO20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6205D
 #
 DEF L6205D IC 0 40 Y Y 1 L N
 # Gate Name: P1
@@ -756,13 +676,8 @@ X VS_A 17 700 300 100 L 40 40 1 1 W
 X VS_B 14 700 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6205N
-# Package Name: DIL20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6205N
 #
 DEF L6205N IC 0 40 Y Y 1 L N
 # Gate Name: P1
@@ -798,13 +713,8 @@ X VS_A 17 700 300 100 L 40 40 1 1 W
 X VS_B 14 700 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6205PD
-# Package Name: POWERSO-20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6205PD
 #
 DEF L6205PD IC 0 40 Y Y 1 L N
 # Gate Name: P1
@@ -840,13 +750,8 @@ X VS_A 2 700 300 100 L 40 40 1 1 W
 X VS_B 19 700 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6207D
-# Package Name: SO24W
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6207D
 #
 DEF L6207D IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -886,13 +791,8 @@ X VS_A 20 600 500 100 L 40 40 1 1 W
 X VS_B 17 600 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6207N
-# Package Name: DIL24S
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6207N
 #
 DEF L6207N IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -932,13 +832,8 @@ X VS_A 20 600 500 100 L 40 40 1 1 W
 X VS_B 17 600 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L6207PSO36
-# Package Name: POWERSO-36
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L6207PSO36
 #
 DEF L6207PSO36 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -978,13 +873,8 @@ X VS_A 4 600 500 100 L 40 40 1 1 W
 X VS_B 33 600 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: L9637D
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# L9637D
 #
 DEF L9637D IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1007,13 +897,8 @@ X VCC 3 400 400 100 L 40 40 1 1 W
 X VS 7 -400 400 100 R 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: M29F400M
-# Package Name: SO44
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 5
+# M29F400M
 #
 DEF M29F400M IC 0 40 Y Y 5 L N
 # Gate Name: G$1
@@ -1072,13 +957,8 @@ X NC 1 100 0 100 L 40 40 4 1 U
 X VCC 23 0 100 100 D 40 40 5 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: M29F400T
-# Package Name: TSOP48
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 9
+# M29F400T
 #
 DEF M29F400T IC 0 40 Y Y 9 L N
 # Gate Name: G$1
@@ -1141,13 +1021,8 @@ X GND 27 0 -100 100 U 40 40 8 1 W
 X GND 46 0 -100 100 U 40 40 9 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: M68AW128MND
-# Package Name: TSOP44-II
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# M68AW128MND
 #
 DEF M68AW128MND IC 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -1206,13 +1081,8 @@ X VSS@1 12 -100 -300 100 U 40 40 2 1 W
 X VSS@2 34 100 -300 100 U 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: M68AW128MZB
-# Package Name: TFBGA48
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# M68AW128MZB
 #
 DEF M68AW128MZB IC 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -1271,13 +1141,8 @@ X VSS@1 D1 -100 -300 100 U 40 40 2 1 W
 X VSS@2 E6 100 -300 100 U 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: NE555
-# Package Name: DIL-08
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# NE555
 #
 DEF NE555 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1300,13 +1165,8 @@ X TRI 2 -400 -300 100 R 40 40 1 1 I
 X VCC+ 8 400 300 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: NE556
-# Package Name: DIL14
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# NE556
 #
 DEF NE556 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -1341,13 +1201,8 @@ X TRIG2 8 -500 -600 100 R 40 40 1 1 I
 X VCC 14 500 -200 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ST10F168
-# Package Name: PQFP144-28X28
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 30
+# ST10F168
 #
 DEF ST10F168 IC 0 40 Y Y 30 L N
 # Gate Name: P0
@@ -1542,13 +1397,8 @@ X XTAL1 138 -500 700 200 R 40 40 30 1 I
 X XTAL2 137 -500 400 200 R 40 40 30 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ST95P08B
-# Package Name: DIL-08
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# ST95P08B
 #
 DEF ST95P08B IC 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -1573,13 +1423,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: ST95P08M
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# ST95P08M
 #
 DEF ST95P08M IC 0 40 Y Y 2 L N
 # Gate Name: G$1
@@ -1604,13 +1449,8 @@ X GND 4 0 -300 200 U 40 40 2 1 W
 X VCC 8 0 300 200 D 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STA013S
-# Package Name: SO28W
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# STA013S
 #
 DEF STA013S IC 0 40 Y Y 2 L N
 # Gate Name: A
@@ -1657,13 +1497,8 @@ X VSS_4 22 500 -700 100 L 40 40 2 1 W
 X VSS_5 27 500 -800 100 L 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STA013TS
-# Package Name: TQFP44
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 18
+# STA013TS
 #
 DEF STA013TS IC 0 40 Y Y 18 L N
 # Gate Name: A
@@ -1726,13 +1561,8 @@ X NC 41 100 0 100 L 40 40 17 1 U
 X NC 43 100 0 100 L 40 40 18 1 U 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STA015
-# Package Name: SO28W
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 2
+# STA015
 #
 DEF STA015 IC 0 40 Y Y 2 L N
 # Gate Name: A
@@ -1779,13 +1609,8 @@ X VSS_3 15 500 -300 100 L 40 40 2 1 W
 X VSS_4 22 500 -700 100 L 40 40 2 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STA015TS
-# Package Name: TQFP44
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 6
+# STA015TS
 #
 DEF STA015TS IC 0 40 Y Y 6 L N
 # Gate Name: A
@@ -1848,13 +1673,8 @@ X NC 17 100 0 100 L 40 40 5 1 U
 X NC 23 100 0 100 L 40 40 6 1 U 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STPCC0166B
-# Package Name: PBGA-388
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 105
+# STPCC0166B
 #
 DEF STPCC0166B IC 0 40 Y Y 105 L N
 # Gate Name: A
@@ -2281,13 +2101,8 @@ X VSS AF26 0 -100 100 U 40 40 104 1 W
 X VSS A2 0 -100 100 U 40 40 105 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5348
-# Package Name: DIL28-6
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# STV5348
 #
 DEF STV5348 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2330,13 +2145,8 @@ X XTO 23 -800 0 200 R 40 40 1 1 O
 X Y 15 800 100 200 L 40 40 1 1 C 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5348/H
-# Package Name: DIL28-6
-# Dev Tech: /H
-# Dev Prefix: IC
-# Gate count = 1
+# STV5348/H
 #
 DEF STV5348/H IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2379,13 +2189,8 @@ X XTO 23 -800 0 200 R 40 40 1 1 O
 X Y 15 800 100 200 L 40 40 1 1 C 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5348/T
-# Package Name: DIL28-6
-# Dev Tech: /T
-# Dev Prefix: IC
-# Gate count = 1
+# STV5348/T
 #
 DEF STV5348/T IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2428,13 +2233,8 @@ X XTO 23 -800 0 200 R 40 40 1 1 O
 X Y 15 800 100 200 L 40 40 1 1 C 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5348D
-# Package Name: SO28W
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# STV5348D
 #
 DEF STV5348D IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2477,13 +2277,8 @@ X XTO 23 -800 0 200 R 40 40 1 1 O
 X Y 15 800 100 200 L 40 40 1 1 C 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5348D/T
-# Package Name: SO28W
-# Dev Tech: /T
-# Dev Prefix: IC
-# Gate count = 1
+# STV5348D/T
 #
 DEF STV5348D/T IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2526,13 +2321,8 @@ X XTO 23 -800 0 200 R 40 40 1 1 O
 X Y 15 800 100 200 L 40 40 1 1 C 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: STV5730A
-# Package Name: SO28W
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# STV5730A
 #
 DEF STV5730A IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2575,13 +2365,8 @@ X YIN 28 -700 -200 100 R 40 40 1 1 I
 X YOUT 1 700 -300 100 L 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: TEA3718DP
-# Package Name: DIL16
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 4
+# TEA3718DP
 #
 DEF TEA3718DP IC 0 40 Y Y 4 L N
 # Gate Name: G$1
@@ -2612,13 +2397,8 @@ X GND 12 0 -100 100 U 40 40 3 1 W
 X GND 13 0 -100 100 U 40 40 4 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: TEA3718SDP
-# Package Name: DIL16
-# Dev Tech: S
-# Dev Prefix: IC
-# Gate count = 4
+# TEA3718SDP
 #
 DEF TEA3718SDP IC 0 40 Y Y 4 L N
 # Gate Name: G$1
@@ -2649,13 +2429,8 @@ X GND 12 0 -100 100 U 40 40 3 1 W
 X GND 13 0 -100 100 U 40 40 4 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: TEA3718SFP
-# Package Name: SO20
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 4
+# TEA3718SFP
 #
 DEF TEA3718SFP IC 0 40 Y Y 4 L N
 # Gate Name: .
@@ -2687,13 +2462,8 @@ X GND 15 0 -100 100 U 40 40 3 1 W
 X GND 16 0 -100 100 U 40 40 4 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: TEA3718SP
-# Package Name: MULTIWATT-15
-# Dev Tech: S
-# Dev Prefix: IC
-# Gate count = 1
+# TEA3718SP
 #
 DEF TEA3718SP IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2722,13 +2492,8 @@ X VSB 15 700 -100 100 L 40 40 1 1 W
 X VSS 1 -600 400 100 R 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: UPSD3253B-40T6
-# Package Name: TQFP-10X10-52
-# Dev Tech: 3B-40
-# Dev Prefix: IC
-# Gate count = 1
+# UPSD3253B-40T6
 #
 DEF UPSD3253B-40T6 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2795,13 +2560,8 @@ X XTAL1 31 -600 1700 100 R 40 40 1 1 I
 X XTAL2 32 -600 1600 100 R 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: UPSD3253BV-24T6
-# Package Name: TQFP-10X10-52
-# Dev Tech: 3BV-24
-# Dev Prefix: IC
-# Gate count = 1
+# UPSD3253BV-24T6
 #
 DEF UPSD3253BV-24T6 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2868,13 +2628,8 @@ X XTAL1 31 -600 1700 100 R 40 40 1 1 I
 X XTAL2 32 -600 1600 100 R 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: UPSD3254A-40T6
-# Package Name: TQFP-10X10-52
-# Dev Tech: 4A-40
-# Dev Prefix: IC
-# Gate count = 1
+# UPSD3254A-40T6
 #
 DEF UPSD3254A-40T6 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -2941,13 +2696,8 @@ X XTAL1 31 -600 1700 100 R 40 40 1 1 I
 X XTAL2 32 -600 1600 100 R 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: UPSD3254A-40U6
-# Package Name: TQFP-12X12-80
-# Dev Tech: A-40
-# Dev Prefix: IC
-# Gate count = 1
+# UPSD3254A-40U6
 #
 DEF UPSD3254A-40U6 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -3039,13 +2789,8 @@ X XTAL1 48 -600 1800 100 R 40 40 1 1 I
 X XTAL2 49 -600 1600 100 R 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: UPSD3254BV-24U6
-# Package Name: TQFP-12X12-80
-# Dev Tech: BV-24
-# Dev Prefix: IC
-# Gate count = 1
+# UPSD3254BV-24U6
 #
 DEF UPSD3254BV-24U6 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -3137,13 +2882,8 @@ X XTAL1 48 -600 1800 100 R 40 40 1 1 I
 X XTAL2 49 -600 1600 100 R 40 40 1 1 O 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: USB6B1
-# Package Name: SO08
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# USB6B1
 #
 DEF USB6B1 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -3178,13 +2918,8 @@ X VCC 1 -300 100 100 R 40 40 1 1 W
 X VCC@2 8 300 100 100 L 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: VN460SP
-# Package Name: POWER-SO10
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# VN460SP
 #
 DEF VN460SP IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -3209,13 +2944,8 @@ X ST 8 -400 -300 100 R 40 40 1 1 I
 X VCC P 100 400 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
 #
-# Dev Name: VNH3SP30
-# Package Name: MULTIPOWERSO-30
-# Dev Tech: ''
-# Dev Prefix: IC
-# Gate count = 1
+# VNH3SP30
 #
 DEF VNH3SP30 IC 0 40 Y Y 1 L N
 # Gate Name: G$1
@@ -3261,5 +2991,5 @@ X VCC@3 VCC 200 700 100 D 40 40 1 1 W
 X VCC@4 VCC@1 300 700 100 D 40 40 1 1 W 
 ENDDRAW
 ENDDEF
-
+#
 #End Library
