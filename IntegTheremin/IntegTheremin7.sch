@@ -1,15 +1,15 @@
-EESchema Schematic File Version 2  date Fri 01 Mar 2013 08:56:25 PM EST
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 06/03/2013 13:05:27
 LIBS:power
 LIBS:device
+LIBS:DougsSch
 LIBS:IntegTheremin-cache
-EELAYER 25  0
+EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "FTDI Interface"
-Date "2 mar 2013"
+Date "6 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -129,6 +129,7 @@ P 4300 2250
 F 0 "C10" H 4350 2350 50  0000 L CNN
 F 1 "10uF" H 4350 2150 50  0000 L CNN
 F 2 "SM1206" H 4300 2250 60  0001 C CNN
+F 3 "" H 4300 2250 60  0001 C CNN
 	1    4300 2250
 	1    0    0    -1  
 $EndComp
@@ -139,6 +140,7 @@ P 4600 2250
 F 0 "C11" H 4650 2350 50  0000 L CNN
 F 1 "0.1uF" H 4650 2150 50  0000 L CNN
 F 2 "SM0805" H 4600 2250 60  0001 C CNN
+F 3 "" H 4600 2250 60  0001 C CNN
 	1    4600 2250
 	1    0    0    -1  
 $EndComp
@@ -148,6 +150,8 @@ U 1 1 50FC0BB0
 P 6500 4850
 F 0 "#PWR01" H 6500 4850 30  0001 C CNN
 F 1 "GND" H 6500 4780 30  0001 C CNN
+F 2 "" H 6500 4850 60  0001 C CNN
+F 3 "" H 6500 4850 60  0001 C CNN
 	1    6500 4850
 	1    0    0    -1  
 $EndComp
@@ -158,6 +162,7 @@ P 3550 3300
 F 0 "J3" H 3650 4050 60  0000 C CNN
 F 1 "USB-B" H 3750 3400 60  0000 C CNN
 F 2 "USB-B-MINI" H 3550 3300 60  0001 C CNN
+F 3 "" H 3550 3300 60  0001 C CNN
 	1    3550 3300
 	1    0    0    -1  
 $EndComp
@@ -168,6 +173,7 @@ P 5800 3350
 F 0 "U7" H 5200 4400 50  0000 L BNN
 F 1 "FT232RL" H 5800 3350 50  0000 L BNN
 F 2 "ftdichip-1-SSOP28DB" H 5800 3500 50  0001 C CNN
+F 3 "" H 5800 3350 60  0001 C CNN
 	1    5800 3350
 	1    0    0    -1  
 $EndComp
