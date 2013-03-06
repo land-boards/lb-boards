@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 26 Feb 2013 07:39:27 PM EST
+EESchema Schematic File Version 2  date Fri 01 Mar 2013 08:56:25 PM EST
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 6 7
 Title "AUDIO AMP 386"
-Date "27 feb 2013"
+Date "2 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -47,7 +47,7 @@ Connection ~ 7900 3300
 Wire Wire Line
 	7900 3300 7900 2450
 Wire Wire Line
-	8000 3300 6300 3300
+	6300 3300 8000 3300
 Wire Wire Line
 	8000 3300 8000 2450
 Wire Wire Line

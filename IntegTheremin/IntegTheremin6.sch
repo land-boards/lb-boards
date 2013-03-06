@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 26 Feb 2013 07:39:27 PM EST
+EESchema Schematic File Version 2  date Fri 01 Mar 2013 08:56:25 PM EST
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 3 7
 Title "SWITCHING POWER SUPPLY"
-Date "27 feb 2013"
+Date "2 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -17,6 +17,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 5550 3250 0    60   ~ 0
++12V to +5V SWITCHER
 Text Label 6950 2100 0    60   ~ 0
 SW
 Text Label 6900 1900 0    60   ~ 0
@@ -34,7 +36,7 @@ Wire Wire Line
 	8350 1900 8350 2150
 Connection ~ 8250 1900
 Wire Wire Line
-	8250 1700 8250 1900
+	8250 1900 8250 1700
 Wire Wire Line
 	8250 1700 6850 1700
 Connection ~ 7500 1900
@@ -69,10 +71,10 @@ Connection ~ 7500 2100
 Wire Wire Line
 	8150 1900 8500 1900
 Wire Wire Line
-	8350 2700 8350 2550
+	8350 2550 8350 2700
 Connection ~ 7500 2700
 Wire Wire Line
-	4200 1950 4100 1950
+	4100 1950 4200 1950
 Wire Wire Line
 	8350 2700 4200 2700
 Wire Wire Line
