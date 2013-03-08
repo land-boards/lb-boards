@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date 06/03/2013 13:05:27
+EESchema Schematic File Version 2  date 07/03/2013 10:18:30
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
 LIBS:IntegTheremin-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "FTDI Interface"
-Date "6 mar 2013"
+Date "7 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -174,6 +174,8 @@ F 0 "U7" H 5200 4400 50  0000 L BNN
 F 1 "FT232RL" H 5800 3350 50  0000 L BNN
 F 2 "ftdichip-1-SSOP28DB" H 5800 3500 50  0001 C CNN
 F 3 "" H 5800 3350 60  0001 C CNN
+F 4 "Vendor" H 5800 3350 60  0001 C CNN "Vendor"
+F 5 "VendorPN" H 5800 3350 60  0001 C CNN "VendorPN"
 	1    5800 3350
 	1    0    0    -1  
 $EndComp

@@ -1,42 +1,6 @@
-update=05/03/2013 12:53:11
+update=07/03/2013 09:24:32
 version=1
-last_client=pcbnew
-[eeschema]
-version=1
-LibDir=
-NetFmt=1
-HPGLSpd=20
-HPGLDm=15
-HPGLNum=1
-offX_A4=0
-offY_A4=0
-offX_A3=0
-offY_A3=0
-offX_A2=0
-offY_A2=0
-offX_A1=0
-offY_A1=0
-offX_A0=0
-offY_A0=0
-offX_A=0
-offY_A=0
-offX_B=0
-offY_B=0
-offX_C=0
-offY_C=0
-offX_D=0
-offY_D=0
-offX_E=0
-offY_E=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
-LibName4=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -65,3 +29,16 @@ ModuleOutlineThickness=0.381
 [pcbnew/libraries]
 LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/utilities/mergeKiMods/mergeDoug
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName3=power
+LibName4=device

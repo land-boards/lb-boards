@@ -1,6 +1,6 @@
-update=15/02/2013 12:29:07
+update=07/03/2013 11:57:51
 version=1
-last_client=kicad
+last_client=eeschema
 [pcbnew]
 version=1
 PadDrlX=320
@@ -28,33 +28,17 @@ LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName7=smd_capacitors
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
-NetFmt=1
-HPGLSpd=20
-HPGLDm=15
-HPGLNum=1
-offX_A4=0
-offY_A4=0
-offX_A3=0
-offY_A3=0
-offX_A2=0
-offY_A2=0
-offX_A1=0
-offY_A1=0
-offX_A0=0
-offY_A0=0
-offX_A=0
-offY_A=0
-offX_B=0
-offY_B=0
-offX_C=0
-offY_C=0
-offX_D=0
-offY_D=0
-offX_E=0
-offY_E=0
+NetFmtName=
 RptD_X=0
 RptD_Y=100
 RptLab=1
@@ -64,10 +48,3 @@ LibName1=conn
 LibName2=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
 LibName3=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
 LibName4=device
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
-[general]
-version=1
