@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 07/03/2013 10:18:30
+EESchema Schematic File Version 2  date Sun 10 Mar 2013 05:23:49 PM EDT
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "FTDI Interface"
-Date "7 mar 2013"
+Date "10 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -141,6 +141,10 @@ F 0 "C11" H 4650 2350 50  0000 L CNN
 F 1 "0.1uF" H 4650 2150 50  0000 L CNN
 F 2 "SM0805" H 4600 2250 60  0001 C CNN
 F 3 "" H 4600 2250 60  0001 C CNN
+F 4 "Vishay" H 4600 2250 60  0001 C CNN "Field4"
+F 5 "1C10Z5U104M050B" H 4600 2250 60  0001 C CNN "Field5"
+F 6 "Mouser" H 4600 2250 60  0001 C CNN "Field6"
+F 7 "75-1C10Z5U104M050B" H 4600 2250 60  0001 C CNN "Field7"
 	1    4600 2250
 	1    0    0    -1  
 $EndComp

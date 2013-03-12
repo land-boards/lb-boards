@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 07/03/2013 10:18:30
+EESchema Schematic File Version 2  date Sun 10 Mar 2013 05:23:49 PM EDT
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 3 7
 Title "SWITCHING POWER SUPPLY"
-Date "7 mar 2013"
+Date "10 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 07/03/2013 10:18:30
+EESchema Schematic File Version 2  date Sun 10 Mar 2013 05:23:49 PM EDT
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 6 7
 Title "AUDIO AMP 386"
-Date "7 mar 2013"
+Date "10 mar 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -19,7 +19,7 @@ Comment4 ""
 $EndDescr
 Text HLabel 4300 3350 0    60   UnSpc ~ 0
 GNDA
-Text HLabel 5250 1450 0    60   UnSpc ~ 0
+Text HLabel 5250 1600 0    60   UnSpc ~ 0
 +12V
 Text HLabel 3450 2000 0    60   Input ~ 0
 AUDIO_IN
@@ -36,20 +36,28 @@ F 3 "" H 6300 3400 60  0001 C CNN
 $EndComp
 NoConn ~ 5450 2500
 NoConn ~ 5550 2500
-Connection ~ 4950 3350
+Connection ~ 4850 3350
 Wire Wire Line
-	6300 3350 4300 3350
+	6300 3350 5350 3350
+Wire Wire Line
+	5350 3350 4850 3350
+Wire Wire Line
+	4850 3350 4300 3350
 Wire Wire Line
 	3550 2000 3450 2000
 Wire Wire Line
 	4950 2000 4600 2000
 Wire Wire Line
-	7550 2100 6750 2100
+	7550 2100 6900 2100
 Connection ~ 7900 3300
 Wire Wire Line
 	7900 3300 7900 2450
 Wire Wire Line
-	6300 3300 8000 3300
+	6300 3300 7800 3300
+Wire Wire Line
+	7800 3300 7900 3300
+Wire Wire Line
+	7900 3300 8000 3300
 Wire Wire Line
 	8000 3300 8000 2450
 Wire Wire Line
@@ -60,23 +68,31 @@ Wire Wire Line
 	6300 2250 6300 2100
 Connection ~ 5350 3350
 Wire Wire Line
-	6300 3250 6300 3400
+	6300 3250 6300 3300
+Wire Wire Line
+	6300 3300 6300 3350
+Wire Wire Line
+	6300 3350 6300 3400
 Wire Wire Line
 	5350 2500 5350 3350
 Connection ~ 6300 3350
 Wire Wire Line
-	5950 2100 6350 2100
+	5950 2100 6300 2100
+Wire Wire Line
+	6300 2100 6500 2100
 Wire Wire Line
 	6300 2650 6300 2750
 Wire Wire Line
-	5350 1700 5350 1450
+	5350 1700 5350 1600
 Wire Wire Line
 	7800 3300 7800 2450
 Connection ~ 7800 3300
 Wire Wire Line
-	4950 3350 4950 2200
+	4850 3350 4850 2200
 Wire Wire Line
-	5350 1450 5250 1450
+	4850 2200 4950 2200
+Wire Wire Line
+	5350 1600 5250 1600
 $Comp
 L R R1
 U 1 1 512763B7
@@ -93,14 +109,14 @@ $EndComp
 $Comp
 L CP1 C3
 U 1 1 500C93F2
-P 6550 2100
-F 0 "C3" V 6600 1950 50  0000 L CNN
-F 1 "220uF" V 6500 1800 50  0000 L CNN
-F 2 "C1V8" H 6550 2100 60  0001 C CNN
-F 3 "" H 6550 2100 60  0001 C CNN
-F 4 "United Chemi-Con" H 6550 2100 60  0001 C CNN "Mfg"
-F 5 "EKMG250ELL221MHB5D" H 6550 2100 60  0001 C CNN "MfgPN"
-	1    6550 2100
+P 6700 2100
+F 0 "C3" V 6750 1950 50  0000 L CNN
+F 1 "220uF" V 6650 1800 50  0000 L CNN
+F 2 "C1V8" H 6700 2100 60  0001 C CNN
+F 3 "" H 6700 2100 60  0001 C CNN
+F 4 "United Chemi-Con" H 6700 2100 60  0001 C CNN "Mfg"
+F 5 "EKMG250ELL221MHB5D" H 6700 2100 60  0001 C CNN "MfgPN"
+	1    6700 2100
 	0    -1   -1   0   
 $EndComp
 Text Label 6050 2100 0    60   ~ 0
