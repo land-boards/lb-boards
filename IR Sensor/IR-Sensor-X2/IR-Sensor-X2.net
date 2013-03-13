@@ -1,0 +1,92 @@
+# EESchema Netlist Version 1.1 created  Thu 21 Feb 2013 07:37:02 PM EST
+(
+ ( /51117026 $noname  D2 IR_RX {Lib=DIODE}
+  (    1 /SENSR )
+  (    2 GND )
+ )
+ ( /5100260A $noname  MTG2 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /510024C8 $noname  MTG1 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /510023FF $noname  R1 82 {Lib=R}
+  (    1 /VT )
+  (    2 N-000005 )
+ )
+ ( /51002211 $noname  J1 CONN_4 {Lib=CONN_4}
+  (    1 GND )
+  (    2 /VT )
+  (    3 /VR )
+  (    4 /SENSR )
+ )
+ ( /51002141 $noname  D1 IR_TX_LED {Lib=LED}
+  (    1 N-000005 )
+  (    2 GND )
+ )
+ ( /51002139 $noname  R3 1M {Lib=R}
+  (    1 /VR )
+  (    2 /SENSR )
+ )
+ ( /51002134 $noname  R2 82 {Lib=R}
+  (    1 /VT )
+  (    2 N-000005 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D2
+ D?
+ S*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "GND" "GND"
+ D2 2
+ D1 2
+ J1 1
+Net 4 "/VT" "VT"
+ R2 1
+ J1 2
+ R1 1
+Net 5 "" ""
+ D1 1
+ R2 2
+ R1 2
+Net 6 "/VR" "VR"
+ R3 1
+ J1 3
+Net 7 "/SENSR" "SENSR"
+ D2 1
+ R3 2
+ J1 4
+}
+#End
