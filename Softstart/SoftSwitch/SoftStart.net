@@ -1,0 +1,135 @@
+# EESchema Netlist Version 1.1 created  6/26/2012 11:27:40 AM
+(
+ ( /4FE9D1E4 $noname  Q1 MOS_P_DIP4 {Lib=MOS_P_DIP4}
+  (   D1 /VOUT )
+  (   D2 /VOUT )
+  (    G N-000006 )
+  (    S /VIN )
+ )
+ ( /4FE9B9A1 MTG-4-40  MTG4 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FE9B988 MTG-4-40  MTG3 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FE9B984 MTG-4-40  MTG2 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FE9B97F MTG-4-40  MTG1 CONN_1 {Lib=CONN_1}
+  (    1 ? )
+ )
+ ( /4FAD1579 SW_PUSH_SMALL  SW1 SW_PUSH {Lib=SW_PUSH}
+  (    1 N-000007 )
+  (    2 N-000008 )
+ )
+ ( /4FAD14E8 CP4  C1 47uF {Lib=CP}
+  (    1 N-000009 )
+  (    2 /GND )
+ )
+ ( /4FAD1492 SIL-2  P2 CONN_2 {Lib=CONN_2}
+  (    1 /VOUT )
+  (    2 /GND )
+ )
+ ( /4FAD13A7 TO92  Q3 2N3904 {Lib=NPN}
+  (    1 /GND )
+  (    2 N-000009 )
+  (    3 N-000008 )
+ )
+ ( /4FAD13A1 R1  R4 100K {Lib=R}
+  (    1 /VIN )
+  (    2 N-000008 )
+ )
+ ( /4FAD139A R1  R3 1M {Lib=R}
+  (    1 /VOUT )
+  (    2 N-000009 )
+ )
+ ( /4FAD1394 R1  R2 100K {Lib=R}
+  (    1 /VOUT )
+  (    2 N-000007 )
+ )
+ ( /4FAD1349 TO92  Q2 2N3904 {Lib=NPN}
+  (    1 /GND )
+  (    2 N-000007 )
+  (    3 N-000006 )
+ )
+ ( /4FAD1336 R1  R1 100K {Lib=R}
+  (    1 /VIN )
+  (    2 N-000006 )
+ )
+ ( /4FAD12C5 SIL-2  P1 CONN_2 {Lib=CONN_2}
+  (    1 /VIN )
+  (    2 /GND )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ CP*
+ SM*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 5 "/VOUT" "VOUT"
+ P2 1
+ R2 1
+ R3 1
+ Q1 D1
+ Q1 D2
+Net 6 "" ""
+ Q2 3
+ R1 2
+ Q1 G
+Net 7 "" ""
+ Q2 2
+ SW1 1
+ R2 2
+Net 8 "" ""
+ R4 2
+ SW1 2
+ Q3 3
+Net 9 "" ""
+ Q3 2
+ C1 1
+ R3 2
+Net 10 "/VIN" "VIN"
+ Q1 S
+ R1 1
+ P1 1
+ R4 1
+Net 11 "/GND" "GND"
+ C1 2
+ Q2 1
+ Q3 1
+ P2 2
+ P1 2
+}
+#End

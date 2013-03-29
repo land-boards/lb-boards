@@ -1,0 +1,8 @@
+copy SoftStart-Back.gbl "Bottom Layer.ger"
+copy SoftStart-Front.gtl "Top Layer.ger"
+copy SoftStart-Mask_Back.gbs "Bottom Solder Mask.ger"
+copy SoftStart-Mask_Front.gts "Top Solder Mask.ger"
+copy SoftStart-PCB_Edges.gbr "Board Outline.ger"
+copy SoftStart-SilkS_Back.gbo "Bottom Silk Screen.ger"
+copy SoftStart-SilkS_Front.gto "Top Silk Screen.ger"
+copy SoftStart.drl "Drills.xln"
