@@ -1,4 +1,4 @@
-update=27/03/2013 09:10:51
+update=01/04/2013 13:37:42
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -24,10 +24,10 @@ LibName4=device
 [pcbnew]
 version=1
 LastNetListRead=IntegTheremin.net
-UseCmpFile=1
-PadDrill=0.8128
-PadSizeH=1.524
-PadSizeV=1.524
+UseCmpFile=0
+PadDrill=1.3589
+PadSizeH=2.54
+PadSizeV=2.54
 PcbTextSizeV=2.032
 PcbTextSizeH=1.524
 PcbTextThickness=0.3048

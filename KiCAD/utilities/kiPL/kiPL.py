@@ -1,6 +1,6 @@
-# DupsCheck.py
+# kiPL.py
 """
-Duplicates checker.
+Generate a PL from a netlist.
 """
 
 import csv
@@ -10,11 +10,11 @@ import os
 
 from sys import argv
 
-print 'DupsCheck.py'
+print 'kiPL.py'
 
 if (len(sys.argv) != 2):
   print len(sys.argv)
-  print 'DupsCheck.py - Usage DupsCheck.py filename.csv'
+  print 'KiPL.py - Usage KiPL.py netFile.net'
   print 'Exiting...'
   exit()
 
@@ -22,16 +22,16 @@ fileToRead = ""
 fileToWrite = ""
 
 fileToRead = argv[1]
-if fileToRead.upper()[-3:] != 'CSV':
-	print 'ERROR - Expected a CSV file type'
+if fileToRead.upper()[-3:] != 'NET':
+	print 'ERROR - Expected a net file type'
 	exit()
 else:
-	print 'Input file is a CSV file as expected'
+	print 'Input file is a net file as expected'
 
-fileToWrite = fileToRead[:-4] + "_duplicates.csv"
+fileToWrite = fileToRead[:-4] + "_PL.csv"
 
 try:
-	inCSVFile = csv.reader(open(fileToRead, 'rb'), delimiter='\t')
+	inFile = open(fileToRead, 'rb')
 except IOError:
 	print 'ERROR - Cannot open input file', fileToRead
 	exit()
@@ -43,31 +43,107 @@ except IOError:
 	print ' - Is the file already open in EXCEL?'
 	exit()
 
-readCSVRow = inCSVFile.next()
-print 'first row is', readCSVRow
-readString = readCSVRow[0]
-if readString[0] != 'V':
-	print 'ERROR - Expected Volume as the first line'
-	exit()
+LOOKING_FOR_DESIGN = 1
+LOOKING_FOR_COMPONENTS = 2
+LOOKING_FOR_COMP = 3
+IN_COMP = 4
+GOT_COMP = 5
+GOT_LIBPARTS = 6
 
-inCSVFile.next()  # blank line next
+'''
+  (design
+  (components
+    (comp (ref J4)
+      (value CONN_6)
+      (footprint MTA-156-6PIN-ALT)
+      (fields
+        (field (name Mfg) TE)
+        (field (name MfgPN) 640445-6)
+        (field (name Vendor) Mouser)
+        (field (name VendorPN) 571-6404456)
+        (field (name AACPN) 00779-640445-6))
+    ...
+    (comp (ref J3)
+      (value IEC-C14)
+      (footprint C14R)
+'''
 
-readCSVRow = inCSVFile.next()
-if readCSVRow[0] != 'Date':
-	print 'ERROR - Expected Date as the third line'
-	exit()
+print 'refDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN'
 
-filesList = []
+outRow = []
+outRow.append('RefDes')
+outRow.append('Value')
+outRow.append('Footprint')
+outRow.append('Manufacturer')
+outRow.append('ManufacturerPN')
+outRow.append('Vendor')
+outRow.append('VendorPN')
+outCSVFile.writerow(outRow)
 
-# ['ref', 'value', 'footprint', 'Field1', 'Field2', 'Field3', 'Field4']
-
-for row in inCSVFile:
-  filesList.append(row)
-
-print filesList
-
-#parts = []
-#for row in filesList:
-#	if row[3] not in parts:
-#		parts.append(row[4])
-
+progState = LOOKING_FOR_DESIGN
+for inLine in inFile:
+#  print progState
+  inLine = inLine.strip('\n\r')
+  if progState == LOOKING_FOR_DESIGN:
+    if (string.find(inLine,"(design",0) != -1):
+      progState = LOOKING_FOR_COMPONENTS
+  elif progState == LOOKING_FOR_COMPONENTS:
+    if (string.find(inLine,"(components",0) != -1):
+      progState = LOOKING_FOR_COMP
+  elif progState == LOOKING_FOR_COMP:
+    refDes = 'N/A'
+    value = 'N/A'
+    footprint = 'N/A'
+    mfg = 'N/A'
+    mfgPN = 'N/A'
+    vendor = 'N/A'
+    vendorPN = 'N/A'
+    if (string.find(inLine,"(comp (",0) != -1):
+      refDes = inLine[15:-1]
+      progState = IN_COMP
+    elif (string.find(inLine,"(libparts",0) != -1):
+      progState = GOT_LIBPARTS
+  elif progState == IN_COMP:
+    if (string.find(inLine,"(value",0) != -1):
+      value = inLine[13:-1]
+    if (string.find(inLine,"(footprint",0) != -1):
+      footprint = inLine[17:-1]
+#    if (string.find(inLine,"(fields",0) != -1):
+#      print 'fields'
+    if (string.find(inLine,"(field (name",0) != -1):
+      field = inLine[21:-1]
+      if (string.find(field,"MfgPN",0) != -1):
+        mfgPN = field[7:]
+      elif (string.find(field,"Mfg",0) != -1):
+        mfg = field[5:]
+      elif (string.find(field,"VendorPN",0) != -1):
+        vendorPN = field[10:]
+      elif (string.find(field,"Vendor",0) != -1):
+        vendor = field[8:]
+    if (string.find(inLine,"))",0) != -1):
+      outputString = refDes
+      outputString += ','
+      outputString += value
+      outputString += ','
+      outputString += footprint
+      outputString += ','
+      outputString += mfg
+      outputString += ','
+      outputString += mfgPN
+      outputString += ','
+      outputString += vendor
+      outputString += ','
+      outputString += vendorPN
+      print outputString
+      outRow = []
+      outRow.append(refDes)
+      outRow.append(value)
+      outRow.append(footprint)
+      outRow.append(mfg)
+      outRow.append(mfgPN)
+      outRow.append(vendor)
+      outRow.append(vendorPN)
+      outCSVFile.writerow(outRow)
+      progState = LOOKING_FOR_COMP
+  elif progState == GOT_LIBPARTS:
+    exit()

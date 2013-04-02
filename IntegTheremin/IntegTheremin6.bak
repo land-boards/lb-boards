@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 02/04/2013 09:46:11
+EESchema Schematic File Version 2  date 02/04/2013 09:30:23
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -41,19 +41,29 @@ Wire Wire Line
 	8250 1700 6850 1700
 Connection ~ 7500 1900
 Wire Wire Line
-	7350 1900 7550 1900
+	7350 1900 7500 1900
+Wire Wire Line
+	7500 1900 7550 1900
 Wire Wire Line
 	6950 1900 6850 1900
 Connection ~ 6000 2800
 Wire Wire Line
-	7500 2800 7500 2600
+	7500 2600 7500 2800
 Wire Wire Line
 	4050 2800 4050 2350
 Connection ~ 4550 1750
 Wire Wire Line
 	4550 1750 4550 1950
 Wire Wire Line
-	3650 1750 5200 1750
+	3650 1750 3900 1750
+Wire Wire Line
+	3900 1750 4050 1750
+Wire Wire Line
+	4050 1750 4550 1750
+Wire Wire Line
+	4550 1750 5050 1750
+Wire Wire Line
+	5050 1750 5200 1750
 Wire Wire Line
 	4050 1750 4050 1950
 Connection ~ 4050 1750
@@ -64,17 +74,29 @@ Wire Wire Line
 Wire Wire Line
 	6850 2100 7500 2100
 Wire Wire Line
-	7500 1900 7500 2200
+	7500 1900 7500 2100
+Wire Wire Line
+	7500 2100 7500 2200
 Connection ~ 7500 2100
 Wire Wire Line
-	8150 1900 8500 1900
+	8150 1900 8250 1900
+Wire Wire Line
+	8250 1900 8350 1900
+Wire Wire Line
+	8350 1900 8500 1900
 Wire Wire Line
 	8350 2800 8350 2550
 Connection ~ 7500 2800
 Wire Wire Line
 	3650 1950 3750 1950
 Wire Wire Line
-	3750 2800 8350 2800
+	3750 2800 6000 2800
+Wire Wire Line
+	6000 2800 6200 2800
+Wire Wire Line
+	6200 2800 7500 2800
+Wire Wire Line
+	7500 2800 8350 2800
 Wire Wire Line
 	3750 1950 3750 3050
 Wire Wire Line
