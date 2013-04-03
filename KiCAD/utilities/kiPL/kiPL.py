@@ -10,7 +10,7 @@ import os
 
 from sys import argv
 
-print 'kiPL.py'
+#print 'kiPL.py'
 
 if (len(sys.argv) != 2):
   print len(sys.argv)
@@ -25,8 +25,8 @@ fileToRead = argv[1]
 if fileToRead.upper()[-3:] != 'NET':
 	print 'ERROR - Expected a net file type'
 	exit()
-else:
-	print 'Input file is a net file as expected'
+#else:
+#	print 'Input file is a net file as expected'
 
 fileToWrite = fileToRead[:-4] + "_PL.csv"
 
@@ -68,7 +68,7 @@ GOT_LIBPARTS = 6
       (footprint C14R)
 '''
 
-print 'refDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN'
+#print 'refDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN'
 
 outRow = []
 outRow.append('RefDes')
@@ -108,19 +108,35 @@ for inLine in inFile:
       value = inLine[13:-1]
     if (string.find(inLine,"(footprint",0) != -1):
       footprint = inLine[17:-1]
-#    if (string.find(inLine,"(fields",0) != -1):
-#      print 'fields'
     if (string.find(inLine,"(field (name",0) != -1):
       field = inLine[21:-1]
+      if field[len(field) -1] == ')':
+        field = field[0:-1]
+        if field[len(field) -1] == ')':
+          field = field[0:-1]
+#      print 'field -',field
       if (string.find(field,"MfgPN",0) != -1):
         mfgPN = field[7:]
+        if mfgPN[0] == '"' and mfgPN[-1:] == '"':
+#          print 'mfgPN started and ended with a double quote'
+          mfgPN = mfgPN[1:-1]
       elif (string.find(field,"Mfg",0) != -1):
         mfg = field[5:]
+        if mfg[0] == '"' and mfg[len(mfg)-1] == '"':
+#          print 'mfg started and ended with a double quote', mfg
+          mfg = mfg[1:-1]
       elif (string.find(field,"VendorPN",0) != -1):
         vendorPN = field[10:]
+        if vendorPN[0] == '"' and vendorPN[len(vendorPN)-1] == '"':
+#          print 'vendorPN started and ended with a double quote'
+          vendorPN = vendorPN[1:-1]
       elif (string.find(field,"Vendor",0) != -1):
         vendor = field[8:]
+        if vendor[0] == '"' and vendor[len(vendor)-1] == '"':
+#          print 'vendor started and ended with a double quote'
+          vendor = vendor[1:-1]
     if (string.find(inLine,"))",0) != -1):
+      '''
       outputString = refDes
       outputString += ','
       outputString += value
@@ -135,7 +151,8 @@ for inLine in inFile:
       outputString += ','
       outputString += vendorPN
       print outputString
-      outRow = []
+      '''
+      outRow = []6 
       outRow.append(refDes)
       outRow.append(value)
       outRow.append(footprint)
@@ -146,4 +163,5 @@ for inLine in inFile:
       outCSVFile.writerow(outRow)
       progState = LOOKING_FOR_COMP
   elif progState == GOT_LIBPARTS:
+    print 'Completed'
     exit()
