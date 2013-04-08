@@ -152,7 +152,7 @@ for inLine in inFile:
       outputString += vendorPN
       print outputString
       '''
-      outRow = []6 
+      outRow = []
       outRow.append(refDes)
       outRow.append(value)
       outRow.append(footprint)
