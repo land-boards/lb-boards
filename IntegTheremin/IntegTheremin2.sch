@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 02/04/2013 13:41:38
+EESchema Schematic File Version 2  date 08/04/2013 12:03:03
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 7 7
 Title "MICROPROCESSOR AND I/O PINS"
-Date "2 apr 2013"
+Date "8 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -292,9 +292,9 @@ F 3 "" H 9400 3750 60  0001 C CNN
 $EndComp
 Text Notes 9100 4150 0    60   ~ 0
 ANALOG SPARES
-Text Label 2300 3600 0    60   ~ 0
+Text Label 2650 3450 0    60   ~ 0
 RES1
-Text Label 2300 2900 0    60   ~ 0
+Text Label 2650 3250 0    60   ~ 0
 RES0
 Text Label 4650 3850 0    60   ~ 0
 D5
@@ -337,7 +337,7 @@ AD5
 Text Label 4650 3050 0    60   ~ 0
 AD4
 Text Label 1700 2650 0    60   ~ 0
-ARDRES
+~ARDRES
 $Comp
 L C C8
 U 1 1 4FF58BD9

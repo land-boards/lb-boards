@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 02/04/2013 13:41:38
+EESchema Schematic File Version 2  date 08/04/2013 12:03:03
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 7
 Title "Integrated Theremin"
-Date "2 apr 2013"
+Date "8 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
