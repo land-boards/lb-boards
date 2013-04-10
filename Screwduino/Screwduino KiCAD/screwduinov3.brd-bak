@@ -1,6 +1,6 @@
-PCBNEW-BOARD Version 2 date 20/03/2013 14:43:46
+PCBNEW-BOARD Version 2 date 3/23/2013 10:15:36 PM
 
-# Created by Pcbnew(2013-02-27 BZR 3976)-stable
+# Created by Pcbnew(2013-03-19 BZR 4004)-stable
 
 $GENERAL
 encoding utf-8
@@ -9,8 +9,8 @@ LayerCount 2
 EnabledLayers 15F08001
 Links 89
 NoConn 0
-Di 81.822934 68.997378 202.356001 128.5724
-Ndraw 59
+Di 70.462467 68.997378 202.356001 135.1512
+Ndraw 61
 Ntrack 185
 Nzone 0
 BoardThickness 1.6002
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A 11000 8500
 Title "SCREWDUINO V2"
-Date "20 mar 2013"
+Date "24 mar 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -34,7 +34,7 @@ $SETUP
 Layers 2
 Layer[0] Back power
 Layer[15] Front power
-TrackWidth 0.635
+TrackWidth 0.2032
 TrackWidthList 0.381
 TrackWidthList 0.635
 TrackClearence 0.254
@@ -62,7 +62,7 @@ PadDrill 3.175
 Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 107.188 92.71
-VisibleElements FFFFFFBF
+VisibleElements 7FFFFFFF
 PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 80) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
@@ -1656,6 +1656,32 @@ Ne 0 ""
 Po 0 0
 $EndPAD
 $EndMODULE MTG-4-40
+$COTATION
+Ge 0 24 0
+Va 39.100128
+Te "39.100 mm"
+Po 77.218868 103.911045 1.524 2.032 0.3048 898.534638 1
+Sb 0 78.894463 84.365203 78.794463 123.465203 0.3048
+Sd 0 92.4 123.5 75.543274 123.456888 0.3048
+Sg 0 92.5 84.4 75.643274 84.356888 0.3048
+S1 0 78.794463 123.465203 78.210926 122.337204 0.3048
+S2 0 78.794463 123.465203 79.383762 122.340203 0.3048
+S3 0 78.894463 84.365203 78.305164 85.490203 0.3048
+S4 0 78.894463 84.365203 79.478 85.493202 0.3048
+$endCOTATION
+$COTATION
+Ge 0 24 0
+Va 89
+Te "89.000 mm"
+Po 137 133.525599 1.524 2.032 0.3048 -0 1
+Sb 0 92.5 131.899999 181.5 131.899999 0.3048
+Sd 0 181.5 123.3 181.5 135.151199 0.3048
+Sg 0 92.5 123.3 92.5 135.151199 0.3048
+S1 0 181.5 131.899999 180.373497 132.486419 0.3048
+S2 0 181.5 131.899999 180.373497 131.313579 0.3048
+S3 0 92.5 131.899999 93.626503 132.486419 0.3048
+S4 0 92.5 131.899999 93.626503 131.313579 0.3048
+$endCOTATION
 $TEXTPCB
 Te "I2C"
 Po 108.724 95.34 1.524 2.032 0.3048 900
@@ -6801,7 +6827,7 @@ $POLYSCORNERS
 $endPOLYSCORNERS
 $endCZONE_OUTLINE
 $CZONE_OUTLINE
-ZInfo 5149E9B1 29 "GND"
+ZInfo 5149E9B1 0 ""
 ZLayer 15
 ZAux 12 E
 ZClearance 0.508 T
@@ -6823,7 +6849,7 @@ ZCorner 95.474 90.84 0
 ZCorner 96.974 88.34 1
 $endCZONE_OUTLINE
 $CZONE_OUTLINE
-ZInfo 5149F4C1 29 "GND"
+ZInfo 5149F4C1 0 ""
 ZLayer 0
 ZAux 12 E
 ZClearance 0.508 T
@@ -6845,7 +6871,7 @@ ZCorner 96.974 82.34 0
 ZCorner 126.474 82.34 1
 $endCZONE_OUTLINE
 $CZONE_OUTLINE
-ZInfo 5149EFE0 29 "GND"
+ZInfo 5149EFE0 0 ""
 ZLayer 0
 ZAux 12 E
 ZClearance 0.508 T
