@@ -1,6 +1,6 @@
-update=02/04/2013 13:35:51
+update=24/04/2013 16:41:13
 version=1
-last_client=eeschema
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,13 +8,25 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=power
+LibName3=device
 [pcbnew]
 version=1
 LastNetListRead=IntegTheremin.net
 UseCmpFile=0
-PadDrill=1.3589
-PadSizeH=2.54
-PadSizeV=2.54
+PadDrill=0.8128
+PadSizeH=1.397
+PadSizeV=1.397
 PcbTextSizeV=2.032
 PcbTextSizeH=1.524
 PcbTextThickness=0.3048
@@ -29,15 +41,4 @@ ModuleOutlineThickness=0.381
 [pcbnew/libraries]
 LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
+LibName2=iTheremin

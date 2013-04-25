@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 02/04/2013 13:41:38
+EESchema Schematic File Version 2  date 24/04/2013 16:46:36
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 3 7
 Title "SWITCHING POWER SUPPLY"
-Date "2 apr 2013"
+Date "24 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -92,7 +92,6 @@ F 5 "LM22674MR-5.0/NOPB" H 6000 1900 60  0001 C CNN "MfgPN"
 	1    6000 1900
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5800 2600
 Text HLabel 4400 3050 2    60   Input ~ 0
 GNDA
 Text HLabel 4050 1450 2    60   Output ~ 0
@@ -194,7 +193,7 @@ U 1 1 515AEF59
 P 5050 2150
 F 0 "R12" V 5130 2150 50  0000 C CNN
 F 1 "470K" V 5050 2150 50  0000 C CNN
-F 2 "~" H 5050 2150 60  0000 C CNN
+F 2 "SM0805" H 5050 2150 60  0001 C CNN
 F 3 "~" H 5050 2150 60  0000 C CNN
 	1    5050 2150
 	1    0    0    -1  
@@ -208,4 +207,7 @@ Wire Wire Line
 	5800 2700 5050 2700
 Wire Wire Line
 	5050 2700 5050 2400
+Connection ~ 4550 2800
+Connection ~ 4050 2800
+Connection ~ 3750 2800
 $EndSCHEMATC

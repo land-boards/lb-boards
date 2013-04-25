@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 08/04/2013 12:03:03
+EESchema Schematic File Version 2  date 24/04/2013 16:46:45
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 7
 Title "XR-2206 VOLTAGE CONTROLLED OSCILLATOR"
-Date "8 apr 2013"
+Date "24 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -273,7 +273,7 @@ U 1 1 4FDBC755
 P 4200 3400
 F 0 "C6" H 4250 3500 50  0000 L CNN
 F 1 "0.1uF" H 4250 3300 50  0000 L CNN
-F 2 "SM1206" H 4200 3400 60  0001 C CNN
+F 2 "SM0805" H 4200 3400 60  0001 C CNN
 F 3 "" H 4200 3400 60  0001 C CNN
 F 4 "Vishay" H 4200 3400 60  0001 C CNN "Field4"
 F 5 "1C10Z5U104M050B" H 4200 3400 60  0001 C CNN "Field5"
