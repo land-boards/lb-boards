@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/04/2013 16:46:36
+EESchema Schematic File Version 2  date 26/04/2013 12:58:23
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 3 7
 Title "SWITCHING POWER SUPPLY"
-Date "24 apr 2013"
+Date "26 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -36,7 +36,7 @@ Wire Wire Line
 	8350 1900 8350 2150
 Connection ~ 8250 1900
 Wire Wire Line
-	8250 1900 8250 1700
+	8250 1600 8250 1900
 Wire Wire Line
 	8250 1700 6850 1700
 Connection ~ 7500 1900
@@ -210,4 +210,44 @@ Wire Wire Line
 Connection ~ 4550 2800
 Connection ~ 4050 2800
 Connection ~ 3750 2800
+$Comp
+L TST P4
+U 1 1 517AB33C
+P 4750 1700
+F 0 "P4" H 4750 2000 40  0000 C CNN
+F 1 "TST" H 4750 1950 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 4750 1700 60  0000 C CNN
+F 3 "~" H 4750 1700 60  0000 C CNN
+	1    4750 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1700 4750 1750
+Connection ~ 4750 1750
+Connection ~ 8250 1700
+$Comp
+L TST P3
+U 1 1 517AB3F9
+P 8250 1600
+F 0 "P3" H 8250 1900 40  0000 C CNN
+F 1 "TST" H 8250 1850 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 8250 1600 60  0000 C CNN
+F 3 "~" H 8250 1600 60  0000 C CNN
+	1    8250 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P8
+U 1 1 517AD695
+P 7950 2700
+F 0 "P8" H 7950 3000 40  0000 C CNN
+F 1 "TST" H 7950 2950 30  0000 C CNN
+F 2 "~" H 7950 2700 60  0000 C CNN
+F 3 "~" H 7950 2700 60  0000 C CNN
+	1    7950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2700 7950 2800
+Connection ~ 7950 2800
 $EndSCHEMATC

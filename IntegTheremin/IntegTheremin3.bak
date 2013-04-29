@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/04/2013 16:46:36
+EESchema Schematic File Version 2  date 26/04/2013 12:58:23
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 7
 Title "XR-2206 VOLTAGE CONTROLLED OSCILLATOR"
-Date "24 apr 2013"
+Date "26 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -304,6 +304,34 @@ F 1 "XR2206" H 5650 4820 60  0000 C CNN
 F 2 "DIP-16__300" H 5300 4050 60  0001 C CNN
 F 3 "" H 5300 4050 60  0001 C CNN
 	1    5300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P6
+U 1 1 517AB4DA
+P 3450 3800
+F 0 "P6" H 3450 4100 40  0000 C CNN
+F 1 "TST" H 3450 4050 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 3450 3800 60  0000 C CNN
+F 3 "~" H 3450 3800 60  0000 C CNN
+	1    3450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3800 3450 3850
+Connection ~ 3450 3850
+Wire Wire Line
+	7350 3850 7350 3750
+Connection ~ 7350 3850
+$Comp
+L TST P5
+U 1 1 517AB55A
+P 7350 3750
+F 0 "P5" H 7350 4050 40  0000 C CNN
+F 1 "TST" H 7350 4000 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 7350 3750 60  0000 C CNN
+F 3 "~" H 7350 3750 60  0000 C CNN
+	1    7350 3750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

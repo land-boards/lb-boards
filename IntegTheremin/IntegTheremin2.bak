@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/04/2013 16:46:36
+EESchema Schematic File Version 2  date 26/04/2013 12:58:23
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 7 7
 Title "MICROPROCESSOR AND I/O PINS"
-Date "24 apr 2013"
+Date "26 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -565,4 +565,18 @@ F 3 "" H 2900 2400 60  0001 C CNN
 	1    2900 2400
 	0    -1   -1   0   
 $EndComp
+$Comp
+L TST P7
+U 1 1 517AB60C
+P 2650 3850
+F 0 "P7" H 2650 4150 40  0000 C CNN
+F 1 "TST" H 2650 4100 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 2650 3850 60  0000 C CNN
+F 3 "~" H 2650 3850 60  0000 C CNN
+	1    2650 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 3850 2650 3900
+Connection ~ 2650 3900
 $EndSCHEMATC

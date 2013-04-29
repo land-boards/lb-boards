@@ -1,4 +1,4 @@
-update=24/04/2013 16:41:13
+update=26/04/2013 12:48:45
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -24,9 +24,9 @@ LibName3=device
 version=1
 LastNetListRead=IntegTheremin.net
 UseCmpFile=0
-PadDrill=0.8128
-PadSizeH=1.397
-PadSizeV=1.397
+PadDrill=3.175
+PadSizeH=6.35
+PadSizeV=6.35
 PcbTextSizeV=2.032
 PcbTextSizeH=1.524
 PcbTextThickness=0.3048
@@ -42,3 +42,4 @@ ModuleOutlineThickness=0.381
 LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName2=iTheremin
+LibName3=pin_array

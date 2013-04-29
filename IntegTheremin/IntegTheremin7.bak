@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/04/2013 16:46:36
+EESchema Schematic File Version 2  date 26/04/2013 12:58:23
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "FTDI Interface"
-Date "24 apr 2013"
+Date "26 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -46,7 +46,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 2050 4300 1800
 Wire Wire Line
-	5900 1800 5900 2150
+	5900 1700 5900 2150
 Wire Wire Line
 	4900 4250 4800 4250
 Wire Wire Line
@@ -87,9 +87,9 @@ Wire Wire Line
 	4800 4250 4800 4750
 Connection ~ 4800 4750
 Wire Wire Line
-	5700 2150 5700 1900
+	5700 1700 5700 2150
 Wire Wire Line
-	5700 1900 4600 1900
+	4600 1900 5700 1900
 Connection ~ 4850 1900
 Wire Wire Line
 	6100 4750 6100 4650
@@ -183,4 +183,28 @@ F 5 "VendorPN" H 5800 3350 60  0001 C CNN "VendorPN"
 	1    5800 3350
 	1    0    0    -1  
 $EndComp
+$Comp
+L TST P2
+U 1 1 517AB2BF
+P 5900 1700
+F 0 "P2" H 5900 2000 40  0000 C CNN
+F 1 "TST" H 5900 1950 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 5900 1700 60  0000 C CNN
+F 3 "~" H 5900 1700 60  0000 C CNN
+	1    5900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST P1
+U 1 1 517AB2CE
+P 5700 1700
+F 0 "P1" H 5700 2000 40  0000 C CNN
+F 1 "TST" H 5700 1950 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 5700 1700 60  0000 C CNN
+F 3 "~" H 5700 1700 60  0000 C CNN
+	1    5700 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 1900
+Connection ~ 5900 1800
 $EndSCHEMATC

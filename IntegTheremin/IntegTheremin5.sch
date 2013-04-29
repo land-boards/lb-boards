@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/04/2013 16:46:45
+EESchema Schematic File Version 2  date 26/04/2013 12:58:44
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 5 7
 Title "HIGH VOLTAGE POTENTIOMETERS"
-Date "24 apr 2013"
+Date "26 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
