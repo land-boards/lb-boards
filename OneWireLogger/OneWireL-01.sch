@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 4/27/2013 9:52:42 PM
+EESchema Schematic File Version 2  date 4/28/2013 5:26:51 PM
 LIBS:DougsSch
 LIBS:power
 LIBS:device
