@@ -1,8 +1,7 @@
-EESchema Schematic File Version 2  date 4/28/2013 5:26:51 PM
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 30/04/2013 12:51:19
 LIBS:power
 LIBS:device
-LIBS:CNT-RJ45
+LIBS:DougsSch
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -10,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 5
 Title "One Wire Logger"
-Date "28 apr 2013"
+Date "30 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -79,7 +78,7 @@ U 1 1 517C6174
 P 6900 3400
 F 0 "R3" V 6980 3400 50  0000 C CNN
 F 1 "2.2K" V 6900 3400 50  0000 C CNN
-F 2 "~" H 6900 3400 60  0000 C CNN
+F 2 "SM0805" V 6800 3400 60  0000 C CNN
 F 3 "~" H 6900 3400 60  0000 C CNN
 	1    6900 3400
 	1    0    0    -1  
@@ -132,7 +131,7 @@ U 1 1 517C61DF
 P 7100 3400
 F 0 "R4" V 7180 3400 50  0000 C CNN
 F 1 "NTC-10K" V 7100 3400 50  0000 C CNN
-F 2 "~" H 7100 3400 60  0000 C CNN
+F 2 "SM0603" H 7100 3400 60  0000 C CNN
 F 3 "~" H 7100 3400 60  0000 C CNN
 	1    7100 3400
 	1    0    0    -1  

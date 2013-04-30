@@ -1,6 +1,6 @@
-update=4/28/2013 12:53:40 PM
+update=29/04/2013 12:50:37
 version=1
-last_client=eeschema
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,10 +8,24 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
+LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
+LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45
+LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=OneWireLogger.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=0
 PadSizeH=1
 PadSizeV=2.7
@@ -36,16 +50,3 @@ LibName5=libcms
 LibName6=led
 LibName7=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName8=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/adafruit
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
-LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
-LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45

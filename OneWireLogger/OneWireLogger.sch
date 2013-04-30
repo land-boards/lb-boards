@@ -1,8 +1,7 @@
-EESchema Schematic File Version 2  date 4/28/2013 5:26:51 PM
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 30/04/2013 12:51:19
 LIBS:power
 LIBS:device
-LIBS:CNT-RJ45
+LIBS:DougsSch
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -10,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 5
 Title "One Wire Logger"
-Date "28 apr 2013"
+Date "30 apr 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -46,19 +45,8 @@ F3 "GND" I L 6900 2300 60
 F4 "+5VIN" I L 6900 1750 60 
 F5 "ONE-WIRE" O R 8250 2050 60 
 $EndSheet
-$Comp
-L SPST SW1
-U 1 1 517C72C6
-P 4350 1750
-F 0 "SW1" H 4350 1850 70  0000 C CNN
-F 1 "SPST" H 4350 1650 70  0000 C CNN
-F 2 "~" H 4350 1750 60  0000 C CNN
-F 3 "~" H 4350 1750 60  0000 C CNN
-	1    4350 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3700 1750 3850 1750
+	3700 1750 4250 1750
 Wire Wire Line
 	2350 2300 2200 2300
 Wire Wire Line
@@ -70,7 +58,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 2300 5000 2300
 Wire Wire Line
-	4850 1750 5000 1750
+	4450 1750 5000 1750
 Wire Wire Line
 	6350 1750 6900 1750
 Wire Wire Line
@@ -95,6 +83,7 @@ F0 "One Wire Connector" 50
 F1 "OneWireL-04.sch" 50
 F2 "ONE-WIRE" I L 8700 2050 60 
 F3 "GND" I L 8700 2300 60 
+F4 "+5V" I L 8700 1750 60 
 $EndSheet
 Wire Wire Line
 	8500 2900 8500 2300
@@ -103,4 +92,19 @@ Wire Wire Line
 Connection ~ 6700 2900
 Wire Wire Line
 	8250 2050 8700 2050
+$Comp
+L CONN_2 SW1
+U 1 1 517E9D9A
+P 4350 2300
+F 0 "SW1" V 4300 2300 40  0000 C CNN
+F 1 "CONN_2" V 4400 2300 40  0000 C CNN
+F 2 "PIN_ARRAY_2X1" V 4550 2300 60  0000 C CNN
+F 3 "~" H 4350 2300 60  0000 C CNN
+	1    4350 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 1750 4250 1950
+Wire Wire Line
+	4450 1750 4450 1950
 $EndSCHEMATC
