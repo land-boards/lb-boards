@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 30/04/2013 12:51:19
+EESchema Schematic File Version 2  date 5/1/2013 7:01:16 PM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -23,8 +24,8 @@ U 517C5D95
 F0 "LiPo Battery Charger" 50
 F1 "OneWireL-01.sch" 50
 F2 "VUSB" I L 2350 1750 60 
-F3 "3.7V" O R 3700 1750 60 
-F4 "GND" I L 2350 2300 60 
+F3 "GND" I L 2350 2300 60 
+F4 "VB-3.7" O R 3700 1750 60 
 $EndSheet
 $Sheet
 S 5000 1550 1350 1000
@@ -67,11 +68,11 @@ Wire Wire Line
 	6700 2300 6900 2300
 Connection ~ 4800 2900
 Wire Wire Line
-	8250 1750 8500 1750
+	8250 1750 8400 1750
 Wire Wire Line
-	8500 1750 8500 1300
+	8400 1750 8400 1300
 Wire Wire Line
-	8500 1300 2100 1300
+	8400 1300 2100 1300
 Wire Wire Line
 	2100 1300 2100 1750
 Wire Wire Line
@@ -107,4 +108,13 @@ Wire Wire Line
 	4250 1750 4250 1950
 Wire Wire Line
 	4450 1750 4450 1950
+Wire Wire Line
+	8700 1750 8550 1750
+Wire Wire Line
+	8550 1750 8550 1200
+Wire Wire Line
+	8550 1200 6650 1200
+Wire Wire Line
+	6650 1200 6650 1750
+Connection ~ 6650 1750
 $EndSCHEMATC

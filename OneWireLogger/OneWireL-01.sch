@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 30/04/2013 12:51:19
+EESchema Schematic File Version 2  date 5/1/2013 7:01:16 PM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -131,7 +132,7 @@ U 1 1 517C61DF
 P 7100 3400
 F 0 "R4" V 7180 3400 50  0000 C CNN
 F 1 "NTC-10K" V 7100 3400 50  0000 C CNN
-F 2 "SM0603" H 7100 3400 60  0000 C CNN
+F 2 "SM0603" V 7250 3400 60  0000 C CNN
 F 3 "~" H 7100 3400 60  0000 C CNN
 	1    7100 3400
 	1    0    0    -1  
@@ -153,7 +154,7 @@ Wire Wire Line
 	7300 2400 8100 2400
 Connection ~ 7300 2700
 Text HLabel 8100 2400 2    60   Output Italic 0
-3.7V
+VB-3.7
 Connection ~ 6900 3700
 Text HLabel 4250 3700 0    60   Input Italic 0
 GND

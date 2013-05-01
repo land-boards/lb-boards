@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 30/04/2013 12:51:19
+EESchema Schematic File Version 2  date 5/1/2013 7:01:16 PM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
