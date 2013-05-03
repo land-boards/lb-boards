@@ -1,4 +1,4 @@
-update=29/04/2013 12:50:37
+update=5/2/2013 10:18:53 PM
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -26,9 +26,9 @@ LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 version=1
 LastNetListRead=OneWireLogger.net
 UseCmpFile=0
-PadDrill=0
-PadSizeH=1
-PadSizeV=2.7
+PadDrill=3.175
+PadSizeH=5
+PadSizeV=5
 PcbTextSizeV=1
 PcbTextSizeH=1
 PcbTextThickness=0.3
@@ -50,3 +50,4 @@ LibName5=libcms
 LibName6=led
 LibName7=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName8=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/adafruit
+LibName9=sw5way
