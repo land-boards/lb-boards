@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 5/7/2013 10:00:02 AM
+PCBNEW-BOARD Version 2 date 5/7/2013 9:38:26 AM
 
 # Created by Pcbnew(2013-03-19 BZR 4004)-stable
 
@@ -7,7 +7,7 @@ encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 11F08001
-VisibleLayers 11E08001
+VisibleLayers 11E00000
 Links 121
 NoConn 0
 Di 122.698934 61.90234 177.108034 112.0648
@@ -175,19 +175,19 @@ Na 26 "/PF1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 27 "/PF4"
+Na 27 "/PF2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 28 "/PF5"
+Na 28 "/PF3"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 29 "/PF6"
+Na 29 "/PF4"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 30 "/PF7"
+Na 30 "/PF5"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -227,11 +227,11 @@ Na 39 "GND"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 40 "N-0000025"
+Na 40 "N-000002"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 41 "N-0000043"
+Na 41 "N-000044"
 St ~
 $EndEQUIPOT
 $NCLASS
@@ -270,10 +270,10 @@ AddNet "/PE2"
 AddNet "/PE6"
 AddNet "/PF0"
 AddNet "/PF1"
+AddNet "/PF2"
+AddNet "/PF3"
 AddNet "/PF4"
 AddNet "/PF5"
-AddNet "/PF6"
-AddNet "/PF7"
 AddNet "/PW5"
 AddNet "/RST"
 AddNet "/USB-DM"
@@ -283,8 +283,8 @@ AddNet "/VFUSE"
 AddNet "/VIN"
 AddNet "/VREG"
 AddNet "GND"
-AddNet "N-0000025"
-AddNet "N-0000043"
+AddNet "N-000002"
+AddNet "N-000044"
 $EndNCLASS
 $MODULE MTG-4-40
 Po 164.465 102.235 0 15 5055DE0D 504A9E13 ~~
@@ -819,7 +819,7 @@ $PAD
 Sh "39" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/PF4"
+Ne 27 "/PF2"
 Po 0 -5.715
 $EndPAD
 $PAD
@@ -861,21 +861,21 @@ $PAD
 Sh "38" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/PF5"
+Ne 28 "/PF3"
 Po 0.8001 -5.715
 $EndPAD
 $PAD
 Sh "37" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/PF6"
+Ne 29 "/PF4"
 Po 1.6002 -5.715
 $EndPAD
 $PAD
 Sh "36" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/PF7"
+Ne 30 "/PF5"
 Po 2.4003 -5.715
 $EndPAD
 $PAD
@@ -896,14 +896,14 @@ $PAD
 Sh "17" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 40 "N-0000025"
+Ne 40 "N-000002"
 Po 0 5.715
 $EndPAD
 $PAD
 Sh "16" R 0.4064 1.524 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 41 "N-0000043"
+Ne 41 "N-000044"
 Po -0.8001 5.715
 $EndPAD
 $PAD
@@ -1142,14 +1142,14 @@ $PAD
 Sh "3" C 1.397 1.397 0 0 1800
 Dr 0.8128 0 0
 At STD N 00E0FFFF
-Ne 41 "N-0000043"
+Ne 41 "N-000044"
 Po 0 -2.49936
 $EndPAD
 $PAD
 Sh "1" C 1.397 1.397 0 0 1800
 Dr 0.8128 0 0
 At STD N 00E0FFFF
-Ne 40 "N-0000025"
+Ne 40 "N-000002"
 Po 0 2.49936
 $EndPAD
 $PAD
@@ -2267,7 +2267,7 @@ $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 30 "/PF7"
+Ne 30 "/PF5"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2310,7 +2310,7 @@ $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 29 "/PF6"
+Ne 29 "/PF4"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2353,7 +2353,7 @@ $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 28 "/PF5"
+Ne 28 "/PF3"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2466,7 +2466,7 @@ $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 27 "/PF4"
+Ne 27 "/PF2"
 Po 1.27 0
 $EndPAD
 $SHAPE3D
