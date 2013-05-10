@@ -1,16 +1,15 @@
-EESchema Schematic File Version 2  date 5/5/2013 12:44:05 PM
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 10/05/2013 12:48:38
 LIBS:power
 LIBS:device
-LIBS:CNT-RJ45
+LIBS:DougsSch
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title "One Wire Logger"
-Date "5 may 2013"
+Date "10 may 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
