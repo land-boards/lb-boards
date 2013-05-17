@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/05/2013 12:48:38
+EESchema Schematic File Version 2  date 13/05/2013 12:50:21
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "One Wire Logger"
-Date "10 may 2013"
+Date "13 may 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -58,7 +58,7 @@ U 1 1 517EABC6
 P 6350 1500
 F 0 "U5" H 6400 1800 60  0000 C CNN
 F 1 "DS18S20+" H 6600 1500 60  0000 C CNN
-F 2 "TO92" H 6350 1500 60  0000 C CNN
+F 2 "TO92" H 6200 1500 60  0000 C CNN
 F 3 "~" H 6350 1500 60  0000 C CNN
 	1    6350 1500
 	-1   0    0    -1  

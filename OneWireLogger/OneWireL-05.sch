@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/05/2013 12:48:38
+EESchema Schematic File Version 2  date 13/05/2013 12:50:21
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 6
 Title ""
-Date "10 may 2013"
+Date "13 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,7 +46,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 1750 4500 1750
 Wire Wire Line
-	4500 1750 4500 900 
+	4500 1750 4500 950 
 Connection ~ 3650 1750
 Wire Wire Line
 	3650 1600 3650 1900
@@ -172,8 +172,8 @@ GND
 Wire Wire Line
 	3950 3400 3150 3400
 Wire Wire Line
-	4500 900  3150 900 
-Text HLabel 3150 900  0    60   Input ~ 0
+	4500 950  3150 950 
+Text HLabel 3150 950  0    60   Input ~ 0
 VCC
 Text HLabel 5250 1950 2    60   Output ~ 0
 SW5WAY
