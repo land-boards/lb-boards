@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/05/2013 12:50:21
+EESchema Schematic File Version 2  date 22/05/2013 15:47:32
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -9,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 6
 Title "One Wire Logger"
-Date "13 may 2013"
+Date "22 may 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -25,6 +25,10 @@ F 0 "P1" V 6800 2950 60  0000 C CNN
 F 1 "CNT-RJ45-8" V 6900 2900 60  0000 C CNN
 F 2 "RJ45_8" H 6850 2450 60  0000 C CNN
 F 3 "" H 6850 2650 60  0000 C CNN
+F 4 "TE Connectivity/AMP" H 6850 2650 60  0001 C CNN "Mfg"
+F 5 "215877-1" H 6850 2650 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 6850 2650 60  0001 C CNN "Vendor"
+F 7 "571-2158771" H 6850 2650 60  0001 C CNN "VendorPN"
 	1    6850 2650
 	1    0    0    -1  
 $EndComp
@@ -49,6 +53,10 @@ F 0 "R14" V 5530 1350 40  0000 C CNN
 F 1 "4.7K" V 5457 1351 40  0000 C CNN
 F 2 "SM0805" V 5380 1350 30  0000 C CNN
 F 3 "~" H 5450 1350 30  0000 C CNN
+F 4 "Bourns" H 5450 1350 60  0001 C CNN "Mfg"
+F 5 "CR0805-JW-472ELF" H 5450 1350 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 5450 1350 60  0001 C CNN "Vendor"
+F 7 "652-CR0805-JW-472ELF" H 5450 1350 60  0001 C CNN "VendorPN"
 	1    5450 1350
 	0    -1   -1   0   
 $EndComp
@@ -60,6 +68,10 @@ F 0 "U5" H 6400 1800 60  0000 C CNN
 F 1 "DS18S20+" H 6600 1500 60  0000 C CNN
 F 2 "TO92" H 6200 1500 60  0000 C CNN
 F 3 "~" H 6350 1500 60  0000 C CNN
+F 4 "Maxim" H 6350 1500 60  0001 C CNN "Mfg"
+F 5 "DS18S20+PAR" H 6350 1500 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 6350 1500 60  0001 C CNN "Vendor"
+F 7 "700-DS18S20+PAR" H 6350 1500 60  0001 C CNN "VendorPN"
 	1    6350 1500
 	-1   0    0    -1  
 $EndComp
