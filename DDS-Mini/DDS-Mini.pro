@@ -1,0 +1,43 @@
+update=06/05/2013 14:14:53
+version=1
+last_client=pcbnew
+[general]
+version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+[pcbnew]
+version=1
+LastNetListRead=TTH-DS-PWR-DDS.net
+UseCmpFile=0
+PadDrill=0.000000000000
+PadDrillOvalY=0.000000000000
+PadSizeH=5.334000000000
+PadSizeV=1.930400000000
+PcbTextSizeV=2.032000000000
+PcbTextSizeH=1.524000000000
+PcbTextThickness=0.304800000000
+ModuleTextSizeV=1.016000000000
+ModuleTextSizeH=1.016000000000
+ModuleTextSizeThickness=0.203200000000
+SolderMaskClearance=0.254000000000
+SolderMaskMinWidth=0.000000000000
+DrawSegmentWidth=0.381000000000
+BoardOutlineThickness=0.381000000000
+ModuleOutlineThickness=0.381000000000
+[pcbnew/libraries]
+LibDir=
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName2=TTH-MODS
