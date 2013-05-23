@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 5/7/2013 1:24:22 PM
+EESchema Schematic File Version 2  date 23/05/2013 12:42:58
 LIBS:transistors
 LIBS:special
 LIBS:power
@@ -18,7 +18,7 @@ Sheet 1 1
 Title "GVS-32U4"
 Date "7 may 2013"
 Rev "X1"
-Comp "AA6PR"
+Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
