@@ -1,12 +1,13 @@
-EESchema Schematic File Version 2  date 23/05/2013 16:19:45
+EESchema Schematic File Version 2  date 28/05/2013 17:07:53
 LIBS:DougsSch
+LIBS:DDS-Mini-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 5
 Title ""
-Date "23 may 2013"
+Date "28 may 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -402,10 +403,6 @@ Text Label 6550 4600 0    60   ~ 0
 SDA
 Text Label 6550 4700 0    60   ~ 0
 SCLK
-Text HLabel 6950 4600 2    60   BiDi ~ 0
-SDA
-Text HLabel 6950 4700 2    60   Output ~ 0
-SCLK
 Connection ~ 4150 1800
 $Comp
 L CONN_1 TP7
@@ -425,4 +422,30 @@ Connection ~ 3450 3200
 Wire Wire Line
 	4250 2500 4000 2500
 Connection ~ 4000 2500
+$Comp
+L CONN_4 H3
+U 1 1 51A51831
+P 7300 4550
+F 0 "H3" V 7250 4550 50  0000 C CNN
+F 1 "CONN_4" V 7350 4550 50  0000 C CNN
+F 2 "PIN_ARRAY_4x1" V 7500 4550 60  0000 C CNN
+F 3 "~" H 7300 4550 60  0000 C CNN
+	1    7300 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4500 6950 4500
+Wire Wire Line
+	6950 4400 6850 4400
+Wire Wire Line
+	6850 4400 6850 5000
+Wire Wire Line
+	4100 4700 4100 5000
+Wire Wire Line
+	4100 5000 6850 5000
+Connection ~ 4100 4700
+Text Label 4350 1000 0    60   ~ 0
+DVDD
+Text Label 6450 4500 0    60   ~ 0
+DVDD
 $EndSCHEMATC

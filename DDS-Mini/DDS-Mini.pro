@@ -1,4 +1,4 @@
-update=06/05/2013 14:14:53
+update=28/05/2013 16:52:51
 version=1
 last_client=pcbnew
 [general]
@@ -20,12 +20,12 @@ LabSize=60
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
 [pcbnew]
 version=1
-LastNetListRead=TTH-DS-PWR-DDS.net
+LastNetListRead=DDS-Mini.net
 UseCmpFile=0
-PadDrill=0.000000000000
-PadDrillOvalY=0.000000000000
-PadSizeH=5.334000000000
-PadSizeV=1.930400000000
+PadDrill=3.175000000000
+PadDrillOvalY=3.175000000000
+PadSizeH=6.350000000000
+PadSizeV=6.350000000000
 PcbTextSizeV=2.032000000000
 PcbTextSizeH=1.524000000000
 PcbTextThickness=0.304800000000
@@ -41,3 +41,4 @@ ModuleOutlineThickness=0.381000000000
 LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName2=TTH-MODS
+LibName3=pin_array
