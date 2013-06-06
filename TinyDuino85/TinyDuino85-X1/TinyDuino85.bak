@@ -1,31 +1,38 @@
-EESchema Schematic File Version 2  date Sun 09 Sep 2012 09:09:20 AM EDT
+EESchema Schematic File Version 2  date Sun 19 Aug 2012 10:16:46 AM EDT
 LIBS:DougsSch
 LIBS:power
 LIBS:device
 LIBS:conn
-LIBS:TinyDuino85-cache
-EELAYER 25  0
+EELAYER 43  0
 EELAYER END
-$Descr A 11000 8500
+$Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
-Title "TINYDUINO85"
-Date "9 sep 2012"
-Rev "X1"
+Title ""
+Date "19 aug 2012"
+Rev ""
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 4700 3750 0    60   ~ 0
+NoConn ~ 5750 5600
+NoConn ~ 5750 5500
+NoConn ~ 5750 5400
+NoConn ~ 5750 5300
+Text Label 3550 2650 0    60   ~ 0
 RST*
-Wire Wire Line
-	5000 3750 4550 3750
-Wire Wire Line
-	4550 3750 4550 3900
-Wire Wire Line
-	4550 3900 4300 3900
+Text Label 5100 2500 0    60   ~ 0
+D4
+Text Label 5100 2600 0    60   ~ 0
+D3
+Text Label 5100 2700 0    60   ~ 0
+D2
+Text Label 5100 2800 0    60   ~ 0
+D1
+Text Label 5100 2900 0    60   ~ 0
+D0
 Connection ~ 6100 2900
 Wire Wire Line
 	6100 2150 6100 2900
@@ -81,7 +88,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 2050 4400 2100
 Wire Wire Line
-	3350 2600 3350 2700
+	3350 2700 3350 2600
 Wire Wire Line
 	7350 4700 7350 4550
 Connection ~ 7050 4550
@@ -100,9 +107,9 @@ Wire Wire Line
 Wire Wire Line
 	7350 4550 4550 4550
 Wire Wire Line
-	4550 4550 4550 4100
+	4550 4550 4550 4200
 Wire Wire Line
-	4300 4000 5050 4000
+	5050 4000 4550 4000
 Wire Wire Line
 	5600 4550 5600 4450
 Connection ~ 5600 4550
@@ -159,14 +166,14 @@ Wire Wire Line
 Wire Wire Line
 	6550 2450 6950 2450
 Wire Wire Line
-	6950 2800 5050 2800
+	5050 2800 6950 2800
 Wire Wire Line
 	5300 1650 5300 1550
 Wire Wire Line
 	5300 1550 6750 1550
 Connection ~ 6750 1550
 Wire Wire Line
-	5700 1550 5700 1650
+	5700 1650 5700 1550
 Connection ~ 5700 1550
 Wire Wire Line
 	6100 1650 6100 1550
@@ -177,33 +184,6 @@ Connection ~ 5500 2600
 Wire Wire Line
 	5900 2150 5900 2800
 Connection ~ 5900 2800
-Wire Wire Line
-	4550 4100 4300 4100
-$Comp
-L CONN_3 P1
-U 1 1 504C944B
-P 3950 4000
-F 0 "P1" V 3900 4000 50  0000 C CNN
-F 1 "CONN_3" V 4000 4000 40  0000 C CNN
-	1    3950 4000
-	-1   0    0    1   
-$EndComp
-NoConn ~ 5750 5600
-NoConn ~ 5750 5500
-NoConn ~ 5750 5400
-NoConn ~ 5750 5300
-Text Label 3550 2650 0    60   ~ 0
-RST*
-Text Label 5100 2500 0    60   ~ 0
-D4
-Text Label 5100 2600 0    60   ~ 0
-D3
-Text Label 5100 2700 0    60   ~ 0
-D2
-Text Label 5100 2800 0    60   ~ 0
-D1
-Text Label 5100 2900 0    60   ~ 0
-D0
 $Comp
 L R R6
 U 1 1 5030F3D0
@@ -443,6 +423,15 @@ F 0 "C3" H 6650 4350 50  0000 L CNN
 F 1 "10uF" H 6650 4150 50  0000 L CNN
 	1    6600 4250
 	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 5030E7AE
+P 4200 4100
+F 0 "P1" V 4150 4100 40  0000 C CNN
+F 1 "CONN_2" V 4250 4100 40  0000 C CNN
+	1    4200 4100
+	-1   0    0    -1  
 $EndComp
 $Comp
 L AP1117 U1
