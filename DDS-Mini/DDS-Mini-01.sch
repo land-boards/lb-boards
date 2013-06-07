@@ -1,5 +1,4 @@
-EESchema Schematic File Version 2  date 28/05/2013 17:07:53
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 6/5/2013 10:34:21 PM
 LIBS:DDS-Mini-cache
 EELAYER 27 0
 EELAYER END
