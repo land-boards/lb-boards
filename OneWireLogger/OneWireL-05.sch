@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 22/05/2013 15:47:32
+EESchema Schematic File Version 2  date 6/7/2013 11:19:15 AM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 6
 Title ""
-Date "22 may 2013"
+Date "7 jun 2013"
 Rev ""
 Comp ""
 Comment1 ""

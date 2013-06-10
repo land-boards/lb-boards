@@ -1,4 +1,5 @@
-EESchema Schematic File Version 2  date 6/5/2013 10:34:21 PM
+EESchema Schematic File Version 2  date 6/7/2013 8:03:24 AM
+LIBS:DougsSch
 LIBS:DDS-Mini-cache
 EELAYER 27 0
 EELAYER END
@@ -6,7 +7,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 5
 Title ""
-Date "28 may 2013"
+Date "7 jun 2013"
 Rev ""
 Comp ""
 Comment1 ""

@@ -1,4 +1,5 @@
-EESchema Schematic File Version 2  date 6/5/2013 10:34:21 PM
+EESchema Schematic File Version 2  date 6/7/2013 8:03:24 AM
+LIBS:DougsSch
 LIBS:DDS-Mini-cache
 EELAYER 27 0
 EELAYER END
@@ -6,7 +7,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 5
 Title ""
-Date "28 may 2013"
+Date "7 jun 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -28,8 +29,6 @@ Text HLabel 9300 7000 0    60   Input ~ 0
 AGND
 Text HLabel 8550 3450 2    60   Output ~ 0
 VOUT
-Connection ~ 3450 6500
-Connection ~ 3450 6750
 Wire Wire Line
 	7100 3450 8550 3450
 Text Label 6000 4800 0    60   ~ 0

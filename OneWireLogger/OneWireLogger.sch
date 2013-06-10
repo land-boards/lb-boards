@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 22/05/2013 15:47:32
+EESchema Schematic File Version 2  date 6/7/2013 11:19:15 AM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 6
 Title "One Wire Logger"
-Date "22 may 2013"
+Date "7 jun 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -18,13 +19,13 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 2350 1550 1100 1050
+S 2000 1550 1100 1050
 U 517C5D95
 F0 "LiPo Battery Charger" 50
 F1 "OneWireL-01.sch" 50
-F2 "VUSB" I L 2350 1750 60 
-F3 "GND" I L 2350 2300 60 
-F4 "VB-3.7" O R 3450 1750 60 
+F2 "VUSB" I L 2000 1750 60 
+F3 "GND" I L 2000 2300 60 
+F4 "VB-3.7" O R 3100 1750 60 
 $EndSheet
 $Sheet
 S 4400 1550 900  1000
@@ -47,19 +48,15 @@ F5 "ONE-WIRE" O R 8000 2050 60
 F6 "SW5WAY" I L 6950 2150 60 
 $EndSheet
 Wire Wire Line
-	3450 1750 3750 1750
+	2000 2300 1900 2300
 Wire Wire Line
-	2350 2300 2200 2300
+	1900 2300 1900 2900
 Wire Wire Line
-	2200 2300 2200 2900
-Wire Wire Line
-	2200 2900 8250 2900
+	1900 2900 8250 2900
 Wire Wire Line
 	4250 2900 4250 2300
 Wire Wire Line
 	4250 2300 4400 2300
-Wire Wire Line
-	3950 1750 4400 1750
 Wire Wire Line
 	5300 1750 6950 1750
 Wire Wire Line
@@ -72,11 +69,11 @@ Wire Wire Line
 Wire Wire Line
 	8150 1750 8150 1300
 Wire Wire Line
-	8150 1300 2200 1300
+	8150 1300 1900 1300
 Wire Wire Line
-	2200 1300 2200 1750
+	1900 1300 1900 1750
 Wire Wire Line
-	2200 1750 2350 1750
+	1900 1750 2000 1750
 $Sheet
 S 8450 1550 1150 1000
 U 517C8275
@@ -93,21 +90,6 @@ Wire Wire Line
 Connection ~ 6850 2900
 Wire Wire Line
 	8000 2050 8450 2050
-$Comp
-L CONN_2 SW1
-U 1 1 517E9D9A
-P 3850 2300
-F 0 "SW1" V 3800 2300 40  0000 C CNN
-F 1 "CONN_2" V 3900 2300 40  0000 C CNN
-F 2 "PIN_ARRAY_2X1" V 4050 2300 60  0000 C CNN
-F 3 "~" H 3850 2300 60  0000 C CNN
-	1    3850 2300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3750 1750 3750 1950
-Wire Wire Line
-	3950 1750 3950 1950
 Wire Wire Line
 	8450 1750 8300 1750
 Wire Wire Line
@@ -234,4 +216,23 @@ Wire Wire Line
 Wire Wire Line
 	5550 2250 5550 2900
 Connection ~ 5550 2900
+$Comp
+L SWITCH_INV SW1
+U 1 1 51B1DB4D
+P 3700 1750
+F 0 "SW1" H 3500 1900 50  0000 C CNN
+F 1 "SWITCH_INV" H 3550 1600 50  0000 C CNN
+F 2 "SW-SPDT-SLIDE" H 3700 1500 60  0000 C CNN
+F 3 "" H 3700 1750 60  0000 C CNN
+	1    3700 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1750 3200 1750
+Wire Wire Line
+	4400 1750 4300 1750
+Wire Wire Line
+	4300 1750 4300 1650
+Wire Wire Line
+	4300 1650 4200 1650
 $EndSCHEMATC

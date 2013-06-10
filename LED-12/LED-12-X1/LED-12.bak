@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 6/9/2013 12:40:05 PM
+EESchema Schematic File Version 2  date 6/9/2013 12:35:41 PM
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -22,9 +22,13 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	6100 4100 7300 4100
+	6400 4100 7100 4100
 Wire Wire Line
-	7100 4100 7100 4700
+	7100 4100 7100 4300
+Wire Wire Line
+	7100 4300 7100 4500
+Wire Wire Line
+	7100 4500 7100 4700
 Wire Wire Line
 	10050 3450 9950 3450
 Wire Wire Line
@@ -45,7 +49,17 @@ Wire Wire Line
 	7100 4700 7300 4700
 Connection ~ 8550 1050
 Wire Wire Line
-	2500 1050 10350 1050
+	2500 1050 2600 1050
+Wire Wire Line
+	2600 1050 2800 1050
+Wire Wire Line
+	2800 1050 8550 1050
+Wire Wire Line
+	8550 1050 9150 1050
+Wire Wire Line
+	9150 1050 9750 1050
+Wire Wire Line
+	9750 1050 10350 1050
 Connection ~ 9150 1050
 Wire Wire Line
 	9150 1050 9150 1150
@@ -88,6 +102,8 @@ Connection ~ 5850 3850
 Wire Wire Line
 	5850 3850 5850 4000
 Wire Wire Line
+	6400 4100 6100 4100
+Wire Wire Line
 	10350 3850 10350 3650
 Wire Wire Line
 	9150 3850 9150 3650
@@ -101,6 +117,8 @@ Wire Wire Line
 Wire Wire Line
 	9750 1150 9750 1050
 Connection ~ 9750 1050
+Wire Wire Line
+	7100 4100 7300 4100
 Wire Wire Line
 	7100 4300 7300 4300
 Connection ~ 7100 4300
@@ -118,7 +136,25 @@ Wire Wire Line
 	9350 3450 9450 3450
 Connection ~ 9750 3850
 Wire Wire Line
-	2600 3850 10350 3850
+	2600 3850 3450 3850
+Wire Wire Line
+	3450 3850 4150 3850
+Wire Wire Line
+	4150 3850 4550 3850
+Wire Wire Line
+	4550 3850 5150 3850
+Wire Wire Line
+	5150 3850 5850 3850
+Wire Wire Line
+	5850 3850 6600 3850
+Wire Wire Line
+	6600 3850 8550 3850
+Wire Wire Line
+	8550 3850 9150 3850
+Wire Wire Line
+	9150 3850 9750 3850
+Wire Wire Line
+	9750 3850 10350 3850
 NoConn ~ 10450 7000
 NoConn ~ 10450 6850
 NoConn ~ 10450 6700
@@ -445,12 +481,12 @@ $EndComp
 $Comp
 L POT RV1
 U 1 1 50D9CD48
-P 6600 2750
-F 0 "RV1" H 6600 2650 50  0000 C CNN
-F 1 "10K-POT" H 6600 2600 50  0000 C CNN
-F 2 "" H 6600 2750 60  0001 C CNN
-F 3 "" H 6600 2750 60  0001 C CNN
-	1    6600 2750
+P 6600 2800
+F 0 "RV1" H 6600 2700 50  0000 C CNN
+F 1 "10K-POT" H 6600 2650 50  0000 C CNN
+F 2 "" H 6600 2800 60  0001 C CNN
+F 3 "" H 6600 2800 60  0001 C CNN
+	1    6600 2800
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -515,18 +551,26 @@ Connection ~ 3450 3850
 Wire Wire Line
 	4050 1850 4150 1850
 Wire Wire Line
-	4150 1750 4150 3200
+	4150 1750 4150 1850
 Wire Wire Line
-	4050 1750 6600 1750
+	4150 1850 4150 3200
+Wire Wire Line
+	4050 1750 4150 1750
+Wire Wire Line
+	4150 1750 4550 1750
+Wire Wire Line
+	4550 1750 5200 1750
+Wire Wire Line
+	5200 1750 6600 1750
 Connection ~ 4150 1850
 Wire Wire Line
 	4150 3600 4150 3850
 Connection ~ 4150 3850
 Wire Wire Line
-	6600 1750 6600 2500
+	6600 1750 6600 2550
 Connection ~ 4150 1750
 Wire Wire Line
-	6600 3000 6600 3850
+	6600 3050 6600 3850
 Connection ~ 6600 3850
 $Comp
 L ATTINY85 U2
@@ -565,7 +609,9 @@ Wire Wire Line
 	4550 1950 4550 1750
 Connection ~ 4550 1750
 Wire Wire Line
-	4550 2450 4550 3200
+	4550 2450 4550 2700
+Wire Wire Line
+	4550 2700 4550 3200
 Wire Wire Line
 	4650 2700 4550 2700
 Connection ~ 4550 2700
@@ -578,10 +624,4 @@ Connection ~ 5150 3850
 Wire Wire Line
 	5200 2150 5200 1750
 Connection ~ 5200 1750
-Wire Wire Line
-	6100 4100 6100 2950
-Wire Wire Line
-	6100 2950 5850 2950
-Wire Wire Line
-	5850 2750 6450 2750
 $EndSCHEMATC

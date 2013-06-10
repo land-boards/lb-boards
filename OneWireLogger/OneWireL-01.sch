@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 22/05/2013 15:47:32
+EESchema Schematic File Version 2  date 6/7/2013 11:19:15 AM
+LIBS:DougsSch
 LIBS:power
 LIBS:device
-LIBS:DougsSch
+LIBS:CNT-RJ45
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 6
 Title "One Wire Logger"
-Date "22 may 2013"
+Date "7 jun 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -83,7 +84,7 @@ U 1 1 517C6133
 P 7800 2800
 F 0 "J1" V 7750 2800 40  0000 C CNN
 F 1 "JST_2" V 7850 2800 40  0000 C CNN
-F 2 "adafruit-JST-PH-2-SMT" H 7950 3000 60  0000 C CNN
+F 2 "JST-2-SMT" H 7950 3000 60  0000 C CNN
 F 3 "~" H 7800 2800 60  0000 C CNN
 F 4 "JST Sales America Inc" H 7800 2800 60  0001 C CNN "Mfg"
 F 5 "S2B-PH-SM4-TB(LF)(SN)" H 7800 2800 60  0001 C CNN "MfgPN"
