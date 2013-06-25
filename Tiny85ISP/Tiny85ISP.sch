@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 06/06/2013 16:45:35
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
+LIBS:DougsSch
 LIBS:Tiny85ISP-cache
 EELAYER 27 0
 EELAYER END
