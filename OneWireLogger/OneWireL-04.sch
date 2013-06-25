@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/06/2013 13:04:25
+EESchema Schematic File Version 2  date 25/06/2013 16:41:49
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "13 jun 2013"
+Date "25 jun 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -97,4 +97,25 @@ Wire Wire Line
 	5200 1350 4850 1350
 Text HLabel 4850 1350 0    60   Input ~ 0
 +5V
+$Comp
+L CONN_2 P4
+U 1 1 51C9D37A
+P 5750 2700
+F 0 "P4" V 5700 2700 40  0000 C CNN
+F 1 "CONN_2" V 5800 2700 40  0000 C CNN
+F 2 "PIN_ARRAY_2X1" H 5750 2700 60  0000 C CNN
+F 3 "~" H 5750 2700 60  0000 C CNN
+	1    5750 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2800 5000 2800
+Wire Wire Line
+	5000 2800 5000 2400
+Connection ~ 5000 2400
+Wire Wire Line
+	5400 2600 5200 2600
+Wire Wire Line
+	5200 2600 5200 2300
+Connection ~ 5200 2300
 $EndSCHEMATC

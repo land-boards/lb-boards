@@ -1,17 +1,17 @@
-PCBNEW-BOARD Version 2 date 5/7/2013 4:44:55 PM
+PCBNEW-BOARD Version 2 date 25/06/2013 16:28:56
 
-# Created by Pcbnew(2013-03-19 BZR 4004)-stable
+# Created by Pcbnew(2013-04-19 BZR 4011)-stable
 
 $GENERAL
 encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 11F08001
-VisibleLayers 11E00000
+VisibleLayers 11E08001
 Links 127
 NoConn 0
-Di 115.078934 67.994801 187.632002 138.7094
-Ndraw 52
+Di 115.078934 67.994801 205.868686 138.7094
+Ndraw 53
 Ntrack 272
 Nzone 0
 BoardThickness 1.6002
@@ -22,7 +22,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A 11000 8500
 Title "ATMega32U4"
-Date "7 may 2013"
+Date "25 jun 2013"
 Rev "X1"
 Comp ""
 Comment1 ""
@@ -62,7 +62,7 @@ PadDrill 3.175
 Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
-VisibleElements FFFFFFBF
+VisibleElements 7FFFFFFF
 PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
@@ -2644,6 +2644,11 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE SM0805
+$TEXTPCB
+Te "PC6 s/b D5 not D6"
+Po 194.25 94 1.524 2.032 0.3048 0
+De 24 1 0 Normal
+$EndTEXTPCB
 $COTATION
 Ge 0 24 0
 Va 49

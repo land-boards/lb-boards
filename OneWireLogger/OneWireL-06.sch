@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/06/2013 13:04:25
+EESchema Schematic File Version 2  date 25/06/2013 16:41:49
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title ""
-Date "13 jun 2013"
+Date "25 jun 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -249,7 +249,7 @@ U 1 1 51BA410C
 P 3400 4200
 F 0 "SW3" H 3550 4310 50  0000 C CNN
 F 1 "SW_PUSH_OMRON" H 3400 4020 50  0000 C CNN
-F 2 "~" H 3400 4200 60  0000 C CNN
+F 2 "SW-PB-6MM" H 3400 4200 60  0000 C CNN
 F 3 "~" H 3400 4200 60  0000 C CNN
 	1    3400 4200
 	0    -1   -1   0   

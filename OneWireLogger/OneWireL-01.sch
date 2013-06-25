@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/06/2013 13:04:25
+EESchema Schematic File Version 2  date 25/06/2013 16:41:49
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "One Wire Logger"
-Date "13 jun 2013"
+Date "25 jun 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -188,4 +188,18 @@ Connection ~ 6900 3700
 Text HLabel 4250 3700 0    60   Input Italic 0
 GND
 NoConn ~ 5900 3100
+$Comp
+L TST TP1
+U 1 1 51C9DF8A
+P 7750 2300
+F 0 "TP1" H 7750 2600 40  0000 C CNN
+F 1 "TST" H 7750 2550 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 7750 2300 60  0000 C CNN
+F 3 "~" H 7750 2300 60  0000 C CNN
+	1    7750 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2300 7750 2400
+Connection ~ 7750 2400
 $EndSCHEMATC

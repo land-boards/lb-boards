@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/06/2013 13:04:25
+EESchema Schematic File Version 2  date 25/06/2013 16:41:49
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 7
 Title ""
-Date "13 jun 2013"
+Date "25 jun 2013"
 Rev ""
 Comp ""
 Comment1 ""

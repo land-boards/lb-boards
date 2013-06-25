@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/06/2013 13:04:25
+EESchema Schematic File Version 2  date 25/06/2013 16:41:49
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 7
 Title "One Wire Logger"
-Date "13 jun 2013"
+Date "25 jun 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -48,12 +48,12 @@ $EndComp
 $Comp
 L +5V #PWR02
 U 1 1 5055D7A5
-P 3200 2000
-F 0 "#PWR02" H 3200 2090 20  0001 C CNN
-F 1 "+5V" H 3200 2090 30  0000 C CNN
-F 2 "" H 3200 2000 60  0001 C CNN
-F 3 "" H 3200 2000 60  0001 C CNN
-	1    3200 2000
+P 3200 2100
+F 0 "#PWR02" H 3200 2190 20  0001 C CNN
+F 1 "+5V" H 3200 2190 30  0000 C CNN
+F 2 "" H 3200 2100 60  0001 C CNN
+F 3 "" H 3200 2100 60  0001 C CNN
+	1    3200 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -328,10 +328,10 @@ F 3 "~" H 7000 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DS1307 U5A
+L DS1307 U5
 U 1 1 517D92FB
 P 9200 6550
-F 0 "U5A" H 9650 6550 60  0000 C CNN
+F 0 "U5" H 9650 6550 60  0000 C CNN
 F 1 "DS1307" H 9600 7650 60  0000 C CNN
 F 2 "SO8N" H 9400 6700 60  0000 C CNN
 F 3 "" H 9200 6550 60  0000 C CNN
@@ -519,7 +519,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 1200 3500 1350
 Wire Wire Line
-	3200 2000 3200 2750
+	3200 2100 3200 2750
 Wire Wire Line
 	1750 3050 1750 3650
 Wire Wire Line
@@ -535,7 +535,7 @@ Connection ~ 3800 4850
 Wire Wire Line
 	2850 2850 3600 2850
 Wire Wire Line
-	3800 1950 3500 1950
+	3100 1950 3800 1950
 Wire Wire Line
 	1650 2750 1750 2750
 Wire Wire Line
@@ -693,12 +693,7 @@ Wire Wire Line
 Wire Wire Line
 	9650 3350 9750 3350
 Wire Wire Line
-	9750 3450 9600 3450
-Wire Wire Line
-	9600 3450 9600 4400
-Wire Wire Line
 	9600 4250 9750 4250
-Connection ~ 9600 4250
 Wire Wire Line
 	5900 1400 5900 1950
 Wire Wire Line
@@ -776,4 +771,28 @@ Wire Wire Line
 	5700 4350 7000 4350
 Text HLabel 7000 4350 2    60   Output ~ 0
 PWR-OFF
+Wire Wire Line
+	3100 1850 3100 1950
+Connection ~ 3500 1950
+$Comp
+L TST TP2
+U 1 1 51C9E585
+P 3100 1850
+F 0 "TP2" H 3100 2150 40  0000 C CNN
+F 1 "TST" H 3100 2100 30  0000 C CNN
+F 2 "PIN_ARRAY_1" H 3100 1850 60  0000 C CNN
+F 3 "~" H 3100 1850 60  0000 C CNN
+	1    3100 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4400 9600 4250
+Wire Wire Line
+	9750 3450 8750 3450
+Text Label 9050 3450 0    60   ~ 0
+BKLT
+Wire Wire Line
+	5700 3050 7000 3050
+Text Label 6450 3050 0    60   ~ 0
+BKLT
 $EndSCHEMATC
