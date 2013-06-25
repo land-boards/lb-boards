@@ -1,4 +1,4 @@
-update=6/7/2013 8:16:49 AM
+update=13/06/2013 11:12:34
 version=1
 last_client=eeschema
 [cvpcb]
@@ -53,3 +53,5 @@ LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
 LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
 LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45
 LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName6=cmos4000
+LibName7=cmos_ieee
