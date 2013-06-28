@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 27/06/2013 16:17:46
+EESchema Schematic File Version 2  date 28/06/2013 16:03:05
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "TINYDUINO85"
-Date "27 jun 2013"
+Date "28 jun 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -186,7 +186,7 @@ U 1 1 5030E7EC
 P 4650 4150
 F 0 "C3" H 4700 4250 50  0000 L CNN
 F 1 "10uF" H 4700 4050 50  0000 L CNN
-F 2 "SM1210" H 4650 4150 60  0001 C CNN
+F 2 "C1V5" V 4500 4150 60  0000 C CNN
 F 3 "" H 4650 4150 60  0001 C CNN
 	1    4650 4150
 	1    0    0    -1  
