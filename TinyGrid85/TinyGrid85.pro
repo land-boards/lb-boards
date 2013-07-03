@@ -1,4 +1,4 @@
-update=6/22/2013 12:16:21 PM
+update=01/07/2013 07:31:56
 version=1
 last_client=eeschema
 [general]
@@ -50,3 +50,4 @@ LibName1=power
 LibName2=device
 LibName3=conn
 LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
