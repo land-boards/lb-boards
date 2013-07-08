@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source "C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/TinyGrid85/TinyGrid85.sch")
-    (date "03/07/2013 12:19:47")
-    (tool "eeschema (2013-04-19 BZR 4011)-stable"))
+    (source C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/TinyGrid85/TinyGrid85.sch)
+    (date "7/7/2013 10:52:44 AM")
+    (tool "eeschema (2013-05-31 BZR 4019)-stable"))
   (components
     (comp (ref MTG3)
       (value CONN_1)
@@ -173,6 +173,19 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 51D43962)))
   (libparts
+    (libpart (lib device) (part CP)
+      (description "Condensateur polarise")
+      (footprints
+        (fp CP*)
+        (fp SM*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part C)
       (description "Condensateur non polarise")
       (footprints
@@ -182,19 +195,6 @@
       (fields
         (field (name Reference) C)
         (field (name Value) C)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part CP)
-      (description "Condensateur polarise")
-      (footprints
-        (fp CP*)
-        (fp SM*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CP)
         (field (name Footprint) ~)
         (field (name Datasheet) ~))
       (pins
@@ -216,13 +216,14 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib conn) (part CONN_1)
-      (description "1 pin")
+    (libpart (lib conn) (part CONN_2)
+      (description "Symbole general de connecteur")
       (fields
         (field (name Reference) P)
-        (field (name Value) CONN_1))
+        (field (name Value) CONN_2))
       (pins
-        (pin (num 1) (name 1) (type passive))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
     (libpart (lib conn) (part CONN_10)
       (description "Symbole general de connecteur")
       (fields
@@ -239,14 +240,13 @@
         (pin (num 8) (name P8) (type passive))
         (pin (num 9) (name P9) (type passive))
         (pin (num 10) (name P10) (type passive))))
-    (libpart (lib conn) (part CONN_2)
-      (description "Symbole general de connecteur")
+    (libpart (lib conn) (part CONN_1)
+      (description "1 pin")
       (fields
         (field (name Reference) P)
-        (field (name Value) CONN_2))
+        (field (name Value) CONN_1))
       (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))))
+        (pin (num 1) (name 1) (type passive))))
     (libpart (lib conn) (part CONN_3X2)
       (description "Symbole general de connecteur")
       (fields
@@ -304,7 +304,7 @@
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
     (library (logical DougsSch)
-      (uri "C:\\Users\\DGilliland.AACISD\\Documents\\PCB Designs\\DougsPCBDesigns\\KiCAD\\library\\DougsSch.lib")))
+      (uri C:\Users\Doug\Documents\GitHub\DougsPCBDesigns\KiCAD\library\DougsSch.lib)))
   (nets
     (net (code 1) (name "")
       (node (ref P1) (pin 2))

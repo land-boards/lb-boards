@@ -1,17 +1,16 @@
-PCBNEW-BOARD Version 2 date 03/07/2013 15:44:41
+PCBNEW-BOARD Version 2 date 7/7/2013 11:19:34 AM
 
-# Created by Pcbnew(2013-04-19 BZR 4011)-stable
+# Created by Pcbnew(2013-05-31 BZR 4019)-stable
 
 $GENERAL
 encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 11F08001
-VisibleLayers 11D08001
 Links 129
 NoConn 0
 Di -6.382001 0.494801 63.276501 61.1124
-Ndraw 46
+Ndraw 47
 Ntrack 119
 Nzone 0
 BoardThickness 1.6002
@@ -22,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A 11000 8500
 Title ""
-Date "3 jul 2013"
+Date "7 jul 2013"
 Rev "X1"
 Comp ""
 Comment1 ""
@@ -35,7 +34,7 @@ $SETUP
 Layers 2
 Layer[0] Back signal
 Layer[15] Front signal
-TrackWidth 0.254
+TrackWidth 0.2032
 TrackWidthList 0.254
 TrackWidthList 0.635
 TrackClearence 0.254
@@ -60,11 +59,11 @@ TextModSize 1.524 1.524
 TextModWidth 0.3048
 PadSize 6.35 6.35
 PadDrill 3.175
-Pad2MaskClearance 0.254
+Pad2MaskClearance 0.1524
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
 $EQUIPOT
@@ -1929,6 +1928,11 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE pin_array_3x2
+$TEXTPCB
+Te "Rev X1"
+Po 12.446 34.29 1.524 2.032 0.3048 900
+De 21 1 0 Normal
+$EndTEXTPCB
 $TEXTPCB
 Te "+"
 Po 45.466 21.59 1.524 2.032 0.3048 0
