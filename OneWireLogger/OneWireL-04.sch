@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 08/07/2013 13:20:45
+EESchema Schematic File Version 2  date 10/07/2013 15:05:59
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "8 jul 2013"
+Date "10 jul 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -118,4 +118,9 @@ Wire Wire Line
 Wire Wire Line
 	5200 2600 5200 2300
 Connection ~ 5200 2300
+NoConn ~ 6500 2700
+NoConn ~ 6500 2600
+NoConn ~ 6500 2500
+NoConn ~ 6500 2100
+NoConn ~ 6500 2000
 $EndSCHEMATC
