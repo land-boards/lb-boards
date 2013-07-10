@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/07/2013 15:05:59
+EESchema Schematic File Version 2  date 10/07/2013 16:38:20
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -286,7 +286,7 @@ Text Label 3550 1950 0    70   ~ 0
 RST
 Text Label 1850 1850 0    60   ~ 0
 VFUSE
-Text HLabel 2250 1850 2    60   Output ~ 0
+Text HLabel 2200 1850 2    60   Output ~ 0
 V5USB
 Text HLabel 1800 4950 0    60   Input ~ 0
 GND
@@ -591,7 +591,7 @@ Wire Wire Line
 Wire Wire Line
 	3400 3750 3400 3800
 Wire Wire Line
-	1750 1850 2500 1850
+	1750 1850 2200 1850
 Wire Wire Line
 	6550 2600 6550 2650
 Connection ~ 6550 2650

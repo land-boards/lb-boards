@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/07/2013 15:05:12
+EESchema Schematic File Version 2  date 10/07/2013 16:38:05
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -247,4 +247,15 @@ Wire Wire Line
 	2600 1300 2600 2250
 Wire Wire Line
 	2600 2250 2750 2250
+$Comp
+L COUPON REV_BLOCK1
+U 1 1 51DDC45B
+P 9400 6100
+F 0 "REV_BLOCK1" H 9400 6050 60  0000 C CNN
+F 1 "REV_BLOCK" H 9400 6400 60  0000 C CNN
+F 2 "REV_BLOCK" H 9400 6100 60  0000 C CNN
+F 3 "~" H 9400 6100 60  0000 C CNN
+	1    9400 6100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
