@@ -1,5 +1,5 @@
-update=6/16/2013 1:57:06 PM
-last_client=pcbnew
+update=13/08/2013 15:12:11
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -7,25 +7,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=../ATMega32U4;../KiCAD/library
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=DougsSch
-LibName2=transistors
-LibName3=special
-LibName4=power
-LibName5=microcontrollers
-LibName6=device
-LibName7=contrib
-LibName8=conn
-LibName9=atmel
-LibName10=atmega32u4bb-from_eagle
 [pcbnew]
 version=1
 LastNetListRead=USB-GPS-Hammond-X2.net
@@ -62,3 +43,22 @@ LibName12=jumper
 LibName13=dougsLib
 LibName14=crystal-epson
 LibName15=Crystals_RevB_25Apr2012
+[eeschema]
+version=1
+LibDir=../ATMega32U4;../KiCAD/library
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=DougsSch
+LibName2=transistors
+LibName3=special
+LibName4=power
+LibName5=microcontrollers
+LibName6=device
+LibName7=contrib
+LibName8=conn
+LibName9=atmel
+LibName10=atmega32u4bb-from_eagle
