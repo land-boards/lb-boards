@@ -1,4 +1,4 @@
-(kicad_pcb (version 3) (host pcbnew "(2013-04-19 BZR 4011)-stable")
+(kicad_pcb (version 3) (host pcbnew "(2013-05-31 BZR 4019)-stable")
 
   (general
     (links 147)
@@ -20,8 +20,7 @@
 
   (layers
     (15 F.Cu signal)
-    (0 B.Cu signal hide)
-    (17 F.Adhes user)
+    (0 B.Cu signal)
     (20 B.SilkS user)
     (21 F.SilkS user)
     (22 B.Mask user)
@@ -55,14 +54,14 @@
     (mod_text_width 0.15)
     (pad_size 1 3)
     (pad_drill 0)
-    (pad_to_mask_clearance 0)
+    (pad_to_mask_clearance 0.1016)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFBF)
     (pcbplotparams
       (layerselection 284196865)
       (usegerberextensions true)
       (excludeedgelayer true)
-      (linewidth 152400)
+      (linewidth 0.150000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -2348,13 +2347,13 @@
     )
   )
 
-  (module SOT23GDS (layer F.Cu) (tedit 51B9EEED) (tstamp 51BADB64)
+  (module SOT23GDS (layer F.Cu) (tedit 51EAEFB1) (tstamp 51BADB64)
     (at 107.8 43.6 270)
     (descr "Module CMS SOT23 Transistore EBC")
     (tags "CMS SOT")
     (path /51B9ED5D/51B9F09D)
     (attr smd)
-    (fp_text reference Q1 (at 0 -2.5 270) (layer F.SilkS)
+    (fp_text reference Q1 (at -2.8 -1 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value DMG3415U-7 (at 0 0 270) (layer F.SilkS) hide
@@ -2667,7 +2666,7 @@
   (gr_text SW (at 127.508 69.85) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
-  (gr_text V3.7 (at 116.078 67.945) (layer F.SilkS)
+  (gr_text V3.7 (at 113.03 69.977) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
   (gr_text "REV X1" (at 112.522 80.772) (layer F.SilkS)
@@ -2754,7 +2753,7 @@
   (gr_text "ONE-WIRE DATA LOGGER\ndougspcbdesigns.pbworks.com/\nonewirelogger" (at 136 59.25 90) (layer B.SilkS)
     (effects (font (size 1.524 1.524) (thickness 0.25)) (justify mirror))
   )
-  (gr_text HWB (at 75.347 56.4666) (layer F.SilkS)
+  (gr_text HWB (at 75.2 56.6) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
   (gr_line (start 51.046 35.5116) (end 140.796 35.5116) (angle 90) (layer Edge.Cuts) (width 0.15))
