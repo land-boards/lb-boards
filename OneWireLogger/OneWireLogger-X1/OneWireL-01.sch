@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 03/09/2013 11:34:26
+EESchema Schematic File Version 2  date 28/08/2013 13:19:36
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 7
 Title "One Wire Logger"
-Date "3 sep 2013"
+Date "10 jul 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -25,7 +25,7 @@ U 1 1 517C600B
 P 4800 2900
 F 0 "DS1" H 4550 2800 50  0000 C CNN
 F 1 "LED2C_CA" H 4800 2600 50  0000 C CNN
-F 2 "SOT23_LED2C" H 4850 2500 60  0000 C CNN
+F 2 "SOT23" H 4850 2500 60  0000 C CNN
 F 3 "~" H 4800 2900 60  0000 C CNN
 F 4 "Lumex" H 4800 2900 60  0001 C CNN "Mfg"
 F 5 "SML-LX15IGC-TR" H 4800 2900 60  0001 C CNN "MfgPN"
