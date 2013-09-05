@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 04/09/2013 09:06:50
+EESchema Schematic File Version 2  date 05/09/2013 13:32:56
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 7
 Title "One Wire Logger"
-Date "3 sep 2013"
+Date "5 sep 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -348,7 +348,7 @@ U 1 1 517D9314
 P 8700 4750
 F 0 "X2" H 8700 4900 60  0000 C CNN
 F 1 "32.768KHz" H 8700 4600 60  0000 C CNN
-F 2 "QMONTRE" H 9200 4850 60  0000 C CNN
+F 2 "QMONTRE" H 8750 4550 60  0000 C CNN
 F 3 "" H 8700 4750 60  0000 C CNN
 F 4 "Abracon" H 8700 4750 60  0001 C CNN "Mfg"
 F 5 "AB38T-32.768KHZ" H 8700 4750 60  0001 C CNN "MfgPN"
@@ -852,4 +852,55 @@ Wire Wire Line
 	9800 1850 9800 1950
 Wire Wire Line
 	3100 1950 3800 1950
+Text Notes 8900 2150 0    60   ~ 0
+ISP Connector
+$Comp
+L CONN_4 P6
+U 1 1 5228B55A
+P 5700 6400
+F 0 "P6" V 5650 6400 50  0000 C CNN
+F 1 "CONN_4" V 5750 6400 50  0000 C CNN
+F 2 "PIN_ARRAY_4x1" H 5700 6150 60  0000 C CNN
+F 3 "~" H 5700 6400 60  0000 C CNN
+	1    5700 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6250 5200 6250
+Wire Wire Line
+	5200 6250 5200 6700
+Wire Wire Line
+	5350 6350 5050 6350
+Wire Wire Line
+	5050 6350 5050 6100
+Wire Wire Line
+	5350 6450 4650 6450
+Wire Wire Line
+	5350 6550 4650 6550
+Text Label 4750 6450 0    60   ~ 0
+SDA
+Text Label 4750 6550 0    60   ~ 0
+SCLK
+$Comp
+L GND #PWR018
+U 1 1 5228B79C
+P 5200 6700
+F 0 "#PWR018" H 5200 6700 30  0001 C CNN
+F 1 "GND" H 5200 6630 30  0001 C CNN
+F 2 "" H 5200 6700 60  0000 C CNN
+F 3 "" H 5200 6700 60  0000 C CNN
+	1    5200 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR019
+U 1 1 5228B7AB
+P 5050 6100
+F 0 "#PWR019" H 5050 6190 20  0001 C CNN
+F 1 "+5V" H 5050 6190 30  0000 C CNN
+F 2 "" H 5050 6100 60  0000 C CNN
+F 3 "" H 5050 6100 60  0000 C CNN
+	1    5050 6100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

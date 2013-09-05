@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 04/09/2013 09:06:50
+EESchema Schematic File Version 2  date 05/09/2013 13:32:56
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "3 sep 2013"
+Date "5 sep 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -35,15 +35,25 @@ F 7 "571-2158771" H 6850 2650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 2400 6500 2400
+	4850 2400 5000 2400
 Wire Wire Line
-	4850 2300 6500 2300
+	5000 2400 6400 2400
+Wire Wire Line
+	6400 2400 6500 2400
+Wire Wire Line
+	4850 2300 5200 2300
+Wire Wire Line
+	5200 2300 5800 2300
+Wire Wire Line
+	5800 2300 6500 2300
 Text HLabel 4850 2300 0    60   Input ~ 0
 ONE-WIRE
 Text HLabel 4850 2400 0    60   Input ~ 0
 GND
 Wire Wire Line
-	6400 1750 6400 2400
+	6400 1750 6400 2200
+Wire Wire Line
+	6400 2200 6400 2400
 Wire Wire Line
 	6400 2200 6500 2200
 Connection ~ 6400 2400
@@ -81,20 +91,17 @@ Connection ~ 6400 2200
 Wire Wire Line
 	6450 950  6450 850 
 Wire Wire Line
-	6450 850  6650 850 
+	5700 1350 5800 1350
 Wire Wire Line
-	6650 850  6650 1850
-Wire Wire Line
-	6650 1850 6400 1850
-Connection ~ 6400 1850
-Wire Wire Line
-	5700 1350 5900 1350
+	5800 1350 5900 1350
 Wire Wire Line
 	5800 1350 5800 2300
 Connection ~ 5800 2300
 Connection ~ 5800 1350
 Wire Wire Line
-	5200 1350 4850 1350
+	5200 1350 5100 1350
+Wire Wire Line
+	5100 1350 4850 1350
 Text HLabel 4850 1350 0    60   Input ~ 0
 +5V
 $Comp
@@ -103,7 +110,7 @@ U 1 1 51C9D37A
 P 5750 2700
 F 0 "P4" V 5700 2700 40  0000 C CNN
 F 1 "CONN_2" V 5800 2700 40  0000 C CNN
-F 2 "PIN_ARRAY_2X1" H 5750 2700 60  0000 C CNN
+F 2 "PIN_ARRAY_2X1" H 5750 2450 60  0000 C CNN
 F 3 "~" H 5750 2700 60  0000 C CNN
 	1    5750 2700
 	1    0    0    -1  
@@ -123,4 +130,9 @@ NoConn ~ 6500 2600
 NoConn ~ 6500 2500
 NoConn ~ 6500 2100
 NoConn ~ 6500 2000
+Wire Wire Line
+	5100 850  5100 1350
+Connection ~ 5100 1350
+Wire Wire Line
+	6450 850  5100 850 
 $EndSCHEMATC
