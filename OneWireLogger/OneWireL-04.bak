@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 05/09/2013 13:05:26
+EESchema Schematic File Version 2  date 05/09/2013 13:32:56
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -35,15 +35,25 @@ F 7 "571-2158771" H 6850 2650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 2400 6500 2400
+	4850 2400 5000 2400
 Wire Wire Line
-	4850 2300 6500 2300
+	5000 2400 6400 2400
+Wire Wire Line
+	6400 2400 6500 2400
+Wire Wire Line
+	4850 2300 5200 2300
+Wire Wire Line
+	5200 2300 5800 2300
+Wire Wire Line
+	5800 2300 6500 2300
 Text HLabel 4850 2300 0    60   Input ~ 0
 ONE-WIRE
 Text HLabel 4850 2400 0    60   Input ~ 0
 GND
 Wire Wire Line
-	6400 1750 6400 2400
+	6400 1750 6400 2200
+Wire Wire Line
+	6400 2200 6400 2400
 Wire Wire Line
 	6400 2200 6500 2200
 Connection ~ 6400 2400
@@ -81,13 +91,17 @@ Connection ~ 6400 2200
 Wire Wire Line
 	6450 950  6450 850 
 Wire Wire Line
-	5700 1350 5900 1350
+	5700 1350 5800 1350
+Wire Wire Line
+	5800 1350 5900 1350
 Wire Wire Line
 	5800 1350 5800 2300
 Connection ~ 5800 2300
 Connection ~ 5800 1350
 Wire Wire Line
-	5200 1350 4850 1350
+	5200 1350 5100 1350
+Wire Wire Line
+	5100 1350 4850 1350
 Text HLabel 4850 1350 0    60   Input ~ 0
 +5V
 $Comp
@@ -117,8 +131,8 @@ NoConn ~ 6500 2500
 NoConn ~ 6500 2100
 NoConn ~ 6500 2000
 Wire Wire Line
-	5050 850  5050 1350
-Connection ~ 5050 1350
+	5100 850  5100 1350
+Connection ~ 5100 1350
 Wire Wire Line
-	6450 850  5050 850 
+	6450 850  5100 850 
 $EndSCHEMATC
