@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 17/09/2013 16:26:56
+EESchema Schematic File Version 2  date 18/09/2013 15:19:46
 LIBS:DougsSch
 LIBS:resonator_3pins
 LIBS:ATProg-cache
@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 3 5
+Sheet 3 6
 Title "MiniDuino"
-Date "17 sep 2013"
+Date "18 sep 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -209,16 +209,16 @@ F 3 "" H 4500 2450 60  0001 C CNN
 	1    4500 2450
 	0    -1   -1   0   
 $EndComp
-Text Notes 8350 5050 0    60   ~ 0
+Text Notes 8100 5050 0    60   ~ 0
 (D13)
-Text Notes 8350 4950 0    60   ~ 0
+Text Notes 8100 4950 0    60   ~ 0
 (D12)
-Text Notes 8350 4850 0    60   ~ 0
+Text Notes 8100 4850 0    60   ~ 0
 (D11)
 Text HLabel 7700 3600 2    60   Input ~ 0
-RX(I)
+RXCPU
 Text HLabel 7700 3700 2    60   Output ~ 0
-TX(O)
+TXCPU
 Wire Wire Line
 	7000 4700 7700 4700
 Text HLabel 3250 2700 0    60   Input ~ 0
@@ -235,11 +235,27 @@ Connection ~ 4300 4800
 Text HLabel 3800 4800 0    60   UnSpc ~ 0
 GND
 Text HLabel 7700 4700 2    60   Output ~ 0
-RTS(O)
+RST(O)
 Text HLabel 7700 4800 2    60   Output ~ 0
 MOSI
 Text HLabel 7700 4900 2    60   Input ~ 0
 MISO
 Text HLabel 7700 5000 2    60   Output ~ 0
 SCK
+Text Notes 8100 4750 0    60   ~ 0
+(D10)
+NoConn ~ 7000 2700
+NoConn ~ 7000 2800
+NoConn ~ 7000 2900
+NoConn ~ 7000 3000
+NoConn ~ 7000 3100
+NoConn ~ 7000 3200
+NoConn ~ 7000 3800
+NoConn ~ 7000 3900
+NoConn ~ 7000 4000
+NoConn ~ 7000 4100
+NoConn ~ 7000 4200
+NoConn ~ 7000 4300
+NoConn ~ 7000 4500
+NoConn ~ 7000 4600
 $EndSCHEMATC

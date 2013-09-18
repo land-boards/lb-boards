@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 17/09/2013 16:26:56
+EESchema Schematic File Version 2  date 18/09/2013 15:19:46
 LIBS:DougsSch
 LIBS:resonator_3pins
 LIBS:ATProg-cache
@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title "FTDI USB-TTL Cable"
-Date "17 sep 2013"
+Date "18 sep 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -240,9 +240,9 @@ GND
 Text HLabel 7650 2450 2    60   UnSpc ~ 0
 VCCIO
 Text HLabel 7650 3100 2    60   Output ~ 0
-TX(O)
+TXFTDI
 Text HLabel 7650 3200 2    60   Input ~ 0
-RX(I)
+RXFTDI
 Text HLabel 7650 3500 2    60   Output ~ 0
 DTR(O)
 $Comp

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 17/09/2013 15:56:46
+EESchema Schematic File Version 2  date 18/09/2013 15:16:20
 LIBS:DougsSch
 LIBS:resonator_3pins
 LIBS:ATProg-cache
@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title "MiniDuino"
-Date "17 sep 2013"
+Date "18 sep 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -72,7 +72,7 @@ U 1 1 4FF5745E
 P 5700 3750
 F 0 "U3" H 5650 5000 50  0000 L BNN
 F 1 "ATMEGA328-PU" H 4700 2350 50  0000 L BNN
-F 2 "DIP-28__300" H 5700 3900 50  0001 C CNN
+F 2 "TEXTOOL-28N" H 5700 3900 50  0001 C CNN
 F 3 "" H 5700 3750 60  0001 C CNN
 	1    5700 3750
 	1    0    0    -1  
@@ -155,4 +155,21 @@ Text HLabel 7600 4850 2    60   Output ~ 0
 MISO
 Text HLabel 7600 4950 2    60   Input ~ 0
 SCK
+NoConn ~ 6900 2650
+NoConn ~ 6900 2750
+NoConn ~ 6900 2850
+NoConn ~ 6900 2950
+NoConn ~ 6900 3050
+NoConn ~ 6900 3150
+NoConn ~ 6900 3550
+NoConn ~ 6900 3650
+NoConn ~ 6900 3750
+NoConn ~ 6900 3850
+NoConn ~ 6900 3950
+NoConn ~ 6900 4050
+NoConn ~ 6900 4150
+NoConn ~ 6900 4250
+NoConn ~ 6900 4450
+NoConn ~ 6900 4550
+NoConn ~ 6900 4650
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 17/09/2013 16:26:56
+EESchema Schematic File Version 2  date 18/09/2013 15:19:46
 LIBS:DougsSch
 LIBS:resonator_3pins
 LIBS:ATProg-cache
@@ -6,9 +6,9 @@ EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 5
+Sheet 5 6
 Title "TINYDUINO85"
-Date "17 sep 2013"
+Date "18 sep 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -61,4 +61,6 @@ Text HLabel 3500 3300 0    60   UnSpc ~ 0
 GND
 Text HLabel 3500 2050 0    60   UnSpc ~ 0
 VCC
+NoConn ~ 5050 2500
+NoConn ~ 5050 2600
 $EndSCHEMATC
