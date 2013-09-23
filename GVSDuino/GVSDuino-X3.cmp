@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 7/25/2012 10:56:00 AM
+Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 23/09/2013 13:44:36
 
 BeginCmp
 TimeStamp = /4FF581E0;
@@ -40,6 +40,27 @@ TimeStamp = /4FF574BF;
 Reference = D1;
 ValeurCmp = 4N4004;
 IdModule  = D4;
+EndCmp
+
+BeginCmp
+TimeStamp = /52407368;
+Reference = J1;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52407574;
+Reference = J2;
+ValeurCmp = DCJ0202;
+IdModule  = JACK_ALIM;
+EndCmp
+
+BeginCmp
+TimeStamp = /524079E1;
+Reference = J3;
+ValeurCmp = CONN_3X2;
+IdModule  = pin_array_3x2;
 EndCmp
 
 BeginCmp
@@ -232,13 +253,6 @@ IdModule  = R4;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FF58F4A;
-Reference = TB1;
-ValeurCmp = TB-2PIN;
-IdModule  = TB2-5MM;
-EndCmp
-
-BeginCmp
 TimeStamp = /4FF5745E;
 Reference = U1;
 ValeurCmp = ATMEGA328-PU;
@@ -256,7 +270,7 @@ BeginCmp
 TimeStamp = /4FF58157;
 Reference = Y1;
 ValeurCmp = 16MHz;
-IdModule  = SIL-3;
+IdModule  = RESON_3PIN;
 EndCmp
 
 EndListe

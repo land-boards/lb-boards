@@ -1,0 +1,175 @@
+EESchema Schematic File Version 2  date 23/09/2013 12:28:14
+LIBS:DougsSch
+LIBS:resonator_3pins
+LIBS:ATProgHead-cache
+EELAYER 27 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 2 4
+Title "MiniDuino"
+Date "23 sep 2013"
+Rev "X2"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6900 4850 7600 4850
+Wire Wire Line
+	6900 4950 7600 4950
+Wire Wire Line
+	3550 3350 3550 3250
+Wire Wire Line
+	3550 3250 3650 3250
+Connection ~ 4200 4650
+Wire Wire Line
+	4200 4650 4500 4650
+Connection ~ 4350 4050
+Wire Wire Line
+	4050 4050 4050 3900
+Wire Wire Line
+	3700 4050 4500 4050
+Wire Wire Line
+	3950 2950 3950 2900
+Wire Wire Line
+	3950 2900 4350 2900
+Wire Wire Line
+	4350 2900 4350 3250
+Wire Wire Line
+	4350 3250 4500 3250
+Connection ~ 4200 4850
+Wire Wire Line
+	4200 4850 4500 4850
+Wire Wire Line
+	4200 4600 4200 4950
+Wire Wire Line
+	3950 3550 3950 3600
+Wire Wire Line
+	3950 3600 4350 3600
+Wire Wire Line
+	4350 3600 4350 3450
+Wire Wire Line
+	4350 3450 4500 3450
+Wire Wire Line
+	4500 3750 4350 3750
+Wire Wire Line
+	4350 3750 4350 4050
+Wire Wire Line
+	4200 4150 4500 4150
+Wire Wire Line
+	4200 4050 4200 4200
+Connection ~ 4200 4150
+Wire Wire Line
+	6900 4750 7600 4750
+Wire Wire Line
+	3900 2650 4500 2650
+$Comp
+L ATMEGA8-PU U3
+U 1 1 4FF5745E
+P 5700 3750
+F 0 "U3" H 5650 5000 50  0000 L BNN
+F 1 "ATMEGA328-PU" H 4700 2350 50  0000 L BNN
+F 2 "TEXTOOL-28N" H 5700 3900 50  0001 C CNN
+F 3 "" H 5700 3750 60  0001 C CNN
+	1    5700 3750
+	1    0    0    -1  
+$EndComp
+Text Label 7150 4750 0    60   ~ 0
+MOSI
+Text Label 7150 4850 0    60   ~ 0
+MISO
+Text Label 7150 4950 0    60   ~ 0
+SCK
+$Comp
+L GND #PWR01
+U 1 1 5238A57D
+P 3550 3350
+F 0 "#PWR01" H 3550 3350 30  0001 C CNN
+F 1 "GND" H 3550 3280 30  0001 C CNN
+F 2 "" H 3550 3350 60  0001 C CNN
+F 3 "" H 3550 3350 60  0001 C CNN
+	1    3550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 4FF581E0
+P 4200 4400
+F 0 "C5" H 4250 4500 50  0000 L CNN
+F 1 "0.1uF" H 4250 4300 50  0000 L CNN
+F 2 "SM0805" H 4200 4400 60  0001 C CNN
+F 3 "" H 4200 4400 60  0001 C CNN
+	1    4200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR02
+U 1 1 5238A57B
+P 4050 3900
+F 0 "#PWR02" H 4050 3990 20  0001 C CNN
+F 1 "+5V" H 4050 3990 30  0000 C CNN
+F 2 "" H 4050 3900 60  0001 C CNN
+F 3 "" H 4050 3900 60  0001 C CNN
+	1    4050 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESONATEUR Y2
+U 1 1 5238A57A
+P 3900 3250
+F 0 "Y2" H 3920 3450 60  0000 C CNN
+F 1 "16MHz" V 4150 3050 60  0000 C CNN
+F 2 "SIL-3" H 3900 3250 60  0001 C CNN
+F 3 "" H 3900 3250 60  0001 C CNN
+	1    3900 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5238A579
+P 4200 4950
+F 0 "#PWR03" H 4200 4950 30  0001 C CNN
+F 1 "GND" H 4200 4880 30  0001 C CNN
+F 2 "" H 4200 4950 60  0001 C CNN
+F 3 "" H 4200 4950 60  0001 C CNN
+	1    4200 4950
+	1    0    0    -1  
+$EndComp
+Text HLabel 3900 2650 0    60   Input ~ 0
+RST(I)
+Connection ~ 4200 4050
+Connection ~ 4050 4050
+Text HLabel 3700 4050 0    60   UnSpc ~ 0
+VCC
+Wire Wire Line
+	4200 4750 3700 4750
+Connection ~ 4200 4750
+Text HLabel 3700 4750 0    60   UnSpc ~ 0
+GND
+Text HLabel 7600 4750 2    60   Input ~ 0
+MOSI
+Text HLabel 7600 4850 2    60   Output ~ 0
+MISO
+Text HLabel 7600 4950 2    60   Input ~ 0
+SCK
+NoConn ~ 6900 2650
+NoConn ~ 6900 2750
+NoConn ~ 6900 2850
+NoConn ~ 6900 2950
+NoConn ~ 6900 3050
+NoConn ~ 6900 3150
+NoConn ~ 6900 3550
+NoConn ~ 6900 3650
+NoConn ~ 6900 3750
+NoConn ~ 6900 3850
+NoConn ~ 6900 3950
+NoConn ~ 6900 4050
+NoConn ~ 6900 4150
+NoConn ~ 6900 4250
+NoConn ~ 6900 4450
+NoConn ~ 6900 4550
+NoConn ~ 6900 4650
+$EndSCHEMATC
