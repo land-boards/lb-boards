@@ -1,4 +1,4 @@
-update=17/09/2013 14:50:34
+update=24/09/2013 08:38:20
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -19,6 +19,7 @@ LabSize=60
 [eeschema/libraries]
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
 LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/resonator_3pins
+LibName3=powerint
 [pcbnew]
 version=1
 LastNetListRead=ATProg.net
@@ -44,3 +45,4 @@ LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 LibName2=dip_sockets
 LibName3=libcms
 LibName4=discret
+LibName5=pin_array

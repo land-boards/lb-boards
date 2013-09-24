@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 23/09/2013 13:44:14
+EESchema Schematic File Version 2  date 24/09/2013 09:04:40
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -14,7 +14,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "GVSDuino"
-Date "23 sep 2013"
+Date "24 sep 2013"
 Rev "X3"
 Comp "douglasgilliland.com"
 Comment1 ""
@@ -1006,17 +1006,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 7450 1350 7550
 Connection ~ 1350 7550
-$Comp
-L CONN_3X2 J3
-U 1 1 524079E1
-P 4650 5450
-F 0 "J3" H 4650 5700 50  0000 C CNN
-F 1 "CONN_3X2" V 4650 5500 40  0000 C CNN
-F 2 "~" H 4650 5450 60  0000 C CNN
-F 3 "~" H 4650 5450 60  0000 C CNN
-	1    4650 5450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3800 5300 4250 5300
 Wire Wire Line
@@ -1040,16 +1029,16 @@ Wire Wire Line
 Wire Wire Line
 	5050 5500 5200 5500
 Wire Wire Line
-	5200 5500 5200 5650
+	5200 5500 5200 5950
 $Comp
 L GND #PWR10
 U 1 1 52408150
-P 5200 5650
-F 0 "#PWR10" H 5200 5650 30  0001 C CNN
-F 1 "GND" H 5200 5580 30  0001 C CNN
-F 2 "" H 5200 5650 60  0000 C CNN
-F 3 "" H 5200 5650 60  0000 C CNN
-	1    5200 5650
+P 5200 5950
+F 0 "#PWR10" H 5200 5950 30  0001 C CNN
+F 1 "GND" H 5200 5880 30  0001 C CNN
+F 2 "" H 5200 5950 60  0000 C CNN
+F 3 "" H 5200 5950 60  0000 C CNN
+	1    5200 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1063,4 +1052,27 @@ F 3 "" H 5200 5150 60  0000 C CNN
 	1    5200 5150
 	1    0    0    -1  
 $EndComp
+$Comp
+L CONN_6X2 J3
+U 1 1 52418EEE
+P 4650 5550
+F 0 "J3" H 4650 5900 60  0000 C CNN
+F 1 "CONN_6X2" V 4650 5550 60  0000 C CNN
+F 2 "~" H 4650 5550 60  0000 C CNN
+F 3 "~" H 4650 5550 60  0000 C CNN
+	1    4650 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5600 5500 5600
+Wire Wire Line
+	5500 5700 5050 5700
+Wire Wire Line
+	5050 5800 5500 5800
+Text Label 5300 5600 0    60   ~ 0
+D7
+Text Label 5300 5700 0    60   ~ 0
+D8
+Text Label 5300 5800 0    60   ~ 0
+D9
 $EndSCHEMATC
