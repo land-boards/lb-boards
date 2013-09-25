@@ -1,4 +1,4 @@
-update=24/09/2013 08:38:20
+update=9/24/2013 7:52:46 PM
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -46,3 +46,4 @@ LibName2=dip_sockets
 LibName3=libcms
 LibName4=discret
 LibName5=pin_array
+LibName6=C:/Users/Doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
