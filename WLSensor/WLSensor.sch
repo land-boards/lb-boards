@@ -1,20 +1,18 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 30/09/2013 13:15:03
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
-LIBS:DougsSch
-LIBS:xbee_r1
 LIBS:WLSensor-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 3
-Title ""
+Title "Wireless Sensor"
 Date "29 sep 2013"
-Rev ""
-Comp ""
+Rev "X1"
+Comp "http://dougspcbdesigns.pbworks.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
