@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 06/09/2013 16:53:17
+EESchema Schematic File Version 2  date 07/10/2013 13:04:45
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -11,7 +11,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "6 sep 2013"
+Date "7 oct 2013"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -35,25 +35,15 @@ F 7 "571-2158771" H 6850 2650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 2400 5000 2400
+	4850 2400 6500 2400
 Wire Wire Line
-	5000 2400 6400 2400
-Wire Wire Line
-	6400 2400 6500 2400
-Wire Wire Line
-	4850 2300 5200 2300
-Wire Wire Line
-	5200 2300 5800 2300
-Wire Wire Line
-	5800 2300 6500 2300
+	4850 2300 6500 2300
 Text HLabel 4850 2300 0    60   Input ~ 0
 ONE-WIRE
 Text HLabel 4850 2400 0    60   Input ~ 0
 GND
 Wire Wire Line
-	6400 1750 6400 2200
-Wire Wire Line
-	6400 2200 6400 2400
+	6400 1750 6400 2400
 Wire Wire Line
 	6400 2200 6500 2200
 Connection ~ 6400 2400
@@ -78,7 +68,7 @@ U 1 1 517EABC6
 P 6350 1500
 F 0 "U2" H 6400 1800 60  0000 C CNN
 F 1 "DS18S20+" H 6600 1500 60  0000 C CNN
-F 2 "TO92" H 6200 1500 60  0000 C CNN
+F 2 "TO92-123" H 6200 1500 60  0000 C CNN
 F 3 "~" H 6350 1500 60  0000 C CNN
 F 4 "Maxim" H 6350 1500 60  0001 C CNN "Mfg"
 F 5 "DS18S20+PAR" H 6350 1500 60  0001 C CNN "MfgPN"
@@ -91,17 +81,13 @@ Connection ~ 6400 2200
 Wire Wire Line
 	6450 950  6450 850 
 Wire Wire Line
-	5700 1350 5800 1350
-Wire Wire Line
-	5800 1350 5900 1350
+	5700 1350 5900 1350
 Wire Wire Line
 	5800 1350 5800 2300
 Connection ~ 5800 2300
 Connection ~ 5800 1350
 Wire Wire Line
-	5200 1350 5100 1350
-Wire Wire Line
-	5100 1350 4850 1350
+	4850 1350 5200 1350
 Text HLabel 4850 1350 0    60   Input ~ 0
 +5V
 $Comp

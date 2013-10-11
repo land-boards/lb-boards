@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/OneWireLogger/OneWireLogger.sch")
-    (date "05/09/2013 13:05:31")
+    (date "07/10/2013 13:04:43")
     (tool "eeschema (2013-04-19 BZR 4011)-stable"))
   (components
     (comp (ref MTG1)
@@ -392,7 +392,7 @@
       (tstamp 517D9314))
     (comp (ref BT1)
       (value BATTERY)
-      (footprint BATTERY_12MM)
+      (footprint CR1220_CASE)
       (fields
         (field (name Mfg) "Keystone Electronics")
         (field (name MfgPN) 3001)
@@ -492,7 +492,7 @@
       (tstamp 517EAA3D))
     (comp (ref U2)
       (value DS18S20+)
-      (footprint TO92)
+      (footprint TO92-123)
       (fields
         (field (name Mfg) Maxim)
         (field (name MfgPN) DS18S20+PAR)
