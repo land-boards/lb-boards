@@ -1,6 +1,6 @@
-update=6/9/2013 12:53:46 PM
+update=10/6/2013 1:33:17 PM
 version=1
-last_client=pcbnew
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -8,22 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=LED-12.net
@@ -54,3 +38,19 @@ LibName7=dip_sockets
 LibName8=smd_resistors
 LibName9=smd_transistors
 LibName10=libcms
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=transistors
+LibName4=conn
+LibName5=linear
+LibName6=regul
+LibName7=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
