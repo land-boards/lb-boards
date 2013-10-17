@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 14/10/2013 13:14:37
+EESchema Schematic File Version 2  date 16/10/2013 09:49:36
 LIBS:power
 LIBS:conn
 LIBS:device
@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "FTDI USB-TTL Cable"
-Date "14 oct 2013"
+Date "16 oct 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -228,10 +228,10 @@ F 7 "649-68002-103HLF" H 6900 1950 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR01
 U 1 1 4FF312F5
 P 7950 3000
-F 0 "#PWR1" H 7950 3000 30  0001 C CNN
+F 0 "#PWR01" H 7950 3000 30  0001 C CNN
 F 1 "GND" H 7950 2930 30  0001 C CNN
 F 2 "" H 7950 3000 60  0001 C CNN
 F 3 "" H 7950 3000 60  0001 C CNN
@@ -332,4 +332,9 @@ F 3 "~" H 5550 3650 60  0000 C CNN
 	1    5550 3650
 	1    0    0    -1  
 $EndComp
+NoConn ~ 6200 3750
+NoConn ~ 4950 3850
+NoConn ~ 6200 4050
+NoConn ~ 3150 4000
+NoConn ~ 3050 4000
 $EndSCHEMATC

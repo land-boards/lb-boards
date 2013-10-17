@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/09/2013 10:32:02
+EESchema Schematic File Version 2  date 16/10/2013 12:33:14
 LIBS:DougsSch
 LIBS:resonator_3pins
 LIBS:powerint
@@ -9,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "MiniDuino"
-Date "24 sep 2013"
+Date "16 oct 2013"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -121,7 +121,7 @@ U 1 1 5241902D
 P 3150 2250
 F 0 "U1" H 3100 3500 50  0000 L BNN
 F 1 "ATMEGA328-PU" H 2150 850 50  0000 L BNN
-F 2 "TEXTOOL-28N" H 3700 800 50  0000 C CNN
+F 2 "TEXTOOL-28N" H 3200 1000 50  0000 C CNN
 F 3 "" H 3150 2250 60  0001 C CNN
 	1    3150 2250
 	1    0    0    -1  
