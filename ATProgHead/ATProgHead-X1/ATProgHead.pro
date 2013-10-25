@@ -1,6 +1,6 @@
-update=21/10/2013 12:51:49
+update=9/24/2013 7:52:46 PM
 version=1
-last_client=eeschema
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,6 +8,18 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/resonator_3pins
+LibName3=powerint
 [pcbnew]
 version=1
 LastNetListRead=ATProg.net
@@ -35,16 +47,3 @@ LibName3=libcms
 LibName4=discret
 LibName5=pin_array
 LibName6=C:/Users/Doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/resonator_3pins
-LibName3=powerint
-LibName4=power
