@@ -1,17 +1,16 @@
-PCBNEW-BOARD Version 2 date 15/04/2013 12:51:00
+PCBNEW-BOARD Version 2 date 11/3/2013 11:00:09 AM
 
-# Created by Pcbnew(2013-02-27 BZR 3976)-stable
+# Created by Pcbnew(2013-05-31 BZR 4019)-stable
 
 $GENERAL
 encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 15F08001
-VisibleLayers 15F08000
 Links 89
 NoConn 0
 Di 70.462467 68.997378 202.356001 135.1512
-Ndraw 62
+Ndraw 66
 Ntrack 207
 Nzone 0
 BoardThickness 1.6002
@@ -22,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A 11000 8500
 Title "SCREWDUINO V2"
-Date "15 apr 2013"
+Date "3 nov 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -64,7 +63,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 107.188 92.71
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 15761409) (usegerberextensions true) (excludeedgelayer false) (linewidth 80) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
+PcbPlotParams (pcbplotparams (layerselection 15761409) (usegerberextensions true) (excludeedgelayer false) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
 $EQUIPOT
@@ -1657,6 +1656,26 @@ Ne 0 ""
 Po 0 0
 $EndPAD
 $EndMODULE MTG-4-40
+$TEXTPCB
+Te "D6  D7  D8 RST +5V +5V GND GND"
+Po 158 130 1.4 2.032 0.3048 0
+De 26 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "D0  D1  D2  D3  D4  D5 +5V GND"
+Po 117 130 1.4 2.032 0.3048 0
+De 26 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "GND ARF D13 D12 D11 D19 D9  VIN +5V GND"
+Po 152 78 1.4 2.032 0.3048 0
+De 26 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "A5  A4  A3  A2  A1  A0"
+Po 112 78 1.524 2.032 0.3048 0
+De 26 1 0 Normal
+$EndTEXTPCB
 $TEXTPCB
 Te "FTDI"
 Po 93.472 107.569 1.524 2.032 0.3048 2700
