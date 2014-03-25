@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/01/2014 12:56:59
+EESchema Schematic File Version 2  date 25/03/2014 17:00:45
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -10,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title ""
-Date "28 jan 2014"
+Date "25 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,7 +60,7 @@ U 1 1 51B9F256
 P 4150 3600
 F 0 "U6" H 4300 3850 60  0000 C CNN
 F 1 "MC14093" H 4350 3350 60  0000 C CNN
-F 2 "SO14E" H 4400 3250 60  0000 C CNN
+F 2 "TSSOP14" H 4400 3250 60  0000 C CNN
 F 3 "" H 4150 3600 60  0000 C CNN
 	1    4150 3600
 	1    0    0    -1  

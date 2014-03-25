@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/01/2014 12:56:59
+EESchema Schematic File Version 2  date 25/03/2014 17:00:45
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 7
 Title "One Wire Logger"
-Date "28 jan 2014"
+Date "25 mar 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
