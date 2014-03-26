@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/03/2014 17:00:45
+EESchema Schematic File Version 2  date 26/03/2014 12:31:27
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -10,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "25 mar 2014"
+Date "26 mar 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -21,22 +21,22 @@ $EndDescr
 $Comp
 L CNT-RJ45-8 P1
 U 1 1 517C8557
-P 6850 2650
-F 0 "P1" V 6800 2950 60  0000 C CNN
-F 1 "CNT-RJ45-8" V 6900 2900 60  0000 C CNN
-F 2 "RJ45_8-TH" H 6850 2450 60  0000 C CNN
-F 3 "" H 6850 2650 60  0000 C CNN
-F 4 "TE Connectivity/AMP" H 6850 2650 60  0001 C CNN "Mfg"
-F 5 "215877-1" H 6850 2650 60  0001 C CNN "MfgPN"
-F 6 "Mouser" H 6850 2650 60  0001 C CNN "Vendor"
-F 7 "571-2158771" H 6850 2650 60  0001 C CNN "VendorPN"
-	1    6850 2650
+P 7550 2650
+F 0 "P1" V 7500 2950 60  0000 C CNN
+F 1 "CNT-RJ45-8" V 7600 2900 60  0000 C CNN
+F 2 "RJ45_8-TH" H 7550 2450 60  0000 C CNN
+F 3 "" H 7550 2650 60  0000 C CNN
+F 4 "TE Connectivity/AMP" H 7550 2650 60  0001 C CNN "Mfg"
+F 5 "215877-1" H 7550 2650 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 7550 2650 60  0001 C CNN "Vendor"
+F 7 "571-2158771" H 7550 2650 60  0001 C CNN "VendorPN"
+	1    7550 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 2400 6500 2400
+	4850 2400 7200 2400
 Wire Wire Line
-	4850 2300 6500 2300
+	4850 2300 7200 2300
 Text HLabel 4850 2300 0    60   Input ~ 0
 ONE-WIRE
 Text HLabel 4850 2400 0    60   Input ~ 0
@@ -44,7 +44,7 @@ GND
 Wire Wire Line
 	6400 1750 6400 2400
 Wire Wire Line
-	6400 2200 6500 2200
+	6400 2200 7200 2200
 Connection ~ 6400 2400
 $Comp
 L R R6
@@ -99,14 +99,13 @@ Wire Wire Line
 Wire Wire Line
 	5200 2600 5200 2300
 Connection ~ 5200 2300
-NoConn ~ 6500 2700
-NoConn ~ 6500 2600
-NoConn ~ 6500 2500
-NoConn ~ 6500 2100
-NoConn ~ 6500 2000
+NoConn ~ 7200 2700
+NoConn ~ 7200 2600
+NoConn ~ 7200 2500
+NoConn ~ 7200 2000
 Connection ~ 5100 1350
 Wire Wire Line
-	4850 850  6450 850 
+	4850 850  7050 850 
 $Comp
 L CONN_3 P4
 U 1 1 52E6AACA
@@ -123,4 +122,9 @@ Wire Wire Line
 Connection ~ 5100 850 
 Wire Wire Line
 	5100 850  5100 2700
+Wire Wire Line
+	7200 2100 7050 2100
+Wire Wire Line
+	7050 2100 7050 850 
+Connection ~ 6450 850 
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/01/2014 12:56:59
+EESchema Schematic File Version 2  date 26/03/2014 12:31:02
 LIBS:power
 LIBS:device
 LIBS:DougsSch
@@ -10,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title ""
-Date "28 jan 2014"
+Date "26 mar 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -60,7 +60,7 @@ U 1 1 51B9F256
 P 4150 3600
 F 0 "U6" H 4300 3850 60  0000 C CNN
 F 1 "MC14093" H 4350 3350 60  0000 C CNN
-F 2 "SO14E" H 4400 3250 60  0000 C CNN
+F 2 "TSSOP14" H 4400 3250 60  0000 C CNN
 F 3 "" H 4150 3600 60  0000 C CNN
 	1    4150 3600
 	1    0    0    -1  
@@ -156,10 +156,10 @@ Wire Wire Line
 	9650 6050 9550 6050
 Connection ~ 9550 6050
 $Comp
-L GND #PWR020
+L GND #PWR021
 U 1 1 51B9F3D0
 P 9550 6950
-F 0 "#PWR020" H 9550 6950 30  0001 C CNN
+F 0 "#PWR021" H 9550 6950 30  0001 C CNN
 F 1 "GND" H 9550 6880 30  0001 C CNN
 F 2 "" H 9550 6950 60  0000 C CNN
 F 3 "" H 9550 6950 60  0000 C CNN
