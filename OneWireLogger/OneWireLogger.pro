@@ -1,6 +1,6 @@
-update=27/01/2014 13:31:00
+update=05/05/2014 13:43:28
 version=1
-last_client=eeschema
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,14 +8,29 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
+LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
+LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45
+LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName6=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/conn
 [pcbnew]
 version=1
 LastNetListRead=OneWireLogger.net
 UseCmpFile=0
-PadDrill=2.159000000000
-PadDrillOvalY=2.159000000000
-PadSizeH=3.175000000000
-PadSizeV=3.175000000000
+PadDrill=0.000000000000
+PadDrillOvalY=0.000000000000
+PadSizeH=2.300000000000
+PadSizeV=4.300000000000
 PcbTextSizeV=1.000000000000
 PcbTextSizeH=1.000000000000
 PcbTextThickness=0.300000000000
@@ -37,18 +52,4 @@ LibName5=libcms
 LibName6=led
 LibName7=sw5way
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
-LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
-LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45
-LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName6=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/conn
+LibName9=C:/Users/DGilliland.AACISD/Downloads/BoneHdr
