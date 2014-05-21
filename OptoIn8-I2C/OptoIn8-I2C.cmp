@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 19/05/2014 16:40:32
+Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 20/05/2014 13:33:31
 
 BeginCmp
 TimeStamp = /537A5EE1;
@@ -12,69 +12,6 @@ TimeStamp = /537A5ED2;
 Reference = FID2;
 ValeurCmp = ADAFRUIT_FIDUCIAL;
 IdModule  = FIDUCIAL;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D39;
-Reference = IC1;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D48;
-Reference = IC2;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D57;
-Reference = IC3;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D66;
-Reference = IC4;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D75;
-Reference = IC5;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D8E;
-Reference = IC6;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D9D;
-Reference = IC7;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4DAC;
-Reference = IC8;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A5188;
-Reference = J1;
-ValeurCmp = DB15;
-IdModule  = DB15MC;
 EndCmp
 
 BeginCmp
@@ -113,9 +50,23 @@ IdModule  = MTG-6-32;
 EndCmp
 
 BeginCmp
+TimeStamp = /537B92AE;
+Reference = P1;
+ValeurCmp = CONN_5;
+IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B7022;
+Reference = P2;
+ValeurCmp = CONN_3X2;
+IdModule  = pin_array_3x2;
+EndCmp
+
+BeginCmp
 TimeStamp = /537A5195;
 Reference = R1;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -129,7 +80,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A50C8;
 Reference = R3;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -143,7 +94,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A5263;
 Reference = R5;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -157,7 +108,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A54AD;
 Reference = R7;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -171,7 +122,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A5669;
 Reference = R9;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -185,7 +136,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A574F;
 Reference = R11;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -199,7 +150,7 @@ EndCmp
 BeginCmp
 TimeStamp = /537A5A97;
 Reference = R13;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
@@ -213,13 +164,48 @@ EndCmp
 BeginCmp
 TimeStamp = /537A5AA0;
 Reference = R15;
-ValeurCmp = R;
+ValeurCmp = 4.7K;
 IdModule  = R4-5;
 EndCmp
 
 BeginCmp
 TimeStamp = /537A4DEC;
 Reference = R16;
+ValeurCmp = R;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B6FF3;
+Reference = R17;
+ValeurCmp = R;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B7002;
+Reference = R18;
+ValeurCmp = R;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B7011;
+Reference = R19;
+ValeurCmp = R;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B7E29;
+Reference = R20;
+ValeurCmp = 4.7K;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B8209;
+Reference = R21;
 ValeurCmp = R;
 IdModule  = R4-5;
 EndCmp
@@ -236,6 +222,69 @@ TimeStamp = /537A60FF;
 Reference = ST2;
 ValeurCmp = REV-HIST;
 IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D39;
+Reference = U1;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D48;
+Reference = U2;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D57;
+Reference = U3;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D66;
+Reference = U4;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D75;
+Reference = U5;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D8E;
+Reference = U6;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D9D;
+Reference = U7;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4DAC;
+Reference = U8;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537B6E2C;
+Reference = U9;
+ValeurCmp = MCP23008P;
+IdModule  = DIP-18__300;
 EndCmp
 
 EndListe
