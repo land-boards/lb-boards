@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 19/05/2014 17:05:44
+Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 22/05/2014 07:43:06
 
 BeginCmp
 TimeStamp = /537A5EE1;
@@ -12,69 +12,6 @@ TimeStamp = /537A5ED2;
 Reference = FID2;
 ValeurCmp = ADAFRUIT_FIDUCIAL;
 IdModule  = FIDUCIAL;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D39;
-Reference = IC1;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D48;
-Reference = IC2;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D57;
-Reference = IC3;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D66;
-Reference = IC4;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D75;
-Reference = IC5;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D8E;
-Reference = IC6;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4D9D;
-Reference = IC7;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A4DAC;
-Reference = IC8;
-ValeurCmp = 4N26;
-IdModule  = DIP-6__300;
-EndCmp
-
-BeginCmp
-TimeStamp = /537A718D;
-Reference = J1;
-ValeurCmp = DB15;
-IdModule  = DB15MC;
 EndCmp
 
 BeginCmp
@@ -110,6 +47,20 @@ TimeStamp = /537A5C77;
 Reference = MTG4;
 ValeurCmp = MTG_HOLE;
 IdModule  = MTG-6-32;
+EndCmp
+
+BeginCmp
+TimeStamp = /537DE1FC;
+Reference = P1;
+ValeurCmp = CONN_4;
+IdModule  = pin_array_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /537D0D0A;
+Reference = P2;
+ValeurCmp = CONN_3X2;
+IdModule  = pin_array_3x2;
 EndCmp
 
 BeginCmp
@@ -225,6 +176,34 @@ IdModule  = R4-5;
 EndCmp
 
 BeginCmp
+TimeStamp = /537D0CFB;
+Reference = R17;
+ValeurCmp = 10K;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537D0CEC;
+Reference = R18;
+ValeurCmp = 10K;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537D0CDD;
+Reference = R19;
+ValeurCmp = 10K;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /537D0CCE;
+Reference = R20;
+ValeurCmp = 10K;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
 TimeStamp = /537A64A5;
 Reference = ST1;
 ValeurCmp = CONN_1;
@@ -236,6 +215,69 @@ TimeStamp = /537A60FF;
 Reference = ST2;
 ValeurCmp = REV-HIST;
 IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D39;
+Reference = U1;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D48;
+Reference = U2;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D57;
+Reference = U3;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D66;
+Reference = U4;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D75;
+Reference = U5;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D8E;
+Reference = U6;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4D9D;
+Reference = U7;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537A4DAC;
+Reference = U8;
+ValeurCmp = 4N26;
+IdModule  = DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /537D0CB8;
+Reference = U9;
+ValeurCmp = MCP23008P;
+IdModule  = DIP-18__300;
 EndCmp
 
 EndListe
