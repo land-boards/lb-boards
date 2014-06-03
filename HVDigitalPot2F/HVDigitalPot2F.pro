@@ -1,5 +1,5 @@
-update=Wed 06 Feb 2013 09:17:56 PM EST
-last_client=cvpcb
+update=27/02/2013 10:11:31
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -29,6 +29,11 @@ LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/adafruit
 LibName7=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_capacitors
 LibName8=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/smd_resistors
 LibDir=/home/doug/PCB Designs/KiCAD/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=/home/doug/PCB Designs/KiCAD/library
@@ -65,8 +70,3 @@ LibName1=power
 LibName2=conn
 LibName3=device
 LibName4=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
