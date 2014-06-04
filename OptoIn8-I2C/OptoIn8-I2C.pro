@@ -1,4 +1,4 @@
-update=20/05/2014 12:38:51
+update=04/06/2014 10:52:26
 version=1
 last_client=pcbnew
 [general]
@@ -52,7 +52,7 @@ LibName32=C:/Users/DGilliland.AACISD/Documents/Subversion/DGilliland/PCB Designs
 [pcbnew]
 version=1
 LastNetListRead=OptoIn8-I2C.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=0.600000000000
 PadDrillOvalY=0.600000000000
 PadSizeH=1.500000000000

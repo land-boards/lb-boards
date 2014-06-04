@@ -1,4 +1,4 @@
-update=22/05/2014 07:43:19
+update=04/06/2014 17:05:20
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -51,18 +51,18 @@ LibName32=C:/Users/DGilliland.AACISD/Documents/Subversion/DGilliland/PCB Designs
 version=1
 [pcbnew]
 version=1
-LastNetListRead=
-UseCmpFile=1
-PadDrill=0.600000000000
-PadDrillOvalY=0.600000000000
-PadSizeH=1.500000000000
-PadSizeV=1.500000000000
+LastNetListRead=OptoOut8-I2C.net
+UseCmpFile=0
+PadDrill=3.835400000000
+PadDrillOvalY=3.835400000000
+PadSizeH=9.525000000000
+PadSizeV=9.525000000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
-ModuleTextSizeV=1.000000000000
-ModuleTextSizeH=1.000000000000
-ModuleTextSizeThickness=0.150000000000
+ModuleTextSizeV=1.270000000000
+ModuleTextSizeH=1.270000000000
+ModuleTextSizeThickness=0.317500000000
 SolderMaskClearance=0.000000000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
