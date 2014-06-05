@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-05-31 BZR 4019)-stable date = 6/4/2014 9:00:59 PM
+Cmp-Mod V01 Created by CvPcb (2013-04-19 BZR 4011)-stable date = 05/06/2014 09:41:58
 
 BeginCmp
 TimeStamp = /50510C92;
@@ -85,10 +85,38 @@ IdModule  = SM1206;
 EndCmp
 
 BeginCmp
+TimeStamp = /5390725D;
+Reference = F2;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /539090B7;
+Reference = F3;
+ValeurCmp = FUSE;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
 TimeStamp = /504B3CCB;
 Reference = J1;
 ValeurCmp = USB-B;
 IdModule  = USB-B-MINI;
+EndCmp
+
+BeginCmp
+TimeStamp = /53906D5C;
+Reference = J2;
+ValeurCmp = CONN_2;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /53907860;
+Reference = J3;
+ValeurCmp = CONN_8X2;
+IdModule  = pin_array_8x2;
 EndCmp
 
 BeginCmp
@@ -288,16 +316,9 @@ IdModule  = SOT223;
 EndCmp
 
 BeginCmp
-TimeStamp = /538FC5D9;
+TimeStamp = /53905AD8;
 Reference = U3;
-ValeurCmp = 74LS151;
-IdModule  = SO16W;
-EndCmp
-
-BeginCmp
-TimeStamp = /538FC5E8;
-Reference = U4;
-ValeurCmp = 74LS151;
+ValeurCmp = 74LS148;
 IdModule  = SO16W;
 EndCmp
 
