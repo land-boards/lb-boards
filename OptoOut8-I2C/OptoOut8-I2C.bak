@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 05/06/2014 11:26:23
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,8 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:DougsSch
-LIBS:AAC-PCB
 LIBS:OptoOut8-I2C-cache
 EELAYER 27 0
 EELAYER END
@@ -38,7 +36,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "8-CHANNEL OPTO-ISOLATED OUTPUT CARD"
-Date "5 jun 2014"
+Date "8 jun 2014"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -715,11 +713,6 @@ Text Notes 3500 2800 0    60   ~ 0
 POWER
 Text Notes 3600 3300 0    60   ~ 0
 I2C
-Wire Wire Line
-	4300 2050 4300 3350
-Wire Wire Line
-	4300 2050 4500 2050
-Connection ~ 4300 3350
 NoConn ~ 5500 2950
 NoConn ~ 5400 2950
 NoConn ~ 5300 2950
