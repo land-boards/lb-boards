@@ -1,8 +1,19 @@
-EESchema-DOCLIB  Version 2.0  Date: 11/02/2014 12:42:18
+EESchema-DOCLIB  Version 2.0  Date: 09/06/2014 15:36:56
 #
 $CMP 175A
 D Synchro Amplifier, 90 V
 K Synchro Amplifier, 90 V
+$ENDCMP
+#
+$CMP 24C01
+D I2C Serial EEPROM
+K EEPROM Serial
+$ENDCMP
+#
+$CMP 24C512
+D I2C Serial eprom
+K I2C MEMORY
+F memory/24xx512.pdf
 $ENDCMP
 #
 $CMP ACSV1

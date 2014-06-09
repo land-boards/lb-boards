@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 09/06/2014 16:05:36
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:DougsSch
+LIBS:AAC-PCB
 LIBS:OptoOut8-I2C-cache
 EELAYER 27 0
 EELAYER END
@@ -36,7 +38,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "8-CHANNEL OPTO-ISOLATED OUTPUT CARD"
-Date "8 jun 2014"
+Date "9 jun 2014"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -426,36 +428,35 @@ $EndComp
 $Comp
 L CONN_3X2 P2
 U 1 1 537D0D0A
-P 5050 5000
-F 0 "P2" H 5050 5250 50  0000 C CNN
-F 1 "CONN_3X2" V 5050 5050 40  0000 C CNN
-F 2 "pin_array_3x2" H 5050 4850 60  0000 C CNN
-F 3 "" H 5050 5000 60  0000 C CNN
-	1    5050 5000
+P 5050 6700
+F 0 "P2" H 5050 6950 50  0000 C CNN
+F 1 "CONN_3X2" V 5050 6750 40  0000 C CNN
+F 2 "pin_array_3x2" H 5050 6550 60  0000 C CNN
+F 3 "" H 5050 6700 60  0000 C CNN
+	1    5050 6700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5100 5500 5100 5400
-Connection ~ 5100 5500
+	5100 7200 5100 7100
+Connection ~ 5100 7200
 Wire Wire Line
-	5000 5500 5000 5400
-Connection ~ 5000 5500
+	5000 7200 5000 7100
+Connection ~ 5000 7200
 Wire Wire Line
-	4900 5500 4900 5400
-Connection ~ 4900 5500
+	4900 7200 4900 7100
+Connection ~ 4900 7200
 Wire Wire Line
 	5100 4350 5450 4350
 Wire Wire Line
-	5100 2950 5100 4600
-Connection ~ 5200 4350
+	5100 2950 5100 6300
 Wire Wire Line
 	5000 4250 5450 4250
 Wire Wire Line
-	5000 2950 5000 4600
+	5000 2950 5000 6300
 Wire Wire Line
 	5450 4150 4900 4150
 Wire Wire Line
-	4450 3250 6000 3250
+	4400 3250 6000 3250
 $Comp
 L CONN_4 P1
 U 1 1 537DE1FC
@@ -472,13 +473,13 @@ Wire Wire Line
 Wire Wire Line
 	4000 4050 5450 4050
 Wire Wire Line
-	4000 4250 4550 4250
+	4000 4250 4500 4250
 Wire Wire Line
-	4550 3650 4550 5500
+	4500 3650 4500 7200
 Wire Wire Line
-	4450 4150 4000 4150
+	4400 4150 4000 4150
 Wire Wire Line
-	4450 3250 4450 4150
+	4400 3250 4400 5100
 Text Notes 3500 4000 2    60   ~ 0
 SCL\nSDA\nVCC\nGND
 Text Label 4100 4150 0    60   ~ 0
@@ -490,8 +491,10 @@ SDA
 Text Label 4100 3950 0    60   ~ 0
 SCL
 Wire Wire Line
-	6000 4950 6000 5650
-Connection ~ 6000 5500
+	6000 4950 6000 5000
+Wire Wire Line
+	6000 6300 6000 7500
+Connection ~ 6000 7200
 Wire Wire Line
 	6000 3250 6000 3700
 Text Label 5250 4350 0    60   ~ 0
@@ -525,7 +528,7 @@ $EndComp
 Connection ~ 5000 4250
 Connection ~ 5100 4350
 Wire Wire Line
-	4900 2950 4900 4600
+	4900 2950 4900 6300
 Connection ~ 4900 4150
 Wire Wire Line
 	4600 2950 4600 3250
@@ -564,11 +567,11 @@ Wire Wire Line
 	5250 3450 5250 4050
 Connection ~ 5250 4050
 Wire Wire Line
-	4000 3550 4450 3550
-Connection ~ 4450 3550
+	4000 3550 4400 3550
+Connection ~ 4400 3550
 Wire Wire Line
-	4000 3650 4550 3650
-Connection ~ 4550 4250
+	4000 3650 4500 3650
+Connection ~ 4500 4250
 Wire Wire Line
 	9350 4050 6550 4050
 Wire Wire Line
@@ -646,16 +649,16 @@ Wire Wire Line
 Wire Wire Line
 	7800 7200 9350 7200
 Wire Wire Line
-	4550 5500 6000 5500
+	4500 7200 6000 7200
 $Comp
 L GND #PWR01
 U 1 1 539081BC
-P 6000 5650
-F 0 "#PWR01" H 6000 5650 30  0001 C CNN
-F 1 "GND" H 6000 5580 30  0001 C CNN
-F 2 "" H 6000 5650 60  0000 C CNN
-F 3 "" H 6000 5650 60  0000 C CNN
-	1    6000 5650
+P 6000 7500
+F 0 "#PWR01" H 6000 7500 30  0001 C CNN
+F 1 "GND" H 6000 7430 30  0001 C CNN
+F 2 "" H 6000 7500 60  0000 C CNN
+F 3 "" H 6000 7500 60  0000 C CNN
+	1    6000 7500
 	1    0    0    -1  
 $EndComp
 Text Notes 3450 3400 2    60   ~ 0
@@ -748,4 +751,42 @@ F 3 "" H 14950 9600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 14800 9600
+Wire Wire Line
+	6000 5000 4500 5000
+Connection ~ 4500 5000
+$Comp
+L 24C01 U10
+U 1 1 5396141F
+P 6000 5700
+F 0 "U10" H 6150 6050 60  0000 C CNN
+F 1 "24C01" H 6250 5250 60  0000 C CNN
+F 2 "DIP-8__300" H 5650 5200 60  0000 C CNN
+F 3 "~" H 6000 5700 60  0000 C CNN
+	1    6000 5700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 5200 6000 5100
+Wire Wire Line
+	6000 5100 4400 5100
+Connection ~ 4400 4150
+Wire Wire Line
+	5300 5600 4700 5600
+Wire Wire Line
+	4700 5600 4700 3950
+Connection ~ 4700 3950
+Wire Wire Line
+	4600 4050 4600 5700
+Wire Wire Line
+	4600 5700 5300 5700
+Connection ~ 4600 4050
+Wire Wire Line
+	5300 6000 5100 6000
+Connection ~ 5100 6000
+Wire Wire Line
+	5300 5900 5000 5900
+Connection ~ 5000 5900
+Wire Wire Line
+	5300 5800 4900 5800
+Connection ~ 4900 5800
 $EndSCHEMATC
