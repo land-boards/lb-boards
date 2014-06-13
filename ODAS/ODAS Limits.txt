@@ -1,0 +1,63 @@
+What do I have?
+
+Arduino I2C "Wire" driver - does all low-level I2C communications
+Adafruit_MPC23008 driver - communicates with a _single_ MCP23008 chip
+Adafruit_MPC23017 driver - communicates with a _single_ MCP23017 chip
+
+Ideally, what do I want?
+
+In setup()
+scanI2C(); // Scans the I2C bus and fills in the card database for every card
+
+In loop()
+manHost(); 		// Manage Host Interface Firmata Message Queue (3-bytes)
+				// Provides Extended Firmata API to access the cards
+validateReq();	// Validate read/write requests against the card database
+performReq();	// Call the correct chip driver
+
+Firmata Messages (all messages from the Host to the card are 3 bytes long
+MIDI Meaning	Data bytes 				ODAS Meaning			Data bytes	Allows for up to
+Note Off Event	0x80					Digital Write (LO)
+	"			0x00-0x7F (key)			Card Number				0x00-0x7F	(128 cards)
+	"			0x00-0x7F (velocity)	Bit Number				0x00-0x01	(128 bits/card)
+Note On Event	0x90					Digital Write (HI)
+	"			0x00-0x7F (key)			Card Number				0x00-0x7F	(128 cards)
+	"			0x00-0x7F (velocity)	Bit Number				0x00-0x01	(128 bits/card)
+Chan 1 Prog Ch	0xD0					Digital Read
+	"			0x00-0x7F (prog num)	Card Number				0x00-0x7F	(128 cards)
+	"			- na -					Bit Number				0x00-0x01	(128 bits/card)
+Reserved		0xF4					Set Pin Dir To Input
+	"			0x00-0x7F (key)			Card Number				0x00-0x7F	(128 cards)
+	"			0x00-0x7F (velocity)	Bit Number				0x00-0x01	(128 bits/card)
+Reserved		0xF5					Set Pin Dir To Output
+	"			0x00-0x7F (key)			Card Number				0x00-0x7F	(128 cards)
+	"			0x00-0x7F (velocity)	Bit Number				0x00-0x01	(128 bits/card)
+Tune Request	0xF6					Read Card Database
+																0x00
+																0x00
+System Exclus.	0xFE					Scan I2C bus
+																0x00
+																0x00
+
+Examples:
+1 - Set card 3, channel 4 bit to HIGH:
+0x90
+0x03
+0x04
+2 - Read card 4, channel 7:
+0xD0
+0x04
+0x07
+
+// Card Database Populated by scan or scan command
+// Cards are numbered by the address select jumper on the card.
+// Cards are not numbered by position.
+
+#define NUM_CARDS 16
+uint8_t	 	numberOfCardsFoundInScan;
+structure
+{
+	uint16_t	cardType;		// I/F Chip type - 0=No card, 1=MCP23008, 2=MCP23017, 0xFF=last card
+	uint8_t		numBitsPerCard;	// 0-255 ports
+	uint8_t		cardCaps;		// Capabilities - 0=Digital Input, 1=Digital Output, 2=Digital I/O, ...
+} cardStruc[NUM_CARDS];
