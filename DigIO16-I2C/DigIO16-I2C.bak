@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 12/06/2014 10:24:13
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:DougsSch
+LIBS:AAC-PCB
 LIBS:DigIO16-I2C-cache
 EELAYER 27 0
 EELAYER END
@@ -36,7 +38,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "16-CHANNEL DIGITAL I/O"
-Date "14 jun 2014"
+Date "12 jun 2014"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -338,7 +340,7 @@ Wire Wire Line
 Wire Wire Line
 	4100 1850 4100 2050
 Wire Wire Line
-	3250 2050 5600 2050
+	4100 2050 5600 2050
 Wire Wire Line
 	5600 2050 5600 3750
 Wire Wire Line
@@ -525,9 +527,4 @@ Wire Wire Line
 	7000 4900 7000 3950
 Wire Wire Line
 	7000 3950 7250 3950
-Wire Wire Line
-	3250 2050 3250 950 
-Wire Wire Line
-	3250 950  3400 950 
-Connection ~ 4100 2050
 $EndSCHEMATC
