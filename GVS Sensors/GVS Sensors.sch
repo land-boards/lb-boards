@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 18/06/2014 11:15:50
+EESchema Schematic File Version 2  date 18/06/2014 12:23:41
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -69,11 +69,15 @@ $EndComp
 Wire Wire Line
 	1650 1500 1850 1500
 Wire Wire Line
-	1650 900  1650 1500
+	1650 900  1650 950 
+Wire Wire Line
+	1650 950  1650 1500
 Wire Wire Line
 	1850 1400 1750 1400
 Wire Wire Line
-	1750 1400 1750 1900
+	1750 1400 1750 1800
+Wire Wire Line
+	1750 1800 1750 1900
 $Comp
 L GND #PWR?
 U 1 1 53A05C3B
@@ -120,7 +124,9 @@ Wire Wire Line
 	700  1600 750  1600
 Connection ~ 1750 1800
 Wire Wire Line
-	1300 1600 1850 1600
+	1300 1600 1450 1600
+Wire Wire Line
+	1450 1600 1850 1600
 Wire Wire Line
 	1450 1600 1450 1500
 Connection ~ 1450 1600
@@ -278,4 +284,52 @@ Wire Wire Line
 	6800 1450 6650 1450
 Text Notes 6800 1950 0    60   ~ 0
 GVS POT
+$Comp
+L POT RV?
+U 1 1 53A1BD27
+P 8300 1450
+F 0 "RV?" H 8300 1350 50  0000 C CNN
+F 1 "POT" H 8300 1450 50  0000 C CNN
+F 2 "~" H 8300 1450 60  0000 C CNN
+F 3 "~" H 8300 1450 60  0000 C CNN
+	1    8300 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_3 J1
+U 1 1 53A1BD2D
+P 9200 1450
+F 0 "J1" V 9150 1450 50  0000 C CNN
+F 1 "CONN_3" V 9250 1450 40  0000 C CNN
+F 2 "" H 9200 1450 60  0000 C CNN
+F 3 "" H 9200 1450 60  0000 C CNN
+	1    9200 1450
+	1    0    0    -1  
+$EndComp
+Text Notes 9350 1400 0    60   ~ 0
+G\nV\nS
+Wire Wire Line
+	8300 1200 8300 1100
+Wire Wire Line
+	8300 1100 8700 1100
+Wire Wire Line
+	8700 1100 8700 1350
+Wire Wire Line
+	8700 1350 8850 1350
+Wire Wire Line
+	8300 1700 8300 1800
+Wire Wire Line
+	8300 1800 8700 1800
+Wire Wire Line
+	8700 1800 8700 1550
+Wire Wire Line
+	8700 1550 8850 1550
+Wire Wire Line
+	8850 1450 8600 1450
+Wire Wire Line
+	8600 1450 8600 1450
+Wire Wire Line
+	8600 1450 8450 1450
+Text Notes 8000 1950 0    60   ~ 0
+NO NO NO - GVS POT - NO NO NO
 $EndSCHEMATC
