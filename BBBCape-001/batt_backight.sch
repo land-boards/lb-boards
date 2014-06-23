@@ -1,42 +1,18 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 23/06/2014 17:07:57
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
-LIBS:linear
 LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
 LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:BBBCape-001-cache
+LIBS:beagleboneblack
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 6
 Title "BeagleBone Cape Baseline"
-Date "17 jun 2014"
+Date "23 jun 2014"
 Rev "0.1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -102,18 +78,18 @@ U 1 1 4EB0F9FA
 P 5100 4750
 F 0 "P2" H 5100 5000 50  0000 C CNN
 F 1 "Backl" V 5100 4800 40  0000 C CNN
-F 2 "" H 5100 4750 60  0001 C CNN
+F 2 "pin_array_3x2" H 5100 4750 60  0001 C CNN
 F 3 "" H 5100 4750 60  0001 C CNN
 	1    5100 4750
 	-1   0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE U1
+L BEAGLEBONE BRD1
 U 1 1 4EB0F922
 P 4700 4150
-F 0 "U1" H 4750 4100 60  0000 C CNN
+F 0 "BRD1" H 4750 4100 60  0000 C CNN
 F 1 "BEAGLEBONE" H 4950 4000 60  0000 C CNN
-F 2 "" H 4700 4150 60  0001 C CNN
+F 2 "BEAGLEBONE" H 4700 4150 60  0001 C CNN
 F 3 "" H 4700 4150 60  0001 C CNN
 	1    4700 4150
 	1    0    0    -1  

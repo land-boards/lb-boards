@@ -1,42 +1,18 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 23/06/2014 17:07:57
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
-LIBS:linear
 LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
 LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:BBBCape-001-cache
+LIBS:beagleboneblack
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 6
 Title "BeagleBone Cape Baseline"
-Date "17 jun 2014"
+Date "23 jun 2014"
 Rev "0.1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -47,19 +23,31 @@ $EndDescr
 $Sheet
 S 3950 950  1200 1000
 U 4EB0F8E9
-F0 "P9" 60
-F1 "P9.sch" 60
+F0 "P9A" 60
+F1 "P9A.sch" 60
 $EndSheet
 $Sheet
 S 2450 950  1200 1000
 U 4EB0F8C5
-F0 "P8" 60
-F1 "P8.sch" 60
+F0 "P8A" 60
+F1 "P8A.sch" 60
 $EndSheet
 $Sheet
 S 1000 950  950  950 
 U 4EB0F8A6
 F0 "Battery/Backlight" 60
 F1 "batt_backight.sch" 60
+$EndSheet
+$Sheet
+S 3950 2300 1200 1000
+U 53A863C7
+F0 "P9B" 60
+F1 "P9B.sch" 60
+$EndSheet
+$Sheet
+S 2450 2300 1200 1000
+U 53A863C9
+F0 "P8B" 60
+F1 "P8B.sch" 60
 $EndSheet
 $EndSCHEMATC
