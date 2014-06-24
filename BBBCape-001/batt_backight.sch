@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 23/06/2014 17:07:57
+EESchema Schematic File Version 2  date 24/06/2014 16:39:12
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -6,72 +6,73 @@ LIBS:conn
 LIBS:regul
 LIBS:memory
 LIBS:beagleboneblack
+LIBS:BBBCape-001-cache
 EELAYER 27 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A 11000 8500
 encoding utf-8
 Sheet 4 6
-Title "BeagleBone Cape Baseline"
-Date "23 jun 2014"
-Rev "0.1"
+Title "BeagleBone Cape"
+Date "24 jun 2014"
+Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 4350 3650
-NoConn ~ 4350 3750
-NoConn ~ 5750 3750
-NoConn ~ 5750 3650
+NoConn ~ 4700 3650
+NoConn ~ 4700 3750
+NoConn ~ 5500 3750
+NoConn ~ 5500 3650
 Text Label 5500 4600 0    60   ~ 0
 BL_ISET2
 Text Label 5500 4700 0    60   ~ 0
 BL_OUT
 Text Label 5500 4800 0    60   ~ 0
 BL_SINK
-Text Label 4700 4800 2    60   ~ 0
+Text Label 4250 4800 0    60   ~ 0
 BL_SINK2
-Text Label 4700 4700 2    60   ~ 0
+Text Label 4250 4700 0    60   ~ 0
 BL_IN
-Text Label 4700 4600 2    60   ~ 0
+Text Label 4250 4600 0    60   ~ 0
 BL_ISET1
 Wire Wire Line
-	5750 4050 6050 4050
+	5500 4050 6300 4050
 Wire Wire Line
-	6050 4050 6050 4800
+	6300 4050 6300 4800
 Wire Wire Line
-	6050 4800 5500 4800
+	6300 4800 5500 4800
 Wire Wire Line
-	4350 3950 4150 3950
+	4700 3950 4000 3950
 Wire Wire Line
-	4150 3950 4150 4700
+	4000 3950 4000 4700
 Wire Wire Line
-	4150 4700 4700 4700
+	4000 4700 4700 4700
 Wire Wire Line
-	5500 4600 5850 4600
+	5500 4600 6100 4600
 Wire Wire Line
-	5850 4600 5850 3850
+	6100 4600 6100 3850
 Wire Wire Line
-	5850 3850 5750 3850
+	6100 3850 5500 3850
 Wire Wire Line
-	5500 4700 5950 4700
+	5500 4700 6200 4700
 Wire Wire Line
-	5950 4700 5950 3950
+	6200 4700 6200 3950
 Wire Wire Line
-	5950 3950 5750 3950
+	6200 3950 5500 3950
 Wire Wire Line
-	4350 3850 4250 3850
+	4700 3850 4100 3850
 Wire Wire Line
-	4250 3850 4250 4600
+	4100 3850 4100 4600
 Wire Wire Line
-	4250 4600 4700 4600
+	4100 4600 4700 4600
 Wire Wire Line
-	4350 4050 4050 4050
+	4700 4050 3900 4050
 Wire Wire Line
-	4050 4050 4050 4800
+	3900 4050 3900 4800
 Wire Wire Line
-	4050 4800 4700 4800
+	3900 4800 4700 4800
 $Comp
 L CONN_3X2 P2
 U 1 1 4EB0F9FA
@@ -84,14 +85,14 @@ F 3 "" H 5100 4750 60  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE BRD1
-U 1 1 4EB0F922
-P 4700 4150
-F 0 "BRD1" H 4750 4100 60  0000 C CNN
-F 1 "BEAGLEBONE" H 4950 4000 60  0000 C CNN
-F 2 "BEAGLEBONE" H 4700 4150 60  0001 C CNN
-F 3 "" H 4700 4150 60  0001 C CNN
-	1    4700 4150
+L CONN_5X2 P6
+U 1 1 53A9A8A3
+P 5100 3850
+F 0 "P6" H 5100 4150 60  0000 C CNN
+F 1 "CONN_5X2" V 5100 3850 50  0000 C CNN
+F 2 "PIN_ARRAY_5x2" H 5100 3550 60  0000 C CNN
+F 3 "" H 5100 3850 60  0000 C CNN
+	1    5100 3850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

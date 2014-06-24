@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 23/06/2014 17:07:57
+EESchema Schematic File Version 2  date 24/06/2014 16:39:12
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -6,14 +6,15 @@ LIBS:conn
 LIBS:regul
 LIBS:memory
 LIBS:beagleboneblack
+LIBS:BBBCape-001-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 6
 Title "BeagleBone Cape Baseline"
-Date "23 jun 2014"
-Rev "0.1"
+Date "24 jun 2014"
+Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
 Comment2 ""
@@ -165,12 +166,12 @@ Entry Wire Line
 Wire Bus Line
 	4650 1600 7000 1600
 $Comp
-L BEAGLEBONEBLACK U?
+L BEAGLEBONEBLACK BRD1
 U 2 1 53A89930
 P 8300 3050
-F 0 "U?" H 8150 4300 60  0000 C CNN
+F 0 "BRD1" H 8150 4300 60  0000 C CNN
 F 1 "BEAGLEBONEBLACK" H 8350 1750 60  0000 C CNN
-F 2 "~" H 8100 1800 60  0000 C CNN
+F 2 "BEAGLEBONE" H 8100 1800 60  0000 C CNN
 F 3 "~" H 8100 1800 60  0000 C CNN
 	2    8300 3050
 	1    0    0    -1  

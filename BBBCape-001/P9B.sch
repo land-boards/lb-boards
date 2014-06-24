@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 23/06/2014 17:07:57
+EESchema Schematic File Version 2  date 24/06/2014 16:39:12
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -6,14 +6,15 @@ LIBS:conn
 LIBS:regul
 LIBS:memory
 LIBS:beagleboneblack
+LIBS:BBBCape-001-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 5 6
+Sheet 6 6
 Title "BeagleBone Cape Baseline"
-Date "23 jun 2014"
-Rev "0.1"
+Date "24 jun 2014"
+Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
 Comment2 ""
@@ -77,52 +78,6 @@ Text Label 4500 3300 0    60   ~ 0
 DGND_9_2
 Text Label 4500 1500 0    60   ~ 0
 SYS_RESETn
-Entry Wire Line
-	4400 3000 4500 3100
-Entry Wire Line
-	4400 3100 4500 3200
-Entry Wire Line
-	4400 3200 4500 3300
-Entry Wire Line
-	4400 2800 4500 2900
-Entry Wire Line
-	4400 2900 4500 3000
-Entry Wire Line
-	4400 2700 4500 2800
-Entry Wire Line
-	4400 2600 4500 2700
-Entry Wire Line
-	4400 1800 4500 1900
-Entry Wire Line
-	4400 1900 4500 2000
-Entry Wire Line
-	4400 2100 4500 2200
-Entry Wire Line
-	4400 2000 4500 2100
-Entry Wire Line
-	4400 2400 4500 2500
-Entry Wire Line
-	4400 2500 4500 2600
-Entry Wire Line
-	4400 2300 4500 2400
-Entry Wire Line
-	4400 2200 4500 2300
-Entry Wire Line
-	4400 1400 4500 1500
-Entry Wire Line
-	4400 1500 4500 1600
-Entry Wire Line
-	4400 1700 4500 1800
-Entry Wire Line
-	4400 1600 4500 1700
-Entry Wire Line
-	4400 1200 4500 1300
-Entry Wire Line
-	4400 1300 4500 1400
-Entry Wire Line
-	4400 1100 4500 1200
-Entry Wire Line
-	4400 1000 4500 1100
 $Comp
 L MOSFET_N Q1
 U 1 1 53A0A213
@@ -308,54 +263,52 @@ Text Label 2800 7450 0    60   ~ 0
 AIN5
 Text Label 2800 7750 0    60   ~ 0
 GNDA_ADC
-Wire Bus Line
-	4400 750  4400 3200
 Wire Wire Line
-	4500 1100 5050 1100
+	4450 1100 5200 1100
 Wire Wire Line
-	5050 1200 4500 1200
+	5200 1200 4450 1200
 Wire Wire Line
-	5050 1400 4500 1400
+	5200 1400 4450 1400
 Wire Wire Line
-	5050 1300 4500 1300
+	5200 1300 4450 1300
 Wire Wire Line
-	5050 1700 4500 1700
+	5200 1700 4450 1700
 Wire Wire Line
-	5050 1800 4500 1800
+	5200 1800 4450 1800
 Wire Wire Line
-	5050 1600 4500 1600
+	5200 1600 4450 1600
 Wire Wire Line
-	5050 1500 4500 1500
+	5200 1500 4450 1500
 Wire Wire Line
-	5050 2300 4500 2300
+	5200 2300 4450 2300
 Wire Wire Line
-	5050 2400 4500 2400
+	5200 2400 4450 2400
 Wire Wire Line
-	5050 2600 4500 2600
+	5200 2600 4450 2600
 Wire Wire Line
-	5050 2500 4500 2500
+	5200 2500 4450 2500
 Wire Wire Line
-	5050 2100 4500 2100
+	5200 2100 4450 2100
 Wire Wire Line
-	5050 2200 4500 2200
+	5200 2200 4450 2200
 Wire Wire Line
-	5050 2000 4500 2000
+	5200 2000 4450 2000
 Wire Wire Line
-	5050 1900 4500 1900
+	5200 1900 4450 1900
 Wire Wire Line
-	5050 2700 4500 2700
+	5200 2700 4450 2700
 Wire Wire Line
-	5050 2800 4500 2800
+	5200 2800 4450 2800
 Wire Wire Line
-	5050 3000 4500 3000
+	5200 3000 4450 3000
 Wire Wire Line
-	5050 2900 4500 2900
+	5200 2900 4450 2900
 Wire Wire Line
-	5050 3300 4500 3300
+	5200 3300 4450 3300
 Wire Wire Line
-	5050 3200 4500 3200
+	5200 3200 4450 3200
 Wire Wire Line
-	5050 3100 4500 3100
+	5200 3100 4450 3100
 Wire Wire Line
 	5150 750  5150 650 
 Wire Wire Line
@@ -460,8 +413,6 @@ Wire Wire Line
 	2750 7450 3400 7450
 Wire Wire Line
 	2750 7750 3400 7750
-Text Label 2800 7350 0    60   ~ 0
-VDD_3V3EXP
 Wire Wire Line
 	2750 7350 3400 7350
 Text Label 2950 6850 0    60   ~ 0
@@ -487,14 +438,28 @@ Wire Wire Line
 	3300 7850 3400 7850
 Connection ~ 3300 7750
 $Comp
-L BEAGLEBONEBLACK U?
+L BEAGLEBONEBLACK BRD1
 U 4 1 53A89C03
-P 5600 2150
-F 0 "U?" H 5450 3400 60  0000 C CNN
-F 1 "BEAGLEBONEBLACK" H 5650 850 60  0000 C CNN
-F 2 "~" H 5400 900 60  0000 C CNN
-F 3 "~" H 5400 900 60  0000 C CNN
-	4    5600 2150
+P 5750 2150
+F 0 "BRD1" H 5600 3400 60  0000 C CNN
+F 1 "BEAGLEBONEBLACK" H 5800 850 60  0000 C CNN
+F 2 "BEAGLEBONE" H 5700 750 60  0000 C CNN
+F 3 "~" H 5550 900 60  0000 C CNN
+	4    5750 2150
 	1    0    0    -1  
 $EndComp
+Text GLabel 4450 1200 0    60   UnSpc ~ 0
+VDD_3V3EXP
+Text GLabel 1550 6850 0    60   BiDi ~ 0
+I2C1_SCL
+Text GLabel 4450 3300 0    60   UnSpc ~ 0
+GND
+Text GLabel 4450 1300 0    60   UnSpc ~ 0
+VDD_5V
+Text Label 2800 7350 0    60   ~ 0
+VDD_ADC
+Text GLabel 2750 7350 0    60   UnSpc ~ 0
+VDD_ADC
+Text GLabel 2750 7750 0    60   UnSpc ~ 0
+GNDA_ADC
 $EndSCHEMATC
