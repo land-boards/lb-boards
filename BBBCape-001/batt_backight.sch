@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/06/2014 16:39:12
+EESchema Schematic File Version 2  date 25/06/2014 16:57:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 6
 Title "BeagleBone Cape"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -93,6 +93,6 @@ F 1 "CONN_5X2" V 5100 3850 50  0000 C CNN
 F 2 "PIN_ARRAY_5x2" H 5100 3550 60  0000 C CNN
 F 3 "" H 5100 3850 60  0000 C CNN
 	1    5100 3850
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC

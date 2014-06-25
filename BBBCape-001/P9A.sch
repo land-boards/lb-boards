@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/06/2014 16:39:12
+EESchema Schematic File Version 2  date 25/06/2014 16:57:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 2 6
 Title "BeagleBone Cape Baseline"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -180,7 +180,7 @@ PWR_BUT
 Text Label 5000 1400 0    60   ~ 0
 SYS_5V
 Text Label 5000 1300 0    60   ~ 0
-VDD_5V
+VDD_5V-UF
 Text Label 5000 3200 0    60   ~ 0
 DGND_9_2
 Text Label 5000 3300 0    60   ~ 0
@@ -392,13 +392,13 @@ F 3 "" H 2750 6950 60  0001 C CNN
 $EndComp
 Text Notes 3350 6700 0    60   ~ 0
 G\nV\nS
-Text Label 2800 10050 0    60   ~ 0
+Text Label 8350 2400 0    60   ~ 0
 AIN0
-Text Label 2800 9950 0    60   ~ 0
+Text Label 8350 2050 0    60   ~ 0
 AIN2
-Text Label 2800 9850 0    60   ~ 0
+Text Label 8350 1350 0    60   ~ 0
 AIN6
-Text Label 2800 9750 0    60   ~ 0
+Text Label 8350 1700 0    60   ~ 0
 AIN4
 Wire Wire Line
 	1000 1100 3600 1100
@@ -596,18 +596,6 @@ Wire Wire Line
 	2850 6650 2750 6650
 Wire Wire Line
 	2750 6650 2750 6950
-Wire Wire Line
-	3300 10050 2650 10050
-Wire Wire Line
-	3300 9950 2650 9950
-Wire Wire Line
-	3300 9850 2650 9850
-Wire Wire Line
-	3300 9750 2650 9750
-Wire Wire Line
-	3300 10150 2650 10150
-Wire Wire Line
-	2650 9650 3300 9650
 Text Label 1250 8050 0    60   ~ 0
 UART4_RXD
 Text Label 1250 9050 0    60   ~ 0
@@ -785,17 +773,6 @@ GP116
 Text Label 2450 6850 0    60   ~ 0
 GP117
 $Comp
-L CONN_6 J3
-U 1 1 53A86882
-P 3650 9900
-F 0 "J3" V 3600 9900 60  0000 C CNN
-F 1 "CONN_6" V 3700 9900 60  0000 C CNN
-F 2 "PIN_ARRAY-6X1" H 3650 9550 60  0000 C CNN
-F 3 "" H 3650 9900 60  0000 C CNN
-	1    3650 9900
-	1    0    0    -1  
-$EndComp
-$Comp
 L BEAGLEBONEBLACK BRD1
 U 3 1 53A89A26
 P 6100 2150
@@ -824,17 +801,120 @@ Text GLabel 5000 1200 0    60   UnSpc ~ 0
 VDD_3V3EXP
 Connection ~ 2800 3900
 Text GLabel 5000 1300 0    60   UnSpc ~ 0
-VDD_5V
+VDD_5V-UF
 Text GLabel 5000 3300 0    60   UnSpc ~ 0
 GND
-Text GLabel 2650 9650 0    60   UnSpc ~ 0
+Text GLabel 8200 1250 0    60   UnSpc ~ 0
 VDD_ADC
-Text GLabel 2650 10150 0    60   UnSpc ~ 0
+Text GLabel 8200 2200 0    60   UnSpc ~ 0
 GNDA_ADC
-Text Label 2800 9650 0    60   ~ 0
+Text Label 8350 1250 0    60   ~ 0
 VDD_ADC
 Text GLabel 5000 1900 0    60   UnSpc ~ 0
 I2C1_SCL
-Text Label 2800 10150 0    60   ~ 0
+Text Label 8350 2200 0    60   ~ 0
 GNDA_ADC
+Text GLabel 5000 1400 0    60   UnSpc ~ 0
+SYS_5V
+Wire Wire Line
+	8200 1250 9150 1250
+Wire Wire Line
+	9150 2300 9050 2300
+Wire Wire Line
+	9050 2300 9050 1250
+Connection ~ 9050 1250
+Wire Wire Line
+	9150 1600 9050 1600
+Connection ~ 9050 1600
+Wire Wire Line
+	9150 1950 9050 1950
+Connection ~ 9050 1950
+Wire Wire Line
+	9150 1150 8950 1150
+Wire Wire Line
+	8200 2200 9150 2200
+Connection ~ 8950 2200
+Wire Wire Line
+	9150 1850 8950 1850
+Connection ~ 8950 1850
+Wire Wire Line
+	8950 1150 8950 2200
+Wire Wire Line
+	9150 1500 8950 1500
+Connection ~ 8950 1500
+Wire Wire Line
+	9150 1350 8200 1350
+Wire Wire Line
+	9150 1700 8200 1700
+Wire Wire Line
+	9150 2050 8200 2050
+Wire Wire Line
+	9150 2400 8200 2400
+$Comp
+L CONN_3 J3
+U 1 1 53AACBAD
+P 9500 1250
+F 0 "J3" V 9450 1250 50  0000 C CNN
+F 1 "CONN_3" V 9550 1250 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 9550 1000 60  0000 C CNN
+F 3 "" H 9500 1250 60  0000 C CNN
+	1    9500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J10
+U 1 1 53AACBB3
+P 9500 1600
+F 0 "J10" V 9450 1600 50  0000 C CNN
+F 1 "CONN_3" V 9550 1600 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 9550 1350 60  0000 C CNN
+F 3 "" H 9500 1600 60  0000 C CNN
+	1    9500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J11
+U 1 1 53AACBB9
+P 9500 1950
+F 0 "J11" V 9450 1950 50  0000 C CNN
+F 1 "CONN_3" V 9550 1950 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 9550 1700 60  0000 C CNN
+F 3 "" H 9500 1950 60  0000 C CNN
+	1    9500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J12
+U 1 1 53AACBC9
+P 9500 2300
+F 0 "J12" V 9450 2300 50  0000 C CNN
+F 1 "CONN_3" V 9550 2300 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 9550 2050 60  0000 C CNN
+F 3 "" H 9500 2300 60  0000 C CNN
+	1    9500 2300
+	1    0    0    -1  
+$EndComp
+Text GLabel 4100 2300 2    60   UnSpc ~ 0
+I2C2_SDA
+$Comp
+L FUSE F1
+U 1 1 53AAD570
+P 4350 800
+F 0 "F1" H 4450 850 40  0000 C CNN
+F 1 "FUSE" H 4250 750 40  0000 C CNN
+F 2 "SM1206" H 4350 650 60  0000 C CNN
+F 3 "~" H 4350 800 60  0000 C CNN
+	1    4350 800 
+	1    0    0    -1  
+$EndComp
+Text Label 4700 800  0    60   ~ 0
+VDD_5V-UF
+Text Label 3700 800  0    60   ~ 0
+VDD_5V
+Wire Wire Line
+	4600 800  5350 800 
+Wire Wire Line
+	4100 800  3600 800 
+Text GLabel 3600 800  0    60   UnSpc ~ 0
+VDD_5V
 $EndSCHEMATC

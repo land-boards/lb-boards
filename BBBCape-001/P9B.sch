@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/06/2014 16:39:12
+EESchema Schematic File Version 2  date 25/06/2014 16:57:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 6 6
 Title "BeagleBone Cape Baseline"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -67,7 +67,7 @@ GPIO1_28
 Text Label 4500 1400 0    60   ~ 0
 SYS_5V
 Text Label 4500 1300 0    60   ~ 0
-VDD_5V
+VDD_5V-UF
 Text Label 4500 1200 0    60   ~ 0
 VDD_3V3EXP
 Text Label 4500 1100 0    60   ~ 0
@@ -255,13 +255,13 @@ F 3 "" H 3750 5800 60  0000 C CNN
 	1    3750 5800
 	1    0    0    -1  
 $EndComp
-Text Label 2800 7650 0    60   ~ 0
+Text Label 9600 3100 0    60   ~ 0
 AIN1
-Text Label 2800 7550 0    60   ~ 0
+Text Label 9600 2750 0    60   ~ 0
 AIN3
-Text Label 2800 7450 0    60   ~ 0
+Text Label 9600 2400 0    60   ~ 0
 AIN5
-Text Label 2800 7750 0    60   ~ 0
+Text Label 9600 2900 0    60   ~ 0
 GNDA_ADC
 Wire Wire Line
 	4450 1100 5200 1100
@@ -335,9 +335,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 4150 2800 4050
 Wire Wire Line
-	3150 4050 3150 4050
-Wire Wire Line
-	2800 4050 3200 4050
+	2800 4050 3450 4050
 Connection ~ 2150 4100
 Wire Wire Line
 	3200 4050 3200 4600
@@ -405,38 +403,12 @@ Wire Wire Line
 	3400 5950 3350 5950
 Wire Wire Line
 	3350 5950 3350 6850
-Wire Wire Line
-	2750 7650 3400 7650
-Wire Wire Line
-	2750 7550 3400 7550
-Wire Wire Line
-	2750 7450 3400 7450
-Wire Wire Line
-	2750 7750 3400 7750
-Wire Wire Line
-	2750 7350 3400 7350
 Text Label 2950 6850 0    60   ~ 0
 I2CCL
 Text Label 2850 5850 0    60   ~ 0
 I2CSD
 Text Label 2900 4700 0    60   ~ 0
 GP07
-$Comp
-L CONN_6 J9
-U 1 1 53A86BE5
-P 3750 7600
-F 0 "J9" V 3700 7600 60  0000 C CNN
-F 1 "CONN_6" V 3800 7600 60  0000 C CNN
-F 2 "PIN_ARRAY-6X1" H 3750 7250 60  0000 C CNN
-F 3 "" H 3750 7600 60  0000 C CNN
-	1    3750 7600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3300 7750 3300 7850
-Wire Wire Line
-	3300 7850 3400 7850
-Connection ~ 3300 7750
 $Comp
 L BEAGLEBONEBLACK BRD1
 U 4 1 53A89C03
@@ -455,11 +427,77 @@ I2C1_SCL
 Text GLabel 4450 3300 0    60   UnSpc ~ 0
 GND
 Text GLabel 4450 1300 0    60   UnSpc ~ 0
-VDD_5V
-Text Label 2800 7350 0    60   ~ 0
+VDD_5V-UF
+Text Label 9600 2300 0    60   ~ 0
 VDD_ADC
-Text GLabel 2750 7350 0    60   UnSpc ~ 0
+Text GLabel 9500 2300 0    60   UnSpc ~ 0
 VDD_ADC
-Text GLabel 2750 7750 0    60   UnSpc ~ 0
+Text GLabel 9500 2900 0    60   UnSpc ~ 0
 GNDA_ADC
+Text GLabel 4450 1400 0    60   UnSpc ~ 0
+SYS_5V
+Wire Wire Line
+	10300 3100 9500 3100
+Wire Wire Line
+	10200 3000 10300 3000
+Wire Wire Line
+	10200 2300 10200 3000
+Wire Wire Line
+	9500 2300 10300 2300
+Wire Wire Line
+	10300 2650 10200 2650
+Connection ~ 10200 2650
+Wire Wire Line
+	9500 2900 10300 2900
+Wire Wire Line
+	10100 2200 10100 2900
+Connection ~ 10100 2900
+Wire Wire Line
+	10300 2550 10100 2550
+Connection ~ 10100 2550
+Wire Wire Line
+	10300 2750 9500 2750
+Wire Wire Line
+	10300 2400 9500 2400
+$Comp
+L CONN_3 J9
+U 1 1 53AAC956
+P 10650 2300
+F 0 "J9" V 10600 2300 50  0000 C CNN
+F 1 "CONN_3" V 10700 2300 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 11100 2150 60  0000 C CNN
+F 3 "" H 10650 2300 60  0000 C CNN
+	1    10650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J13
+U 1 1 53AAC95C
+P 10650 2650
+F 0 "J13" V 10600 2650 50  0000 C CNN
+F 1 "CONN_3" V 10700 2650 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 11100 2500 60  0000 C CNN
+F 3 "" H 10650 2650 60  0000 C CNN
+	1    10650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 J14
+U 1 1 53AAC962
+P 10650 3000
+F 0 "J14" V 10600 3000 50  0000 C CNN
+F 1 "CONN_3" V 10700 3000 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 11150 2850 60  0000 C CNN
+F 3 "" H 10650 3000 60  0000 C CNN
+	1    10650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 2200 10100 2200
+Connection ~ 10200 2300
+Text GLabel 4450 2000 0    60   BiDi ~ 0
+I2C2_SDA
+Connection ~ 3200 4050
+Text GLabel 3450 4050 2    60   UnSpc ~ 0
+VDD_5V
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/06/2014 16:39:12
+EESchema Schematic File Version 2  date 25/06/2014 16:57:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
 Title "BeagleBone Cape Baseline"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/06/2014 16:39:12
+EESchema Schematic File Version 2  date 25/06/2014 16:57:40
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 6
 Title "BeagleBone Cape Baseline"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -173,5 +173,27 @@ F 2 "BEAGLEBONE" H 6100 1800 60  0000 C CNN
 F 3 "~" H 6100 1800 60  0000 C CNN
 	1    6300 3050
 	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 K?
+U 1 1 53AAE8B0
+P 2800 1850
+F 0 "K?" V 2750 1850 50  0000 C CNN
+F 1 "CONN_3" V 2850 1850 40  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 2850 1650 60  0000 C CNN
+F 3 "" H 2800 1850 60  0000 C CNN
+	1    2800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOSFET_N Q?
+U 1 1 53AB152C
+P 1900 1750
+F 0 "Q?" H 1910 1920 60  0000 R CNN
+F 1 "MOSFET_N" H 1910 1600 60  0000 R CNN
+F 2 "~" H 1900 1750 60  0000 C CNN
+F 3 "~" H 1900 1750 60  0000 C CNN
+	1    1900 1750
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
