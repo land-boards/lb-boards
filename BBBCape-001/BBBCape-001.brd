@@ -1,13 +1,12 @@
-PCBNEW-BOARD Version 2 date 24/06/2014 17:25:02
+PCBNEW-BOARD Version 2 date 6/25/2014 6:58:49 AM
 
-# Created by Pcbnew(2013-04-19 BZR 4011)-stable
+# Created by Pcbnew(2013-05-31 BZR 4019)-stable
 
 $GENERAL
 encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 11FF8001
-VisibleLayers 11FF8000
 Links 111
 NoConn 0
 Di 93.281499 44.494801 196.032135 107.759501
@@ -22,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title "Prototype cape for BeagleBone"
-Date "24 jun 2014"
+Date "25 jun 2014"
 Rev "0.3"
 Comp "Jacek Radzikowski <jacek.radzikowski@gmail.com>"
 Comment1 ""
@@ -63,7 +62,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 93.726 52.705
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer false) (linewidth 0) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin true) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk true) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory /home/jacek/devel/electronics/kicad/BeagleBone/Bed_of_Bones/FlyingBone/gerber/))
+PcbPlotParams (pcbplotparams (layerselection 284983297) (usegerberextensions true) (excludeedgelayer false) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin true) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue false) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk true) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory /home/jacek/devel/electronics/kicad/BeagleBone/Bed_of_Bones/FlyingBone/gerber/))
 $EndSETUP
 
 $EQUIPOT
@@ -2340,14 +2339,14 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE SM0805
 $MODULE PIN_ARRAY_4x1
-Po 136.144 71.628 900 15 53A86027 53A0C765 ~~
+Po 136.144 71.628 900 15 53AAAB67 53A0C765 ~~
 Li PIN_ARRAY_4x1
 Cd Double rangee de contacts 2 x 5 pins
 Kw CONN
 Sc 53A0C765
 AR /53A863C7/53A0C1D0
 Op 0 0 0
-T0 -4.1275 -2.413 1.016 1.016 1800 0.2032 N V 21 N "J6"
+T0 -6.35 0.254 1.016 1.016 1800 0.2032 N V 21 N "J6"
 T1 0 2.54 1.016 1.016 900 0.2032 N I 21 N "CONN_4"
 DS 5.08 1.27 -5.08 1.27 0.254 21
 DS 5.08 -1.27 -5.08 -1.27 0.254 21
