@@ -1,6 +1,6 @@
-update=26/06/2014 12:45:48
+update=26/06/2014 13:05:49
 version=1
-last_client=pcbnew
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -8,22 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=../lib
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=regul
-LibName6=memory
-LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/beagleboneblack
 [pcbnew]
 version=1
 LastNetListRead=BBBCape-001.net
@@ -58,3 +42,20 @@ LibName10=pga_sockets
 LibName11=valves
 LibName12=FlyingBone-footprints
 LibName13=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=../lib
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=transistors
+LibName4=conn
+LibName5=regul
+LibName6=memory
+LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/beagleboneblack
+LibName8=TXB0108

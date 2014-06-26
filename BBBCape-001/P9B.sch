@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 25/06/2014 16:57:40
+EESchema Schematic File Version 2  date 26/06/2014 11:29:44
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -13,7 +13,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 6 6
 Title "BeagleBone Cape Baseline"
-Date "25 jun 2014"
+Date "26 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -71,11 +71,11 @@ VDD_5V-UF
 Text Label 4500 1200 0    60   ~ 0
 VDD_3V3EXP
 Text Label 4500 1100 0    60   ~ 0
-DGND_9
+GND
 Text Label 4500 3200 0    60   ~ 0
-DGND_9_2
+GND
 Text Label 4500 3300 0    60   ~ 0
-DGND_9_2
+GND
 Text Label 4500 1500 0    60   ~ 0
 SYS_RESETn
 $Comp
