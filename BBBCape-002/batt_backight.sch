@@ -1,11 +1,10 @@
-EESchema Schematic File Version 2  date 26/06/2014 17:15:29
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
 LIBS:regul
 LIBS:memory
-LIBS:beagleboneblack
 LIBS:TXB0108
 LIBS:BBBCape-002-cache
 EELAYER 27 0
@@ -14,7 +13,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 4
 Title "BeagleBone Cape"
-Date "26 jun 2014"
+Date "27 jun 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
