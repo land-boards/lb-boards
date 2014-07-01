@@ -36,7 +36,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "16-CHANNEL DIGITAL I/O"
-Date "14 jun 2014"
+Date "28 jun 2014"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -269,7 +269,7 @@ U 1 1 5399A0BE
 P 4950 3500
 F 0 "U1" H 5100 4500 60  0000 C CNN
 F 1 "MCP23017P" H 5200 2150 60  0000 C CNN
-F 2 "DIP-28__300" H 4950 3500 60  0000 C CNN
+F 2 "DIP-28__300" H 5200 2050 60  0000 C CNN
 F 3 "~" H 4950 3500 60  0000 C CNN
 	1    4950 3500
 	1    0    0    -1  
