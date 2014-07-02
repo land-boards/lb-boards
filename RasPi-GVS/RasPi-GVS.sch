@@ -1,10 +1,8 @@
-EESchema Schematic File Version 2  date 01/07/2014 08:18:09
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:DougsSch
-LIBS:TXB0108
 LIBS:RasPi-GVS-cache
 EELAYER 27 0
 EELAYER END
@@ -12,7 +10,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "1 jul 2014"
+Date "2 jul 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -183,25 +181,25 @@ SDA1
 Text Label 1400 1550 0    60   ~ 0
 SCLK1
 Text Label 1400 1650 0    60   ~ 0
-GCLK
+IO_4
 Text Label 4000 1650 0    60   ~ 0
 TXD0
 Text Label 4000 1750 0    60   ~ 0
 RXD0
 Text Label 4000 1850 0    60   ~ 0
-GPGEN1
+IO_18
 Text Label 4000 2050 0    60   ~ 0
-GPGEN4
+IO_23
 Text Label 4000 2150 0    60   ~ 0
-GPGNE5
+IO_24
 Text Label 1400 1850 0    60   ~ 0
-GPGEN0
+IO_17
 Text Label 1400 1950 0    60   ~ 0
-GPGEN2
+IO_27
 Text Label 1400 2050 0    60   ~ 0
-GPGEN3
+IO_22
 Text Label 4000 2350 0    60   ~ 0
-GPGEN6
+IO_25
 Text Label 1400 2250 0    60   ~ 0
 SPIMOSI
 Text Label 1400 2350 0    60   ~ 0
@@ -217,13 +215,13 @@ TXD0
 Text Label 9400 6650 0    60   ~ 0
 RXD0
 Text Label 9400 6550 0    60   ~ 0
-GPGEN1
+IO_18
 Text Label 9400 6250 0    60   ~ 0
-GPGEN4
+IO_23
 Text Label 9400 3500 0    60   ~ 0
-GPGNE5
+IO_24
 Text Label 9400 3400 0    60   ~ 0
-GPGEN6
+IO_25
 Text Label 9400 3000 0    60   ~ 0
 SPICE0
 Text Label 9400 2900 0    60   ~ 0
@@ -234,12 +232,8 @@ Text Label 9400 6950 0    60   ~ 0
 SDA1
 Text Label 9400 6850 0    60   ~ 0
 SCLK1
-Text Label 9400 6450 0    60   ~ 0
-GPGEN0
-Text Label 9400 6350 0    60   ~ 0
-GPGEN2
 Text Label 9400 3600 0    60   ~ 0
-GPGEN3
+IO_22
 Text Label 9400 3300 0    60   ~ 0
 SPIMOSI
 Text Label 9400 3200 0    60   ~ 0
@@ -303,9 +297,9 @@ Wire Wire Line
 Wire Wire Line
 	1950 2550 2150 2550
 Wire Wire Line
-	3650 2850 1950 2850
+	1950 2850 3650 2850
 Wire Wire Line
-	3650 1550 3650 2850
+	3650 2850 3650 1550
 Wire Wire Line
 	3650 1550 3550 1550
 Connection ~ 1950 2550
@@ -372,15 +366,7 @@ Wire Wire Line
 Wire Wire Line
 	11550 3600 12300 3600
 Wire Wire Line
-	9950 7150 10050 7150
-Wire Wire Line
-	9950 2300 9950 7150
-Wire Wire Line
-	9950 3800 10050 3800
-Wire Wire Line
 	10050 6050 9950 6050
-Connection ~ 9950 6050
-Connection ~ 9950 3800
 Connection ~ 9950 2700
 Wire Wire Line
 	14700 2250 14600 2250
@@ -561,13 +547,13 @@ BTXD0
 Text Label 11700 6650 0    60   ~ 0
 BRXD0
 Text Label 11700 6550 0    60   ~ 0
-BGPGEN1
+BIO_18
 Text Label 11700 6250 0    60   ~ 0
-BGPGEN4
+BIO_23
 Text Label 11800 3500 0    60   ~ 0
-BGPGNE5
+BIO_24
 Text Label 11800 3400 0    60   ~ 0
-BGPGEN6
+BIO_25
 Text Label 11800 3000 0    60   ~ 0
 BSPICE0
 Text Label 11800 2900 0    60   ~ 0
@@ -577,11 +563,11 @@ BSDA1
 Text Label 11700 6850 0    60   ~ 0
 BSCLK1
 Text Label 11700 6450 0    60   ~ 0
-BGPGEN0
+BIO_17
 Text Label 11700 6350 0    60   ~ 0
-BGPGEN2
+BIO_27
 Text Label 11800 3600 0    60   ~ 0
-BGPGEN3
+BIO_22
 Text Label 11800 3300 0    60   ~ 0
 BSPIMOSI
 Text Label 11800 3200 0    60   ~ 0
@@ -819,4 +805,18 @@ Wire Wire Line
 Wire Wire Line
 	11950 4100 11650 4100
 Connection ~ 11650 4100
+Wire Wire Line
+	9950 6050 9950 2300
+Wire Wire Line
+	10050 3800 9300 3800
+Wire Wire Line
+	10050 7150 9300 7150
+Text Label 9400 3800 0    60   ~ 0
+IO_4
+Text Label 9400 7150 0    60   ~ 0
+IO_4
+Text Label 9400 6450 0    60   ~ 0
+IO_17
+Text Label 9400 6350 0    60   ~ 0
+IO_27
 $EndSCHEMATC

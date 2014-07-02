@@ -1,10 +1,8 @@
-EESchema Schematic File Version 2  date 01/07/2014 08:15:01
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:DougsSch
-LIBS:TXB0108
 LIBS:RasPi-GVS-cache
 EELAYER 27 0
 EELAYER END
@@ -12,7 +10,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "1 jul 2014"
+Date "2 jul 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -183,25 +181,25 @@ SDA1
 Text Label 1400 1550 0    60   ~ 0
 SCLK1
 Text Label 1400 1650 0    60   ~ 0
-GCLK
+IO_4
 Text Label 4000 1650 0    60   ~ 0
 TXD0
 Text Label 4000 1750 0    60   ~ 0
 RXD0
 Text Label 4000 1850 0    60   ~ 0
-GPGEN1
+IO_18
 Text Label 4000 2050 0    60   ~ 0
-GPGEN4
+IO_23
 Text Label 4000 2150 0    60   ~ 0
-GPGNE5
+IO_24
 Text Label 1400 1850 0    60   ~ 0
-GPGEN0
+IO17
 Text Label 1400 1950 0    60   ~ 0
-GPGEN2
+IO_27
 Text Label 1400 2050 0    60   ~ 0
-GPGEN3
+IO_22
 Text Label 4000 2350 0    60   ~ 0
-GPGEN6
+IO_25
 Text Label 1400 2250 0    60   ~ 0
 SPIMOSI
 Text Label 1400 2350 0    60   ~ 0
@@ -217,13 +215,13 @@ TXD0
 Text Label 9400 6650 0    60   ~ 0
 RXD0
 Text Label 9400 6550 0    60   ~ 0
-GPGEN1
+IO_18
 Text Label 9400 6250 0    60   ~ 0
-GPGEN4
+IO_23
 Text Label 9400 3500 0    60   ~ 0
-GPGNE5
+IO_24
 Text Label 9400 3400 0    60   ~ 0
-GPGEN6
+IO_25
 Text Label 9400 3000 0    60   ~ 0
 SPICE0
 Text Label 9400 2900 0    60   ~ 0
@@ -234,12 +232,8 @@ Text Label 9400 6950 0    60   ~ 0
 SDA1
 Text Label 9400 6850 0    60   ~ 0
 SCLK1
-Text Label 9400 6450 0    60   ~ 0
-GPGEN0
-Text Label 9400 6350 0    60   ~ 0
-GPGEN2
 Text Label 9400 3600 0    60   ~ 0
-GPGEN3
+IO_22
 Text Label 9400 3300 0    60   ~ 0
 SPIMOSI
 Text Label 9400 3200 0    60   ~ 0
@@ -249,9 +243,7 @@ SPISCK
 Text Label 11750 7150 0    60   ~ 0
 GND
 Wire Wire Line
-	1300 1350 2050 1350
-Wire Wire Line
-	2050 1350 2150 1350
+	1300 1350 2150 1350
 Connection ~ 2050 1350
 Wire Wire Line
 	2150 1550 1300 1550
@@ -288,9 +280,7 @@ Wire Wire Line
 Wire Wire Line
 	4400 2550 3550 2550
 Wire Wire Line
-	3550 1350 3650 1350
-Wire Wire Line
-	3650 1350 3850 1350
+	3550 1350 3850 1350
 Wire Wire Line
 	3550 1450 3650 1450
 Wire Wire Line
@@ -303,19 +293,13 @@ Wire Wire Line
 Wire Wire Line
 	2150 1750 1950 1750
 Wire Wire Line
-	1950 1750 1950 2550
-Wire Wire Line
-	1950 2550 1950 2850
+	1950 1750 1950 2850
 Wire Wire Line
 	1950 2550 2150 2550
 Wire Wire Line
 	1950 2850 3650 2850
 Wire Wire Line
-	3650 2850 3650 2250
-Wire Wire Line
-	3650 2250 3650 1950
-Wire Wire Line
-	3650 1950 3650 1550
+	3650 2850 3650 1550
 Wire Wire Line
 	3650 1550 3550 1550
 Connection ~ 1950 2550
@@ -382,50 +366,14 @@ Wire Wire Line
 Wire Wire Line
 	11550 3600 12300 3600
 Wire Wire Line
-	9950 7150 10050 7150
-Wire Wire Line
-	9950 2300 9950 2700
-Wire Wire Line
-	9950 2700 9950 3800
-Wire Wire Line
-	9950 3800 9950 5600
-Wire Wire Line
-	9950 5600 9950 6050
-Wire Wire Line
-	9950 6050 9950 7150
-Wire Wire Line
-	9950 3800 10050 3800
-Wire Wire Line
 	10050 6050 9950 6050
-Connection ~ 9950 6050
-Connection ~ 9950 3800
 Connection ~ 9950 2700
 Wire Wire Line
 	14700 2250 14600 2250
 Wire Wire Line
-	14600 2250 14600 3050
+	14600 2250 14600 8250
 Wire Wire Line
-	14600 3050 14600 3550
-Wire Wire Line
-	14600 3550 14600 3950
-Wire Wire Line
-	14600 3950 14600 4400
-Wire Wire Line
-	14600 4400 14600 5650
-Wire Wire Line
-	14600 5650 14600 6150
-Wire Wire Line
-	14600 6150 14600 6650
-Wire Wire Line
-	14600 6650 14600 7150
-Wire Wire Line
-	14600 7150 14600 7700
-Wire Wire Line
-	14600 7700 14600 8250
-Wire Wire Line
-	13750 8250 14600 8250
-Wire Wire Line
-	14600 8250 14700 8250
+	13750 8250 14700 8250
 Connection ~ 14600 8250
 Wire Wire Line
 	14700 7700 14600 7700
@@ -455,33 +403,11 @@ Wire Wire Line
 	14700 3050 14600 3050
 Connection ~ 14600 3050
 Wire Wire Line
-	11550 7150 11650 7150
+	11550 7150 12300 7150
 Wire Wire Line
-	11650 7150 12300 7150
+	13750 8150 14700 8150
 Wire Wire Line
-	13750 8150 14500 8150
-Wire Wire Line
-	14500 8150 14700 8150
-Wire Wire Line
-	14500 2150 14500 2950
-Wire Wire Line
-	14500 2950 14500 3450
-Wire Wire Line
-	14500 3450 14500 3850
-Wire Wire Line
-	14500 3850 14500 4300
-Wire Wire Line
-	14500 4300 14500 5550
-Wire Wire Line
-	14500 5550 14500 6050
-Wire Wire Line
-	14500 6050 14500 6550
-Wire Wire Line
-	14500 6550 14500 7050
-Wire Wire Line
-	14500 7050 14500 7600
-Wire Wire Line
-	14500 7600 14500 8150
+	14500 2150 14500 8150
 Wire Wire Line
 	14500 2150 14700 2150
 Wire Wire Line
@@ -533,15 +459,7 @@ Wire Wire Line
 Wire Wire Line
 	11550 3800 11650 3800
 Wire Wire Line
-	11650 2300 11650 3800
-Wire Wire Line
-	11650 3800 11650 4100
-Wire Wire Line
-	11650 4100 11650 4850
-Wire Wire Line
-	11650 4850 11650 5600
-Wire Wire Line
-	11650 5600 11650 7150
+	11650 2300 11650 7150
 Connection ~ 11650 7150
 Wire Wire Line
 	12300 2900 12300 1750
@@ -554,9 +472,7 @@ Wire Wire Line
 Wire Wire Line
 	12500 3100 11550 3100
 Wire Wire Line
-	12500 1850 12500 2650
-Wire Wire Line
-	12500 2650 12500 3100
+	12500 1850 12500 3100
 Wire Wire Line
 	12500 1850 14700 1850
 Wire Wire Line
@@ -565,9 +481,7 @@ Connection ~ 12500 2650
 Wire Wire Line
 	12600 3200 11550 3200
 Wire Wire Line
-	12600 1950 12600 2750
-Wire Wire Line
-	12600 2750 12600 3200
+	12600 1950 12600 3200
 Wire Wire Line
 	12600 1950 14700 1950
 Wire Wire Line
@@ -580,9 +494,7 @@ Wire Wire Line
 Wire Wire Line
 	14700 2850 12700 2850
 Wire Wire Line
-	12700 2050 12700 2850
-Wire Wire Line
-	12700 2850 12700 3300
+	12700 2050 12700 3300
 Connection ~ 12700 2850
 Wire Wire Line
 	12800 3350 12800 3400
@@ -613,15 +525,9 @@ GND
 Wire Wire Line
 	11750 6050 11550 6050
 Wire Wire Line
-	11750 2700 11750 4700
+	11750 2700 11750 6050
 Wire Wire Line
-	11750 4700 11750 5450
-Wire Wire Line
-	11750 5450 11750 6050
-Wire Wire Line
-	11550 2700 11750 2700
-Wire Wire Line
-	11750 2700 12200 2700
+	11550 2700 12200 2700
 Connection ~ 11750 2700
 Text Label 11800 2700 0    60   ~ 0
 GV5V
@@ -641,13 +547,13 @@ BTXD0
 Text Label 11700 6650 0    60   ~ 0
 BRXD0
 Text Label 11700 6550 0    60   ~ 0
-BGPGEN1
+BIO_18
 Text Label 11700 6250 0    60   ~ 0
-BGPGEN4
+BIO_23
 Text Label 11800 3500 0    60   ~ 0
-BGPGNE5
+BIO_24
 Text Label 11800 3400 0    60   ~ 0
-BGPGEN6
+BIO_25
 Text Label 11800 3000 0    60   ~ 0
 BSPICE0
 Text Label 11800 2900 0    60   ~ 0
@@ -657,11 +563,11 @@ BSDA1
 Text Label 11700 6850 0    60   ~ 0
 BSCLK1
 Text Label 11700 6450 0    60   ~ 0
-BGPGEN0
+BIO_17
 Text Label 11700 6350 0    60   ~ 0
-BGPGEN2
+BIO_27
 Text Label 11800 3600 0    60   ~ 0
-BGPGEN3
+BIO_22
 Text Label 11800 3300 0    60   ~ 0
 BSPIMOSI
 Text Label 11800 3200 0    60   ~ 0
@@ -684,28 +590,16 @@ Wire Wire Line
 Wire Wire Line
 	1500 4350 1700 4350
 Wire Wire Line
-	1700 4350 1700 4450
-Wire Wire Line
-	1700 4450 1700 4800
+	1700 4350 1700 4800
 Wire Wire Line
 	1700 4450 1500 4450
 Wire Wire Line
-	1700 4800 2500 4800
-Wire Wire Line
-	2500 4800 3250 4800
-Wire Wire Line
-	3250 4800 3650 4800
+	1700 4800 3650 4800
 Wire Wire Line
 	2500 4800 2500 4700
 Connection ~ 1700 4450
 Wire Wire Line
-	3100 4200 3150 4200
-Wire Wire Line
-	3150 4200 3250 4200
-Wire Wire Line
-	3250 4200 3650 4200
-Wire Wire Line
-	3650 4200 3850 4200
+	3100 4200 3850 4200
 Text Label 5000 4200 0    60   ~ 0
 VR5V
 $Comp
@@ -771,9 +665,7 @@ $EndComp
 Wire Wire Line
 	4350 1350 4800 1350
 Wire Wire Line
-	4350 4200 5350 4200
-Wire Wire Line
-	5350 4200 5400 4200
+	4350 4200 5400 4200
 Wire Wire Line
 	5400 4300 4900 4300
 Text Label 5000 4400 0    60   ~ 0
@@ -812,9 +704,7 @@ F 3 "~" H 10800 2300 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9300 2300 9950 2300
-Wire Wire Line
-	9950 2300 10600 2300
+	9300 2300 10600 2300
 Connection ~ 9950 2300
 Wire Wire Line
 	10050 2700 9950 2700
@@ -915,4 +805,18 @@ Wire Wire Line
 Wire Wire Line
 	11950 4100 11650 4100
 Connection ~ 11650 4100
+Wire Wire Line
+	9950 6050 9950 2300
+Wire Wire Line
+	10050 3800 9300 3800
+Wire Wire Line
+	10050 7150 9300 7150
+Text Label 9400 3800 0    60   ~ 0
+IO_4
+Text Label 9400 7150 0    60   ~ 0
+IO_4
+Text Label 9400 6450 0    60   ~ 0
+IO_17
+Text Label 9400 6350 0    60   ~ 0
+IO_27
 $EndSCHEMATC
