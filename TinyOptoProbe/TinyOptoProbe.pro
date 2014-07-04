@@ -1,4 +1,4 @@
-update=02/07/2014 11:38:10
+update=7/2/2014 8:01:48 PM
 version=1
 last_client=pcbnew
 [general]
@@ -11,7 +11,7 @@ EquName1=devcms
 [eeschema]
 version=1
 LibDir=
-NetFmtName=
+NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100
 RptLab=1
@@ -21,10 +21,11 @@ LibName1=conn
 LibName2=device
 LibName3=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName4=power
+LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=TinyOptoProbe.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=3.175000000000
 PadDrillOvalY=3.175000000000
 PadSizeH=6.350000000000
@@ -32,9 +33,9 @@ PadSizeV=6.350000000000
 PcbTextSizeV=2.032000000000
 PcbTextSizeH=1.524000000000
 PcbTextThickness=0.304800000000
-ModuleTextSizeV=1.524000000000
-ModuleTextSizeH=1.524000000000
-ModuleTextSizeThickness=0.304800000000
+ModuleTextSizeV=1.143000000000
+ModuleTextSizeH=1.143000000000
+ModuleTextSizeThickness=0.285750000000
 SolderMaskClearance=0.152400000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.381000000000
@@ -51,3 +52,4 @@ LibName6=libcms
 LibName7=dip_sockets
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName9=led
+LibName10=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
