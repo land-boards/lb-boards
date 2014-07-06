@@ -1,6 +1,7 @@
 EESchema Schematic File Version 2
 LIBS:powerint
 LIBS:power
+LIBS:conn
 LIBS:ATProgHead-cache
 EELAYER 27 0
 EELAYER END
@@ -8,7 +9,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "ATProgHead"
-Date "3 jul 2014"
+Date "5 jul 2014"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -106,10 +107,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 2650 2050 2950
 Wire Wire Line
-	1900 3050 2200 3050
-Wire Wire Line
 	1900 2950 1900 3100
-Connection ~ 1900 3050
 Wire Wire Line
 	4600 3650 5300 3650
 Wire Wire Line
@@ -125,12 +123,6 @@ F 3 "" H 3400 2650 60  0001 C CNN
 	1    3400 2650
 	1    0    0    -1  
 $EndComp
-Text Label 4850 3650 0    60   ~ 0
-MOSI
-Text Label 4850 3750 0    60   ~ 0
-MISO
-Text Label 4850 3850 0    60   ~ 0
-SCK
 $Comp
 L GND #PWR01
 U 1 1 52419036
@@ -213,19 +205,13 @@ Wire Wire Line
 Wire Wire Line
 	1350 5150 1900 5150
 Wire Wire Line
-	1350 5250 1900 5250
+	1350 5350 1900 5350
 Wire Wire Line
 	3250 5150 2700 5150
 Wire Wire Line
 	8300 1800 8300 1850
 Wire Wire Line
 	8250 3050 8250 3000
-Text Label 9000 2450 0    60   ~ 0
-SCK
-Text Label 9000 2550 0    60   ~ 0
-MISO
-Text Label 9000 2650 0    60   ~ 0
-MOSI
 $Comp
 L ATTINY85 U2
 U 1 1 52419088
@@ -238,13 +224,7 @@ F 3 "" H 8350 2800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 2450 9400 2450
-Wire Wire Line
-	8950 2550 9400 2550
-Wire Wire Line
-	8950 2650 9400 2650
-Wire Wire Line
-	7400 2400 7750 2400
+	7050 2400 7750 2400
 NoConn ~ 8950 2250
 NoConn ~ 8950 2350
 $Comp
@@ -262,24 +242,22 @@ Wire Wire Line
 	2700 5050 3250 5050
 Wire Wire Line
 	3250 5250 2700 5250
-Text Label 1450 5050 0    60   ~ 0
-MISO
-Text Label 1450 5150 0    60   ~ 0
-SCK
-Text Label 1450 5250 0    60   ~ 0
-RST
+Text Label 1400 5050 0    60   ~ 0
+MISO-D12
+Text Label 1400 5150 0    60   ~ 0
+SCK-D13
+Text Label 1400 5350 0    60   ~ 0
+RST-D10
 Text Label 2750 5050 0    60   ~ 0
 VCC
 Text Label 2750 5150 0    60   ~ 0
-MOSI
+MOSI-D11
 Text Label 2750 5250 0    60   ~ 0
 GND
 Wire Wire Line
 	8300 1800 7400 1800
 Text Label 7550 1800 0    60   ~ 0
 VCC
-Text Label 7450 2400 0    60   ~ 0
-RST
 Wire Wire Line
 	8250 3050 7400 3050
 Text Label 7450 3050 0    60   ~ 0
@@ -288,8 +266,6 @@ Text Label 1450 2950 0    60   ~ 0
 VCC
 Text Label 1450 3650 0    60   ~ 0
 GND
-Text Label 1700 1550 0    60   ~ 0
-RST
 Wire Wire Line
 	2700 5350 3300 5350
 Wire Wire Line
@@ -340,49 +316,49 @@ $EndComp
 $Comp
 L LED D1
 U 1 1 5241971B
-P 4250 5350
-F 0 "D1" H 4250 5450 50  0000 C CNN
-F 1 "LED" H 4250 5250 50  0000 C CNN
-F 2 "LED-5MM" H 4850 5350 60  0000 C CNN
-F 3 "~" H 4250 5350 60  0000 C CNN
-	1    4250 5350
+P 4500 5350
+F 0 "D1" H 4500 5450 50  0000 C CNN
+F 1 "LED" H 4500 5250 50  0000 C CNN
+F 2 "LED-5MM" H 5100 5350 60  0000 C CNN
+F 3 "~" H 4500 5350 60  0000 C CNN
+	1    4500 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D2
 U 1 1 5241972A
-P 4250 5600
-F 0 "D2" H 4250 5700 50  0000 C CNN
-F 1 "LED" H 4250 5500 50  0000 C CNN
-F 2 "LED-5MM" H 4850 5600 60  0000 C CNN
-F 3 "~" H 4250 5600 60  0000 C CNN
-	1    4250 5600
+P 4500 5600
+F 0 "D2" H 4500 5700 50  0000 C CNN
+F 1 "LED" H 4500 5500 50  0000 C CNN
+F 2 "LED-5MM" H 5100 5600 60  0000 C CNN
+F 3 "~" H 4500 5600 60  0000 C CNN
+	1    4500 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D3
 U 1 1 52419739
-P 4250 5850
-F 0 "D3" H 4250 5950 50  0000 C CNN
-F 1 "LED" H 4250 5750 50  0000 C CNN
-F 2 "LED-5MM" H 4850 5850 60  0000 C CNN
-F 3 "~" H 4250 5850 60  0000 C CNN
-	1    4250 5850
+P 4500 5850
+F 0 "D3" H 4500 5950 50  0000 C CNN
+F 1 "LED" H 4500 5750 50  0000 C CNN
+F 2 "LED-5MM" H 5100 5850 60  0000 C CNN
+F 3 "~" H 4500 5850 60  0000 C CNN
+	1    4500 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 5350 4050 5350
+	3800 5350 4300 5350
 Wire Wire Line
-	4050 5600 3800 5600
+	4300 5600 3800 5600
 Wire Wire Line
-	3800 5850 4050 5850
+	3800 5850 4300 5850
 Wire Wire Line
-	4600 5850 4450 5850
+	4850 5850 4700 5850
 Wire Wire Line
-	4600 5350 4600 6000
+	4850 5350 4850 6000
 Wire Wire Line
-	4450 5600 4600 5600
-Connection ~ 4600 5600
+	4700 5600 4850 5600
+Connection ~ 4850 5600
 Text Label 2750 5350 0    60   ~ 0
 PROG-D7
 Text Label 2750 5450 0    60   ~ 0
@@ -396,20 +372,80 @@ ER
 Text Label 3850 5850 0    60   ~ 0
 HB
 Wire Wire Line
-	4450 5350 4600 5350
-Connection ~ 4600 5850
+	4700 5350 4850 5350
+Connection ~ 4850 5850
 $Comp
 L GND #PWR04
 U 1 1 52655C88
-P 4600 6000
-F 0 "#PWR04" H 4600 6000 30  0001 C CNN
-F 1 "GND" H 4600 5930 30  0001 C CNN
-F 2 "" H 4600 6000 60  0000 C CNN
-F 3 "" H 4600 6000 60  0000 C CNN
-	1    4600 6000
+P 4850 6000
+F 0 "#PWR04" H 4850 6000 30  0001 C CNN
+F 1 "GND" H 4850 5930 30  0001 C CNN
+F 2 "" H 4850 6000 60  0000 C CNN
+F 3 "" H 4850 6000 60  0000 C CNN
+	1    4850 6000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1900 5350
 NoConn ~ 1900 5450
 NoConn ~ 1900 5550
+NoConn ~ 1900 5250
+Text Label 1650 1550 0    60   ~ 0
+RST-D10
+Text Label 4750 3750 0    60   ~ 0
+MISO-D12
+Text Label 4750 3650 0    60   ~ 0
+MOSI-D11
+Text Label 4750 3850 0    60   ~ 0
+SCK-D13
+Wire Wire Line
+	8950 2550 9650 2550
+Wire Wire Line
+	8950 2450 9650 2450
+Wire Wire Line
+	8950 2650 9650 2650
+Text Label 9100 2550 0    60   ~ 0
+MISO-D12
+Text Label 9100 2650 0    60   ~ 0
+MOSI-D11
+Text Label 9100 2450 0    60   ~ 0
+SCK-D13
+Text Label 7200 2400 0    60   ~ 0
+RST-D10
+$Comp
+L CONN_3X2 H2
+U 1 1 53B81B03
+P 2300 6650
+F 0 "H2" H 2300 6900 50  0000 C CNN
+F 1 "CONN_3X2" V 2300 6700 40  0000 C CNN
+F 2 "pin_array_3x2" H 2300 6500 60  0000 C CNN
+F 3 "" H 2300 6650 60  0000 C CNN
+	1    2300 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6500 1350 6500
+Wire Wire Line
+	1350 6600 1900 6600
+Wire Wire Line
+	1350 6700 1900 6700
+Text Label 1400 6500 0    60   ~ 0
+MISO-D12
+Text Label 1400 6600 0    60   ~ 0
+SCK-D13
+Text Label 1400 6700 0    60   ~ 0
+RST-D10
+Wire Wire Line
+	3250 6600 2700 6600
+Wire Wire Line
+	2700 6500 3250 6500
+Wire Wire Line
+	3250 6700 2700 6700
+Text Label 2750 6500 0    60   ~ 0
+VCC
+Text Label 2750 6600 0    60   ~ 0
+MOSI-D11
+Text Label 2750 6700 0    60   ~ 0
+GND
+Wire Wire Line
+	2200 3050 1900 3050
+Connection ~ 1900 3050
 $EndSCHEMATC

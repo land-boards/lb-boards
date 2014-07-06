@@ -1,6 +1,6 @@
-update=30/06/2014 14:45:32
+update=7/5/2014 4:19:05 PM
 version=1
-last_client=cvpcb
+last_client=pcbnew
 [general]
 version=1
 [eeschema]
@@ -18,9 +18,14 @@ LibName3=conn
 LibName4=atmel
 LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/TXB0108
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=RasPiDB002.net
+LastNetListRead=
 UseCmpFile=1
 PadDrill=0.600000000000
 PadDrillOvalY=0.600000000000
@@ -38,6 +43,7 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
+LibDir=
 LibName1=connect
 LibName2=discret
 LibName3=pin_array
@@ -50,9 +56,3 @@ LibName9=libcms
 LibName10=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName11=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/sog20
 LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-LibDir=
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms

@@ -1,4 +1,4 @@
-update=7/3/2014 11:41:37 AM
+update=7/5/2014 11:32:53 AM
 version=1
 last_client=eeschema
 [cvpcb]
@@ -48,3 +48,4 @@ LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 LibName2=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/resonator_3pins
 LibName3=powerint
 LibName4=power
+LibName5=conn
