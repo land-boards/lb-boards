@@ -1,7 +1,6 @@
-EESchema Schematic File Version 2  date 26/03/2014 12:31:27
+EESchema Schematic File Version 2  date 08/07/2014 17:22:47
 LIBS:power
 LIBS:device
-LIBS:DougsSch
 LIBS:conn
 LIBS:OneWireLogger-cache
 EELAYER 27 0
@@ -10,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "One Wire Logger"
-Date "26 mar 2014"
+Date "8 jul 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -41,10 +40,10 @@ F 0 "R3" V 4980 2950 50  0000 C CNN
 F 1 "1M" V 4900 2950 50  0000 C CNN
 F 2 "SM0805" V 4800 2950 60  0000 C CNN
 F 3 "~" H 4900 2950 60  0000 C CNN
-F 4 "Bourns" H 4900 2950 60  0001 C CNN "Mfg"
-F 5 "CR0805-JW-105ELF" H 4900 2950 60  0001 C CNN "MfgPN"
+F 4 "Vishay" H 4900 2950 60  0001 C CNN "Mfg"
+F 5 "CRCW08051M00FKEA" H 4900 2950 60  0001 C CNN "MfgPN"
 F 6 "Mouser" H 4900 2950 60  0001 C CNN "Vendor"
-F 7 "652-CR0805JW-105ELF" H 4900 2950 60  0001 C CNN "VendorPN"
+F 7 "71-CRCW0805-1.0M-E3" H 4900 2950 60  0001 C CNN "VendorPN"
 	1    4900 2950
 	0    -1   -1   0   
 $EndComp
@@ -173,10 +172,10 @@ F 0 "R2" V 7180 3250 50  0000 C CNN
 F 1 "1K" V 7100 3250 50  0000 C CNN
 F 2 "SM0805" V 7050 3250 60  0000 C CNN
 F 3 "~" H 7100 3250 60  0000 C CNN
-F 4 "Bourns" H 7100 3250 60  0001 C CNN "Mfg"
-F 5 "CR0805-JW-102ELF" H 7100 3250 60  0001 C CNN "MfgPN"
+F 4 "Vishay" H 7100 3250 60  0001 C CNN "Mfg"
+F 5 "CRCW08051K00JNEA" H 7100 3250 60  0001 C CNN "MfgPN"
 F 6 "Mouser" H 7100 3250 60  0001 C CNN "Vendor"
-F 7 "652-CR0805JW-102ELF" H 7100 3250 60  0001 C CNN "VendorPN"
+F 7 "71-CRCW0805J-1K-E3" H 7100 3250 60  0001 C CNN "VendorPN"
 	1    7100 3250
 	1    0    0    -1  
 $EndComp

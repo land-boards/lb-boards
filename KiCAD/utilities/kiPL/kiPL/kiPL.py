@@ -81,6 +81,7 @@ outRow.append('VendorPN')
 outCSVFile.writerow(outRow)
 
 progState = LOOKING_FOR_DESIGN
+outCSVList = []
 for inLine in inFile:
 #  print progState
   inLine = inLine.strip('\n\r')
@@ -136,22 +137,6 @@ for inLine in inFile:
 #          print 'vendor started and ended with a double quote'
           vendor = vendor[1:-1]
     if (string.find(inLine,"))",0) != -1):
-      '''
-      outputString = refDes
-      outputString += ','
-      outputString += value
-      outputString += ','
-      outputString += footprint
-      outputString += ','
-      outputString += mfg
-      outputString += ','
-      outputString += mfgPN
-      outputString += ','
-      outputString += vendor
-      outputString += ','
-      outputString += vendorPN
-      print outputString
-      '''
       outRow = []
       outRow.append(refDes)
       outRow.append(value)
@@ -160,8 +145,12 @@ for inLine in inFile:
       outRow.append(mfgPN)
       outRow.append(vendor)
       outRow.append(vendorPN)
-      outCSVFile.writerow(outRow)
+      outCSVList.append(outRow)
       progState = LOOKING_FOR_COMP
   elif progState == GOT_LIBPARTS:
+    outCSVList = sorted(outCSVList, key = lambda errs: errs[0])		# sort by Ref Des
+    outCSVList = sorted(outCSVList, key = lambda errs: errs[1])		# sort by Sort by part number
+    outCSVList = sorted(outCSVList, key = lambda errs: errs[0][0])		# sort by Sort by part number
+    outCSVFile.writerows(outCSVList)
     print 'Completed'
     exit()
