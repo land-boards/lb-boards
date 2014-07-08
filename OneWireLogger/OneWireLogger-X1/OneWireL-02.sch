@@ -1,7 +1,6 @@
-EESchema Schematic File Version 2  date 28/08/2013 13:19:36
+EESchema Schematic File Version 2  date 08/07/2014 14:45:51
 LIBS:power
 LIBS:device
-LIBS:DougsSch
 LIBS:cmos4000
 LIBS:cmos_ieee
 LIBS:OneWireLogger-cache
@@ -11,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "One Wire Logger"
-Date "10 jul 2013"
+Date "8 jul 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -24,7 +23,7 @@ L LMR62014 U1
 U 1 1 517C7898
 P 6050 2800
 F 0 "U1" H 6250 3200 60  0000 C CNN
-F 1 "LMR62014" H 6350 2350 60  0000 C CNN
+F 1 "LMR62014XMFE" H 6400 2350 60  0000 C CNN
 F 2 "SOT23-5" H 6050 2800 60  0000 C CNN
 F 3 "~" H 6050 2800 60  0000 C CNN
 F 4 "TI" H 6050 2800 60  0001 C CNN "Mfg"
