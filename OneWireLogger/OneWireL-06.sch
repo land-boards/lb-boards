@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date 08/07/2014 17:22:47
+EESchema Schematic File Version 2  date 09/07/2014 16:44:01
 LIBS:power
 LIBS:device
-LIBS:conn
+LIBS:DougsSch
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title ""
-Date "8 jul 2014"
+Date "9 jul 2014"
 Rev ""
 Comp ""
 Comment1 ""

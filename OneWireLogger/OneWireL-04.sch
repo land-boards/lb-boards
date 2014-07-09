@@ -1,7 +1,7 @@
-EESchema Schematic File Version 2  date 08/07/2014 17:22:47
+EESchema Schematic File Version 2  date 09/07/2014 16:44:01
 LIBS:power
 LIBS:device
-LIBS:conn
+LIBS:DougsSch
 LIBS:OneWireLogger-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +9,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "One Wire Logger"
-Date "8 jul 2014"
+Date "9 jul 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -114,7 +114,7 @@ F 1 "CONN_3" V 5800 2700 40  0000 C CNN
 F 2 "PIN_ARRAY_3X1" H 5750 2500 60  0000 C CNN
 F 3 "~" H 5750 2700 60  0000 C CNN
 	1    5750 2700
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5100 2700 5400 2700
