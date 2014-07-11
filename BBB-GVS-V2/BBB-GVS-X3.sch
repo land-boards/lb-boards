@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 11/07/2014 15:55:27
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -8,7 +8,7 @@ EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 4
+Sheet 1 3
 Title "BeagleBone Cape Baseline"
 Date "11 jul 2014"
 Rev "X1"
@@ -29,11 +29,5 @@ S 2450 950  1200 1000
 U 4EB0F8C5
 F0 "P8 Connector" 60
 F1 "P8.sch" 60
-$EndSheet
-$Sheet
-S 1000 950  950  950 
-U 4EB0F8A6
-F0 "Battery/Backlight" 60
-F1 "batt_backight.sch" 60
 $EndSheet
 $EndSCHEMATC
