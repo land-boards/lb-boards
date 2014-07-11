@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 7/10/2014 11:04:32 PM
+PCBNEW-BOARD Version 2 date 7/11/2014 7:36:17 AM
 
 # Created by Pcbnew(2013-05-31 BZR 4019)-stable
 
@@ -8,15 +8,15 @@ Units mm
 LayerCount 2
 EnabledLayers 11FF8001
 VisibleLayers 01FF8001
-Links 187
-NoConn 0
+Links 193
+NoConn 13
 Di 88.994344 44.494801 196.032135 107.759501
-Ndraw 63
-Ntrack 432
+Ndraw 55
+Ntrack 439
 Nzone 0
 BoardThickness 1.6002
-Nmodule 65
-Nnets 71
+Nmodule 57
+Nnets 87
 $EndGENERAL
 
 $SHEETDESCR
@@ -103,251 +103,315 @@ Na 8 "/P8 Connector/EHRPWM2B"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 9 "/P8 Connector/GPIO0_27"
+Na 9 "/P8 Connector/GPIO0_26"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 10 "/P8 Connector/GPIO1_15"
+Na 10 "/P8 Connector/GPIO0_27"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 11 "/P8 Connector/GPIO1_29"
+Na 11 "/P8 Connector/GPIO1_12"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 12 "/P8 Connector/GPIO2_1"
+Na 12 "/P8 Connector/GPIO1_13"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 13 "/P8 Connector/TIM4"
+Na 13 "/P8 Connector/GPIO1_14"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 14 "/P8 Connector/TIMER4"
+Na 14 "/P8 Connector/GPIO1_15"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 15 "/P8 Connector/TIMER5"
+Na 15 "/P8 Connector/GPIO1_29"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 16 "/P8 Connector/TIMER6"
+Na 16 "/P8 Connector/GPIO2_1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 17 "/P8 Connector/TIMER7"
+Na 17 "/P8 Connector/TIM4"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 18 "/P9 Connector/A0"
+Na 18 "/P8 Connector/TIMER4"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 19 "/P9 Connector/A1"
+Na 19 "/P8 Connector/TIMER5"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 20 "/P9 Connector/A2"
+Na 20 "/P8 Connector/TIMER6"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 21 "/P9 Connector/AIN0"
+Na 21 "/P8 Connector/TIMER7"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 22 "/P9 Connector/AIN2"
+Na 22 "/P8 Connector/VDD_3V3EXP"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 23 "/P9 Connector/AIN4"
+Na 23 "/P9 Connector/A0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 24 "/P9 Connector/AIN6"
+Na 24 "/P9 Connector/A1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 25 "/P9 Connector/GNDA_ADC"
+Na 25 "/P9 Connector/A2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 26 "/P9 Connector/GP116"
+Na 26 "/P9 Connector/AIN0"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 27 "/P9 Connector/GP1_17"
+Na 27 "/P9 Connector/AIN1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 28 "/P9 Connector/GP1_28"
+Na 28 "/P9 Connector/AIN2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 29 "/P9 Connector/GPIO1_16"
+Na 29 "/P9 Connector/AIN3"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 30 "/P9 Connector/GPIO1_17"
+Na 30 "/P9 Connector/AIN4"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 31 "/P9 Connector/I2C1CL"
+Na 31 "/P9 Connector/AIN5"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 32 "/P9 Connector/I2C1SD"
+Na 32 "/P9 Connector/AIN6"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 33 "/P9 Connector/I2C1_SCL"
+Na 33 "/P9 Connector/GNDA_ADC"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 34 "/P9 Connector/I2C2_SCL"
+Na 34 "/P9 Connector/GP116"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 35 "/P9 Connector/I2C2_SDA"
+Na 35 "/P9 Connector/GP1_17"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 36 "/P9 Connector/SP1DI"
+Na 36 "/P9 Connector/GP1_28"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 37 "/P9 Connector/U1RX"
+Na 37 "/P9 Connector/GPIO1_16"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 38 "/P9 Connector/U1TX"
+Na 38 "/P9 Connector/GPIO1_17"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 39 "/P9 Connector/U2RX"
+Na 39 "/P9 Connector/GPIO1_28"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 40 "/P9 Connector/U2TX"
+Na 40 "/P9 Connector/GPIO3_19"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 41 "/P9 Connector/U4RX"
+Na 41 "/P9 Connector/I2C1CL"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 42 "/P9 Connector/U4TX"
+Na 42 "/P9 Connector/I2C1SD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 43 "/P9 Connector/UART2_TXD"
+Na 43 "/P9 Connector/I2C1_SCL"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 44 "/P9 Connector/UART4_RXD"
+Na 44 "/P9 Connector/I2C1_SDA"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 45 "/P9 Connector/UART4_TXD"
+Na 45 "/P9 Connector/I2C2_SCL"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 46 "/P9 Connector/VDD_ADC"
+Na 46 "/P9 Connector/I2C2_SDA"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 47 "GND"
+Na 47 "/P9 Connector/SP1DI"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 48 "N-0000011"
+Na 48 "/P9 Connector/SPI1_D1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 49 "N-0000012"
+Na 49 "/P9 Connector/SYS_5V"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 50 "N-00000122"
+Na 50 "/P9 Connector/U1RX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 51 "N-0000013"
+Na 51 "/P9 Connector/U1TX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 52 "N-0000014"
+Na 52 "/P9 Connector/U2RX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 53 "N-00000146"
+Na 53 "/P9 Connector/U2TX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 54 "N-0000015"
+Na 54 "/P9 Connector/U4RX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 55 "N-0000016"
+Na 55 "/P9 Connector/U4TX"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 56 "N-0000017"
+Na 56 "/P9 Connector/UART1_RXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 57 "N-0000019"
+Na 57 "/P9 Connector/UART1_TXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 58 "N-0000058"
+Na 58 "/P9 Connector/UART2_RXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 59 "N-0000066"
+Na 59 "/P9 Connector/UART2_TXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 60 "N-0000069"
+Na 60 "/P9 Connector/UART4_RXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 61 "N-0000071"
+Na 61 "/P9 Connector/UART4_TXD"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 62 "N-0000072"
+Na 62 "/P9 Connector/VDD_ADC"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 63 "N-0000073"
+Na 63 "GND"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 64 "N-0000084"
+Na 64 "N-00000105"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 65 "N-0000092"
+Na 65 "N-00000106"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 66 "N-0000093"
+Na 66 "N-00000107"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 67 "N-0000094"
+Na 67 "N-0000011"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 68 "VDD_3V3EXP"
+Na 68 "N-0000012"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 69 "VDD_5V"
+Na 69 "N-0000013"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 70 "VDD_5V-UF"
+Na 70 "N-0000014"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 71 "N-0000015"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 72 "N-0000016"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 73 "N-0000017"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 74 "N-0000019"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 75 "N-0000020"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 76 "N-0000057"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 77 "N-0000058"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 78 "N-0000059"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 79 "N-0000061"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 80 "N-0000070"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 81 "N-0000071"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 82 "N-0000076"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 83 "N-0000078"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 84 "VDD_3V3EXP"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 85 "VDD_5V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 86 "VDD_5V-UF"
 St ~
 $EndEQUIPOT
 $NCLASS
@@ -368,7 +432,11 @@ AddNet "/Battery/Backlight/BL_SINK"
 AddNet "/Battery/Backlight/BL_SINK2"
 AddNet "/P8 Connector/EHRPWM2A"
 AddNet "/P8 Connector/EHRPWM2B"
+AddNet "/P8 Connector/GPIO0_26"
 AddNet "/P8 Connector/GPIO0_27"
+AddNet "/P8 Connector/GPIO1_12"
+AddNet "/P8 Connector/GPIO1_13"
+AddNet "/P8 Connector/GPIO1_14"
 AddNet "/P8 Connector/GPIO1_15"
 AddNet "/P8 Connector/GPIO1_29"
 AddNet "/P8 Connector/GPIO2_1"
@@ -377,12 +445,16 @@ AddNet "/P8 Connector/TIMER4"
 AddNet "/P8 Connector/TIMER5"
 AddNet "/P8 Connector/TIMER6"
 AddNet "/P8 Connector/TIMER7"
+AddNet "/P8 Connector/VDD_3V3EXP"
 AddNet "/P9 Connector/A0"
 AddNet "/P9 Connector/A1"
 AddNet "/P9 Connector/A2"
 AddNet "/P9 Connector/AIN0"
+AddNet "/P9 Connector/AIN1"
 AddNet "/P9 Connector/AIN2"
+AddNet "/P9 Connector/AIN3"
 AddNet "/P9 Connector/AIN4"
+AddNet "/P9 Connector/AIN5"
 AddNet "/P9 Connector/AIN6"
 AddNet "/P9 Connector/GNDA_ADC"
 AddNet "/P9 Connector/GP116"
@@ -390,42 +462,50 @@ AddNet "/P9 Connector/GP1_17"
 AddNet "/P9 Connector/GP1_28"
 AddNet "/P9 Connector/GPIO1_16"
 AddNet "/P9 Connector/GPIO1_17"
+AddNet "/P9 Connector/GPIO1_28"
+AddNet "/P9 Connector/GPIO3_19"
 AddNet "/P9 Connector/I2C1CL"
 AddNet "/P9 Connector/I2C1SD"
 AddNet "/P9 Connector/I2C1_SCL"
+AddNet "/P9 Connector/I2C1_SDA"
 AddNet "/P9 Connector/I2C2_SCL"
 AddNet "/P9 Connector/I2C2_SDA"
 AddNet "/P9 Connector/SP1DI"
+AddNet "/P9 Connector/SPI1_D1"
+AddNet "/P9 Connector/SYS_5V"
 AddNet "/P9 Connector/U1RX"
 AddNet "/P9 Connector/U1TX"
 AddNet "/P9 Connector/U2RX"
 AddNet "/P9 Connector/U2TX"
 AddNet "/P9 Connector/U4RX"
 AddNet "/P9 Connector/U4TX"
+AddNet "/P9 Connector/UART1_RXD"
+AddNet "/P9 Connector/UART1_TXD"
+AddNet "/P9 Connector/UART2_RXD"
 AddNet "/P9 Connector/UART2_TXD"
 AddNet "/P9 Connector/UART4_RXD"
 AddNet "/P9 Connector/UART4_TXD"
 AddNet "/P9 Connector/VDD_ADC"
+AddNet "N-00000105"
+AddNet "N-00000106"
+AddNet "N-00000107"
 AddNet "N-0000011"
 AddNet "N-0000012"
-AddNet "N-00000122"
 AddNet "N-0000013"
 AddNet "N-0000014"
-AddNet "N-00000146"
 AddNet "N-0000015"
 AddNet "N-0000016"
 AddNet "N-0000017"
 AddNet "N-0000019"
+AddNet "N-0000020"
+AddNet "N-0000057"
 AddNet "N-0000058"
-AddNet "N-0000066"
-AddNet "N-0000069"
+AddNet "N-0000059"
+AddNet "N-0000061"
+AddNet "N-0000070"
 AddNet "N-0000071"
-AddNet "N-0000072"
-AddNet "N-0000073"
-AddNet "N-0000084"
-AddNet "N-0000092"
-AddNet "N-0000093"
-AddNet "N-0000094"
+AddNet "N-0000076"
+AddNet "N-0000078"
 AddNet "VDD_3V3EXP"
 AddNet "VDD_5V"
 AddNet "VDD_5V-UF"
@@ -464,140 +544,140 @@ $PAD
 Sh "11" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 2.95 -2.8
 $EndPAD
 $PAD
 Sh "12" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "N-0000084"
+Ne 72 "N-0000016"
 Po 2.275 -2.8
 $EndPAD
 $PAD
 Sh "13" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 48 "N-0000011"
+Ne 73 "N-0000017"
 Po 1.625 -2.8
 $EndPAD
 $PAD
 Sh "14" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 49 "N-0000012"
+Ne 69 "N-0000013"
 Po 0.975 -2.8
 $EndPAD
 $PAD
 Sh "15" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "N-0000017"
+Ne 68 "N-0000012"
 Po 0.325 -2.8
 $EndPAD
 $PAD
 Sh "16" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "N-0000013"
+Ne 67 "N-0000011"
 Po -0.325 -2.8
 $EndPAD
 $PAD
 Sh "17" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 52 "N-0000014"
+Ne 71 "N-0000015"
 Po -0.975 -2.8
 $EndPAD
 $PAD
 Sh "18" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 57 "N-0000019"
+Ne 70 "N-0000014"
 Po -1.625 -2.8
 $EndPAD
 $PAD
 Sh "19" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -2.275 -2.8
 $EndPAD
 $PAD
 Sh "20" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 54 "N-0000015"
+Ne 74 "N-0000019"
 Po -2.925 -2.8
 $EndPAD
 $PAD
 Sh "1" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 15 "/P8 Connector/GPIO1_29"
 Po -2.925 2.8
 $EndPAD
 $PAD
 Sh "2" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 22 "/P8 Connector/VDD_3V3EXP"
 Po -2.275 2.8
 $EndPAD
 $PAD
 Sh "3" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 7 "/P8 Connector/EHRPWM2A"
 Po -1.625 2.8
 $EndPAD
 $PAD
 Sh "4" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 7 "/P8 Connector/EHRPWM2A"
+Ne 16 "/P8 Connector/GPIO2_1"
 Po -0.975 2.8
 $EndPAD
 $PAD
 Sh "5" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 10 "/P8 Connector/GPIO0_27"
 Po -0.325 2.8
 $EndPAD
 $PAD
 Sh "6" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 9 "/P8 Connector/GPIO0_27"
+Ne 13 "/P8 Connector/GPIO1_14"
 Po 0.325 2.8
 $EndPAD
 $PAD
 Sh "7" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 12 "/P8 Connector/GPIO2_1"
+Ne 14 "/P8 Connector/GPIO1_15"
 Po 0.975 2.8
 $EndPAD
 $PAD
 Sh "8" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 10 "/P8 Connector/GPIO1_15"
+Ne 0 ""
 Po 1.625 2.8
 $EndPAD
 $PAD
 Sh "9" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 8 "/P8 Connector/EHRPWM2B"
+Ne 0 ""
 Po 2.275 2.8
 $EndPAD
 $PAD
 Sh "10" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 22 "/P8 Connector/VDD_3V3EXP"
 Po 2.925 2.8
 $EndPAD
 $SHAPE3D
@@ -630,112 +710,112 @@ $PAD
 Sh "11" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 2.95 -2.8
 $EndPAD
 $PAD
 Sh "12" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "N-00000122"
+Ne 66 "N-00000107"
 Po 2.275 -2.8
 $EndPAD
 $PAD
 Sh "13" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 36 "/P9 Connector/SP1DI"
+Ne 65 "N-00000106"
 Po 1.625 -2.8
 $EndPAD
 $PAD
 Sh "14" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 67 "N-0000094"
+Ne 64 "N-00000105"
 Po 0.975 -2.8
 $EndPAD
 $PAD
 Sh "15" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 66 "N-0000093"
+Ne 47 "/P9 Connector/SP1DI"
 Po 0.325 -2.8
 $EndPAD
 $PAD
 Sh "16" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/P9 Connector/U1RX"
+Ne 83 "N-0000078"
 Po -0.325 -2.8
 $EndPAD
 $PAD
 Sh "17" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "N-0000092"
+Ne 50 "/P9 Connector/U1RX"
 Po -0.975 -2.8
 $EndPAD
 $PAD
 Sh "18" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 38 "/P9 Connector/U1TX"
+Ne 51 "/P9 Connector/U1TX"
 Po -1.625 -2.8
 $EndPAD
 $PAD
 Sh "19" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -2.275 -2.8
 $EndPAD
 $PAD
 Sh "20" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/P9 Connector/GP1_17"
+Ne 35 "/P9 Connector/GP1_17"
 Po -2.925 -2.8
 $EndPAD
 $PAD
 Sh "1" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/P9 Connector/GPIO1_17"
+Ne 38 "/P9 Connector/GPIO1_17"
 Po -2.925 2.8
 $EndPAD
 $PAD
 Sh "2" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -2.275 2.8
 $EndPAD
 $PAD
 Sh "3" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 57 "/P9 Connector/UART1_TXD"
 Po -1.625 2.8
 $EndPAD
 $PAD
 Sh "4" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 56 "/P9 Connector/UART1_RXD"
 Po -0.975 2.8
 $EndPAD
 $PAD
 Sh "5" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 40 "/P9 Connector/GPIO3_19"
 Po -0.325 2.8
 $EndPAD
 $PAD
 Sh "6" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 48 "/P9 Connector/SPI1_D1"
 Po 0.325 2.8
 $EndPAD
 $PAD
@@ -763,7 +843,7 @@ $PAD
 Sh "10" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po 2.925 2.8
 $EndPAD
 $SHAPE3D
@@ -796,140 +876,140 @@ $PAD
 Sh "11" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 2.95 -2.8
 $EndPAD
 $PAD
 Sh "12" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 40 "/P9 Connector/U2TX"
+Ne 53 "/P9 Connector/U2TX"
 Po 2.275 -2.8
 $EndPAD
 $PAD
 Sh "13" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 39 "/P9 Connector/U2RX"
+Ne 52 "/P9 Connector/U2RX"
 Po 1.625 -2.8
 $EndPAD
 $PAD
 Sh "14" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 32 "/P9 Connector/I2C1SD"
+Ne 42 "/P9 Connector/I2C1SD"
 Po 0.975 -2.8
 $EndPAD
 $PAD
 Sh "15" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 31 "/P9 Connector/I2C1CL"
+Ne 41 "/P9 Connector/I2C1CL"
 Po 0.325 -2.8
 $EndPAD
 $PAD
 Sh "16" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/P9 Connector/GP116"
+Ne 34 "/P9 Connector/GP116"
 Po -0.325 -2.8
 $EndPAD
 $PAD
 Sh "17" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 42 "/P9 Connector/U4TX"
+Ne 55 "/P9 Connector/U4TX"
 Po -0.975 -2.8
 $EndPAD
 $PAD
 Sh "18" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/P9 Connector/GP1_28"
+Ne 36 "/P9 Connector/GP1_28"
 Po -1.625 -2.8
 $EndPAD
 $PAD
 Sh "19" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -2.275 -2.8
 $EndPAD
 $PAD
 Sh "20" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 41 "/P9 Connector/U4RX"
+Ne 54 "/P9 Connector/U4RX"
 Po -2.925 -2.8
 $EndPAD
 $PAD
 Sh "1" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 44 "/P9 Connector/UART4_RXD"
+Ne 60 "/P9 Connector/UART4_RXD"
 Po -2.925 2.8
 $EndPAD
 $PAD
 Sh "2" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -2.275 2.8
 $EndPAD
 $PAD
 Sh "3" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 39 "/P9 Connector/GPIO1_28"
 Po -1.625 2.8
 $EndPAD
 $PAD
 Sh "4" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 45 "/P9 Connector/UART4_TXD"
+Ne 61 "/P9 Connector/UART4_TXD"
 Po -0.975 2.8
 $EndPAD
 $PAD
 Sh "5" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/P9 Connector/GPIO1_16"
+Ne 37 "/P9 Connector/GPIO1_16"
 Po -0.325 2.8
 $EndPAD
 $PAD
 Sh "6" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 33 "/P9 Connector/I2C1_SCL"
+Ne 43 "/P9 Connector/I2C1_SCL"
 Po 0.325 2.8
 $EndPAD
 $PAD
 Sh "7" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 44 "/P9 Connector/I2C1_SDA"
 Po 0.975 2.8
 $EndPAD
 $PAD
 Sh "8" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 58 "/P9 Connector/UART2_RXD"
 Po 1.625 2.8
 $EndPAD
 $PAD
 Sh "9" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 43 "/P9 Connector/UART2_TXD"
+Ne 59 "/P9 Connector/UART2_TXD"
 Po 2.275 2.8
 $EndPAD
 $PAD
 Sh "10" R 0.25 1.55 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po 2.925 2.8
 $EndPAD
 $SHAPE3D
@@ -962,140 +1042,140 @@ $PAD
 Sh "11" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 2.95 -2.8
 $EndPAD
 $PAD
 Sh "12" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "N-0000016"
+Ne 79 "N-0000061"
 Po 2.275 -2.8
 $EndPAD
 $PAD
 Sh "13" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 58 "N-0000058"
+Ne 81 "N-0000071"
 Po 1.625 -2.8
 $EndPAD
 $PAD
 Sh "14" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "N-0000069"
+Ne 78 "N-0000059"
 Po 0.975 -2.8
 $EndPAD
 $PAD
 Sh "15" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "N-0000073"
+Ne 77 "N-0000058"
 Po 0.325 -2.8
 $EndPAD
 $PAD
 Sh "16" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 13 "/P8 Connector/TIM4"
+Ne 17 "/P8 Connector/TIM4"
 Po -0.325 -2.8
 $EndPAD
 $PAD
 Sh "17" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 61 "N-0000071"
+Ne 75 "N-0000020"
 Po -0.975 -2.8
 $EndPAD
 $PAD
 Sh "18" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 62 "N-0000072"
+Ne 76 "N-0000057"
 Po -1.625 -2.8
 $EndPAD
 $PAD
 Sh "19" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -2.275 -2.8
 $EndPAD
 $PAD
 Sh "20" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 59 "N-0000066"
+Ne 80 "N-0000070"
 Po -2.925 -2.8
 $EndPAD
 $PAD
 Sh "1" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 16 "/P8 Connector/TIMER6"
+Ne 8 "/P8 Connector/EHRPWM2B"
 Po -2.925 2.8
 $EndPAD
 $PAD
 Sh "2" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 22 "/P8 Connector/VDD_3V3EXP"
 Po -2.275 2.8
 $EndPAD
 $PAD
 Sh "3" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 15 "/P8 Connector/TIMER5"
+Ne 9 "/P8 Connector/GPIO0_26"
 Po -1.625 2.8
 $EndPAD
 $PAD
 Sh "4" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "/P8 Connector/TIMER7"
+Ne 12 "/P8 Connector/GPIO1_13"
 Po -0.975 2.8
 $EndPAD
 $PAD
 Sh "5" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 14 "/P8 Connector/TIMER4"
+Ne 11 "/P8 Connector/GPIO1_12"
 Po -0.325 2.8
 $EndPAD
 $PAD
 Sh "6" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 19 "/P8 Connector/TIMER5"
 Po 0.325 2.8
 $EndPAD
 $PAD
 Sh "7" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 20 "/P8 Connector/TIMER6"
 Po 0.975 2.8
 $EndPAD
 $PAD
 Sh "8" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 18 "/P8 Connector/TIMER4"
 Po 1.625 2.8
 $EndPAD
 $PAD
 Sh "9" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 21 "/P8 Connector/TIMER7"
 Po 2.275 2.8
 $EndPAD
 $PAD
 Sh "10" R 0.25 1.55 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 22 "/P8 Connector/VDD_3V3EXP"
 Po 2.925 2.8
 $EndPAD
 $SHAPE3D
@@ -1124,14 +1204,14 @@ $PAD
 Sh "1" R 1.524 2.032 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -1.651 0
 $EndPAD
 $PAD
 Sh "2" R 1.524 2.032 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 70 "VDD_5V-UF"
+Ne 86 "VDD_5V-UF"
 Po 1.651 0
 $EndPAD
 $SHAPE3D
@@ -1161,14 +1241,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1198,14 +1278,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1235,14 +1315,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1272,14 +1352,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 2700
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1309,14 +1389,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1346,14 +1426,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 53 "N-00000146"
+Ne 82 "N-0000076"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1383,14 +1463,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 53 "N-00000146"
+Ne 82 "N-0000076"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1420,14 +1500,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/P9 Connector/I2C2_SDA"
+Ne 46 "/P9 Connector/I2C2_SDA"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1457,14 +1537,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 34 "/P9 Connector/I2C2_SCL"
+Ne 45 "/P9 Connector/I2C2_SCL"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1494,14 +1574,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 20 "/P9 Connector/A2"
+Ne 25 "/P9 Connector/A2"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1531,14 +1611,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 19 "/P9 Connector/A1"
+Ne 24 "/P9 Connector/A1"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1568,14 +1648,14 @@ $PAD
 Sh "1" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -0.9525 0
 $EndPAD
 $PAD
 Sh "2" R 0.889 1.397 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 18 "/P9 Connector/A0"
+Ne 23 "/P9 Connector/A0"
 Po 0.9525 0
 $EndPAD
 $SHAPE3D
@@ -1603,28 +1683,28 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -3.81 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 32 "/P9 Connector/I2C1SD"
+Ne 42 "/P9 Connector/I2C1SD"
 Po 1.27 0
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 31 "/P9 Connector/I2C1CL"
+Ne 41 "/P9 Connector/I2C1CL"
 Po 3.81 0
 $EndPAD
 $SHAPE3D
@@ -1652,28 +1732,28 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -3.81 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 38 "/P9 Connector/U1TX"
+Ne 51 "/P9 Connector/U1TX"
 Po 1.27 0
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 37 "/P9 Connector/U1RX"
+Ne 50 "/P9 Connector/U1RX"
 Po 3.81 0
 $EndPAD
 $SHAPE3D
@@ -1701,28 +1781,28 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -3.81 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 42 "/P9 Connector/U4TX"
+Ne 55 "/P9 Connector/U4TX"
 Po 1.27 0
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 41 "/P9 Connector/U4RX"
+Ne 54 "/P9 Connector/U4RX"
 Po 3.81 0
 $EndPAD
 $SHAPE3D
@@ -1750,28 +1830,28 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -3.81 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 40 "/P9 Connector/U2TX"
+Ne 53 "/P9 Connector/U2TX"
 Po 1.27 0
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 39 "/P9 Connector/U2RX"
+Ne 52 "/P9 Connector/U2RX"
 Po 3.81 0
 $EndPAD
 $SHAPE3D
@@ -1845,221 +1925,6 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE pin_array_3x2
 $MODULE PIN_ARRAY_3X1
-Po 121.666 94.488 0 15 53AEFC64 53AEEC41 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEC41
-AR /4EB0F8C5/53AC6E27
-Op 0 0 0
-T0 -4.953 0.254 0.75 0.75 0 0.15 N V 21 N "J33"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 121.666 97.0534 0 15 53AEFC60 53AEEC4D ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEC4D
-AR /4EB0F8C5/53AC3754
-Op 0 0 0
-T0 -4.953 -0.0254 0.75 0.75 0 0.15 N V 21 N "J35"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 121.666 99.568 0 15 53AEFC5B 53AEEC59 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEC59
-AR /4EB0F8C5/53AC6E2F
-Op 0 0 0
-T0 -4.953 0 0.75 0.75 0 0.15 N V 21 N "J37"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 11 "/P8 Connector/GPIO1_29"
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 110.49 94.488 0 15 53AEFC4A 53AEEC65 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEC65
-AR /4EB0F8C5/53AC6E56
-Op 0 0 0
-T0 -5.08 -0.127 0.75 0.75 0 0.15 N V 21 N "J32"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 110.49 99.568 0 15 53AEFC54 53AEEC71 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEC71
-AR /4EB0F8C5/53AC6E5C
-Op 0 0 0
-T0 -4.953 -0.127 0.75 0.75 0 0.15 N V 21 N "J36"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
 Po 148.336 76.2 900 15 53AEFC04 53AEEC7D ~~
 Li PIN_ARRAY_3X1
 Cd Connecteur 3 pins
@@ -2078,21 +1943,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 28 "/P9 Connector/GP1_28"
+Ne 36 "/P9 Connector/GP1_28"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2121,21 +1986,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 13 "/P8 Connector/TIM4"
+Ne 17 "/P8 Connector/TIM4"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2164,21 +2029,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 63 "N-0000073"
+Ne 77 "N-0000058"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2207,21 +2072,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 60 "N-0000069"
+Ne 78 "N-0000059"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2250,21 +2115,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 58 "N-0000058"
+Ne 81 "N-0000071"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2293,21 +2158,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 1800
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 55 "N-0000016"
+Ne 79 "N-0000061"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2336,21 +2201,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 54 "N-0000015"
+Ne 74 "N-0000019"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2379,21 +2244,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 57 "N-0000019"
+Ne 70 "N-0000014"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2422,21 +2287,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 52 "N-0000014"
+Ne 71 "N-0000015"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2465,21 +2330,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 51 "N-0000013"
+Ne 67 "N-0000011"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2508,21 +2373,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 56 "N-0000017"
+Ne 68 "N-0000012"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2551,21 +2416,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 49 "N-0000012"
+Ne 69 "N-0000013"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2594,21 +2459,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 48 "N-0000011"
+Ne 73 "N-0000017"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2637,64 +2502,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 64 "N-0000084"
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 110.49 97.028 0 15 53AEFC4F 53AEED25 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEED25
-AR /4EB0F8C5/53AC3760
-Op 0 0 0
-T0 -4.953 0 0.75 0.75 0 0.15 N V 21 N "J34"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
+Ne 72 "N-0000016"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2723,21 +2545,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 27 "/P9 Connector/AIN1"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2766,21 +2588,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 31 "/P9 Connector/AIN5"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2809,21 +2631,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 21 "/P9 Connector/AIN0"
+Ne 26 "/P9 Connector/AIN0"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2852,21 +2674,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 22 "/P9 Connector/AIN2"
+Ne 28 "/P9 Connector/AIN2"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2895,21 +2717,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 23 "/P9 Connector/AIN4"
+Ne 30 "/P9 Connector/AIN4"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2938,21 +2760,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 24 "/P9 Connector/AIN6"
+Ne 32 "/P9 Connector/AIN6"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -2981,21 +2803,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 65 "N-0000092"
+Ne 83 "N-0000078"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3024,21 +2846,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 27 "/P9 Connector/GP1_17"
+Ne 35 "/P9 Connector/GP1_17"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3067,21 +2889,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 26 "/P9 Connector/GP116"
+Ne 34 "/P9 Connector/GP116"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3110,21 +2932,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 59 "N-0000066"
+Ne 80 "N-0000070"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3153,21 +2975,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 62 "N-0000072"
+Ne 76 "N-0000057"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3196,64 +3018,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 2700
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 61 "N-0000071"
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 121.666 91.948 0 15 53AEFC73 53AEEDC1 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEDC1
-AR /4EB0F8C5/53AC374E
-Op 0 0 0
-T0 -4.953 0.0635 0.75 0.75 0 0.15 N V 21 N "J31"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
+Ne 75 "N-0000020"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3282,64 +3061,21 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 25 "/P9 Connector/GNDA_ADC"
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -2.54 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 46 "/P9 Connector/VDD_ADC"
+Ne 62 "/P9 Connector/VDD_ADC"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 0 ""
-Po 2.54 0
-$EndPAD
-$SHAPE3D
-Na "pin_array/pins_array_3x1.wrl"
-Sc 1 1 1
-Of 0 0 0
-Ro 0 0 0
-$EndSHAPE3D
-$EndMODULE PIN_ARRAY_3X1
-$MODULE PIN_ARRAY_3X1
-Po 110.49 91.948 0 15 53AEFC46 53AEEDD9 ~~
-Li PIN_ARRAY_3X1
-Cd Connecteur 3 pins
-Kw CONN DEV
-Sc 53AEEDD9
-AR /4EB0F8C5/53AC375A
-Op 0 0 0
-T0 -5.207 0 0.75 0.75 0 0.15 N V 21 N "J30"
-T1 0 -2.159 1.016 1.016 0 0.1524 N I 21 N "CONN_3"
-DS -3.81 1.27 -3.81 -1.27 0.1524 21
-DS -3.81 -1.27 3.81 -1.27 0.1524 21
-DS 3.81 -1.27 3.81 1.27 0.1524 21
-DS 3.81 1.27 -3.81 1.27 0.1524 21
-DS -1.27 -1.27 -1.27 1.27 0.1524 21
-$PAD
-Sh "1" R 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 47 "GND"
-Po -2.54 0
-$EndPAD
-$PAD
-Sh "2" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
-Po 0 0
-$EndPAD
-$PAD
-Sh "3" C 1.524 1.524 0 0 0
-Dr 1.016 0 0
-At STD N 00E0FFFF
-Ne 0 ""
+Ne 29 "/P9 Connector/AIN3"
 Po 2.54 0
 $EndPAD
 $SHAPE3D
@@ -3367,28 +3103,28 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 19 "/P9 Connector/A1"
+Ne 24 "/P9 Connector/A1"
 Po -1.27 1.27
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -1.27 -1.27
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 18 "/P9 Connector/A0"
+Ne 23 "/P9 Connector/A0"
 Po 1.27 1.27
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po 1.27 -1.27
 $EndPAD
 $SHAPE3D
@@ -3417,42 +3153,42 @@ $PAD
 Sh "1" R 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 66 "N-0000093"
+Ne 47 "/P9 Connector/SP1DI"
 Po -6.35 0
 $EndPAD
 $PAD
 Sh "2" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 67 "N-0000094"
+Ne 64 "N-00000105"
 Po -3.81 0
 $EndPAD
 $PAD
 Sh "3" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 36 "/P9 Connector/SP1DI"
+Ne 65 "N-00000106"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "4" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 50 "N-00000122"
+Ne 66 "N-00000107"
 Po 1.27 0
 $EndPAD
 $PAD
 Sh "5" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 69 "VDD_5V"
+Ne 85 "VDD_5V"
 Po 3.81 0
 $EndPAD
 $PAD
 Sh "6" C 1.524 1.524 0 0 900
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po 6.35 0
 $EndPAD
 $SHAPE3D
@@ -3594,56 +3330,56 @@ $PAD
 Sh "C1" R 1.651 1.651 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po 23.495 -25.4
 $EndPAD
 $PAD
 Sh "C2" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 63 "GND"
 Po 23.495 -22.86
 $EndPAD
 $PAD
 Sh "C3" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po 20.955 -25.4
 $EndPAD
 $PAD
 Sh "C4" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 84 "VDD_3V3EXP"
 Po 20.955 -22.86
 $EndPAD
 $PAD
 Sh "C5" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 70 "VDD_5V-UF"
+Ne 86 "VDD_5V-UF"
 Po 18.415 -25.4
 $EndPAD
 $PAD
 Sh "C6" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 86 "VDD_5V-UF"
 Po 18.415 -22.86
 $EndPAD
 $PAD
 Sh "C7" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 49 "/P9 Connector/SYS_5V"
 Po 15.875 -25.4
 $EndPAD
 $PAD
 Sh "C8" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 49 "/P9 Connector/SYS_5V"
 Po 15.875 -22.86
 $EndPAD
 $PAD
@@ -3664,21 +3400,21 @@ $PAD
 Sh "C11" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 44 "/P9 Connector/UART4_RXD"
+Ne 60 "/P9 Connector/UART4_RXD"
 Po 10.795 -25.4
 $EndPAD
 $PAD
 Sh "C12" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 39 "/P9 Connector/GPIO1_28"
 Po 10.795 -22.86
 $EndPAD
 $PAD
 Sh "C13" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 45 "/P9 Connector/UART4_TXD"
+Ne 61 "/P9 Connector/UART4_TXD"
 Po 8.255 -25.4
 $EndPAD
 $PAD
@@ -3692,7 +3428,7 @@ $PAD
 Sh "C15" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 29 "/P9 Connector/GPIO1_16"
+Ne 37 "/P9 Connector/GPIO1_16"
 Po 5.715 -25.4
 $EndPAD
 $PAD
@@ -3706,56 +3442,56 @@ $PAD
 Sh "C17" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 33 "/P9 Connector/I2C1_SCL"
+Ne 43 "/P9 Connector/I2C1_SCL"
 Po 3.175 -25.4
 $EndPAD
 $PAD
 Sh "C18" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 44 "/P9 Connector/I2C1_SDA"
 Po 3.175 -22.86
 $EndPAD
 $PAD
 Sh "C19" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 34 "/P9 Connector/I2C2_SCL"
+Ne 45 "/P9 Connector/I2C2_SCL"
 Po 0.635 -25.4
 $EndPAD
 $PAD
 Sh "C20" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 46 "/P9 Connector/I2C2_SDA"
 Po 0.635 -22.86
 $EndPAD
 $PAD
 Sh "C21" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 43 "/P9 Connector/UART2_TXD"
+Ne 59 "/P9 Connector/UART2_TXD"
 Po -1.905 -25.4
 $EndPAD
 $PAD
 Sh "C22" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 58 "/P9 Connector/UART2_RXD"
 Po -1.905 -22.86
 $EndPAD
 $PAD
 Sh "C23" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 30 "/P9 Connector/GPIO1_17"
+Ne 38 "/P9 Connector/GPIO1_17"
 Po -4.445 -25.4
 $EndPAD
 $PAD
 Sh "C24" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 57 "/P9 Connector/UART1_TXD"
 Po -4.445 -22.86
 $EndPAD
 $PAD
@@ -3769,14 +3505,14 @@ $PAD
 Sh "C26" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 56 "/P9 Connector/UART1_RXD"
 Po -6.985 -22.86
 $EndPAD
 $PAD
 Sh "C27" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 40 "/P9 Connector/GPIO3_19"
 Po -9.525 -25.4
 $EndPAD
 $PAD
@@ -3797,7 +3533,7 @@ $PAD
 Sh "C30" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 48 "/P9 Connector/SPI1_D1"
 Po -12.065 -22.86
 $EndPAD
 $PAD
@@ -3811,63 +3547,63 @@ $PAD
 Sh "C32" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 62 "/P9 Connector/VDD_ADC"
 Po -14.605 -22.86
 $EndPAD
 $PAD
 Sh "C33" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 23 "/P9 Connector/AIN4"
+Ne 30 "/P9 Connector/AIN4"
 Po -17.145 -25.4
 $EndPAD
 $PAD
 Sh "C34" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 33 "/P9 Connector/GNDA_ADC"
 Po -17.145 -22.86
 $EndPAD
 $PAD
 Sh "C35" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 24 "/P9 Connector/AIN6"
+Ne 32 "/P9 Connector/AIN6"
 Po -19.685 -25.4
 $EndPAD
 $PAD
 Sh "C36" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 31 "/P9 Connector/AIN5"
 Po -19.685 -22.86
 $EndPAD
 $PAD
 Sh "C37" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 22 "/P9 Connector/AIN2"
+Ne 28 "/P9 Connector/AIN2"
 Po -22.225 -25.4
 $EndPAD
 $PAD
 Sh "C38" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 29 "/P9 Connector/AIN3"
 Po -22.225 -22.86
 $EndPAD
 $PAD
 Sh "C39" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 21 "/P9 Connector/AIN0"
+Ne 26 "/P9 Connector/AIN0"
 Po -24.765 -25.4
 $EndPAD
 $PAD
 Sh "C40" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 27 "/P9 Connector/AIN1"
 Po -24.765 -22.86
 $EndPAD
 $PAD
@@ -3888,42 +3624,42 @@ $PAD
 Sh "C43" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -29.845 -25.4
 $EndPAD
 $PAD
 Sh "C44" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 63 "GND"
 Po -29.845 -22.86
 $EndPAD
 $PAD
 Sh "C45" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po -32.385 -25.4
 $EndPAD
 $PAD
 Sh "C46" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 63 "GND"
 Po -32.385 -22.86
 $EndPAD
 $PAD
 Sh "B1" R 1.651 1.651 0 0 0
 Dr 1.016 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po 23.495 22.86
 $EndPAD
 $PAD
 Sh "B2" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 47 "GND"
+Ne 63 "GND"
 Po 23.495 25.4
 $EndPAD
 $PAD
@@ -3958,42 +3694,42 @@ $PAD
 Sh "B7" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 14 "/P8 Connector/TIMER4"
+Ne 18 "/P8 Connector/TIMER4"
 Po 15.875 22.86
 $EndPAD
 $PAD
 Sh "B8" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 17 "/P8 Connector/TIMER7"
+Ne 21 "/P8 Connector/TIMER7"
 Po 15.875 25.4
 $EndPAD
 $PAD
 Sh "B9" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 15 "/P8 Connector/TIMER5"
+Ne 19 "/P8 Connector/TIMER5"
 Po 13.335 22.86
 $EndPAD
 $PAD
 Sh "B10" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 16 "/P8 Connector/TIMER6"
+Ne 20 "/P8 Connector/TIMER6"
 Po 13.335 25.4
 $EndPAD
 $PAD
 Sh "B11" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 12 "/P8 Connector/GPIO1_13"
 Po 10.795 22.86
 $EndPAD
 $PAD
 Sh "B12" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 11 "/P8 Connector/GPIO1_12"
 Po 10.795 25.4
 $EndPAD
 $PAD
@@ -4007,35 +3743,35 @@ $PAD
 Sh "B14" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 9 "/P8 Connector/GPIO0_26"
 Po 8.255 25.4
 $EndPAD
 $PAD
 Sh "B15" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 10 "/P8 Connector/GPIO1_15"
+Ne 14 "/P8 Connector/GPIO1_15"
 Po 5.715 22.86
 $EndPAD
 $PAD
 Sh "B16" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 0 ""
+Ne 13 "/P8 Connector/GPIO1_14"
 Po 5.715 25.4
 $EndPAD
 $PAD
 Sh "B17" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 9 "/P8 Connector/GPIO0_27"
+Ne 10 "/P8 Connector/GPIO0_27"
 Po 3.175 22.86
 $EndPAD
 $PAD
 Sh "B18" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 12 "/P8 Connector/GPIO2_1"
+Ne 16 "/P8 Connector/GPIO2_1"
 Po 3.175 25.4
 $EndPAD
 $PAD
@@ -4091,7 +3827,7 @@ $PAD
 Sh "B26" C 1.30048 1.30048 0 0 0
 Dr 0.8001 0 0
 At STD N 00E0FFFF
-Ne 11 "/P8 Connector/GPIO1_29"
+Ne 15 "/P8 Connector/GPIO1_29"
 Po -6.985 25.4
 $EndPAD
 $PAD
@@ -4328,14 +4064,14 @@ $PAD
 Sh "8" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "VDD_3V3EXP"
+Ne 84 "VDD_3V3EXP"
 Po -1.905 -2.667
 $EndPAD
 $PAD
 Sh "1" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 18 "/P9 Connector/A0"
+Ne 23 "/P9 Connector/A0"
 Po -1.905 2.667
 $EndPAD
 $PAD
@@ -4349,35 +4085,35 @@ $PAD
 Sh "6" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 34 "/P9 Connector/I2C2_SCL"
+Ne 45 "/P9 Connector/I2C2_SCL"
 Po 0.635 -2.667
 $EndPAD
 $PAD
 Sh "5" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/P9 Connector/I2C2_SDA"
+Ne 46 "/P9 Connector/I2C2_SDA"
 Po 1.905 -2.667
 $EndPAD
 $PAD
 Sh "2" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 19 "/P9 Connector/A1"
+Ne 24 "/P9 Connector/A1"
 Po -0.635 2.667
 $EndPAD
 $PAD
 Sh "3" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 20 "/P9 Connector/A2"
+Ne 25 "/P9 Connector/A2"
 Po 0.635 2.667
 $EndPAD
 $PAD
 Sh "4" R 0.508 1.143 0 0 900
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "GND"
+Ne 63 "GND"
 Po 1.905 2.667
 $EndPAD
 $SHAPE3D
@@ -4387,14 +4123,6 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE SO8E
-$DRAWSEGMENT
-Po 0 125.5395 101.2825 125.5395 84.455 0.381
-De 21 0 900 0 0
-$EndDRAWSEGMENT
-$DRAWSEGMENT
-Po 0 103.886 101.2825 125.5395 101.2825 0.381
-De 21 0 900 0 0
-$EndDRAWSEGMENT
 $TEXTPCB
 Te "U1"
 Po 132.969 69.342 1 1 0.25 0
@@ -4464,10 +4192,6 @@ Po 0 103.886 84.4296 103.886 84.455 0.381
 De 21 0 900 0 0
 $EndDRAWSEGMENT
 $DRAWSEGMENT
-Po 0 125.5268 84.4296 103.886 84.4296 0.381
-De 21 0 900 0 0
-$EndDRAWSEGMENT
-$DRAWSEGMENT
 Po 0 110.0328 80.01 123.2916 80.01 0.381
 De 21 0 900 0 0
 $EndDRAWSEGMENT
@@ -4484,11 +4208,6 @@ Po 0 110.0328 58.5216 123.2916 58.5216 0.381
 De 21 0 900 0 0
 $EndDRAWSEGMENT
 $TEXTPCB
-Te "G V S"
-Po 121.666 89.154 1.524 2.032 0.3048 0
-De 21 1 0 Normal
-$EndTEXTPCB
-$TEXTPCB
 Te "U4"
 Po 150.9776 68.9356 1 1 0.25 0
 De 21 1 0 Normal
@@ -4502,24 +4221,6 @@ $DRAWSEGMENT
 Po 0 125.5141 84.4296 125.5141 87.6681 0.381
 De 21 0 900 0 0
 $EndDRAWSEGMENT
-$DRAWSEGMENT
-Po 0 103.886 87.6935 103.886 84.455 0.381
-De 21 0 900 0 0
-$EndDRAWSEGMENT
-$TEXTPCB
-Te "G V S"
-Po 110.617 89.408 1.524 2.032 0.3048 0
-De 21 1 0 Normal
-$EndTEXTPCB
-$DRAWSEGMENT
-Po 0 103.886 101.2825 103.886 87.63 0.381
-De 21 0 900 0 0
-$EndDRAWSEGMENT
-$TEXTPCB
-Te "3.3V GVS"
-Po 115.951 86.487 2.032 2.032 0.508 0
-De 21 1 0 Normal
-$EndTEXTPCB
 $DRAWSEGMENT
 Po 0 147.8 107.3 157.9 107.3 0.381
 De 28 0 900 0 0
@@ -4695,22 +4396,8 @@ Po 2 106.3752 65.405 93.6752 65.405 0.381
 De 28 0 900 0 0
 $EndDRAWSEGMENT
 $TRACK
-Po 0 112.141 57.15 112.141 60.2742 0.254 -1
-De 0 0 0 0 30
-Po 0 112.141 60.2742 112.268 60.4012 0.254 -1
-De 0 0 0 53ACA3D1 30
-Po 0 114.681 57.15 114.681 60.2742 0.254 -1
-De 0 0 0 0 30
-Po 0 114.681 60.2742 114.808 60.4012 0.254 -1
-De 0 0 0 53ACA3D5 30
-Po 0 117.221 57.15 117.221 60.2742 0.254 -1
-De 0 0 0 0 30
-Po 0 117.221 60.2742 117.348 60.4012 0.254 -1
-De 0 0 0 53ACA3D8 30
 Po 0 127.381 57.15 127.381 57.5818 0.254 -1
 De 15 0 0 0 30
-Po 0 124.841 57.5818 124.841 57.15 0.254 -1
-De 15 0 0 53ACAF96 30
 Po 0 166.751 66.675 166.751 70.485 0.254 -1
 De 0 0 1 0 10
 Po 0 166.751 70.485 165.481 71.755 0.254 -1
@@ -4739,831 +4426,859 @@ Po 0 164.211 70.485 162.941 71.755 0.254 -1
 De 0 0 6 53AD82E3 20
 Po 0 164.211 66.675 164.211 70.485 0.254 -1
 De 0 0 6 0 10
-Po 0 138.6234 98.558 138.6234 99.8826 0.254 -1
+Po 0 137.9734 98.558 137.9734 101.1676 0.254 -1
 De 15 0 7 0 0
-Po 0 137.541 100.965 137.541 102.87 0.254 -1
-De 15 0 7 53AEB7A5 0
-Po 0 138.6234 99.8826 137.541 100.965 0.254 -1
-De 15 0 7 53AEB7A3 0
-Po 0 141.8734 98.558 141.8734 99.5824 0.254 -1
+Po 0 137.541 101.6 137.541 102.87 0.254 -1
+De 15 0 7 53BFCAEB 0
+Po 0 137.9734 101.1676 137.541 101.6 0.254 -1
+De 15 0 7 53BFCAE9 0
+Po 0 147.951 98.558 147.951 99.699 0.254 -1
 De 15 0 8 0 0
-Po 0 141.8734 99.5824 145.161 102.87 0.254 -1
-De 15 0 8 53AEB916 0
-Po 0 139.9234 98.558 139.9234 102.7124 0.254 -1
+Po 0 145.161 101.346 145.161 102.87 0.254 -1
+De 15 0 8 53BFC7A9 0
+Po 0 146.177 100.33 145.161 101.346 0.254 -1
+De 15 0 8 53BFC7A7 0
+Po 0 147.32 100.33 146.177 100.33 0.254 -1
+De 15 0 8 53BFC7A5 0
+Po 0 147.951 99.699 147.32 100.33 0.254 -1
+De 15 0 8 53BFC7A4 0
+Po 0 149.251 98.558 149.251 99.669 0.254 -1
 De 15 0 9 0 0
-Po 0 139.9234 102.7124 140.081 102.87 0.254 -1
-De 15 0 9 53AEB7FB 0
-Po 0 141.2234 98.558 141.2234 100.7104 0.254 -1
+Po 0 146.304 104.267 145.161 105.41 0.254 -1
+De 15 0 9 53BFC79C 0
+Po 0 146.304 102.108 146.304 104.267 0.254 -1
+De 15 0 9 53BFC799 0
+Po 0 147.193 101.219 146.304 102.108 0.254 -1
+De 15 0 9 53BFC798 0
+Po 0 147.701 101.219 147.193 101.219 0.254 -1
+De 15 0 9 53BFC796 0
+Po 0 149.251 99.669 147.701 101.219 0.254 -1
+De 15 0 9 53BFC792 0
+Po 0 139.2734 98.558 139.2734 100.7924 0.254 -1
 De 15 0 10 0 0
-Po 0 142.621 102.108 142.621 102.87 0.254 -1
-De 15 0 10 53AEB863 0
-Po 0 141.2234 100.7104 142.621 102.108 0.254 -1
-De 15 0 10 53AEB861 0
-Po 0 124.206 99.568 125.984 99.568 0.254 -1
+Po 0 140.081 101.6 140.081 102.87 0.254 -1
+De 15 0 10 53BFC7C2 0
+Po 0 139.2734 100.7924 140.081 101.6 0.254 -1
+De 15 0 10 53BFC7C0 0
+Po 0 150.551 98.558 150.551 100.401 0.254 -1
 De 15 0 11 0 0
-Po 0 128.651 104.14 129.921 105.41 0.254 -1
-De 15 0 11 53AEB029 0
-Po 0 128.651 102.235 128.651 104.14 0.254 -1
-De 15 0 11 53AEB027 0
-Po 0 125.984 99.568 128.651 102.235 0.254 -1
-De 15 0 11 53AEB024 0
-Po 0 140.5734 98.558 140.5734 101.2034 0.254 -1
+Po 0 148.844 104.267 147.701 105.41 0.254 -1
+De 15 0 11 53BFC786 0
+Po 0 148.844 102.108 148.844 104.267 0.254 -1
+De 15 0 11 53BFC784 0
+Po 0 150.551 100.401 148.844 102.108 0.254 -1
+De 15 0 11 53BFC783 0
+Po 0 149.901 98.558 149.901 99.781 0.254 -1
 De 15 0 12 0 0
-Po 0 141.351 104.14 140.081 105.41 0.254 -1
-De 15 0 12 53AEB821 0
-Po 0 141.351 101.981 141.351 104.14 0.254 -1
-De 15 0 12 53AEB820 0
-Po 0 140.5734 101.2034 141.351 101.981 0.254 -1
-De 15 0 12 53AEB81F 0
-Po 0 150.551 92.958 150.551 90.749 0.254 -1
+Po 0 147.701 101.981 147.701 102.87 0.254 -1
+De 15 0 12 53BFC78E 0
+Po 0 149.901 99.781 147.701 101.981 0.254 -1
+De 15 0 12 53BFC78B 0
+Po 0 139.9234 98.558 139.9234 99.9184 0.254 -1
 De 15 0 13 0 0
-Po 0 153.924 89.916 155.575 88.265 0.254 -1
-De 15 0 13 53AEAD3F 0
-Po 0 151.384 89.916 153.924 89.916 0.254 -1
-De 15 0 13 53AEAD3E 0
-Po 0 150.551 90.749 151.384 89.916 0.254 -1
-De 15 0 13 53AEAD3D 0
-Po 0 150.551 98.558 150.551 100.64 0.254 -1
+Po 0 141.351 104.14 142.621 105.41 0.254 -1
+De 15 0 13 53BFC7BD 0
+Po 0 141.351 101.346 141.351 104.14 0.254 -1
+De 15 0 13 53BFC7BB 0
+Po 0 139.9234 99.9184 141.351 101.346 0.254 -1
+De 15 0 13 53BFC7B8 0
+Po 0 140.5734 98.558 140.5734 99.6794 0.254 -1
 De 15 0 14 0 0
-Po 0 150.551 100.64 152.781 102.87 0.254 -1
-De 15 0 14 53AEACFB 0
-Po 0 149.251 98.558 149.251 101.88 0.254 -1
+Po 0 142.621 101.727 142.621 102.87 0.254 -1
+De 15 0 14 53BFC7B3 0
+Po 0 140.5734 99.6794 142.621 101.727 0.254 -1
+De 15 0 14 53BFC7B1 0
+Po 0 136.6734 98.558 136.6734 100.1816 0.254 -1
 De 15 0 15 0 0
-Po 0 149.251 101.88 150.241 102.87 0.254 -1
-De 15 0 15 53AEACF3 0
-Po 0 147.951 98.558 147.951 101.4055 0.254 -1
+Po 0 131.064 104.267 129.921 105.41 0.254 -1
+De 15 0 15 53BFCAF5 0
+Po 0 131.064 101.854 131.064 104.267 0.254 -1
+De 15 0 15 53BFCAF4 0
+Po 0 131.445 101.473 131.064 101.854 0.254 -1
+De 15 0 15 53BFCAF3 0
+Po 0 135.382 101.473 131.445 101.473 0.254 -1
+De 15 0 15 53BFCAF1 0
+Po 0 136.6734 100.1816 135.382 101.473 0.254 -1
+De 15 0 15 53BFCAF0 0
+Po 0 138.6234 98.558 138.6234 101.5394 0.254 -1
 De 15 0 16 0 0
-Po 0 148.971 102.4255 148.971 104.14 0.254 -1
-De 15 0 16 53AEACEF 0
-Po 0 147.951 101.4055 148.971 102.4255 0.254 -1
-De 15 0 16 53AEACED 0
-Po 0 148.971 104.14 150.241 105.41 0.254 -1
-De 15 0 16 53AEACF0 0
-Po 0 148.971 104.14 150.241 105.41 0.254 -1
-De 15 0 16 53AC9809 20
-Po 0 149.901 98.558 149.901 100.879 0.254 -1
+Po 0 138.938 104.267 140.081 105.41 0.254 -1
+De 15 0 16 53BFC7CA 0
+Po 0 138.938 101.854 138.938 104.267 0.254 -1
+De 15 0 16 53BFC7C9 0
+Po 0 138.6234 101.5394 138.938 101.854 0.254 -1
+De 15 0 16 53BFC7C6 0
+Po 0 150.551 92.958 150.551 90.749 0.254 -1
 De 15 0 17 0 0
-Po 0 149.901 100.879 151.511 102.489 0.254 -1
-De 15 0 17 53AEACF5 0
-Po 0 151.511 104.14 152.781 105.41 0.254 -1
-De 15 0 17 53AC97FF 20
-Po 0 151.511 102.489 151.511 104.14 0.254 -1
-De 15 0 17 53AEACF9 0
-Po 0 178.308 64.262 178.308 65.913 0.254 -1
-De 15 0 18 0 10
-Po 3 178.308 65.913 178.308 65.913 0.889 -1
-De 15 1 18 0 0
-Po 0 178.308 64.262 178.308 67.8815 0.254 -1
-De 15 0 18 0 30
-Po 0 178.308 67.8815 178.2445 67.945 0.254 -1
-De 15 0 18 0 30
-Po 0 178.308 65.913 176.911 65.913 0.254 -1
-De 0 0 18 0 0
-Po 0 176.911 65.913 176.403 65.405 0.254 -1
-De 0 0 18 0 0
-Po 0 176.403 65.405 176.403 57.023 0.254 -1
-De 0 0 18 0 0
-Po 0 176.403 57.023 174.498 55.118 0.254 -1
-De 0 0 18 0 0
-Po 0 174.498 55.118 172.974 55.118 0.254 -1
-De 0 0 18 0 20
-Po 0 172.974 57.658 174.117 57.658 0.254 -1
-De 0 0 19 0 10
-Po 0 174.117 57.658 175.26 58.801 0.254 -1
-De 0 0 19 0 0
-Po 0 175.26 58.801 175.26 62.992 0.254 -1
-De 0 0 19 0 0
-Po 3 175.26 62.992 175.26 62.992 0.889 -1
-De 15 1 19 0 0
-Po 0 175.26 62.992 178.308 62.992 0.254 -1
-De 15 0 19 0 20
-Po 0 177.546 62.992 178.308 62.992 0.254 -1
-De 15 0 19 0 20
-Po 0 177.292 63.246 177.546 62.992 0.254 -1
+Po 0 153.924 89.916 155.575 88.265 0.254 -1
+De 15 0 17 53AEAD3F 0
+Po 0 151.384 89.916 153.924 89.916 0.254 -1
+De 15 0 17 53AEAD3E 0
+Po 0 150.551 90.749 151.384 89.916 0.254 -1
+De 15 0 17 53AEAD3D 0
+Po 0 152.501 98.558 152.501 102.59 0.254 -1
+De 15 0 18 0 0
+Po 0 152.501 102.59 152.781 102.87 0.254 -1
+De 15 0 18 53BFC770 0
+Po 0 151.201 98.558 151.201 100.894 0.254 -1
 De 15 0 19 0 0
-Po 0 177.292 71.501 177.292 63.246 0.254 -1
-De 15 0 19 0 0
-Po 0 177.546 71.755 177.292 71.501 0.254 -1
-De 15 0 19 0 0
-Po 0 178.2445 71.755 177.546 71.755 0.254 -1
-De 15 0 19 0 10
-Po 0 178.2445 69.85 179.07 69.85 0.254 -1
-De 15 0 20 0 10
-Po 0 179.07 69.85 179.324 69.596 0.254 -1
+Po 0 150.241 101.854 150.241 102.87 0.254 -1
+De 15 0 19 53BFC77F 0
+Po 0 151.201 100.894 150.241 101.854 0.254 -1
+De 15 0 19 53BFC77D 0
+Po 0 151.851 98.558 151.851 101.514 0.254 -1
 De 15 0 20 0 0
-Po 0 179.324 69.596 179.324 61.976 0.254 -1
-De 15 0 20 0 0
-Po 0 179.324 61.976 179.07 61.722 0.254 -1
-De 15 0 20 0 0
-Po 0 179.07 61.722 178.308 61.722 0.254 -1
-De 15 0 20 0 20
-Po 0 112.141 54.61 112.141 54.737 0.254 -1
-De 0 0 21 0 30
-Po 0 112.141 54.737 110.998 55.88 0.254 -1
-De 0 0 21 53ADC041 10
-Po 0 110.998 55.88 110.998 68.326 0.254 -1
-De 0 0 21 53ADC042 0
-Po 0 110.998 68.326 112.268 69.596 0.254 -1
-De 0 0 21 53ADC044 20
-Po 0 113.538 55.753 113.538 68.326 0.254 -1
-De 0 0 22 0 0
-Po 0 113.538 68.326 114.808 69.596 0.254 -1
-De 0 0 22 53ADC08E 20
-Po 0 113.538 55.753 114.681 54.61 0.254 -1
-De 0 0 22 53ADC08A 20
-Po 0 119.761 54.61 118.491 55.88 0.254 -1
-De 0 0 23 0 10
-Po 0 119.888 60.071 119.888 60.452 0.254 -1
-De 0 0 23 53ADC09A 30
-Po 0 118.491 58.674 119.888 60.071 0.254 -1
-De 0 0 23 53ADC099 20
-Po 0 118.491 55.88 118.491 58.674 0.254 -1
-De 0 0 23 53ADC098 0
-Po 0 117.221 54.61 117.221 54.864 0.254 -1
-De 0 0 24 0 30
-Po 0 116.078 68.326 117.348 69.596 0.254 -1
-De 0 0 24 53ADC094 20
-Po 0 116.078 56.007 116.078 68.326 0.254 -1
-De 0 0 24 53ADC092 0
-Po 0 117.221 54.864 116.078 56.007 0.254 -1
-De 0 0 24 53ADC091 10
-Po 0 112.3188 74.5236 114.808 74.5236 0.254 -1
-De 15 0 25 0 30
-Po 0 114.808 74.5236 114.8588 74.5744 0.254 -1
-De 15 0 25 53ADBFCE 30
-Po 0 114.8588 74.5744 117.4496 74.5744 0.254 -1
-De 15 0 25 53ADBFCF 30
-Po 0 114.8588 74.5744 118.9736 74.5744 0.254 -1
-De 15 0 25 53ADBFC5 10
-Po 0 118.9736 74.5744 119.888 73.66 0.254 -1
-De 15 0 25 53ADBFC6 0
-Po 0 119.888 73.66 119.888 65.4812 0.254 -1
-De 15 0 25 53ADBFC7 20
-Po 0 119.761 57.15 119.761 57.531 0.254 -1
-De 15 0 25 0 30
-Po 0 119.761 57.531 121.158 58.928 0.254 -1
-De 15 0 25 53ADBFC0 10
-Po 0 112.268 65.4812 114.808 65.4812 0.254 -1
-De 15 0 25 0 30
-Po 0 114.808 65.4812 117.348 65.4812 0.254 -1
-De 15 0 25 53ACA465 30
-Po 0 117.348 65.4812 119.888 65.4812 0.254 -1
-De 15 0 25 53ACA466 30
-Po 0 119.888 65.4812 121.158 64.2112 0.254 -1
-De 15 0 25 53ACA467 10
-Po 0 121.158 64.2112 121.158 58.928 0.254 -1
-De 15 0 25 53ACA468 0
-Po 0 144.978 66.2365 144.978 72.842 0.254 -1
-De 15 0 26 0 0
-Po 0 144.978 72.842 145.796 73.66 0.254 -1
-De 15 0 26 53AEAE94 0
-Po 0 134.751 67.57 134.751 68.9015 0.254 -1
-De 15 0 27 0 10
-Po 0 134.751 68.9015 138.176 72.3265 0.254 -1
-De 15 0 27 53ADB8D2 0
-Po 0 138.176 72.3265 138.176 73.7235 0.254 -1
-De 15 0 27 53ADB8D5 20
-Po 0 146.278 66.2365 146.278 69.189 0.254 -1
-De 15 0 28 0 0
-Po 0 146.278 69.189 148.336 71.247 0.254 -1
-De 15 0 28 53AEAEA0 0
-Po 0 148.336 71.247 148.336 73.66 0.254 -1
-De 15 0 28 53AEAEA5 0
-Po 0 144.978 60.6365 144.978 58.8085 0.254 -1
-De 15 0 29 0 10
-Po 0 143.9545 55.9435 142.621 54.61 0.254 -1
-De 15 0 29 53AC9BE1 20
-Po 0 143.9545 57.785 143.9545 55.9435 0.254 -1
-De 15 0 29 53AC9BDE 0
-Po 0 144.978 58.8085 143.9545 57.785 0.254 -1
-De 15 0 29 53AC9BDB 0
-Po 0 134.751 61.97 134.751 58.551 0.254 -1
-De 15 0 30 0 10
-Po 0 133.731 55.88 132.461 54.61 0.254 -1
-De 15 0 30 53ADB967 20
-Po 0 133.731 57.531 133.731 55.88 0.254 -1
-De 15 0 30 53ADB964 0
-Po 0 134.751 58.551 133.731 57.531 0.254 -1
-De 15 0 30 53ADB963 0
-Po 0 144.328 66.2365 144.328 70.048 0.254 -1
-De 15 0 31 0 10
-Po 0 144.328 70.048 143.256 71.12 0.254 -1
-De 15 0 31 53AC9F87 20
-Po 0 143.256 73.66 141.986 72.39 0.254 -1
-De 15 0 32 0 10
-Po 0 141.986 72.39 141.986 70.4596 0.254 -1
-De 15 0 32 53ADBF3A 0
-Po 0 141.986 70.4596 143.678 68.7676 0.254 -1
-De 15 0 32 53ADBF3B 0
-Po 0 143.678 66.2365 143.678 68.7676 0.254 -1
-De 15 0 32 0 10
-Po 0 144.328 60.6365 144.328 58.876924 0.254 -1
-De 15 0 33 0 10
-Po 0 141.351 55.88 140.081 54.61 0.254 -1
-De 15 0 33 53AC9BF1 20
-Po 0 141.351 57.658 141.351 55.88 0.254 -1
-De 15 0 33 53AC9BED 0
-Po 0 142.113 58.42 141.351 57.658 0.254 -1
-De 15 0 33 53AC9BEB 0
-Po 0 143.871076 58.42 142.113 58.42 0.254 -1
-De 15 0 33 53AC9BEA 0
-Po 0 144.328 58.876924 143.871076 58.42 0.254 -1
-De 15 0 33 53AC9BE9 0
-Po 0 148.844 59.944 140.6652 59.944 0.254 -1
-De 0 0 34 0 0
-Po 0 140.6652 59.944 138.7856 58.0644 0.254 -1
-De 0 0 34 53AEBE24 0
-Po 0 170.7515 59.4995 165.0365 59.4995 0.254 -1
-De 15 0 34 0 0
-Po 0 165.0365 59.4995 164.846 59.69 0.254 -1
-De 15 0 34 53ADF22F 0
-Po 0 170.7515 59.4995 170.815 59.436 0.254 -1
-De 15 0 34 53ADF22D 0
-Po 0 171.323 59.436 170.815 59.436 0.254 -1
-De 15 0 34 0 0
-Po 0 171.323 59.436 173.863 59.436 0.254 -1
-De 15 0 34 53ADF19C 0
-Po 0 173.863 59.436 174.244 59.817 0.254 -1
-De 15 0 34 53ADF15D 0
-Po 0 174.244 59.817 174.244 61.341 0.254 -1
-De 15 0 34 53ADF15F 0
-Po 0 174.244 61.341 173.863 61.722 0.254 -1
-De 15 0 34 53ADF161 0
-Po 0 173.863 61.722 172.974 61.722 0.254 -1
-De 15 0 34 53ADF162 0
-Po 0 148.844 59.944 153.035 59.944 0.254 -1
-De 15 0 34 53ADF09A 0
-Po 3 148.844 59.944 148.844 59.944 0.889 -1
-De 15 1 34 0 0
-Po 0 153.035 59.944 153.543 60.452 0.254 -1
-De 0 0 34 53ADF05B 0
-Po 0 153.543 60.452 163.703 60.452 0.254 -1
-De 0 0 34 53ADF061 0
-Po 0 163.703 60.452 164.084 60.452 0.254 -1
-De 0 0 34 53ADF102 0
-Po 3 164.846 59.69 164.846 59.69 0.889 -1
-De 15 1 34 0 0
-Po 0 164.084 60.452 164.846 59.69 0.254 -1
-De 0 0 34 53ADC0A6 0
-Po 3 153.035 59.944 153.035 59.944 0.889 -1
-De 15 1 34 0 0
-Po 0 138.7856 56.3626 138.7856 58.0644 0.254 -1
-De 0 0 34 0 0
-Po 0 137.541 54.61 137.541 55.118 0.254 -1
-De 0 0 34 0 30
-Po 0 137.541 55.118 138.7856 56.3626 0.254 -1
-De 0 0 34 53ACCD49 10
-Po 0 163.322 59.7535 164.7825 59.7535 0.254 -1
-De 15 0 34 0 10
-Po 0 164.7825 59.7535 164.846 59.69 0.254 -1
-De 15 0 34 53AD9FC3 0
-Po 0 163.576 61.5696 164.9984 61.5696 0.254 -1
-De 0 0 35 0 0
-Po 0 166.116 60.452 172.974 60.452 0.254 -1
-De 15 0 35 53ADF272 0
-Po 0 165.354 61.214 166.116 60.452 0.254 -1
-De 15 0 35 53ADF271 0
-Po 3 165.354 61.214 165.354 61.214 0.889 -1
-De 15 1 35 0 0
-Po 0 164.9984 61.5696 165.354 61.214 0.254 -1
-De 0 0 35 53ADF26D 0
-Po 0 163.068 61.5696 163.576 61.5696 0.254 -1
-De 0 0 35 0 0
-Po 0 159.004 61.468 159.004 61.5696 0.254 -1
-De 0 0 35 53AD9FBE 0
-Po 0 159.004 61.5696 163.068 61.5696 0.254 -1
-De 0 0 35 53AD9FC1 0
-Po 0 161.036 59.7535 159.7025 59.7535 0.254 -1
-De 15 0 35 0 10
-Po 3 159.004 61.468 159.004 61.468 0.889 -1
-De 15 1 35 0 0
-Po 0 159.004 60.452 159.004 61.468 0.254 -1
-De 15 0 35 53AD9FBC 0
-Po 0 159.7025 59.7535 159.004 60.452 0.254 -1
-De 15 0 35 53AD9FBB 0
-Po 0 130.201 67.57 130.201 69.697 0.254 -1
-De 15 0 36 0 0
-Po 0 130.201 69.697 126.238 73.66 0.254 -1
-De 15 0 36 53ADC337 0
-Po 0 132.151 67.57 132.151 70.302 0.254 -1
-De 15 0 37 0 0
-Po 0 132.151 70.302 133.096 71.247 0.254 -1
-De 15 0 37 53ADC2E8 0
-Po 0 133.451 67.57 133.451 66.268 0.254 -1
-De 15 0 38 0 0
-Po 0 134.493 67.31 134.493 72.136 0.254 -1
-De 0 0 38 53AEAED7 0
-Po 0 132.9055 65.7225 134.493 67.31 0.254 -1
-De 0 0 38 53AEAED6 0
-Po 3 132.9055 65.7225 132.9055 65.7225 0.889 -1
-De 15 1 38 0 0
-Po 0 133.451 66.268 132.9055 65.7225 0.254 -1
-De 15 0 38 53AEAED1 0
-Po 0 134.493 72.136 134.112 72.517 0.254 -1
-De 0 0 38 53AEAEDA 0
-Po 0 133.096 73.787 133.096 73.533 0.254 -1
-De 15 0 38 0 0
-Po 0 134.112 72.517 134.493 72.136 0.254 -1
-De 0 0 38 53ADC307 0
-Po 3 134.112 72.517 134.112 72.517 0.889 -1
-De 15 1 38 0 0
-Po 0 133.096 73.533 134.112 72.517 0.254 -1
-De 15 0 38 53ADC304 0
-Po 0 140.716 71.12 140.716 70.231 0.254 -1
-De 15 0 39 0 10
-Po 0 143.028 67.919 143.028 66.2365 0.254 -1
-De 15 0 39 53ADB8AC 20
-Po 0 140.716 70.231 143.028 67.919 0.254 -1
-De 15 0 39 53ADB8AB 0
-Po 0 142.378 67.437 142.3035 67.437 0.254 -1
-De 15 0 40 0 0
-Po 0 142.3035 67.437 139.5095 70.231 0.254 -1
-De 15 0 40 53ADBF36 0
-Po 0 142.378 66.2365 142.378 67.437 0.254 -1
-De 15 0 40 0 10
-Po 0 139.5095 72.4535 140.716 73.66 0.254 -1
-De 15 0 40 53ADB8B5 20
-Po 0 139.5095 70.231 139.5095 72.4535 0.254 -1
-De 15 0 40 53ADBF38 0
-Po 0 147.578 66.2365 148.088 66.2365 0.254 -1
-De 15 0 41 0 10
-Po 0 150.876 69.0245 150.876 71.12 0.254 -1
-De 15 0 41 53ADBF29 20
-Po 0 148.088 66.2365 150.876 69.0245 0.254 -1
-De 15 0 41 53ADBF28 0
-Po 0 145.628 66.2365 145.628 70.19 0.254 -1
-De 15 0 42 0 0
-Po 0 145.628 70.19 147.066 71.628 0.254 -1
-De 15 0 42 53AEAE9B 0
-Po 0 148.971 71.755 150.876 73.66 0.254 -1
-De 0 0 42 53AEAE6A 0
-Po 3 147.066 71.628 147.066 71.628 0.889 -1
-De 15 1 42 0 0
-Po 0 147.066 71.628 147.193 71.755 0.254 -1
-De 0 0 42 53AEAE68 0
-Po 0 147.193 71.755 148.971 71.755 0.254 -1
-De 0 0 42 53AEAE69 0
-Po 0 136.271 56.3372 136.271 57.3786 0.254 -1
-De 0 0 43 0 0
-Po 0 142.6845 61.5061 142.6845 62.1665 0.254 -1
-De 0 0 43 53AEBE46 0
-Po 0 142.189202 61.010802 142.6845 61.5061 0.254 -1
-De 0 0 43 53AEBE41 0
-Po 0 139.903202 61.010802 142.189202 61.010802 0.254 -1
-De 0 0 43 53AEBE3F 0
-Po 0 136.271 57.3786 139.903202 61.010802 0.254 -1
-De 0 0 43 53AEBE3C 0
-Po 0 142.378 60.6365 142.378 61.86 0.254 -1
-De 15 0 43 0 10
-Po 0 136.271 55.88 135.001 54.61 0.254 -1
-De 0 0 43 53ADB937 20
-Po 0 136.271 56.3372 136.271 55.88 0.254 -1
-De 0 0 43 53AEBE3A 0
-Po 3 142.6845 62.1665 142.6845 62.1665 0.889 -1
-De 15 1 43 0 0
-Po 0 142.378 61.86 142.6845 62.1665 0.254 -1
-De 15 0 43 53ADB927 0
-Po 0 147.578 60.6365 147.578 59.813 0.254 -1
-De 15 0 44 0 10
-Po 0 148.971 55.88 147.701 54.61 0.254 -1
-De 15 0 44 53AC9BCC 20
-Po 0 148.971 58.42 148.971 55.88 0.254 -1
-De 15 0 44 53AC9BCA 0
-Po 0 147.578 59.813 148.971 58.42 0.254 -1
-De 15 0 44 53AC9BC9 0
-Po 0 145.628 60.6365 145.628 59.096 0.254 -1
-De 15 0 45 0 10
-Po 0 146.431 55.88 145.161 54.61 0.254 -1
-De 15 0 45 53AC9BD5 20
-Po 0 146.431 58.293 146.431 55.88 0.254 -1
-De 15 0 45 53AC9BD4 0
-Po 0 145.628 59.096 146.431 58.293 0.254 -1
-De 15 0 45 53AC9BD3 0
-Po 0 119.888 62.992 120.015 62.992 0.254 -1
-De 0 0 46 0 0
-Po 0 121.158 58.293 122.301 57.15 0.254 -1
-De 0 0 46 53ADF2B4 0
-Po 0 121.158 61.849 121.158 58.293 0.254 -1
-De 0 0 46 53ADF2B1 0
-Po 0 120.015 62.992 121.158 61.849 0.254 -1
-De 0 0 46 53ADF2AF 0
-Po 0 112.3188 71.9836 114.808 71.9836 0.254 -1
-De 15 0 46 0 30
-Po 0 114.808 71.9836 114.8588 72.0344 0.254 -1
-De 15 0 46 53ACA587 30
-Po 0 112.3188 71.9836 112.014 71.9836 0.254 -1
-De 15 0 46 0 30
-Po 0 112.014 71.9836 110.998 70.9676 0.254 -1
-De 15 0 46 53ACA53B 10
-Po 0 110.998 70.9676 110.998 63.3984 0.254 -1
-De 15 0 46 0 0
-Po 0 111.4552 62.9412 112.268 62.9412 0.254 -1
-De 15 0 46 53ACA538 20
-Po 0 110.998 63.3984 111.4552 62.9412 0.254 -1
-De 15 0 46 53ACA537 0
-Po 0 117.4496 72.0344 114.8588 72.0344 0.254 -1
-De 15 0 46 0 30
-Po 0 112.268 62.9412 114.808 62.9412 0.254 -1
-De 15 0 46 0 30
-Po 0 114.808 62.9412 117.348 62.9412 0.254 -1
-De 15 0 46 53ACA522 30
-Po 0 117.348 62.9412 119.888 62.9412 0.254 -1
-De 15 0 46 53ACA523 30
-Po 0 178.308 60.452 178.308 59.69 0.508 -1
-De 15 0 47 0 10
-Po 3 178.435 59.563 178.435 59.563 0.889 -1
-De 15 1 47 0 0
-Po 0 178.308 59.69 178.435 59.563 0.508 -1
-De 15 0 47 53A9AE8C 0
-Po 0 141.703 66.2365 140.9767 66.2365 0.508 -1
-De 15 0 47 0 0
-Po 0 140.9065 66.2813 140.9192 66.294 0.508 -1
-De 15 0 47 53AEBDD2 0
-Po 3 140.9192 66.294 140.9192 66.294 0.889 -1
-De 15 1 47 0 0
-Po 0 140.9065 66.2813 139.446 66.2813 0.508 -1
-De 15 0 47 0 0
-Po 0 140.9767 66.2365 140.9192 66.294 0.508 -1
-De 15 0 47 53AEBDDE 0
-Po 0 107.95 91.948 107.95 94.488 0.508 -1
-De 15 0 47 0 0
-Po 0 107.95 94.488 107.95 97.028 0.508 -1
-De 15 0 47 53AEBA69 0
-Po 0 107.95 97.028 107.95 99.568 0.508 -1
-De 15 0 47 53AEBA6A 0
-Po 0 119.126 91.948 119.126 94.488 0.508 -1
-De 15 0 47 0 0
-Po 0 119.126 94.488 119.126 97.028 0.508 -1
-De 15 0 47 53AEBA64 0
-Po 0 119.126 97.028 119.126 99.568 0.508 -1
-De 15 0 47 53AEBA65 0
-Po 0 142.5484 92.958 142.5484 94.0526 0.508 -1
-De 15 0 47 0 0
-Po 3 142.0495 94.5515 142.0495 94.5515 0.889 -1
-De 15 1 47 0 0
-Po 0 142.5484 94.0526 142.0495 94.5515 0.508 -1
-De 15 0 47 53AEAF82 0
-Po 0 159.1945 67.437 160.401 67.437 0.508 -1
-De 15 0 47 0 0
-Po 3 160.401 67.437 160.401 67.437 0.889 -1
-De 15 1 47 0 0
-Po 0 128.876 67.57 128.876 66.646 0.508 -1
-De 15 0 47 0 0
-Po 0 128.27 66.04 126.238 66.04 0.508 -1
-De 15 0 47 53ADC31D 0
-Po 0 128.876 66.646 128.27 66.04 0.508 -1
-De 15 0 47 53ADC31B 0
-Po 0 174.3075 66.675 174.3075 65.3415 0.508 -1
-De 15 0 47 0 10
-Po 3 174.244 65.278 174.244 65.278 0.889 -1
-De 15 1 47 0 0
-Po 0 174.3075 65.3415 174.244 65.278 0.508 -1
-De 15 0 47 53ADBF5F 0
-Po 0 125.095 61.976 123.952 61.976 0.508 -1
-De 15 0 47 0 10
-Po 3 123.952 61.976 123.952 61.976 0.889 -1
-De 15 1 47 0 0
-Po 0 146.05 92.7735 146.05 91.44 0.508 -1
-De 15 0 47 0 10
-Po 3 146.05 91.44 146.05 91.44 0.889 -1
-De 15 1 47 0 0
-Po 0 153.826 92.958 154.3244 92.958 0.508 -1
-De 15 0 47 0 10
-Po 3 154.432 93.0656 154.432 93.0656 0.889 -1
-De 15 1 47 0 0
-Po 0 154.3244 92.958 154.432 93.0656 0.508 -1
-De 15 0 47 53ACA21B 0
-Po 3 134.4295 98.4885 134.4295 98.4885 0.889 -1
-De 15 1 47 0 0
-Po 0 134.4295 97.409 134.4295 98.4885 0.508 -1
-De 15 0 47 0 10
-Po 0 141.2234 92.958 141.2234 89.2816 0.254 -1
-De 15 0 48 0 0
-Po 0 141.2234 89.2816 142.24 88.265 0.254 -1
-De 15 0 48 53AEB290 0
-Po 0 140.5734 92.958 140.5734 89.1384 0.254 -1
-De 15 0 49 0 10
-Po 0 140.5734 89.1384 139.7 88.265 0.254 -1
-De 15 0 49 53ACC0ED 20
-Po 0 126.238 71.12 127.381 71.12 0.254 -1
-De 15 0 50 0 0
-Po 0 129.551 68.95 129.551 67.57 0.254 -1
-De 15 0 50 53ADC334 0
-Po 0 127.381 71.12 129.551 68.95 0.254 -1
-De 15 0 50 53ADC332 0
-Po 0 139.2734 92.958 139.2734 90.5689 0.254 -1
-De 15 0 51 0 0
-Po 0 138.176 89.4715 135.8265 89.4715 0.254 -1
-De 15 0 51 53AEB354 0
-Po 0 139.2734 90.5689 138.176 89.4715 0.254 -1
-De 15 0 51 53AEB353 0
-Po 0 135.8265 89.4715 134.62 88.265 0.254 -1
-De 15 0 51 53AEB357 0
-Po 0 135.8265 89.4715 134.62 88.265 0.254 -1
-De 15 0 51 53AEB30C 0
-Po 0 138.6234 92.958 138.6234 90.807902 0.254 -1
-De 15 0 52 0 0
-Po 0 137.858498 90.043 133.858 90.043 0.254 -1
-De 15 0 52 53AEB35C 0
-Po 0 138.6234 90.807902 137.858498 90.043 0.254 -1
-De 15 0 52 53AEB35B 0
-Po 0 133.858 90.043 132.08 88.265 0.254 -1
-De 15 0 52 53AEB362 0
-Po 0 133.858 90.043 132.08 88.265 0.254 -1
-De 15 0 52 53AEB320 0
-Po 0 157.2895 67.437 157.2895 69.723 0.254 -1
-De 15 0 53 0 0
-Po 0 136.6734 92.958 131.693 92.958 0.254 -1
-De 15 0 54 0 0
-Po 0 131.693 92.958 127 88.265 0.254 -1
-De 15 0 54 53AEB2C4 0
-Po 0 153.151 92.958 153.151 94.223 0.254 -1
-De 15 0 55 0 0
-Po 0 153.151 94.223 153.3525 94.4245 0.254 -1
-De 15 0 55 53AEAD1D 0
-Po 0 156.7815 94.4245 157.226 93.98 0.254 -1
-De 15 0 55 53AEAD1F 0
-Po 0 153.3525 94.4245 156.7815 94.4245 0.254 -1
-De 15 0 55 53AEAD1E 0
-Po 0 139.9234 92.958 139.9234 90.2029 0.254 -1
-De 15 0 56 0 0
-Po 0 137.9855 88.265 137.16 88.265 0.254 -1
-De 15 0 56 53AEB344 0
-Po 0 139.9234 90.2029 137.9855 88.265 0.254 -1
-De 15 0 56 53AEB343 0
-Po 0 137.9734 92.958 137.9734 91.0469 0.254 -1
-De 15 0 57 0 0
-Po 0 131.8895 90.6145 129.54 88.265 0.254 -1
-De 15 0 57 53AEB373 0
-Po 0 137.541 90.6145 131.8895 90.6145 0.254 -1
-De 15 0 57 53AEB369 0
-Po 0 137.9734 91.0469 137.541 90.6145 0.254 -1
-De 15 0 57 53AEB367 0
-Po 0 152.501 92.958 152.501 94.335 0.254 -1
-De 15 0 58 0 0
-Po 0 155.702 94.996 157.226 96.52 0.254 -1
-De 15 0 58 53AEAD24 0
-Po 0 153.162 94.996 155.702 94.996 0.254 -1
-De 15 0 58 53AEAD23 0
-Po 0 152.501 94.335 153.162 94.996 0.254 -1
-De 15 0 58 53AEAD22 0
-Po 0 147.951 92.958 147.951 88.269 0.254 -1
-De 15 0 59 0 30
-Po 0 147.951 88.269 147.955 88.265 0.254 -1
-De 15 0 59 53ACCA63 30
-Po 0 151.851 92.958 151.851 94.403424 0.254 -1
-De 15 0 60 0 0
-Po 0 156.0195 97.8535 157.226 99.06 0.254 -1
-De 15 0 60 53AEAD2C 0
-Po 0 156.0195 96.266 156.0195 97.8535 0.254 -1
-De 15 0 60 53AEAD2B 0
-Po 0 155.3845 95.631 156.0195 96.266 0.254 -1
-De 15 0 60 53AEAD2A 0
-Po 0 153.078576 95.631 155.3845 95.631 0.254 -1
-De 15 0 60 53AEAD28 0
-Po 0 151.851 94.403424 153.078576 95.631 0.254 -1
-De 15 0 60 53AEAD27 0
-Po 0 149.901 92.958 149.901 90.383 0.254 -1
-De 15 0 61 0 0
-Po 0 151.9555 89.3445 153.035 88.265 0.254 -1
-De 15 0 61 53AEAD39 0
-Po 0 150.9395 89.3445 151.9555 89.3445 0.254 -1
-De 15 0 61 53AEAD37 0
-Po 0 149.901 90.383 150.9395 89.3445 0.254 -1
-De 15 0 61 53AEAD36 0
-Po 0 149.251 92.958 149.251 89.509 0.254 -1
-De 15 0 62 0 0
-Po 0 149.251 89.509 150.495 88.265 0.254 -1
-De 15 0 62 53AEAD33 0
-Po 0 151.201 92.958 151.201 90.988 0.254 -1
-De 15 0 63 0 0
-Po 0 155.7655 90.6145 158.115 88.265 0.254 -1
-De 15 0 63 53AEAD45 0
-Po 0 151.5745 90.6145 155.7655 90.6145 0.254 -1
-De 15 0 63 53AEAD44 0
-Po 0 151.201 90.988 151.5745 90.6145 0.254 -1
-De 15 0 63 53AEAD43 0
-Po 0 141.8734 92.958 141.8734 91.1716 0.254 -1
-De 15 0 64 0 0
-Po 0 141.8734 91.1716 144.78 88.265 0.254 -1
-De 15 0 64 53AEB294 0
-Po 0 132.801 67.57 132.801 68.793 0.254 -1
-De 15 0 65 0 0
-Po 0 135.636 71.628 135.636 73.7235 0.254 -1
-De 15 0 65 53ADC313 0
-Po 0 132.801 68.793 135.636 71.628 0.254 -1
-De 15 0 65 53ADC310 0
-Po 0 131.501 67.57 131.501 73.477 0.254 -1
-De 15 0 66 0 0
-Po 0 131.501 73.477 126.238 78.74 0.254 -1
-De 15 0 66 53ADC341 0
-Po 0 130.851 67.57 130.851 71.587 0.254 -1
-De 15 0 67 0 0
-Po 0 130.851 71.587 126.238 76.2 0.254 -1
-De 15 0 67 53ADC33C 0
-Po 0 161.036 61.6585 161.036 62.484 0.254 -1
-De 15 0 68 0 0
-Po 0 161.036 62.484 160.5788 62.9412 0.254 -1
-De 15 0 68 53AEC014 0
-Po 0 148.6408 63.1698 151.4602 63.1698 0.254 -1
-De 15 0 68 0 0
-Po 0 151.6888 62.9412 158.4452 62.9412 0.254 -1
-De 0 0 68 53AEBF23 0
-Po 0 151.5364 63.0936 151.6888 62.9412 0.254 -1
-De 0 0 68 53AEBF22 0
-Po 3 151.5364 63.0936 151.5364 63.0936 0.889 -1
-De 15 1 68 0 0
-Po 0 151.4602 63.1698 151.5364 63.0936 0.254 -1
-De 15 0 68 53AEBF1A 0
-Po 0 158.4452 62.9412 158.496 62.9412 0.254 -1
-De 15 0 68 53AEBF06 0
-Po 3 158.4452 62.9412 158.4452 62.9412 0.889 -1
-De 15 1 68 0 0
-Po 0 141.728 60.6365 141.728 62.8356 0.254 -1
-De 15 0 68 0 0
-Po 0 146.0788 63.0936 146.928 62.2444 0.254 -1
-De 15 0 68 53AEBEE5 0
-Po 0 141.986 63.0936 146.0788 63.0936 0.254 -1
-De 15 0 68 53AEBEE3 0
-Po 0 141.728 62.8356 141.986 63.0936 0.254 -1
-De 15 0 68 53AEBEE2 0
-Po 0 128.901 61.97 128.901 63.7834 0.254 -1
-De 15 0 68 0 0
-Po 0 128.8288 63.8556 128.8288 63.881 0.254 -1
-De 0 0 68 53AEBEB2 0
-Po 3 128.8288 63.8556 128.8288 63.8556 0.889 -1
-De 15 1 68 0 0
-Po 0 128.901 63.7834 128.8288 63.8556 0.254 -1
-De 15 0 68 53AEBEAD 0
-Po 0 134.112 63.881 136.1694 63.881 0.254 -1
-De 0 0 68 0 0
-Po 0 141.728 61.5736 141.728 60.6365 0.254 -1
-De 15 0 68 53AEBE8B 0
-Po 0 141.3256 61.976 141.728 61.5736 0.254 -1
-De 15 0 68 53AEBE8A 0
-Po 0 140.6652 61.976 141.3256 61.976 0.254 -1
-De 15 0 68 53AEBE89 0
-Po 0 140.5636 61.8744 140.6652 61.976 0.254 -1
-De 15 0 68 53AEBE88 0
-Po 3 140.5636 61.8744 140.5636 61.8744 0.889 -1
-De 15 1 68 0 0
-Po 0 138.176 61.8744 140.5636 61.8744 0.254 -1
-De 0 0 68 53AEBE82 0
-Po 0 136.1694 63.881 138.176 61.8744 0.254 -1
-De 0 0 68 53AEBE7E 0
+Po 0 151.511 104.14 150.241 105.41 0.254 -1
+De 15 0 20 53BFC777 0
+Po 0 151.511 101.854 151.511 104.14 0.254 -1
+De 15 0 20 53BFC776 0
+Po 0 151.851 101.514 151.511 101.854 0.254 -1
+De 15 0 20 53BFC774 0
+Po 0 152.781 105.41 152.781 105.156 0.254 -1
+De 15 0 21 0 0
+Po 0 153.151 100.573 153.151 98.558 0.254 -1
+De 15 0 21 53BFC76B 0
+Po 0 154.051 101.473 153.151 100.573 0.254 -1
+De 15 0 21 53BFC769 0
+Po 0 154.051 103.886 154.051 101.473 0.254 -1
+De 15 0 21 53BFC761 0
+Po 0 152.781 105.156 154.051 103.886 0.254 -1
+De 15 0 21 53BFC75F 0
 Po 0 132.334 100.3935 134.0485 100.3935 0.254 -1
-De 0 0 68 0 0
+De 0 0 22 0 0
 Po 0 134.0485 100.3935 137.3505 97.0915 0.254 -1
-De 0 0 68 53AEB97D 0
+De 0 0 22 53AEB97D 0
 Po 0 142.5234 98.558 142.5234 97.1002 0.254 -1
-De 15 0 68 0 0
+De 15 0 22 0 0
 Po 0 142.5234 97.1002 142.5448 97.0788 0.254 -1
-De 15 0 68 53AEB948 0
+De 15 0 22 53AEB948 0
 Po 0 137.3505 97.0915 142.5321 97.0915 0.254 -1
-De 15 0 68 0 0
+De 15 0 22 0 0
 Po 0 142.5321 97.0915 142.5448 97.0788 0.254 -1
-De 15 0 68 53AEB92A 0
+De 15 0 22 53AEB92A 0
 Po 0 142.875 96.7486 148.6662 96.7486 0.254 -1
-De 0 0 68 53AEB931 0
+De 0 0 22 53AEB931 0
 Po 3 142.5448 97.0788 142.5448 97.0788 0.889 -1
-De 15 1 68 0 0
+De 15 1 22 0 0
 Po 0 142.5448 97.0788 142.875 96.7486 0.254 -1
-De 0 0 68 53AEB930 0
+De 0 0 22 53AEB930 0
 Po 0 137.3234 98.558 137.3234 97.1186 0.254 -1
-De 15 0 68 0 0
+De 15 0 22 0 0
 Po 0 137.3234 97.1186 137.3505 97.0915 0.254 -1
-De 15 0 68 53AEB56B 0
+De 15 0 22 53AEB56B 0
 Po 3 137.3505 97.0915 137.3505 97.0915 0.889 -1
-De 15 1 68 0 0
+De 15 1 22 0 0
 Po 3 148.6662 96.7486 148.6662 96.7486 0.889 -1
-De 15 1 68 0 0
-Po 0 121.6025 86.2965 121.6025 79.9465 0.254 -1
-De 0 0 68 0 0
-Po 0 123.952 75.9714 123.952 64.897 0.254 -1
-De 15 0 68 53ADE9CA 0
-Po 0 124.968 63.881 128.8288 63.881 0.254 -1
-De 0 0 68 53ADB7EF 0
-Po 0 124.587 64.262 124.968 63.881 0.254 -1
-De 0 0 68 53ADB7EE 0
-Po 3 124.587 64.262 124.587 64.262 0.889 -1
-De 15 1 68 0 0
-Po 0 123.952 64.897 124.587 64.262 0.254 -1
-De 15 0 68 53ADB7EC 0
-Po 0 123.952 77.597 123.9393 77.6097 0.254 -1
-De 15 0 68 53ADE9CC 0
-Po 3 123.9393 77.6097 123.9393 77.6097 0.889 -1
-De 15 1 68 0 0
-Po 0 123.952 75.9714 123.952 77.597 0.254 -1
-De 15 0 68 0 0
-Po 3 121.6025 86.2965 121.6025 86.2965 0.889 -1
-De 15 1 68 0 0
-Po 0 121.6025 86.2965 121.666 86.36 0.254 -1
-De 15 0 68 53AEB151 0
-Po 0 121.666 86.36 121.666 91.948 0.254 -1
-De 15 0 68 53AEB152 0
-Po 0 121.6025 79.9465 123.9393 77.6097 0.254 -1
-De 0 0 68 53AEB3BB 0
+De 15 1 22 0 0
 Po 0 132.334 100.3935 132.3975 100.457 0.254 -1
-De 15 0 68 53AEB0A1 0
+De 15 0 22 53AEB0A1 0
 Po 3 132.334 100.3935 132.334 100.3935 0.889 -1
-De 15 1 68 0 0
+De 15 1 22 0 0
 Po 0 153.801 98.558 153.801 97.413 0.254 -1
-De 15 0 68 0 0
+De 15 0 22 0 0
 Po 0 153.801 97.413 153.4795 97.0915 0.254 -1
-De 15 0 68 53AEACAB 0
+De 15 0 22 53AEACAB 0
 Po 0 149.0091 97.0915 148.6662 96.7486 0.254 -1
-De 15 0 68 53AEACAD 0
+De 15 0 22 53AEACAD 0
 Po 0 153.4795 97.0915 149.0091 97.0915 0.254 -1
-De 15 0 68 53AEACAC 0
-Po 0 147.8534 63.1698 148.6408 63.1698 0.254 -1
-De 15 0 68 53ACC9FE 0
-Po 0 146.928 62.2444 147.8534 63.1698 0.254 -1
-De 15 0 68 53ACC9FD 0
-Po 0 128.8288 63.881 134.112 63.881 0.254 -1
-De 0 0 68 53AEBEB5 0
-Po 0 134.112 63.881 134.101 63.881 0.254 -1
-De 15 0 68 53ADB7E3 0
-Po 3 134.112 63.881 134.112 63.881 0.889 -1
-De 15 1 68 0 0
-Po 0 134.101 63.881 134.101 61.97 0.254 -1
-De 15 0 68 53ADB7E6 20
-Po 0 158.369 62.9412 158.496 62.9412 0.254 -1
-De 15 0 68 0 0
-Po 0 158.496 62.9412 160.3248 62.9412 0.254 -1
-De 15 0 68 53AD9FE1 0
-Po 0 160.3248 62.9412 160.5788 62.9412 0.254 -1
-De 15 0 68 53ADF447 0
-Po 0 160.5788 62.9412 162.8648 62.9412 0.254 -1
-De 15 0 68 53AEC017 0
-Po 0 163.322 62.484 163.322 61.6585 0.254 -1
-De 15 0 68 53AD9FDC 20
-Po 0 162.8648 62.9412 163.322 62.484 0.254 -1
-De 15 0 68 53AD9FDB 0
-Po 0 158.369 62.9412 157.861 62.4332 0.254 -1
-De 15 0 68 53AD9EE2 0
-Po 0 172.974 64.262 172.085 64.262 0.254 -1
-De 15 0 68 0 10
-Po 0 172.085 64.262 170.7642 62.9412 0.254 -1
-De 15 0 68 53AD9EDF 0
-Po 0 170.7642 62.9412 158.369 62.9412 0.254 -1
-De 15 0 68 53AD9FCE 0
-Po 0 157.861 62.4332 157.861 57.15 0.254 -1
-De 15 0 68 53AD9EE3 20
-Po 0 146.928 60.6365 146.928 62.2444 0.254 -1
-De 15 0 68 0 10
+De 15 0 22 53AEACAC 0
 Po 0 148.6916 96.774 148.7932 96.774 0.254 -1
-De 15 0 68 53ACC737 0
+De 15 0 22 53ACC737 0
 Po 0 148.6662 96.7486 148.6916 96.774 0.254 -1
-De 15 0 68 53ACC736 0
+De 15 0 22 53ACC736 0
 Po 0 148.6628 96.774 148.601 96.8358 0.254 -1
-De 15 0 68 53ACA1E3 0
+De 15 0 22 53ACA1E3 0
 Po 0 148.7932 96.774 148.6628 96.774 0.254 -1
-De 15 0 68 53ACC73B 0
+De 15 0 22 53ACC73B 0
 Po 0 148.601 98.558 148.601 96.8358 0.254 -1
-De 15 0 68 0 10
+De 15 0 22 0 10
+Po 0 178.308 64.262 178.308 65.913 0.254 -1
+De 15 0 23 0 10
+Po 3 178.308 65.913 178.308 65.913 0.889 -1
+De 15 1 23 0 0
+Po 0 178.308 64.262 178.308 67.8815 0.254 -1
+De 15 0 23 0 30
+Po 0 178.308 67.8815 178.2445 67.945 0.254 -1
+De 15 0 23 0 30
+Po 0 178.308 65.913 176.911 65.913 0.254 -1
+De 0 0 23 0 0
+Po 0 176.911 65.913 176.403 65.405 0.254 -1
+De 0 0 23 0 0
+Po 0 176.403 65.405 176.403 57.023 0.254 -1
+De 0 0 23 0 0
+Po 0 176.403 57.023 174.498 55.118 0.254 -1
+De 0 0 23 0 0
+Po 0 174.498 55.118 172.974 55.118 0.254 -1
+De 0 0 23 0 20
+Po 0 172.974 57.658 174.117 57.658 0.254 -1
+De 0 0 24 0 10
+Po 0 174.117 57.658 175.26 58.801 0.254 -1
+De 0 0 24 0 0
+Po 0 175.26 58.801 175.26 62.992 0.254 -1
+De 0 0 24 0 0
+Po 3 175.26 62.992 175.26 62.992 0.889 -1
+De 15 1 24 0 0
+Po 0 175.26 62.992 178.308 62.992 0.254 -1
+De 15 0 24 0 20
+Po 0 177.546 62.992 178.308 62.992 0.254 -1
+De 15 0 24 0 20
+Po 0 177.292 63.246 177.546 62.992 0.254 -1
+De 15 0 24 0 0
+Po 0 177.292 71.501 177.292 63.246 0.254 -1
+De 15 0 24 0 0
+Po 0 177.546 71.755 177.292 71.501 0.254 -1
+De 15 0 24 0 0
+Po 0 178.2445 71.755 177.546 71.755 0.254 -1
+De 15 0 24 0 10
+Po 0 178.2445 69.85 179.07 69.85 0.254 -1
+De 15 0 25 0 10
+Po 0 179.07 69.85 179.324 69.596 0.254 -1
+De 15 0 25 0 0
+Po 0 179.324 69.596 179.324 61.976 0.254 -1
+De 15 0 25 0 0
+Po 0 179.324 61.976 179.07 61.722 0.254 -1
+De 15 0 25 0 0
+Po 0 179.07 61.722 178.308 61.722 0.254 -1
+De 15 0 25 0 20
+Po 0 112.141 54.61 112.141 54.737 0.254 -1
+De 0 0 26 0 30
+Po 0 112.141 54.737 110.998 55.88 0.254 -1
+De 0 0 26 53ADC041 10
+Po 0 110.998 55.88 110.998 68.326 0.254 -1
+De 0 0 26 53ADC042 0
+Po 0 110.998 68.326 112.268 69.596 0.254 -1
+De 0 0 26 53ADC044 20
+Po 0 112.141 57.15 112.141 60.2742 0.254 -1
+De 0 0 27 0 30
+Po 0 112.141 60.2742 112.268 60.4012 0.254 -1
+De 0 0 27 53ACA3D1 30
+Po 0 113.538 55.753 113.538 68.326 0.254 -1
+De 0 0 28 0 0
+Po 0 113.538 68.326 114.808 69.596 0.254 -1
+De 0 0 28 53ADC08E 20
+Po 0 113.538 55.753 114.681 54.61 0.254 -1
+De 0 0 28 53ADC08A 20
+Po 0 114.681 57.15 114.681 60.2742 0.254 -1
+De 0 0 29 0 30
+Po 0 114.681 60.2742 114.808 60.4012 0.254 -1
+De 0 0 29 53ACA3D5 30
+Po 0 119.761 54.61 118.491 55.88 0.254 -1
+De 0 0 30 0 10
+Po 0 119.888 60.071 119.888 60.452 0.254 -1
+De 0 0 30 53ADC09A 30
+Po 0 118.491 58.674 119.888 60.071 0.254 -1
+De 0 0 30 53ADC099 20
+Po 0 118.491 55.88 118.491 58.674 0.254 -1
+De 0 0 30 53ADC098 0
+Po 0 117.221 57.15 117.221 60.2742 0.254 -1
+De 0 0 31 0 30
+Po 0 117.221 60.2742 117.348 60.4012 0.254 -1
+De 0 0 31 53ACA3D8 30
+Po 0 117.221 54.61 117.221 54.864 0.254 -1
+De 0 0 32 0 30
+Po 0 116.078 68.326 117.348 69.596 0.254 -1
+De 0 0 32 53ADC094 20
+Po 0 116.078 56.007 116.078 68.326 0.254 -1
+De 0 0 32 53ADC092 0
+Po 0 117.221 54.864 116.078 56.007 0.254 -1
+De 0 0 32 53ADC091 10
+Po 0 112.3188 74.5236 114.808 74.5236 0.254 -1
+De 15 0 33 0 30
+Po 0 114.808 74.5236 114.8588 74.5744 0.254 -1
+De 15 0 33 53ADBFCE 30
+Po 0 114.8588 74.5744 117.4496 74.5744 0.254 -1
+De 15 0 33 53ADBFCF 30
+Po 0 114.8588 74.5744 118.9736 74.5744 0.254 -1
+De 15 0 33 53ADBFC5 10
+Po 0 118.9736 74.5744 119.888 73.66 0.254 -1
+De 15 0 33 53ADBFC6 0
+Po 0 119.888 73.66 119.888 65.4812 0.254 -1
+De 15 0 33 53ADBFC7 20
+Po 0 119.761 57.15 119.761 57.531 0.254 -1
+De 15 0 33 0 30
+Po 0 119.761 57.531 121.158 58.928 0.254 -1
+De 15 0 33 53ADBFC0 10
+Po 0 112.268 65.4812 114.808 65.4812 0.254 -1
+De 15 0 33 0 30
+Po 0 114.808 65.4812 117.348 65.4812 0.254 -1
+De 15 0 33 53ACA465 30
+Po 0 117.348 65.4812 119.888 65.4812 0.254 -1
+De 15 0 33 53ACA466 30
+Po 0 119.888 65.4812 121.158 64.2112 0.254 -1
+De 15 0 33 53ACA467 10
+Po 0 121.158 64.2112 121.158 58.928 0.254 -1
+De 15 0 33 53ACA468 0
+Po 0 144.978 66.2365 144.978 72.842 0.254 -1
+De 15 0 34 0 0
+Po 0 144.978 72.842 145.796 73.66 0.254 -1
+De 15 0 34 53AEAE94 0
+Po 0 134.751 67.57 134.751 68.9015 0.254 -1
+De 15 0 35 0 10
+Po 0 134.751 68.9015 138.176 72.3265 0.254 -1
+De 15 0 35 53ADB8D2 0
+Po 0 138.176 72.3265 138.176 73.7235 0.254 -1
+De 15 0 35 53ADB8D5 20
+Po 0 146.278 66.2365 146.278 69.189 0.254 -1
+De 15 0 36 0 0
+Po 0 146.278 69.189 148.336 71.247 0.254 -1
+De 15 0 36 53AEAEA0 0
+Po 0 148.336 71.247 148.336 73.66 0.254 -1
+De 15 0 36 53AEAEA5 0
+Po 0 144.978 60.6365 144.978 58.8085 0.254 -1
+De 15 0 37 0 10
+Po 0 143.9545 55.9435 142.621 54.61 0.254 -1
+De 15 0 37 53AC9BE1 20
+Po 0 143.9545 57.785 143.9545 55.9435 0.254 -1
+De 15 0 37 53AC9BDE 0
+Po 0 144.978 58.8085 143.9545 57.785 0.254 -1
+De 15 0 37 53AC9BDB 0
+Po 0 134.751 61.97 134.751 58.551 0.254 -1
+De 15 0 38 0 10
+Po 0 133.731 55.88 132.461 54.61 0.254 -1
+De 15 0 38 53ADB967 20
+Po 0 133.731 57.531 133.731 55.88 0.254 -1
+De 15 0 38 53ADB964 0
+Po 0 134.751 58.551 133.731 57.531 0.254 -1
+De 15 0 38 53ADB963 0
+Po 0 144.328 66.2365 144.328 70.048 0.254 -1
+De 15 0 41 0 10
+Po 0 144.328 70.048 143.256 71.12 0.254 -1
+De 15 0 41 53AC9F87 20
+Po 0 143.256 73.66 141.986 72.39 0.254 -1
+De 15 0 42 0 10
+Po 0 141.986 72.39 141.986 70.4596 0.254 -1
+De 15 0 42 53ADBF3A 0
+Po 0 141.986 70.4596 143.678 68.7676 0.254 -1
+De 15 0 42 53ADBF3B 0
+Po 0 143.678 66.2365 143.678 68.7676 0.254 -1
+De 15 0 42 0 10
+Po 0 144.328 60.6365 144.328 58.876924 0.254 -1
+De 15 0 43 0 10
+Po 0 141.351 55.88 140.081 54.61 0.254 -1
+De 15 0 43 53AC9BF1 20
+Po 0 141.351 57.658 141.351 55.88 0.254 -1
+De 15 0 43 53AC9BED 0
+Po 0 142.113 58.42 141.351 57.658 0.254 -1
+De 15 0 43 53AC9BEB 0
+Po 0 143.871076 58.42 142.113 58.42 0.254 -1
+De 15 0 43 53AC9BEA 0
+Po 0 144.328 58.876924 143.871076 58.42 0.254 -1
+De 15 0 43 53AC9BE9 0
+Po 0 140.081 57.15 140.081 57.404 0.254 -1
+De 15 0 44 0 C00000
+Po 0 143.7034 59.2484 143.7034 60.6492 0.254 -1
+De 15 0 44 53BFCC1C 800000
+Po 0 143.51 59.055 143.7034 59.2484 0.254 -1
+De 15 0 44 53BFCC1B 0
+Po 0 141.732 59.055 143.51 59.055 0.254 -1
+De 15 0 44 53BFCC15 0
+Po 0 140.081 57.404 141.732 59.055 0.254 -1
+De 15 0 44 53BFCC14 400000
+Po 0 148.844 59.944 140.6652 59.944 0.254 -1
+De 0 0 45 0 0
+Po 0 140.6652 59.944 138.7856 58.0644 0.254 -1
+De 0 0 45 53AEBE24 0
+Po 0 170.7515 59.4995 165.0365 59.4995 0.254 -1
+De 15 0 45 0 0
+Po 0 165.0365 59.4995 164.846 59.69 0.254 -1
+De 15 0 45 53ADF22F 0
+Po 0 170.7515 59.4995 170.815 59.436 0.254 -1
+De 15 0 45 53ADF22D 0
+Po 0 171.323 59.436 170.815 59.436 0.254 -1
+De 15 0 45 0 0
+Po 0 171.323 59.436 173.863 59.436 0.254 -1
+De 15 0 45 53ADF19C 0
+Po 0 173.863 59.436 174.244 59.817 0.254 -1
+De 15 0 45 53ADF15D 0
+Po 0 174.244 59.817 174.244 61.341 0.254 -1
+De 15 0 45 53ADF15F 0
+Po 0 174.244 61.341 173.863 61.722 0.254 -1
+De 15 0 45 53ADF161 0
+Po 0 173.863 61.722 172.974 61.722 0.254 -1
+De 15 0 45 53ADF162 0
+Po 0 148.844 59.944 153.035 59.944 0.254 -1
+De 15 0 45 53ADF09A 0
+Po 3 148.844 59.944 148.844 59.944 0.889 -1
+De 15 1 45 0 0
+Po 0 153.035 59.944 153.543 60.452 0.254 -1
+De 0 0 45 53ADF05B 0
+Po 0 153.543 60.452 163.703 60.452 0.254 -1
+De 0 0 45 53ADF061 0
+Po 0 163.703 60.452 164.084 60.452 0.254 -1
+De 0 0 45 53ADF102 0
+Po 3 164.846 59.69 164.846 59.69 0.889 -1
+De 15 1 45 0 0
+Po 0 164.084 60.452 164.846 59.69 0.254 -1
+De 0 0 45 53ADC0A6 0
+Po 3 153.035 59.944 153.035 59.944 0.889 -1
+De 15 1 45 0 0
+Po 0 138.7856 56.3626 138.7856 58.0644 0.254 -1
+De 0 0 45 0 0
+Po 0 137.541 54.61 137.541 55.118 0.254 -1
+De 0 0 45 0 30
+Po 0 137.541 55.118 138.7856 56.3626 0.254 -1
+De 0 0 45 53ACCD49 10
+Po 0 163.322 59.7535 164.7825 59.7535 0.254 -1
+De 15 0 45 0 10
+Po 0 164.7825 59.7535 164.846 59.69 0.254 -1
+De 15 0 45 53AD9FC3 0
+Po 0 163.576 61.5696 164.9984 61.5696 0.254 -1
+De 0 0 46 0 0
+Po 0 166.116 60.452 172.974 60.452 0.254 -1
+De 15 0 46 53ADF272 0
+Po 0 165.354 61.214 166.116 60.452 0.254 -1
+De 15 0 46 53ADF271 0
+Po 3 165.354 61.214 165.354 61.214 0.889 -1
+De 15 1 46 0 0
+Po 0 164.9984 61.5696 165.354 61.214 0.254 -1
+De 0 0 46 53ADF26D 0
+Po 0 163.068 61.5696 163.576 61.5696 0.254 -1
+De 0 0 46 0 0
+Po 0 159.004 61.468 159.004 61.5696 0.254 -1
+De 0 0 46 53AD9FBE 0
+Po 0 159.004 61.5696 163.068 61.5696 0.254 -1
+De 0 0 46 53AD9FC1 0
+Po 0 161.036 59.7535 159.7025 59.7535 0.254 -1
+De 15 0 46 0 10
+Po 3 159.004 61.468 159.004 61.468 0.889 -1
+De 15 1 46 0 0
+Po 0 159.004 60.452 159.004 61.468 0.254 -1
+De 15 0 46 53AD9FBC 0
+Po 0 159.7025 59.7535 159.004 60.452 0.254 -1
+De 15 0 46 53AD9FBB 0
+Po 0 131.501 67.57 131.501 73.477 0.254 -1
+De 15 0 47 0 0
+Po 0 131.501 73.477 126.238 78.74 0.254 -1
+De 15 0 47 53ADC341 0
+Po 0 124.841 57.5818 124.841 57.15 0.254 -1
+De 15 0 48 53ACAF96 30
+Po 0 132.151 70.302 133.096 71.247 0.254 -1
+De 15 0 50 53ADC2E8 0
+Po 0 133.451 67.57 133.451 66.268 0.254 -1
+De 15 0 51 0 0
+Po 0 134.493 67.31 134.493 72.136 0.254 -1
+De 0 0 51 53AEAED7 0
+Po 0 132.9055 65.7225 134.493 67.31 0.254 -1
+De 0 0 51 53AEAED6 0
+Po 3 132.9055 65.7225 132.9055 65.7225 0.889 -1
+De 15 1 51 0 0
+Po 0 133.451 66.268 132.9055 65.7225 0.254 -1
+De 15 0 51 53AEAED1 0
+Po 0 134.493 72.136 134.112 72.517 0.254 -1
+De 0 0 51 53AEAEDA 0
+Po 0 133.096 73.787 133.096 73.533 0.254 -1
+De 15 0 51 0 0
+Po 0 134.112 72.517 134.493 72.136 0.254 -1
+De 0 0 51 53ADC307 0
+Po 3 134.112 72.517 134.112 72.517 0.889 -1
+De 15 1 51 0 0
+Po 0 133.096 73.533 134.112 72.517 0.254 -1
+De 15 0 51 53ADC304 0
+Po 0 140.716 71.12 140.716 70.231 0.254 -1
+De 15 0 52 0 10
+Po 0 143.028 67.919 143.028 66.2365 0.254 -1
+De 15 0 52 53ADB8AC 20
+Po 0 140.716 70.231 143.028 67.919 0.254 -1
+De 15 0 52 53ADB8AB 0
+Po 0 142.378 67.437 142.3035 67.437 0.254 -1
+De 15 0 53 0 0
+Po 0 142.3035 67.437 139.5095 70.231 0.254 -1
+De 15 0 53 53ADBF36 0
+Po 0 142.378 66.2365 142.378 67.437 0.254 -1
+De 15 0 53 0 10
+Po 0 139.5095 72.4535 140.716 73.66 0.254 -1
+De 15 0 53 53ADB8B5 20
+Po 0 139.5095 70.231 139.5095 72.4535 0.254 -1
+De 15 0 53 53ADBF38 0
+Po 0 147.578 66.2365 148.088 66.2365 0.254 -1
+De 15 0 54 0 10
+Po 0 150.876 69.0245 150.876 71.12 0.254 -1
+De 15 0 54 53ADBF29 20
+Po 0 148.088 66.2365 150.876 69.0245 0.254 -1
+De 15 0 54 53ADBF28 0
+Po 0 145.628 66.2365 145.628 70.19 0.254 -1
+De 15 0 55 0 0
+Po 0 145.628 70.19 147.066 71.628 0.254 -1
+De 15 0 55 53AEAE9B 0
+Po 0 148.971 71.755 150.876 73.66 0.254 -1
+De 0 0 55 53AEAE6A 0
+Po 3 147.066 71.628 147.066 71.628 0.889 -1
+De 15 1 55 0 0
+Po 0 147.066 71.628 147.193 71.755 0.254 -1
+De 0 0 55 53AEAE68 0
+Po 0 147.193 71.755 148.971 71.755 0.254 -1
+De 0 0 55 53AEAE69 0
+Po 0 136.271 56.3372 136.271 57.3786 0.254 -1
+De 0 0 59 0 0
+Po 0 142.6845 61.5061 142.6845 62.1665 0.254 -1
+De 0 0 59 53AEBE46 0
+Po 0 142.189202 61.010802 142.6845 61.5061 0.254 -1
+De 0 0 59 53AEBE41 0
+Po 0 139.903202 61.010802 142.189202 61.010802 0.254 -1
+De 0 0 59 53AEBE3F 0
+Po 0 136.271 57.3786 139.903202 61.010802 0.254 -1
+De 0 0 59 53AEBE3C 0
+Po 0 142.378 60.6365 142.378 61.86 0.254 -1
+De 15 0 59 0 10
+Po 0 136.271 55.88 135.001 54.61 0.254 -1
+De 0 0 59 53ADB937 20
+Po 0 136.271 56.3372 136.271 55.88 0.254 -1
+De 0 0 59 53AEBE3A 0
+Po 3 142.6845 62.1665 142.6845 62.1665 0.889 -1
+De 15 1 59 0 0
+Po 0 142.378 61.86 142.6845 62.1665 0.254 -1
+De 15 0 59 53ADB927 0
+Po 0 147.578 60.6365 147.578 59.813 0.254 -1
+De 15 0 60 0 10
+Po 0 148.971 55.88 147.701 54.61 0.254 -1
+De 15 0 60 53AC9BCC 20
+Po 0 148.971 58.42 148.971 55.88 0.254 -1
+De 15 0 60 53AC9BCA 0
+Po 0 147.578 59.813 148.971 58.42 0.254 -1
+De 15 0 60 53AC9BC9 0
+Po 0 145.628 60.6365 145.628 59.096 0.254 -1
+De 15 0 61 0 10
+Po 0 146.431 55.88 145.161 54.61 0.254 -1
+De 15 0 61 53AC9BD5 20
+Po 0 146.431 58.293 146.431 55.88 0.254 -1
+De 15 0 61 53AC9BD4 0
+Po 0 145.628 59.096 146.431 58.293 0.254 -1
+De 15 0 61 53AC9BD3 0
+Po 0 119.888 62.992 120.015 62.992 0.254 -1
+De 0 0 62 0 0
+Po 0 121.158 58.293 122.301 57.15 0.254 -1
+De 0 0 62 53ADF2B4 0
+Po 0 121.158 61.849 121.158 58.293 0.254 -1
+De 0 0 62 53ADF2B1 0
+Po 0 120.015 62.992 121.158 61.849 0.254 -1
+De 0 0 62 53ADF2AF 0
+Po 0 112.3188 71.9836 114.808 71.9836 0.254 -1
+De 15 0 62 0 30
+Po 0 114.808 71.9836 114.8588 72.0344 0.254 -1
+De 15 0 62 53ACA587 30
+Po 0 112.3188 71.9836 112.014 71.9836 0.254 -1
+De 15 0 62 0 30
+Po 0 112.014 71.9836 110.998 70.9676 0.254 -1
+De 15 0 62 53ACA53B 10
+Po 0 110.998 70.9676 110.998 63.3984 0.254 -1
+De 15 0 62 0 0
+Po 0 111.4552 62.9412 112.268 62.9412 0.254 -1
+De 15 0 62 53ACA538 20
+Po 0 110.998 63.3984 111.4552 62.9412 0.254 -1
+De 15 0 62 53ACA537 0
+Po 0 117.4496 72.0344 114.8588 72.0344 0.254 -1
+De 15 0 62 0 30
+Po 0 112.268 62.9412 114.808 62.9412 0.254 -1
+De 15 0 62 0 30
+Po 0 114.808 62.9412 117.348 62.9412 0.254 -1
+De 15 0 62 53ACA522 30
+Po 0 117.348 62.9412 119.888 62.9412 0.254 -1
+De 15 0 62 53ACA523 30
+Po 0 178.308 60.452 178.308 59.69 0.508 -1
+De 15 0 63 0 10
+Po 3 178.435 59.563 178.435 59.563 0.889 -1
+De 15 1 63 0 0
+Po 0 178.308 59.69 178.435 59.563 0.508 -1
+De 15 0 63 53A9AE8C 0
+Po 0 141.703 66.2365 140.9767 66.2365 0.508 -1
+De 15 0 63 0 0
+Po 0 140.9065 66.2813 140.9192 66.294 0.508 -1
+De 15 0 63 53AEBDD2 0
+Po 3 140.9192 66.294 140.9192 66.294 0.889 -1
+De 15 1 63 0 0
+Po 0 140.9065 66.2813 139.446 66.2813 0.508 -1
+De 15 0 63 0 0
+Po 0 140.9767 66.2365 140.9192 66.294 0.508 -1
+De 15 0 63 53AEBDDE 0
+Po 0 142.5484 92.958 142.5484 94.0526 0.508 -1
+De 15 0 63 0 0
+Po 3 142.0495 94.5515 142.0495 94.5515 0.889 -1
+De 15 1 63 0 0
+Po 0 142.5484 94.0526 142.0495 94.5515 0.508 -1
+De 15 0 63 53AEAF82 0
+Po 0 159.1945 67.437 160.401 67.437 0.508 -1
+De 15 0 63 0 0
+Po 3 160.401 67.437 160.401 67.437 0.889 -1
+De 15 1 63 0 0
+Po 0 128.876 67.57 128.876 66.646 0.508 -1
+De 15 0 63 0 0
+Po 0 128.27 66.04 126.238 66.04 0.508 -1
+De 15 0 63 53ADC31D 0
+Po 0 128.876 66.646 128.27 66.04 0.508 -1
+De 15 0 63 53ADC31B 0
+Po 0 174.3075 66.675 174.3075 65.3415 0.508 -1
+De 15 0 63 0 10
+Po 3 174.244 65.278 174.244 65.278 0.889 -1
+De 15 1 63 0 0
+Po 0 174.3075 65.3415 174.244 65.278 0.508 -1
+De 15 0 63 53ADBF5F 0
+Po 0 125.095 61.976 123.952 61.976 0.508 -1
+De 15 0 63 0 10
+Po 3 123.952 61.976 123.952 61.976 0.889 -1
+De 15 1 63 0 0
+Po 0 146.05 92.7735 146.05 91.44 0.508 -1
+De 15 0 63 0 10
+Po 3 146.05 91.44 146.05 91.44 0.889 -1
+De 15 1 63 0 0
+Po 0 153.826 92.958 154.3244 92.958 0.508 -1
+De 15 0 63 0 10
+Po 3 154.432 93.0656 154.432 93.0656 0.889 -1
+De 15 1 63 0 0
+Po 0 154.3244 92.958 154.432 93.0656 0.508 -1
+De 15 0 63 53ACA21B 0
+Po 3 134.4295 98.4885 134.4295 98.4885 0.889 -1
+De 15 1 63 0 0
+Po 0 134.4295 97.409 134.4295 98.4885 0.508 -1
+De 15 0 63 0 10
+Po 0 130.851 67.57 130.851 71.587 0.254 -1
+De 15 0 64 0 0
+Po 0 130.851 71.587 126.238 76.2 0.254 -1
+De 15 0 64 53ADC33C 0
+Po 0 130.201 67.57 130.201 69.697 0.254 -1
+De 15 0 65 0 0
+Po 0 130.201 69.697 126.238 73.66 0.254 -1
+De 15 0 65 53ADC337 0
+Po 0 126.238 71.12 127.381 71.12 0.254 -1
+De 15 0 66 0 0
+Po 0 129.551 68.95 129.551 67.57 0.254 -1
+De 15 0 66 53ADC334 0
+Po 0 127.381 71.12 129.551 68.95 0.254 -1
+De 15 0 66 53ADC332 0
+Po 0 139.2734 92.958 139.2734 90.5689 0.254 -1
+De 15 0 67 0 0
+Po 0 138.176 89.4715 135.8265 89.4715 0.254 -1
+De 15 0 67 53AEB354 0
+Po 0 139.2734 90.5689 138.176 89.4715 0.254 -1
+De 15 0 67 53AEB353 0
+Po 0 135.8265 89.4715 134.62 88.265 0.254 -1
+De 15 0 67 53AEB357 0
+Po 0 135.8265 89.4715 134.62 88.265 0.254 -1
+De 15 0 67 53AEB30C 0
+Po 0 139.9234 92.958 139.9234 90.2029 0.254 -1
+De 15 0 68 0 0
+Po 0 137.9855 88.265 137.16 88.265 0.254 -1
+De 15 0 68 53AEB344 0
+Po 0 139.9234 90.2029 137.9855 88.265 0.254 -1
+De 15 0 68 53AEB343 0
+Po 0 140.5734 92.958 140.5734 89.1384 0.254 -1
+De 15 0 69 0 10
+Po 0 140.5734 89.1384 139.7 88.265 0.254 -1
+De 15 0 69 53ACC0ED 20
+Po 0 137.9734 92.958 137.9734 91.0469 0.254 -1
+De 15 0 70 0 0
+Po 0 131.8895 90.6145 129.54 88.265 0.254 -1
+De 15 0 70 53AEB373 0
+Po 0 137.541 90.6145 131.8895 90.6145 0.254 -1
+De 15 0 70 53AEB369 0
+Po 0 137.9734 91.0469 137.541 90.6145 0.254 -1
+De 15 0 70 53AEB367 0
+Po 0 138.6234 92.958 138.6234 90.807902 0.254 -1
+De 15 0 71 0 0
+Po 0 137.858498 90.043 133.858 90.043 0.254 -1
+De 15 0 71 53AEB35C 0
+Po 0 138.6234 90.807902 137.858498 90.043 0.254 -1
+De 15 0 71 53AEB35B 0
+Po 0 133.858 90.043 132.08 88.265 0.254 -1
+De 15 0 71 53AEB362 0
+Po 0 133.858 90.043 132.08 88.265 0.254 -1
+De 15 0 71 53AEB320 0
+Po 0 141.8734 92.958 141.8734 91.1716 0.254 -1
+De 15 0 72 0 0
+Po 0 141.8734 91.1716 144.78 88.265 0.254 -1
+De 15 0 72 53AEB294 0
+Po 0 141.2234 92.958 141.2234 89.2816 0.254 -1
+De 15 0 73 0 0
+Po 0 141.2234 89.2816 142.24 88.265 0.254 -1
+De 15 0 73 53AEB290 0
+Po 0 136.6734 92.958 131.693 92.958 0.254 -1
+De 15 0 74 0 0
+Po 0 131.693 92.958 127 88.265 0.254 -1
+De 15 0 74 53AEB2C4 0
+Po 0 149.901 92.958 149.901 90.383 0.254 -1
+De 15 0 75 0 0
+Po 0 151.9555 89.3445 153.035 88.265 0.254 -1
+De 15 0 75 53AEAD39 0
+Po 0 150.9395 89.3445 151.9555 89.3445 0.254 -1
+De 15 0 75 53AEAD37 0
+Po 0 149.901 90.383 150.9395 89.3445 0.254 -1
+De 15 0 75 53AEAD36 0
+Po 0 149.251 92.958 149.251 89.509 0.254 -1
+De 15 0 76 0 0
+Po 0 149.251 89.509 150.495 88.265 0.254 -1
+De 15 0 76 53AEAD33 0
+Po 0 151.201 92.958 151.201 90.988 0.254 -1
+De 15 0 77 0 0
+Po 0 155.7655 90.6145 158.115 88.265 0.254 -1
+De 15 0 77 53AEAD45 0
+Po 0 151.5745 90.6145 155.7655 90.6145 0.254 -1
+De 15 0 77 53AEAD44 0
+Po 0 151.201 90.988 151.5745 90.6145 0.254 -1
+De 15 0 77 53AEAD43 0
+Po 0 151.851 92.958 151.851 94.403424 0.254 -1
+De 15 0 78 0 0
+Po 0 156.0195 97.8535 157.226 99.06 0.254 -1
+De 15 0 78 53AEAD2C 0
+Po 0 156.0195 96.266 156.0195 97.8535 0.254 -1
+De 15 0 78 53AEAD2B 0
+Po 0 155.3845 95.631 156.0195 96.266 0.254 -1
+De 15 0 78 53AEAD2A 0
+Po 0 153.078576 95.631 155.3845 95.631 0.254 -1
+De 15 0 78 53AEAD28 0
+Po 0 151.851 94.403424 153.078576 95.631 0.254 -1
+De 15 0 78 53AEAD27 0
+Po 0 153.151 92.958 153.151 94.223 0.254 -1
+De 15 0 79 0 0
+Po 0 153.151 94.223 153.3525 94.4245 0.254 -1
+De 15 0 79 53AEAD1D 0
+Po 0 156.7815 94.4245 157.226 93.98 0.254 -1
+De 15 0 79 53AEAD1F 0
+Po 0 153.3525 94.4245 156.7815 94.4245 0.254 -1
+De 15 0 79 53AEAD1E 0
+Po 0 147.951 92.958 147.951 88.269 0.254 -1
+De 15 0 80 0 30
+Po 0 147.951 88.269 147.955 88.265 0.254 -1
+De 15 0 80 53ACCA63 30
+Po 0 152.501 92.958 152.501 94.335 0.254 -1
+De 15 0 81 0 0
+Po 0 155.702 94.996 157.226 96.52 0.254 -1
+De 15 0 81 53AEAD24 0
+Po 0 153.162 94.996 155.702 94.996 0.254 -1
+De 15 0 81 53AEAD23 0
+Po 0 152.501 94.335 153.162 94.996 0.254 -1
+De 15 0 81 53AEAD22 0
+Po 0 157.2895 67.437 157.2895 69.723 0.254 -1
+De 15 0 82 0 0
+Po 0 132.151 67.57 132.151 70.302 0.254 -1
+De 15 0 83 0 0
+Po 0 161.036 61.6585 161.036 62.484 0.254 -1
+De 15 0 84 0 0
+Po 0 161.036 62.484 160.5788 62.9412 0.254 -1
+De 15 0 84 53AEC014 0
+Po 0 148.6408 63.1698 151.4602 63.1698 0.254 -1
+De 15 0 84 0 0
+Po 0 151.6888 62.9412 158.4452 62.9412 0.254 -1
+De 0 0 84 53AEBF23 0
+Po 0 151.5364 63.0936 151.6888 62.9412 0.254 -1
+De 0 0 84 53AEBF22 0
+Po 3 151.5364 63.0936 151.5364 63.0936 0.889 -1
+De 15 1 84 0 0
+Po 0 151.4602 63.1698 151.5364 63.0936 0.254 -1
+De 15 0 84 53AEBF1A 0
+Po 0 158.4452 62.9412 158.496 62.9412 0.254 -1
+De 15 0 84 53AEBF06 0
+Po 3 158.4452 62.9412 158.4452 62.9412 0.889 -1
+De 15 1 84 0 0
+Po 0 141.728 60.6365 141.728 62.8356 0.254 -1
+De 15 0 84 0 0
+Po 0 146.0788 63.0936 146.928 62.2444 0.254 -1
+De 15 0 84 53AEBEE5 0
+Po 0 141.986 63.0936 146.0788 63.0936 0.254 -1
+De 15 0 84 53AEBEE3 0
+Po 0 141.728 62.8356 141.986 63.0936 0.254 -1
+De 15 0 84 53AEBEE2 0
+Po 0 128.901 61.97 128.901 63.7834 0.254 -1
+De 15 0 84 0 0
+Po 0 128.8288 63.8556 128.8288 63.881 0.254 -1
+De 0 0 84 53AEBEB2 0
+Po 3 128.8288 63.8556 128.8288 63.8556 0.889 -1
+De 15 1 84 0 0
+Po 0 128.901 63.7834 128.8288 63.8556 0.254 -1
+De 15 0 84 53AEBEAD 0
+Po 0 134.112 63.881 136.1694 63.881 0.254 -1
+De 0 0 84 0 0
+Po 0 141.728 61.5736 141.728 60.6365 0.254 -1
+De 15 0 84 53AEBE8B 0
+Po 0 141.3256 61.976 141.728 61.5736 0.254 -1
+De 15 0 84 53AEBE8A 0
+Po 0 140.6652 61.976 141.3256 61.976 0.254 -1
+De 15 0 84 53AEBE89 0
+Po 0 140.5636 61.8744 140.6652 61.976 0.254 -1
+De 15 0 84 53AEBE88 0
+Po 3 140.5636 61.8744 140.5636 61.8744 0.889 -1
+De 15 1 84 0 0
+Po 0 138.176 61.8744 140.5636 61.8744 0.254 -1
+De 0 0 84 53AEBE82 0
+Po 0 136.1694 63.881 138.176 61.8744 0.254 -1
+De 0 0 84 53AEBE7E 0
+Po 0 147.8534 63.1698 148.6408 63.1698 0.254 -1
+De 15 0 84 53ACC9FE 0
+Po 0 146.928 62.2444 147.8534 63.1698 0.254 -1
+De 15 0 84 53ACC9FD 0
+Po 0 128.8288 63.881 134.112 63.881 0.254 -1
+De 0 0 84 53AEBEB5 0
+Po 0 134.112 63.881 134.101 63.881 0.254 -1
+De 15 0 84 53ADB7E3 0
+Po 3 134.112 63.881 134.112 63.881 0.889 -1
+De 15 1 84 0 0
+Po 0 134.101 63.881 134.101 61.97 0.254 -1
+De 15 0 84 53ADB7E6 20
+Po 0 158.369 62.9412 158.496 62.9412 0.254 -1
+De 15 0 84 0 0
+Po 0 158.496 62.9412 160.3248 62.9412 0.254 -1
+De 15 0 84 53AD9FE1 0
+Po 0 160.3248 62.9412 160.5788 62.9412 0.254 -1
+De 15 0 84 53ADF447 0
+Po 0 160.5788 62.9412 162.8648 62.9412 0.254 -1
+De 15 0 84 53AEC017 0
+Po 0 163.322 62.484 163.322 61.6585 0.254 -1
+De 15 0 84 53AD9FDC 20
+Po 0 162.8648 62.9412 163.322 62.484 0.254 -1
+De 15 0 84 53AD9FDB 0
+Po 0 158.369 62.9412 157.861 62.4332 0.254 -1
+De 15 0 84 53AD9EE2 0
+Po 0 172.974 64.262 172.085 64.262 0.254 -1
+De 15 0 84 0 10
+Po 0 172.085 64.262 170.7642 62.9412 0.254 -1
+De 15 0 84 53AD9EDF 0
+Po 0 170.7642 62.9412 158.369 62.9412 0.254 -1
+De 15 0 84 53AD9FCE 0
+Po 0 157.861 62.4332 157.861 57.15 0.254 -1
+De 15 0 84 53AD9EE3 20
+Po 0 146.928 60.6365 146.928 62.2444 0.254 -1
+De 15 0 84 0 10
 Po 0 157.861 57.15 157.861 54.61 0.254 -1
-De 15 0 68 0 30
+De 15 0 84 0 30
 Po 0 172.4025 66.675 172.4025 67.3735 0.254 -1
-De 15 0 68 0 30
+De 15 0 84 0 30
 Po 0 172.974 67.945 174.879 67.945 0.254 -1
-De 15 0 68 0 0
+De 15 0 84 0 0
 Po 0 172.4025 67.3735 172.974 67.945 0.254 -1
-De 15 0 68 0 10
+De 15 0 84 0 10
 Po 0 172.974 64.262 172.974 65.024 0.254 -1
-De 15 0 68 0 10
+De 15 0 84 0 10
 Po 0 172.4025 65.5955 172.4025 66.675 0.254 -1
-De 15 0 68 0 20
+De 15 0 84 0 20
 Po 0 172.974 65.024 172.4025 65.5955 0.254 -1
-De 15 0 68 0 0
+De 15 0 84 0 0
 Po 0 176.3395 69.85 174.879 69.85 0.254 -1
-De 15 0 68 0 10
+De 15 0 84 0 10
 Po 0 176.3395 71.755 175.006 71.755 0.254 -1
-De 15 0 68 0 10
+De 15 0 84 0 10
 Po 0 174.879 71.628 174.879 69.85 0.254 -1
-De 15 0 68 0 0
+De 15 0 84 0 0
 Po 0 174.879 69.85 174.879 67.945 0.254 -1
-De 15 0 68 0 0
+De 15 0 84 0 0
 Po 0 175.006 71.755 174.879 71.628 0.254 -1
-De 15 0 68 0 0
+De 15 0 84 0 0
 Po 0 174.879 67.945 176.3395 67.945 0.254 -1
-De 15 0 68 0 20
+De 15 0 84 0 20
 Po 0 158.115 85.725 158.1658 85.725 0.254 -1
-De 15 0 69 0 30
+De 15 0 85 0 30
 Po 0 159.3342 93.5482 159.766 93.98 0.254 -1
-De 15 0 69 53ACC1A1 30
+De 15 0 85 53ACC1A1 30
 Po 0 159.3342 86.8934 159.3342 93.5482 0.254 -1
-De 15 0 69 53ACC19D 20
+De 15 0 85 53ACC19D 20
 Po 0 158.1658 85.725 159.3342 86.8934 0.254 -1
-De 15 0 69 53ACC19C 10
+De 15 0 85 53ACC19C 10
 Po 0 155.321 54.61 155.321 57.15 0.254 -1
-De 15 0 70 0 30
+De 15 0 86 0 30
 Po 0 155.321 57.15 155.321 59.817 0.254 -1
-De 15 0 70 53AC9AC5 30
+De 15 0 86 53AC9AC5 30
 $EndTRACK
 $ZONE
 $EndZONE
 $CZONE_OUTLINE
-ZInfo 53A85928 47 "GND"
+ZInfo 53A85928 63 "GND"
 ZLayer 0
 ZAux 16 E
 ZClearance 0.254 T
@@ -10664,9 +10379,9 @@ ZCorner 110.236 62.357 0
 ZCorner 110.6805 53.721 1
 $endCZONE_OUTLINE
 $CZONE_OUTLINE
-ZInfo 53AC9963 69 "VDD_5V"
+ZInfo 53AC9963 85 "VDD_5V"
 ZLayer 15
-ZAux 18 E
+ZAux 17 E
 ZClearance 0.2032 T
 ZMinThickness 0.254
 ZOptions 0 16 F 0.508 0.508
@@ -10678,9 +10393,8 @@ ZCorner 95.6945 58.3565 0
 ZCorner 93.98 62.738 0
 ZCorner 93.726 65.4685 0
 ZCorner 93.853 88.265 0
-ZCorner 124.2695 88.8365 0
-ZCorner 126.8095 91.1225 0
-ZCorner 133.858 100.203 0
+ZCorner 94.107 97.282 0
+ZCorner 105.029 107.061 0
 ZCorner 133.9215 106.8705 0
 ZCorner 172.974 107.315 0
 ZCorner 172.974 91.8845 0
@@ -15627,1084 +15341,6 @@ $POLYSCORNERS
 179.110968 56.822643 0 0
 179.5653 59.117185 0 0
 179.5653 61.49888 1 0
-$endPOLYSCORNERS
-$endCZONE_OUTLINE
-$CZONE_OUTLINE
-ZInfo 53AC9A67 68 "VDD_3V3EXP"
-ZLayer 15
-ZAux 10 E
-ZClearance 0.2032 T
-ZMinThickness 0.254
-ZOptions 0 16 F 0.508 0.508
-ZSmoothing 0 0
-ZCorner 133.5405 106.9975 0
-ZCorner 133.5405 100.7745 0
-ZCorner 126.365 91.44 0
-ZCorner 123.952 89.281 0
-ZCorner 93.726 89.027 0
-ZCorner 93.7895 95.631 0
-ZCorner 96.012 101.727 0
-ZCorner 100.838 105.6005 0
-ZCorner 103.886 106.7435 0
-ZCorner 106.553 107.061 1
-$POLYSCORNERS
-133.4135 106.7943 0 0
-130.952418 106.7943 0 0
-130.952418 105.205774 0 0
-130.795752 104.826613 0 0
-130.505913 104.536267 0 0
-130.127026 104.37894 0 0
-129.716774 104.378582 0 0
-129.639804 104.410384 0 0
-129.159 103.92958 0 0
-129.159 103.566336 0 0
-129.336087 103.743733 0 0
-129.714974 103.90106 0 0
-130.125226 103.901418 0 0
-130.504387 103.744752 0 0
-130.794733 103.454913 0 0
-130.95206 103.076026 0 0
-130.952418 102.665774 0 0
-130.795752 102.286613 0 0
-130.505913 101.996267 0 0
-130.127026 101.83894 0 0
-129.716774 101.838582 0 0
-129.337613 101.995248 0 0
-129.148801 102.183729 0 0
-129.120331 102.040597 0 0
-129.12033 102.040596 0 0
-129.08379 101.98591 0 0
-129.01021 101.87579 0 0
-129.01021 101.875789 0 0
-126.34321 99.20879 0 0
-126.178403 99.098669 0 0
-125.984 99.06 0 0
-125.349197 99.06 0 0
-125.349197 96.827041 0 0
-125.349197 94.261641 0 0
-125.349197 91.721641 0 0
-125.175553 91.301389 0 0
-124.854302 90.979577 0 0
-124.434354 90.8052 0 0
-123.979641 90.804803 0 0
-123.559389 90.978447 0 0
-123.237577 91.299698 0 0
-123.0632 91.719646 0 0
-123.06303 91.913706 0 0
-123.04736 91.600631 0 0
-122.888396 91.216858 0 0
-122.646212 91.147393 0 0
-122.466607 91.326998 0 0
-122.466607 90.967788 0 0
-122.397142 90.725604 0 0
-121.873696 90.538857 0 0
-121.318631 90.56664 0 0
-120.934858 90.725604 0 0
-120.865393 90.967788 0 0
-121.666 91.768395 0 0
-122.466607 90.967788 0 0
-122.466607 91.326998 0 0
-121.845605 91.948 0 0
-122.646212 92.748607 0 0
-122.888396 92.679142 0 0
-123.065852 92.181738 0 0
-123.236447 92.594611 0 0
-123.557698 92.916423 0 0
-123.977646 93.0908 0 0
-124.432359 93.091197 0 0
-124.852611 92.917553 0 0
-125.174423 92.596302 0 0
-125.3488 92.176354 0 0
-125.349197 91.721641 0 0
-125.349197 94.261641 0 0
-125.175553 93.841389 0 0
-124.854302 93.519577 0 0
-124.434354 93.3452 0 0
-123.979641 93.344803 0 0
-123.559389 93.518447 0 0
-123.237577 93.839698 0 0
-123.0632 94.259646 0 0
-123.06303 94.453706 0 0
-123.04736 94.140631 0 0
-122.888396 93.756858 0 0
-122.646212 93.687393 0 0
-122.466607 93.866998 0 0
-122.466607 93.507788 0 0
-122.397142 93.265604 0 0
-122.273652 93.221547 0 0
-122.397142 93.170396 0 0
-122.466607 92.928212 0 0
-121.666 92.127605 0 0
-120.865393 92.928212 0 0
-120.934858 93.170396 0 0
-121.058347 93.214452 0 0
-120.934858 93.265604 0 0
-120.865393 93.507788 0 0
-121.666 94.308395 0 0
-122.466607 93.507788 0 0
-122.466607 93.866998 0 0
-121.845605 94.488 0 0
-122.646212 95.288607 0 0
-122.888396 95.219142 0 0
-123.065852 94.721738 0 0
-123.236447 95.134611 0 0
-123.557698 95.456423 0 0
-123.977646 95.6308 0 0
-124.432359 95.631197 0 0
-124.852611 95.457553 0 0
-125.174423 95.136302 0 0
-125.3488 94.716354 0 0
-125.349197 94.261641 0 0
-125.349197 96.827041 0 0
-125.175553 96.406789 0 0
-124.854302 96.084977 0 0
-124.434354 95.9106 0 0
-123.979641 95.910203 0 0
-123.559389 96.083847 0 0
-123.237577 96.405098 0 0
-123.0632 96.825046 0 0
-123.06303 97.019106 0 0
-123.04736 96.706031 0 0
-122.888396 96.322258 0 0
-122.646212 96.252793 0 0
-122.466607 96.432398 0 0
-122.466607 96.073188 0 0
-122.397142 95.831004 0 0
-122.240706 95.775193 0 0
-122.397142 95.710396 0 0
-122.466607 95.468212 0 0
-121.666 94.667605 0 0
-120.865393 95.468212 0 0
-120.934858 95.710396 0 0
-121.091293 95.766206 0 0
-120.934858 95.831004 0 0
-120.865393 96.073188 0 0
-121.666 96.873795 0 0
-122.466607 96.073188 0 0
-122.466607 96.432398 0 0
-121.845605 97.0534 0 0
-122.646212 97.854007 0 0
-122.888396 97.784542 0 0
-123.065852 97.287138 0 0
-123.236447 97.700011 0 0
-123.557698 98.021823 0 0
-123.977646 98.1962 0 0
-124.432359 98.196597 0 0
-124.852611 98.022953 0 0
-125.174423 97.701702 0 0
-125.3488 97.281754 0 0
-125.349197 96.827041 0 0
-125.349197 99.06 0 0
-125.232825 99.06 0 0
-125.175553 98.921389 0 0
-124.854302 98.599577 0 0
-124.434354 98.4252 0 0
-123.979641 98.424803 0 0
-123.559389 98.598447 0 0
-123.237577 98.919698 0 0
-123.0632 99.339646 0 0
-123.06303 99.533706 0 0
-123.04736 99.220631 0 0
-122.888396 98.836858 0 0
-122.646212 98.767393 0 0
-122.466607 98.946998 0 0
-122.466607 98.587788 0 0
-122.397142 98.345604 0 0
-122.306597 98.3133 0 0
-122.397142 98.275796 0 0
-122.466607 98.033612 0 0
-121.666 97.233005 0 0
-120.865393 98.033612 0 0
-120.934858 98.275796 0 0
-121.025402 98.308099 0 0
-120.934858 98.345604 0 0
-120.865393 98.587788 0 0
-121.666 99.388395 0 0
-122.466607 98.587788 0 0
-122.466607 98.946998 0 0
-121.845605 99.568 0 0
-122.646212 100.368607 0 0
-122.888396 100.299142 0 0
-123.065852 99.801738 0 0
-123.236447 100.214611 0 0
-123.557698 100.536423 0 0
-123.977646 100.7108 0 0
-124.432359 100.711197 0 0
-124.852611 100.537553 0 0
-125.174423 100.216302 0 0
-125.232681 100.076 0 0
-125.773579 100.076 0 0
-127.536475 101.838895 0 0
-127.176774 101.838582 0 0
-126.797613 101.995248 0 0
-126.507267 102.285087 0 0
-126.34994 102.663974 0 0
-126.349582 103.074226 0 0
-126.506248 103.453387 0 0
-126.796087 103.743733 0 0
-127.174974 103.90106 0 0
-127.585226 103.901418 0 0
-127.964387 103.744752 0 0
-128.143 103.56645 0 0
-128.143 104.14 0 0
-128.181669 104.334403 0 0
-128.29179 104.49921 0 0
-128.92122 105.12864 0 0
-128.88994 105.203974 0 0
-128.889582 105.614226 0 0
-129.046248 105.993387 0 0
-129.336087 106.283733 0 0
-129.714974 106.44106 0 0
-130.125226 106.441418 0 0
-130.504387 106.284752 0 0
-130.794733 105.994913 0 0
-130.95206 105.616026 0 0
-130.952418 105.205774 0 0
-130.952418 106.7943 0 0
-128.412418 106.7943 0 0
-128.412418 105.205774 0 0
-128.255752 104.826613 0 0
-127.965913 104.536267 0 0
-127.587026 104.37894 0 0
-127.176774 104.378582 0 0
-126.797613 104.535248 0 0
-126.507267 104.825087 0 0
-126.34994 105.203974 0 0
-126.349582 105.614226 0 0
-126.506248 105.993387 0 0
-126.796087 106.283733 0 0
-127.174974 106.44106 0 0
-127.585226 106.441418 0 0
-127.964387 106.284752 0 0
-128.254733 105.994913 0 0
-128.41206 105.616026 0 0
-128.412418 105.205774 0 0
-128.412418 106.7943 0 0
-125.872418 106.7943 0 0
-125.872418 105.205774 0 0
-125.872418 102.665774 0 0
-125.715752 102.286613 0 0
-125.425913 101.996267 0 0
-125.047026 101.83894 0 0
-124.636774 101.838582 0 0
-124.257613 101.995248 0 0
-123.967267 102.285087 0 0
-123.80994 102.663974 0 0
-123.809582 103.074226 0 0
-123.966248 103.453387 0 0
-124.256087 103.743733 0 0
-124.634974 103.90106 0 0
-125.045226 103.901418 0 0
-125.424387 103.744752 0 0
-125.714733 103.454913 0 0
-125.87206 103.076026 0 0
-125.872418 102.665774 0 0
-125.872418 105.205774 0 0
-125.715752 104.826613 0 0
-125.425913 104.536267 0 0
-125.047026 104.37894 0 0
-124.636774 104.378582 0 0
-124.257613 104.535248 0 0
-123.967267 104.825087 0 0
-123.80994 105.203974 0 0
-123.809582 105.614226 0 0
-123.966248 105.993387 0 0
-124.256087 106.283733 0 0
-124.634974 106.44106 0 0
-125.045226 106.441418 0 0
-125.424387 106.284752 0 0
-125.714733 105.994913 0 0
-125.87206 105.616026 0 0
-125.872418 105.205774 0 0
-125.872418 106.7943 0 0
-123.332418 106.7943 0 0
-123.332418 105.205774 0 0
-123.332418 102.665774 0 0
-123.175752 102.286613 0 0
-122.885913 101.996267 0 0
-122.507026 101.83894 0 0
-122.466607 101.838904 0 0
-122.466607 100.548212 0 0
-121.666 99.747605 0 0
-121.486395 99.92721 0 0
-121.486395 99.568 0 0
-120.685788 98.767393 0 0
-120.443604 98.836858 0 0
-120.269066 99.326082 0 0
-120.269066 98.730547 0 0
-120.211184 98.590463 0 0
-120.104101 98.483192 0 0
-119.964118 98.425066 0 0
-119.812547 98.424934 0 0
-119.761 98.424934 0 0
-119.761 98.196466 0 0
-119.963453 98.196466 0 0
-120.103537 98.138584 0 0
-120.210808 98.031501 0 0
-120.268934 97.891518 0 0
-120.269066 97.739947 0 0
-120.269066 97.089622 0 0
-120.28464 97.400769 0 0
-120.443604 97.784542 0 0
-120.685788 97.854007 0 0
-121.486395 97.0534 0 0
-120.685788 96.252793 0 0
-120.443604 96.322258 0 0
-120.269066 96.811482 0 0
-120.269066 96.215947 0 0
-120.211184 96.075863 0 0
-120.104101 95.968592 0 0
-119.964118 95.910466 0 0
-119.812547 95.910334 0 0
-119.761 95.910334 0 0
-119.761 95.631066 0 0
-119.963453 95.631066 0 0
-120.103537 95.573184 0 0
-120.210808 95.466101 0 0
-120.268934 95.326118 0 0
-120.269066 95.174547 0 0
-120.269066 94.524222 0 0
-120.28464 94.835369 0 0
-120.443604 95.219142 0 0
-120.685788 95.288607 0 0
-121.486395 94.488 0 0
-120.685788 93.687393 0 0
-120.443604 93.756858 0 0
-120.269066 94.246082 0 0
-120.269066 93.650547 0 0
-120.211184 93.510463 0 0
-120.104101 93.403192 0 0
-119.964118 93.345066 0 0
-119.812547 93.344934 0 0
-119.761 93.344934 0 0
-119.761 93.091066 0 0
-119.963453 93.091066 0 0
-120.103537 93.033184 0 0
-120.210808 92.926101 0 0
-120.268934 92.786118 0 0
-120.269066 92.634547 0 0
-120.269066 91.984222 0 0
-120.28464 92.295369 0 0
-120.443604 92.679142 0 0
-120.685788 92.748607 0 0
-121.486395 91.948 0 0
-120.685788 91.147393 0 0
-120.443604 91.216858 0 0
-120.269066 91.706082 0 0
-120.269066 91.110547 0 0
-120.211184 90.970463 0 0
-120.104101 90.863192 0 0
-119.964118 90.805066 0 0
-119.812547 90.804934 0 0
-118.288547 90.804934 0 0
-118.148463 90.862816 0 0
-118.041192 90.969899 0 0
-117.983066 91.109882 0 0
-117.982934 91.261453 0 0
-117.982934 92.785453 0 0
-118.040816 92.925537 0 0
-118.147899 93.032808 0 0
-118.287882 93.090934 0 0
-118.439453 93.091066 0 0
-118.491 93.091066 0 0
-118.491 93.344934 0 0
-118.288547 93.344934 0 0
-118.148463 93.402816 0 0
-118.041192 93.509899 0 0
-117.983066 93.649882 0 0
-117.982934 93.801453 0 0
-117.982934 95.325453 0 0
-118.040816 95.465537 0 0
-118.147899 95.572808 0 0
-118.287882 95.630934 0 0
-118.439453 95.631066 0 0
-118.491 95.631066 0 0
-118.491 95.910334 0 0
-118.288547 95.910334 0 0
-118.148463 95.968216 0 0
-118.041192 96.075299 0 0
-117.983066 96.215282 0 0
-117.982934 96.366853 0 0
-117.982934 97.890853 0 0
-118.040816 98.030937 0 0
-118.147899 98.138208 0 0
-118.287882 98.196334 0 0
-118.439453 98.196466 0 0
-118.491 98.196466 0 0
-118.491 98.424934 0 0
-118.288547 98.424934 0 0
-118.148463 98.482816 0 0
-118.041192 98.589899 0 0
-117.983066 98.729882 0 0
-117.982934 98.881453 0 0
-117.982934 100.405453 0 0
-118.040816 100.545537 0 0
-118.147899 100.652808 0 0
-118.287882 100.710934 0 0
-118.439453 100.711066 0 0
-119.963453 100.711066 0 0
-120.103537 100.653184 0 0
-120.210808 100.546101 0 0
-120.268934 100.406118 0 0
-120.269066 100.254547 0 0
-120.269066 99.604222 0 0
-120.28464 99.915369 0 0
-120.443604 100.299142 0 0
-120.685788 100.368607 0 0
-121.486395 99.568 0 0
-121.486395 99.92721 0 0
-120.865393 100.548212 0 0
-120.934858 100.790396 0 0
-121.458304 100.977143 0 0
-122.013369 100.94936 0 0
-122.397142 100.790396 0 0
-122.466607 100.548212 0 0
-122.466607 101.838904 0 0
-122.096774 101.838582 0 0
-121.717613 101.995248 0 0
-121.427267 102.285087 0 0
-121.26994 102.663974 0 0
-121.269582 103.074226 0 0
-121.426248 103.453387 0 0
-121.716087 103.743733 0 0
-122.094974 103.90106 0 0
-122.505226 103.901418 0 0
-122.884387 103.744752 0 0
-123.174733 103.454913 0 0
-123.33206 103.076026 0 0
-123.332418 102.665774 0 0
-123.332418 105.205774 0 0
-123.175752 104.826613 0 0
-122.885913 104.536267 0 0
-122.507026 104.37894 0 0
-122.096774 104.378582 0 0
-121.717613 104.535248 0 0
-121.427267 104.825087 0 0
-121.26994 105.203974 0 0
-121.269582 105.614226 0 0
-121.426248 105.993387 0 0
-121.716087 106.283733 0 0
-122.094974 106.44106 0 0
-122.505226 106.441418 0 0
-122.884387 106.284752 0 0
-123.174733 105.994913 0 0
-123.33206 105.616026 0 0
-123.332418 105.205774 0 0
-123.332418 106.7943 0 0
-120.792418 106.7943 0 0
-120.792418 105.205774 0 0
-120.792418 102.665774 0 0
-120.635752 102.286613 0 0
-120.345913 101.996267 0 0
-119.967026 101.83894 0 0
-119.556774 101.838582 0 0
-119.177613 101.995248 0 0
-118.887267 102.285087 0 0
-118.72994 102.663974 0 0
-118.729582 103.074226 0 0
-118.886248 103.453387 0 0
-119.176087 103.743733 0 0
-119.554974 103.90106 0 0
-119.965226 103.901418 0 0
-120.344387 103.744752 0 0
-120.634733 103.454913 0 0
-120.79206 103.076026 0 0
-120.792418 102.665774 0 0
-120.792418 105.205774 0 0
-120.635752 104.826613 0 0
-120.345913 104.536267 0 0
-119.967026 104.37894 0 0
-119.556774 104.378582 0 0
-119.177613 104.535248 0 0
-118.887267 104.825087 0 0
-118.72994 105.203974 0 0
-118.729582 105.614226 0 0
-118.886248 105.993387 0 0
-119.176087 106.283733 0 0
-119.554974 106.44106 0 0
-119.965226 106.441418 0 0
-120.344387 106.284752 0 0
-120.634733 105.994913 0 0
-120.79206 105.616026 0 0
-120.792418 105.205774 0 0
-120.792418 106.7943 0 0
-118.252418 106.7943 0 0
-118.252418 105.205774 0 0
-118.252418 102.665774 0 0
-118.095752 102.286613 0 0
-117.805913 101.996267 0 0
-117.427026 101.83894 0 0
-117.016774 101.838582 0 0
-116.637613 101.995248 0 0
-116.347267 102.285087 0 0
-116.18994 102.663974 0 0
-116.189582 103.074226 0 0
-116.346248 103.453387 0 0
-116.636087 103.743733 0 0
-117.014974 103.90106 0 0
-117.425226 103.901418 0 0
-117.804387 103.744752 0 0
-118.094733 103.454913 0 0
-118.25206 103.076026 0 0
-118.252418 102.665774 0 0
-118.252418 105.205774 0 0
-118.095752 104.826613 0 0
-117.805913 104.536267 0 0
-117.427026 104.37894 0 0
-117.016774 104.378582 0 0
-116.637613 104.535248 0 0
-116.347267 104.825087 0 0
-116.18994 105.203974 0 0
-116.189582 105.614226 0 0
-116.346248 105.993387 0 0
-116.636087 106.283733 0 0
-117.014974 106.44106 0 0
-117.425226 106.441418 0 0
-117.804387 106.284752 0 0
-118.094733 105.994913 0 0
-118.25206 105.616026 0 0
-118.252418 105.205774 0 0
-118.252418 106.7943 0 0
-117.275409 106.7943 0 0
-117.2 106.7793 0 0
-115.712418 106.7793 0 0
-115.712418 105.205774 0 0
-115.712418 102.665774 0 0
-115.555752 102.286613 0 0
-115.265913 101.996267 0 0
-114.887026 101.83894 0 0
-114.476774 101.838582 0 0
-114.173197 101.964017 0 0
-114.173197 99.341641 0 0
-114.173197 96.801641 0 0
-114.173197 94.261641 0 0
-114.173197 91.721641 0 0
-113.999553 91.301389 0 0
-113.678302 90.979577 0 0
-113.258354 90.8052 0 0
-112.803641 90.804803 0 0
-112.383389 90.978447 0 0
-112.061577 91.299698 0 0
-111.8872 91.719646 0 0
-111.88703 91.913706 0 0
-111.87136 91.600631 0 0
-111.712396 91.216858 0 0
-111.470212 91.147393 0 0
-111.290607 91.326998 0 0
-111.290607 90.967788 0 0
-111.221142 90.725604 0 0
-110.697696 90.538857 0 0
-110.142631 90.56664 0 0
-109.758858 90.725604 0 0
-109.689393 90.967788 0 0
-110.49 91.768395 0 0
-111.290607 90.967788 0 0
-111.290607 91.326998 0 0
-110.669605 91.948 0 0
-111.470212 92.748607 0 0
-111.712396 92.679142 0 0
-111.889852 92.181738 0 0
-112.060447 92.594611 0 0
-112.381698 92.916423 0 0
-112.801646 93.0908 0 0
-113.256359 93.091197 0 0
-113.676611 92.917553 0 0
-113.998423 92.596302 0 0
-114.1728 92.176354 0 0
-114.173197 91.721641 0 0
-114.173197 94.261641 0 0
-113.999553 93.841389 0 0
-113.678302 93.519577 0 0
-113.258354 93.3452 0 0
-112.803641 93.344803 0 0
-112.383389 93.518447 0 0
-112.061577 93.839698 0 0
-111.8872 94.259646 0 0
-111.88703 94.453706 0 0
-111.87136 94.140631 0 0
-111.712396 93.756858 0 0
-111.470212 93.687393 0 0
-111.290607 93.866998 0 0
-111.290607 93.507788 0 0
-111.221142 93.265604 0 0
-111.097652 93.221547 0 0
-111.221142 93.170396 0 0
-111.290607 92.928212 0 0
-110.49 92.127605 0 0
-109.689393 92.928212 0 0
-109.758858 93.170396 0 0
-109.882347 93.214452 0 0
-109.758858 93.265604 0 0
-109.689393 93.507788 0 0
-110.49 94.308395 0 0
-111.290607 93.507788 0 0
-111.290607 93.866998 0 0
-110.669605 94.488 0 0
-111.470212 95.288607 0 0
-111.712396 95.219142 0 0
-111.889852 94.721738 0 0
-112.060447 95.134611 0 0
-112.381698 95.456423 0 0
-112.801646 95.6308 0 0
-113.256359 95.631197 0 0
-113.676611 95.457553 0 0
-113.998423 95.136302 0 0
-114.1728 94.716354 0 0
-114.173197 94.261641 0 0
-114.173197 96.801641 0 0
-113.999553 96.381389 0 0
-113.678302 96.059577 0 0
-113.258354 95.8852 0 0
-112.803641 95.884803 0 0
-112.383389 96.058447 0 0
-112.061577 96.379698 0 0
-111.8872 96.799646 0 0
-111.88703 96.993706 0 0
-111.87136 96.680631 0 0
-111.712396 96.296858 0 0
-111.470212 96.227393 0 0
-111.290607 96.406998 0 0
-111.290607 96.047788 0 0
-111.221142 95.805604 0 0
-111.097652 95.761547 0 0
-111.221142 95.710396 0 0
-111.290607 95.468212 0 0
-110.49 94.667605 0 0
-109.689393 95.468212 0 0
-109.758858 95.710396 0 0
-109.882347 95.754452 0 0
-109.758858 95.805604 0 0
-109.689393 96.047788 0 0
-110.49 96.848395 0 0
-111.290607 96.047788 0 0
-111.290607 96.406998 0 0
-110.669605 97.028 0 0
-111.470212 97.828607 0 0
-111.712396 97.759142 0 0
-111.889852 97.261738 0 0
-112.060447 97.674611 0 0
-112.381698 97.996423 0 0
-112.801646 98.1708 0 0
-113.256359 98.171197 0 0
-113.676611 97.997553 0 0
-113.998423 97.676302 0 0
-114.1728 97.256354 0 0
-114.173197 96.801641 0 0
-114.173197 99.341641 0 0
-113.999553 98.921389 0 0
-113.678302 98.599577 0 0
-113.258354 98.4252 0 0
-112.803641 98.424803 0 0
-112.383389 98.598447 0 0
-112.061577 98.919698 0 0
-111.8872 99.339646 0 0
-111.88703 99.533706 0 0
-111.87136 99.220631 0 0
-111.712396 98.836858 0 0
-111.470212 98.767393 0 0
-111.290607 98.946998 0 0
-111.290607 98.587788 0 0
-111.221142 98.345604 0 0
-111.097652 98.301547 0 0
-111.221142 98.250396 0 0
-111.290607 98.008212 0 0
-110.49 97.207605 0 0
-109.689393 98.008212 0 0
-109.758858 98.250396 0 0
-109.882347 98.294452 0 0
-109.758858 98.345604 0 0
-109.689393 98.587788 0 0
-110.49 99.388395 0 0
-111.290607 98.587788 0 0
-111.290607 98.946998 0 0
-110.669605 99.568 0 0
-111.470212 100.368607 0 0
-111.712396 100.299142 0 0
-111.889852 99.801738 0 0
-112.060447 100.214611 0 0
-112.381698 100.536423 0 0
-112.801646 100.7108 0 0
-113.256359 100.711197 0 0
-113.676611 100.537553 0 0
-113.998423 100.216302 0 0
-114.1728 99.796354 0 0
-114.173197 99.341641 0 0
-114.173197 101.964017 0 0
-114.097613 101.995248 0 0
-113.807267 102.285087 0 0
-113.64994 102.663974 0 0
-113.649582 103.074226 0 0
-113.806248 103.453387 0 0
-114.096087 103.743733 0 0
-114.474974 103.90106 0 0
-114.885226 103.901418 0 0
-115.264387 103.744752 0 0
-115.554733 103.454913 0 0
-115.71206 103.076026 0 0
-115.712418 102.665774 0 0
-115.712418 105.205774 0 0
-115.555752 104.826613 0 0
-115.265913 104.536267 0 0
-114.887026 104.37894 0 0
-114.476774 104.378582 0 0
-114.097613 104.535248 0 0
-113.807267 104.825087 0 0
-113.64994 105.203974 0 0
-113.649582 105.614226 0 0
-113.806248 105.993387 0 0
-114.096087 106.283733 0 0
-114.474974 106.44106 0 0
-114.885226 106.441418 0 0
-115.264387 106.284752 0 0
-115.554733 105.994913 0 0
-115.71206 105.616026 0 0
-115.712418 105.205774 0 0
-115.712418 106.7793 0 0
-113.172418 106.7793 0 0
-113.172418 105.205774 0 0
-113.172418 102.665774 0 0
-113.015752 102.286613 0 0
-112.725913 101.996267 0 0
-112.347026 101.83894 0 0
-111.936774 101.838582 0 0
-111.557613 101.995248 0 0
-111.290607 102.261787 0 0
-111.290607 100.548212 0 0
-110.49 99.747605 0 0
-110.310395 99.92721 0 0
-110.310395 99.568 0 0
-109.509788 98.767393 0 0
-109.267604 98.836858 0 0
-109.093066 99.326082 0 0
-109.093066 98.730547 0 0
-109.035184 98.590463 0 0
-108.928101 98.483192 0 0
-108.788118 98.425066 0 0
-108.636547 98.424934 0 0
-108.585 98.424934 0 0
-108.585 98.171066 0 0
-108.787453 98.171066 0 0
-108.927537 98.113184 0 0
-109.034808 98.006101 0 0
-109.092934 97.866118 0 0
-109.093066 97.714547 0 0
-109.093066 97.064222 0 0
-109.10864 97.375369 0 0
-109.267604 97.759142 0 0
-109.509788 97.828607 0 0
-110.310395 97.028 0 0
-109.509788 96.227393 0 0
-109.267604 96.296858 0 0
-109.093066 96.786082 0 0
-109.093066 96.190547 0 0
-109.035184 96.050463 0 0
-108.928101 95.943192 0 0
-108.788118 95.885066 0 0
-108.636547 95.884934 0 0
-108.585 95.884934 0 0
-108.585 95.631066 0 0
-108.787453 95.631066 0 0
-108.927537 95.573184 0 0
-109.034808 95.466101 0 0
-109.092934 95.326118 0 0
-109.093066 95.174547 0 0
-109.093066 94.524222 0 0
-109.10864 94.835369 0 0
-109.267604 95.219142 0 0
-109.509788 95.288607 0 0
-110.310395 94.488 0 0
-109.509788 93.687393 0 0
-109.267604 93.756858 0 0
-109.093066 94.246082 0 0
-109.093066 93.650547 0 0
-109.035184 93.510463 0 0
-108.928101 93.403192 0 0
-108.788118 93.345066 0 0
-108.636547 93.344934 0 0
-108.585 93.344934 0 0
-108.585 93.091066 0 0
-108.787453 93.091066 0 0
-108.927537 93.033184 0 0
-109.034808 92.926101 0 0
-109.092934 92.786118 0 0
-109.093066 92.634547 0 0
-109.093066 91.984222 0 0
-109.10864 92.295369 0 0
-109.267604 92.679142 0 0
-109.509788 92.748607 0 0
-110.310395 91.948 0 0
-109.509788 91.147393 0 0
-109.267604 91.216858 0 0
-109.093066 91.706082 0 0
-109.093066 91.110547 0 0
-109.035184 90.970463 0 0
-108.928101 90.863192 0 0
-108.788118 90.805066 0 0
-108.636547 90.804934 0 0
-107.112547 90.804934 0 0
-106.972463 90.862816 0 0
-106.865192 90.969899 0 0
-106.807066 91.109882 0 0
-106.806934 91.261453 0 0
-106.806934 92.785453 0 0
-106.864816 92.925537 0 0
-106.971899 93.032808 0 0
-107.111882 93.090934 0 0
-107.263453 93.091066 0 0
-107.315 93.091066 0 0
-107.315 93.344934 0 0
-107.112547 93.344934 0 0
-106.972463 93.402816 0 0
-106.865192 93.509899 0 0
-106.807066 93.649882 0 0
-106.806934 93.801453 0 0
-106.806934 95.325453 0 0
-106.864816 95.465537 0 0
-106.971899 95.572808 0 0
-107.111882 95.630934 0 0
-107.263453 95.631066 0 0
-107.315 95.631066 0 0
-107.315 95.884934 0 0
-107.112547 95.884934 0 0
-106.972463 95.942816 0 0
-106.865192 96.049899 0 0
-106.807066 96.189882 0 0
-106.806934 96.341453 0 0
-106.806934 97.865453 0 0
-106.864816 98.005537 0 0
-106.971899 98.112808 0 0
-107.111882 98.170934 0 0
-107.263453 98.171066 0 0
-107.315 98.171066 0 0
-107.315 98.424934 0 0
-107.112547 98.424934 0 0
-106.972463 98.482816 0 0
-106.865192 98.589899 0 0
-106.807066 98.729882 0 0
-106.806934 98.881453 0 0
-106.806934 100.405453 0 0
-106.864816 100.545537 0 0
-106.971899 100.652808 0 0
-107.111882 100.710934 0 0
-107.263453 100.711066 0 0
-108.787453 100.711066 0 0
-108.927537 100.653184 0 0
-109.034808 100.546101 0 0
-109.092934 100.406118 0 0
-109.093066 100.254547 0 0
-109.093066 99.604222 0 0
-109.10864 99.915369 0 0
-109.267604 100.299142 0 0
-109.509788 100.368607 0 0
-110.310395 99.568 0 0
-110.310395 99.92721 0 0
-109.689393 100.548212 0 0
-109.758858 100.790396 0 0
-110.282304 100.977143 0 0
-110.837369 100.94936 0 0
-111.221142 100.790396 0 0
-111.290607 100.548212 0 0
-111.290607 102.261787 0 0
-111.267267 102.285087 0 0
-111.10994 102.663974 0 0
-111.109582 103.074226 0 0
-111.266248 103.453387 0 0
-111.556087 103.743733 0 0
-111.934974 103.90106 0 0
-112.345226 103.901418 0 0
-112.724387 103.744752 0 0
-113.014733 103.454913 0 0
-113.17206 103.076026 0 0
-113.172418 102.665774 0 0
-113.172418 105.205774 0 0
-113.015752 104.826613 0 0
-112.725913 104.536267 0 0
-112.347026 104.37894 0 0
-111.936774 104.378582 0 0
-111.557613 104.535248 0 0
-111.267267 104.825087 0 0
-111.10994 105.203974 0 0
-111.109582 105.614226 0 0
-111.266248 105.993387 0 0
-111.556087 106.283733 0 0
-111.934974 106.44106 0 0
-112.345226 106.441418 0 0
-112.724387 106.284752 0 0
-113.014733 105.994913 0 0
-113.17206 105.616026 0 0
-113.172418 105.205774 0 0
-113.172418 106.7793 0 0
-110.632418 106.7793 0 0
-110.632418 105.205774 0 0
-110.632418 102.665774 0 0
-110.475752 102.286613 0 0
-110.185913 101.996267 0 0
-109.807026 101.83894 0 0
-109.396774 101.838582 0 0
-109.017613 101.995248 0 0
-108.727267 102.285087 0 0
-108.56994 102.663974 0 0
-108.569582 103.074226 0 0
-108.726248 103.453387 0 0
-109.016087 103.743733 0 0
-109.394974 103.90106 0 0
-109.805226 103.901418 0 0
-110.184387 103.744752 0 0
-110.474733 103.454913 0 0
-110.63206 103.076026 0 0
-110.632418 102.665774 0 0
-110.632418 105.205774 0 0
-110.475752 104.826613 0 0
-110.185913 104.536267 0 0
-109.807026 104.37894 0 0
-109.396774 104.378582 0 0
-109.017613 104.535248 0 0
-108.727267 104.825087 0 0
-108.56994 105.203974 0 0
-108.569582 105.614226 0 0
-108.726248 105.993387 0 0
-109.016087 106.283733 0 0
-109.394974 106.44106 0 0
-109.805226 106.441418 0 0
-110.184387 106.284752 0 0
-110.474733 105.994913 0 0
-110.63206 105.616026 0 0
-110.632418 105.205774 0 0
-110.632418 106.7793 0 0
-108.092418 106.7793 0 0
-108.092418 105.205774 0 0
-108.092418 102.665774 0 0
-107.935752 102.286613 0 0
-107.645913 101.996267 0 0
-107.267026 101.83894 0 0
-106.856774 101.838582 0 0
-106.477613 101.995248 0 0
-106.187267 102.285087 0 0
-106.02994 102.663974 0 0
-106.029582 103.074226 0 0
-106.186248 103.453387 0 0
-106.476087 103.743733 0 0
-106.854974 103.90106 0 0
-107.265226 103.901418 0 0
-107.644387 103.744752 0 0
-107.934733 103.454913 0 0
-108.09206 103.076026 0 0
-108.092418 102.665774 0 0
-108.092418 105.205774 0 0
-107.935752 104.826613 0 0
-107.645913 104.536267 0 0
-107.267026 104.37894 0 0
-106.856774 104.378582 0 0
-106.477613 104.535248 0 0
-106.187267 104.825087 0 0
-106.02994 105.203974 0 0
-106.029582 105.614226 0 0
-106.186248 105.993387 0 0
-106.476087 106.283733 0 0
-106.854974 106.44106 0 0
-107.265226 106.441418 0 0
-107.644387 106.284752 0 0
-107.934733 105.994913 0 0
-108.09206 105.616026 0 0
-108.092418 105.205774 0 0
-108.092418 106.7793 0 0
-107 106.7793 0 0
-106.92459 106.7943 0 0
-106.499318 106.7943 0 0
-104.717097 106.44141 0 0
-104.725226 106.441418 0 0
-105.104387 106.284752 0 0
-105.394733 105.994913 0 0
-105.55206 105.616026 0 0
-105.552418 105.205774 0 0
-105.552418 102.665774 0 0
-105.395752 102.286613 0 0
-105.105913 101.996267 0 0
-104.727026 101.83894 0 0
-104.316774 101.838582 0 0
-103.937613 101.995248 0 0
-103.647267 102.285087 0 0
-103.48994 102.663974 0 0
-103.489582 103.074226 0 0
-103.646248 103.453387 0 0
-103.936087 103.743733 0 0
-104.314974 103.90106 0 0
-104.725226 103.901418 0 0
-105.104387 103.744752 0 0
-105.394733 103.454913 0 0
-105.55206 103.076026 0 0
-105.552418 102.665774 0 0
-105.552418 105.205774 0 0
-105.395752 104.826613 0 0
-105.105913 104.536267 0 0
-104.727026 104.37894 0 0
-104.316774 104.378582 0 0
-103.937613 104.535248 0 0
-103.647267 104.825087 0 0
-103.48994 105.203974 0 0
-103.489582 105.614226 0 0
-103.646248 105.993387 0 0
-103.936087 106.283733 0 0
-103.950052 106.289531 0 0
-102.015804 105.90654 0 0
-101.603166 105.751801 0 0
-99.350767 104.243951 0 0
-98.244313 103.355876 0 0
-98.908174 103.631535 0 0
-99.969172 103.632461 0 0
-100.94976 103.22729 0 0
-101.700654 102.477706 0 0
-102.107535 101.497826 0 0
-102.108461 100.436828 0 0
-101.70329 99.45624 0 0
-100.953706 98.705346 0 0
-99.973826 98.298465 0 0
-98.912828 98.297539 0 0
-97.93224 98.70271 0 0
-97.181346 99.452294 0 0
-96.774465 100.432174 0 0
-96.773539 101.493172 0 0
-96.939957 101.895935 0 0
-95.334331 99.497479 0 0
-95.091903 98.832534 0 0
-94.2467 94.563946 0 0
-94.2467 89.15838 0 0
-123.903023 89.407593 0 0
-126.271512 91.526767 0 0
-133.4135 100.817672 0 0
-133.4135 102.474777 0 0
-133.335752 102.286613 0 0
-133.045913 101.996267 0 0
-132.667026 101.83894 0 0
-132.256774 101.838582 0 0
-131.877613 101.995248 0 0
-131.587267 102.285087 0 0
-131.42994 102.663974 0 0
-131.429582 103.074226 0 0
-131.586248 103.453387 0 0
-131.876087 103.743733 0 0
-132.254974 103.90106 0 0
-132.665226 103.901418 0 0
-133.044387 103.744752 0 0
-133.334733 103.454913 0 0
-133.4135 103.26522 0 0
-133.4135 105.014777 0 0
-133.335752 104.826613 0 0
-133.045913 104.536267 0 0
-132.667026 104.37894 0 0
-132.256774 104.378582 0 0
-131.877613 104.535248 0 0
-131.587267 104.825087 0 0
-131.42994 105.203974 0 0
-131.429582 105.614226 0 0
-131.586248 105.993387 0 0
-131.876087 106.283733 0 0
-132.254974 106.44106 0 0
-132.665226 106.441418 0 0
-133.044387 106.284752 0 0
-133.334733 105.994913 0 0
-133.4135 105.80522 0 0
-133.4135 106.7943 1 0
 $endPOLYSCORNERS
 $endCZONE_OUTLINE
 $CZONE_OUTLINE
