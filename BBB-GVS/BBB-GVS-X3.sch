@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 3
 Title "BeagleBone Cape Baseline"
-Date "11 jul 2014"
+Date "12 jul 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"

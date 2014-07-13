@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 3
 Title "BeagleBone Cape Baseline"
-Date "11 jul 2014"
+Date "12 jul 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -69,10 +69,10 @@ F 3 "" H 3050 7950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2X2 J41
+L CONN_2X2 J24
 U 1 1 4EB9CB6C
 P 3050 7350
-F 0 "J41" H 3050 7500 50  0000 C CNN
+F 0 "J24" H 3050 7500 50  0000 C CNN
 F 1 "ADR SEL" H 3060 7220 40  0000 C CNN
 F 2 "PIN_ARRAY_2X2" H 3050 7350 60  0001 C CNN
 F 3 "" H 3050 7350 60  0001 C CNN
