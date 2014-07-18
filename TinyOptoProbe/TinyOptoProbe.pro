@@ -1,6 +1,6 @@
-update=7/2/2014 8:01:48 PM
+update=7/18/2014 10:22:27 AM
 version=1
-last_client=pcbnew
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -8,20 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=conn
-LibName2=device
-LibName3=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName4=power
-LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=TinyOptoProbe.net
@@ -53,3 +39,18 @@ LibName7=dip_sockets
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName9=led
 LibName10=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=conn
+LibName2=device
+LibName3=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName4=power
+LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=opto
