@@ -1,4 +1,4 @@
-update=7/5/2014 4:19:05 PM
+update=7/18/2014 5:54:43 PM
 version=1
 last_client=pcbnew
 [general]
@@ -25,18 +25,18 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=
-UseCmpFile=1
-PadDrill=0.600000000000
-PadDrillOvalY=0.600000000000
-PadSizeH=1.500000000000
-PadSizeV=1.500000000000
+LastNetListRead=RasPi-GVS-Plus.net
+UseCmpFile=0
+PadDrill=2.499360000000
+PadDrillOvalY=2.499360000000
+PadSizeH=4.241800000000
+PadSizeV=4.241800000000
 PcbTextSizeV=1.500000000000
 PcbTextSizeH=1.500000000000
 PcbTextThickness=0.300000000000
-ModuleTextSizeV=1.000000000000
-ModuleTextSizeH=1.000000000000
-ModuleTextSizeThickness=0.150000000000
+ModuleTextSizeV=1.270000000000
+ModuleTextSizeH=1.270000000000
+ModuleTextSizeThickness=0.254000000000
 SolderMaskClearance=0.000000000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
