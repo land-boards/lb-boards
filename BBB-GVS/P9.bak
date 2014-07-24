@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 24/07/2014 15:52:38
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 3
 Title "BeagleBone Cape Baseline"
-Date "13 jul 2014"
+Date "24 jul 2014"
 Rev "X1"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -478,12 +478,12 @@ SPI1_D1
 $Comp
 L BEAGLEBONE BRD1
 U 4 1 53AD83F9
-P 1950 3000
-F 0 "BRD1" H 2050 2950 60  0000 C CNN
-F 1 "BEAGLEBONE" H 2200 2850 60  0000 C CNN
-F 2 "BEAGLEBONE" H 2200 2750 60  0000 C CNN
-F 3 "~" H 1950 3000 60  0000 C CNN
-	4    1950 3000
+P 1900 1850
+F 0 "BRD1" H 2000 1800 60  0000 C CNN
+F 1 "BEAGLEBONE" H 2150 1700 60  0000 C CNN
+F 2 "BEAGLEBONE" H 2150 1600 60  0000 C CNN
+F 3 "~" H 1900 1850 60  0000 C CNN
+	4    1900 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1072,12 +1072,12 @@ Wire Wire Line
 $Comp
 L BEAGLEBONE BRD1
 U 5 1 53BFD0D2
-P 4200 3000
-F 0 "BRD1" H 4250 2950 60  0000 C CNN
-F 1 "BEAGLEBONE" H 4450 2850 60  0000 C CNN
-F 2 "~" H 4200 3000 60  0000 C CNN
-F 3 "~" H 4200 3000 60  0000 C CNN
-	5    4200 3000
+P 4150 1850
+F 0 "BRD1" H 4200 1800 60  0000 C CNN
+F 1 "BEAGLEBONE" H 4400 1700 60  0000 C CNN
+F 2 "~" H 4150 1850 60  0000 C CNN
+F 3 "~" H 4150 1850 60  0000 C CNN
+	5    4150 1850
 	1    0    0    -1  
 $EndComp
 $Comp
