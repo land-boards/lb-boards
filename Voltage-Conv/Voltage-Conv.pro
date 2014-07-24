@@ -1,6 +1,6 @@
-update=7/18/2014 9:34:32 PM
+update=24/07/2014 17:18:34
 version=1
-last_client=eeschema
+last_client=pcbnew
 [general]
 version=1
 [cvpcb]
@@ -8,6 +8,17 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=device
+LibName2=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=Voltage-Conv.net
@@ -19,8 +30,8 @@ PadSizeV=5.000000000000
 PcbTextSizeV=1.000000000000
 PcbTextSizeH=1.000000000000
 PcbTextThickness=0.300000000000
-ModuleTextSizeV=1.000000000000
-ModuleTextSizeH=1.000000000000
+ModuleTextSizeV=0.800000000000
+ModuleTextSizeH=0.800000000000
 ModuleTextSizeThickness=0.150000000000
 SolderMaskClearance=0.101600000000
 SolderMaskMinWidth=0.000000000000
@@ -29,24 +40,5 @@ BoardOutlineThickness=0.150000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
 LibDir=
-LibName1=connect
-LibName2=discret
-LibName3=pin_array
-LibName4=divers
-LibName5=libcms
-LibName6=led
-LibName7=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-LibName8=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/TB-5MM
-LibName9=smd_ssop_packages
-LibName10=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/smd_dil
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName2=device
+LibName1=C:/Users/DGilliland.AACISD/Desktop/FX230
+LibName2=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib

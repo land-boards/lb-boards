@@ -1,6 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:DougsSch
+EESchema Schematic File Version 2  date 24/07/2014 15:57:09
 LIBS:device
+LIBS:DougsSch
 LIBS:Voltage-Conv-cache
 EELAYER 27 0
 EELAYER END
@@ -8,7 +8,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 4
 Title "One Wire Logger"
-Date "19 jul 2014"
+Date "20 jul 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -111,8 +111,8 @@ S 2400 1200 900  1000
 U 53C9C2FF
 F0 "FTDI" 50
 F1 "Voltage-Conv-03.sch" 50
-F2 "VCC" U R 3300 1400 60 
-F3 "GND" U R 3300 1950 60 
+F2 "GND" U R 3300 1950 60 
+F3 "VUSB" U R 3300 1400 60 
 $EndSheet
 Wire Wire Line
 	3300 1950 3950 1950
