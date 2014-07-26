@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 09/06/2014 16:52:47
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,8 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:DougsSch
-LIBS:AAC-PCB
 LIBS:OptoIn8-I2C-cache
 EELAYER 27 0
 EELAYER END
