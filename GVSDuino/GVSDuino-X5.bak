@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 28/07/2014 16:10:05
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -6,16 +6,16 @@ LIBS:linear
 LIBS:regul
 LIBS:microcontrollers
 LIBS:atmel
-LIBS:GVSDuino-X4-cache
+LIBS:GVSDuino-X5-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "GVSDuino"
-Date "5 jul 2014"
-Rev "X3"
-Comp "douglasgilliland.com"
+Date "28 jul 2014"
+Rev "X5"
+Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -1142,6 +1142,8 @@ Wire Wire Line
 Wire Wire Line
 	1100 4650 800  4650
 Connection ~ 800  4650
+Text Label 1750 1800 0    60   ~ 0
+RESET
 Text Label 3800 5500 0    60   ~ 0
-ARDRES
+RESET
 $EndSCHEMATC
