@@ -1,23 +1,8 @@
-update=7/5/2014 4:19:05 PM
+update=7/27/2014 2:38:10 PM
 version=1
-last_client=pcbnew
+last_client=eeschema
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/TXB0108
 [cvpcb]
 version=1
 NetIExt=net
@@ -56,3 +41,18 @@ LibName9=libcms
 LibName10=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName11=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/sog20
 LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/TXB0108

@@ -3,8 +3,7 @@ LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:beaglebone
-LIBS:TXB0108
-LIBS:memory
+LIBS:BBB-GVS-X3-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000

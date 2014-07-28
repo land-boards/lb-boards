@@ -1,24 +1,11 @@
-update=7/11/2014 7:59:40 PM
+update=7/27/2014 1:30:15 PM
 version=1
-last_client=kicad
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=../KiCAD/library
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=C:/Users/Doug/Documents/GitHub/lb-boards/FlyingBone/lib/beaglebone
 [pcbnew]
 version=1
 LastNetListRead=BBB-GVS-X3.net
@@ -48,3 +35,16 @@ LibName5=sog20
 LibName6=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=../KiCAD/library
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=C:/Users/Doug/Documents/GitHub/lb-boards/FlyingBone/lib/beaglebone

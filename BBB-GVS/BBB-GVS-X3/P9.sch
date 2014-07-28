@@ -3,8 +3,7 @@ LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:beaglebone
-LIBS:TXB0108
-LIBS:memory
+LIBS:BBB-GVS-X3-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
@@ -878,6 +877,7 @@ Wire Wire Line
 	7950 2800 7300 2800
 Wire Wire Line
 	1500 6950 1600 6950
+Connection ~ 5700 2800
 Wire Wire Line
 	9250 1350 9250 5250
 Wire Wire Line
@@ -1196,6 +1196,4 @@ Wire Wire Line
 	1550 4300 1550 3700
 Wire Wire Line
 	1550 3700 1400 3700
-Wire Wire Line
-	5700 1700 5700 2800
 $EndSCHEMATC
