@@ -1,10 +1,9 @@
-EESchema Schematic File Version 2  date 31/07/2014 14:26:48
+EESchema Schematic File Version 2
 LIBS:conn
 LIBS:device
-LIBS:DougsSch
 LIBS:power
+LIBS:DougsSch
 LIBS:opto
-LIBS:transistors
 LIBS:TinyOptoProbe-cache
 EELAYER 27 0
 EELAYER END
@@ -12,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "TINYDUINO85"
-Date "31 jul 2014"
+Date "18 jul 2014"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -323,6 +322,8 @@ Wire Wire Line
 Wire Wire Line
 	3750 1700 4750 1700
 Wire Wire Line
+	3750 2000 4200 2000
+Wire Wire Line
 	3750 2100 4200 2100
 Wire Wire Line
 	1500 6800 1750 6800
@@ -387,7 +388,7 @@ $Comp
 L LED D1
 U 1 1 53B42334
 P 5750 1700
-F 0 "D1" H 5600 1650 50  0000 C CNN
+F 0 "D1" H 5750 1800 50  0000 C CNN
 F 1 "LED" H 5750 1600 50  0000 C CNN
 F 2 "LED-5MM" H 6100 1750 60  0000 C CNN
 F 3 "~" H 5750 1700 60  0000 C CNN
@@ -398,7 +399,7 @@ $Comp
 L LED D2
 U 1 1 53B42343
 P 5750 1900
-F 0 "D2" H 5600 1850 50  0000 C CNN
+F 0 "D2" H 5750 2000 50  0000 C CNN
 F 1 "LED" H 5750 1800 50  0000 C CNN
 F 2 "LED-5MM" H 6100 1950 60  0000 C CNN
 F 3 "~" H 5750 1900 60  0000 C CNN
@@ -431,6 +432,19 @@ Wire Wire Line
 	5250 1700 5550 1700
 Wire Wire Line
 	5250 1900 5550 1900
+Wire Wire Line
+	4200 1700 4200 1700
+$Comp
+L NPN Q1
+U 1 1 53B42486
+P 4550 3300
+F 0 "Q1" H 4550 3150 50  0000 R CNN
+F 1 "NPN" H 4550 3450 50  0000 R CNN
+F 2 "SOT23" H 4900 3300 60  0000 C CNN
+F 3 "~" H 4550 3300 60  0000 C CNN
+	1    4550 3300
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4200 3300 4350 3300
 Wire Wire Line
@@ -618,28 +632,11 @@ Wire Wire Line
 Wire Wire Line
 	3000 3400 3000 3300
 Wire Wire Line
-	4200 3500 4200 3300
+	4000 3400 4200 3400
+Wire Wire Line
+	4200 3400 4200 3300
 Wire Wire Line
 	4000 3600 4200 3600
 Wire Wire Line
 	4200 3600 4200 3700
-Wire Wire Line
-	4000 3500 4200 3500
-Wire Wire Line
-	3750 2000 4200 2000
-$Comp
-L BC849 Q1
-U 1 1 53DA8021
-P 4550 3300
-F 0 "Q1" H 4550 3151 40  0000 R CNN
-F 1 "MMBT3094" H 5050 3350 40  0000 R CNN
-F 2 "SOT23" H 4800 3250 29  0000 C CNN
-F 3 "~" H 4550 3300 60  0000 C CNN
-	1    4550 3300
-	1    0    0    -1  
-$EndComp
-Text Notes 6400 1700 0    60   ~ 0
-PULSE
-Text Notes 6400 1900 0    60   ~ 0
-HIGH
 $EndSCHEMATC
