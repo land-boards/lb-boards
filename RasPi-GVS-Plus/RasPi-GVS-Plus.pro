@@ -1,23 +1,8 @@
-update=7/18/2014 5:54:43 PM
+update=8/9/2014 12:26:04 AM
 version=1
-last_client=pcbnew
+last_client=eeschema
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/TXB0108
 [cvpcb]
 version=1
 NetIExt=net
@@ -43,7 +28,7 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
+LibDir=../KiCAD/modules
 LibName1=connect
 LibName2=discret
 LibName3=pin_array
@@ -54,5 +39,16 @@ LibName7=smd_dil
 LibName8=smd_transistors
 LibName9=libcms
 LibName10=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName11=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/sog20
-LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
