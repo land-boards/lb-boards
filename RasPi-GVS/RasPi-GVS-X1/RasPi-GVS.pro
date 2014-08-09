@@ -1,4 +1,4 @@
-update=8/8/2014 9:52:08 PM
+update=7/27/2014 2:38:10 PM
 version=1
 last_client=eeschema
 [general]
@@ -54,3 +54,5 @@ LibName1=power
 LibName2=device
 LibName3=conn
 LibName4=atmel
+LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/TXB0108
