@@ -1,4 +1,4 @@
-update=24/07/2014 17:18:34
+update=13/08/2014 12:41:46
 version=1
 last_client=pcbnew
 [general]
@@ -40,5 +40,4 @@ BoardOutlineThickness=0.150000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
 LibDir=
-LibName1=C:/Users/DGilliland.AACISD/Desktop/FX230
-LibName2=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+LibName1=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
