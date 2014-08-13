@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 31/07/2014 14:26:57
+EESchema Schematic File Version 2  date 12/08/2014 12:07:52
 LIBS:conn
 LIBS:device
 LIBS:DougsSch
@@ -12,7 +12,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "TINYDUINO85"
-Date "31 jul 2014"
+Date "12 aug 2014"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -205,17 +205,6 @@ F 3 "" H 2900 6650 60  0001 C CNN
 	1    2900 6650
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_2 H1
-U 1 1 51AF5C5D
-P 4600 6150
-F 0 "H1" V 4550 6150 40  0000 C CNN
-F 1 "CONN_2" V 4650 6150 40  0000 C CNN
-F 2 "PIN_ARRAY_2X1" V 4450 6650 60  0000 C CNN
-F 3 "" H 4600 6150 60  0000 C CNN
-	1    4600 6150
-	0    1    -1   0   
-$EndComp
 Text Label 3900 6650 0    60   ~ 0
 VREG
 $Comp
@@ -240,25 +229,14 @@ F 3 "~" H 1200 6800 60  0000 C CNN
 	1    1200 6800
 	1    0    0    -1  
 $EndComp
-Text Notes 4050 5950 0    60   ~ 0
-INSTALLED = USE REG\nNOT INST = DON'T USE REG
+Text Notes 8300 3750 0    60   ~ 0
+2-7 INSTALLED = USE REG\n1-6 INSTALLED = USE ISP
 Text Notes 3000 2650 0    60   ~ 0
 MICROPROCESSOR
 Text Notes 2400 7450 0    60   ~ 0
 VOLTAGE REGULATOR
 Text Notes 700  7200 0    60   ~ 0
 2.1MM POWER CONN
-$Comp
-L CONN_3X2 H2
-U 1 1 51D43962
-P 8700 2600
-F 0 "H2" H 8700 2850 50  0000 C CNN
-F 1 "CONN_3X2" V 8700 2650 40  0000 C CNN
-F 2 "pin_array_3x2" H 8700 2400 60  0000 C CNN
-F 3 "" H 8700 2600 60  0000 C CNN
-	1    8700 2600
-	1    0    0    -1  
-$EndComp
 Text Label 7900 2450 0    60   ~ 0
 D1
 Connection ~ 2800 1250
@@ -330,14 +308,7 @@ Connection ~ 1750 6900
 Wire Wire Line
 	2550 1850 2050 1850
 Wire Wire Line
-	4500 6650 4500 6500
-Wire Wire Line
-	4700 6500 4700 6650
-Wire Wire Line
-	4700 6650 5400 6650
-Wire Wire Line
 	5400 6550 5400 6750
-Connection ~ 5400 6650
 Connection ~ 5400 7250
 Wire Wire Line
 	8300 2450 7700 2450
@@ -354,7 +325,7 @@ Wire Wire Line
 Wire Wire Line
 	9100 2650 9250 2650
 Wire Wire Line
-	9250 2650 9250 2800
+	9250 2650 9250 3100
 $Comp
 L VCC #PWR05
 U 1 1 51D44694
@@ -369,17 +340,17 @@ $EndComp
 $Comp
 L GND #PWR06
 U 1 1 51D446A3
-P 9250 2800
-F 0 "#PWR06" H 9250 2800 30  0001 C CNN
-F 1 "GND" H 9250 2730 30  0001 C CNN
-F 2 "" H 9250 2800 60  0000 C CNN
-F 3 "" H 9250 2800 60  0000 C CNN
-	1    9250 2800
+P 9250 3100
+F 0 "#PWR06" H 9250 3100 30  0001 C CNN
+F 1 "GND" H 9250 3030 30  0001 C CNN
+F 2 "" H 9250 3100 60  0000 C CNN
+F 3 "" H 9250 3100 60  0000 C CNN
+	1    9250 3100
 	1    0    0    -1  
 $EndComp
 Text Label 7900 2550 0    60   ~ 0
 D2
-Text Label 9500 2550 0    60   ~ 0
+Text Label 9400 2550 0    60   ~ 0
 D0
 Text Label 7900 2650 0    60   ~ 0
 RST*
@@ -642,4 +613,19 @@ Text Notes 6400 1700 0    60   ~ 0
 PULSE
 Text Notes 6400 1900 0    60   ~ 0
 HIGH
+$Comp
+L ISP-PWR H2
+U 1 1 53EA4018
+P 8700 2600
+F 0 "H2" H 8700 2850 50  0000 C CNN
+F 1 "ISP-PWR" H 8700 2250 40  0000 C CNN
+F 2 "ISP-PWR" H 8700 2150 60  0000 C CNN
+F 3 "" H 8700 2600 60  0000 C CNN
+	1    8700 2600
+	1    0    0    -1  
+$EndComp
+Text Label 9400 2850 0    60   ~ 0
+VREG
+Wire Wire Line
+	9100 2850 9800 2850
 $EndSCHEMATC
