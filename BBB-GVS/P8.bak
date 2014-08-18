@@ -5,14 +5,15 @@ LIBS:conn
 LIBS:beaglebone
 LIBS:TXB0108
 LIBS:memory
+LIBS:BBB-GVS-X4-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 3 3
 Title "BeagleBone Cape Baseline"
-Date "27 jul 2014"
-Rev "X1"
+Date "17 aug 2014"
+Rev "X4"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
 Comment2 ""
