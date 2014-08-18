@@ -1,6 +1,6 @@
-update=8/17/2014 9:37:13 PM
+update=8/17/2014 10:11:01 PM
 version=1
-last_client=eeschema
+last_client=pcbnew
 [general]
 version=1
 [cvpcb]
@@ -8,9 +8,23 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
-LastNetListRead=RasPi-GVS-Plus.net
+LastNetListRead=RasPi-GVS-Plus-CFG.net
 UseCmpFile=0
 PadDrill=2.499360000000
 PadDrillOvalY=2.499360000000
@@ -38,20 +52,4 @@ LibName6=smd_resistors
 LibName7=smd_dil
 LibName8=smd_transistors
 LibName9=libcms
-LibName10=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/BBBCape-002/sog20
-LibName11=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-LibName12=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName10=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
