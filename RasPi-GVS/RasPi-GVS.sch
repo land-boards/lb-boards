@@ -10,8 +10,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "RasPi-GVS"
-Date "9 aug 2014"
-Rev "X1"
+Date "18 aug 2014"
+Rev "X2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -673,7 +673,7 @@ RP5V
 Wire Wire Line
 	5100 7050 4600 7050
 Text Notes 4300 7450 0    60   ~ 0
-POWER SELECT JUMPER(S)\n1-2 POWER GVS FROM VREG\n3-4 POWER RASPI FROM VREG \n2-3 POWER GVS FROM RASPI\n(1-2 AND 3-4 CAN BE INSTALLED\nAT THE SAME TIME)
+POWER SELECT JUMPER(S)\n1-2 POWER GVS FROM VREG\n2-3 POWER GVS FROM RASPI
 Text Label 1900 7450 0    60   ~ 0
 GND
 $Comp
