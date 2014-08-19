@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 28/07/2014 16:10:44
+EESchema Schematic File Version 2  date 19/08/2014 13:09:20
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -13,7 +13,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "GVSDuino"
-Date "28 jul 2014"
+Date "19 aug 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -1087,63 +1087,81 @@ Wire Wire Line
 $Comp
 L +5V #PWR014
 U 1 1 524344ED
-P 800 4600
-F 0 "#PWR014" H 800 4690 20  0001 C CNN
-F 1 "+5V" H 800 4690 30  0000 C CNN
-F 2 "" H 800 4600 60  0001 C CNN
-F 3 "" H 800 4600 60  0001 C CNN
-	1    800  4600
+P 4750 6900
+F 0 "#PWR014" H 4750 6990 20  0001 C CNN
+F 1 "+5V" H 4750 6990 30  0000 C CNN
+F 2 "" H 4750 6900 60  0001 C CNN
+F 3 "" H 4750 6900 60  0001 C CNN
+	1    4750 6900
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR015
 U 1 1 524344F3
-P 800 5250
-F 0 "#PWR015" H 800 5250 30  0001 C CNN
-F 1 "GND" H 800 5180 30  0001 C CNN
-F 2 "" H 800 5250 60  0001 C CNN
-F 3 "" H 800 5250 60  0001 C CNN
-	1    800  5250
+P 4750 7550
+F 0 "#PWR015" H 4750 7550 30  0001 C CNN
+F 1 "GND" H 4750 7480 30  0001 C CNN
+F 2 "" H 4750 7550 60  0001 C CNN
+F 3 "" H 4750 7550 60  0001 C CNN
+	1    4750 7550
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C6
 U 1 1 524344FB
-P 800 4900
-F 0 "C6" H 850 5000 50  0000 L CNN
-F 1 "0.1uF" H 850 4800 50  0000 L CNN
-F 2 "C1" H 600 4900 60  0000 C CNN
-F 3 "~" H 800 4900 60  0000 C CNN
-	1    800  4900
+P 4750 7200
+F 0 "C6" H 4800 7300 50  0000 L CNN
+F 1 "0.1uF" H 4800 7100 50  0000 L CNN
+F 2 "C1" H 4550 7200 60  0000 C CNN
+F 3 "~" H 4750 7200 60  0000 C CNN
+	1    4750 7200
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C7
 U 1 1 5243451C
-P 1100 4900
-F 0 "C7" H 1150 5000 50  0000 L CNN
-F 1 "0.1uF" H 1150 4800 50  0000 L CNN
-F 2 "C1" H 1300 4900 60  0000 C CNN
-F 3 "~" H 1100 4900 60  0000 C CNN
-	1    1100 4900
+P 5050 7200
+F 0 "C7" H 5100 7300 50  0000 L CNN
+F 1 "0.1uF" H 5100 7100 50  0000 L CNN
+F 2 "C1" H 5250 7200 60  0000 C CNN
+F 3 "~" H 5050 7200 60  0000 C CNN
+	1    5050 7200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	800  5100 800  5250
+	4750 7400 4750 7550
 Wire Wire Line
-	800  5150 1100 5150
+	4750 7450 5050 7450
 Wire Wire Line
-	1100 5150 1100 5100
-Connection ~ 800  5150
+	5050 7450 5050 7400
+Connection ~ 4750 7450
 Wire Wire Line
-	800  4600 800  4700
+	4750 6900 4750 7000
 Wire Wire Line
-	1100 4700 1100 4650
+	5050 7000 5050 6950
 Wire Wire Line
-	1100 4650 800  4650
-Connection ~ 800  4650
+	5050 6950 4750 6950
+Connection ~ 4750 6950
 Text Label 1750 1800 0    60   ~ 0
 RESET
 Text Label 3800 5500 0    60   ~ 0
 RESET
+Text Notes 7550 3750 0    60   ~ 0
+ANALOG INPUTS
+Text Notes 8100 1000 0    60   ~ 0
+Voltage Selector
+Text Notes 8100 1150 0    60   ~ 0
+Power from +5V
+Text Notes 8100 1300 0    60   ~ 0
+Power from AREF
+Text Notes 9500 6450 0    60   ~ 0
+DIGITAL I/O
+Text Notes 4250 6200 0    60   ~ 0
+SPI/ATProgHead
+Text Notes 2150 7850 0    60   ~ 0
+VOLTAGE REGULATOR
+Text Notes 2650 5000 0    60   ~ 0
+Power from Regulator
+Text Notes 2650 5150 0    60   ~ 0
+Power from FTDI
 $EndSCHEMATC
