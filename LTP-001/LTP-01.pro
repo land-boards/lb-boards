@@ -1,8 +1,25 @@
-update=8/20/2014 11:58:53 PM
+update=21/08/2014 15:32:58
 version=1
-last_client=eeschema
+last_client=pcbnew
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=linear
+LibName5=regul
+LibName6=microcontrollers
+LibName7=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName8=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [cvpcb]
 version=1
 NetIExt=net
@@ -10,8 +27,8 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=GVSDuino-X3.net
-UseCmpFile=1
+LastNetListRead=LTP-01.net
+UseCmpFile=0
 PadDrill=3.175000000000
 PadDrillOvalY=3.175000000000
 PadSizeH=6.350000000000
@@ -36,21 +53,4 @@ LibName4=pin_array
 LibName5=dip_sockets
 LibName6=capacitors
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=microcontrollers
-LibName8=atmel
-LibName9=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName8=libcms
