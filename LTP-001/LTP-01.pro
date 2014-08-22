@@ -1,4 +1,4 @@
-update=21/08/2014 15:32:58
+update=22/08/2014 09:14:19
 version=1
 last_client=pcbnew
 [general]
@@ -28,17 +28,17 @@ EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=LTP-01.net
-UseCmpFile=0
-PadDrill=3.175000000000
-PadDrillOvalY=3.175000000000
-PadSizeH=6.350000000000
-PadSizeV=6.350000000000
+UseCmpFile=1
+PadDrill=0.900000000000
+PadDrillOvalY=0.900000000000
+PadSizeH=1.600000000000
+PadSizeV=1.600000000000
 PcbTextSizeV=1.016000000000
 PcbTextSizeH=1.016000000000
 PcbTextThickness=0.304800000000
-ModuleTextSizeV=1.524000000000
-ModuleTextSizeH=1.524000000000
-ModuleTextSizeThickness=0.304800000000
+ModuleTextSizeV=1.000000000000
+ModuleTextSizeH=1.000000000000
+ModuleTextSizeThickness=0.250000000000
 SolderMaskClearance=0.254000000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.381000000000
