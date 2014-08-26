@@ -191,9 +191,9 @@ class ControlClass:
 				if row[1:] == lastPart[1:]:	# if this part matches the last part
 					newComboPart += ',' + row[0]
 					inComboPart = True
-					print 'got a match, new combo part ref des', newComboPart
+#					print 'got a match, new combo part ref des', newComboPart
 					qty += 1
-					print 'qty', qty
+#					print 'qty', qty
 				elif inComboPart == False:	# part didn't match and last part wasn't a combo part
 #						outCSVFile.writerow(lastPart)
 					outRow = []
@@ -201,7 +201,7 @@ class ControlClass:
 					outRow += lastPart
 					outPL.append(outRow)
 					newComboPart = row[0]
-					print 'not match'
+#					print 'not match'
 					qty = 1
 				elif inComboPart:	# part mismatch but last part was combo
 					inComboPart = False
@@ -210,7 +210,7 @@ class ControlClass:
 					outRow.append(newComboPart)
 					outRow += lastPart[1:]
 					outPL.append(outRow)
-					print 'changeup, writing new ref des', newComboPart
+#					print 'changeup, writing new ref des', newComboPart
 					newComboPart = row[0]
 					qty = 1
 			lastPart = row
@@ -272,6 +272,7 @@ class ControlClass:
 		reduxPL = self.combineRefDes(sortedPL)
 		outCSVFile.writerow(['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
 		outCSVFile.writerows(reduxPL)
+		print 'complete'
 
 class UIManager:
 	"""The UI manager
