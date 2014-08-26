@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 22/08/2014 10:34:13
+EESchema Schematic File Version 2  date 25/08/2014 16:51:44
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -13,7 +13,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 4
 Title "LTP-01"
-Date "22 aug 2014"
+Date "25 aug 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -240,7 +240,7 @@ U 1 1 53F56D84
 P 4650 5450
 F 0 "P1" H 4650 5700 50  0000 C CNN
 F 1 "CONN_3X2" V 4650 5500 40  0000 C CNN
-F 2 "pin_array_3x2" H 4650 5450 60  0000 C CNN
+F 2 "pin_array_3x2" H 4650 5300 60  0000 C CNN
 F 3 "" H 4650 5450 60  0000 C CNN
 	1    4650 5450
 	1    0    0    -1  

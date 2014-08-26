@@ -166,51 +166,77 @@ class ControlClass:
 			elif progState == GOT_LIBPARTS:
 				return outCSVList
 
-		def sortParts(self, outCSVList):
-			# The sorting is kinda weird but it results in something that makes sense
-			outCSVList = sorted(outCSVList, key = lambda errs: errs[0])		# sort by Ref Des to get them in order
-			outCSVList = sorted(outCSVList, key = lambda errs: errs[1])		# sort by Sort by part value
-			outCSVList = sorted(outCSVList, key = lambda errs: errs[0][0])	# sort by Sort by part number
+	def sortParts(self, outCSVList):
+		# The sorting is kinda weird but it results in something that makes sense
+#		print 'In sortParts, outCSVList is', outCSVList
+		outCSVList = sorted(outCSVList, key = lambda errs: errs[0])		# sort by Ref Des to get them in order
+		outCSVList = sorted(outCSVList, key = lambda errs: errs[1])		# sort by Sort by part value
+		outCSVList = sorted(outCSVList, key = lambda errs: errs[0][0])	# sort by Sort by part number
+		return outCSVList
 
-		def combineRefDes(self,outCSVList):
-			lastPart	= []
-			gotFirstPart = False
-			newComboPart = ''
-			inComboPart = False
-			outPL = []
-			for row in outCSVList:
-				if gotFirstPart == False:		# the first part gets handled here
-					gotFirstPart = True
-#						print 'got a first part'
-				else:	# not the first part
-					if row[1:] == lastPart[1:]:	# if this part matches the last part
-						newComboPart += ',' + row[0]
-						inComboPart = True
-#							print 'got a match, new combo part ref des', newComboPart
-					elif inComboPart == False:	# part didn't match and last part wasn't a combo part
-#						outCSVFile.writerow(lastPart)
-						outPL.append(lastPart)
-						newComboPart = row[0]
-#							print 'not match'
-					elif inComboPart:	# part mismatch but last part was combo
-						inComboPart = False
-						outRow = []
-						outRow.append(newComboPart)
-						outRow += lastPart[1:]
-						outPL.append(outRow)
-#							print 'changeup, writing new ref des', newComboPart
-						newComboPart = ''
-				lastPart = row
-			# handle the last part
-			if inComboPart:
-				outRow = []
-				outRow.append(newComboPart)
-				outRow += row[1:]
-				outPL.append(outRow)
-				outCSVFile.writerow(outRow)
+	def combineRefDes(self,outCSVList):
+		''' RefDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN
+		'''
+		lastPart	= []
+		gotFirstPart = False
+		newComboPart = ''
+		inComboPart = False
+		outPL = []
+		qty = 1
+#		print 'outCSVList', outCSVList
+		for row in outCSVList:
+			if gotFirstPart == False:		# the first part gets handled here
+				gotFirstPart = True
 			else:
-				outPL.append(row)
-			return outPL
+				if row[1:] == lastPart[1:]:	# if this part matches the last part
+					newComboPart += ',' + row[0]
+					inComboPart = True
+					print 'got a match, new combo part ref des', newComboPart
+					qty += 1
+					print 'qty', qty
+				elif inComboPart == False:	# part didn't match and last part wasn't a combo part
+#						outCSVFile.writerow(lastPart)
+					outRow = []
+					outRow.append(qty)
+					outRow += lastPart
+					outPL.append(outRow)
+					newComboPart = row[0]
+					print 'not match'
+					qty = 1
+				elif inComboPart:	# part mismatch but last part was combo
+					inComboPart = False
+					outRow = []
+					outRow.append(qty)
+					outRow.append(newComboPart)
+					outRow += lastPart[1:]
+					outPL.append(outRow)
+					print 'changeup, writing new ref des', newComboPart
+					newComboPart = row[0]
+					qty = 1
+			lastPart = row
+		# handle the last part
+		if inComboPart:
+			qty += 1
+			outRow = []
+			outRow.append(qty)
+			outRow.append(newComboPart)
+			outRow += row[1:]
+			outPL.append(outRow)
+			outCSVFile.writerow(outRow)
+		else:
+			outRow = []
+			outRow.append(qty)
+			outRow += row
+			outPL.append(outRow)
+		newOutPL = []
+		for row in outPL:
+			newOutPLRow = []
+			newOutPLRow.append(row[0])
+			newOutPLRow.append(row[2])
+			newOutPLRow.append(row[1])
+			newOutPLRow += row[3:]
+			newOutPL.append(newOutPLRow)
+		return newOutPL
 
 	def theExecutive(self):
 		myCSV = FindaNetFile()
@@ -230,6 +256,7 @@ class ControlClass:
 
 		try:
 			outCSVFile = csv.writer(open(fileToWrite, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
+			outCSVFile = csv.writer(open(fileToWrite, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
 		except IOError:
 			errorDialog('ERROR - Cannot open the output file.\nIs the file already open in EXCEL?\nClose the file and return.')
 			try:
@@ -239,9 +266,11 @@ class ControlClass:
 				exit()
 
 		partsList = self.readInParts(inFile)
-		sortedPL = sortParts(partsList)
-		reduxPL = combineRefDes(sortedPL)
-		outCSVFile.writerow(['RefDes','Value','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
+#		print 'partsList', partsList
+		sortedPL = self.sortParts(partsList)
+#		print 'sortedPL', sortedPL
+		reduxPL = self.combineRefDes(sortedPL)
+		outCSVFile.writerow(['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
 		outCSVFile.writerows(reduxPL)
 
 class UIManager:
@@ -318,7 +347,7 @@ class UIManager:
 		"""The about dialog
 		"""
 		message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-		message.set_markup("About kiPL\nAuthor: Doug Gilliland\n(c) 2014 - AAC - All rights reserved\nkiPL Process Deltek T and E Charge Account Report")
+		message.set_markup("About kiPL\nAuthor: Doug Gilliland\n(c) 2014 - AAC - All rights reserved\nkiPL Create a Parts List from a KiCad Netlist")
 		message.run()
 		message.destroy()
 		return
