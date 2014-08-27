@@ -1,4 +1,4 @@
-update=22/08/2014 09:14:19
+update=26/08/2014 13:02:35
 version=1
 last_client=pcbnew
 [general]
@@ -38,7 +38,7 @@ PcbTextSizeH=1.016000000000
 PcbTextThickness=0.304800000000
 ModuleTextSizeV=1.000000000000
 ModuleTextSizeH=1.000000000000
-ModuleTextSizeThickness=0.250000000000
+ModuleTextSizeThickness=0.190500000000
 SolderMaskClearance=0.254000000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.381000000000
@@ -54,3 +54,4 @@ LibName5=dip_sockets
 LibName6=capacitors
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName8=libcms
+LibName9=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-corporate-Identity/lb-logos/lb-logo-Kicad-scaled
