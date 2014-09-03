@@ -1,4 +1,4 @@
-update=8/9/2014 12:26:04 AM
+update=02/09/2014 13:01:05
 version=1
 last_client=eeschema
 [general]
@@ -52,3 +52,4 @@ LibName1=power
 LibName2=device
 LibName3=conn
 LibName4=atmel
+LibName5=RasPi-Plus-GVS

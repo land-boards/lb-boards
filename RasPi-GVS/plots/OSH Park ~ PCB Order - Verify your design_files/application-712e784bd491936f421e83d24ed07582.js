@@ -34508,6 +34508,92 @@ function program1(depth0,data) {
   }
 
 }).call(this);
+(function() {
+  var compare_addresses, previousAddressFields;
+
+  previousAddressFields = {};
+
+  compare_addresses = function(a, b) {
+    var field, value;
+    for (field in a) {
+      value = a[field];
+      if (b[field] !== value) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  $(function() {
+    var address_form, get_shipping_rates, requesting, shipping_rates_changed;
+    address_form = $("#address input");
+    requesting = false;
+    shipping_rates_changed = function(e) {
+      var info, select;
+      select = $(this);
+      info = rateInfo[select.val()];
+      return $('#shipping_info').html(info.join("<br>"));
+    };
+    get_shipping_rates = function(e) {
+      var address_fields, country_element;
+      address_fields = {};
+      address_form.each(function(i, ele) {
+        var field;
+        field = address_form[i];
+        return address_fields[ele.name] = ele.value;
+      });
+      country_element = $("form#order_form select#order_address_country");
+      address_fields[country_element.attr('name')] = country_element.val();
+      if (address_fields._method != null) {
+        delete address_fields._method;
+      }
+      if (compare_addresses(address_fields, previousAddressFields)) {
+        return requesting = false;
+      }
+      previousAddressFields = address_fields;
+      $("#order_shipping_rate").attr('disabled', 'disabled');
+      $("input[name='commit']").attr('disabled', 'disabled');
+      $('#order_shipping_rate').html("<option>Loading Shipping Rates...<option>");
+      $('#shipping_rates .errors').fadeOut();
+      $('#shipping_info').html('');
+      return $.ajax("/orders/shipping_rates", {
+        type: 'POST',
+        data: address_fields,
+        success: function(data, status, xhr) {
+          $("#shipping-form").html(data);
+          $("input[name='commit']").removeAttr('disabled');
+          $("#order_shipping_rate").change(shipping_rates_changed);
+          return shipping_rates_changed.call($('#order_shipping_rate'));
+        },
+        error: function() {
+          $('#order_shipping_rate').html("");
+          return $("#shipping-form").append("<ul class='errors'><li>Error retrieving rates from server.</li></ul>");
+        },
+        complete: function() {
+          return requesting = false;
+        }
+      });
+    };
+    address_form.blur(function(e) {
+      if (requesting === true) {
+        return;
+      }
+      requesting = true;
+      return get_shipping_rates(e);
+    });
+    $('form#order_form select#order_address_country').change(function(e) {
+      if (requesting === true) {
+        return;
+      }
+      requesting = true;
+      return get_shipping_rates(e);
+    });
+    if ($('#order_shipping_rate').attr('disabled') != null) {
+      return get_shipping_rates();
+    }
+  });
+
+}).call(this);
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -34522,6 +34608,7 @@ function program1(depth0,data) {
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
+
 
 
 

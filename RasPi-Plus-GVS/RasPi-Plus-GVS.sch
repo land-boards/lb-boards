@@ -1,15 +1,16 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 02/09/2014 13:01:24
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:RasPi-GVS-Plus-cache
+LIBS:RasPi-Plus-GVS
+LIBS:RasPi-Plus-GVS-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "RasPi-GVS-Plus"
+Title "RasPi-Plus-GVS"
 Date "19 aug 2014"
 Rev "X2"
 Comp "land-boards.com"
