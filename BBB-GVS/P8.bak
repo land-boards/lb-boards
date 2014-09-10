@@ -12,7 +12,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 3 3
 Title "BeagleBone Cape Baseline"
-Date "17 aug 2014"
+Date "6 sep 2014"
 Rev "X4"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -159,7 +159,7 @@ U 1 1 53AC71AB
 P 12700 3200
 F 0 "U4" H 12700 3100 50  0000 C CNN
 F 1 "TXS0108EPWR" H 12700 3300 50  0000 C CNN
-F 2 "SOG20" H 12700 3200 50  0001 C CNN
+F 2 "SOG20" H 12700 3200 50  0000 C CNN
 F 3 "DOCUMENTATION" H 12700 3200 50  0001 C CNN
 	1    12700 3200
 	1    0    0    -1  
@@ -170,7 +170,7 @@ U 1 1 53AC71BC
 P 15000 3000
 F 0 "J28" V 14950 3000 50  0000 C CNN
 F 1 "CONN_3" V 15050 3000 40  0000 C CNN
-F 2 "PIN_ARRAY_3X1" H 15000 3250 60  0000 C CNN
+F 2 "PIN_ARRAY_3x1" H 15000 3250 60  0000 C CNN
 F 3 "" H 15000 3000 60  0000 C CNN
 	1    15000 3000
 	1    0    0    1   

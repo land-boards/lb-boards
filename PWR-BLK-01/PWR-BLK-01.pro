@@ -1,4 +1,4 @@
-update=8/16/2014 12:27:21 PM
+update=9/7/2014 3:26:13 PM
 version=1
 last_client=pcbnew
 [general]
@@ -42,3 +42,4 @@ LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName2=pin_array
 LibName3=libcms
+LibName4=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
