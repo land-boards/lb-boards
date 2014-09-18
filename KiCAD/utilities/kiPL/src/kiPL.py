@@ -222,7 +222,7 @@ class ControlClass:
 			outRow.append(newComboPart)
 			outRow += row[1:]
 			outPL.append(outRow)
-			outCSVFile.writerow(outRow)
+#			outCSVFile.writerow(outRow)
 		else:
 			outRow = []
 			outRow.append(qty)

@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/RasPi-GVS/RasPi-GVS.sch)
-    (date "02/09/2014 13:29:02")
-    (tool "eeschema (2013-04-19 BZR 4011)-stable"))
+    (source C:/Users/Doug/Documents/GitHub/lb-boards/RasPi-GVS/RasPi-GVS.sch)
+    (date "9/14/2014 5:55:22 PM")
+    (tool "eeschema (2013-05-31 BZR 4019)-stable"))
   (components
     (comp (ref P1)
       (value RASPIO)
@@ -223,33 +223,6 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 5) (type passive))
         (pin (num 6) (name 6) (type passive))))
-    (libpart (lib RasPi-GVS-cache) (part AP1117)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) AP1117)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name GND) (type power_in))
-        (pin (num 2) (name VO) (type passive))
-        (pin (num 3) (name VIN) (type power_in))
-        (pin (num 4) (name VO) (type power_out))))
-    (libpart (lib RasPi-GVS-cache) (part COUPON)
-      (fields
-        (field (name Reference) COUP?)
-        (field (name Value) COUPON)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~)))
-    (libpart (lib RasPi-GVS-cache) (part JACK-3.5MM)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) JACK-3.5MM)
-        (field (name Footprint) POWER-IN-JACK-PMS)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive))))
     (libpart (lib RasPi-GVS-cache) (part RASPIO)
       (fields
         (field (name Reference) J)
@@ -283,6 +256,22 @@
         (pin (num 24) (name SPI_CE0) (type output))
         (pin (num 25) (name GND) (type power_out))
         (pin (num 26) (name SPI_CE1) (type BiDi))))
+    (libpart (lib RasPi-GVS-cache) (part JACK-3.5MM)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) JACK-3.5MM)
+        (field (name Footprint) POWER-IN-JACK-PMS)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))))
+    (libpart (lib RasPi-GVS-cache) (part COUPON)
+      (fields
+        (field (name Reference) COUP?)
+        (field (name Value) COUPON)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~)))
     (libpart (lib RasPi-GVS-cache) (part TXB0108)
       (fields
         (field (name Reference) U)
@@ -309,14 +298,25 @@
         (pin (num 17) (name B3) (type BiDi))
         (pin (num 18) (name G2) (type BiDi))
         (pin (num 19) (name "VCCB(HV)") (type passive))
-        (pin (num 20) (name B1) (type BiDi)))))
+        (pin (num 20) (name B1) (type BiDi))))
+    (libpart (lib RasPi-GVS-cache) (part AP1117)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) AP1117)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name GND) (type power_in))
+        (pin (num 2) (name VO) (type passive))
+        (pin (num 3) (name VIN) (type power_in))
+        (pin (num 4) (name VO) (type power_out)))))
   (libraries
     (library (logical device)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
     (library (logical RasPi-GVS-cache)
-      (uri C:\Users\DGilliland.AACISD\Documents\GitHub\lb-boards\RasPi-GVS\RasPi-GVS-cache.lib)))
+      (uri C:\Users\Doug\Documents\GitHub\lb-boards\RasPi-GVS\RasPi-GVS-cache.lib)))
   (nets
     (net (code 1) (name /GND)
       (node (ref U3) (pin 1))
