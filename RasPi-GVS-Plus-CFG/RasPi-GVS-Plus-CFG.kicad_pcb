@@ -1,4 +1,4 @@
-(kicad_pcb (version 3) (host pcbnew "(2013-04-19 BZR 4011)-stable")
+(kicad_pcb (version 3) (host pcbnew "(2013-05-31 BZR 4019)-stable")
 
   (general
     (links 139)
@@ -26,7 +26,7 @@
     (21 F.SilkS user)
     (22 B.Mask user)
     (23 F.Mask user)
-    (24 Dwgs.User user)
+    (24 Dwgs.User user hide)
     (25 Cmts.User user)
     (28 Edge.Cuts user)
   )
@@ -64,7 +64,7 @@
       (layerselection 284196865)
       (usegerberextensions true)
       (excludeedgelayer true)
-      (linewidth 0)
+      (linewidth 0.150000)
       (plotframeref false)
       (viasonmask false)
       (mode 1)
@@ -1280,11 +1280,11 @@
     )
   )
 
-  (module SM0805 (layer F.Cu) (tedit 54240DF7) (tstamp 53CE9880)
+  (module SM0805 (layer F.Cu) (tedit 54271E01) (tstamp 53CE9880)
     (at 121.158 84.074 90)
     (path /53CEA0F3)
     (attr smd)
-    (fp_text reference R6 (at 0 -1.778 90) (layer F.SilkS)
+    (fp_text reference R6 (at 2.674 0.042 180) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 1K (at 0 0.381 90) (layer F.SilkS) hide
@@ -1973,11 +1973,11 @@
     )
   )
 
-  (module SM0805 (layer F.Cu) (tedit 54240DB8) (tstamp 54219EF8)
+  (module SM0805 (layer F.Cu) (tedit 54271DEF) (tstamp 54219EF8)
     (at 117.348 75.692 90)
     (path /54219F88)
     (attr smd)
-    (fp_text reference R2 (at 0 2.286 90) (layer F.SilkS)
+    (fp_text reference R2 (at -2.908 0.052 180) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 3.9K (at 0 0.889 90) (layer F.SilkS) hide
@@ -2005,11 +2005,11 @@
     )
   )
 
-  (module SM0805 (layer F.Cu) (tedit 54240DB4) (tstamp 54219F05)
+  (module SM0805 (layer F.Cu) (tedit 54271DF5) (tstamp 54219F05)
     (at 117.348 71.882 270)
     (path /54219F8E)
     (attr smd)
-    (fp_text reference R1 (at 0 -2.286 270) (layer F.SilkS)
+    (fp_text reference R1 (at -2.682 -0.052 360) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 3.9K (at 0.254 1.397 270) (layer F.SilkS) hide
@@ -2037,12 +2037,12 @@
     )
   )
 
-  (module PIN_ARRAY_2X1 (layer F.Cu) (tedit 54240E97) (tstamp 542409C7)
+  (module PIN_ARRAY_2X1 (layer F.Cu) (tedit 54271E11) (tstamp 542409C7)
     (at 125.984 83.058)
     (descr "Connecteurs 2 pins")
     (tags "CONN DEV")
     (path /5422FCB6)
-    (fp_text reference J22 (at 0 2.54) (layer F.SilkS)
+    (fp_text reference J22 (at -1.584 2.342) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value CONN_2 (at 0 -1.905) (layer F.SilkS) hide
@@ -2141,7 +2141,7 @@
     (arrow2a (pts (xy 139 97.5) (xy 139.58642 96.373497)))
     (arrow2b (pts (xy 139 97.5) (xy 138.41358 96.373497)))
   )
-  (gr_text WP (at 124.714 80.518) (layer F.SilkS)
+  (gr_text WE (at 124.714 80.518) (layer F.SilkS)
     (effects (font (size 1.5875 1.397) (thickness 0.3048)) (justify left))
   )
   (gr_text IO20 (at 130.325 57.7 90) (layer F.SilkS)
