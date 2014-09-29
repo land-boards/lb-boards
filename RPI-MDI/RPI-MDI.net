@@ -1,13 +1,13 @@
 (export (version D)
   (design
-    (source C:/Users/Doug/Documents/GitHub/lb-boards/RasPi-MDI/RasPi-MDI.sch)
-    (date "9/28/2014 2:12:37 PM")
-    (tool "eeschema (2013-05-31 BZR 4019)-stable"))
+    (source C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/RPI-MDI/RPI-MDI.sch)
+    (date "29/09/2014 12:28:57")
+    (tool "eeschema (2013-04-19 BZR 4011)-stable"))
   (components
     (comp (ref P1)
       (value RASPIO)
       (footprint pin_array_13x2)
-      (libsource (lib RasPi-MDI-cache) (part RASPIO))
+      (libsource (lib RPI-MDI-cache) (part RASPIO))
       (sheetpath (names /) (tstamps /))
       (tstamp 53B16746))
     (comp (ref J1)
@@ -115,22 +115,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistance)
-      (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part LED)
       (footprints
         (fp LED-3MM)
@@ -148,6 +132,22 @@
       (pins
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part CONN_2)
       (description "Symbole general de connecteur")
       (fields
@@ -200,7 +200,7 @@
         (pin (num 26) (name SCL) (type openCol))
         (pin (num 27) (name SDA) (type openCol))
         (pin (num 28) (name VDD) (type power_in))))
-    (libpart (lib RasPi-MDI-cache) (part RASPIO)
+    (libpart (lib RPI-MDI-cache) (part RASPIO)
       (fields
         (field (name Reference) J)
         (field (name Value) RASPIO)
@@ -238,10 +238,10 @@
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
-    (library (logical RasPi-MDI-cache)
-      (uri C:\Users\Doug\Documents\GitHub\lb-boards\RasPi-MDI\RasPi-MDI-cache.lib))
     (library (logical PCA9685plus)
-      (uri parts\PCA9685plus.lib)))
+      (uri parts\PCA9685plus.lib))
+    (library (logical RPI-MDI-cache)
+      (uri C:\Users\DGilliland.AACISD\Documents\GitHub\lb-boards\RPI-MDI\RPI-MDI-cache.lib)))
   (nets
     (net (code 1) (name GND)
       (node (ref J1) (pin 1))
