@@ -1,8 +1,9 @@
-EESchema Schematic File Version 2  date 25/09/2014 08:25:25
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
+LIBS:DougsSch
 LIBS:RasPi-GVS-Plus-CFG-cache
 EELAYER 27 0
 EELAYER END
