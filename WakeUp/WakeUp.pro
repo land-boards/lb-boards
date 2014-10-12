@@ -1,13 +1,8 @@
-update=10/12/2014 1:13:59 PM
+update=10/12/2014 1:23:40 PM
 version=1
 last_client=eeschema
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=Tiny85ISP.net
@@ -28,7 +23,6 @@ DrawSegmentWidth=0.381000000000
 BoardOutlineThickness=0.381000000000
 ModuleOutlineThickness=0.381000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -37,6 +31,13 @@ LibName5=divers
 LibName6=libcms
 LibName7=dip_sockets
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName9=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -49,5 +50,5 @@ LabSize=60
 LibName1=power
 LibName2=device
 LibName3=conn
-LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName4=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
