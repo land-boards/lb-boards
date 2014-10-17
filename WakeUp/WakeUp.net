@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:\Users\doug_000\Documents\GitHub\lb-boards\WakeUp\WakeUp.sch)
-    (date "10/10/2014 10:30:39 AM")
-    (tool "eeschema (2013-07-07 BZR 4022)-stable"))
+    (source C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/WakeUp/WakeUp.sch)
+    (date "14/10/2014 15:41:07")
+    (tool "eeschema (2013-04-19 BZR 4011)-stable"))
   (components
     (comp (ref MTG3)
       (value CONN_1)
@@ -43,7 +43,7 @@
     (comp (ref U1)
       (value ATTINY85)
       (footprint DIP-8__300)
-      (libsource (lib DougsSch) (part ATTINY85))
+      (libsource (lib WakeUp-cache) (part ATTINY85))
       (sheetpath (names /) (tstamps /))
       (tstamp 5030EBB2))
     (comp (ref C2)
@@ -67,13 +67,13 @@
     (comp (ref U2)
       (value AP1117)
       (footprint SOT223)
-      (libsource (lib DougsSch) (part AP1117))
+      (libsource (lib WakeUp-cache) (part AP1117))
       (sheetpath (names /) (tstamps /))
       (tstamp 5030E794))
     (comp (ref J1)
       (value DCJ0202)
       (footprint JACK_2.1MM)
-      (libsource (lib DougsSch) (part DCJ0202))
+      (libsource (lib WakeUp-cache) (part DCJ0202))
       (sheetpath (names /) (tstamps /))
       (tstamp 51D16947))
     (comp (ref H1)
@@ -127,7 +127,7 @@
     (comp (ref SW2)
       (value SW_PUSH_OMRON)
       (footprint SW-PB-6MM)
-      (libsource (lib DougsSch) (part SW_PUSH_OMRON))
+      (libsource (lib WakeUp-cache) (part SW_PUSH_OMRON))
       (sheetpath (names /) (tstamps /))
       (tstamp 5437E011))
     (comp (ref R4)
@@ -143,6 +143,26 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5437E4C7)))
   (libparts
+    (libpart (lib WakeUp-cache) (part AP1117)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) AP1117)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name GND) (type power_in))
+        (pin (num 2) (name VO) (type passive))
+        (pin (num 3) (name VIN) (type power_in))
+        (pin (num 4) (name VO) (type power_out))))
+    (libpart (lib device) (part BATTERY)
+      (fields
+        (field (name Reference) BT)
+        (field (name Value) BATTERY)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name +) (type passive))
+        (pin (num 2) (name -) (type passive))))
     (libpart (lib device) (part C)
       (description "Condensateur non polarise")
       (footprints
@@ -170,15 +190,35 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part BATTERY)
+    (libpart (lib device) (part DIODE)
+      (description "Diode simple")
+      (footprints
+        (fp D?)
+        (fp S*))
       (fields
-        (field (name Reference) BT)
-        (field (name Value) BATTERY)
+        (field (name Reference) D)
+        (field (name Value) DIODE)
         (field (name Footprint) ~)
         (field (name Datasheet) ~))
       (pins
-        (pin (num 1) (name +) (type passive))
-        (pin (num 2) (name -) (type passive))))
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part SPEAKER)
       (fields
         (field (name Reference) SP)
@@ -198,35 +238,6 @@
       (pins
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input))))
-    (libpart (lib device) (part R)
-      (description Resistance)
-      (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part DIODE)
-      (description "Diode simple")
-      (footprints
-        (fp D?)
-        (fp S*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) DIODE)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
     (libpart (lib conn) (part CONN_1)
       (description "1 pin")
       (fields
@@ -254,20 +265,7 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 5) (type passive))
         (pin (num 6) (name 6) (type passive))))
-    (libpart (lib DougsSch) (part AP1117)
-      (description "Voltage Regulator, TO-223")
-      (fields
-        (field (name Reference) U)
-        (field (name Value) AP1117)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name GND) (type power_in))
-        (pin (num 2) (name VO) (type passive))
-        (pin (num 3) (name VIN) (type power_in))
-        (pin (num 4) (name VO) (type power_out))))
-    (libpart (lib DougsSch) (part ATTINY85)
-      (description ATTiny85)
+    (libpart (lib WakeUp-cache) (part ATTINY85)
       (fields
         (field (name Reference) U)
         (field (name Value) ATTINY85)
@@ -282,8 +280,7 @@
         (pin (num 6) (name D1) (type BiDi))
         (pin (num 7) (name "D(A)2") (type BiDi))
         (pin (num 8) (name VCC) (type power_in))))
-    (libpart (lib DougsSch) (part DCJ0202)
-      (description "JACK, DC POWER")
+    (libpart (lib WakeUp-cache) (part DCJ0202)
       (fields
         (field (name Reference) J)
         (field (name Value) DCJ0202)
@@ -293,7 +290,7 @@
         (pin (num 1) (name 1) (type passive))
         (pin (num 2) (name 2) (type passive))
         (pin (num 3) (name 3) (type passive))))
-    (libpart (lib DougsSch) (part SW_PUSH_OMRON)
+    (libpart (lib WakeUp-cache) (part SW_PUSH_OMRON)
       (fields
         (field (name Reference) SW)
         (field (name Value) SW_PUSH_OMRON)
@@ -305,12 +302,12 @@
         (pin (num 3) (name 3) (type passive))
         (pin (num 4) (name 4) (type passive)))))
   (libraries
+    (library (logical WakeUp-cache)
+      (uri C:\Users\DGilliland.AACISD\Documents\GitHub\lb-boards\WakeUp\WakeUp-cache.lib))
     (library (logical device)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\device.lib"))
     (library (logical conn)
-      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib"))
-    (library (logical DougsSch)
-      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib)))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\library\\conn.lib")))
   (nets
     (net (code 1) (name "")
       (node (ref D1) (pin 1))
