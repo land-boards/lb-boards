@@ -1,0 +1,457 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:atmel
+LIBS:RPP-GPIO-Ext-cache
+EELAYER 27 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "RasPi-Plus-GVS"
+Date "5 oct 2014"
+Rev "X2"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 2900 4100 0    60   ~ 0
+GND
+Text Label 1600 1800 0    60   ~ 0
++3.3V-1
+Text Label 1600 1900 0    60   ~ 0
+SDA1
+Text Label 1600 2000 0    60   ~ 0
+SCLK1
+Text Label 1600 2100 0    60   ~ 0
+IO_4
+Text Label 4200 2100 0    60   ~ 0
+TXD0
+Text Label 4200 2200 0    60   ~ 0
+RXD0
+Text Label 4200 2300 0    60   ~ 0
+IO_18
+Text Label 4200 2500 0    60   ~ 0
+IO_23
+Text Label 4200 2600 0    60   ~ 0
+IO_24
+Text Label 1600 2300 0    60   ~ 0
+IO_17
+Text Label 1600 2400 0    60   ~ 0
+IO_27
+Text Label 1600 2500 0    60   ~ 0
+IO_22
+Text Label 4200 2800 0    60   ~ 0
+IO_25
+Text Label 1600 2700 0    60   ~ 0
+SPIMOSI
+Text Label 1600 2800 0    60   ~ 0
+SPIMISO
+Text Label 1600 2900 0    60   ~ 0
+SPISCK
+Text Label 4200 2900 0    60   ~ 0
+SPICE0
+Text Label 4200 3000 0    60   ~ 0
+SPICE1
+Wire Wire Line
+	1500 1800 2350 1800
+Connection ~ 2250 1800
+Wire Wire Line
+	2350 2000 1500 2000
+Wire Wire Line
+	2350 2100 1500 2100
+Wire Wire Line
+	2350 2300 1500 2300
+Wire Wire Line
+	2350 2400 1500 2400
+Wire Wire Line
+	2350 2500 1500 2500
+Wire Wire Line
+	2350 1900 1500 1900
+Wire Wire Line
+	2350 2700 1500 2700
+Wire Wire Line
+	2350 2800 1500 2800
+Wire Wire Line
+	2350 3200 1500 3200
+Wire Wire Line
+	4600 2100 3750 2100
+Wire Wire Line
+	4600 2200 3750 2200
+Wire Wire Line
+	4600 2300 3750 2300
+Wire Wire Line
+	4600 2500 3750 2500
+Wire Wire Line
+	4600 2600 3750 2600
+Wire Wire Line
+	4600 2800 3750 2800
+Wire Wire Line
+	4600 2900 3750 2900
+Wire Wire Line
+	4600 3000 3750 3000
+Wire Wire Line
+	3750 1800 4600 1800
+Wire Wire Line
+	3750 1900 3850 1900
+Wire Wire Line
+	3850 1900 3850 1800
+Connection ~ 3850 1800
+Wire Wire Line
+	2250 1800 2250 2600
+Wire Wire Line
+	2250 2600 2350 2600
+Wire Wire Line
+	2350 2200 2150 2200
+Wire Wire Line
+	2150 2200 2150 4100
+Wire Wire Line
+	2150 3000 2350 3000
+Wire Wire Line
+	2150 4100 3850 4100
+Wire Wire Line
+	3850 4100 3850 2000
+Wire Wire Line
+	3850 2000 3750 2000
+Connection ~ 2150 3000
+Wire Wire Line
+	3750 2400 3850 2400
+Connection ~ 3850 2400
+Wire Wire Line
+	3750 2700 3850 2700
+Connection ~ 3850 2700
+Text Label 4200 1800 0    60   ~ 0
+R5-1
+$Comp
+L RASPIOPLUS J2
+U 1 1 53C50367
+P 3050 2750
+F 0 "J2" H 2700 3900 60  0000 C CNN
+F 1 "RASPIOPLUS" H 2950 1600 60  0000 C CNN
+F 2 "PIN_ARRAY_20X2" H 3050 1550 60  0000 C CNN
+F 3 "~" H 3050 3100 60  0000 C CNN
+	1    3050 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3200 3850 3200
+Connection ~ 3850 3200
+Wire Wire Line
+	3750 3400 3850 3400
+Connection ~ 3850 3400
+Wire Wire Line
+	2350 3700 2150 3700
+Connection ~ 2150 3700
+Wire Wire Line
+	2350 2900 1500 2900
+Wire Wire Line
+	2350 3300 1500 3300
+Wire Wire Line
+	2350 3400 1500 3400
+Wire Wire Line
+	2350 3500 1500 3500
+Wire Wire Line
+	2350 3600 1500 3600
+Wire Wire Line
+	4600 3300 3750 3300
+Wire Wire Line
+	4600 3600 3750 3600
+Wire Wire Line
+	4600 3700 3750 3700
+Wire Wire Line
+	4600 3500 3750 3500
+Text Label 1600 3200 0    60   ~ 0
+IO_5
+Text Label 1600 3300 0    60   ~ 0
+IO_6
+Text Label 1600 3400 0    60   ~ 0
+IO_13
+Text Label 1600 3500 0    60   ~ 0
+IO_19
+Text Label 1600 3600 0    60   ~ 0
+IO_26
+Text Label 4200 3300 0    60   ~ 0
+IO_12
+Text Label 4200 3500 0    60   ~ 0
+IO_16
+Text Label 4200 3600 0    60   ~ 0
+IO_20
+Text Label 4200 3700 0    60   ~ 0
+IO_21
+$Comp
+L CONN_1 MTG2
+U 1 1 53C6E5ED
+P 15900 9050
+F 0 "MTG2" H 15980 9050 40  0000 L CNN
+F 1 "CONN_1" H 15900 9105 30  0001 C CNN
+F 2 "MTG-2.75MM" H 15900 9050 60  0000 C CNN
+F 3 "" H 15900 9050 60  0000 C CNN
+	1    15900 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 MTG1
+U 1 1 53C6E5FC
+P 15900 8950
+F 0 "MTG1" H 15980 8950 40  0000 L CNN
+F 1 "CONN_1" H 15900 9005 30  0001 C CNN
+F 2 "MTG-2.75MM" H 15900 8950 60  0000 C CNN
+F 3 "" H 15900 8950 60  0000 C CNN
+	1    15900 8950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 15750 9050
+NoConn ~ 15750 8950
+Text Label 6950 4200 0    60   ~ 0
+GND
+Text Label 5650 1900 0    60   ~ 0
++3.3V-2
+Text Label 5650 2000 0    60   ~ 0
+SDA1
+Text Label 5650 2100 0    60   ~ 0
+SCLK1
+Text Label 5650 2200 0    60   ~ 0
+IO_4
+Text Label 8250 2200 0    60   ~ 0
+TXD0
+Text Label 8250 2300 0    60   ~ 0
+RXD0
+Text Label 8250 2400 0    60   ~ 0
+IO_18
+Text Label 8250 2600 0    60   ~ 0
+IO_23
+Text Label 8250 2700 0    60   ~ 0
+IO_24
+Text Label 5650 2400 0    60   ~ 0
+IO_17
+Text Label 5650 2500 0    60   ~ 0
+IO_27
+Text Label 5650 2600 0    60   ~ 0
+IO_22
+Text Label 8250 2900 0    60   ~ 0
+IO_25
+Text Label 5650 2800 0    60   ~ 0
+SPIMOSI
+Text Label 5650 2900 0    60   ~ 0
+SPIMISO
+Text Label 5650 3000 0    60   ~ 0
+SPISCK
+Text Label 8250 3000 0    60   ~ 0
+SPICE0
+Text Label 8250 3100 0    60   ~ 0
+SPICE1
+Wire Wire Line
+	5550 1900 6400 1900
+Connection ~ 6300 1900
+Wire Wire Line
+	6400 2100 5550 2100
+Wire Wire Line
+	6400 2200 5550 2200
+Wire Wire Line
+	6400 2400 5550 2400
+Wire Wire Line
+	6400 2500 5550 2500
+Wire Wire Line
+	6400 2600 5550 2600
+Wire Wire Line
+	6400 2000 5550 2000
+Wire Wire Line
+	6400 2800 5550 2800
+Wire Wire Line
+	6400 2900 5550 2900
+Wire Wire Line
+	6400 3300 5550 3300
+Wire Wire Line
+	8650 2200 7800 2200
+Wire Wire Line
+	8650 2300 7800 2300
+Wire Wire Line
+	8650 2400 7800 2400
+Wire Wire Line
+	8650 2600 7800 2600
+Wire Wire Line
+	8650 2700 7800 2700
+Wire Wire Line
+	8650 2900 7800 2900
+Wire Wire Line
+	8650 3000 7800 3000
+Wire Wire Line
+	8650 3100 7800 3100
+Wire Wire Line
+	7800 1900 8650 1900
+Wire Wire Line
+	7800 2000 7900 2000
+Wire Wire Line
+	7900 2000 7900 1900
+Connection ~ 7900 1900
+Wire Wire Line
+	6300 1900 6300 2700
+Wire Wire Line
+	6300 2700 6400 2700
+Wire Wire Line
+	6400 2300 6200 2300
+Wire Wire Line
+	6200 2300 6200 4200
+Wire Wire Line
+	6200 3100 6400 3100
+Wire Wire Line
+	6200 4200 7900 4200
+Wire Wire Line
+	7900 4200 7900 2100
+Wire Wire Line
+	7900 2100 7800 2100
+Connection ~ 6200 3100
+Wire Wire Line
+	7800 2500 7900 2500
+Connection ~ 7900 2500
+Wire Wire Line
+	7800 2800 7900 2800
+Connection ~ 7900 2800
+Text Label 8250 1900 0    60   ~ 0
+R5-2
+$Comp
+L RASPIOPLUS J1
+U 1 1 543060D0
+P 7100 2850
+F 0 "J1" H 6750 4000 60  0000 C CNN
+F 1 "RASPIOPLUS" H 7000 1700 60  0000 C CNN
+F 2 "PIN_ARRAY_20X2" H 7100 1650 60  0000 C CNN
+F 3 "~" H 7100 3200 60  0000 C CNN
+	1    7100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3300 7900 3300
+Connection ~ 7900 3300
+Wire Wire Line
+	7800 3500 7900 3500
+Connection ~ 7900 3500
+Wire Wire Line
+	6400 3800 6200 3800
+Connection ~ 6200 3800
+Wire Wire Line
+	6400 3000 5550 3000
+Wire Wire Line
+	6400 3400 5550 3400
+Wire Wire Line
+	6400 3500 5550 3500
+Wire Wire Line
+	6400 3600 5550 3600
+Wire Wire Line
+	6400 3700 5550 3700
+Wire Wire Line
+	8650 3400 7800 3400
+Wire Wire Line
+	8650 3700 7800 3700
+Wire Wire Line
+	8650 3800 7800 3800
+Wire Wire Line
+	8650 3600 7800 3600
+Text Label 5650 3300 0    60   ~ 0
+IO_5
+Text Label 5650 3400 0    60   ~ 0
+IO_6
+Text Label 5650 3500 0    60   ~ 0
+IO_13
+Text Label 5650 3600 0    60   ~ 0
+IO_19
+Text Label 5650 3700 0    60   ~ 0
+IO_26
+Text Label 8250 3400 0    60   ~ 0
+IO_12
+Text Label 8250 3600 0    60   ~ 0
+IO_16
+Text Label 8250 3700 0    60   ~ 0
+IO_20
+Text Label 8250 3800 0    60   ~ 0
+IO_21
+$Comp
+L CONN_2 J3
+U 1 1 5430669F
+P 7450 1300
+F 0 "J3" V 7400 1300 40  0000 C CNN
+F 1 "CONN_2" V 7500 1300 40  0000 C CNN
+F 2 "PIN_ARRAY_2X1" H 7450 1300 60  0000 C CNN
+F 3 "" H 7450 1300 60  0000 C CNN
+	1    7450 1300
+	1    0    0    -1  
+$EndComp
+Text Label 6700 1200 0    60   ~ 0
+R5-1
+Text Label 6700 1400 0    60   ~ 0
+R5-2
+Wire Wire Line
+	6600 1200 7100 1200
+Wire Wire Line
+	6600 1400 7100 1400
+$Comp
+L CONN_2 J4
+U 1 1 543067D9
+P 3500 1300
+F 0 "J4" V 3450 1300 40  0000 C CNN
+F 1 "CONN_2" V 3550 1300 40  0000 C CNN
+F 2 "PIN_ARRAY_2X1" H 3500 1300 60  0000 C CNN
+F 3 "" H 3500 1300 60  0000 C CNN
+	1    3500 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1200 3150 1200
+Wire Wire Line
+	2650 1400 3150 1400
+Text Label 2700 1400 0    60   ~ 0
++3.3V-2
+Text Label 2700 1200 0    60   ~ 0
++3.3V-1
+$Comp
+L LED D1
+U 1 1 543069BA
+P 9700 1650
+F 0 "D1" H 9700 1750 50  0000 C CNN
+F 1 "LED" H 9700 1550 50  0000 C CNN
+F 2 "SM0603" H 9700 1650 60  0000 C CNN
+F 3 "~" H 9700 1650 60  0000 C CNN
+	1    9700 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 543069C9
+P 9050 1650
+F 0 "R1" V 9130 1650 40  0000 C CNN
+F 1 "R" V 9057 1651 40  0000 C CNN
+F 2 "SM0805" V 8980 1650 30  0000 C CNN
+F 3 "~" H 9050 1650 30  0000 C CNN
+	1    9050 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 1650 9500 1650
+Wire Wire Line
+	9900 1650 10250 1650
+Text Label 8300 1650 0    60   ~ 0
++3.3V-1
+Wire Wire Line
+	8800 1650 8250 1650
+Text Label 10000 1650 0    60   ~ 0
+GND
+Wire Wire Line
+	2350 3100 1500 3100
+Wire Wire Line
+	3750 3100 4600 3100
+Text Label 1600 3100 0    60   ~ 0
+ID_SD
+Text Label 4200 3100 0    60   ~ 0
+ID_SC
+Wire Wire Line
+	7800 3200 8650 3200
+Text Label 8250 3200 0    60   ~ 0
+ID_SC
+Wire Wire Line
+	6400 3200 5550 3200
+Text Label 5650 3200 0    60   ~ 0
+ID_SD
+$EndSCHEMATC
