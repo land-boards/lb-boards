@@ -1,9 +1,8 @@
-EESchema Schematic File Version 2  date 11/06/2013 08:30:01
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:74xx
-LIBS:DougsSch
 LIBS:PulseGenerator-cache
 EELAYER 27 0
 EELAYER END
@@ -11,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "22 may 2013"
+Date "2 nov 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -256,7 +255,7 @@ L CP1 C2
 U 1 1 519A50E6
 P 1950 7500
 F 0 "C2" H 2000 7600 50  0000 L CNN
-F 1 "100uF" H 2000 7400 50  0000 L CNN
+F 1 "47uF" H 2000 7400 50  0000 L CNN
 F 2 "C1.5V8V" H 1950 7500 60  0000 C CNN
 F 3 "~" H 1950 7500 60  0000 C CNN
 	1    1950 7500
