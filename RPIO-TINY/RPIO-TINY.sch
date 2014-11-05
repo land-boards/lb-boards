@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 21/10/2014 12:25:00
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -10,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "RasPi-GVS"
-Date "21 oct 2014"
+Date "5 nov 2014"
 Rev "X2"
 Comp "land-boards.com"
 Comment1 ""
@@ -560,4 +560,38 @@ Wire Wire Line
 	7600 2700 7600 1450
 Wire Wire Line
 	7600 1450 8400 1450
+Text Notes 1450 1050 0    60   ~ 0
+GPIO_2
+Text Notes 1450 1500 0    60   ~ 0
+GPIO_3
+Text Notes 1450 1950 0    60   ~ 0
+GPIO_4
+Text Notes 1450 2450 0    60   ~ 0
+GPIO_17
+Text Notes 1450 2950 0    60   ~ 0
+GPIO_27
+Text Notes 1450 3500 0    60   ~ 0
+GPIO_22
+Text Notes 1450 4000 0    60   ~ 0
+GPIO_10
+Text Notes 1500 4450 0    60   ~ 0
+GPIO_9
+Text Notes 1450 4900 0    60   ~ 0
+GPIO_11
+Text Notes 8900 1500 0    60   ~ 0
+GPIO_14
+Text Notes 8900 1950 0    60   ~ 0
+GPIO_15
+Text Notes 8900 2400 0    60   ~ 0
+GPIO_18
+Text Notes 8900 2900 0    60   ~ 0
+GPIO_23
+Text Notes 8900 3400 0    60   ~ 0
+GPIO_24
+Text Notes 8900 3900 0    60   ~ 0
+GPIO_25
+Text Notes 8900 4400 0    60   ~ 0
+GPIO_8
+Text Notes 8900 4850 0    60   ~ 0
+GPIO_7
 $EndSCHEMATC
