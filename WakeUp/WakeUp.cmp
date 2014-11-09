@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 10/10/2014 8:50:20 AM
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 11/7/2014 12:38:16 PM
 
 BeginCmp
 TimeStamp = /5437D1BA;
@@ -47,6 +47,13 @@ TimeStamp = /5437CFCD;
 Reference = D2;
 ValeurCmp = DIODE;
 IdModule  = D5;
+EndCmp
+
+BeginCmp
+TimeStamp = /545D0443;
+Reference = DS1;
+ValeurCmp = LED;
+IdModule  = LED-5MM;
 EndCmp
 
 BeginCmp
@@ -127,10 +134,17 @@ IdModule  = R4-5;
 EndCmp
 
 BeginCmp
+TimeStamp = /545D038A;
+Reference = R5;
+ValeurCmp = 330;
+IdModule  = R4-5;
+EndCmp
+
+BeginCmp
 TimeStamp = /5437DF5F;
 Reference = SP1;
 ValeurCmp = SPEAKER;
-IdModule  = PIN_ARRAY_2X1;
+IdModule  = PIEZO_12MM;
 EndCmp
 
 BeginCmp

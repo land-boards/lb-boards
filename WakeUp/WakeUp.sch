@@ -1,7 +1,8 @@
-EESchema Schematic File Version 2  date 20/10/2014 13:42:04
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
+LIBS:DougsSch
 LIBS:WakeUp-cache
 EELAYER 27 0
 EELAYER END
@@ -9,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "WakeUp"
-Date "14 oct 2014"
+Date "7 nov 2014"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -586,4 +587,47 @@ Text Label 4400 2350 0    60   ~ 0
 D0
 Text Label 5100 4400 0    60   ~ 0
 D3
+$Comp
+L R R5
+U 1 1 545D038A
+P 4000 5050
+F 0 "R5" V 4080 5050 40  0000 C CNN
+F 1 "330" V 4007 5051 40  0000 C CNN
+F 2 "R4-5" V 3930 5050 30  0000 C CNN
+F 3 "~" H 4000 5050 30  0000 C CNN
+	1    4000 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 5050 3350 5050
+Text Label 3450 5050 0    60   ~ 0
+D1
+$Comp
+L LED DS1
+U 1 1 545D0443
+P 4650 5050
+F 0 "DS1" H 4650 5150 50  0000 C CNN
+F 1 "LED" H 4650 4950 50  0000 C CNN
+F 2 "~" H 4650 5050 60  0000 C CNN
+F 3 "~" H 4650 5050 60  0000 C CNN
+	1    4650 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5050 4450 5050
+Wire Wire Line
+	4850 5050 5000 5050
+Wire Wire Line
+	5000 5050 5000 5200
+$Comp
+L GND #PWR012
+U 1 1 545D04FF
+P 5000 5200
+F 0 "#PWR012" H 5000 5200 30  0001 C CNN
+F 1 "GND" H 5000 5130 30  0001 C CNN
+F 2 "" H 5000 5200 60  0000 C CNN
+F 3 "" H 5000 5200 60  0000 C CNN
+	1    5000 5200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
