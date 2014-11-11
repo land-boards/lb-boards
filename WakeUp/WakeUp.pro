@@ -1,4 +1,4 @@
-update=11/7/2014 12:38:31 PM
+update=11/10/2014 7:51:25 PM
 version=1
 last_client=pcbnew
 [general]
@@ -25,7 +25,7 @@ LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=WakeUp.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=3.175000000000
 PadDrillOvalY=3.175000000000
 PadSizeH=6.350000000000

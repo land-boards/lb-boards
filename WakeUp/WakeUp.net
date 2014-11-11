@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/doug_000/Documents/GitHub/lb-boards/WakeUp/WakeUp.sch)
-    (date "11/7/2014 12:37:02 PM")
+    (date "11/10/2014 7:50:57 PM")
     (tool "eeschema (2013-07-07 BZR 4022)-stable"))
   (components
     (comp (ref MTG3)
@@ -150,6 +150,7 @@
       (tstamp 545D038A))
     (comp (ref DS1)
       (value LED)
+      (footprint LED-5MM)
       (libsource (lib device) (part LED))
       (sheetpath (names /) (tstamps /))
       (tstamp 545D0443)))
@@ -168,15 +169,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part BATTERY)
-      (fields
-        (field (name Reference) BT)
-        (field (name Value) BATTERY)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name +) (type passive))
-        (pin (num 2) (name -) (type passive))))
     (libpart (lib device) (part CP)
       (description "Condensateur polarise")
       (footprints
@@ -190,6 +182,15 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part BATTERY)
+      (fields
+        (field (name Reference) BT)
+        (field (name Value) BATTERY)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name +) (type passive))
+        (pin (num 2) (name -) (type passive))))
     (libpart (lib device) (part LED)
       (footprints
         (fp LED-3MM)
@@ -207,22 +208,19 @@
       (pins
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistance)
+    (libpart (lib device) (part DIODE)
+      (description "Diode simple")
       (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
+        (fp D?)
+        (fp S*))
       (fields
-        (field (name Reference) R)
-        (field (name Value) R)
+        (field (name Reference) D)
+        (field (name Value) DIODE)
         (field (name Footprint) ~)
         (field (name Datasheet) ~))
       (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
     (libpart (lib device) (part SPEAKER)
       (fields
         (field (name Reference) SP)
@@ -242,19 +240,29 @@
       (pins
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input))))
-    (libpart (lib device) (part DIODE)
-      (description "Diode simple")
+    (libpart (lib device) (part R)
+      (description Resistance)
       (footprints
-        (fp D?)
-        (fp S*))
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
       (fields
-        (field (name Reference) D)
-        (field (name Value) DIODE)
+        (field (name Reference) R)
+        (field (name Value) R)
         (field (name Footprint) ~)
         (field (name Datasheet) ~))
       (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib conn) (part CONN_1)
+      (description "1 pin")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_1))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
     (libpart (lib conn) (part CONN_2)
       (description "Symbole general de connecteur")
       (fields
@@ -263,13 +271,6 @@
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name PM) (type passive))))
-    (libpart (lib conn) (part CONN_1)
-      (description "1 pin")
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_1))
-      (pins
-        (pin (num 1) (name 1) (type passive))))
     (libpart (lib conn) (part CONN_3X2)
       (description "Symbole general de connecteur")
       (fields
@@ -282,6 +283,18 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 5) (type passive))
         (pin (num 6) (name 6) (type passive))))
+    (libpart (lib DougsSch) (part AP1117)
+      (description "Voltage Regulator, TO-223")
+      (fields
+        (field (name Reference) U)
+        (field (name Value) AP1117)
+        (field (name Footprint) ~)
+        (field (name Datasheet) ~))
+      (pins
+        (pin (num 1) (name GND) (type power_in))
+        (pin (num 2) (name VO) (type passive))
+        (pin (num 3) (name VIN) (type power_in))
+        (pin (num 4) (name VO) (type power_out))))
     (libpart (lib DougsSch) (part ATTINY85)
       (description ATTiny85)
       (fields
@@ -298,18 +311,6 @@
         (pin (num 6) (name D1) (type BiDi))
         (pin (num 7) (name "D(A)2") (type BiDi))
         (pin (num 8) (name VCC) (type power_in))))
-    (libpart (lib DougsSch) (part AP1117)
-      (description "Voltage Regulator, TO-223")
-      (fields
-        (field (name Reference) U)
-        (field (name Value) AP1117)
-        (field (name Footprint) ~)
-        (field (name Datasheet) ~))
-      (pins
-        (pin (num 1) (name GND) (type power_in))
-        (pin (num 2) (name VO) (type passive))
-        (pin (num 3) (name VIN) (type power_in))
-        (pin (num 4) (name VO) (type power_out))))
     (libpart (lib DougsSch) (part DCJ0202)
       (description "JACK, DC POWER")
       (fields
