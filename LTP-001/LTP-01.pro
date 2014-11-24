@@ -1,4 +1,4 @@
-update=26/08/2014 13:02:35
+update=11/23/2014 10:47:44 PM
 version=1
 last_client=pcbnew
 [general]
@@ -28,7 +28,7 @@ EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=LTP-01.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=0.900000000000
 PadDrillOvalY=0.900000000000
 PadSizeH=1.600000000000
@@ -55,3 +55,4 @@ LibName6=capacitors
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName8=libcms
 LibName9=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-corporate-Identity/lb-logos/lb-logo-Kicad-scaled
+LibName10=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/crystal

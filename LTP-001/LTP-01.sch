@@ -1,11 +1,10 @@
-EESchema Schematic File Version 2  date 11/11/2014 15:24:35
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:linear
 LIBS:regul
 LIBS:microcontrollers
-LIBS:DougsSch
 LIBS:LTP-01-cache
 EELAYER 27 0
 EELAYER END
@@ -13,7 +12,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 4
 Title "LTP-01"
-Date "25 aug 2014"
+Date "24 nov 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -53,7 +52,7 @@ U 1 1 53F73C93
 P 1400 2400
 F 0 "J1" H 1500 3150 60  0000 C CNN
 F 1 "USB-B" H 1600 2500 60  0000 C CNN
-F 2 "~" H 1400 2400 60  0000 C CNN
+F 2 "USB-B-MINI" H 1400 2400 60  0000 C CNN
 F 3 "~" H 1400 2400 60  0000 C CNN
 	1    1400 2400
 	1    0    0    -1  
