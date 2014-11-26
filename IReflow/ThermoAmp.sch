@@ -1,0 +1,158 @@
+EESchema Schematic File Version 2  date 25/11/2014 13:43:06
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:regul
+LIBS:DougsSch
+LIBS:atmel
+LIBS:maxim-ic
+LIBS:IReflow-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date "25 nov 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MAX31855 U4
+U 1 1 5474BFD8
+P 5200 2550
+F 0 "U4" H 5050 2950 60  0000 C CNN
+F 1 "MAX31855" H 5200 2050 60  0000 C CNN
+F 2 "SO8_WITH_EP" H 5200 1950 60  0000 C CNN
+F 3 "" H 5200 2550 60  0000 C CNN
+F 4 "MAX31855[K,J,N,S,T,E,R]ASA+" H 5200 1850 60  0001 C CNN "Part"
+F 5 "Maxim" H 5100 1950 60  0001 C CNN "Manufacturer"
+	1    5200 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2400 6450 2400
+Wire Wire Line
+	5600 2500 6450 2500
+Wire Wire Line
+	5600 2600 6450 2600
+Wire Wire Line
+	3500 1550 2750 1550
+Wire Wire Line
+	2750 2050 4100 2050
+Wire Wire Line
+	4800 2700 3750 2700
+Wire Wire Line
+	4800 2900 3750 2900
+Text Label 6050 2400 0    60   ~ 0
+MISO
+Text Label 6050 2500 0    60   ~ 0
+CS
+Text Label 6050 2600 0    60   ~ 0
+SCK
+Text Label 2900 1550 0    60   ~ 0
++3.3V
+Text Label 3050 2050 0    60   ~ 0
+GND
+$Comp
+L CONN_2 J2
+U 1 1 5474D4D9
+P 2400 2800
+F 0 "J2" V 2350 2800 40  0000 C CNN
+F 1 "CONN_2" V 2450 2800 40  0000 C CNN
+F 2 "" H 2400 2800 60  0000 C CNN
+F 3 "" H 2400 2800 60  0000 C CNN
+	1    2400 2800
+	-1   0    0    -1  
+$EndComp
+Text Notes 2150 2750 0    60   ~ 0
+T+\n\nT-
+Text Label 4050 2700 0    60   ~ 0
+THERMO+
+Text Label 4050 2900 0    60   ~ 0
+THERMO-
+Text HLabel 2750 1550 0    60   UnSpc ~ 0
++3.3V
+Text HLabel 2750 2050 0    60   UnSpc ~ 0
+GND
+Text HLabel 6450 2400 2    60   Output ~ 0
+MISO
+Text HLabel 6450 2500 2    60   Input ~ 0
+CS
+Text HLabel 6450 2600 2    60   Input ~ 0
+SCK
+$Comp
+L C C12
+U 1 1 5474CA3D
+P 3250 2800
+F 0 "C12" H 3250 2900 40  0000 L CNN
+F 1 "0.01uF" H 3256 2715 40  0000 L CNN
+F 2 "SM0805" H 3288 2650 30  0000 C CNN
+F 3 "~" H 3250 2800 60  0000 C CNN
+	1    3250 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2700 2900 2700
+Wire Wire Line
+	2900 2700 2900 2550
+Wire Wire Line
+	2900 2550 3750 2550
+Wire Wire Line
+	3250 2550 3250 2600
+Wire Wire Line
+	3750 2550 3750 2700
+Connection ~ 3250 2550
+Wire Wire Line
+	2750 2900 2900 2900
+Wire Wire Line
+	2900 2900 2900 3050
+Wire Wire Line
+	2900 3050 3750 3050
+Wire Wire Line
+	3750 3050 3750 2900
+Wire Wire Line
+	3250 3000 3250 3050
+Connection ~ 3250 3050
+Wire Wire Line
+	4100 2000 4100 2500
+Wire Wire Line
+	4100 2500 4800 2500
+$Comp
+L C C13
+U 1 1 5474CCD1
+P 4100 1800
+F 0 "C13" H 4100 1900 40  0000 L CNN
+F 1 "0.1uF" H 4106 1715 40  0000 L CNN
+F 2 "SM0805" H 4138 1650 30  0000 C CNN
+F 3 "~" H 4100 1800 60  0000 C CNN
+	1    4100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5474CCE0
+P 3750 1550
+F 0 "R10" V 3830 1550 40  0000 C CNN
+F 1 "10" V 3757 1551 40  0000 C CNN
+F 2 "SM0805" V 3680 1550 30  0000 C CNN
+F 3 "~" H 3750 1550 30  0000 C CNN
+	1    3750 1550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 1550 4600 1550
+Wire Wire Line
+	4100 1550 4100 1600
+Connection ~ 4100 2050
+Wire Wire Line
+	4600 1550 4600 2300
+Wire Wire Line
+	4600 2300 4800 2300
+Connection ~ 4100 1550
+$EndSCHEMATC
