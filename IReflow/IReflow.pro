@@ -1,4 +1,4 @@
-update=25/11/2014 13:06:42
+update=26/11/2014 13:13:45
 version=1
 last_client=pcbnew
 [cvpcb]
@@ -28,7 +28,7 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/max
 [pcbnew]
 version=1
 LastNetListRead=IReflow.net
-UseCmpFile=1
+UseCmpFile=0
 PadDrill=0.600000000000
 PadDrillOvalY=0.600000000000
 PadSizeH=1.500000000000
