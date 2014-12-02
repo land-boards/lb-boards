@@ -32837,7 +32837,7 @@ function bit_rol(num, cnt)
   a = Ember.Application.create({
     appName: 'OSH Park',
     appDescription: 'An electric ecosystem',
-    appLogoUri: 'https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/oshpark_logo-4981e43ab1bc2f3c93b38f8d3586d0d8.png',
+    appLogoUri: 'https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/oshpark_logo-54f84bd8dd43c625cd532fc3edfbe5ea.png',
     setTitle: function(title) {
       var header;
       header = a.get('headerView');
@@ -33019,7 +33019,7 @@ function bit_rol(num, cnt)
           count = count + 1;
         }
         if (count > 0) {
-          opts.url = "/projects/" + (this.get('projectId')) + "/layers/" + (l.get('id'));
+          opts.url = "/projects/" + (this.get('projectId')) + "/layers/" + (l.get('id')) + ".json";
           opts.type = 'PUT';
           if (opts.data == null) {
             opts.data = {};
@@ -33182,7 +33182,7 @@ function bit_rol(num, cnt)
           count = count + 1;
         }
         if (count > 0) {
-          opts.url = "/projects/" + (p.get('id'));
+          opts.url = "/projects/" + (p.get('id')) + ".json";
           opts.type = 'PUT';
           if (opts.data == null) {
             opts.data = {};
@@ -33871,6 +33871,11 @@ function program1(depth0,data) {
   stack1 = foundHelper ? foundHelper.call(depth0, {hash:stack1,contexts:[],data:data}) : helperMissing.call(depth0, "bind-attr", {hash:stack1,contexts:[],data:data});
   data.buffer.push(escapeExpression(stack1) + ">Projects</a>\n    <a ");
   stack1 = {};
+  stack1['href'] = "cartUri";
+  foundHelper = helpers['bind-attr'];
+  stack1 = foundHelper ? foundHelper.call(depth0, {hash:stack1,contexts:[],data:data}) : helperMissing.call(depth0, "bind-attr", {hash:stack1,contexts:[],data:data});
+  data.buffer.push(escapeExpression(stack1) + ">Cart</a>\n    <a ");
+  stack1 = {};
   stack1['href'] = "accountUri";
   foundHelper = helpers['bind-attr'];
   stack1 = foundHelper ? foundHelper.call(depth0, {hash:stack1,contexts:[],data:data}) : helperMissing.call(depth0, "bind-attr", {hash:stack1,contexts:[],data:data});
@@ -33905,6 +33910,11 @@ function program4(depth0,data) {
   foundHelper = helpers['bind-attr'];
   stack1 = foundHelper ? foundHelper.call(depth0, {hash:stack1,contexts:[],data:data}) : helperMissing.call(depth0, "bind-attr", {hash:stack1,contexts:[],data:data});
   data.buffer.push(escapeExpression(stack1) + " target='_new'>Pricing & Specs</a>\n    <a href='http://support.oshpark.com/' target='_new'>Support</a>\n    <a ");
+  stack1 = {};
+  stack1['href'] = "cartUri";
+  foundHelper = helpers['bind-attr'];
+  stack1 = foundHelper ? foundHelper.call(depth0, {hash:stack1,contexts:[],data:data}) : helperMissing.call(depth0, "bind-attr", {hash:stack1,contexts:[],data:data});
+  data.buffer.push(escapeExpression(stack1) + ">Cart</a>\n    <a ");
   stack1 = {};
   stack1['href'] = "loginUri";
   foundHelper = helpers['bind-attr'];
@@ -34067,11 +34077,11 @@ function program1(depth0,data) {
     },
     approveAndView: function() {
       this.set('disableNextButton', true);
-      return window.location = "/projects/" + (this.get('projectId')) + "/layers/approve";
+      return window.location = "/projects/" + (this.get('projectId')) + "/approve";
     },
     approveAndOrder: function() {
       this.set('disableNextButton', true);
-      return window.location = "/projects/" + (this.get('projectId')) + "/layers/approve?order=true";
+      return window.location = "/projects/" + (this.get('projectId')) + "/approve?order=true";
     }
   });
 
@@ -34205,13 +34215,13 @@ function program1(depth0,data) {
       var state;
       state = this.get('uploadState');
       if ((state === 'idle') || (state === 'progress')) {
-        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/upload-ef48178a300961a5aebbc19c306484d9.png";
+        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/upload-7ec866600d42f2c744e1d6bd48084e59.png";
       } else if (state === 'processing') {
-        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/processing-d62dfbe969e0dc1e68b8d673ffba79e3.png";
+        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/processing-cd5a51c68c9ab72308e899625348f1f2.png";
       } else if (state === 'complete') {
-        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/complete-a57daa6d8f82929056a2b23a15ccaeb1.png";
+        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/complete-0917080a3a448374196ed49fdcdba658.png";
       } else if (state === 'error') {
-        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/processingError-a0d2d3a54be1d04b60815f66e4ecc3da.png";
+        return "https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/processingError-4627dc5018e81a19f81fe3b0fccb3ef9.png";
       }
     }).property('uploadState'),
     saveProjectDetails: (function(s, e) {
@@ -34387,7 +34397,7 @@ function program1(depth0,data) {
                   return window.setTimeout(poll_project, 2000);
                 }
               },
-              url: "/projects/" + projectId
+              url: "/projects/" + projectId + ".json"
             });
           };
         })(this);
@@ -34447,8 +34457,9 @@ function program1(depth0,data) {
     sharedprojectsUri: '/shared_projects',
     guidelinesUri: '/guidelines',
     pricingUri: '/pricing',
+    cartUri: '/orders/cart',
     gravatarUri: (function() {
-      return "http://www.gravatar.com/avatar/" + (window.hex_md5(this.get('userEmail'))) + "?s=16";
+      return "https://secure.gravatar.com/avatar/" + (window.hex_md5(this.get('userEmail'))) + "?s=16";
     }).property('userEmail'),
     didInsertElement: function() {
       var model;

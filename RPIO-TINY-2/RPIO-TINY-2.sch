@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "RasPi-GVS"
-Date "15 nov 2014"
+Date "27 nov 2014"
 Rev "X2"
 Comp "land-boards.com"
 Comment1 ""
@@ -333,7 +333,7 @@ F 3 "" H 6900 6550 60  0000 C CNN
 $EndComp
 Text Label 4500 5250 0    60   ~ 0
 +3.3V
-Text Label 6650 2400 0    60   ~ 0
+Text Label 6950 2400 0    60   ~ 0
 5V
 Text Label 6800 5250 0    60   ~ 0
 5V
@@ -670,7 +670,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 5250 7350 5250
 Wire Wire Line
-	6150 2400 7150 2400
+	6150 2400 6350 2400
 Wire Wire Line
 	6150 2500 6250 2500
 Wire Wire Line
@@ -711,19 +711,19 @@ Connection ~ 8300 4150
 Wire Wire Line
 	8150 6850 8400 6850
 Wire Wire Line
-	8400 6450 8150 6450
+	8150 6450 8400 6450
 Connection ~ 8150 6450
 Wire Wire Line
-	8400 6050 8150 6050
+	8150 6050 8400 6050
 Connection ~ 8150 6050
 Wire Wire Line
-	8400 5650 8150 5650
+	8150 5650 8400 5650
 Connection ~ 8150 5650
 Wire Wire Line
-	8400 5250 8150 5250
+	8150 5250 8400 5250
 Connection ~ 8150 5250
 Wire Wire Line
-	8400 4850 8150 4850
+	8150 4850 8400 4850
 Connection ~ 8150 4850
 Wire Wire Line
 	8400 4450 8150 4450
@@ -775,7 +775,7 @@ Wire Wire Line
 Wire Wire Line
 	7650 3950 8400 3950
 Wire Wire Line
-	8150 3400 8150 1550
+	8150 1550 8150 3400
 Wire Wire Line
 	8150 4050 8150 6850
 Wire Wire Line
@@ -783,4 +783,17 @@ Wire Wire Line
 Wire Wire Line
 	7350 5000 8150 5000
 Connection ~ 8150 5000
+$Comp
+L FUSE F2
+U 1 1 54775593
+P 6600 2400
+F 0 "F2" H 6700 2450 40  0000 C CNN
+F 1 "FUSE" H 6500 2350 40  0000 C CNN
+F 2 "SM1206" H 6600 2400 60  0000 C CNN
+F 3 "~" H 6600 2400 60  0000 C CNN
+	1    6600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2400 7150 2400
 $EndSCHEMATC
