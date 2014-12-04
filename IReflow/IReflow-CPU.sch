@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/11/2014 14:45:00
+EESchema Schematic File Version 2  date 03/12/2014 12:25:05
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -14,7 +14,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 4
 Title "LTP-01"
-Date "26 nov 2014"
+Date "3 dec 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -780,7 +780,7 @@ U 1 1 5474BC6E
 P 8400 1100
 F 0 "K1" V 8350 1100 50  0000 C CNN
 F 1 "CONN_3" V 8450 1100 40  0000 C CNN
-F 2 "PIN_ARRAY_3X1" H 8400 1100 60  0000 C CNN
+F 2 "PIN_ARRAY_3X1" H 8400 1300 60  0000 C CNN
 F 3 "" H 8400 1100 60  0000 C CNN
 	1    8400 1100
 	1    0    0    1   
@@ -905,4 +905,6 @@ Wire Wire Line
 	6050 2050 5250 2050
 Text Label 5400 2050 0    60   ~ 0
 RESET
+Text Notes 8550 1150 0    60   ~ 0
+5-Way Switch
 $EndSCHEMATC

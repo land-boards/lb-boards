@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/11/2014 14:45:00
+EESchema Schematic File Version 2  date 03/12/2014 12:25:05
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -14,7 +14,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title ""
-Date "26 nov 2014"
+Date "3 dec 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -28,7 +28,7 @@ U 1 1 5474BFD8
 P 5200 2550
 F 0 "U4" H 5050 2950 60  0000 C CNN
 F 1 "MAX31855" H 5200 2050 60  0000 C CNN
-F 2 "SO8_WITH_EP" H 5200 1950 60  0000 C CNN
+F 2 "SO8E" H 5200 1950 60  0000 C CNN
 F 3 "" H 5200 2550 60  0000 C CNN
 F 4 "MAX31855[K,J,N,S,T,E,R]ASA+" H 5200 1850 60  0001 C CNN "Part"
 F 5 "Maxim" H 5100 1950 60  0001 C CNN "Manufacturer"
@@ -227,4 +227,6 @@ F 3 "~" H 6550 3950 30  0000 C CNN
 	1    6550 3950
 	-1   0    0    1   
 $EndComp
+Text Notes 1300 2800 0    60   ~ 0
+THERMOCOUPLE\nINPUT
 $EndSCHEMATC

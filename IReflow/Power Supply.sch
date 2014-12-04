@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26/11/2014 14:45:00
+EESchema Schematic File Version 2  date 03/12/2014 12:25:05
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -14,7 +14,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title ""
-Date "26 nov 2014"
+Date "3 dec 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -198,4 +198,15 @@ Text HLabel 9650 1950 2    60   Output ~ 0
 Connection ~ 9050 2600
 Text HLabel 9650 2600 2    60   Output ~ 0
 GND
+Text Notes 1350 2550 0    60   ~ 0
+7-9 VDC
+Text Notes 3800 2900 0    60   ~ 0
+5V Regulator
+Text Notes 6800 2950 0    60   ~ 0
+3.3V Regulator
+Wire Wire Line
+	7700 2050 7800 2050
+Wire Wire Line
+	7800 2050 7800 1950
+Connection ~ 7800 1950
 $EndSCHEMATC
