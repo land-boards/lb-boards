@@ -12,7 +12,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "One Wire Logger"
-Date "24 nov 2014"
+Date "3 dec 2014"
 Rev "X1"
 Comp "dougspcbdesigns.pbworks.com"
 Comment1 ""
@@ -29,7 +29,7 @@ F 1 "LMR62014" H 6350 2350 60  0000 C CNN
 F 2 "SOT23-5" H 6050 2800 60  0000 C CNN
 F 3 "~" H 6050 2800 60  0000 C CNN
 F 4 "TI" H 6050 2800 60  0001 C CNN "Mfg"
-F 5 " LMR62014XMFE/NOPB" H 6050 2800 60  0001 C CNN "MfgPN"
+F 5 "LMR62014XMFE/NOPB" H 6050 2800 60  0001 C CNN "MfgPN"
 F 6 "Mouser" H 6050 2800 60  0001 C CNN "Vendor"
 F 7 "926-LMR62014XMFENOPB " H 6050 2800 60  0001 C CNN "VendorPN"
 	1    6050 2800
