@@ -1,9 +1,8 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 10/12/2014 13:31:38
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:DougsSch
 LIBS:RP-Console-cache
 EELAYER 27 0
 EELAYER END
@@ -11,7 +10,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "RASPI-PLUS-GVS-CFG"
-Date "7 dec 2014"
+Date "10 dec 2014"
 Rev "X2"
 Comp ""
 Comment1 ""
@@ -21,8 +20,6 @@ Comment4 ""
 $EndDescr
 Text Label 2250 3200 0    60   ~ 0
 GND
-Text Label 1250 1600 0    60   ~ 0
-+3.3V
 $Comp
 L COUPON COUP?2
 U 1 1 53B1CE77
@@ -48,16 +45,9 @@ $EndComp
 Text Label 3550 1600 0    60   ~ 0
 +5V
 Wire Wire Line
-	1150 1600 1700 1600
-Connection ~ 1600 1600
-Wire Wire Line
 	3950 1900 3100 1900
 Wire Wire Line
 	3950 2000 3100 2000
-Wire Wire Line
-	1600 1600 1600 2400
-Wire Wire Line
-	1600 2400 1700 2400
 Wire Wire Line
 	1700 2000 1500 2000
 Wire Wire Line
@@ -371,4 +361,8 @@ Wire Wire Line
 Wire Wire Line
 	4750 1550 4750 1300
 Connection ~ 5600 1550
+NoConn ~ 8000 2300
+NoConn ~ 8000 2400
+NoConn ~ 1700 2400
+NoConn ~ 1700 1600
 $EndSCHEMATC
