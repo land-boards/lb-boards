@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 11/21/2014 3:26:19 PM
+EESchema-DOCLIB  Version 2.0  Date: 16/12/2014 13:17:01
 #
 $CMP 175A
 D Synchro Amplifier, 90 V
@@ -184,6 +184,11 @@ D I2C Connector
 K I2C Connector
 $ENDCMP
 #
+$CMP I2C_OLED_128X64
+D I2C Connector
+K I2C Connector
+$ENDCMP
+#
 $CMP IEC-C14
 D C14 Connector
 K C14 Connector
@@ -193,6 +198,11 @@ $CMP IRF9110
 D P-Channel Mosfet
 K P-Channel Mosfet
 F transistors/mos/*.*
+$ENDCMP
+#
+$CMP ISP
+D Symbole general de connecteur
+K CONN
 $ENDCMP
 #
 $CMP ISP-PWR
