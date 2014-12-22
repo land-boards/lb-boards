@@ -1,13 +1,13 @@
-PCBNEW-BOARD Version 2 date 11/23/2014 11:30:53 PM
+PCBNEW-BOARD Version 2 date 22/12/2014 13:31:12
 
-# Created by Pcbnew(2013-07-07 BZR 4022)-stable
+# Created by Pcbnew(2013-04-19 BZR 4011)-stable
 
 $GENERAL
 encoding utf-8
 Units mm
 LayerCount 2
 EnabledLayers 13F08001
-VisibleLayers 13E08001
+VisibleLayers 13F00000
 Links 122
 NoConn 0
 Di 49.621328 32.891801 122.545668 93.11874
@@ -22,7 +22,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A 11000 8500
 Title ""
-Date "24 nov 2014"
+Date "22 dec 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -59,11 +59,11 @@ TextModSize 1 1
 TextModWidth 0.1905
 PadSize 1.6 1.6
 PadDrill 0.9
-Pad2MaskClearance 0.254
-SolderMaskMinWidth 0
+Pad2MaskClearance 0.1524
+SolderMaskMinWidth 0.0254
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 0) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
 $EQUIPOT
@@ -2796,13 +2796,13 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE PIN_ARRAY_3X1
 $MODULE SM0805
-Po 100.076 63.119 0 15 54729F10 54729EC7 ~~
+Po 100.076 63.119 0 15 5495C3AA 54729EC7 ~~
 Li SM0805
 Sc 54729EC7
 AR /53F74296/5472A57F
 Op 0 0 0
 At SMD
-T0 0 -0.3175 1 1 0 0.1905 N V 21 N "C9"
+T0 1.27 1.651 1 1 0 0.1905 N V 21 N "C9"
 T1 0 0.381 0.50038 0.50038 0 0.10922 N I 21 N "0.1uF"
 DC -1.651 0.762 -1.651 0.635 0.09906 21
 DS -0.508 0.762 -1.524 0.762 0.09906 21
