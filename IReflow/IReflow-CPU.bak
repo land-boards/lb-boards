@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 16/12/2014 16:30:23
+EESchema Schematic File Version 2  date 26/12/2014 13:41:34
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -14,7 +14,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 4
 Title "LTP-01"
-Date "16 dec 2014"
+Date "26 dec 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -27,11 +27,11 @@ XTAL2
 Text Label 2250 1550 0    60   ~ 0
 XTAL1
 Text Label 4900 2750 0    60   ~ 0
-D6
+DS2
 Text Label 4900 2650 0    60   ~ 0
-D5
+DS1
 Text Label 4900 2550 0    60   ~ 0
-D4
+SSR
 NoConn ~ 5650 7800
 NoConn ~ 5650 7700
 NoConn ~ 5650 7600
@@ -86,8 +86,6 @@ Text Label 4900 3500 0    60   ~ 0
 MISO
 Text Label 4900 3600 0    60   ~ 0
 SCK
-Text Label 4900 2850 0    60   ~ 0
-D7
 Text Label 4900 3300 0    60   ~ 0
 BUZZ
 Text Label 2450 2850 0    60   ~ 0
@@ -486,8 +484,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 2550 5350 2550
 Wire Wire Line
-	4650 2850 5350 2850
-Wire Wire Line
 	4650 3200 5350 3200
 Wire Wire Line
 	2200 2850 2750 2850
@@ -594,9 +590,9 @@ Connection ~ 2650 2500
 NoConn ~ 2750 3450
 NoConn ~ 2750 3550
 Text Label 7400 5050 0    60   ~ 0
-D5
+DS1
 Text Label 7350 5850 0    60   ~ 0
-D6
+DS2
 $Comp
 L R R9
 U 1 1 54726A91
@@ -745,7 +741,7 @@ Wire Wire Line
 	6050 2050 5250 2050
 Text Label 5400 2050 0    60   ~ 0
 RESET
-Text Notes 9200 1150 0    60   ~ 0
+Text Notes 8700 1150 0    60   ~ 0
 5-Way Switch
 $Comp
 L NPN Q4
@@ -791,7 +787,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 3900 8650 3800
 Text Label 7450 4100 0    60   ~ 0
-D4
+SSR
 $Comp
 L CONN_2 J6
 U 1 1 548F4249
@@ -844,11 +840,14 @@ $Comp
 L GVS J5
 U 1 1 549080DF
 P 8450 1100
-F 0 "J5" H 8350 850 50  0000 C CNN
+F 0 "J5" H 8350 900 50  0000 C CNN
 F 1 "GVS" H 8500 1000 40  0000 C CNN
 F 2 "PIN_ARRAY_3X1" H 8450 1300 60  0000 C CNN
 F 3 "~" H 8450 1100 60  0000 C CNN
 	1    8450 1100
 	1    0    0    1   
 $EndComp
+Text Notes 9950 3650 0    60   ~ 0
++\nSSR\n-
+NoConn ~ 4650 2850
 $EndSCHEMATC
