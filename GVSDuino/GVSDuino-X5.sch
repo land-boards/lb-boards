@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19/08/2014 13:09:20
+EESchema Schematic File Version 2  date 31/12/2014 10:09:22
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -13,7 +13,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "GVSDuino"
-Date "19 aug 2014"
+Date "31 dec 2014"
 Rev "X5"
 Comp "land-boards.com"
 Comment1 ""
@@ -956,7 +956,7 @@ L DIODE D1
 U 1 1 4FF574BF
 P 2300 1550
 F 0 "D1" H 2300 1650 40  0000 C CNN
-F 1 "4N4004" H 2300 1450 40  0000 C CNN
+F 1 "1N4004" H 2300 1450 40  0000 C CNN
 F 2 "" H 2300 1550 60  0001 C CNN
 F 3 "" H 2300 1550 60  0001 C CNN
 	1    2300 1550

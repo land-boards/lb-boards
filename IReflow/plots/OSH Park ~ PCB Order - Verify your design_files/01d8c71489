@@ -1,1 +1,0 @@
-NREUM.setToken({'stn':1})
