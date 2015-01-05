@@ -1,6 +1,6 @@
-update=12/03/2013 11:24:51
+update=05/01/2015 14:39:49
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=
@@ -67,11 +67,6 @@ LibName29=contrib
 LibName30=valves
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=IR-Sensor.net
@@ -91,7 +86,13 @@ DrawSegmentWidth=0.381
 BoardOutlineThickness=0.381
 ModuleOutlineThickness=0.381
 [pcbnew/libraries]
-LibDir=
 LibName1=discret
 LibName2=pin_array
-LibName3=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
+LibName3=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+LibName4=libcms
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
