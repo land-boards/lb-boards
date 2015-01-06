@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 05/01/2015 16:56:30
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 jan 2015"
+Date "6 jan 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -111,17 +111,6 @@ F 3 "~" H 3150 2350 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R5
-U 1 1 54AAE631
-P 3800 1300
-F 0 "R5" V 3880 1300 40  0000 C CNN
-F 1 "82" V 3807 1301 40  0000 C CNN
-F 2 "SM1206" V 3730 1300 30  0000 C CNN
-F 3 "~" H 3800 1300 30  0000 C CNN
-	1    3800 1300
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R4
 U 1 1 54AAE648
 P 3600 1300
@@ -129,6 +118,10 @@ F 0 "R4" V 3680 1300 40  0000 C CNN
 F 1 "82" V 3607 1301 40  0000 C CNN
 F 2 "SM1206" V 3530 1300 30  0000 C CNN
 F 3 "~" H 3600 1300 30  0000 C CNN
+F 4 "KOA Speer" V 3600 1300 60  0001 C CNN "Mfg"
+F 5 "RK73B2BTTD820J" V 3600 1300 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 3600 1300 60  0001 C CNN "Vendor"
+F 7 "660-RK73B2BTTD820J " V 3600 1300 60  0001 C CNN "VendorPN"
 	1    3600 1300
 	1    0    0    -1  
 $EndComp
@@ -328,7 +321,7 @@ $EndComp
 Wire Wire Line
 	4850 3900 4950 3900
 Wire Wire Line
-	5950 3800 6050 3800
+	5950 3800 6200 3800
 Wire Wire Line
 	6050 3800 6050 4400
 Wire Wire Line
@@ -345,4 +338,20 @@ Wire Wire Line
 	4950 3700 4750 3700
 Wire Wire Line
 	4750 3700 4750 3800
+Connection ~ 6050 3800
+$Comp
+L R R5
+U 1 1 54AB3846
+P 3800 1300
+F 0 "R5" V 3880 1300 40  0000 C CNN
+F 1 "82" V 3807 1301 40  0000 C CNN
+F 2 "SM1206" V 3730 1300 30  0000 C CNN
+F 3 "~" H 3800 1300 30  0000 C CNN
+F 4 "KOA Speer" V 3800 1300 60  0001 C CNN "Mfg"
+F 5 "RK73B2BTTD820J" V 3800 1300 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 3800 1300 60  0001 C CNN "Vendor"
+F 7 "660-RK73B2BTTD820J " V 3800 1300 60  0001 C CNN "VendorPN"
+	1    3800 1300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

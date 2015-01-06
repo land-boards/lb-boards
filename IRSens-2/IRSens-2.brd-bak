@@ -1,6 +1,6 @@
-PCBNEW-BOARD Version 2 date 05/01/2015 16:58:20
+PCBNEW-BOARD Version 2 date 1/5/2015 8:21:54 PM
 
-# Created by Pcbnew(2013-04-19 BZR 4011)-stable
+# Created by Pcbnew(2013-07-07 BZR 4022)-stable
 
 $GENERAL
 encoding utf-8
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title ""
-Date "5 jan 2015"
+Date "6 jan 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -63,7 +63,7 @@ Pad2MaskClearance 0.254
 SolderMaskMinWidth 0
 AuxiliaryAxisOrg 0 0
 VisibleElements 7FFFFFBF
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 0.150000) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 0) (scaleselection 1) (outputdirectory plots/))
 $EndSETUP
 
 $EQUIPOT
@@ -176,35 +176,35 @@ Po 0 0
 $EndPAD
 $EndMODULE MTG-4-40
 $MODULE LED-5MM
-Po 13.335 34.29 0 15 54AB0719 5126BCBB ~~
+Po 13.335 34.29 0 0 54AB0719 5126BCBB ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
 Sc 5126BCBB
 AR /54AAE783
 Op 0 0 0
-T0 -4.064 2.54 1.524 1.524 900 0.3048 N V 21 N "D2"
-T1 4.318 0 1.524 1.524 900 0.381 N V 21 N "LED"
-DS 2.8448 1.905 2.8448 -1.905 0.2032 21
-DC 0.254 0 -1.016 1.27 0.0762 21
-DA 0.254 0 2.794 1.905 2862 0.254 21
-DA 0.254 0 -0.889 0 900 0.1524 21
-DA 0.254 0 1.397 0 900 0.1524 21
-DA 0.254 0 -1.397 0 900 0.1524 21
-DA 0.254 0 1.905 0 900 0.1524 21
-DA 0.254 0 -1.905 0 900 0.1524 21
-DA 0.254 0 2.413 0 900 0.1524 21
+T0 -4.064 -2.54 1.524 1.524 2700 0.3048 M V 20 N "D2"
+T1 4.318 0 1.524 1.524 2700 0.381 M V 20 N "LED"
+DS 2.8448 -1.905 2.8448 1.905 0.2032 20
+DC 0.254 0 -1.016 -1.27 0.0762 20
+DA 0.254 0 2.794 -1.905 -2862 0.254 20
+DA 0.254 0 -0.889 0 -900 0.1524 20
+DA 0.254 0 1.397 0 -900 0.1524 20
+DA 0.254 0 -1.397 0 -900 0.1524 20
+DA 0.254 0 1.905 0 -900 0.1524 20
+DA 0.254 0 -1.905 0 -900 0.1524 20
+DA 0.254 0 2.413 0 -900 0.1524 20
 $PAD
 Sh "1" C 1.6764 1.6764 0 0 0
 Dr 0.8128 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 12 "N-000009"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "2" C 1.6764 1.6764 0 0 0
 Dr 0.8128 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 6 "N-0000011"
 Po 1.27 0
 $EndPAD
@@ -216,35 +216,35 @@ Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE LED-5MM
 $MODULE LED-5MM
-Po 13.335 4.445 1800 15 54AB05E9 51002487 ~~
+Po 13.335 4.445 1800 0 54AB05E9 51002487 ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
 Sc 51002487
 AR /54AAEBF2
 Op 0 0 0
-T0 -3.937 2.413 1.524 1.524 2700 0.3048 N V 21 N "D1"
-T1 4.191 -0.127 1.524 1.524 2700 0.254 N V 21 N "IR RX"
-DS 2.8448 1.905 2.8448 -1.905 0.2032 21
-DC 0.254 0 -1.016 1.27 0.0762 21
-DA 0.254 0 2.794 1.905 2862 0.254 21
-DA 0.254 0 -0.889 0 900 0.1524 21
-DA 0.254 0 1.397 0 900 0.1524 21
-DA 0.254 0 -1.397 0 900 0.1524 21
-DA 0.254 0 1.905 0 900 0.1524 21
-DA 0.254 0 -1.905 0 900 0.1524 21
-DA 0.254 0 2.413 0 900 0.1524 21
+T0 -3.937 -2.413 1.524 1.524 4500 0.3048 M V 20 N "D1"
+T1 4.191 0.127 1.524 1.524 4500 0.254 M V 20 N "IR RX"
+DS 2.8448 -1.905 2.8448 1.905 0.2032 20
+DC 0.254 0 -1.016 -1.27 0.0762 20
+DA 0.254 0 2.794 -1.905 -2862 0.254 20
+DA 0.254 0 -0.889 0 -900 0.1524 20
+DA 0.254 0 1.397 0 -900 0.1524 20
+DA 0.254 0 -1.397 0 -900 0.1524 20
+DA 0.254 0 1.905 0 -900 0.1524 20
+DA 0.254 0 -1.905 0 -900 0.1524 20
+DA 0.254 0 2.413 0 -900 0.1524 20
 $PAD
 Sh "1" C 1.6764 1.6764 0 0 1800
 Dr 0.8128 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 3 "/VCCRX"
 Po -1.27 0
 $EndPAD
 $PAD
 Sh "2" C 1.6764 1.6764 0 0 1800
 Dr 0.8128 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 8 "N-000002"
 Po 1.27 0
 $EndPAD
@@ -897,12 +897,12 @@ Po 0 7.366 20.32 9.2075 20.32 0.381 -1
 De 15 0 11 54AAFEB0 0
 Po 0 6.096 21.59 7.366 20.32 0.381 -1
 De 15 0 11 54AAFEAF 0
+Po 0 11.811 34.036 12.065 34.29 0.381 -1
+De 15 0 12 54AAFED6 30
 Po 0 11.811 24.13 11.811 27.94 0.381 -1
 De 15 0 12 0 0
 Po 0 11.811 27.94 11.811 34.036 0.381 -1
 De 15 0 12 0 20
-Po 0 11.811 34.036 12.065 34.29 0.381 -1
-De 15 0 12 54AAFED6 30
 $EndTRACK
 $ZONE
 $EndZONE
