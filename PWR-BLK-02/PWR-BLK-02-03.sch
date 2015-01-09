@@ -1,6 +1,5 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 08/01/2015 12:35:18
 LIBS:device
-LIBS:DougsSch
 LIBS:conn
 LIBS:PWR-BLK-02-cache
 EELAYER 27 0
@@ -9,7 +8,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 4 4
 Title "FTDI USB-TTL Cable"
-Date "4 jan 2015"
+Date "8 jan 2015"
 Rev "X2"
 Comp ""
 Comment1 ""
