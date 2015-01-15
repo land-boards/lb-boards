@@ -1,6 +1,6 @@
-update=16/12/2014 12:28:06
+update=1/14/2015 9:22:42 PM
 version=1
-last_client=pcbnew
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,23 +8,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=regul
-LibName6=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName7=atmel
-LibName8=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
 [pcbnew]
 version=1
 LastNetListRead=IReflow.net
@@ -58,3 +41,18 @@ LibName9=libcms
 LibName10=led
 LibName11=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=regul
