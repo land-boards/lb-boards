@@ -1,0 +1,170 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:sag-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "1 feb 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_2 P1
+U 1 1 54CD8029
+P 6250 3550
+F 0 "P1" V 6200 3550 40  0000 C CNN
+F 1 "CONN_2" V 6300 3550 40  0000 C CNN
+F 2 "" H 6250 3550 60  0000 C CNN
+F 3 "" H 6250 3550 60  0000 C CNN
+	1    6250 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LM324AN U1
+U 1 1 54CD84C9
+P 8000 3550
+F 0 "U1" H 8050 3750 60  0000 C CNN
+F 1 "LM324AN" H 8150 3350 50  0000 C CNN
+F 2 "" H 8000 3550 60  0000 C CNN
+F 3 "" H 8000 3550 60  0000 C CNN
+	1    8000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 54CD84D8
+P 8000 2900
+F 0 "R4" V 8080 2900 40  0000 C CNN
+F 1 "R" V 8007 2901 40  0000 C CNN
+F 2 "~" V 7930 2900 30  0000 C CNN
+F 3 "~" H 8000 2900 30  0000 C CNN
+	1    8000 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R3
+U 1 1 54CD84ED
+P 7900 4200
+F 0 "R3" V 7980 4200 40  0000 C CNN
+F 1 "R" V 7907 4201 40  0000 C CNN
+F 2 "~" V 7830 4200 30  0000 C CNN
+F 3 "~" H 7900 4200 30  0000 C CNN
+	1    7900 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R1
+U 1 1 54CD84FC
+P 7000 3450
+F 0 "R1" V 7080 3450 40  0000 C CNN
+F 1 "R" V 7007 3451 40  0000 C CNN
+F 2 "~" V 6930 3450 30  0000 C CNN
+F 3 "~" H 7000 3450 30  0000 C CNN
+	1    7000 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 54CD850B
+P 7000 3650
+F 0 "R2" V 7080 3650 40  0000 C CNN
+F 1 "R" V 7007 3651 40  0000 C CNN
+F 2 "~" V 6930 3650 30  0000 C CNN
+F 3 "~" H 7000 3650 30  0000 C CNN
+	1    7000 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7250 3450 7500 3450
+Wire Wire Line
+	7250 3650 7500 3650
+Wire Wire Line
+	7400 3650 7400 4200
+Wire Wire Line
+	7400 4200 7650 4200
+Connection ~ 7400 3650
+Wire Wire Line
+	7750 2900 7400 2900
+Wire Wire Line
+	7400 2900 7400 3450
+Connection ~ 7400 3450
+Wire Wire Line
+	8500 3550 8700 3550
+Wire Wire Line
+	8700 2900 8700 4200
+Wire Wire Line
+	8700 2900 8250 2900
+Wire Wire Line
+	8700 4200 8150 4200
+Connection ~ 8700 3550
+Wire Wire Line
+	8700 3300 9200 3300
+Connection ~ 8700 3300
+Wire Wire Line
+	6600 3450 6750 3450
+Wire Wire Line
+	6750 3650 6600 3650
+$Comp
+L CONN_3 K1
+U 1 1 54CD862D
+P 9550 3300
+F 0 "K1" V 9500 3300 50  0000 C CNN
+F 1 "CONN_3" V 9600 3300 40  0000 C CNN
+F 2 "" H 9550 3300 60  0000 C CNN
+F 3 "" H 9550 3300 60  0000 C CNN
+	1    9550 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3150 7900 3100
+Wire Wire Line
+	7900 3100 9000 3100
+Wire Wire Line
+	9000 3100 9000 3200
+Wire Wire Line
+	9000 3200 9200 3200
+Wire Wire Line
+	7900 3950 7900 4000
+Wire Wire Line
+	7900 4000 9000 4000
+Wire Wire Line
+	9000 4000 9000 3400
+Wire Wire Line
+	9000 3400 9200 3400
+$EndSCHEMATC
