@@ -1,4 +1,4 @@
-update=10/12/2014 1:13:59 PM
+update=3/11/2015 7:37:58 PM
 version=1
 last_client=eeschema
 [general]
@@ -49,5 +49,3 @@ LabSize=60
 LibName1=power
 LibName2=device
 LibName3=conn
-LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName5=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
