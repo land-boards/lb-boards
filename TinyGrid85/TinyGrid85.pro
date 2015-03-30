@@ -1,6 +1,6 @@
-update=3/11/2015 7:37:58 PM
+update=3/28/2015 3:40:39 PM
 version=1
-last_client=eeschema
+last_client=pcbnew
 [general]
 version=1
 [cvpcb]
@@ -8,9 +8,21 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=
+NetFmtName=
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
 [pcbnew]
 version=1
-LastNetListRead=Tiny85ISP.net
+LastNetListRead=
 UseCmpFile=0
 PadDrill=3.175000000000
 PadDrillOvalY=3.175000000000
@@ -22,7 +34,7 @@ PcbTextThickness=0.304800000000
 ModuleTextSizeV=1.524000000000
 ModuleTextSizeH=1.524000000000
 ModuleTextSizeThickness=0.304800000000
-SolderMaskClearance=0.254000000000
+SolderMaskClearance=0.152400000000
 SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.381000000000
 BoardOutlineThickness=0.381000000000
@@ -37,15 +49,3 @@ LibName5=divers
 LibName6=libcms
 LibName7=dip_sockets
 LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
