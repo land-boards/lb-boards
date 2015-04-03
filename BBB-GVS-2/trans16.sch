@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2
+EESchema Schematic File Version 2  date 24/02/2015 13:37:05
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -14,7 +14,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 3 6
 Title "BeagleBone Cape Baseline"
-Date "19 feb 2015"
+Date "24 feb 2015"
 Rev "X4"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
