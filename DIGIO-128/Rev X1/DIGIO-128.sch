@@ -11,7 +11,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 9
 Title "16-CHANNEL DIGITAL I/O"
-Date "11 apr 2015"
+Date "28 mar 2015"
 Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
@@ -104,12 +104,12 @@ I2C
 $Comp
 L 24C01 U9
 U 1 1 5396141F
-P 2600 5650
-F 0 "U9" H 2750 6000 60  0000 C CNN
-F 1 "24C01" H 2850 5200 60  0000 C CNN
-F 2 "DIP-8__300" H 2250 5150 60  0000 C CNN
-F 3 "~" H 2600 5650 60  0000 C CNN
-	1    2600 5650
+P 2600 5750
+F 0 "U9" H 2750 6100 60  0000 C CNN
+F 1 "24C01" H 2850 5300 60  0000 C CNN
+F 2 "DIP-8__300" H 2250 5250 60  0000 C CNN
+F 3 "~" H 2600 5750 60  0000 C CNN
+	1    2600 5750
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -589,10 +589,10 @@ Wire Wire Line
 Wire Wire Line
 	1900 5650 1200 5650
 Wire Wire Line
-	2600 5150 2600 4950
+	2600 5250 2600 5050
 Wire Wire Line
-	2600 4950 1200 4950
-Text Label 1300 4950 0    60   ~ 0
+	2600 5050 1200 5050
+Text Label 1300 5050 0    60   ~ 0
 VCC
 Text Label 1300 5550 0    60   ~ 0
 SCL

@@ -3,7 +3,6 @@ LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:DigIO16-I2C
-LIBS:DougsSch
 LIBS:DIGIO-128-cache
 EELAYER 27 0
 EELAYER END
@@ -11,7 +10,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 9
 Title ""
-Date "11 apr 2015"
+Date "28 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -20,18 +19,18 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCP23017P U1
+L MCP23017P U2
 U 1 1 5516A1EB
 P 5750 3550
-AR Path="/5516A155/5516A1EB" Ref="U1"  Part="1" 
-AR Path="/5516C130/5516A1EB" Ref="U2"  Part="1" 
-AR Path="/5516F760/5516A1EB" Ref="U3"  Part="1" 
-AR Path="/5516F76C/5516A1EB" Ref="U4"  Part="1" 
-AR Path="/55171938/5516A1EB" Ref="U5"  Part="1" 
-AR Path="/55171944/5516A1EB" Ref="U6"  Part="1" 
-AR Path="/55171950/5516A1EB" Ref="U7"  Part="1" 
-AR Path="/5517195C/5516A1EB" Ref="U8"  Part="1" 
-F 0 "U1" H 5900 4550 60  0000 C CNN
+AR Path="/5516A155/5516A1EB" Ref="U2"  Part="1" 
+AR Path="/5516C130/5516A1EB" Ref="U3"  Part="1" 
+AR Path="/5516F760/5516A1EB" Ref="U4"  Part="1" 
+AR Path="/5516F76C/5516A1EB" Ref="U5"  Part="1" 
+AR Path="/55171938/5516A1EB" Ref="U6"  Part="1" 
+AR Path="/55171944/5516A1EB" Ref="U7"  Part="1" 
+AR Path="/55171950/5516A1EB" Ref="U8"  Part="1" 
+AR Path="/5517195C/5516A1EB" Ref="U9"  Part="1" 
+F 0 "U2" H 5900 4550 60  0000 C CNN
 F 1 "MCP23017P" H 6000 2200 60  0000 C CNN
 F 2 "DIP-28__300" H 6000 2100 60  0000 C CNN
 F 3 "~" H 5750 3550 60  0000 C CNN
@@ -66,13 +65,13 @@ AR Path="/5516A155/551747C1" Ref="P1"  Part="1"
 AR Path="/5516C130/551747C1" Ref="P2"  Part="1" 
 AR Path="/5516F760/551747C1" Ref="P3"  Part="1" 
 AR Path="/5516F76C/551747C1" Ref="P4"  Part="1" 
-AR Path="/55171938/551747C1" Ref="P7"  Part="1" 
-AR Path="/55171944/551747C1" Ref="P8"  Part="1" 
-AR Path="/55171950/551747C1" Ref="P9"  Part="1" 
-AR Path="/5517195C/551747C1" Ref="P10"  Part="1" 
+AR Path="/55171938/551747C1" Ref="P5"  Part="1" 
+AR Path="/55171944/551747C1" Ref="P6"  Part="1" 
+AR Path="/55171950/551747C1" Ref="P7"  Part="1" 
+AR Path="/5517195C/551747C1" Ref="P8"  Part="1" 
 F 0 "P1" V 9000 3850 60  0000 C CNN
 F 1 "CONN_20" V 9100 3850 60  0000 C CNN
-F 2 "PIN_ARRAY_10X2" V 9300 3900 60  0000 C CNN
+F 2 "" H 9050 3850 60  0000 C CNN
 F 3 "" H 9050 3850 60  0000 C CNN
 	1    9050 3850
 	1    0    0    -1  
