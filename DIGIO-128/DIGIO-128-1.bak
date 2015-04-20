@@ -56,8 +56,6 @@ Text HLabel 7250 2150 2    60   Output ~ 0
 INTA
 Text HLabel 4200 5050 0    60   UnSpc ~ 0
 GND
-Text HLabel 7250 2250 2    60   Output ~ 0
-INTB
 $Comp
 L CONN_20 P1
 U 1 1 551747C1
@@ -66,10 +64,10 @@ AR Path="/5516A155/551747C1" Ref="P1"  Part="1"
 AR Path="/5516C130/551747C1" Ref="P2"  Part="1" 
 AR Path="/5516F760/551747C1" Ref="P3"  Part="1" 
 AR Path="/5516F76C/551747C1" Ref="P4"  Part="1" 
-AR Path="/55171938/551747C1" Ref="P7"  Part="1" 
-AR Path="/55171944/551747C1" Ref="P8"  Part="1" 
-AR Path="/55171950/551747C1" Ref="P9"  Part="1" 
-AR Path="/5517195C/551747C1" Ref="P10"  Part="1" 
+AR Path="/55171938/551747C1" Ref="P6"  Part="1" 
+AR Path="/55171944/551747C1" Ref="P7"  Part="1" 
+AR Path="/55171950/551747C1" Ref="P8"  Part="1" 
+AR Path="/5517195C/551747C1" Ref="P9"  Part="1" 
 F 0 "P1" V 9000 3850 60  0000 C CNN
 F 1 "CONN_20" V 9100 3850 60  0000 C CNN
 F 2 "PIN_ARRAY_10X2" V 9300 3900 60  0000 C CNN
@@ -167,12 +165,6 @@ Wire Wire Line
 	6350 2700 6350 2150
 Wire Wire Line
 	6350 2150 7250 2150
-Wire Wire Line
-	6250 3800 6450 3800
-Wire Wire Line
-	6450 3800 6450 2250
-Wire Wire Line
-	6450 2250 7250 2250
 Wire Wire Line
 	6250 2900 7450 2900
 Wire Wire Line
