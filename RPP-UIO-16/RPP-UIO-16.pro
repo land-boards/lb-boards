@@ -1,22 +1,8 @@
-update=3/1/2015 10:56:20 AM
+update=4/21/2015 8:50:21 AM
 version=1
-last_client=pcbnew
+last_client=kicad
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [cvpcb]
 version=1
 NetIExt=net
@@ -53,3 +39,12 @@ LibName7=smd_transistors
 LibName8=libcms
 LibName9=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName10=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
