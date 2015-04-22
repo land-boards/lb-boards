@@ -33,7 +33,7 @@ AR Path="/55171950/5516A1EB" Ref="U7"  Part="1"
 AR Path="/5517195C/5516A1EB" Ref="U8"  Part="1" 
 F 0 "U1" H 5900 4550 60  0000 C CNN
 F 1 "MCP23017P" H 6000 2200 60  0000 C CNN
-F 2 "Housings_DIP:DIP-28__300" H 6000 2100 60  0000 C CNN
+F 2 "Housings_DIP:DIP-28__300" H 6600 2300 60  0000 C CNN
 F 3 "~" H 5750 3550 60  0000 C CNN
 	1    5750 3550
 	1    0    0    -1  
@@ -239,10 +239,36 @@ Wire Wire Line
 	8550 4800 8700 4800
 Connection ~ 8550 4800
 Wire Wire Line
-	8550 4600 8700 4600
+	8200 4600 8700 4600
 Wire Wire Line
 	8550 2350 8550 4600
 Wire Wire Line
 	8550 4500 8700 4500
 Connection ~ 8550 4500
+NoConn ~ 6250 3800
+$Comp
+L C C1
+U 1 1 5539308F
+P 8200 4850
+AR Path="/5516A155/5539308F" Ref="C1"  Part="1" 
+AR Path="/5516C130/5539308F" Ref="C2"  Part="1" 
+AR Path="/5516F760/5539308F" Ref="C3"  Part="1" 
+AR Path="/5516F76C/5539308F" Ref="C4"  Part="1" 
+AR Path="/55171938/5539308F" Ref="C5"  Part="1" 
+AR Path="/55171944/5539308F" Ref="C6"  Part="1" 
+AR Path="/55171950/5539308F" Ref="C7"  Part="1" 
+AR Path="/5517195C/5539308F" Ref="C8"  Part="1" 
+F 0 "C1" H 8225 4950 50  0000 L CNN
+F 1 "C" H 8225 4750 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Rect_L7_W3.5_P5" H 8238 4700 30  0000 C CNN
+F 3 "" H 8200 4850 60  0000 C CNN
+	1    8200 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4700 8200 4600
+Connection ~ 8550 4600
+Wire Wire Line
+	8200 5000 8200 5050
+Connection ~ 8200 5050
 $EndSCHEMATC

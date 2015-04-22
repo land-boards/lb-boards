@@ -1,4 +1,4 @@
-update=4/16/2015 11:31:22 AM
+update=4/21/2015 1:33:56 PM
 version=1
 last_client=kicad
 [general]
@@ -45,4 +45,3 @@ LibName2=device
 LibName3=conn
 LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C
 LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
