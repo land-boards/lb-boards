@@ -246,7 +246,7 @@ Connection ~ 9450 5400
 Wire Wire Line
 	10150 2600 10250 2600
 Wire Wire Line
-	10250 5850 10250 2600
+	10250 2600 10250 5850
 Wire Wire Line
 	10150 5500 10250 5500
 Connection ~ 10250 5500
@@ -312,7 +312,7 @@ Connection ~ 8350 3800
 Wire Wire Line
 	4900 1750 4900 3050
 Wire Wire Line
-	2950 5850 10250 5850
+	10250 5850 2950 5850
 Wire Wire Line
 	4900 5850 4900 4300
 $Comp
@@ -538,7 +538,7 @@ $EndComp
 Connection ~ 4150 3300
 Connection ~ 3950 3400
 Wire Wire Line
-	2950 2600 2950 5850
+	2950 5850 2950 2600
 Connection ~ 4900 5850
 Connection ~ 3150 2500
 Wire Wire Line

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/doug_000/Documents/GitHub/lb-boards/MyMenu/MyMenu.sch)
-    (date "4/22/2015 10:47:20 AM")
+    (date "4/23/2015 7:34:24 AM")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -232,40 +232,32 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 54FB4442)))
   (libparts
-    (libpart (lib DougsSch) (part CONN_5)
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
       (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_5))
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
       (pins
         (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))
-        (pin (num 3) (name ~) (type passive))
-        (pin (num 4) (name ~) (type passive))
-        (pin (num 5) (name ~) (type passive))))
-    (libpart (lib DougsSch) (part CONN_1)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_1))
-      (pins
-        (pin (num 1) (name 1) (type passive))))
-    (libpart (lib DougsSch) (part CONN_4)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_4))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))
-        (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive))))
-    (libpart (lib DougsSch) (part SW_PUSH_OMRON)
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) SW_PUSH_OMRON))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive))
-        (pin (num 4) (name 4) (type passive))))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib DougsSch) (part MCP23008P)
       (fields
         (field (name Reference) U)
@@ -288,32 +280,40 @@
         (pin (num 16) (name GP6) (type output))
         (pin (num 17) (name GP7) (type BiDi))
         (pin (num 18) (name VDD) (type power_in))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
+    (libpart (lib DougsSch) (part CONN_1)
       (fields
-        (field (name Reference) R)
-        (field (name Value) R))
+        (field (name Reference) P)
+        (field (name Value) CONN_1))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib DougsSch) (part CONN_5)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_5))
       (pins
         (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part LED)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
+        (pin (num 2) (name ~) (type passive))
+        (pin (num 3) (name ~) (type passive))
+        (pin (num 4) (name ~) (type passive))
+        (pin (num 5) (name ~) (type passive))))
+    (libpart (lib DougsSch) (part CONN_4)
       (fields
-        (field (name Reference) D)
-        (field (name Value) LED))
+        (field (name Reference) P)
+        (field (name Value) CONN_4))
       (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive)))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))))
+    (libpart (lib DougsSch) (part SW_PUSH_OMRON)
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) SW_PUSH_OMRON))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))
+        (pin (num 4) (name 4) (type passive)))))
   (libraries
     (library (logical device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
