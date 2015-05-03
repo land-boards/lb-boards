@@ -798,4 +798,20 @@ Connection ~ 3050 5500
 Connection ~ 3200 7300
 Text Label 3600 6000 0    60   ~ 0
 WE
+Text Label 11150 2250 0    60   ~ 0
+INT0
+Text Label 11150 3800 0    60   ~ 0
+INT1
+Text Label 11100 5350 0    60   ~ 0
+INT2
+Text Label 11100 6900 0    60   ~ 0
+INT3
+Text Label 13850 2250 0    60   ~ 0
+INT4
+Text Label 13850 3800 0    60   ~ 0
+INT5
+Text Label 13850 5350 0    60   ~ 0
+INT6
+Text Label 13850 6900 0    60   ~ 0
+INT7
 $EndSCHEMATC
