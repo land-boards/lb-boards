@@ -37,8 +37,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "16-CHANNEL DIGITAL I/O"
-Date "28 jun 2014"
-Rev "X1"
+Date "Thursday, May 14, 2015"
+Rev "X3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -183,10 +183,10 @@ F 3 "" H 2550 2400 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR1
+L GND #PWR01
 U 1 1 539081BC
 P 4900 7350
-F 0 "#PWR1" H 4900 7350 30  0001 C CNN
+F 0 "#PWR01" H 4900 7350 30  0001 C CNN
 F 1 "GND" H 4900 7280 30  0001 C CNN
 F 2 "" H 4900 7350 60  0000 C CNN
 F 3 "" H 4900 7350 60  0000 C CNN
@@ -636,9 +636,6 @@ Wire Wire Line
 	1800 3700 1750 3700
 Connection ~ 1750 3700
 Wire Wire Line
-	1750 3500 3400 3500
-Connection ~ 3400 3500
-Wire Wire Line
 	5600 1900 5600 2650
 Connection ~ 5600 2050
 Wire Wire Line
@@ -719,4 +716,7 @@ Connection ~ 4900 6900
 Wire Wire Line
 	5700 6150 5700 6900
 Connection ~ 5700 6900
+Wire Wire Line
+	1750 3500 3300 3500
+Connection ~ 3300 3500
 $EndSCHEMATC
