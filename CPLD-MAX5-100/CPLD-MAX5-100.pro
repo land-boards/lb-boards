@@ -1,4 +1,4 @@
-update=5/18/2015 7:52:23 AM
+update=5/18/2015 12:35:12 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -38,3 +38,4 @@ LibName6=regul
 LibName7=74xx
 LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
 LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
