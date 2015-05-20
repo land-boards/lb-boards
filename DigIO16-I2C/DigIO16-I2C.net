@@ -1,14 +1,14 @@
 (export (version D)
   (design
     (source C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C.sch)
-    (date "5/14/2015 9:29:10 PM")
+    (date "5/18/2015 8:02:35 PM")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "16-CHANNEL DIGITAL I/O")
         (company land-boards.com)
-        (rev X1)
-        (date "28 jun 2014")
+        (rev X3)
+        (date "Thursday, May 14, 2015")
         (source DigIO16-I2C.sch)
         (comment (number 1) (value ""))
         (comment (number 2) (value ""))
@@ -190,6 +190,20 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 553D2EE6)))
   (libparts
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part DB25)
       (footprints
         (fp DB25*))
@@ -248,26 +262,24 @@
       (pins
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name P2) (type passive))))
-    (libpart (lib DougsSch) (part 24C01)
-      (aliases
-        (alias 24C512))
-      (description "I2C Serial EEPROM")
+    (libpart (lib device) (part FUSE)
       (fields
-        (field (name Reference) U)
-        (field (name Value) 24C01))
+        (field (name Reference) F)
+        (field (name Value) FUSE))
       (pins
-        (pin (num 1) (name A0) (type input))
-        (pin (num 2) (name A1) (type input))
-        (pin (num 3) (name A2) (type input))
-        (pin (num 4) (name GND) (type power_in))
-        (pin (num 5) (name SDA) (type BiDi))
-        (pin (num 6) (name SCL) (type input))
-        (pin (num 7) (name TEST) (type input))
-        (pin (num 8) (name VCC) (type power_in))))
-    (libpart (lib DougsSch) (part ADAFRUIT_FIDUCIAL)
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
       (fields
-        (field (name Reference) adafruit)
-        (field (name Value) ADAFRUIT_FIDUCIAL)))
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib DougsSch) (part CONN_3X2)
       (fields
         (field (name Reference) P)
@@ -279,14 +291,6 @@
         (pin (num 4) (name 4) (type passive))
         (pin (num 5) (name 5) (type passive))
         (pin (num 6) (name 6) (type passive))))
-    (libpart (lib DougsSch) (part CONN_3)
-      (fields
-        (field (name Reference) K)
-        (field (name Value) CONN_3))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))
-        (pin (num 3) (name P3) (type passive))))
     (libpart (lib DougsSch) (part CONN_4)
       (fields
         (field (name Reference) P)
@@ -296,12 +300,24 @@
         (pin (num 2) (name P2) (type passive))
         (pin (num 3) (name P3) (type passive))
         (pin (num 4) (name P4) (type passive))))
+    (libpart (lib DougsSch) (part ADAFRUIT_FIDUCIAL)
+      (fields
+        (field (name Reference) adafruit)
+        (field (name Value) ADAFRUIT_FIDUCIAL)))
     (libpart (lib DougsSch) (part CONN_1)
       (fields
         (field (name Reference) P)
         (field (name Value) CONN_1))
       (pins
         (pin (num 1) (name 1) (type passive))))
+    (libpart (lib DougsSch) (part CONN_3)
+      (fields
+        (field (name Reference) K)
+        (field (name Value) CONN_3))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))
+        (pin (num 3) (name P3) (type passive))))
     (libpart (lib DougsSch) (part MCP23017P)
       (fields
         (field (name Reference) U)
@@ -337,45 +353,29 @@
       (fields
         (field (name Reference) MTG?)
         (field (name Value) MTG_HOLE)))
-    (libpart (lib device) (part FUSE)
+    (libpart (lib DougsSch) (part 24C01)
+      (aliases
+        (alias 24C512))
+      (description "I2C Serial EEPROM")
       (fields
-        (field (name Reference) F)
-        (field (name Value) FUSE))
+        (field (name Reference) U)
+        (field (name Value) 24C01))
       (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive)))))
+        (pin (num 1) (name A0) (type input))
+        (pin (num 2) (name A1) (type input))
+        (pin (num 3) (name A2) (type input))
+        (pin (num 4) (name GND) (type power_in))
+        (pin (num 5) (name SDA) (type BiDi))
+        (pin (num 6) (name SCL) (type input))
+        (pin (num 7) (name TEST) (type input))
+        (pin (num 8) (name VCC) (type power_in)))))
   (libraries
     (library (logical conn)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
-    (library (logical DougsSch)
-      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib))
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
+    (library (logical DougsSch)
+      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib)))
   (nets
     (net (code 1) (name "Net-(J8-Pad16)")
       (node (ref J8) (pin 16))
