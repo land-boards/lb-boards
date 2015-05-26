@@ -1,4 +1,4 @@
-update=5/19/2015 12:56:33 PM
+update=5/24/2015 11:02:45 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,20 +6,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=74xx
-LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
-LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -40,3 +26,18 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=linear
+LibName7=regul
+LibName8=74xx
+LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
+LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName11=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
