@@ -1,4 +1,4 @@
-update=4/21/2015 8:50:21 AM
+update=5/26/2015 7:58:28 PM
 version=1
 last_client=kicad
 [general]
@@ -48,3 +48,16 @@ LibName2=device
 LibName3=conn
 LibName4=atmel
 LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
