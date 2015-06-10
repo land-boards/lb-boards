@@ -1,0 +1,68 @@
+eeschema (2013-03-19 BZR 4004)-stable  >> Creation date: 5/4/2013 3:05:37 PM
+#Cmp ( order = Reference )
+| C1         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C2         10uF        ;             ;             ;             ;             ;             ;             ;             
+| C3         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C4         10uF        ;             ;             ;             ;             ;             ;             ;             
+| C5         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C6         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C7         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C8         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| C9         0.1uF       ;             ;             ;             ;             ;             ;             ;             
+| D1         1N4001      ;             ;             ;             ;             ;             ;             ;             
+| JP1        CONN_6      ;             ;             ;             ;             ;             ;             ;             
+| JP2        CONN_3      ;             ;             ;             ;             ;             ;             ;             
+| JP3        CONN_3X2    ;             ;             ;             ;             ;             ;             ;             
+| JP4        CONN_8      ;             ;             ;             ;             ;             ;             ;             
+| JP5        CONN_8      ;             ;             ;             ;             ;             ;             ;             
+| JP6        CONN_8      ;             ;             ;             ;             ;             ;             ;             
+| JP7        CONN_8      ;             ;             ;             ;             ;             ;             ;             
+| JP8        CONN_4      ;             ;             ;             ;             ;             ;             ;             
+| K1         JACK-3.5MM  ;             ;             ;             ;             ;             ;             ;             
+| MTG1       CONN_1      ;             ;             ;             ;             ;             ;             ;             
+| MTG2       CONN_1      ;             ;             ;             ;             ;             ;             ;             
+| MTG3       CONN_1      ;             ;             ;             ;             ;             ;             ;             
+| MTG4       CONN_1      ;             ;             ;             ;             ;             ;             ;             
+| R1         10K         ;             ;             ;             ;             ;             ;             ;             
+| R2         10K         ;             ;             ;             ;             ;             ;             ;             
+| R3         10K         ;             ;             ;             ;             ;             ;             ;             
+| SW1        SW_PUSH_OMRON;             ;             ;             ;             ;             ;             ;             
+| U1         ATMEGA328-P ;             ;             ;             ;             ;             ;             ;             
+| U2         AP1117      ;             ;             ;             ;             ;             ;             ;             
+| X1         16MHz       ;             ;             ;             ;             ;             ;             ;             
+#End Cmp
+
+#Cmp ( order = Value )
+| 0.1uF        C1        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C3        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C5        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C6        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C7        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C8        ;             ;             ;             ;             ;             ;             ;             
+| 0.1uF        C9        ;             ;             ;             ;             ;             ;             ;             
+| 10uF         C2        ;             ;             ;             ;             ;             ;             ;             
+| 10uF         C4        ;             ;             ;             ;             ;             ;             ;             
+| 1N4001       D1        ;             ;             ;             ;             ;             ;             ;             
+| CONN_6       JP1       ;             ;             ;             ;             ;             ;             ;             
+| CONN_3       JP2       ;             ;             ;             ;             ;             ;             ;             
+| CONN_3X2     JP3       ;             ;             ;             ;             ;             ;             ;             
+| CONN_8       JP4       ;             ;             ;             ;             ;             ;             ;             
+| CONN_8       JP5       ;             ;             ;             ;             ;             ;             ;             
+| CONN_8       JP6       ;             ;             ;             ;             ;             ;             ;             
+| CONN_8       JP7       ;             ;             ;             ;             ;             ;             ;             
+| CONN_4       JP8       ;             ;             ;             ;             ;             ;             ;             
+| JACK-3.5MM   K1        ;             ;             ;             ;             ;             ;             ;             
+| CONN_1       MTG1      ;             ;             ;             ;             ;             ;             ;             
+| CONN_1       MTG2      ;             ;             ;             ;             ;             ;             ;             
+| CONN_1       MTG3      ;             ;             ;             ;             ;             ;             ;             
+| CONN_1       MTG4      ;             ;             ;             ;             ;             ;             ;             
+| 10K          R1        ;             ;             ;             ;             ;             ;             ;             
+| 10K          R2        ;             ;             ;             ;             ;             ;             ;             
+| 10K          R3        ;             ;             ;             ;             ;             ;             ;             
+| SW_PUSH_OMRON SW1       ;             ;             ;             ;             ;             ;             ;             
+| AP1117       U2        ;             ;             ;             ;             ;             ;             ;             
+| ATMEGA328-P  U1        ;             ;             ;             ;             ;             ;             ;             
+| 16MHz        X1        ;             ;             ;             ;             ;             ;             ;             
+#End Cmp
+
+#End List
