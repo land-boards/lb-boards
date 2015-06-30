@@ -1,6 +1,6 @@
-update=7/2/2014 8:24:04 PM
+update=6/26/2015 5:57:56 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -53,3 +53,16 @@ LibName5=linear
 LibName6=regul
 LibName7=microcontrollers
 LibName8=atmel
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
