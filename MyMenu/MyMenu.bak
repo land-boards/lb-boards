@@ -311,10 +311,6 @@ Wire Wire Line
 Connection ~ 8550 3550
 Wire Wire Line
 	5100 1500 5100 2800
-Wire Wire Line
-	10450 5600 3150 5600
-Wire Wire Line
-	5100 5600 5100 4050
 $Comp
 L LED D3
 U 1 1 54FAE814
@@ -391,9 +387,6 @@ Wire Wire Line
 	7350 3950 7550 3950
 Wire Wire Line
 	7950 3950 8050 3950
-Wire Wire Line
-	8050 3950 8050 5600
-Connection ~ 8050 5600
 Wire Wire Line
 	7950 4300 8050 4300
 Connection ~ 8050 4300
@@ -486,16 +479,16 @@ Wire Wire Line
 	3350 2250 3350 2500
 Connection ~ 5100 2250
 Wire Wire Line
-	3550 2500 3550 2250
+	3550 2250 3550 2500
 Connection ~ 3550 2250
 Wire Wire Line
-	3750 2500 3750 2250
+	3750 2250 3750 2500
 Connection ~ 3750 2250
 Wire Wire Line
-	3950 2500 3950 2250
+	3950 2250 3950 2500
 Connection ~ 3950 2250
 Wire Wire Line
-	4150 2500 4150 2250
+	4150 2250 4150 2500
 Connection ~ 4150 2250
 Wire Wire Line
 	4350 2250 4350 2500
@@ -523,10 +516,10 @@ Wire Wire Line
 Wire Wire Line
 	4550 3550 3350 3550
 $Comp
-L CONN_4 P2
+L CONN_4 P1
 U 1 1 54FAF136
 P 1400 3000
-F 0 "P2" V 1350 3000 50  0000 C CNN
+F 0 "P1" V 1350 3000 50  0000 C CNN
 F 1 "CONN_4" V 1450 3000 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 1400 2750 60  0000 C CNN
 F 3 "" H 1400 3000 60  0000 C CNN
@@ -535,23 +528,10 @@ F 3 "" H 1400 3000 60  0000 C CNN
 $EndComp
 Connection ~ 4350 3050
 Connection ~ 4150 3150
-Wire Wire Line
-	3150 5600 3150 2500
-Connection ~ 5100 5600
 Connection ~ 3350 2250
-Wire Wire Line
-	1750 2550 2350 2550
-Wire Wire Line
-	2350 2550 2350 3150
-Connection ~ 2350 3150
-Wire Wire Line
-	1750 2450 2450 2450
-Wire Wire Line
-	2450 2450 2450 3050
-Connection ~ 2450 3050
-Text Label 3450 5600 0    60   ~ 0
+Text Label 2950 4300 0    60   ~ 0
 GND
-Text Label 3150 2250 0    60   ~ 0
+Text Label 3050 2250 0    60   ~ 0
 VCC
 $Comp
 L R R18
@@ -589,8 +569,7 @@ $EndComp
 Wire Wire Line
 	3950 4300 3950 4050
 Wire Wire Line
-	3150 4300 3950 4300
-Connection ~ 3150 4300
+	2600 4300 5100 4300
 Wire Wire Line
 	3750 4050 3750 4300
 Connection ~ 3750 4300
@@ -608,9 +587,9 @@ Text Label 4250 3350 0    60   ~ 0
 A1
 Text Label 4250 3450 0    60   ~ 0
 A0
-Text Label 2650 3050 0    60   ~ 0
+Text Label 2950 3050 0    60   ~ 0
 SCL
-Text Label 2650 3150 0    60   ~ 0
+Text Label 2950 3150 0    60   ~ 0
 SDA
 NoConn ~ 5700 7350
 $Comp
@@ -665,74 +644,65 @@ Wire Wire Line
 Wire Wire Line
 	6950 3050 6950 2150
 $Comp
-L CONN_5 P1
+L CONN_5 P2
 U 1 1 54FB4442
-P 1350 2450
-F 0 "P1" V 1300 2450 50  0000 C CNN
-F 1 "CONN_5" V 1400 2450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 1350 2150 60  0000 C CNN
-F 3 "" H 1350 2450 60  0000 C CNN
-	1    1350 2450
+P 1400 2350
+F 0 "P2" V 1350 2350 50  0000 C CNN
+F 1 "CONN_5" V 1450 2350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 1400 2050 60  0000 C CNN
+F 3 "" H 1400 2350 60  0000 C CNN
+	1    1400 2350
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2650 2950 2650
-Wire Wire Line
-	2950 2650 2950 2150
-Wire Wire Line
-	2950 2150 6950 2150
-Text Notes 1200 2650 2    60   ~ 0
-GND\nVCC\nSCL\nSDA\nINT
+	6950 2150 2700 2150
+Text Notes 1250 2550 2    60   ~ 0
+GND\nVCC\nSDA\nSCL\nINT
 Text Notes 1250 3150 2    60   ~ 0
 VCC/GND\nGND/VCC\nSCL\nSDA
 $Comp
 L R R11
 U 1 1 55981457
-P 2150 1900
-F 0 "R11" V 2230 1900 40  0000 C CNN
-F 1 "0/OP" V 2157 1901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 1900 30  0000 C CNN
-F 3 "~" H 2150 1900 30  0000 C CNN
-	1    2150 1900
+P 2150 1200
+F 0 "R11" V 2230 1200 40  0000 C CNN
+F 1 "0/OP" V 2157 1201 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 1200 30  0000 C CNN
+F 3 "~" H 2150 1200 30  0000 C CNN
+	1    2150 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1950 3650 1950 3750
 Wire Wire Line
-	1950 3750 3150 3750
-Connection ~ 3150 3750
+	1950 3750 2600 3750
+Connection ~ 2600 3750
 Wire Wire Line
 	2150 3650 2150 3750
 Connection ~ 2150 3750
 Wire Wire Line
-	2800 1650 2800 2350
+	1950 950  1950 1050
 Wire Wire Line
-	1950 1650 2800 1650
+	2150 1050 2150 950 
+Connection ~ 2150 950 
 Wire Wire Line
-	1950 1650 1950 1750
-Connection ~ 2800 2250
-Wire Wire Line
-	2150 1750 2150 1650
-Connection ~ 2150 1650
-Wire Wire Line
-	1950 2050 1950 3350
+	1950 1350 1950 3350
 Wire Wire Line
 	1750 2850 1950 2850
 Connection ~ 1950 2850
 Wire Wire Line
-	2150 2050 2150 3350
+	2150 1350 2150 3350
 Wire Wire Line
 	1750 2950 2150 2950
 Connection ~ 2150 2950
 $Comp
 L R R10
 U 1 1 559821F3
-P 1950 1900
-F 0 "R10" V 2030 1900 40  0000 C CNN
-F 1 "0/OP" V 1957 1901 40  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1880 1900 30  0000 C CNN
-F 3 "~" H 1950 1900 30  0000 C CNN
-	1    1950 1900
+P 1950 1200
+F 0 "R10" V 2030 1200 40  0000 C CNN
+F 1 "0/OP" V 1957 1201 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1880 1200 30  0000 C CNN
+F 3 "~" H 1950 1200 30  0000 C CNN
+	1    1950 1200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -741,7 +711,7 @@ U 1 1 559822AF
 P 2150 3500
 F 0 "R21" V 2230 3500 40  0000 C CNN
 F 1 "0/OP" V 2157 3501 40  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2080 3500 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2100 3200 30  0000 C CNN
 F 3 "~" H 2150 3500 30  0000 C CNN
 	1    2150 3500
 	1    0    0    -1  
@@ -752,19 +722,70 @@ U 1 1 559822B5
 P 1950 3500
 F 0 "R20" V 2030 3500 40  0000 C CNN
 F 1 "0/OP" V 1957 3501 40  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1880 3500 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1900 3200 30  0000 C CNN
 F 3 "~" H 1950 3500 30  0000 C CNN
 	1    1950 3500
 	1    0    0    -1  
 $EndComp
+$Comp
+L CONN_4 P3
+U 1 1 5599E150
+P 1400 1800
+F 0 "P3" V 1350 1800 50  0000 C CNN
+F 1 "CONN_4" V 1450 1800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 1400 1550 60  0000 C CNN
+F 3 "" H 1400 1800 60  0000 C CNN
+	1    1400 1800
+	-1   0    0    -1  
+$EndComp
+Text Notes 1250 2000 2    60   ~ 0
+GND\nVCC\nSDA\nSCL
 Wire Wire Line
-	2800 2250 5100 2250
+	1750 1750 2500 1750
 Wire Wire Line
-	2800 2350 1750 2350
+	2500 950  2500 2250
+Connection ~ 2500 2250
 Wire Wire Line
-	1750 2250 2700 2250
+	1800 2550 2700 2550
 Wire Wire Line
-	2700 2250 2700 2500
+	2700 2550 2700 2150
 Wire Wire Line
-	2700 2500 3150 2500
+	1800 2250 5100 2250
+Wire Wire Line
+	2600 1650 1750 1650
+Wire Wire Line
+	1800 2150 2600 2150
+Connection ~ 2600 2150
+Wire Wire Line
+	1750 1950 2300 1950
+Wire Wire Line
+	2300 1950 2300 3050
+Wire Wire Line
+	2300 2450 1800 2450
+Connection ~ 2300 3050
+Connection ~ 2300 2450
+Wire Wire Line
+	1750 1850 2400 1850
+Wire Wire Line
+	2400 1850 2400 3150
+Connection ~ 2400 3150
+Wire Wire Line
+	1800 2350 2400 2350
+Connection ~ 2400 2350
+Connection ~ 5100 4300
+Connection ~ 3950 4300
+Wire Wire Line
+	2600 1650 2600 4300
+Wire Wire Line
+	1950 950  2500 950 
+Connection ~ 2500 1750
+Wire Wire Line
+	10450 5600 8050 5600
+Wire Wire Line
+	8050 5600 8050 3950
+Wire Wire Line
+	8050 4850 5100 4850
+Wire Wire Line
+	5100 4850 5100 4050
+Connection ~ 8050 4850
 $EndSCHEMATC
