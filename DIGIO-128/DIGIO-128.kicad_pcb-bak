@@ -385,12 +385,12 @@
     (add_net "Net-(J4-Pad6)")
   )
 
-  (module pin_array_4x1 (layer F.Cu) (tedit 5532761C) (tstamp 5532753E)
+  (module pin_array_4x1 (layer F.Cu) (tedit 55A7F909) (tstamp 5532753E)
     (at 139.869 95.753)
     (descr "Double rangee de contacts 2 x 4 pins")
     (tags CONN)
     (path /537DE1FC)
-    (fp_text reference J2 (at 0 2.49936) (layer F.SilkS)
+    (fp_text reference J2 (at -0.169 2.799) (layer F.SilkS)
       (effects (font (size 1.651 1.651) (thickness 0.3175)))
     )
     (fp_text value CONN_4 (at 2.25044 -3.2512 90) (layer F.SilkS) hide
@@ -713,12 +713,12 @@
     )
   )
 
-  (module pin_array_4x1 (layer F.Cu) (tedit 5532767B) (tstamp 5516DACD)
+  (module pin_array_4x1 (layer F.Cu) (tedit 55A7F90E) (tstamp 5516DACD)
     (at 143.933 95.753)
     (descr "Double rangee de contacts 2 x 4 pins")
     (tags CONN)
     (path /55370AC4)
-    (fp_text reference J3 (at 0 2.49936) (layer F.SilkS)
+    (fp_text reference J3 (at -0.169 2.799) (layer F.SilkS)
       (effects (font (size 1.651 1.651) (thickness 0.3175)))
     )
     (fp_text value CONN_4 (at 2.25044 -3.2512 90) (layer F.SilkS) hide
@@ -2276,7 +2276,7 @@
   (gr_arc (start 144 139) (end 150 139) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_arc (start 144 56) (end 144 50) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_arc (start 61 56) (end 55 56) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_text "I2C ADR\n20-27=DIO\n50=EEP" (at 143.51 81.915) (layer F.SilkS)
+  (gr_text "I2C ADDRS\n20-27=DIO\n50=EEP" (at 143.51 81.915) (layer F.SilkS)
     (effects (font (size 1.27 1.27) (thickness 0.3)))
   )
   (gr_text "land-boards.com/\nDIGIO-128" (at 101.769 140.203) (layer F.SilkS)
