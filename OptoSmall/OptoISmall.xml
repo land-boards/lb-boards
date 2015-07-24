@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:/Users/doug_000/Documents/GitHub/lb-boards/OptoIn8-I2C/OptoIn8-I2C.sch</source>
-    <date>4/25/2015 5:51:59 PM</date>
+    <source>C:/Users/doug_000/Documents/GitHub/lb-boards/OptoSmall/OptoISmall.sch</source>
+    <date>7/24/2015 8:02:49 AM</date>
     <tool>Eeschema (after 2015-mar-04 BZR unknown)-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>8-CHANNEL OPTO-ISOLATED INPUT I2C CARD</title>
+        <title>OPTO-ISOLATED CARD</title>
         <company>land-boards.com</company>
         <rev>X1</rev>
-        <date>9 jun 2014</date>
-        <source>OptoIn8-I2C.sch</source>
+        <date>Friday, June 12, 2015</date>
+        <source>OptoISmall.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/OptoBlk1/" tstamps="/557B9C27/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>OptoBlock.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/OptoBlk2/" tstamps="/557BCF63/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>OptoBlock.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/OptoBlk3/" tstamps="/557BD8A1/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>OptoBlock.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/OptoBlk4/" tstamps="/557BD8A9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>OptoBlock.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -19,336 +71,221 @@
     </sheet>
   </design>
   <components>
-    <comp ref="U1">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D39</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D48</tstamp>
-    </comp>
-    <comp ref="U3">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D57</tstamp>
-    </comp>
-    <comp ref="U4">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D66</tstamp>
-    </comp>
-    <comp ref="U5">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D75</tstamp>
-    </comp>
-    <comp ref="U6">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D8E</tstamp>
-    </comp>
-    <comp ref="U7">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4D9D</tstamp>
-    </comp>
-    <comp ref="U8">
-      <value>4N26</value>
-      <footprint>DIP-6__300</footprint>
-      <libsource lib="opto" part="4N26"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DAC</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DBB</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DC8</tstamp>
-    </comp>
-    <comp ref="R3">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DCE</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DD4</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DDA</tstamp>
-    </comp>
-    <comp ref="R6">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DE0</tstamp>
-    </comp>
-    <comp ref="R7">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DE6</tstamp>
-    </comp>
-    <comp ref="R8">
-      <value>R</value>
-      <footprint>R4-5</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DEC</tstamp>
-    </comp>
-    <comp ref="J1">
-      <value>DB25</value>
-      <footprint>DB25MC</footprint>
-      <libsource lib="conn" part="DB25"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A4DF5</tstamp>
-    </comp>
     <comp ref="MTG1">
       <value>MTG_HOLE</value>
-      <footprint>MTG-6-32</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="MTG_HOLE"/>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="OptoISmall-cache" part="MTG_HOLE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>537A5CA4</tstamp>
     </comp>
     <comp ref="FID2">
       <value>ADAFRUIT_FIDUCIAL</value>
       <footprint>FIDUCIAL</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="ADAFRUIT_FIDUCIAL"/>
+      <libsource lib="OptoISmall-cache" part="ADAFRUIT_FIDUCIAL"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>537A5ED2</tstamp>
     </comp>
     <comp ref="FID1">
       <value>ADAFRUIT_FIDUCIAL</value>
       <footprint>FIDUCIAL</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="ADAFRUIT_FIDUCIAL"/>
+      <libsource lib="OptoISmall-cache" part="ADAFRUIT_FIDUCIAL"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>537A5EE1</tstamp>
-    </comp>
-    <comp ref="ST2">
-      <value>REV-HIST</value>
-      <footprint>REV_BLOCK</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="REV-HIST"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537A60FF</tstamp>
-    </comp>
-    <comp ref="U9">
-      <value>MCP23008P</value>
-      <footprint>DIP-18__300</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="MCP23008P"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537B6E2C</tstamp>
-    </comp>
-    <comp ref="HDR1">
-      <value>CONN_3X2</value>
-      <footprint>pin_array_3x2</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_3X2"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>537B7022</tstamp>
-    </comp>
-    <comp ref="RP1">
-      <value>RR9</value>
-      <footprint>SIL-10</footprint>
-      <fields>
-        <field name="Mfg">Bourns</field>
-        <field name="MfgPN">4610X-101-472LF</field>
-      </fields>
-      <libsource lib="device" part="RR9"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>538F5EC1</tstamp>
-    </comp>
-    <comp ref="J3">
-      <value>CONN_4</value>
-      <footprint>PIN_ARRAY_4x1</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_4"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>538F65CB</tstamp>
     </comp>
     <comp ref="ST1">
       <value>CONN_1</value>
       <footprint>REV_BLOCK</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_1"/>
+      <libsource lib="OptoISmall-cache" part="CONN_1"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>537A64A5</tstamp>
     </comp>
-    <comp ref="MTG3">
+    <comp ref="MTG2">
       <value>MTG_HOLE</value>
-      <footprint>MTG-6-32</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="MTG_HOLE"/>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="OptoISmall-cache" part="MTG_HOLE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>538F757A</tstamp>
     </comp>
-    <comp ref="MTG2">
+    <comp ref="MTG3">
       <value>MTG_HOLE</value>
-      <footprint>MTG-6-32</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="MTG_HOLE"/>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="OptoISmall-cache" part="MTG_HOLE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>538F7580</tstamp>
     </comp>
     <comp ref="MTG4">
       <value>MTG_HOLE</value>
-      <footprint>MTG-6-32</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="MTG_HOLE"/>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="OptoISmall-cache" part="MTG_HOLE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>538F7586</tstamp>
     </comp>
-    <comp ref="J4">
-      <value>CONN_4</value>
-      <footprint>PIN_ARRAY_4x1</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_4"/>
+    <comp ref="P1">
+      <value>CONN_01X08</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x08</footprint>
+      <libsource lib="conn" part="CONN_01X08"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>53907B6F</tstamp>
+      <tstamp>557EBB19</tstamp>
     </comp>
-    <comp ref="J5">
-      <value>CONN_3</value>
-      <footprint>PIN_ARRAY_3X1</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_3"/>
+    <comp ref="P2">
+      <value>CONN_01X08</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x08</footprint>
+      <libsource lib="conn" part="CONN_01X08"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>53907B9E</tstamp>
+      <tstamp>557EC371</tstamp>
     </comp>
-    <comp ref="J2">
-      <value>CONN_3</value>
-      <footprint>PIN_ARRAY_3X1</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="CONN_3"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>539083CF</tstamp>
+    <comp ref="U1">
+      <value>4N26</value>
+      <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="opto" part="4N26"/>
+      <sheetpath names="/OptoBlk1/" tstamps="/557B9C27/"/>
+      <tstamp>557B9EA9</tstamp>
     </comp>
-    <comp ref="U10">
-      <value>24C01</value>
-      <footprint>DIP-8__300</footprint>
-      <libsource lib="OptoIn8-I2C-cache" part="24C01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5396124F</tstamp>
+    <comp ref="R2">
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk1/" tstamps="/557B9C27/"/>
+      <tstamp>557B9EB0</tstamp>
     </comp>
-    <comp ref="J6">
-      <value>CONN_01X02</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02</footprint>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D10AF</tstamp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk1/" tstamps="/557B9C27/"/>
+      <tstamp>557B9EBF</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>4.7K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk1/" tstamps="/557B9C27/"/>
+      <tstamp>557B9F95</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>2N3904</value>
+      <footprint>Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering</footprint>
+      <libsource lib="device" part="Q_NPN_BEC"/>
+      <sheetpath names="/OptoBlk1/" tstamps="/557B9C27/"/>
+      <tstamp>557F6DD0</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>4N26</value>
+      <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="opto" part="4N26"/>
+      <sheetpath names="/OptoBlk2/" tstamps="/557BCF63/"/>
+      <tstamp>557B9EA9</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk2/" tstamps="/557BCF63/"/>
+      <tstamp>557B9EB0</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk2/" tstamps="/557BCF63/"/>
+      <tstamp>557B9EBF</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>4.7K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk2/" tstamps="/557BCF63/"/>
+      <tstamp>557B9F95</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>2N3904</value>
+      <footprint>Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering</footprint>
+      <libsource lib="device" part="Q_NPN_BEC"/>
+      <sheetpath names="/OptoBlk2/" tstamps="/557BCF63/"/>
+      <tstamp>557F6DD0</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>4N26</value>
+      <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="opto" part="4N26"/>
+      <sheetpath names="/OptoBlk3/" tstamps="/557BD8A1/"/>
+      <tstamp>557B9EA9</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk3/" tstamps="/557BD8A1/"/>
+      <tstamp>557B9EB0</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk3/" tstamps="/557BD8A1/"/>
+      <tstamp>557B9EBF</tstamp>
     </comp>
     <comp ref="R9">
-      <value>R</value>
+      <value>4.7K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D225E</tstamp>
+      <sheetpath names="/OptoBlk3/" tstamps="/557BD8A1/"/>
+      <tstamp>557B9F95</tstamp>
     </comp>
-    <comp ref="R14">
-      <value>1K</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D2401</tstamp>
+    <comp ref="Q3">
+      <value>2N3904</value>
+      <footprint>Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering</footprint>
+      <libsource lib="device" part="Q_NPN_BEC"/>
+      <sheetpath names="/OptoBlk3/" tstamps="/557BD8A1/"/>
+      <tstamp>557F6DD0</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>R</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D32EF</tstamp>
+    <comp ref="U4">
+      <value>4N26</value>
+      <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
+      <libsource lib="opto" part="4N26"/>
+      <sheetpath names="/OptoBlk4/" tstamps="/557BD8A9/"/>
+      <tstamp>557B9EA9</tstamp>
     </comp>
     <comp ref="R11">
-      <value>R</value>
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D3349</tstamp>
+      <sheetpath names="/OptoBlk4/" tstamps="/557BD8A9/"/>
+      <tstamp>557B9EB0</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/OptoBlk4/" tstamps="/557BD8A9/"/>
+      <tstamp>557B9EBF</tstamp>
     </comp>
     <comp ref="R12">
-      <value>R</value>
+      <value>4.7K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D33A5</tstamp>
+      <sheetpath names="/OptoBlk4/" tstamps="/557BD8A9/"/>
+      <tstamp>557B9F95</tstamp>
     </comp>
-    <comp ref="R13">
-      <value>R</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>553D3405</tstamp>
+    <comp ref="Q4">
+      <value>2N3904</value>
+      <footprint>Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering</footprint>
+      <libsource lib="device" part="Q_NPN_BEC"/>
+      <sheetpath names="/OptoBlk4/" tstamps="/557BD8A9/"/>
+      <tstamp>557F6DD0</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="conn" part="CONN_01X02">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
+    <libpart lib="device" part="Q_NPN_BEC">
+      <description>Transistor NPN (general)</description>
       <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X02</field>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC</field>
       </fields>
       <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="DB25">
-      <footprints>
-        <fp>DB25*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">DB25</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-        <pin num="5" name="5" type="passive"/>
-        <pin num="6" name="6" type="passive"/>
-        <pin num="7" name="7" type="passive"/>
-        <pin num="8" name="8" type="passive"/>
-        <pin num="9" name="9" type="passive"/>
-        <pin num="10" name="10" type="passive"/>
-        <pin num="11" name="11" type="passive"/>
-        <pin num="12" name="12" type="passive"/>
-        <pin num="13" name="13" type="passive"/>
-        <pin num="14" name="P14" type="passive"/>
-        <pin num="15" name="P15" type="passive"/>
-        <pin num="16" name="P16" type="passive"/>
-        <pin num="17" name="P17" type="passive"/>
-        <pin num="18" name="P18" type="passive"/>
-        <pin num="19" name="P19" type="passive"/>
-        <pin num="20" name="P20" type="passive"/>
-        <pin num="21" name="P21" type="passive"/>
-        <pin num="22" name="P22" type="passive"/>
-        <pin num="23" name="P23" type="passive"/>
-        <pin num="24" name="P24" type="passive"/>
-        <pin num="25" name="P25" type="passive"/>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="openEm"/>
+        <pin num="3" name="C" type="openCol"/>
       </pins>
     </libpart>
     <libpart lib="device" part="R">
@@ -366,130 +303,26 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="RR9">
-      <fields>
-        <field name="Reference">RR</field>
-        <field name="Value">RR9</field>
-      </fields>
-      <pins>
-        <pin num="1" name="COM" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-        <pin num="5" name="5" type="passive"/>
-        <pin num="6" name="6" type="passive"/>
-        <pin num="7" name="7" type="passive"/>
-        <pin num="8" name="8" type="passive"/>
-        <pin num="9" name="9" type="passive"/>
-        <pin num="10" name="10" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="REV-HIST">
-      <fields>
-        <field name="Reference">ST</field>
-        <field name="Value">REV-HIST</field>
-      </fields>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="ADAFRUIT_FIDUCIAL">
-      <fields>
-        <field name="Reference">adafruit</field>
-        <field name="Value">ADAFRUIT_FIDUCIAL</field>
-      </fields>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="CONN_3">
-      <fields>
-        <field name="Reference">K</field>
-        <field name="Value">CONN_3</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="PM" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="MCP23008P">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MCP23008P</field>
-      </fields>
-      <pins>
-        <pin num="1" name="SCL" type="input"/>
-        <pin num="2" name="SDA" type="input"/>
-        <pin num="3" name="A2" type="input"/>
-        <pin num="4" name="A1" type="input"/>
-        <pin num="5" name="A0" type="input"/>
-        <pin num="6" name="~RST" type="input"/>
-        <pin num="8" name="INT" type="output"/>
-        <pin num="9" name="VSS" type="power_in"/>
-        <pin num="10" name="GP0" type="output"/>
-        <pin num="11" name="GP1" type="output"/>
-        <pin num="12" name="GP2" type="output"/>
-        <pin num="13" name="GP3" type="output"/>
-        <pin num="14" name="GP4" type="output"/>
-        <pin num="15" name="GP5" type="output"/>
-        <pin num="16" name="GP6" type="output"/>
-        <pin num="17" name="GP7" type="BiDi"/>
-        <pin num="18" name="VDD" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="MTG_HOLE">
-      <fields>
-        <field name="Reference">MTG?</field>
-        <field name="Value">MTG_HOLE</field>
-      </fields>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="CONN_4">
+    <libpart lib="conn" part="CONN_01X08">
+      <footprints>
+        <fp>Pin_Header_Straight_1X08</fp>
+        <fp>Pin_Header_Angled_1X08</fp>
+        <fp>Socket_Strip_Straight_1X08</fp>
+        <fp>Socket_Strip_Angled_1X08</fp>
+      </footprints>
       <fields>
         <field name="Reference">P</field>
-        <field name="Value">CONN_4</field>
+        <field name="Value">CONN_01X08</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
         <pin num="2" name="P2" type="passive"/>
         <pin num="3" name="P3" type="passive"/>
         <pin num="4" name="P4" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="CONN_3X2">
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_3X2</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-        <pin num="5" name="5" type="passive"/>
-        <pin num="6" name="6" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="CONN_1">
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_1</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="OptoIn8-I2C-cache" part="24C01">
-      <aliases>
-        <alias>24C512</alias>
-      </aliases>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">24C01</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A0" type="input"/>
-        <pin num="2" name="A1" type="input"/>
-        <pin num="3" name="A2" type="input"/>
-        <pin num="4" name="GND" type="power_in"/>
-        <pin num="5" name="SDA" type="BiDi"/>
-        <pin num="6" name="SCL" type="input"/>
-        <pin num="7" name="TEST" type="input"/>
-        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="opto" part="4N25">
@@ -510,6 +343,27 @@
         <pin num="6" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="OptoISmall-cache" part="CONN_1">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="OptoISmall-cache" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+    <libpart lib="OptoISmall-cache" part="ADAFRUIT_FIDUCIAL">
+      <fields>
+        <field name="Reference">adafruit</field>
+        <field name="Value">ADAFRUIT_FIDUCIAL</field>
+      </fields>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="device">
@@ -521,363 +375,141 @@
     <library logical="opto">
       <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
     </library>
-    <library logical="OptoIn8-I2C-cache">
-      <uri>C:\Users\doug_000\Documents\GitHub\lb-boards\OptoIn8-I2C\OptoIn8-I2C-cache.lib</uri>
+    <library logical="OptoISmall-cache">
+      <uri>C:\Users\doug_000\Documents\GitHub\lb-boards\OptoSmall\OptoISmall-cache.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/GP4">
-      <node ref="U9" pin="14"/>
-      <node ref="RP1" pin="6"/>
-    </net>
-    <net code="2" name="/GP5">
-      <node ref="RP1" pin="5"/>
-      <node ref="U9" pin="15"/>
-    </net>
-    <net code="3" name="Net-(RP1-Pad2)">
-      <node ref="RP1" pin="2"/>
-    </net>
-    <net code="4" name="Net-(J1-Pad13)">
-      <node ref="J1" pin="13"/>
-    </net>
-    <net code="5" name="Net-(ST1-Pad1)">
-      <node ref="ST1" pin="1"/>
-    </net>
-    <net code="14" name="/GP3">
-      <node ref="RP1" pin="7"/>
-      <node ref="U9" pin="13"/>
-    </net>
-    <net code="15" name="Net-(J1-Pad25)">
-      <node ref="J1" pin="25"/>
-    </net>
-    <net code="16" name="Net-(J1-Pad11)">
-      <node ref="J1" pin="11"/>
-    </net>
-    <net code="17" name="Net-(J1-Pad22)">
-      <node ref="J1" pin="22"/>
-    </net>
-    <net code="18" name="Net-(J1-Pad8)">
-      <node ref="J1" pin="8"/>
-    </net>
-    <net code="19" name="Net-(J1-Pad19)">
-      <node ref="J1" pin="19"/>
-    </net>
-    <net code="20" name="Net-(J1-Pad5)">
-      <node ref="J1" pin="5"/>
-    </net>
-    <net code="21" name="Net-(J1-Pad16)">
-      <node ref="J1" pin="16"/>
-    </net>
-    <net code="22" name="Net-(J1-Pad2)">
-      <node ref="J1" pin="2"/>
-    </net>
-    <net code="23" name="/INT">
-      <node ref="U9" pin="8"/>
-      <node ref="R13" pin="2"/>
-      <node ref="J5" pin="2"/>
-    </net>
-    <net code="24" name="/A2">
-      <node ref="U9" pin="3"/>
-      <node ref="R9" pin="2"/>
-      <node ref="HDR1" pin="6"/>
-      <node ref="U10" pin="3"/>
-    </net>
-    <net code="25" name="/A0">
-      <node ref="U9" pin="5"/>
-      <node ref="U10" pin="1"/>
-      <node ref="HDR1" pin="2"/>
-      <node ref="R11" pin="2"/>
-    </net>
-    <net code="26" name="/A1">
-      <node ref="U9" pin="4"/>
-      <node ref="R10" pin="2"/>
-      <node ref="U10" pin="2"/>
-      <node ref="HDR1" pin="4"/>
-    </net>
-    <net code="27" name="Net-(R12-Pad2)">
-      <node ref="R12" pin="2"/>
-      <node ref="U9" pin="6"/>
-    </net>
-    <net code="28" name="Net-(J6-Pad1)">
-      <node ref="U10" pin="7"/>
-      <node ref="R14" pin="2"/>
-      <node ref="J6" pin="1"/>
-    </net>
-    <net code="29" name="/CH3-IN-">
-      <node ref="J1" pin="17"/>
-    </net>
-    <net code="30" name="/SDA">
-      <node ref="J3" pin="3"/>
-      <node ref="J4" pin="3"/>
-      <node ref="U9" pin="2"/>
-      <node ref="U10" pin="5"/>
-    </net>
-    <net code="31" name="/SCL">
-      <node ref="J4" pin="4"/>
-      <node ref="U10" pin="6"/>
-      <node ref="J3" pin="4"/>
-      <node ref="U9" pin="1"/>
-    </net>
-    <net code="32" name="/GP0">
-      <node ref="U9" pin="10"/>
-      <node ref="RP1" pin="10"/>
-    </net>
-    <net code="33" name="/GP1">
-      <node ref="U9" pin="11"/>
-      <node ref="RP1" pin="9"/>
-    </net>
-    <net code="34" name="/GP2">
-      <node ref="RP1" pin="8"/>
-      <node ref="U9" pin="12"/>
-    </net>
-    <net code="35" name="/CH5-IN+">
-      <node ref="J1" pin="7"/>
-    </net>
-    <net code="36" name="Net-(J1-Pad24)">
-      <node ref="J1" pin="24"/>
-    </net>
-    <net code="37" name="Net-(J1-Pad21)">
-      <node ref="J1" pin="21"/>
-    </net>
-    <net code="38" name="/CH5-IN-">
-      <node ref="J1" pin="20"/>
-    </net>
-    <net code="39" name="Net-(J1-Pad10)">
-      <node ref="J1" pin="10"/>
-    </net>
-    <net code="40" name="/CH4-IN-">
-      <node ref="J1" pin="6"/>
-    </net>
-    <net code="41" name="/CH2-IN-">
-      <node ref="J1" pin="3"/>
-    </net>
-    <net code="42" name="/CH1-IN+">
-      <node ref="J1" pin="1"/>
-    </net>
-    <net code="44" name="Net-(R8-Pad2)">
-      <node ref="R8" pin="2"/>
-    </net>
-    <net code="45" name="Net-(R8-Pad1)">
-      <node ref="R8" pin="1"/>
-    </net>
-    <net code="46" name="Net-(R7-Pad2)">
-      <node ref="R7" pin="2"/>
-    </net>
-    <net code="47" name="Net-(R7-Pad1)">
+    <net code="1" name="/OptoBlk3/IN1">
+      <node ref="P1" pin="5"/>
       <node ref="R7" pin="1"/>
     </net>
-    <net code="48" name="Net-(R6-Pad2)">
-      <node ref="R6" pin="2"/>
-    </net>
-    <net code="49" name="/CH2-IN+">
-      <node ref="J1" pin="15"/>
-    </net>
-    <net code="52" name="/CH3-IN+">
-      <node ref="J1" pin="4"/>
-    </net>
-    <net code="53" name="Net-(R6-Pad1)">
-      <node ref="R6" pin="1"/>
-    </net>
-    <net code="55" name="/CH1-IN-">
-      <node ref="J1" pin="14"/>
-    </net>
-    <net code="56" name="/CH4-IN+">
-      <node ref="J1" pin="18"/>
-    </net>
-    <net code="57" name="Net-(U3-Pad4)">
-      <node ref="U3" pin="4"/>
-    </net>
-    <net code="58" name="Net-(U5-Pad6)">
-      <node ref="U5" pin="6"/>
-    </net>
-    <net code="59" name="Net-(U5-Pad5)">
-      <node ref="U5" pin="5"/>
-    </net>
-    <net code="60" name="Net-(U5-Pad4)">
-      <node ref="U5" pin="4"/>
-    </net>
-    <net code="61" name="Net-(U5-Pad2)">
-      <node ref="U5" pin="2"/>
-    </net>
-    <net code="62" name="Net-(U5-Pad1)">
-      <node ref="U5" pin="1"/>
-    </net>
-    <net code="63" name="Net-(U4-Pad6)">
-      <node ref="U4" pin="6"/>
-    </net>
-    <net code="64" name="Net-(U4-Pad5)">
-      <node ref="U4" pin="5"/>
-    </net>
-    <net code="65" name="Net-(U4-Pad4)">
-      <node ref="U4" pin="4"/>
-    </net>
-    <net code="66" name="Net-(U4-Pad2)">
-      <node ref="U4" pin="2"/>
-    </net>
-    <net code="67" name="Net-(U4-Pad1)">
-      <node ref="U4" pin="1"/>
-    </net>
-    <net code="68" name="Net-(U3-Pad6)">
-      <node ref="U3" pin="6"/>
-    </net>
-    <net code="69" name="Net-(U3-Pad5)">
-      <node ref="U3" pin="5"/>
-    </net>
-    <net code="70" name="Net-(U6-Pad1)">
-      <node ref="U6" pin="1"/>
-    </net>
-    <net code="71" name="Net-(U3-Pad2)">
-      <node ref="U3" pin="2"/>
-    </net>
-    <net code="72" name="Net-(U3-Pad1)">
-      <node ref="U3" pin="1"/>
-    </net>
-    <net code="73" name="Net-(U2-Pad6)">
-      <node ref="U2" pin="6"/>
-    </net>
-    <net code="74" name="Net-(U2-Pad5)">
-      <node ref="U2" pin="5"/>
-    </net>
-    <net code="75" name="Net-(U2-Pad4)">
-      <node ref="U2" pin="4"/>
-    </net>
-    <net code="76" name="Net-(U2-Pad2)">
-      <node ref="U2" pin="2"/>
-    </net>
-    <net code="77" name="Net-(U2-Pad1)">
-      <node ref="U2" pin="1"/>
-    </net>
-    <net code="78" name="Net-(U1-Pad6)">
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="79" name="Net-(U1-Pad5)">
-      <node ref="U1" pin="5"/>
-    </net>
-    <net code="80" name="Net-(U1-Pad4)">
-      <node ref="U1" pin="4"/>
-    </net>
-    <net code="81" name="Net-(U1-Pad2)">
-      <node ref="U1" pin="2"/>
-    </net>
-    <net code="82" name="Net-(U8-Pad4)">
-      <node ref="U8" pin="4"/>
-    </net>
-    <net code="83" name="Net-(R5-Pad2)">
-      <node ref="R5" pin="2"/>
-    </net>
-    <net code="84" name="Net-(R5-Pad1)">
-      <node ref="R5" pin="1"/>
-    </net>
-    <net code="85" name="Net-(R4-Pad2)">
-      <node ref="R4" pin="2"/>
-    </net>
-    <net code="86" name="Net-(R4-Pad1)">
+    <net code="2" name="/OptoBlk2/IN1">
+      <node ref="P1" pin="4"/>
       <node ref="R4" pin="1"/>
     </net>
-    <net code="87" name="Net-(R3-Pad2)">
-      <node ref="R3" pin="2"/>
+    <net code="3" name="/OptoBlk1/IN1">
+      <node ref="R1" pin="1"/>
+      <node ref="P1" pin="3"/>
     </net>
-    <net code="88" name="Net-(R3-Pad1)">
+    <net code="4" name="/OptoBlk1/GND2">
+      <node ref="U3" pin="4"/>
+      <node ref="U2" pin="4"/>
+      <node ref="P2" pin="7"/>
+      <node ref="P2" pin="8"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U4" pin="4"/>
+    </net>
+    <net code="5" name="/OptoBlk2/OUT">
+      <node ref="R6" pin="1"/>
+      <node ref="U2" pin="5"/>
+      <node ref="P2" pin="4"/>
+    </net>
+    <net code="6" name="Net-(ST1-Pad1)">
+      <node ref="ST1" pin="1"/>
+    </net>
+    <net code="7" name="/OptoBlk4/OUT">
+      <node ref="P2" pin="6"/>
+      <node ref="U4" pin="5"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="8" name="/OptoBlk3/OUT">
+      <node ref="P2" pin="5"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="9" name="/OptoBlk1/OUT">
       <node ref="R3" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="P2" pin="3"/>
     </net>
-    <net code="89" name="Net-(R2-Pad2)">
+    <net code="10" name="/OptoBlk4/IN1">
+      <node ref="P1" pin="6"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="11" name="/OptoBlk1/GND1">
+      <node ref="Q4" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="P1" pin="7"/>
+      <node ref="P1" pin="8"/>
+    </net>
+    <net code="12" name="/OptoBlk1/VCC1">
+      <node ref="P1" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="13" name="/OptoBlk1/VCC2">
+      <node ref="R12" pin="2"/>
+      <node ref="P2" pin="1"/>
+      <node ref="P2" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="14" name="Net-(Q1-Pad3)">
+      <node ref="U1" pin="2"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="15" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="16" name="Net-(R2-Pad2)">
+      <node ref="U1" pin="1"/>
       <node ref="R2" pin="2"/>
     </net>
-    <net code="90" name="Net-(R2-Pad1)">
-      <node ref="R2" pin="1"/>
-    </net>
-    <net code="91" name="Net-(R1-Pad2)">
+    <net code="17" name="Net-(Q1-Pad1)">
       <node ref="R1" pin="2"/>
+      <node ref="Q1" pin="1"/>
     </net>
-    <net code="92" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1"/>
+    <net code="18" name="Net-(Q2-Pad1)">
+      <node ref="R4" pin="2"/>
+      <node ref="Q2" pin="1"/>
     </net>
-    <net code="93" name="Net-(U8-Pad6)">
-      <node ref="U8" pin="6"/>
+    <net code="19" name="Net-(Q2-Pad3)">
+      <node ref="U2" pin="2"/>
+      <node ref="Q2" pin="3"/>
     </net>
-    <net code="94" name="Net-(U8-Pad5)">
-      <node ref="U8" pin="5"/>
+    <net code="20" name="Net-(U2-Pad6)">
+      <node ref="U2" pin="6"/>
     </net>
-    <net code="95" name="Net-(U8-Pad2)">
-      <node ref="U8" pin="2"/>
+    <net code="21" name="Net-(R5-Pad2)">
+      <node ref="R5" pin="2"/>
+      <node ref="U2" pin="1"/>
     </net>
-    <net code="96" name="Net-(U8-Pad1)">
-      <node ref="U8" pin="1"/>
+    <net code="22" name="Net-(Q3-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="Q3" pin="1"/>
     </net>
-    <net code="97" name="Net-(U7-Pad6)">
-      <node ref="U7" pin="6"/>
+    <net code="23" name="Net-(Q3-Pad3)">
+      <node ref="Q3" pin="3"/>
+      <node ref="U3" pin="2"/>
     </net>
-    <net code="98" name="Net-(U7-Pad5)">
-      <node ref="U7" pin="5"/>
+    <net code="24" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
     </net>
-    <net code="99" name="Net-(U7-Pad4)">
-      <node ref="U7" pin="4"/>
+    <net code="25" name="Net-(R8-Pad2)">
+      <node ref="U3" pin="1"/>
+      <node ref="R8" pin="2"/>
     </net>
-    <net code="100" name="Net-(U7-Pad2)">
-      <node ref="U7" pin="2"/>
+    <net code="26" name="Net-(Q4-Pad3)">
+      <node ref="U4" pin="2"/>
+      <node ref="Q4" pin="3"/>
     </net>
-    <net code="101" name="Net-(U7-Pad1)">
-      <node ref="U7" pin="1"/>
+    <net code="27" name="Net-(Q4-Pad1)">
+      <node ref="R10" pin="2"/>
+      <node ref="Q4" pin="1"/>
     </net>
-    <net code="102" name="Net-(U6-Pad6)">
-      <node ref="U6" pin="6"/>
+    <net code="28" name="Net-(U4-Pad6)">
+      <node ref="U4" pin="6"/>
     </net>
-    <net code="103" name="Net-(U6-Pad5)">
-      <node ref="U6" pin="5"/>
-    </net>
-    <net code="104" name="Net-(U6-Pad4)">
-      <node ref="U6" pin="4"/>
-    </net>
-    <net code="105" name="Net-(U6-Pad2)">
-      <node ref="U6" pin="2"/>
-    </net>
-    <net code="106" name="/GP6">
-      <node ref="U9" pin="16"/>
-      <node ref="RP1" pin="4"/>
-    </net>
-    <net code="107" name="/GP7">
-      <node ref="RP1" pin="3"/>
-      <node ref="U9" pin="17"/>
-    </net>
-    <net code="108" name="/VCC">
-      <node ref="U9" pin="18"/>
-      <node ref="J3" pin="2"/>
-      <node ref="R9" pin="1"/>
-      <node ref="RP1" pin="1"/>
-      <node ref="J4" pin="2"/>
-      <node ref="J2" pin="2"/>
-      <node ref="R10" pin="1"/>
-      <node ref="R13" pin="1"/>
-      <node ref="U10" pin="8"/>
-      <node ref="R11" pin="1"/>
-      <node ref="R12" pin="1"/>
-      <node ref="R14" pin="1"/>
-    </net>
-    <net code="109" name="Net-(J1-Pad9)">
-      <node ref="J1" pin="9"/>
-    </net>
-    <net code="114" name="/GND">
-      <node ref="J5" pin="1"/>
-      <node ref="J6" pin="2"/>
-      <node ref="J5" pin="3"/>
-      <node ref="J2" pin="1"/>
-      <node ref="J2" pin="3"/>
-      <node ref="U10" pin="4"/>
-      <node ref="J4" pin="1"/>
-      <node ref="J3" pin="1"/>
-      <node ref="U9" pin="9"/>
-      <node ref="HDR1" pin="1"/>
-      <node ref="HDR1" pin="3"/>
-      <node ref="HDR1" pin="5"/>
-    </net>
-    <net code="115" name="Net-(U1-Pad1)">
-      <node ref="U1" pin="1"/>
-    </net>
-    <net code="116" name="Net-(J1-Pad12)">
-      <node ref="J1" pin="12"/>
-    </net>
-    <net code="117" name="Net-(J1-Pad23)">
-      <node ref="J1" pin="23"/>
+    <net code="29" name="Net-(R11-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="U4" pin="1"/>
     </net>
   </nets>
 </export>
