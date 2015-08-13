@@ -1,4 +1,4 @@
-update=8/5/2015 1:07:47 PM
+update=8/7/2015 10:06:11 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -37,14 +37,15 @@ LibName7=smd_resistors
 LibName8=smd_dil
 LibName9=smd_transistors
 LibName10=libcms
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
-LibName4=conn
-LibName5=atmel
-[general]
-version=1
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=power
+LibName4=device
+LibName5=conn
+LibName6=atmel

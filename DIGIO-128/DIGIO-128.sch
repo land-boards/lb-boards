@@ -11,8 +11,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 9
 Title "16-CHANNEL DIGITAL I/O"
-Date "11 apr 2015"
-Rev "X1"
+Date "Sunday, August 09, 2015"
+Rev "X3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""

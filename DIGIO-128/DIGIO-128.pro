@@ -1,4 +1,4 @@
-update=4/21/2015 1:33:56 PM
+update=8/9/2015 10:29:49 AM
 version=1
 last_client=kicad
 [general]
@@ -45,3 +45,16 @@ LibName2=device
 LibName3=conn
 LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C
 LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
