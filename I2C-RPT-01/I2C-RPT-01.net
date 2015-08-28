@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/doug_000/Documents/GitHub/lb-boards/I2C-RPT-01/I2C-RPT-01.sch)
-    (date "8/1/2015 10:07:27 AM")
+    (date "8/27/2015 8:16:45 PM")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -208,30 +208,67 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55BA7399))
     (comp (ref C1)
-      (value C)
+      (value 0.1uF)
       (footprint Resistors_SMD:R_0805_HandSoldering)
       (libsource (lib DougsSch) (part C))
       (sheetpath (names /) (tstamps /))
       (tstamp 55BD44DA))
     (comp (ref C2)
-      (value C)
+      (value 0.1uF)
       (footprint Resistors_SMD:R_1206_HandSoldering)
       (libsource (lib DougsSch) (part C))
       (sheetpath (names /) (tstamps /))
       (tstamp 55BD4907)))
   (libparts
-    (libpart (lib conn) (part CONN_01X02)
+    (libpart (lib DougsSch) (part ADAFRUIT_FIDUCIAL)
+      (fields
+        (field (name Reference) adafruit)
+        (field (name Value) ADAFRUIT_FIDUCIAL)))
+    (libpart (lib DougsSch) (part C)
+      (description "CAP, NP")
       (footprints
-        (fp Pin_Header_Straight_1X02)
-        (fp Pin_Header_Angled_1X02)
-        (fp Socket_Strip_Straight_1X02)
-        (fp Socket_Strip_Angled_1X02))
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib DougsSch) (part CONN_1)
       (fields
         (field (name Reference) P)
-        (field (name Value) CONN_01X02))
+        (field (name Value) CONN_1))
       (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))))
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib DougsSch) (part I2CINT-5PIN)
+      (fields
+        (field (name Reference) J?)
+        (field (name Value) I2CINT-5PIN))
+      (pins
+        (pin (num 1) (name VSS) (type power_in))
+        (pin (num 2) (name VDD) (type power_in))
+        (pin (num 3) (name SDA) (type input))
+        (pin (num 4) (name SCL) (type input))
+        (pin (num 5) (name ~INT) (type BiDi))))
+    (libpart (lib DougsSch) (part R)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib DougsSch) (part MTG_HOLE)
+      (fields
+        (field (name Reference) MTG?)
+        (field (name Value) MTG_HOLE)))
     (libpart (lib DougsSch) (part PCA9544A)
       (fields
         (field (name Reference) U)
@@ -257,60 +294,23 @@
         (pin (num 18) (name SCL) (type input))
         (pin (num 19) (name SDA) (type input))
         (pin (num 20) (name VDD) (type power_in))))
-    (libpart (lib DougsSch) (part MTG_HOLE)
-      (fields
-        (field (name Reference) MTG?)
-        (field (name Value) MTG_HOLE)))
-    (libpart (lib DougsSch) (part R)
+    (libpart (lib conn) (part CONN_01X02)
       (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib DougsSch) (part C)
-      (description "CAP, NP")
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib DougsSch) (part ADAFRUIT_FIDUCIAL)
-      (fields
-        (field (name Reference) adafruit)
-        (field (name Value) ADAFRUIT_FIDUCIAL)))
-    (libpart (lib DougsSch) (part CONN_1)
+        (fp Pin_Header_Straight_1X02)
+        (fp Pin_Header_Angled_1X02)
+        (fp Socket_Strip_Straight_1X02)
+        (fp Socket_Strip_Angled_1X02))
       (fields
         (field (name Reference) P)
-        (field (name Value) CONN_1))
+        (field (name Value) CONN_01X02))
       (pins
-        (pin (num 1) (name 1) (type passive))))
-    (libpart (lib DougsSch) (part I2CINT-5PIN)
-      (fields
-        (field (name Reference) J?)
-        (field (name Value) I2CINT-5PIN))
-      (pins
-        (pin (num 1) (name VSS) (type power_in))
-        (pin (num 2) (name VDD) (type power_in))
-        (pin (num 3) (name SDA) (type input))
-        (pin (num 4) (name SCL) (type input))
-        (pin (num 5) (name ~INT) (type BiDi)))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive)))))
   (libraries
-    (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
     (library (logical DougsSch)
-      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib)))
+      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib))
+    (library (logical conn)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib")))
   (nets
     (net (code 1) (name GND)
       (node (ref J4) (pin 1))
