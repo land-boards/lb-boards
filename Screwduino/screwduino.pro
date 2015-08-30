@@ -1,17 +1,28 @@
-update=8/13/2014 9:00:34 PM
-last_client=eeschema
-[general]
-version=1
+update=8/29/2015 6:29:36 PM
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=../../KiCAD/library
+[eeschema/libraries]
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=screwduinov2/screwduinov2p1-schlib
+LibName3=power
+LibName4=device
+LibName5=conn
+[general]
+version=1
 [pcbnew]
 version=1
-LastNetListRead=screwduinov3.net
-UseCmpFile=1
+PageLayoutDescrFile=
+LastNetListRead=screwduino.net
+UseCmpFile=0
 PadDrill=3.175
+PadDrillOvalY=3.175
 PadSizeH=6.35
 PadSizeV=6.35
 PcbTextSizeV=2.032
@@ -25,26 +36,3 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.381
 BoardOutlineThickness=0.381
 ModuleOutlineThickness=0.381
-[pcbnew/libraries]
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/modules
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=pin_array
-LibName5=led
-LibName6=/home/doug/Documents/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName7=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=../../KiCAD/library
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=screwduinov2/screwduinov2p1-schlib
-LibName2=power
-LibName3=device
-LibName4=conn
-LibName5=DougsSch
