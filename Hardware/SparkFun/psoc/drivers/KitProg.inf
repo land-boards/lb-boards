@@ -1,0 +1,99 @@
+; Installation INF for the Cypress USB3 Driver for Windows 7
+; Processor support for x64 based platforms.
+;
+; (c) Copyright 2014 Cypress Semiconductor Corporation
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+provider=%PSoCUSB3_Provider%
+CatalogFile=PSoCUSB3.cat
+DriverVer=05/02/2013,1.2.3.3
+DriverPackageDisplayName=%PSoCUSB3_Description%
+
+[SourceDisksNames]
+1=%PSoCUSB3_Install%,,,
+
+[SourceDisksFiles]
+PSoCUSB3.sys = 1
+
+[DestinationDirs]
+PSoCUSB3.Files.Ext = 10,system32\drivers\cypress\KitProg
+
+[ControlFlags]
+ExcludeFromSelect = *
+
+[Manufacturer]
+%PSoCUSB3_Provider%=Device, NTamd64
+
+[Device.NTamd64]
+%VID_04B4&PID_F139&MI_01.DeviceDesc%=PSoCUSB3, USB\VID_04B4&PID_F139&MI_01
+
+[PSoCUSB3.NT]
+CopyFiles=PSoCUSB3.Files.Ext
+AddReg=PSoCUSB3.AddReg
+
+[PSoCUSB3.NT.HW]
+AddReg=PSoCUSB3.AddReg.Guid
+
+[PSoCUSB3.NT.Services]
+Addservice = PSoCUSB3,2,PSoCUSB3.AddService
+
+[PSoCUSB3.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,PSoCUSB3.sys
+; You may optionally include a check for DriverBase in your application to check for a PSoCUSB3 driver
+HKR,,DriverBase,,PSoCUSB3.sys
+HKR,"Parameters","MaximumTransferSize",0x10001,4096
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,,FriendlyName,,%PSoCUSB3_Description%
+
+[PSoCUSB3.AddService]
+DisplayName    = %PSoCUSB3_Description%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\Cypress\KitProg\PSoCUSB3.sys
+AddReg         = PSoCUSB3.AddReg
+LoadOrderGroup = Base
+
+[PSoCUSB3.Files.Ext]
+PSoCUSB3.sys
+
+[PSoCUSB3.AddReg.Guid]
+HKR,,DriverGUID,,%PSoCUSB3.GUID%
+
+;-------------- WDF Coinstaller installation
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[PSoCUSB3.NTamd64.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[PSoCUSB3.NTamd64.Wdf]
+KmdfService = PSoCUSB3, PSoCUSB3_wdfsect
+
+[PSoCUSB3_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+PSoCUSB3_Provider    = "Cypress"
+PSoCUSB3_Company     = "Cypress Semiconductor Corporation"
+PSoCUSB3_Description = "USB3 Driver for KitProg"
+PSoCUSB3_DisplayName = "PSoCUSB3 Device Driver"
+PSoCUSB3_Install     = "Cypress USB3 Driver Installation Disk"
+VID_04B4&PID_F139&MI_01.DeviceDesc="KitProg (1.2.3.3)"
+PSoCUSB3.GUID="{43FEF108-580F-11D8-B22B-00B0D0C6A8DC}"
+PSoCUSB3_Unused      = "."

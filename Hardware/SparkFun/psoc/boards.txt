@@ -1,0 +1,23 @@
+psoc.name=PSoC Dev Board
+psoc.upload.tool=avrdude
+
+psoc.vid=0x2341
+psoc.pid=0x003d
+psoc.upload.protocol=avr109
+psoc.upload.maximum_size=256000
+psoc.upload.use_1200bps_touch=true
+psoc.upload.wait_for_upload_port=true
+psoc.upload.disable_flushing=true
+psoc.upload.native_usb=false
+psoc.build.mcu=cortex-m3
+psoc.build.f_cpu=64000000L
+psoc.build.usb_product="FreeSoC2 - Standard"
+psoc.build.board=psoc
+psoc.build.core=arduino
+psoc.build.extra_flags=
+psoc.build.ldscript=cm3gcc.ld
+psoc.build.variant=standard
+psoc.build.variant_system_lib=CyCompLib.a
+psoc.build.vid=0x2341
+psoc.build.pid=0x003e
+
