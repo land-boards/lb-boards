@@ -2,7 +2,7 @@ EESchema Schematic File Version 2
 LIBS:device
 LIBS:DougsSch
 LIBS:GPS-Design-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -16,10 +16,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	2700 1500 2700 1400
-Wire Wire Line
-	2700 1400 3300 1400
 Wire Wire Line
 	7400 3900 6600 3900
 Wire Wire Line
@@ -74,19 +70,15 @@ Wire Wire Line
 	6600 3600 7400 3600
 Wire Wire Line
 	6600 3800 7400 3800
-Wire Wire Line
-	2700 2100 2700 2200
-Wire Wire Line
-	2700 2200 3550 2200
 $Comp
 L BATTERY BT1
 U 1 1 500808D3
-P 2700 1800
-F 0 "BT1" H 2700 2000 50  0000 C CNN
-F 1 "BATTERY" H 2700 1610 50  0000 C CNN
-F 2 "" H 2700 1800 60  0001 C CNN
-F 3 "" H 2700 1800 60  0001 C CNN
-	1    2700 1800
+P 2700 2500
+F 0 "BT1" H 2700 2700 50  0000 C CNN
+F 1 "BATTERY" H 2700 2310 50  0000 C CNN
+F 2 "" H 2700 2500 60  0001 C CNN
+F 3 "" H 2700 2500 60  0001 C CNN
+	1    2700 2500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -145,10 +137,6 @@ F 3 "~" H 4050 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 2100 3300 2100
-Wire Wire Line
-	3300 2100 3300 1400
-Wire Wire Line
 	4550 2200 4900 2200
 Wire Wire Line
 	4900 2200 4900 2050
@@ -160,4 +148,16 @@ Wire Wire Line
 	4800 1950 4800 2100
 Wire Wire Line
 	4800 2100 4550 2100
+Wire Wire Line
+	2700 2100 2700 2200
+Wire Wire Line
+	2700 2800 2700 2900
+Wire Wire Line
+	2700 2900 3150 2900
+Wire Wire Line
+	3150 2900 3150 2200
+Wire Wire Line
+	3150 2200 3550 2200
+Wire Wire Line
+	3550 2100 2700 2100
 $EndSCHEMATC

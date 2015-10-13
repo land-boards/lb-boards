@@ -1,6 +1,6 @@
-update=9/10/2014 9:28:39 AM
+update=10/4/2015 9:45:23 AM
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetITyp=0
@@ -82,11 +82,6 @@ version=1
 [eeschema]
 version=1
 LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
 LibName1=device
-LibName2=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
