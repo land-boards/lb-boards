@@ -1,4 +1,4 @@
-(module DCJ-NEW (layer F.Cu) (tedit 55E23CE5)
+(module DCJ-NEW (layer F.Cu) (tedit 56264A86)
   (descr "DC Pwr, 2.1mm Jack")
   (tags "DC Power jack, 2.1mm")
   (fp_text reference J1 (at -0.0508 -6.05028) (layer F.SilkS) hide
@@ -13,8 +13,8 @@
   (fp_line (start 6 -4.5) (end 6 4.5) (layer F.SilkS) (width 0.65))
   (fp_line (start -7.5 4.5) (end 6 4.5) (layer F.SilkS) (width 0.65))
   (pad 2 thru_hole circle (at 0 0) (size 4.6 4.6) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
-  (pad 1 thru_hole circle (at 6 0) (size 4.6 4.6) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
-  (pad 3 thru_hole circle (at 3.5 4.8) (size 4.6 4.6) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+  (pad 1 thru_hole circle (at 6.1 0) (size 4.6 4.6) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+  (pad 3 thru_hole circle (at 3.2 4.6) (size 4.6 4.6) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
   (model connectors/POWER_21.wrl
     (at (xyz 0 0 0))
     (scale (xyz 0.8 0.8 0.8))
