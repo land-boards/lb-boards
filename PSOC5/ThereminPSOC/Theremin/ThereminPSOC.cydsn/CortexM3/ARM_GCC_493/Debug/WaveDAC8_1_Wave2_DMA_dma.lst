@@ -1,0 +1,1058 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"WaveDAC8_1_Wave2_DMA_dma.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.WaveDAC8_1_Wave2_DMA_DmaInitialize,"ax",%progbits
+  19              		.align	2
+  20              		.global	WaveDAC8_1_Wave2_DMA_DmaInitialize
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	WaveDAC8_1_Wave2_DMA_DmaInitialize, %function
+  24              	WaveDAC8_1_Wave2_DMA_DmaInitialize:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\WaveDAC8_1_Wave2_DMA_dma.c"
+   1:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** /***************************************************************************
+   2:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * File Name: WaveDAC8_1_Wave2_DMA_dma.c  
+   3:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Version 1.70
+   4:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+   5:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *  Description:
+   6:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   Provides an API for the DMAC component. The API includes functions
+   7:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   for the DMA controller, DMA channels and Transfer Descriptors.
+   8:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+   9:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  10:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   Note:
+  11:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *     This module requires the developer to finish or fill in the auto
+  12:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *     generated funcions and setup the dma channel and TD's.
+  13:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  14:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** ********************************************************************************
+  15:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Copyright 2008-2010, Cypress Semiconductor Corporation.  All rights reserved.
+  16:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  17:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  18:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * the software package with which this file was provided.
+  19:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** ********************************************************************************/
+  20:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** #include <CYLIB.H>
+  21:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** #include <CYDMAC.H>
+  22:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** #include <WaveDAC8_1_Wave2_DMA_dma.H>
+  23:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  24:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  25:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  26:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** /****************************************************************************
+  27:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  28:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * The following defines are available in Cyfitter.h
+  29:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  30:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  31:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__DRQ_CTL_REG
+  33:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  34:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  35:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__DRQ_NUMBER
+  36:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  37:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Number of TD's used by this channel.
+  38:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__NUMBEROF_TDS
+  39:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  40:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Priority of this channel.
+  41:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__PRIORITY
+  42:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  43:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * True if WaveDAC8_1_Wave2_DMA_TERMIN_SEL is used.
+  44:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMIN_EN
+  45:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  46:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * TERMIN interrupt line to signal terminate.
+  47:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMIN_SEL
+  48:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  49:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  50:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * True if WaveDAC8_1_Wave2_DMA_TERMOUT0_SEL is used.
+  51:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMOUT0_EN
+  52:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  53:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  54:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * TERMOUT0 interrupt line to signal completion.
+  55:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMOUT0_SEL
+  56:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  57:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  58:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * True if WaveDAC8_1_Wave2_DMA_TERMOUT1_SEL is used.
+  59:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMOUT1_EN
+  60:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  61:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  62:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * TERMOUT1 interrupt line to signal completion.
+  63:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * WaveDAC8_1_Wave2_DMA__TERMOUT1_SEL
+  64:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * 
+  65:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** ****************************************************************************/
+  66:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  67:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  68:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** /* Zero based index of WaveDAC8_1_Wave2_DMA dma channel */
+  69:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** uint8 WaveDAC8_1_Wave2_DMA_DmaHandle = DMA_INVALID_CHANNEL;
+  70:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+  71:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** /*********************************************************************
+  72:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Function Name: uint8 WaveDAC8_1_Wave2_DMA_DmaInitalize
+  73:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** **********************************************************************
+  74:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Summary:
+  75:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   Allocates and initialises a channel of the DMAC to be used by the
+  76:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   caller.
+  77:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  78:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Parameters:
+  79:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   BurstCount.
+  80:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  81:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  82:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   ReqestPerBurst.
+  83:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  84:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  85:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   UpperSrcAddress.
+  86:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  87:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  88:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   UpperDestAddress.
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 3
+
+
+  89:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *       
+  90:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  91:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Return:
+  92:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   The channel that can be used by the caller for DMA activity.
+  93:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   DMA_INVALID_CHANNEL (0xFF) if there are no channels left. 
+  94:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  95:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+  96:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *******************************************************************/
+  97:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** uint8 WaveDAC8_1_Wave2_DMA_DmaInitialize(uint8 BurstCount, uint8 ReqestPerBurst, uint16 UpperSrcAdd
+  98:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** {
+  27              		.loc 1 98 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 20
+  34              		.cfi_offset 4, -20
+  35              		.cfi_offset 5, -16
+  36              		.cfi_offset 6, -12
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 83B0     		sub	sp, sp, #12
+  40              		.cfi_def_cfa_offset 32
+  41 0004 8646     		mov	lr, r0
+  42 0006 0F46     		mov	r7, r1
+  43 0008 1646     		mov	r6, r2
+  44 000a 1D46     		mov	r5, r3
+  99:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+ 100:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     /* Allocate a DMA channel. */
+ 101:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     WaveDAC8_1_Wave2_DMA_DmaHandle = (uint8)WaveDAC8_1_Wave2_DMA__DRQ_NUMBER;
+  45              		.loc 1 101 0
+  46 000c 0A4C     		ldr	r4, .L3
+  47 000e 0120     		movs	r0, #1
+  48              	.LVL1:
+  49 0010 2070     		strb	r0, [r4]
+ 102:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+ 103:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     /* Configure the channel. */
+ 104:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     (void)CyDmaChSetConfiguration(WaveDAC8_1_Wave2_DMA_DmaHandle,
+  50              		.loc 1 104 0
+  51 0012 0023     		movs	r3, #0
+  52              	.LVL2:
+  53 0014 0093     		str	r3, [sp]
+  54 0016 0193     		str	r3, [sp, #4]
+  55 0018 7146     		mov	r1, lr
+  56              	.LVL3:
+  57 001a 3A46     		mov	r2, r7
+  58              	.LVL4:
+  59 001c FFF7FEFF 		bl	CyDmaChSetConfiguration
+  60              	.LVL5:
+ 105:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****                                   BurstCount,
+ 106:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****                                   ReqestPerBurst,
+ 107:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****                                   (uint8)WaveDAC8_1_Wave2_DMA__TERMOUT0_SEL,
+ 108:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****                                   (uint8)WaveDAC8_1_Wave2_DMA__TERMOUT1_SEL,
+ 109:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****                                   (uint8)WaveDAC8_1_Wave2_DMA__TERMIN_SEL);
+ 110:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+ 111:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     /* Set the extended address for the transfers */
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 4
+
+
+ 112:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     (void)CyDmaChSetExtendedAddress(WaveDAC8_1_Wave2_DMA_DmaHandle, UpperSrcAddress, UpperDestAddre
+  61              		.loc 1 112 0
+  62 0020 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+  63 0022 3146     		mov	r1, r6
+  64 0024 2A46     		mov	r2, r5
+  65 0026 FFF7FEFF 		bl	CyDmaChSetExtendedAddress
+  66              	.LVL6:
+ 113:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+ 114:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     /* Set the priority for this channel */
+ 115:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     (void)CyDmaChPriority(WaveDAC8_1_Wave2_DMA_DmaHandle, (uint8)WaveDAC8_1_Wave2_DMA__PRIORITY);
+  67              		.loc 1 115 0
+  68 002a 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+  69 002c 0221     		movs	r1, #2
+  70 002e FFF7FEFF 		bl	CyDmaChPriority
+  71              	.LVL7:
+ 116:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     
+ 117:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     return WaveDAC8_1_Wave2_DMA_DmaHandle;
+ 118:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** }
+  72              		.loc 1 118 0
+  73 0032 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+  74 0034 03B0     		add	sp, sp, #12
+  75              		.cfi_def_cfa_offset 20
+  76              		@ sp needed
+  77 0036 F0BD     		pop	{r4, r5, r6, r7, pc}
+  78              	.L4:
+  79              		.align	2
+  80              	.L3:
+  81 0038 00000000 		.word	.LANCHOR0
+  82              		.cfi_endproc
+  83              	.LFE0:
+  84              		.size	WaveDAC8_1_Wave2_DMA_DmaInitialize, .-WaveDAC8_1_Wave2_DMA_DmaInitialize
+  85              		.section	.text.WaveDAC8_1_Wave2_DMA_DmaRelease,"ax",%progbits
+  86              		.align	2
+  87              		.global	WaveDAC8_1_Wave2_DMA_DmaRelease
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	WaveDAC8_1_Wave2_DMA_DmaRelease, %function
+  91              	WaveDAC8_1_Wave2_DMA_DmaRelease:
+  92              	.LFB1:
+ 119:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** 
+ 120:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** /*********************************************************************
+ 121:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Function Name: void WaveDAC8_1_Wave2_DMA_DmaRelease
+ 122:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** **********************************************************************
+ 123:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Summary:
+ 124:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   Frees the channel associated with WaveDAC8_1_Wave2_DMA.
+ 125:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 126:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 127:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Parameters:
+ 128:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   void.
+ 129:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 130:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 131:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 132:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** * Return:
+ 133:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *   void.
+ 134:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *
+ 135:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** *******************************************************************/
+ 136:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** void WaveDAC8_1_Wave2_DMA_DmaRelease(void) 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 5
+
+
+ 137:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c **** {
+  93              		.loc 1 137 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97 0000 08B5     		push	{r3, lr}
+  98              		.cfi_def_cfa_offset 8
+  99              		.cfi_offset 3, -8
+ 100              		.cfi_offset 14, -4
+ 138:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     /* Disable the channel */
+ 139:.\Generated_Source\PSoC5/WaveDAC8_1_Wave2_DMA_dma.c ****     (void)CyDmaChDisable(WaveDAC8_1_Wave2_DMA_DmaHandle);
+ 101              		.loc 1 139 0
+ 102 0002 024B     		ldr	r3, .L7
+ 103 0004 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 104 0006 FFF7FEFF 		bl	CyDmaChDisable
+ 105              	.LVL8:
+ 106 000a 08BD     		pop	{r3, pc}
+ 107              	.L8:
+ 108              		.align	2
+ 109              	.L7:
+ 110 000c 00000000 		.word	.LANCHOR0
+ 111              		.cfi_endproc
+ 112              	.LFE1:
+ 113              		.size	WaveDAC8_1_Wave2_DMA_DmaRelease, .-WaveDAC8_1_Wave2_DMA_DmaRelease
+ 114              		.global	WaveDAC8_1_Wave2_DMA_DmaHandle
+ 115              		.data
+ 116              		.set	.LANCHOR0,. + 0
+ 117              		.type	WaveDAC8_1_Wave2_DMA_DmaHandle, %object
+ 118              		.size	WaveDAC8_1_Wave2_DMA_DmaHandle, 1
+ 119              	WaveDAC8_1_Wave2_DMA_DmaHandle:
+ 120 0000 FF       		.byte	-1
+ 121              		.text
+ 122              	.Letext0:
+ 123              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 124              		.file 3 "Generated_Source\\PSoC5/CYDMAC.H"
+ 125              		.section	.debug_info,"",%progbits
+ 126              	.Ldebug_info0:
+ 127 0000 F7010000 		.4byte	0x1f7
+ 128 0004 0400     		.2byte	0x4
+ 129 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 130 000a 04       		.byte	0x4
+ 131 000b 01       		.uleb128 0x1
+ 132 000c 26010000 		.4byte	.LASF23
+ 133 0010 01       		.byte	0x1
+ 134 0011 F2000000 		.4byte	.LASF24
+ 135 0015 B4010000 		.4byte	.LASF25
+ 136 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 137 001d 00000000 		.4byte	0
+ 138 0021 00000000 		.4byte	.Ldebug_line0
+ 139 0025 02       		.uleb128 0x2
+ 140 0026 04       		.byte	0x4
+ 141 0027 05       		.byte	0x5
+ 142 0028 696E7400 		.ascii	"int\000"
+ 143 002c 03       		.uleb128 0x3
+ 144 002d 04       		.byte	0x4
+ 145 002e 07       		.byte	0x7
+ 146 002f F9010000 		.4byte	.LASF0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 6
+
+
+ 147 0033 03       		.uleb128 0x3
+ 148 0034 01       		.byte	0x1
+ 149 0035 06       		.byte	0x6
+ 150 0036 77020000 		.4byte	.LASF1
+ 151 003a 03       		.uleb128 0x3
+ 152 003b 01       		.byte	0x1
+ 153 003c 08       		.byte	0x8
+ 154 003d 94000000 		.4byte	.LASF2
+ 155 0041 03       		.uleb128 0x3
+ 156 0042 02       		.byte	0x2
+ 157 0043 05       		.byte	0x5
+ 158 0044 64020000 		.4byte	.LASF3
+ 159 0048 03       		.uleb128 0x3
+ 160 0049 02       		.byte	0x2
+ 161 004a 07       		.byte	0x7
+ 162 004b 7B000000 		.4byte	.LASF4
+ 163 004f 03       		.uleb128 0x3
+ 164 0050 04       		.byte	0x4
+ 165 0051 05       		.byte	0x5
+ 166 0052 6E020000 		.4byte	.LASF5
+ 167 0056 03       		.uleb128 0x3
+ 168 0057 04       		.byte	0x4
+ 169 0058 07       		.byte	0x7
+ 170 0059 AD000000 		.4byte	.LASF6
+ 171 005d 03       		.uleb128 0x3
+ 172 005e 08       		.byte	0x8
+ 173 005f 05       		.byte	0x5
+ 174 0060 37020000 		.4byte	.LASF7
+ 175 0064 03       		.uleb128 0x3
+ 176 0065 08       		.byte	0x8
+ 177 0066 07       		.byte	0x7
+ 178 0067 06020000 		.4byte	.LASF8
+ 179 006b 03       		.uleb128 0x3
+ 180 006c 04       		.byte	0x4
+ 181 006d 07       		.byte	0x7
+ 182 006e 2E020000 		.4byte	.LASF9
+ 183 0072 03       		.uleb128 0x3
+ 184 0073 01       		.byte	0x1
+ 185 0074 08       		.byte	0x8
+ 186 0075 5F020000 		.4byte	.LASF10
+ 187 0079 04       		.uleb128 0x4
+ 188 007a BF000000 		.4byte	.LASF11
+ 189 007e 02       		.byte	0x2
+ 190 007f C2       		.byte	0xc2
+ 191 0080 3A000000 		.4byte	0x3a
+ 192 0084 04       		.uleb128 0x4
+ 193 0085 EB000000 		.4byte	.LASF12
+ 194 0089 02       		.byte	0x2
+ 195 008a C3       		.byte	0xc3
+ 196 008b 48000000 		.4byte	0x48
+ 197 008f 03       		.uleb128 0x3
+ 198 0090 04       		.byte	0x4
+ 199 0091 04       		.byte	0x4
+ 200 0092 8E000000 		.4byte	.LASF13
+ 201 0096 03       		.uleb128 0x3
+ 202 0097 08       		.byte	0x8
+ 203 0098 04       		.byte	0x4
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 7
+
+
+ 204 0099 E4000000 		.4byte	.LASF14
+ 205 009d 05       		.uleb128 0x5
+ 206 009e 00000000 		.4byte	.LASF15
+ 207 00a2 02       		.byte	0x2
+ 208 00a3 6401     		.2byte	0x164
+ 209 00a5 56000000 		.4byte	0x56
+ 210 00a9 06       		.uleb128 0x6
+ 211 00aa 39000000 		.4byte	.LASF26
+ 212 00ae 01       		.byte	0x1
+ 213 00af 61       		.byte	0x61
+ 214 00b0 79000000 		.4byte	0x79
+ 215 00b4 00000000 		.4byte	.LFB0
+ 216 00b8 3C000000 		.4byte	.LFE0-.LFB0
+ 217 00bc 01       		.uleb128 0x1
+ 218 00bd 9C       		.byte	0x9c
+ 219 00be 52010000 		.4byte	0x152
+ 220 00c2 07       		.uleb128 0x7
+ 221 00c3 A2000000 		.4byte	.LASF16
+ 222 00c7 01       		.byte	0x1
+ 223 00c8 61       		.byte	0x61
+ 224 00c9 79000000 		.4byte	0x79
+ 225 00cd 00000000 		.4byte	.LLST0
+ 226 00d1 07       		.uleb128 0x7
+ 227 00d2 6C000000 		.4byte	.LASF17
+ 228 00d6 01       		.byte	0x1
+ 229 00d7 61       		.byte	0x61
+ 230 00d8 79000000 		.4byte	0x79
+ 231 00dc 21000000 		.4byte	.LLST1
+ 232 00e0 07       		.uleb128 0x7
+ 233 00e1 29000000 		.4byte	.LASF18
+ 234 00e5 01       		.byte	0x1
+ 235 00e6 61       		.byte	0x61
+ 236 00e7 84000000 		.4byte	0x84
+ 237 00eb 42000000 		.4byte	.LLST2
+ 238 00ef 07       		.uleb128 0x7
+ 239 00f0 1D020000 		.4byte	.LASF19
+ 240 00f4 01       		.byte	0x1
+ 241 00f5 61       		.byte	0x61
+ 242 00f6 84000000 		.4byte	0x84
+ 243 00fa 63000000 		.4byte	.LLST3
+ 244 00fe 08       		.uleb128 0x8
+ 245 00ff 20000000 		.4byte	.LVL5
+ 246 0103 82010000 		.4byte	0x182
+ 247 0107 28010000 		.4byte	0x128
+ 248 010b 09       		.uleb128 0x9
+ 249 010c 01       		.uleb128 0x1
+ 250 010d 53       		.byte	0x53
+ 251 010e 01       		.uleb128 0x1
+ 252 010f 30       		.byte	0x30
+ 253 0110 09       		.uleb128 0x9
+ 254 0111 01       		.uleb128 0x1
+ 255 0112 52       		.byte	0x52
+ 256 0113 02       		.uleb128 0x2
+ 257 0114 77       		.byte	0x77
+ 258 0115 00       		.sleb128 0
+ 259 0116 09       		.uleb128 0x9
+ 260 0117 01       		.uleb128 0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 8
+
+
+ 261 0118 50       		.byte	0x50
+ 262 0119 01       		.uleb128 0x1
+ 263 011a 31       		.byte	0x31
+ 264 011b 09       		.uleb128 0x9
+ 265 011c 02       		.uleb128 0x2
+ 266 011d 7D       		.byte	0x7d
+ 267 011e 04       		.sleb128 4
+ 268 011f 01       		.uleb128 0x1
+ 269 0120 30       		.byte	0x30
+ 270 0121 09       		.uleb128 0x9
+ 271 0122 02       		.uleb128 0x2
+ 272 0123 7D       		.byte	0x7d
+ 273 0124 00       		.sleb128 0
+ 274 0125 01       		.uleb128 0x1
+ 275 0126 30       		.byte	0x30
+ 276 0127 00       		.byte	0
+ 277 0128 08       		.uleb128 0x8
+ 278 0129 2A000000 		.4byte	.LVL6
+ 279 012d B0010000 		.4byte	0x1b0
+ 280 0131 42010000 		.4byte	0x142
+ 281 0135 09       		.uleb128 0x9
+ 282 0136 01       		.uleb128 0x1
+ 283 0137 52       		.byte	0x52
+ 284 0138 02       		.uleb128 0x2
+ 285 0139 75       		.byte	0x75
+ 286 013a 00       		.sleb128 0
+ 287 013b 09       		.uleb128 0x9
+ 288 013c 01       		.uleb128 0x1
+ 289 013d 51       		.byte	0x51
+ 290 013e 02       		.uleb128 0x2
+ 291 013f 76       		.byte	0x76
+ 292 0140 00       		.sleb128 0
+ 293 0141 00       		.byte	0
+ 294 0142 0A       		.uleb128 0xa
+ 295 0143 32000000 		.4byte	.LVL7
+ 296 0147 CF010000 		.4byte	0x1cf
+ 297 014b 09       		.uleb128 0x9
+ 298 014c 01       		.uleb128 0x1
+ 299 014d 51       		.byte	0x51
+ 300 014e 01       		.uleb128 0x1
+ 301 014f 32       		.byte	0x32
+ 302 0150 00       		.byte	0
+ 303 0151 00       		.byte	0
+ 304 0152 0B       		.uleb128 0xb
+ 305 0153 09000000 		.4byte	.LASF27
+ 306 0157 01       		.byte	0x1
+ 307 0158 88       		.byte	0x88
+ 308 0159 00000000 		.4byte	.LFB1
+ 309 015d 10000000 		.4byte	.LFE1-.LFB1
+ 310 0161 01       		.uleb128 0x1
+ 311 0162 9C       		.byte	0x9c
+ 312 0163 71010000 		.4byte	0x171
+ 313 0167 0C       		.uleb128 0xc
+ 314 0168 0A000000 		.4byte	.LVL8
+ 315 016c E9010000 		.4byte	0x1e9
+ 316 0170 00       		.byte	0
+ 317 0171 0D       		.uleb128 0xd
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 9
+
+
+ 318 0172 C5000000 		.4byte	.LASF28
+ 319 0176 01       		.byte	0x1
+ 320 0177 45       		.byte	0x45
+ 321 0178 79000000 		.4byte	0x79
+ 322 017c 05       		.uleb128 0x5
+ 323 017d 03       		.byte	0x3
+ 324 017e 00000000 		.4byte	WaveDAC8_1_Wave2_DMA_DmaHandle
+ 325 0182 0E       		.uleb128 0xe
+ 326 0183 92020000 		.4byte	.LASF20
+ 327 0187 03       		.byte	0x3
+ 328 0188 34       		.byte	0x34
+ 329 0189 9D000000 		.4byte	0x9d
+ 330 018d B0010000 		.4byte	0x1b0
+ 331 0191 0F       		.uleb128 0xf
+ 332 0192 79000000 		.4byte	0x79
+ 333 0196 0F       		.uleb128 0xf
+ 334 0197 79000000 		.4byte	0x79
+ 335 019b 0F       		.uleb128 0xf
+ 336 019c 79000000 		.4byte	0x79
+ 337 01a0 0F       		.uleb128 0xf
+ 338 01a1 79000000 		.4byte	0x79
+ 339 01a5 0F       		.uleb128 0xf
+ 340 01a6 79000000 		.4byte	0x79
+ 341 01aa 0F       		.uleb128 0xf
+ 342 01ab 79000000 		.4byte	0x79
+ 343 01af 00       		.byte	0
+ 344 01b0 0E       		.uleb128 0xe
+ 345 01b1 45020000 		.4byte	.LASF21
+ 346 01b5 03       		.byte	0x3
+ 347 01b6 2E       		.byte	0x2e
+ 348 01b7 9D000000 		.4byte	0x9d
+ 349 01bb CF010000 		.4byte	0x1cf
+ 350 01bf 0F       		.uleb128 0xf
+ 351 01c0 79000000 		.4byte	0x79
+ 352 01c4 0F       		.uleb128 0xf
+ 353 01c5 84000000 		.4byte	0x84
+ 354 01c9 0F       		.uleb128 0xf
+ 355 01ca 84000000 		.4byte	0x84
+ 356 01ce 00       		.byte	0
+ 357 01cf 0E       		.uleb128 0xe
+ 358 01d0 5C000000 		.4byte	.LASF22
+ 359 01d4 03       		.byte	0x3
+ 360 01d5 2D       		.byte	0x2d
+ 361 01d6 9D000000 		.4byte	0x9d
+ 362 01da E9010000 		.4byte	0x1e9
+ 363 01de 0F       		.uleb128 0xf
+ 364 01df 79000000 		.4byte	0x79
+ 365 01e3 0F       		.uleb128 0xf
+ 366 01e4 79000000 		.4byte	0x79
+ 367 01e8 00       		.byte	0
+ 368 01e9 10       		.uleb128 0x10
+ 369 01ea 83020000 		.4byte	.LASF29
+ 370 01ee 03       		.byte	0x3
+ 371 01ef 2B       		.byte	0x2b
+ 372 01f0 9D000000 		.4byte	0x9d
+ 373 01f4 0F       		.uleb128 0xf
+ 374 01f5 79000000 		.4byte	0x79
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 10
+
+
+ 375 01f9 00       		.byte	0
+ 376 01fa 00       		.byte	0
+ 377              		.section	.debug_abbrev,"",%progbits
+ 378              	.Ldebug_abbrev0:
+ 379 0000 01       		.uleb128 0x1
+ 380 0001 11       		.uleb128 0x11
+ 381 0002 01       		.byte	0x1
+ 382 0003 25       		.uleb128 0x25
+ 383 0004 0E       		.uleb128 0xe
+ 384 0005 13       		.uleb128 0x13
+ 385 0006 0B       		.uleb128 0xb
+ 386 0007 03       		.uleb128 0x3
+ 387 0008 0E       		.uleb128 0xe
+ 388 0009 1B       		.uleb128 0x1b
+ 389 000a 0E       		.uleb128 0xe
+ 390 000b 55       		.uleb128 0x55
+ 391 000c 17       		.uleb128 0x17
+ 392 000d 11       		.uleb128 0x11
+ 393 000e 01       		.uleb128 0x1
+ 394 000f 10       		.uleb128 0x10
+ 395 0010 17       		.uleb128 0x17
+ 396 0011 00       		.byte	0
+ 397 0012 00       		.byte	0
+ 398 0013 02       		.uleb128 0x2
+ 399 0014 24       		.uleb128 0x24
+ 400 0015 00       		.byte	0
+ 401 0016 0B       		.uleb128 0xb
+ 402 0017 0B       		.uleb128 0xb
+ 403 0018 3E       		.uleb128 0x3e
+ 404 0019 0B       		.uleb128 0xb
+ 405 001a 03       		.uleb128 0x3
+ 406 001b 08       		.uleb128 0x8
+ 407 001c 00       		.byte	0
+ 408 001d 00       		.byte	0
+ 409 001e 03       		.uleb128 0x3
+ 410 001f 24       		.uleb128 0x24
+ 411 0020 00       		.byte	0
+ 412 0021 0B       		.uleb128 0xb
+ 413 0022 0B       		.uleb128 0xb
+ 414 0023 3E       		.uleb128 0x3e
+ 415 0024 0B       		.uleb128 0xb
+ 416 0025 03       		.uleb128 0x3
+ 417 0026 0E       		.uleb128 0xe
+ 418 0027 00       		.byte	0
+ 419 0028 00       		.byte	0
+ 420 0029 04       		.uleb128 0x4
+ 421 002a 16       		.uleb128 0x16
+ 422 002b 00       		.byte	0
+ 423 002c 03       		.uleb128 0x3
+ 424 002d 0E       		.uleb128 0xe
+ 425 002e 3A       		.uleb128 0x3a
+ 426 002f 0B       		.uleb128 0xb
+ 427 0030 3B       		.uleb128 0x3b
+ 428 0031 0B       		.uleb128 0xb
+ 429 0032 49       		.uleb128 0x49
+ 430 0033 13       		.uleb128 0x13
+ 431 0034 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 11
+
+
+ 432 0035 00       		.byte	0
+ 433 0036 05       		.uleb128 0x5
+ 434 0037 16       		.uleb128 0x16
+ 435 0038 00       		.byte	0
+ 436 0039 03       		.uleb128 0x3
+ 437 003a 0E       		.uleb128 0xe
+ 438 003b 3A       		.uleb128 0x3a
+ 439 003c 0B       		.uleb128 0xb
+ 440 003d 3B       		.uleb128 0x3b
+ 441 003e 05       		.uleb128 0x5
+ 442 003f 49       		.uleb128 0x49
+ 443 0040 13       		.uleb128 0x13
+ 444 0041 00       		.byte	0
+ 445 0042 00       		.byte	0
+ 446 0043 06       		.uleb128 0x6
+ 447 0044 2E       		.uleb128 0x2e
+ 448 0045 01       		.byte	0x1
+ 449 0046 3F       		.uleb128 0x3f
+ 450 0047 19       		.uleb128 0x19
+ 451 0048 03       		.uleb128 0x3
+ 452 0049 0E       		.uleb128 0xe
+ 453 004a 3A       		.uleb128 0x3a
+ 454 004b 0B       		.uleb128 0xb
+ 455 004c 3B       		.uleb128 0x3b
+ 456 004d 0B       		.uleb128 0xb
+ 457 004e 27       		.uleb128 0x27
+ 458 004f 19       		.uleb128 0x19
+ 459 0050 49       		.uleb128 0x49
+ 460 0051 13       		.uleb128 0x13
+ 461 0052 11       		.uleb128 0x11
+ 462 0053 01       		.uleb128 0x1
+ 463 0054 12       		.uleb128 0x12
+ 464 0055 06       		.uleb128 0x6
+ 465 0056 40       		.uleb128 0x40
+ 466 0057 18       		.uleb128 0x18
+ 467 0058 9742     		.uleb128 0x2117
+ 468 005a 19       		.uleb128 0x19
+ 469 005b 01       		.uleb128 0x1
+ 470 005c 13       		.uleb128 0x13
+ 471 005d 00       		.byte	0
+ 472 005e 00       		.byte	0
+ 473 005f 07       		.uleb128 0x7
+ 474 0060 05       		.uleb128 0x5
+ 475 0061 00       		.byte	0
+ 476 0062 03       		.uleb128 0x3
+ 477 0063 0E       		.uleb128 0xe
+ 478 0064 3A       		.uleb128 0x3a
+ 479 0065 0B       		.uleb128 0xb
+ 480 0066 3B       		.uleb128 0x3b
+ 481 0067 0B       		.uleb128 0xb
+ 482 0068 49       		.uleb128 0x49
+ 483 0069 13       		.uleb128 0x13
+ 484 006a 02       		.uleb128 0x2
+ 485 006b 17       		.uleb128 0x17
+ 486 006c 00       		.byte	0
+ 487 006d 00       		.byte	0
+ 488 006e 08       		.uleb128 0x8
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 12
+
+
+ 489 006f 898201   		.uleb128 0x4109
+ 490 0072 01       		.byte	0x1
+ 491 0073 11       		.uleb128 0x11
+ 492 0074 01       		.uleb128 0x1
+ 493 0075 31       		.uleb128 0x31
+ 494 0076 13       		.uleb128 0x13
+ 495 0077 01       		.uleb128 0x1
+ 496 0078 13       		.uleb128 0x13
+ 497 0079 00       		.byte	0
+ 498 007a 00       		.byte	0
+ 499 007b 09       		.uleb128 0x9
+ 500 007c 8A8201   		.uleb128 0x410a
+ 501 007f 00       		.byte	0
+ 502 0080 02       		.uleb128 0x2
+ 503 0081 18       		.uleb128 0x18
+ 504 0082 9142     		.uleb128 0x2111
+ 505 0084 18       		.uleb128 0x18
+ 506 0085 00       		.byte	0
+ 507 0086 00       		.byte	0
+ 508 0087 0A       		.uleb128 0xa
+ 509 0088 898201   		.uleb128 0x4109
+ 510 008b 01       		.byte	0x1
+ 511 008c 11       		.uleb128 0x11
+ 512 008d 01       		.uleb128 0x1
+ 513 008e 31       		.uleb128 0x31
+ 514 008f 13       		.uleb128 0x13
+ 515 0090 00       		.byte	0
+ 516 0091 00       		.byte	0
+ 517 0092 0B       		.uleb128 0xb
+ 518 0093 2E       		.uleb128 0x2e
+ 519 0094 01       		.byte	0x1
+ 520 0095 3F       		.uleb128 0x3f
+ 521 0096 19       		.uleb128 0x19
+ 522 0097 03       		.uleb128 0x3
+ 523 0098 0E       		.uleb128 0xe
+ 524 0099 3A       		.uleb128 0x3a
+ 525 009a 0B       		.uleb128 0xb
+ 526 009b 3B       		.uleb128 0x3b
+ 527 009c 0B       		.uleb128 0xb
+ 528 009d 27       		.uleb128 0x27
+ 529 009e 19       		.uleb128 0x19
+ 530 009f 11       		.uleb128 0x11
+ 531 00a0 01       		.uleb128 0x1
+ 532 00a1 12       		.uleb128 0x12
+ 533 00a2 06       		.uleb128 0x6
+ 534 00a3 40       		.uleb128 0x40
+ 535 00a4 18       		.uleb128 0x18
+ 536 00a5 9742     		.uleb128 0x2117
+ 537 00a7 19       		.uleb128 0x19
+ 538 00a8 01       		.uleb128 0x1
+ 539 00a9 13       		.uleb128 0x13
+ 540 00aa 00       		.byte	0
+ 541 00ab 00       		.byte	0
+ 542 00ac 0C       		.uleb128 0xc
+ 543 00ad 898201   		.uleb128 0x4109
+ 544 00b0 00       		.byte	0
+ 545 00b1 11       		.uleb128 0x11
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 13
+
+
+ 546 00b2 01       		.uleb128 0x1
+ 547 00b3 31       		.uleb128 0x31
+ 548 00b4 13       		.uleb128 0x13
+ 549 00b5 00       		.byte	0
+ 550 00b6 00       		.byte	0
+ 551 00b7 0D       		.uleb128 0xd
+ 552 00b8 34       		.uleb128 0x34
+ 553 00b9 00       		.byte	0
+ 554 00ba 03       		.uleb128 0x3
+ 555 00bb 0E       		.uleb128 0xe
+ 556 00bc 3A       		.uleb128 0x3a
+ 557 00bd 0B       		.uleb128 0xb
+ 558 00be 3B       		.uleb128 0x3b
+ 559 00bf 0B       		.uleb128 0xb
+ 560 00c0 49       		.uleb128 0x49
+ 561 00c1 13       		.uleb128 0x13
+ 562 00c2 3F       		.uleb128 0x3f
+ 563 00c3 19       		.uleb128 0x19
+ 564 00c4 02       		.uleb128 0x2
+ 565 00c5 18       		.uleb128 0x18
+ 566 00c6 00       		.byte	0
+ 567 00c7 00       		.byte	0
+ 568 00c8 0E       		.uleb128 0xe
+ 569 00c9 2E       		.uleb128 0x2e
+ 570 00ca 01       		.byte	0x1
+ 571 00cb 3F       		.uleb128 0x3f
+ 572 00cc 19       		.uleb128 0x19
+ 573 00cd 03       		.uleb128 0x3
+ 574 00ce 0E       		.uleb128 0xe
+ 575 00cf 3A       		.uleb128 0x3a
+ 576 00d0 0B       		.uleb128 0xb
+ 577 00d1 3B       		.uleb128 0x3b
+ 578 00d2 0B       		.uleb128 0xb
+ 579 00d3 27       		.uleb128 0x27
+ 580 00d4 19       		.uleb128 0x19
+ 581 00d5 49       		.uleb128 0x49
+ 582 00d6 13       		.uleb128 0x13
+ 583 00d7 3C       		.uleb128 0x3c
+ 584 00d8 19       		.uleb128 0x19
+ 585 00d9 01       		.uleb128 0x1
+ 586 00da 13       		.uleb128 0x13
+ 587 00db 00       		.byte	0
+ 588 00dc 00       		.byte	0
+ 589 00dd 0F       		.uleb128 0xf
+ 590 00de 05       		.uleb128 0x5
+ 591 00df 00       		.byte	0
+ 592 00e0 49       		.uleb128 0x49
+ 593 00e1 13       		.uleb128 0x13
+ 594 00e2 00       		.byte	0
+ 595 00e3 00       		.byte	0
+ 596 00e4 10       		.uleb128 0x10
+ 597 00e5 2E       		.uleb128 0x2e
+ 598 00e6 01       		.byte	0x1
+ 599 00e7 3F       		.uleb128 0x3f
+ 600 00e8 19       		.uleb128 0x19
+ 601 00e9 03       		.uleb128 0x3
+ 602 00ea 0E       		.uleb128 0xe
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 14
+
+
+ 603 00eb 3A       		.uleb128 0x3a
+ 604 00ec 0B       		.uleb128 0xb
+ 605 00ed 3B       		.uleb128 0x3b
+ 606 00ee 0B       		.uleb128 0xb
+ 607 00ef 27       		.uleb128 0x27
+ 608 00f0 19       		.uleb128 0x19
+ 609 00f1 49       		.uleb128 0x49
+ 610 00f2 13       		.uleb128 0x13
+ 611 00f3 3C       		.uleb128 0x3c
+ 612 00f4 19       		.uleb128 0x19
+ 613 00f5 00       		.byte	0
+ 614 00f6 00       		.byte	0
+ 615 00f7 00       		.byte	0
+ 616              		.section	.debug_loc,"",%progbits
+ 617              	.Ldebug_loc0:
+ 618              	.LLST0:
+ 619 0000 00000000 		.4byte	.LVL0
+ 620 0004 10000000 		.4byte	.LVL1
+ 621 0008 0100     		.2byte	0x1
+ 622 000a 50       		.byte	0x50
+ 623 000b 10000000 		.4byte	.LVL1
+ 624 000f 3C000000 		.4byte	.LFE0
+ 625 0013 0400     		.2byte	0x4
+ 626 0015 F3       		.byte	0xf3
+ 627 0016 01       		.uleb128 0x1
+ 628 0017 50       		.byte	0x50
+ 629 0018 9F       		.byte	0x9f
+ 630 0019 00000000 		.4byte	0
+ 631 001d 00000000 		.4byte	0
+ 632              	.LLST1:
+ 633 0021 00000000 		.4byte	.LVL0
+ 634 0025 1A000000 		.4byte	.LVL3
+ 635 0029 0100     		.2byte	0x1
+ 636 002b 51       		.byte	0x51
+ 637 002c 1A000000 		.4byte	.LVL3
+ 638 0030 3C000000 		.4byte	.LFE0
+ 639 0034 0400     		.2byte	0x4
+ 640 0036 F3       		.byte	0xf3
+ 641 0037 01       		.uleb128 0x1
+ 642 0038 51       		.byte	0x51
+ 643 0039 9F       		.byte	0x9f
+ 644 003a 00000000 		.4byte	0
+ 645 003e 00000000 		.4byte	0
+ 646              	.LLST2:
+ 647 0042 00000000 		.4byte	.LVL0
+ 648 0046 1C000000 		.4byte	.LVL4
+ 649 004a 0100     		.2byte	0x1
+ 650 004c 52       		.byte	0x52
+ 651 004d 1C000000 		.4byte	.LVL4
+ 652 0051 3C000000 		.4byte	.LFE0
+ 653 0055 0400     		.2byte	0x4
+ 654 0057 F3       		.byte	0xf3
+ 655 0058 01       		.uleb128 0x1
+ 656 0059 52       		.byte	0x52
+ 657 005a 9F       		.byte	0x9f
+ 658 005b 00000000 		.4byte	0
+ 659 005f 00000000 		.4byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 15
+
+
+ 660              	.LLST3:
+ 661 0063 00000000 		.4byte	.LVL0
+ 662 0067 14000000 		.4byte	.LVL2
+ 663 006b 0100     		.2byte	0x1
+ 664 006d 53       		.byte	0x53
+ 665 006e 14000000 		.4byte	.LVL2
+ 666 0072 3C000000 		.4byte	.LFE0
+ 667 0076 0400     		.2byte	0x4
+ 668 0078 F3       		.byte	0xf3
+ 669 0079 01       		.uleb128 0x1
+ 670 007a 53       		.byte	0x53
+ 671 007b 9F       		.byte	0x9f
+ 672 007c 00000000 		.4byte	0
+ 673 0080 00000000 		.4byte	0
+ 674              		.section	.debug_aranges,"",%progbits
+ 675 0000 24000000 		.4byte	0x24
+ 676 0004 0200     		.2byte	0x2
+ 677 0006 00000000 		.4byte	.Ldebug_info0
+ 678 000a 04       		.byte	0x4
+ 679 000b 00       		.byte	0
+ 680 000c 0000     		.2byte	0
+ 681 000e 0000     		.2byte	0
+ 682 0010 00000000 		.4byte	.LFB0
+ 683 0014 3C000000 		.4byte	.LFE0-.LFB0
+ 684 0018 00000000 		.4byte	.LFB1
+ 685 001c 10000000 		.4byte	.LFE1-.LFB1
+ 686 0020 00000000 		.4byte	0
+ 687 0024 00000000 		.4byte	0
+ 688              		.section	.debug_ranges,"",%progbits
+ 689              	.Ldebug_ranges0:
+ 690 0000 00000000 		.4byte	.LFB0
+ 691 0004 3C000000 		.4byte	.LFE0
+ 692 0008 00000000 		.4byte	.LFB1
+ 693 000c 10000000 		.4byte	.LFE1
+ 694 0010 00000000 		.4byte	0
+ 695 0014 00000000 		.4byte	0
+ 696              		.section	.debug_line,"",%progbits
+ 697              	.Ldebug_line0:
+ 698 0000 A6000000 		.section	.debug_str,"MS",%progbits,1
+ 698      02007A00 
+ 698      00000201 
+ 698      FB0E0D00 
+ 698      01010101 
+ 699              	.LASF15:
+ 700 0000 63797374 		.ascii	"cystatus\000"
+ 700      61747573 
+ 700      00
+ 701              	.LASF27:
+ 702 0009 57617665 		.ascii	"WaveDAC8_1_Wave2_DMA_DmaRelease\000"
+ 702      44414338 
+ 702      5F315F57 
+ 702      61766532 
+ 702      5F444D41 
+ 703              	.LASF18:
+ 704 0029 55707065 		.ascii	"UpperSrcAddress\000"
+ 704      72537263 
+ 704      41646472 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 16
+
+
+ 704      65737300 
+ 705              	.LASF26:
+ 706 0039 57617665 		.ascii	"WaveDAC8_1_Wave2_DMA_DmaInitialize\000"
+ 706      44414338 
+ 706      5F315F57 
+ 706      61766532 
+ 706      5F444D41 
+ 707              	.LASF22:
+ 708 005c 4379446D 		.ascii	"CyDmaChPriority\000"
+ 708      61436850 
+ 708      72696F72 
+ 708      69747900 
+ 709              	.LASF17:
+ 710 006c 52657165 		.ascii	"ReqestPerBurst\000"
+ 710      73745065 
+ 710      72427572 
+ 710      737400
+ 711              	.LASF4:
+ 712 007b 73686F72 		.ascii	"short unsigned int\000"
+ 712      7420756E 
+ 712      7369676E 
+ 712      65642069 
+ 712      6E7400
+ 713              	.LASF13:
+ 714 008e 666C6F61 		.ascii	"float\000"
+ 714      7400
+ 715              	.LASF2:
+ 716 0094 756E7369 		.ascii	"unsigned char\000"
+ 716      676E6564 
+ 716      20636861 
+ 716      7200
+ 717              	.LASF16:
+ 718 00a2 42757273 		.ascii	"BurstCount\000"
+ 718      74436F75 
+ 718      6E7400
+ 719              	.LASF6:
+ 720 00ad 6C6F6E67 		.ascii	"long unsigned int\000"
+ 720      20756E73 
+ 720      69676E65 
+ 720      6420696E 
+ 720      7400
+ 721              	.LASF11:
+ 722 00bf 75696E74 		.ascii	"uint8\000"
+ 722      3800
+ 723              	.LASF28:
+ 724 00c5 57617665 		.ascii	"WaveDAC8_1_Wave2_DMA_DmaHandle\000"
+ 724      44414338 
+ 724      5F315F57 
+ 724      61766532 
+ 724      5F444D41 
+ 725              	.LASF14:
+ 726 00e4 646F7562 		.ascii	"double\000"
+ 726      6C6500
+ 727              	.LASF12:
+ 728 00eb 75696E74 		.ascii	"uint16\000"
+ 728      313600
+ 729              	.LASF24:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 17
+
+
+ 730 00f2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\WaveDAC8_1_Wave2_DMA_dm"
+ 730      6E657261 
+ 730      7465645F 
+ 730      536F7572 
+ 730      63655C50 
+ 731 0122 612E6300 		.ascii	"a.c\000"
+ 732              	.LASF23:
+ 733 0126 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 733      4320342E 
+ 733      392E3320 
+ 733      32303135 
+ 733      30333033 
+ 734 0159 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 734      20726576 
+ 734      6973696F 
+ 734      6E203232 
+ 734      31323230 
+ 735 018c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 735      66756E63 
+ 735      74696F6E 
+ 735      2D736563 
+ 735      74696F6E 
+ 736              	.LASF25:
+ 737 01b4 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Desktop\\ThereminPSOC\\There"
+ 737      73657273 
+ 737      5C444769 
+ 737      6C6C696C 
+ 737      616E645C 
+ 738 01e2 6D696E5C 		.ascii	"min\\ThereminPSOC.cydsn\000"
+ 738      54686572 
+ 738      656D696E 
+ 738      50534F43 
+ 738      2E637964 
+ 739              	.LASF0:
+ 740 01f9 756E7369 		.ascii	"unsigned int\000"
+ 740      676E6564 
+ 740      20696E74 
+ 740      00
+ 741              	.LASF8:
+ 742 0206 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 742      206C6F6E 
+ 742      6720756E 
+ 742      7369676E 
+ 742      65642069 
+ 743              	.LASF19:
+ 744 021d 55707065 		.ascii	"UpperDestAddress\000"
+ 744      72446573 
+ 744      74416464 
+ 744      72657373 
+ 744      00
+ 745              	.LASF9:
+ 746 022e 73697A65 		.ascii	"sizetype\000"
+ 746      74797065 
+ 746      00
+ 747              	.LASF7:
+ 748 0237 6C6F6E67 		.ascii	"long long int\000"
+ 748      206C6F6E 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPNiaBe.s 			page 18
+
+
+ 748      6720696E 
+ 748      7400
+ 749              	.LASF21:
+ 750 0245 4379446D 		.ascii	"CyDmaChSetExtendedAddress\000"
+ 750      61436853 
+ 750      65744578 
+ 750      74656E64 
+ 750      65644164 
+ 751              	.LASF10:
+ 752 025f 63686172 		.ascii	"char\000"
+ 752      00
+ 753              	.LASF3:
+ 754 0264 73686F72 		.ascii	"short int\000"
+ 754      7420696E 
+ 754      7400
+ 755              	.LASF5:
+ 756 026e 6C6F6E67 		.ascii	"long int\000"
+ 756      20696E74 
+ 756      00
+ 757              	.LASF1:
+ 758 0277 7369676E 		.ascii	"signed char\000"
+ 758      65642063 
+ 758      68617200 
+ 759              	.LASF29:
+ 760 0283 4379446D 		.ascii	"CyDmaChDisable\000"
+ 760      61436844 
+ 760      69736162 
+ 760      6C6500
+ 761              	.LASF20:
+ 762 0292 4379446D 		.ascii	"CyDmaChSetConfiguration\000"
+ 762      61436853 
+ 762      6574436F 
+ 762      6E666967 
+ 762      75726174 
+ 763              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

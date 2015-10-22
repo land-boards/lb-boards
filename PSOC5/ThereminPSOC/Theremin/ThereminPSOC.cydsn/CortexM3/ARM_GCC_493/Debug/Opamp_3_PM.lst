@@ -1,0 +1,848 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Opamp_3_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.Opamp_3_SaveConfig,"ax",%progbits
+  19              		.align	2
+  20              		.global	Opamp_3_SaveConfig
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	Opamp_3_SaveConfig, %function
+  24              	Opamp_3_SaveConfig:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\Opamp_3_PM.c"
+   1:.\Generated_Source\PSoC5/Opamp_3_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * File Name: Opamp_3_PM.c
+   3:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Version 1.90
+   4:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+   5:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  This file provides the power management source code to the API for the 
+   7:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  OpAmp (Analog Buffer) component.
+   8:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+   9:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  11:.\Generated_Source\PSoC5/Opamp_3_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  18:.\Generated_Source\PSoC5/Opamp_3_PM.c **** #include "Opamp_3.h"
+  19:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  20:.\Generated_Source\PSoC5/Opamp_3_PM.c **** static Opamp_3_BACKUP_STRUCT  Opamp_3_backup;
+  21:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  22:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  23:.\Generated_Source\PSoC5/Opamp_3_PM.c **** /*******************************************************************************  
+  24:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Function Name: Opamp_3_SaveConfig
+  25:.\Generated_Source\PSoC5/Opamp_3_PM.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  27:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Summary:
+  28:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Saves the current user configuration registers.
+  29:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * 
+  30:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * 
+  33:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Return:
+  34:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+  35:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  36:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC5/Opamp_3_PM.c **** void Opamp_3_SaveConfig(void) 
+  38:.\Generated_Source\PSoC5/Opamp_3_PM.c **** {
+  27              		.loc 1 38 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE0:
+  35              		.size	Opamp_3_SaveConfig, .-Opamp_3_SaveConfig
+  36 0002 00BF     		.section	.text.Opamp_3_RestoreConfig,"ax",%progbits
+  37              		.align	2
+  38              		.global	Opamp_3_RestoreConfig
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	Opamp_3_RestoreConfig, %function
+  42              	Opamp_3_RestoreConfig:
+  43              	.LFB1:
+  39:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Nothing to save as registers are System reset on retention flops */
+  40:.\Generated_Source\PSoC5/Opamp_3_PM.c **** }
+  41:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  42:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  43:.\Generated_Source\PSoC5/Opamp_3_PM.c **** /*******************************************************************************  
+  44:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Function Name: Opamp_3_RestoreConfig
+  45:.\Generated_Source\PSoC5/Opamp_3_PM.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  47:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Summary:
+  48:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Restores the current user configuration registers.
+  49:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  50:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Parameters:
+  51:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+  52:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  53:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Return:
+  54:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+  55:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  56:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC5/Opamp_3_PM.c **** void Opamp_3_RestoreConfig(void) 
+  58:.\Generated_Source\PSoC5/Opamp_3_PM.c **** {
+  44              		.loc 1 58 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 7047     		bx	lr
+  50              		.cfi_endproc
+  51              	.LFE1:
+  52              		.size	Opamp_3_RestoreConfig, .-Opamp_3_RestoreConfig
+  53 0002 00BF     		.section	.text.Opamp_3_Sleep,"ax",%progbits
+  54              		.align	2
+  55              		.global	Opamp_3_Sleep
+  56              		.thumb
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 3
+
+
+  57              		.thumb_func
+  58              		.type	Opamp_3_Sleep, %function
+  59              	Opamp_3_Sleep:
+  60              	.LFB2:
+  59:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Nothing to restore */
+  60:.\Generated_Source\PSoC5/Opamp_3_PM.c **** }
+  61:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  62:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+  63:.\Generated_Source\PSoC5/Opamp_3_PM.c **** /*******************************************************************************   
+  64:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Function Name: Opamp_3_Sleep
+  65:.\Generated_Source\PSoC5/Opamp_3_PM.c **** ********************************************************************************
+  66:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  67:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Summary:
+  68:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Disables block's operation and saves its configuration. Should be called 
+  69:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  just prior to entering sleep.
+  70:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  71:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Parameters:
+  72:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+  73:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  74:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Return:
+  75:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+  76:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  77:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Global variables:
+  78:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Opamp_3_backup: The structure field 'enableState' is modified 
+  79:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  depending on the enable state of the block before entering to sleep mode.
+  80:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+  81:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *******************************************************************************/
+  82:.\Generated_Source\PSoC5/Opamp_3_PM.c **** void Opamp_3_Sleep(void) 
+  83:.\Generated_Source\PSoC5/Opamp_3_PM.c **** {
+  61              		.loc 1 83 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		.loc 1 83 0
+  66 0000 08B5     		push	{r3, lr}
+  67              		.cfi_def_cfa_offset 8
+  68              		.cfi_offset 3, -8
+  69              		.cfi_offset 14, -4
+  84:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Save OpAmp enable state */
+  85:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     if((Opamp_3_PM_ACT_CFG_REG & Opamp_3_ACT_PWR_EN) != 0u)
+  70              		.loc 1 85 0
+  71 0002 074B     		ldr	r3, .L7
+  72 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  73 0006 13F0020F 		tst	r3, #2
+  74 000a 05D0     		beq	.L4
+  86:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     {
+  87:.\Generated_Source\PSoC5/Opamp_3_PM.c ****         /* Component is enabled */
+  88:.\Generated_Source\PSoC5/Opamp_3_PM.c ****         Opamp_3_backup.enableState = 1u;
+  75              		.loc 1 88 0
+  76 000c 0122     		movs	r2, #1
+  77 000e 054B     		ldr	r3, .L7+4
+  78 0010 1A70     		strb	r2, [r3]
+  89:.\Generated_Source\PSoC5/Opamp_3_PM.c ****          /* Stops the component */
+  90:.\Generated_Source\PSoC5/Opamp_3_PM.c ****          Opamp_3_Stop();
+  79              		.loc 1 90 0
+  80 0012 FFF7FEFF 		bl	Opamp_3_Stop
+  81              	.LVL0:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 4
+
+
+  82 0016 08BD     		pop	{r3, pc}
+  83              	.L4:
+  91:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     }
+  92:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     else
+  93:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     {
+  94:.\Generated_Source\PSoC5/Opamp_3_PM.c ****         /* Component is disabled */
+  95:.\Generated_Source\PSoC5/Opamp_3_PM.c ****         Opamp_3_backup.enableState = 0u;
+  84              		.loc 1 95 0
+  85 0018 0022     		movs	r2, #0
+  86 001a 024B     		ldr	r3, .L7+4
+  87 001c 1A70     		strb	r2, [r3]
+  88 001e 08BD     		pop	{r3, pc}
+  89              	.L8:
+  90              		.align	2
+  91              	.L7:
+  92 0020 A4430040 		.word	1073759140
+  93 0024 00000000 		.word	.LANCHOR0
+  94              		.cfi_endproc
+  95              	.LFE2:
+  96              		.size	Opamp_3_Sleep, .-Opamp_3_Sleep
+  97              		.section	.text.Opamp_3_Wakeup,"ax",%progbits
+  98              		.align	2
+  99              		.global	Opamp_3_Wakeup
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	Opamp_3_Wakeup, %function
+ 103              	Opamp_3_Wakeup:
+ 104              	.LFB3:
+  96:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     }
+  97:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Saves the configuration */
+  98:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     Opamp_3_SaveConfig();
+  99:.\Generated_Source\PSoC5/Opamp_3_PM.c **** }
+ 100:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+ 101:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+ 102:.\Generated_Source\PSoC5/Opamp_3_PM.c **** /*******************************************************************************  
+ 103:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Function Name: Opamp_3_Wakeup
+ 104:.\Generated_Source\PSoC5/Opamp_3_PM.c **** ********************************************************************************
+ 105:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+ 106:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Summary:
+ 107:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Enables block's operation and restores its configuration. Should be called
+ 108:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  just after awaking from sleep.
+ 109:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+ 110:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Parameters:
+ 111:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+ 112:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+ 113:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Return:
+ 114:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  void
+ 115:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+ 116:.\Generated_Source\PSoC5/Opamp_3_PM.c **** * Global variables:
+ 117:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  Opamp_3_backup: The structure field 'enableState' is used to 
+ 118:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *  restore the enable state of block after wakeup from sleep mode.
+ 119:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *
+ 120:.\Generated_Source\PSoC5/Opamp_3_PM.c **** *******************************************************************************/
+ 121:.\Generated_Source\PSoC5/Opamp_3_PM.c **** void Opamp_3_Wakeup(void) 
+ 122:.\Generated_Source\PSoC5/Opamp_3_PM.c **** {
+ 105              		.loc 1 122 0
+ 106              		.cfi_startproc
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 5
+
+
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109 0000 08B5     		push	{r3, lr}
+ 110              		.cfi_def_cfa_offset 8
+ 111              		.cfi_offset 3, -8
+ 112              		.cfi_offset 14, -4
+ 123:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Restore the user configuration */
+ 124:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     Opamp_3_RestoreConfig();
+ 125:.\Generated_Source\PSoC5/Opamp_3_PM.c **** 
+ 126:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     /* Enables the component operation */
+ 127:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     if(Opamp_3_backup.enableState == 1u)
+ 113              		.loc 1 127 0
+ 114 0002 034B     		ldr	r3, .L12
+ 115 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 116 0006 012B     		cmp	r3, #1
+ 117 0008 01D1     		bne	.L9
+ 128:.\Generated_Source\PSoC5/Opamp_3_PM.c ****     {
+ 129:.\Generated_Source\PSoC5/Opamp_3_PM.c ****         Opamp_3_Enable();
+ 118              		.loc 1 129 0
+ 119 000a FFF7FEFF 		bl	Opamp_3_Enable
+ 120              	.LVL1:
+ 121              	.L9:
+ 122 000e 08BD     		pop	{r3, pc}
+ 123              	.L13:
+ 124              		.align	2
+ 125              	.L12:
+ 126 0010 00000000 		.word	.LANCHOR0
+ 127              		.cfi_endproc
+ 128              	.LFE3:
+ 129              		.size	Opamp_3_Wakeup, .-Opamp_3_Wakeup
+ 130              		.bss
+ 131              		.align	2
+ 132              		.set	.LANCHOR0,. + 0
+ 133              		.type	Opamp_3_backup, %object
+ 134              		.size	Opamp_3_backup, 1
+ 135              	Opamp_3_backup:
+ 136 0000 00       		.space	1
+ 137 0001 000000   		.text
+ 138              	.Letext0:
+ 139              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 140              		.file 3 ".\\Generated_Source\\PSoC5\\Opamp_3.h"
+ 141              		.section	.debug_info,"",%progbits
+ 142              	.Ldebug_info0:
+ 143 0000 3F010000 		.4byte	0x13f
+ 144 0004 0400     		.2byte	0x4
+ 145 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 146 000a 04       		.byte	0x4
+ 147 000b 01       		.uleb128 0x1
+ 148 000c DF000000 		.4byte	.LASF22
+ 149 0010 01       		.byte	0x1
+ 150 0011 27000000 		.4byte	.LASF23
+ 151 0015 9A000000 		.4byte	.LASF24
+ 152 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 153 001d 00000000 		.4byte	0
+ 154 0021 00000000 		.4byte	.Ldebug_line0
+ 155 0025 02       		.uleb128 0x2
+ 156 0026 01       		.byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 6
+
+
+ 157 0027 06       		.byte	0x6
+ 158 0028 F0010000 		.4byte	.LASF0
+ 159 002c 02       		.uleb128 0x2
+ 160 002d 01       		.byte	0x1
+ 161 002e 08       		.byte	0x8
+ 162 002f 88010000 		.4byte	.LASF1
+ 163 0033 02       		.uleb128 0x2
+ 164 0034 02       		.byte	0x2
+ 165 0035 05       		.byte	0x5
+ 166 0036 02020000 		.4byte	.LASF2
+ 167 003a 02       		.uleb128 0x2
+ 168 003b 02       		.byte	0x2
+ 169 003c 07       		.byte	0x7
+ 170 003d DD010000 		.4byte	.LASF3
+ 171 0041 02       		.uleb128 0x2
+ 172 0042 04       		.byte	0x4
+ 173 0043 05       		.byte	0x5
+ 174 0044 B7010000 		.4byte	.LASF4
+ 175 0048 02       		.uleb128 0x2
+ 176 0049 04       		.byte	0x4
+ 177 004a 07       		.byte	0x7
+ 178 004b 71000000 		.4byte	.LASF5
+ 179 004f 02       		.uleb128 0x2
+ 180 0050 08       		.byte	0x8
+ 181 0051 05       		.byte	0x5
+ 182 0052 00000000 		.4byte	.LASF6
+ 183 0056 02       		.uleb128 0x2
+ 184 0057 08       		.byte	0x8
+ 185 0058 07       		.byte	0x7
+ 186 0059 83000000 		.4byte	.LASF7
+ 187 005d 03       		.uleb128 0x3
+ 188 005e 04       		.byte	0x4
+ 189 005f 05       		.byte	0x5
+ 190 0060 696E7400 		.ascii	"int\000"
+ 191 0064 02       		.uleb128 0x2
+ 192 0065 04       		.byte	0x4
+ 193 0066 07       		.byte	0x7
+ 194 0067 1A000000 		.4byte	.LASF8
+ 195 006b 04       		.uleb128 0x4
+ 196 006c 6B000000 		.4byte	.LASF12
+ 197 0070 02       		.byte	0x2
+ 198 0071 C2       		.byte	0xc2
+ 199 0072 2C000000 		.4byte	0x2c
+ 200 0076 02       		.uleb128 0x2
+ 201 0077 04       		.byte	0x4
+ 202 0078 04       		.byte	0x4
+ 203 0079 FC010000 		.4byte	.LASF9
+ 204 007d 02       		.uleb128 0x2
+ 205 007e 08       		.byte	0x8
+ 206 007f 04       		.byte	0x4
+ 207 0080 D6010000 		.4byte	.LASF10
+ 208 0084 02       		.uleb128 0x2
+ 209 0085 01       		.byte	0x1
+ 210 0086 08       		.byte	0x8
+ 211 0087 6D010000 		.4byte	.LASF11
+ 212 008b 05       		.uleb128 0x5
+ 213 008c 0C020000 		.4byte	.LASF13
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 7
+
+
+ 214 0090 02       		.byte	0x2
+ 215 0091 6C01     		.2byte	0x16c
+ 216 0093 97000000 		.4byte	0x97
+ 217 0097 06       		.uleb128 0x6
+ 218 0098 6B000000 		.4byte	0x6b
+ 219 009c 02       		.uleb128 0x2
+ 220 009d 04       		.byte	0x4
+ 221 009e 07       		.byte	0x7
+ 222 009f 2D020000 		.4byte	.LASF14
+ 223 00a3 07       		.uleb128 0x7
+ 224 00a4 01       		.byte	0x1
+ 225 00a5 03       		.byte	0x3
+ 226 00a6 26       		.byte	0x26
+ 227 00a7 B8000000 		.4byte	0xb8
+ 228 00ab 08       		.uleb128 0x8
+ 229 00ac 0E000000 		.4byte	.LASF25
+ 230 00b0 03       		.byte	0x3
+ 231 00b1 28       		.byte	0x28
+ 232 00b2 6B000000 		.4byte	0x6b
+ 233 00b6 00       		.byte	0
+ 234 00b7 00       		.byte	0
+ 235 00b8 04       		.uleb128 0x4
+ 236 00b9 C0010000 		.4byte	.LASF15
+ 237 00bd 03       		.byte	0x3
+ 238 00be 29       		.byte	0x29
+ 239 00bf A3000000 		.4byte	0xa3
+ 240 00c3 09       		.uleb128 0x9
+ 241 00c4 96010000 		.4byte	.LASF16
+ 242 00c8 01       		.byte	0x1
+ 243 00c9 25       		.byte	0x25
+ 244 00ca 00000000 		.4byte	.LFB0
+ 245 00ce 02000000 		.4byte	.LFE0-.LFB0
+ 246 00d2 01       		.uleb128 0x1
+ 247 00d3 9C       		.byte	0x9c
+ 248 00d4 09       		.uleb128 0x9
+ 249 00d5 72010000 		.4byte	.LASF17
+ 250 00d9 01       		.byte	0x1
+ 251 00da 39       		.byte	0x39
+ 252 00db 00000000 		.4byte	.LFB1
+ 253 00df 02000000 		.4byte	.LFE1-.LFB1
+ 254 00e3 01       		.uleb128 0x1
+ 255 00e4 9C       		.byte	0x9c
+ 256 00e5 0A       		.uleb128 0xa
+ 257 00e6 A9010000 		.4byte	.LASF18
+ 258 00ea 01       		.byte	0x1
+ 259 00eb 52       		.byte	0x52
+ 260 00ec 00000000 		.4byte	.LFB2
+ 261 00f0 28000000 		.4byte	.LFE2-.LFB2
+ 262 00f4 01       		.uleb128 0x1
+ 263 00f5 9C       		.byte	0x9c
+ 264 00f6 04010000 		.4byte	0x104
+ 265 00fa 0B       		.uleb128 0xb
+ 266 00fb 16000000 		.4byte	.LVL0
+ 267 00ff 34010000 		.4byte	0x134
+ 268 0103 00       		.byte	0
+ 269 0104 0A       		.uleb128 0xa
+ 270 0105 4D000000 		.4byte	.LASF19
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 8
+
+
+ 271 0109 01       		.byte	0x1
+ 272 010a 79       		.byte	0x79
+ 273 010b 00000000 		.4byte	.LFB3
+ 274 010f 14000000 		.4byte	.LFE3-.LFB3
+ 275 0113 01       		.uleb128 0x1
+ 276 0114 9C       		.byte	0x9c
+ 277 0115 23010000 		.4byte	0x123
+ 278 0119 0B       		.uleb128 0xb
+ 279 011a 0E000000 		.4byte	.LVL1
+ 280 011e 3B010000 		.4byte	0x13b
+ 281 0122 00       		.byte	0
+ 282 0123 0C       		.uleb128 0xc
+ 283 0124 11020000 		.4byte	.LASF26
+ 284 0128 01       		.byte	0x1
+ 285 0129 14       		.byte	0x14
+ 286 012a B8000000 		.4byte	0xb8
+ 287 012e 05       		.uleb128 0x5
+ 288 012f 03       		.byte	0x3
+ 289 0130 00000000 		.4byte	Opamp_3_backup
+ 290 0134 0D       		.uleb128 0xd
+ 291 0135 20020000 		.4byte	.LASF20
+ 292 0139 03       		.byte	0x3
+ 293 013a 34       		.byte	0x34
+ 294 013b 0D       		.uleb128 0xd
+ 295 013c 5C000000 		.4byte	.LASF21
+ 296 0140 03       		.byte	0x3
+ 297 0141 3B       		.byte	0x3b
+ 298 0142 00       		.byte	0
+ 299              		.section	.debug_abbrev,"",%progbits
+ 300              	.Ldebug_abbrev0:
+ 301 0000 01       		.uleb128 0x1
+ 302 0001 11       		.uleb128 0x11
+ 303 0002 01       		.byte	0x1
+ 304 0003 25       		.uleb128 0x25
+ 305 0004 0E       		.uleb128 0xe
+ 306 0005 13       		.uleb128 0x13
+ 307 0006 0B       		.uleb128 0xb
+ 308 0007 03       		.uleb128 0x3
+ 309 0008 0E       		.uleb128 0xe
+ 310 0009 1B       		.uleb128 0x1b
+ 311 000a 0E       		.uleb128 0xe
+ 312 000b 55       		.uleb128 0x55
+ 313 000c 17       		.uleb128 0x17
+ 314 000d 11       		.uleb128 0x11
+ 315 000e 01       		.uleb128 0x1
+ 316 000f 10       		.uleb128 0x10
+ 317 0010 17       		.uleb128 0x17
+ 318 0011 00       		.byte	0
+ 319 0012 00       		.byte	0
+ 320 0013 02       		.uleb128 0x2
+ 321 0014 24       		.uleb128 0x24
+ 322 0015 00       		.byte	0
+ 323 0016 0B       		.uleb128 0xb
+ 324 0017 0B       		.uleb128 0xb
+ 325 0018 3E       		.uleb128 0x3e
+ 326 0019 0B       		.uleb128 0xb
+ 327 001a 03       		.uleb128 0x3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 9
+
+
+ 328 001b 0E       		.uleb128 0xe
+ 329 001c 00       		.byte	0
+ 330 001d 00       		.byte	0
+ 331 001e 03       		.uleb128 0x3
+ 332 001f 24       		.uleb128 0x24
+ 333 0020 00       		.byte	0
+ 334 0021 0B       		.uleb128 0xb
+ 335 0022 0B       		.uleb128 0xb
+ 336 0023 3E       		.uleb128 0x3e
+ 337 0024 0B       		.uleb128 0xb
+ 338 0025 03       		.uleb128 0x3
+ 339 0026 08       		.uleb128 0x8
+ 340 0027 00       		.byte	0
+ 341 0028 00       		.byte	0
+ 342 0029 04       		.uleb128 0x4
+ 343 002a 16       		.uleb128 0x16
+ 344 002b 00       		.byte	0
+ 345 002c 03       		.uleb128 0x3
+ 346 002d 0E       		.uleb128 0xe
+ 347 002e 3A       		.uleb128 0x3a
+ 348 002f 0B       		.uleb128 0xb
+ 349 0030 3B       		.uleb128 0x3b
+ 350 0031 0B       		.uleb128 0xb
+ 351 0032 49       		.uleb128 0x49
+ 352 0033 13       		.uleb128 0x13
+ 353 0034 00       		.byte	0
+ 354 0035 00       		.byte	0
+ 355 0036 05       		.uleb128 0x5
+ 356 0037 16       		.uleb128 0x16
+ 357 0038 00       		.byte	0
+ 358 0039 03       		.uleb128 0x3
+ 359 003a 0E       		.uleb128 0xe
+ 360 003b 3A       		.uleb128 0x3a
+ 361 003c 0B       		.uleb128 0xb
+ 362 003d 3B       		.uleb128 0x3b
+ 363 003e 05       		.uleb128 0x5
+ 364 003f 49       		.uleb128 0x49
+ 365 0040 13       		.uleb128 0x13
+ 366 0041 00       		.byte	0
+ 367 0042 00       		.byte	0
+ 368 0043 06       		.uleb128 0x6
+ 369 0044 35       		.uleb128 0x35
+ 370 0045 00       		.byte	0
+ 371 0046 49       		.uleb128 0x49
+ 372 0047 13       		.uleb128 0x13
+ 373 0048 00       		.byte	0
+ 374 0049 00       		.byte	0
+ 375 004a 07       		.uleb128 0x7
+ 376 004b 13       		.uleb128 0x13
+ 377 004c 01       		.byte	0x1
+ 378 004d 0B       		.uleb128 0xb
+ 379 004e 0B       		.uleb128 0xb
+ 380 004f 3A       		.uleb128 0x3a
+ 381 0050 0B       		.uleb128 0xb
+ 382 0051 3B       		.uleb128 0x3b
+ 383 0052 0B       		.uleb128 0xb
+ 384 0053 01       		.uleb128 0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 10
+
+
+ 385 0054 13       		.uleb128 0x13
+ 386 0055 00       		.byte	0
+ 387 0056 00       		.byte	0
+ 388 0057 08       		.uleb128 0x8
+ 389 0058 0D       		.uleb128 0xd
+ 390 0059 00       		.byte	0
+ 391 005a 03       		.uleb128 0x3
+ 392 005b 0E       		.uleb128 0xe
+ 393 005c 3A       		.uleb128 0x3a
+ 394 005d 0B       		.uleb128 0xb
+ 395 005e 3B       		.uleb128 0x3b
+ 396 005f 0B       		.uleb128 0xb
+ 397 0060 49       		.uleb128 0x49
+ 398 0061 13       		.uleb128 0x13
+ 399 0062 38       		.uleb128 0x38
+ 400 0063 0B       		.uleb128 0xb
+ 401 0064 00       		.byte	0
+ 402 0065 00       		.byte	0
+ 403 0066 09       		.uleb128 0x9
+ 404 0067 2E       		.uleb128 0x2e
+ 405 0068 00       		.byte	0
+ 406 0069 3F       		.uleb128 0x3f
+ 407 006a 19       		.uleb128 0x19
+ 408 006b 03       		.uleb128 0x3
+ 409 006c 0E       		.uleb128 0xe
+ 410 006d 3A       		.uleb128 0x3a
+ 411 006e 0B       		.uleb128 0xb
+ 412 006f 3B       		.uleb128 0x3b
+ 413 0070 0B       		.uleb128 0xb
+ 414 0071 27       		.uleb128 0x27
+ 415 0072 19       		.uleb128 0x19
+ 416 0073 11       		.uleb128 0x11
+ 417 0074 01       		.uleb128 0x1
+ 418 0075 12       		.uleb128 0x12
+ 419 0076 06       		.uleb128 0x6
+ 420 0077 40       		.uleb128 0x40
+ 421 0078 18       		.uleb128 0x18
+ 422 0079 9742     		.uleb128 0x2117
+ 423 007b 19       		.uleb128 0x19
+ 424 007c 00       		.byte	0
+ 425 007d 00       		.byte	0
+ 426 007e 0A       		.uleb128 0xa
+ 427 007f 2E       		.uleb128 0x2e
+ 428 0080 01       		.byte	0x1
+ 429 0081 3F       		.uleb128 0x3f
+ 430 0082 19       		.uleb128 0x19
+ 431 0083 03       		.uleb128 0x3
+ 432 0084 0E       		.uleb128 0xe
+ 433 0085 3A       		.uleb128 0x3a
+ 434 0086 0B       		.uleb128 0xb
+ 435 0087 3B       		.uleb128 0x3b
+ 436 0088 0B       		.uleb128 0xb
+ 437 0089 27       		.uleb128 0x27
+ 438 008a 19       		.uleb128 0x19
+ 439 008b 11       		.uleb128 0x11
+ 440 008c 01       		.uleb128 0x1
+ 441 008d 12       		.uleb128 0x12
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 11
+
+
+ 442 008e 06       		.uleb128 0x6
+ 443 008f 40       		.uleb128 0x40
+ 444 0090 18       		.uleb128 0x18
+ 445 0091 9742     		.uleb128 0x2117
+ 446 0093 19       		.uleb128 0x19
+ 447 0094 01       		.uleb128 0x1
+ 448 0095 13       		.uleb128 0x13
+ 449 0096 00       		.byte	0
+ 450 0097 00       		.byte	0
+ 451 0098 0B       		.uleb128 0xb
+ 452 0099 898201   		.uleb128 0x4109
+ 453 009c 00       		.byte	0
+ 454 009d 11       		.uleb128 0x11
+ 455 009e 01       		.uleb128 0x1
+ 456 009f 31       		.uleb128 0x31
+ 457 00a0 13       		.uleb128 0x13
+ 458 00a1 00       		.byte	0
+ 459 00a2 00       		.byte	0
+ 460 00a3 0C       		.uleb128 0xc
+ 461 00a4 34       		.uleb128 0x34
+ 462 00a5 00       		.byte	0
+ 463 00a6 03       		.uleb128 0x3
+ 464 00a7 0E       		.uleb128 0xe
+ 465 00a8 3A       		.uleb128 0x3a
+ 466 00a9 0B       		.uleb128 0xb
+ 467 00aa 3B       		.uleb128 0x3b
+ 468 00ab 0B       		.uleb128 0xb
+ 469 00ac 49       		.uleb128 0x49
+ 470 00ad 13       		.uleb128 0x13
+ 471 00ae 02       		.uleb128 0x2
+ 472 00af 18       		.uleb128 0x18
+ 473 00b0 00       		.byte	0
+ 474 00b1 00       		.byte	0
+ 475 00b2 0D       		.uleb128 0xd
+ 476 00b3 2E       		.uleb128 0x2e
+ 477 00b4 00       		.byte	0
+ 478 00b5 3F       		.uleb128 0x3f
+ 479 00b6 19       		.uleb128 0x19
+ 480 00b7 03       		.uleb128 0x3
+ 481 00b8 0E       		.uleb128 0xe
+ 482 00b9 3A       		.uleb128 0x3a
+ 483 00ba 0B       		.uleb128 0xb
+ 484 00bb 3B       		.uleb128 0x3b
+ 485 00bc 0B       		.uleb128 0xb
+ 486 00bd 27       		.uleb128 0x27
+ 487 00be 19       		.uleb128 0x19
+ 488 00bf 3C       		.uleb128 0x3c
+ 489 00c0 19       		.uleb128 0x19
+ 490 00c1 00       		.byte	0
+ 491 00c2 00       		.byte	0
+ 492 00c3 00       		.byte	0
+ 493              		.section	.debug_aranges,"",%progbits
+ 494 0000 34000000 		.4byte	0x34
+ 495 0004 0200     		.2byte	0x2
+ 496 0006 00000000 		.4byte	.Ldebug_info0
+ 497 000a 04       		.byte	0x4
+ 498 000b 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 12
+
+
+ 499 000c 0000     		.2byte	0
+ 500 000e 0000     		.2byte	0
+ 501 0010 00000000 		.4byte	.LFB0
+ 502 0014 02000000 		.4byte	.LFE0-.LFB0
+ 503 0018 00000000 		.4byte	.LFB1
+ 504 001c 02000000 		.4byte	.LFE1-.LFB1
+ 505 0020 00000000 		.4byte	.LFB2
+ 506 0024 28000000 		.4byte	.LFE2-.LFB2
+ 507 0028 00000000 		.4byte	.LFB3
+ 508 002c 14000000 		.4byte	.LFE3-.LFB3
+ 509 0030 00000000 		.4byte	0
+ 510 0034 00000000 		.4byte	0
+ 511              		.section	.debug_ranges,"",%progbits
+ 512              	.Ldebug_ranges0:
+ 513 0000 00000000 		.4byte	.LFB0
+ 514 0004 02000000 		.4byte	.LFE0
+ 515 0008 00000000 		.4byte	.LFB1
+ 516 000c 02000000 		.4byte	.LFE1
+ 517 0010 00000000 		.4byte	.LFB2
+ 518 0014 28000000 		.4byte	.LFE2
+ 519 0018 00000000 		.4byte	.LFB3
+ 520 001c 14000000 		.4byte	.LFE3
+ 521 0020 00000000 		.4byte	0
+ 522 0024 00000000 		.4byte	0
+ 523              		.section	.debug_line,"",%progbits
+ 524              	.Ldebug_line0:
+ 525 0000 A1000000 		.section	.debug_str,"MS",%progbits,1
+ 525      02005600 
+ 525      00000201 
+ 525      FB0E0D00 
+ 525      01010101 
+ 526              	.LASF6:
+ 527 0000 6C6F6E67 		.ascii	"long long int\000"
+ 527      206C6F6E 
+ 527      6720696E 
+ 527      7400
+ 528              	.LASF25:
+ 529 000e 656E6162 		.ascii	"enableState\000"
+ 529      6C655374 
+ 529      61746500 
+ 530              	.LASF8:
+ 531 001a 756E7369 		.ascii	"unsigned int\000"
+ 531      676E6564 
+ 531      20696E74 
+ 531      00
+ 532              	.LASF23:
+ 533 0027 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Opamp_3_PM.c\000"
+ 533      6E657261 
+ 533      7465645F 
+ 533      536F7572 
+ 533      63655C50 
+ 534              	.LASF19:
+ 535 004d 4F70616D 		.ascii	"Opamp_3_Wakeup\000"
+ 535      705F335F 
+ 535      57616B65 
+ 535      757000
+ 536              	.LASF21:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 13
+
+
+ 537 005c 4F70616D 		.ascii	"Opamp_3_Enable\000"
+ 537      705F335F 
+ 537      456E6162 
+ 537      6C6500
+ 538              	.LASF12:
+ 539 006b 75696E74 		.ascii	"uint8\000"
+ 539      3800
+ 540              	.LASF5:
+ 541 0071 6C6F6E67 		.ascii	"long unsigned int\000"
+ 541      20756E73 
+ 541      69676E65 
+ 541      6420696E 
+ 541      7400
+ 542              	.LASF7:
+ 543 0083 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 543      206C6F6E 
+ 543      6720756E 
+ 543      7369676E 
+ 543      65642069 
+ 544              	.LASF24:
+ 545 009a 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Desktop\\ThereminPSOC\\There"
+ 545      73657273 
+ 545      5C444769 
+ 545      6C6C696C 
+ 545      616E645C 
+ 546 00c8 6D696E5C 		.ascii	"min\\ThereminPSOC.cydsn\000"
+ 546      54686572 
+ 546      656D696E 
+ 546      50534F43 
+ 546      2E637964 
+ 547              	.LASF22:
+ 548 00df 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 548      4320342E 
+ 548      392E3320 
+ 548      32303135 
+ 548      30333033 
+ 549 0112 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 549      20726576 
+ 549      6973696F 
+ 549      6E203232 
+ 549      31323230 
+ 550 0145 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 550      66756E63 
+ 550      74696F6E 
+ 550      2D736563 
+ 550      74696F6E 
+ 551              	.LASF11:
+ 552 016d 63686172 		.ascii	"char\000"
+ 552      00
+ 553              	.LASF17:
+ 554 0172 4F70616D 		.ascii	"Opamp_3_RestoreConfig\000"
+ 554      705F335F 
+ 554      52657374 
+ 554      6F726543 
+ 554      6F6E6669 
+ 555              	.LASF1:
+ 556 0188 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 14
+
+
+ 556      676E6564 
+ 556      20636861 
+ 556      7200
+ 557              	.LASF16:
+ 558 0196 4F70616D 		.ascii	"Opamp_3_SaveConfig\000"
+ 558      705F335F 
+ 558      53617665 
+ 558      436F6E66 
+ 558      696700
+ 559              	.LASF18:
+ 560 01a9 4F70616D 		.ascii	"Opamp_3_Sleep\000"
+ 560      705F335F 
+ 560      536C6565 
+ 560      7000
+ 561              	.LASF4:
+ 562 01b7 6C6F6E67 		.ascii	"long int\000"
+ 562      20696E74 
+ 562      00
+ 563              	.LASF15:
+ 564 01c0 4F70616D 		.ascii	"Opamp_3_BACKUP_STRUCT\000"
+ 564      705F335F 
+ 564      4241434B 
+ 564      55505F53 
+ 564      54525543 
+ 565              	.LASF10:
+ 566 01d6 646F7562 		.ascii	"double\000"
+ 566      6C6500
+ 567              	.LASF3:
+ 568 01dd 73686F72 		.ascii	"short unsigned int\000"
+ 568      7420756E 
+ 568      7369676E 
+ 568      65642069 
+ 568      6E7400
+ 569              	.LASF0:
+ 570 01f0 7369676E 		.ascii	"signed char\000"
+ 570      65642063 
+ 570      68617200 
+ 571              	.LASF9:
+ 572 01fc 666C6F61 		.ascii	"float\000"
+ 572      7400
+ 573              	.LASF2:
+ 574 0202 73686F72 		.ascii	"short int\000"
+ 574      7420696E 
+ 574      7400
+ 575              	.LASF13:
+ 576 020c 72656738 		.ascii	"reg8\000"
+ 576      00
+ 577              	.LASF26:
+ 578 0211 4F70616D 		.ascii	"Opamp_3_backup\000"
+ 578      705F335F 
+ 578      6261636B 
+ 578      757000
+ 579              	.LASF20:
+ 580 0220 4F70616D 		.ascii	"Opamp_3_Stop\000"
+ 580      705F335F 
+ 580      53746F70 
+ 580      00
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccsOAITP.s 			page 15
+
+
+ 581              	.LASF14:
+ 582 022d 73697A65 		.ascii	"sizetype\000"
+ 582      74797065 
+ 582      00
+ 583              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

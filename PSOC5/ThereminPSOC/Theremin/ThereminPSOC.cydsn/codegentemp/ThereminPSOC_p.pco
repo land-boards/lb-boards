@@ -1,0 +1,18 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "\WaveDAC8_1:Wave2_DMA\" drqcell -1 -1 1
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\ADC_SAR_1:IRQ\" interrupt -1 -1 0
+set_location "\WaveDAC8_1:VDAC8:viDAC8\" vidaccell -1 -1 3
+set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0
+set_io "Dedicated_Output" iocell 0 1
+set_io "Dedicated_Output_1" iocell 3 7
+set_location "\WaveDAC8_1:Wave1_DMA\" drqcell -1 -1 0
+set_location "\Opamp_1:ABuf\" abufcell -1 -1 3
+set_location "\Opamp_2:ABuf\" abufcell -1 -1 0
+set_location "\Opamp_3:ABuf\" abufcell -1 -1 1
+set_io "Pin_1(0)" iocell 3 3
+set_io "Vout_1(0)" iocell 3 6
+set_io "Pin_2(0)" iocell 0 2
+set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4

@@ -1,0 +1,25 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2015-10-05T13:34:58Z")
+ (DESIGN "ThereminPSOC")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 3.3")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "ThereminPSOC")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb \\ADC_SAR_1\:IRQ\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb \\WaveDAC8_1\:Wave1_DMA\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb \\WaveDAC8_1\:Wave2_DMA\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\ADC_SAR_1\:ADC_SAR\\.eof_udb \\ADC_SAR_1\:IRQ\\.interrupt (8.345:8.345:8.345))
+    (INTERCONNECT ClockBlock.dclk_0 \\ADC_SAR_1\:ADC_SAR\\.clk_udb (8.308:8.308:8.308))
+    (INTERCONNECT ClockBlock.dclk_1 \\WaveDAC8_1\:VDAC8\:viDAC8\\.strobe_udb (8.622:8.622:8.622))
+    (INTERCONNECT ClockBlock.dclk_1 \\WaveDAC8_1\:Wave1_DMA\\.dmareq (5.704:5.704:5.704))
+   )
+  )
+ )
+)
