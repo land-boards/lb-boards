@@ -11,9 +11,9 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "TINYGRID85"
-Date "28 mar 2015"
-Rev "X2"
+Title "ESP-BKOUT"
+Date "Wednesday, October 21, 2015"
+Rev "X3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -172,8 +172,6 @@ F 3 "" H 8050 6300 60  0001 C CNN
 	1    8050 6300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8150 5500
-NoConn ~ 8150 5600
 NoConn ~ 8150 5700
 NoConn ~ 8150 5800
 NoConn ~ 8150 5900
@@ -182,8 +180,6 @@ NoConn ~ 9650 6000
 NoConn ~ 9650 5900
 NoConn ~ 9650 5800
 NoConn ~ 9650 5700
-NoConn ~ 9650 5600
-NoConn ~ 9650 5500
 $Comp
 L arduino_mini U5
 U 1 1 55ABB26F
@@ -260,7 +256,7 @@ U 1 1 55ABBEC2
 P 1650 5400
 F 0 "J1" H 1550 5550 50  0000 L BNN
 F 1 "DCJ0202" H 1550 5150 50  0000 L BNN
-F 2 "dougsLib:JACK_2.1MM" H 1650 5550 50  0001 C CNN
+F 2 "DougsNewMods:DCJ-NEW" H 1650 5550 50  0000 C CNN
 F 3 "" H 1650 5400 60  0000 C CNN
 	1    1650 5400
 	1    0    0    -1  
@@ -715,7 +711,7 @@ Wire Wire Line
 	5100 1950 6350 1950
 Connection ~ 2500 1100
 Wire Wire Line
-	8950 3250 9650 3250
+	8950 3250 10000 3250
 Wire Wire Line
 	1950 5400 2000 5400
 Wire Wire Line
@@ -757,7 +753,7 @@ Wire Wire Line
 	7700 2500 7700 2700
 Connection ~ 8450 2550
 Wire Wire Line
-	7350 3100 7850 3100
+	7050 3100 7850 3100
 Wire Wire Line
 	7700 3100 7700 3000
 Connection ~ 7700 2550
@@ -782,13 +778,29 @@ Wire Wire Line
 	9050 1200 9750 1200
 Text Label 9400 1200 0    60   ~ 0
 DTR
-Text Label 7450 3100 0    60   ~ 0
-RTS
+Text Label 7200 3100 0    60   ~ 0
+ESPRTS
 Connection ~ 7700 3100
 Wire Wire Line
 	9050 1600 9750 1600
 Text Label 9400 1600 0    60   ~ 0
 RTS
-Text Label 9350 3250 0    60   ~ 0
+Text Label 9550 3250 0    60   ~ 0
+ESPDTR
+Text Label 9900 5500 0    60   ~ 0
+ESPDTR
+Text Label 9900 5600 0    60   ~ 0
+ESPRTS
+Wire Wire Line
+	10250 5500 9650 5500
+Wire Wire Line
+	10250 5600 9650 5600
+Text Label 7700 5500 0    60   ~ 0
 DTR
+Text Label 7700 5600 0    60   ~ 0
+RTS
+Wire Wire Line
+	8150 5500 7550 5500
+Wire Wire Line
+	8150 5600 7550 5600
 $EndSCHEMATC
