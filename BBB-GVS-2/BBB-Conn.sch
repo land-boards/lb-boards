@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/02/2015 13:37:05
+EESchema Schematic File Version 2
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -8,7 +8,7 @@ LIBS:memory
 LIBS:beaglebone
 LIBS:linear
 LIBS:BBB-GVS-2-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -29,10 +29,10 @@ A1
 Text Label 6850 2200 0    60   ~ 0
 A2
 $Comp
-L GND #U4
+L GND #U2
 U 1 1 53AEED58
 P 7650 3150
-F 0 "#U4" H 7650 3150 60  0001 C CNN
+F 0 "#U2" H 7650 3150 60  0001 C CNN
 F 1 "~" H 7650 3150 60  0001 C CNN
 F 2 "" H 7650 3150 60  0001 C CNN
 F 3 "" H 7650 3150 60  0001 C CNN
@@ -40,10 +40,10 @@ F 3 "" H 7650 3150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #U2
+L GND #U1
 U 1 1 53AEED59
 P 6150 2250
-F 0 "#U2" H 6150 2250 60  0001 C CNN
+F 0 "#U1" H 6150 2250 60  0001 C CNN
 F 1 "~" H 6150 2250 60  0001 C CNN
 F 2 "" H 6150 2250 60  0001 C CNN
 F 3 "" H 6150 2250 60  0001 C CNN

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/02/2015 12:43:10
+EESchema Schematic File Version 2
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -8,13 +8,13 @@ LIBS:memory
 LIBS:beaglebone
 LIBS:linear
 LIBS:BBB-GVS-2-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 2 6
 Title "BeagleBone Cape Baseline"
-Date "19 feb 2015"
+Date "24 feb 2015"
 Rev "X4"
 Comp "Doug Gilliland <doug@douglasgilliland.com>"
 Comment1 "https://github.com/douggilliland/"
@@ -261,7 +261,7 @@ F 3 "" H 3750 3200 60  0000 C CNN
 $EndComp
 Text Label 2500 3500 0    60   ~ 0
 SYS_5V
-Text Label 3700 1150 0    60   ~ 0
+Text Label 3150 1100 0    60   ~ 0
 VDD_5V
 Text Label 1750 1750 0    60   ~ 0
 VDD_5V
@@ -327,11 +327,29 @@ F 3 "" H 8900 3050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 1500 8750 1500
+	6000 1500 6150 1500
 Wire Wire Line
-	7650 3150 7650 3000
+	6150 1500 6450 1500
 Wire Wire Line
-	8350 2700 9250 2700
+	6450 1500 6650 1500
+Wire Wire Line
+	6650 1500 6850 1500
+Wire Wire Line
+	6850 1500 7650 1500
+Wire Wire Line
+	7650 1500 8400 1500
+Wire Wire Line
+	8400 1500 8550 1500
+Wire Wire Line
+	8550 1500 8750 1500
+Wire Wire Line
+	7650 3150 7650 3050
+Wire Wire Line
+	7650 3050 7650 3000
+Wire Wire Line
+	8350 2700 8750 2700
+Wire Wire Line
+	8750 2700 9250 2700
 Wire Wire Line
 	6150 2100 6150 2250
 Connection ~ 6600 3400
@@ -341,7 +359,9 @@ Connection ~ 6550 2300
 Wire Wire Line
 	6450 2100 6450 2300
 Wire Wire Line
-	6450 2300 6950 2300
+	6450 2300 6550 2300
+Wire Wire Line
+	6550 2300 6950 2300
 Wire Wire Line
 	6950 2500 6850 2500
 Wire Wire Line
@@ -367,14 +387,18 @@ Wire Wire Line
 Wire Wire Line
 	6550 3300 6550 3400
 Wire Wire Line
-	6550 3400 6650 3400
+	6550 3400 6600 3400
+Wire Wire Line
+	6600 3400 6650 3400
 Wire Wire Line
 	6650 3400 6650 3300
 Wire Wire Line
 	6150 1500 6150 1700
 Connection ~ 6450 1500
 Wire Wire Line
-	8350 2600 9250 2600
+	8350 2600 8550 2600
+Wire Wire Line
+	8550 2600 9250 2600
 Wire Wire Line
 	8550 1600 8550 1500
 Connection ~ 8550 1500
@@ -396,14 +420,20 @@ Wire Wire Line
 Wire Wire Line
 	1850 1750 1850 1900
 Wire Wire Line
-	1650 1750 2150 1750
+	1650 1750 1850 1750
 Wire Wire Line
-	1650 2450 3550 2450
+	1850 1750 2150 1750
+Wire Wire Line
+	1650 2450 1850 2450
+Wire Wire Line
+	1850 2450 2300 2450
+Wire Wire Line
+	2300 2450 2600 2450
+Wire Wire Line
+	2600 2450 2900 2450
+Wire Wire Line
+	2900 2450 3550 2450
 Connection ~ 1850 2450
-Wire Wire Line
-	3550 1300 3550 1150
-Wire Wire Line
-	3550 1150 4050 1150
 Wire Wire Line
 	3550 1800 3550 1950
 Wire Wire Line
@@ -419,7 +449,9 @@ Connection ~ 2900 2450
 Wire Wire Line
 	2900 1750 2900 1900
 Wire Wire Line
-	2450 1750 2900 1750
+	2450 1750 2600 1750
+Wire Wire Line
+	2600 1750 2900 1750
 Wire Wire Line
 	2600 1900 2600 1750
 Connection ~ 2600 1750
@@ -457,7 +489,9 @@ Connection ~ 8400 1500
 Wire Wire Line
 	8350 2400 8400 2400
 Wire Wire Line
-	8400 2100 8400 2950
+	8400 2100 8400 2400
+Wire Wire Line
+	8400 2400 8400 2950
 Wire Wire Line
 	8400 2950 8550 2950
 Connection ~ 8400 2400
@@ -470,5 +504,14 @@ Wire Wire Line
 Connection ~ 7650 3050
 Connection ~ 6650 2400
 Wire Wire Line
-	6650 2100 6650 2500
+	6650 2100 6650 2400
+Wire Wire Line
+	6650 2400 6650 2500
+Text GLabel 6000 1500 0    60   Input ~ 0
+VCC_3V3EXP
+Connection ~ 6150 1500
+Wire Wire Line
+	3100 1100 3550 1100
+Wire Wire Line
+	3550 1100 3550 1300
 $EndSCHEMATC

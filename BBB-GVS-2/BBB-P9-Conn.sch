@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24/02/2015 13:37:05
+EESchema Schematic File Version 2
 LIBS:DougsSch
 LIBS:power
 LIBS:device
@@ -8,7 +8,7 @@ LIBS:memory
 LIBS:beaglebone
 LIBS:linear
 LIBS:BBB-GVS-2-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -115,8 +115,8 @@ L GND #U1
 U 1 1 00000000
 P 2350 3600
 AR Path="/4EB0F8E9/00000000" Ref="#U1"  Part="1" 
-AR Path="/54E536E4/00000000" Ref="#U1"  Part="1" 
-F 0 "#U1" H 2350 3600 60  0001 C CNN
+AR Path="/54E536E4/00000000" Ref="#U4"  Part="1" 
+F 0 "#U4" H 2350 3600 60  0001 C CNN
 F 1 "~" H 2350 3600 60  0001 C CNN
 F 2 "" H 2350 3600 60  0000 C CNN
 F 3 "" H 2350 3600 60  0000 C CNN
