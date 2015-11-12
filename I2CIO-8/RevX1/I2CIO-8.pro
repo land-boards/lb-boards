@@ -1,6 +1,8 @@
-update=11/8/2015 9:04:38 AM
+update=10/12/2015 9:09:43 AM
 version=1
 last_client=kicad
+[general]
+version=1
 [cvpcb]
 version=1
 NetIExt=net
@@ -34,6 +36,4 @@ LibName1=power
 LibName2=device
 LibName3=conn
 LibName4=mcp23008
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-[general]
-version=1
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
