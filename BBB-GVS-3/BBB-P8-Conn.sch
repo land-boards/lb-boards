@@ -32,8 +32,6 @@ Text Label 1050 1550 0    60   ~ 0
 EHRPWM2B
 Text Label 1050 1450 0    60   ~ 0
 GPIO1_13
-Text Label 1050 1350 0    60   ~ 0
-TIMER5
 Text Label 1050 1250 0    60   ~ 0
 TIMER4
 Text Label 1050 950  0    60   ~ 0
@@ -71,8 +69,6 @@ Wire Wire Line
 Wire Wire Line
 	1650 1550 1000 1550
 Wire Wire Line
-	1650 1350 1000 1350
-Wire Wire Line
 	1650 950  1000 950 
 Wire Wire Line
 	1600 5850 950  5850
@@ -91,23 +87,23 @@ Wire Wire Line
 Wire Wire Line
 	1600 5350 950  5350
 $Comp
-L BEAGLEBONE U6
+L BEAGLEBONE BRD1
 U 2 1 54E25DF8
 P 1950 2100
-F 0 "U6" H 2050 800 60  0000 C CNN
+F 0 "BRD1" H 2050 800 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2250 700 60  0000 C CNN
-F 2 "~" H 1450 -50 60  0000 C CNN
+F 2 "dougsLib:BEAGLEBONE" H 1450 -50 60  0000 C CNN
 F 3 "~" H 1450 -50 60  0000 C CNN
 	2    1950 2100
 	1    0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE U6
+L BEAGLEBONE BRD1
 U 3 1 54E25E07
 P 1900 5750
-F 0 "U6" H 2000 4450 60  0000 C CNN
+F 0 "BRD1" H 2000 4450 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2200 4350 60  0000 C CNN
-F 2 "~" H 1400 3600 60  0000 C CNN
+F 2 "dougsLib:BEAGLEBONE" H 1850 4200 60  0000 C CNN
 F 3 "~" H 1400 3600 60  0000 C CNN
 	3    1900 5750
 	1    0    0    -1  
@@ -142,4 +138,298 @@ NoConn ~ 1600 5650
 NoConn ~ 1600 5550
 NoConn ~ 1600 4850
 NoConn ~ 1600 4750
+Text Label 3500 3950 0    60   ~ 0
+EHRPWM2A
+Text Label 3500 3450 0    60   ~ 0
+GPIO0_27
+Text Label 3500 2950 0    60   ~ 0
+GPIO1_15
+Text Label 3500 2450 0    60   ~ 0
+EHRPWM2B
+Text Label 3500 1950 0    60   ~ 0
+GPIO1_13
+Text Label 3500 950  0    60   ~ 0
+TIMER4
+Wire Wire Line
+	4300 950  3450 950 
+Wire Wire Line
+	4300 1950 3450 1950
+Wire Wire Line
+	4300 2950 3450 2950
+Wire Wire Line
+	4300 3950 3450 3950
+Wire Wire Line
+	4300 3450 3450 3450
+Wire Wire Line
+	4300 2450 3450 2450
+Text Label 3500 6950 0    60   ~ 0
+GPIO1_29
+Text Label 3500 6450 0    60   ~ 0
+GPIO2_1
+Text Label 3500 5950 0    60   ~ 0
+GPIO1_14
+Text Label 3500 5450 0    60   ~ 0
+GPIO1_12
+Text Label 3500 4950 0    60   ~ 0
+TIMER6
+Text Label 3500 4450 0    60   ~ 0
+TIMER7
+Wire Wire Line
+	4300 6950 3450 6950
+Wire Wire Line
+	4300 6450 3450 6450
+Wire Wire Line
+	4300 4950 3450 4950
+Wire Wire Line
+	4300 4450 3450 4450
+Wire Wire Line
+	4300 5450 3450 5450
+Wire Wire Line
+	4300 5950 3450 5950
+$Comp
+L CONN_3 J23
+U 1 1 564908E3
+P 4650 1050
+F 0 "J23" H 4650 850 50  0000 C CNN
+F 1 "CONN_3" V 4700 1050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 1250 60  0000 C CNN
+F 3 "" H 4650 1050 60  0000 C CNN
+	1    4650 1050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J20
+U 1 1 56490ADE
+P 4650 2050
+F 0 "J20" H 4650 1850 50  0000 C CNN
+F 1 "CONN_3" V 4700 2050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 2250 60  0000 C CNN
+F 3 "" H 4650 2050 60  0000 C CNN
+	1    4650 2050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J18
+U 1 1 56490B7D
+P 4650 2550
+F 0 "J18" H 4650 2350 50  0000 C CNN
+F 1 "CONN_3" V 4700 2550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 2750 60  0000 C CNN
+F 3 "" H 4650 2550 60  0000 C CNN
+	1    4650 2550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J17
+U 1 1 56490BC3
+P 4650 3050
+F 0 "J17" H 4650 2850 50  0000 C CNN
+F 1 "CONN_3" V 4700 3050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 3250 60  0000 C CNN
+F 3 "" H 4650 3050 60  0000 C CNN
+	1    4650 3050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J15
+U 1 1 56490CA6
+P 4650 3550
+F 0 "J15" H 4650 3350 50  0000 C CNN
+F 1 "CONN_3" V 4700 3550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 3750 60  0000 C CNN
+F 3 "" H 4650 3550 60  0000 C CNN
+	1    4650 3550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J13
+U 1 1 56490CE0
+P 4650 4050
+F 0 "J13" H 4650 3850 50  0000 C CNN
+F 1 "CONN_3" V 4700 4050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 4250 60  0000 C CNN
+F 3 "" H 4650 4050 60  0000 C CNN
+	1    4650 4050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J24
+U 1 1 56490E0E
+P 4650 4550
+F 0 "J24" H 4650 4350 50  0000 C CNN
+F 1 "CONN_3" V 4700 4550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 4750 60  0000 C CNN
+F 3 "" H 4650 4550 60  0000 C CNN
+	1    4650 4550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J22
+U 1 1 56490E14
+P 4650 5050
+F 0 "J22" H 4650 4850 50  0000 C CNN
+F 1 "CONN_3" V 4700 5050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 5250 60  0000 C CNN
+F 3 "" H 4650 5050 60  0000 C CNN
+	1    4650 5050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J19
+U 1 1 56490E1A
+P 4650 5550
+F 0 "J19" H 4650 5350 50  0000 C CNN
+F 1 "CONN_3" V 4700 5550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 5750 60  0000 C CNN
+F 3 "" H 4650 5550 60  0000 C CNN
+	1    4650 5550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J16
+U 1 1 56490FE6
+P 4650 6050
+F 0 "J16" H 4650 5850 50  0000 C CNN
+F 1 "CONN_3" V 4700 6050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 6250 60  0000 C CNN
+F 3 "" H 4650 6050 60  0000 C CNN
+	1    4650 6050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J14
+U 1 1 56490FEC
+P 4650 6550
+F 0 "J14" H 4650 6350 50  0000 C CNN
+F 1 "CONN_3" V 4700 6550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 6750 60  0000 C CNN
+F 3 "" H 4650 6550 60  0000 C CNN
+	1    4650 6550
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_3 J12
+U 1 1 56490FF2
+P 4650 7050
+F 0 "J12" H 4650 6850 50  0000 C CNN
+F 1 "CONN_3" V 4700 7050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 7250 60  0000 C CNN
+F 3 "" H 4650 7050 60  0000 C CNN
+	1    4650 7050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4300 1150 4200 1150
+Wire Wire Line
+	4200 1150 4200 7300
+Wire Wire Line
+	4300 7150 4200 7150
+Connection ~ 4200 7150
+Wire Wire Line
+	4300 6650 4200 6650
+Connection ~ 4200 6650
+Wire Wire Line
+	4300 6150 4200 6150
+Connection ~ 4200 6150
+Wire Wire Line
+	4300 5650 4200 5650
+Connection ~ 4200 5650
+Wire Wire Line
+	4300 5150 4200 5150
+Connection ~ 4200 5150
+Wire Wire Line
+	4300 4650 4200 4650
+Connection ~ 4200 4650
+Wire Wire Line
+	4300 4150 4200 4150
+Connection ~ 4200 4150
+Wire Wire Line
+	4300 3650 4200 3650
+Connection ~ 4200 3650
+Wire Wire Line
+	4300 3150 4200 3150
+Connection ~ 4200 3150
+Wire Wire Line
+	4300 2650 4200 2650
+Connection ~ 4200 2650
+$Comp
+L GND #PWR04
+U 1 1 56492E09
+P 4200 7300
+F 0 "#PWR04" H 4200 7300 30  0001 C CNN
+F 1 "GND" H 4200 7230 30  0001 C CNN
+F 2 "" H 4200 7300 60  0000 C CNN
+F 3 "" H 4200 7300 60  0000 C CNN
+	1    4200 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 7050 4300 7050
+Wire Wire Line
+	4100 750  4100 7050
+Wire Wire Line
+	4300 1050 4100 1050
+Connection ~ 4100 1050
+Wire Wire Line
+	4300 2150 4200 2150
+Connection ~ 4200 2150
+Wire Wire Line
+	4300 2050 4100 2050
+Connection ~ 4100 2050
+Wire Wire Line
+	4300 2550 4100 2550
+Connection ~ 4100 2550
+Wire Wire Line
+	4300 3050 4100 3050
+Connection ~ 4100 3050
+Wire Wire Line
+	4300 4050 4100 4050
+Connection ~ 4100 4050
+Wire Wire Line
+	4300 4550 4100 4550
+Connection ~ 4100 4550
+Wire Wire Line
+	4300 5550 4100 5550
+Connection ~ 4100 5550
+Wire Wire Line
+	4300 5050 4100 5050
+Connection ~ 4100 5050
+Wire Wire Line
+	4300 6050 4100 6050
+Connection ~ 4100 6050
+Wire Wire Line
+	4300 6550 4100 6550
+Connection ~ 4100 6550
+Wire Wire Line
+	4100 750  3450 750 
+Text GLabel 3450 750  0    60   UnSpc ~ 0
+VDD_3V3EXP
+Text Label 1050 1350 0    60   ~ 0
+TIMER5
+Wire Wire Line
+	1000 1350 1650 1350
+Text Label 3500 1450 0    60   ~ 0
+TIMER5
+$Comp
+L CONN_3 J21
+U 1 1 5649913A
+P 4650 1550
+F 0 "J21" H 4650 1350 50  0000 C CNN
+F 1 "CONN_3" V 4700 1550 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 1750 60  0000 C CNN
+F 3 "" H 4650 1550 60  0000 C CNN
+	1    4650 1550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4300 1650 4200 1650
+Connection ~ 4200 1650
+Wire Wire Line
+	4300 1550 4100 1550
+Connection ~ 4100 1550
+Wire Wire Line
+	4300 1450 3450 1450
+Wire Wire Line
+	4300 3550 4100 3550
+Connection ~ 4100 3550
 $EndSCHEMATC
