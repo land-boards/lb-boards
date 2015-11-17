@@ -1,0 +1,529 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cyutils.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.CySetReg24,"ax",%progbits
+  19              		.align	2
+  20              		.global	CySetReg24
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	CySetReg24, %function
+  24              	CySetReg24:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\cyutils.c"
+   1:.\Generated_Source\PSoC5/cyutils.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/cyutils.c **** * FILENAME: cyutils.c
+   3:.\Generated_Source\PSoC5/cyutils.c **** * Version 5.20
+   4:.\Generated_Source\PSoC5/cyutils.c **** *
+   5:.\Generated_Source\PSoC5/cyutils.c **** *  Description:
+   6:.\Generated_Source\PSoC5/cyutils.c **** *   CyUtils provides a function to handle 24-bit value writes.
+   7:.\Generated_Source\PSoC5/cyutils.c **** *
+   8:.\Generated_Source\PSoC5/cyutils.c **** ********************************************************************************
+   9:.\Generated_Source\PSoC5/cyutils.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  10:.\Generated_Source\PSoC5/cyutils.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:.\Generated_Source\PSoC5/cyutils.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:.\Generated_Source\PSoC5/cyutils.c **** * the software package with which this file was provided.
+  13:.\Generated_Source\PSoC5/cyutils.c **** *******************************************************************************/
+  14:.\Generated_Source\PSoC5/cyutils.c **** 
+  15:.\Generated_Source\PSoC5/cyutils.c **** #include "cytypes.h"
+  16:.\Generated_Source\PSoC5/cyutils.c **** 
+  17:.\Generated_Source\PSoC5/cyutils.c **** #if (!CY_PSOC3)
+  18:.\Generated_Source\PSoC5/cyutils.c **** 
+  19:.\Generated_Source\PSoC5/cyutils.c ****     /***************************************************************************
+  20:.\Generated_Source\PSoC5/cyutils.c ****     * Function Name: CySetReg24
+  21:.\Generated_Source\PSoC5/cyutils.c ****     ****************************************************************************
+  22:.\Generated_Source\PSoC5/cyutils.c ****     *
+  23:.\Generated_Source\PSoC5/cyutils.c ****     * Summary:
+  24:.\Generated_Source\PSoC5/cyutils.c ****     *  Writes a 24-bit value to the specified register.
+  25:.\Generated_Source\PSoC5/cyutils.c ****     *
+  26:.\Generated_Source\PSoC5/cyutils.c ****     * Parameters:
+  27:.\Generated_Source\PSoC5/cyutils.c ****     *  addr : the address where data must be written.
+  28:.\Generated_Source\PSoC5/cyutils.c ****     *  value: the data that must be written.
+  29:.\Generated_Source\PSoC5/cyutils.c ****     *
+  30:.\Generated_Source\PSoC5/cyutils.c ****     * Return:
+  31:.\Generated_Source\PSoC5/cyutils.c ****     *  None
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/cyutils.c ****     *
+  33:.\Generated_Source\PSoC5/cyutils.c ****     * Reentrant:
+  34:.\Generated_Source\PSoC5/cyutils.c ****     *  No
+  35:.\Generated_Source\PSoC5/cyutils.c ****     *
+  36:.\Generated_Source\PSoC5/cyutils.c ****     ***************************************************************************/
+  37:.\Generated_Source\PSoC5/cyutils.c ****     void CySetReg24(uint32 volatile * addr, uint32 value)
+  38:.\Generated_Source\PSoC5/cyutils.c ****     {
+  27              		.loc 1 38 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              	.LVL0:
+  39:.\Generated_Source\PSoC5/cyutils.c ****         uint8 volatile *tmpAddr;
+  40:.\Generated_Source\PSoC5/cyutils.c **** 
+  41:.\Generated_Source\PSoC5/cyutils.c ****         tmpAddr = (uint8 volatile *) addr;
+  42:.\Generated_Source\PSoC5/cyutils.c **** 
+  43:.\Generated_Source\PSoC5/cyutils.c ****         tmpAddr[0u] = (uint8) value;
+  33              		.loc 1 43 0
+  34 0000 CBB2     		uxtb	r3, r1
+  35 0002 0370     		strb	r3, [r0]
+  44:.\Generated_Source\PSoC5/cyutils.c ****         tmpAddr[1u] = (uint8) (value >> 8u);
+  36              		.loc 1 44 0
+  37 0004 C1F30723 		ubfx	r3, r1, #8, #8
+  38 0008 4370     		strb	r3, [r0, #1]
+  45:.\Generated_Source\PSoC5/cyutils.c ****         tmpAddr[2u] = (uint8) (value >> 16u);
+  39              		.loc 1 45 0
+  40 000a C1F30741 		ubfx	r1, r1, #16, #8
+  41              	.LVL1:
+  42 000e 8170     		strb	r1, [r0, #2]
+  43 0010 7047     		bx	lr
+  44              		.cfi_endproc
+  45              	.LFE0:
+  46              		.size	CySetReg24, .-CySetReg24
+  47 0012 00BF     		.text
+  48              	.Letext0:
+  49              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+  50              		.section	.debug_info,"",%progbits
+  51              	.Ldebug_info0:
+  52 0000 E8000000 		.4byte	0xe8
+  53 0004 0400     		.2byte	0x4
+  54 0006 00000000 		.4byte	.Ldebug_abbrev0
+  55 000a 04       		.byte	0x4
+  56 000b 01       		.uleb128 0x1
+  57 000c DF000000 		.4byte	.LASF16
+  58 0010 01       		.byte	0x1
+  59 0011 06000000 		.4byte	.LASF17
+  60 0015 29000000 		.4byte	.LASF18
+  61 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  62 001d 00000000 		.4byte	0
+  63 0021 00000000 		.4byte	.Ldebug_line0
+  64 0025 02       		.uleb128 0x2
+  65 0026 01       		.byte	0x1
+  66 0027 06       		.byte	0x6
+  67 0028 BD010000 		.4byte	.LASF0
+  68 002c 02       		.uleb128 0x2
+  69 002d 01       		.byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 3
+
+
+  70 002e 08       		.byte	0x8
+  71 002f 8B000000 		.4byte	.LASF1
+  72 0033 02       		.uleb128 0x2
+  73 0034 02       		.byte	0x2
+  74 0035 05       		.byte	0x5
+  75 0036 A4010000 		.4byte	.LASF2
+  76 003a 02       		.uleb128 0x2
+  77 003b 02       		.byte	0x2
+  78 003c 07       		.byte	0x7
+  79 003d B3000000 		.4byte	.LASF3
+  80 0041 02       		.uleb128 0x2
+  81 0042 04       		.byte	0x4
+  82 0043 05       		.byte	0x5
+  83 0044 B4010000 		.4byte	.LASF4
+  84 0048 02       		.uleb128 0x2
+  85 0049 04       		.byte	0x4
+  86 004a 07       		.byte	0x7
+  87 004b A1000000 		.4byte	.LASF5
+  88 004f 02       		.uleb128 0x2
+  89 0050 08       		.byte	0x8
+  90 0051 05       		.byte	0x5
+  91 0052 91010000 		.4byte	.LASF6
+  92 0056 02       		.uleb128 0x2
+  93 0057 08       		.byte	0x8
+  94 0058 07       		.byte	0x7
+  95 0059 7A010000 		.4byte	.LASF7
+  96 005d 03       		.uleb128 0x3
+  97 005e 04       		.byte	0x4
+  98 005f 05       		.byte	0x5
+  99 0060 696E7400 		.ascii	"int\000"
+ 100 0064 02       		.uleb128 0x2
+ 101 0065 04       		.byte	0x4
+ 102 0066 07       		.byte	0x7
+ 103 0067 6D010000 		.4byte	.LASF8
+ 104 006b 04       		.uleb128 0x4
+ 105 006c AE010000 		.4byte	.LASF9
+ 106 0070 02       		.byte	0x2
+ 107 0071 C2       		.byte	0xc2
+ 108 0072 2C000000 		.4byte	0x2c
+ 109 0076 04       		.uleb128 0x4
+ 110 0077 D8000000 		.4byte	.LASF10
+ 111 007b 02       		.byte	0x2
+ 112 007c C4       		.byte	0xc4
+ 113 007d 48000000 		.4byte	0x48
+ 114 0081 02       		.uleb128 0x2
+ 115 0082 04       		.byte	0x4
+ 116 0083 04       		.byte	0x4
+ 117 0084 85000000 		.4byte	.LASF11
+ 118 0088 02       		.uleb128 0x2
+ 119 0089 08       		.byte	0x8
+ 120 008a 04       		.byte	0x4
+ 121 008b C6000000 		.4byte	.LASF12
+ 122 008f 02       		.uleb128 0x2
+ 123 0090 01       		.byte	0x1
+ 124 0091 08       		.byte	0x8
+ 125 0092 9F010000 		.4byte	.LASF13
+ 126 0096 05       		.uleb128 0x5
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 4
+
+
+ 127 0097 6B000000 		.4byte	0x6b
+ 128 009b 05       		.uleb128 0x5
+ 129 009c 76000000 		.4byte	0x76
+ 130 00a0 06       		.uleb128 0x6
+ 131 00a1 CD000000 		.4byte	.LASF19
+ 132 00a5 01       		.byte	0x1
+ 133 00a6 25       		.byte	0x25
+ 134 00a7 00000000 		.4byte	.LFB0
+ 135 00ab 12000000 		.4byte	.LFE0-.LFB0
+ 136 00af 01       		.uleb128 0x1
+ 137 00b0 9C       		.byte	0x9c
+ 138 00b1 DF000000 		.4byte	0xdf
+ 139 00b5 07       		.uleb128 0x7
+ 140 00b6 80000000 		.4byte	.LASF14
+ 141 00ba 01       		.byte	0x1
+ 142 00bb 25       		.byte	0x25
+ 143 00bc DF000000 		.4byte	0xdf
+ 144 00c0 01       		.uleb128 0x1
+ 145 00c1 50       		.byte	0x50
+ 146 00c2 08       		.uleb128 0x8
+ 147 00c3 00000000 		.4byte	.LASF15
+ 148 00c7 01       		.byte	0x1
+ 149 00c8 25       		.byte	0x25
+ 150 00c9 76000000 		.4byte	0x76
+ 151 00cd 00000000 		.4byte	.LLST0
+ 152 00d1 09       		.uleb128 0x9
+ 153 00d2 99000000 		.4byte	.LASF20
+ 154 00d6 01       		.byte	0x1
+ 155 00d7 27       		.byte	0x27
+ 156 00d8 E5000000 		.4byte	0xe5
+ 157 00dc 01       		.uleb128 0x1
+ 158 00dd 50       		.byte	0x50
+ 159 00de 00       		.byte	0
+ 160 00df 0A       		.uleb128 0xa
+ 161 00e0 04       		.byte	0x4
+ 162 00e1 9B000000 		.4byte	0x9b
+ 163 00e5 0A       		.uleb128 0xa
+ 164 00e6 04       		.byte	0x4
+ 165 00e7 96000000 		.4byte	0x96
+ 166 00eb 00       		.byte	0
+ 167              		.section	.debug_abbrev,"",%progbits
+ 168              	.Ldebug_abbrev0:
+ 169 0000 01       		.uleb128 0x1
+ 170 0001 11       		.uleb128 0x11
+ 171 0002 01       		.byte	0x1
+ 172 0003 25       		.uleb128 0x25
+ 173 0004 0E       		.uleb128 0xe
+ 174 0005 13       		.uleb128 0x13
+ 175 0006 0B       		.uleb128 0xb
+ 176 0007 03       		.uleb128 0x3
+ 177 0008 0E       		.uleb128 0xe
+ 178 0009 1B       		.uleb128 0x1b
+ 179 000a 0E       		.uleb128 0xe
+ 180 000b 55       		.uleb128 0x55
+ 181 000c 17       		.uleb128 0x17
+ 182 000d 11       		.uleb128 0x11
+ 183 000e 01       		.uleb128 0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 5
+
+
+ 184 000f 10       		.uleb128 0x10
+ 185 0010 17       		.uleb128 0x17
+ 186 0011 00       		.byte	0
+ 187 0012 00       		.byte	0
+ 188 0013 02       		.uleb128 0x2
+ 189 0014 24       		.uleb128 0x24
+ 190 0015 00       		.byte	0
+ 191 0016 0B       		.uleb128 0xb
+ 192 0017 0B       		.uleb128 0xb
+ 193 0018 3E       		.uleb128 0x3e
+ 194 0019 0B       		.uleb128 0xb
+ 195 001a 03       		.uleb128 0x3
+ 196 001b 0E       		.uleb128 0xe
+ 197 001c 00       		.byte	0
+ 198 001d 00       		.byte	0
+ 199 001e 03       		.uleb128 0x3
+ 200 001f 24       		.uleb128 0x24
+ 201 0020 00       		.byte	0
+ 202 0021 0B       		.uleb128 0xb
+ 203 0022 0B       		.uleb128 0xb
+ 204 0023 3E       		.uleb128 0x3e
+ 205 0024 0B       		.uleb128 0xb
+ 206 0025 03       		.uleb128 0x3
+ 207 0026 08       		.uleb128 0x8
+ 208 0027 00       		.byte	0
+ 209 0028 00       		.byte	0
+ 210 0029 04       		.uleb128 0x4
+ 211 002a 16       		.uleb128 0x16
+ 212 002b 00       		.byte	0
+ 213 002c 03       		.uleb128 0x3
+ 214 002d 0E       		.uleb128 0xe
+ 215 002e 3A       		.uleb128 0x3a
+ 216 002f 0B       		.uleb128 0xb
+ 217 0030 3B       		.uleb128 0x3b
+ 218 0031 0B       		.uleb128 0xb
+ 219 0032 49       		.uleb128 0x49
+ 220 0033 13       		.uleb128 0x13
+ 221 0034 00       		.byte	0
+ 222 0035 00       		.byte	0
+ 223 0036 05       		.uleb128 0x5
+ 224 0037 35       		.uleb128 0x35
+ 225 0038 00       		.byte	0
+ 226 0039 49       		.uleb128 0x49
+ 227 003a 13       		.uleb128 0x13
+ 228 003b 00       		.byte	0
+ 229 003c 00       		.byte	0
+ 230 003d 06       		.uleb128 0x6
+ 231 003e 2E       		.uleb128 0x2e
+ 232 003f 01       		.byte	0x1
+ 233 0040 3F       		.uleb128 0x3f
+ 234 0041 19       		.uleb128 0x19
+ 235 0042 03       		.uleb128 0x3
+ 236 0043 0E       		.uleb128 0xe
+ 237 0044 3A       		.uleb128 0x3a
+ 238 0045 0B       		.uleb128 0xb
+ 239 0046 3B       		.uleb128 0x3b
+ 240 0047 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 6
+
+
+ 241 0048 27       		.uleb128 0x27
+ 242 0049 19       		.uleb128 0x19
+ 243 004a 11       		.uleb128 0x11
+ 244 004b 01       		.uleb128 0x1
+ 245 004c 12       		.uleb128 0x12
+ 246 004d 06       		.uleb128 0x6
+ 247 004e 40       		.uleb128 0x40
+ 248 004f 18       		.uleb128 0x18
+ 249 0050 9742     		.uleb128 0x2117
+ 250 0052 19       		.uleb128 0x19
+ 251 0053 01       		.uleb128 0x1
+ 252 0054 13       		.uleb128 0x13
+ 253 0055 00       		.byte	0
+ 254 0056 00       		.byte	0
+ 255 0057 07       		.uleb128 0x7
+ 256 0058 05       		.uleb128 0x5
+ 257 0059 00       		.byte	0
+ 258 005a 03       		.uleb128 0x3
+ 259 005b 0E       		.uleb128 0xe
+ 260 005c 3A       		.uleb128 0x3a
+ 261 005d 0B       		.uleb128 0xb
+ 262 005e 3B       		.uleb128 0x3b
+ 263 005f 0B       		.uleb128 0xb
+ 264 0060 49       		.uleb128 0x49
+ 265 0061 13       		.uleb128 0x13
+ 266 0062 02       		.uleb128 0x2
+ 267 0063 18       		.uleb128 0x18
+ 268 0064 00       		.byte	0
+ 269 0065 00       		.byte	0
+ 270 0066 08       		.uleb128 0x8
+ 271 0067 05       		.uleb128 0x5
+ 272 0068 00       		.byte	0
+ 273 0069 03       		.uleb128 0x3
+ 274 006a 0E       		.uleb128 0xe
+ 275 006b 3A       		.uleb128 0x3a
+ 276 006c 0B       		.uleb128 0xb
+ 277 006d 3B       		.uleb128 0x3b
+ 278 006e 0B       		.uleb128 0xb
+ 279 006f 49       		.uleb128 0x49
+ 280 0070 13       		.uleb128 0x13
+ 281 0071 02       		.uleb128 0x2
+ 282 0072 17       		.uleb128 0x17
+ 283 0073 00       		.byte	0
+ 284 0074 00       		.byte	0
+ 285 0075 09       		.uleb128 0x9
+ 286 0076 34       		.uleb128 0x34
+ 287 0077 00       		.byte	0
+ 288 0078 03       		.uleb128 0x3
+ 289 0079 0E       		.uleb128 0xe
+ 290 007a 3A       		.uleb128 0x3a
+ 291 007b 0B       		.uleb128 0xb
+ 292 007c 3B       		.uleb128 0x3b
+ 293 007d 0B       		.uleb128 0xb
+ 294 007e 49       		.uleb128 0x49
+ 295 007f 13       		.uleb128 0x13
+ 296 0080 02       		.uleb128 0x2
+ 297 0081 18       		.uleb128 0x18
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 7
+
+
+ 298 0082 00       		.byte	0
+ 299 0083 00       		.byte	0
+ 300 0084 0A       		.uleb128 0xa
+ 301 0085 0F       		.uleb128 0xf
+ 302 0086 00       		.byte	0
+ 303 0087 0B       		.uleb128 0xb
+ 304 0088 0B       		.uleb128 0xb
+ 305 0089 49       		.uleb128 0x49
+ 306 008a 13       		.uleb128 0x13
+ 307 008b 00       		.byte	0
+ 308 008c 00       		.byte	0
+ 309 008d 00       		.byte	0
+ 310              		.section	.debug_loc,"",%progbits
+ 311              	.Ldebug_loc0:
+ 312              	.LLST0:
+ 313 0000 00000000 		.4byte	.LVL0
+ 314 0004 0E000000 		.4byte	.LVL1
+ 315 0008 0100     		.2byte	0x1
+ 316 000a 51       		.byte	0x51
+ 317 000b 0E000000 		.4byte	.LVL1
+ 318 000f 12000000 		.4byte	.LFE0
+ 319 0013 0400     		.2byte	0x4
+ 320 0015 F3       		.byte	0xf3
+ 321 0016 01       		.uleb128 0x1
+ 322 0017 51       		.byte	0x51
+ 323 0018 9F       		.byte	0x9f
+ 324 0019 00000000 		.4byte	0
+ 325 001d 00000000 		.4byte	0
+ 326              		.section	.debug_aranges,"",%progbits
+ 327 0000 1C000000 		.4byte	0x1c
+ 328 0004 0200     		.2byte	0x2
+ 329 0006 00000000 		.4byte	.Ldebug_info0
+ 330 000a 04       		.byte	0x4
+ 331 000b 00       		.byte	0
+ 332 000c 0000     		.2byte	0
+ 333 000e 0000     		.2byte	0
+ 334 0010 00000000 		.4byte	.LFB0
+ 335 0014 12000000 		.4byte	.LFE0-.LFB0
+ 336 0018 00000000 		.4byte	0
+ 337 001c 00000000 		.4byte	0
+ 338              		.section	.debug_ranges,"",%progbits
+ 339              	.Ldebug_ranges0:
+ 340 0000 00000000 		.4byte	.LFB0
+ 341 0004 12000000 		.4byte	.LFE0
+ 342 0008 00000000 		.4byte	0
+ 343 000c 00000000 		.4byte	0
+ 344              		.section	.debug_line,"",%progbits
+ 345              	.Ldebug_line0:
+ 346 0000 5E000000 		.section	.debug_str,"MS",%progbits,1
+ 346      02004600 
+ 346      00000201 
+ 346      FB0E0D00 
+ 346      01010101 
+ 347              	.LASF15:
+ 348 0000 76616C75 		.ascii	"value\000"
+ 348      6500
+ 349              	.LASF17:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 8
+
+
+ 350 0006 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cyutils.c\000"
+ 350      6E657261 
+ 350      7465645F 
+ 350      536F7572 
+ 350      63655C50 
+ 351              	.LASF18:
+ 352 0029 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\lb-boards"
+ 352      73657273 
+ 352      5C444769 
+ 352      6C6C696C 
+ 352      616E645C 
+ 353 0057 5C525050 		.ascii	"\\RPPSOC\\PSOC-SPI\\PSOC-SPI\\PSOC-SPI.cydsn\000"
+ 353      534F435C 
+ 353      50534F43 
+ 353      2D535049 
+ 353      5C50534F 
+ 354              	.LASF14:
+ 355 0080 61646472 		.ascii	"addr\000"
+ 355      00
+ 356              	.LASF11:
+ 357 0085 666C6F61 		.ascii	"float\000"
+ 357      7400
+ 358              	.LASF1:
+ 359 008b 756E7369 		.ascii	"unsigned char\000"
+ 359      676E6564 
+ 359      20636861 
+ 359      7200
+ 360              	.LASF20:
+ 361 0099 746D7041 		.ascii	"tmpAddr\000"
+ 361      64647200 
+ 362              	.LASF5:
+ 363 00a1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 363      20756E73 
+ 363      69676E65 
+ 363      6420696E 
+ 363      7400
+ 364              	.LASF3:
+ 365 00b3 73686F72 		.ascii	"short unsigned int\000"
+ 365      7420756E 
+ 365      7369676E 
+ 365      65642069 
+ 365      6E7400
+ 366              	.LASF12:
+ 367 00c6 646F7562 		.ascii	"double\000"
+ 367      6C6500
+ 368              	.LASF19:
+ 369 00cd 43795365 		.ascii	"CySetReg24\000"
+ 369      74526567 
+ 369      323400
+ 370              	.LASF10:
+ 371 00d8 75696E74 		.ascii	"uint32\000"
+ 371      333200
+ 372              	.LASF16:
+ 373 00df 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 373      4320342E 
+ 373      392E3320 
+ 373      32303135 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccPcsKha.s 			page 9
+
+
+ 373      30333033 
+ 374 0112 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 374      20726576 
+ 374      6973696F 
+ 374      6E203232 
+ 374      31323230 
+ 375 0145 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 375      66756E63 
+ 375      74696F6E 
+ 375      2D736563 
+ 375      74696F6E 
+ 376              	.LASF8:
+ 377 016d 756E7369 		.ascii	"unsigned int\000"
+ 377      676E6564 
+ 377      20696E74 
+ 377      00
+ 378              	.LASF7:
+ 379 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 379      206C6F6E 
+ 379      6720756E 
+ 379      7369676E 
+ 379      65642069 
+ 380              	.LASF6:
+ 381 0191 6C6F6E67 		.ascii	"long long int\000"
+ 381      206C6F6E 
+ 381      6720696E 
+ 381      7400
+ 382              	.LASF13:
+ 383 019f 63686172 		.ascii	"char\000"
+ 383      00
+ 384              	.LASF2:
+ 385 01a4 73686F72 		.ascii	"short int\000"
+ 385      7420696E 
+ 385      7400
+ 386              	.LASF9:
+ 387 01ae 75696E74 		.ascii	"uint8\000"
+ 387      3800
+ 388              	.LASF4:
+ 389 01b4 6C6F6E67 		.ascii	"long int\000"
+ 389      20696E74 
+ 389      00
+ 390              	.LASF0:
+ 391 01bd 7369676E 		.ascii	"signed char\000"
+ 391      65642063 
+ 391      68617200 
+ 392              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

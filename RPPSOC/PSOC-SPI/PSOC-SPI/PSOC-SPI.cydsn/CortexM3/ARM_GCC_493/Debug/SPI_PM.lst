@@ -1,0 +1,891 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SPI_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.SPI_SaveConfig,"ax",%progbits
+  19              		.align	2
+  20              		.global	SPI_SaveConfig
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	SPI_SaveConfig, %function
+  24              	SPI_SaveConfig:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\SPI_PM.c"
+   1:.\Generated_Source\PSoC5/SPI_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/SPI_PM.c **** * File Name: SPI_PM.c
+   3:.\Generated_Source\PSoC5/SPI_PM.c **** * Version 2.70
+   4:.\Generated_Source\PSoC5/SPI_PM.c **** *
+   5:.\Generated_Source\PSoC5/SPI_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/SPI_PM.c **** *  This file contains the setup, control and status commands to support
+   7:.\Generated_Source\PSoC5/SPI_PM.c **** *  component operations in low power mode.
+   8:.\Generated_Source\PSoC5/SPI_PM.c **** *
+   9:.\Generated_Source\PSoC5/SPI_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  11:.\Generated_Source\PSoC5/SPI_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/SPI_PM.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/SPI_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/SPI_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/SPI_PM.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/SPI_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  18:.\Generated_Source\PSoC5/SPI_PM.c **** #include "SPI_PVT.h"
+  19:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  20:.\Generated_Source\PSoC5/SPI_PM.c **** static SPI_BACKUP_STRUCT SPI_backup = 
+  21:.\Generated_Source\PSoC5/SPI_PM.c **** {
+  22:.\Generated_Source\PSoC5/SPI_PM.c ****     SPI_DISABLED,
+  23:.\Generated_Source\PSoC5/SPI_PM.c ****     SPI_BITCTR_INIT,
+  24:.\Generated_Source\PSoC5/SPI_PM.c **** };
+  25:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  26:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  27:.\Generated_Source\PSoC5/SPI_PM.c **** /*******************************************************************************
+  28:.\Generated_Source\PSoC5/SPI_PM.c **** * Function Name: SPI_SaveConfig
+  29:.\Generated_Source\PSoC5/SPI_PM.c **** ********************************************************************************
+  30:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  31:.\Generated_Source\PSoC5/SPI_PM.c **** * Summary:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/SPI_PM.c **** *  Empty function. Included for consistency with other components.
+  33:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  34:.\Generated_Source\PSoC5/SPI_PM.c **** * Parameters:
+  35:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  36:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  37:.\Generated_Source\PSoC5/SPI_PM.c **** * Return:
+  38:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  39:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  40:.\Generated_Source\PSoC5/SPI_PM.c **** *******************************************************************************/
+  41:.\Generated_Source\PSoC5/SPI_PM.c **** void SPI_SaveConfig(void) 
+  42:.\Generated_Source\PSoC5/SPI_PM.c **** {
+  27              		.loc 1 42 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE0:
+  35              		.size	SPI_SaveConfig, .-SPI_SaveConfig
+  36 0002 00BF     		.section	.text.SPI_RestoreConfig,"ax",%progbits
+  37              		.align	2
+  38              		.global	SPI_RestoreConfig
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	SPI_RestoreConfig, %function
+  42              	SPI_RestoreConfig:
+  43              	.LFB1:
+  43:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  44:.\Generated_Source\PSoC5/SPI_PM.c **** }
+  45:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  46:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  47:.\Generated_Source\PSoC5/SPI_PM.c **** /*******************************************************************************
+  48:.\Generated_Source\PSoC5/SPI_PM.c **** * Function Name: SPI_RestoreConfig
+  49:.\Generated_Source\PSoC5/SPI_PM.c **** ********************************************************************************
+  50:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  51:.\Generated_Source\PSoC5/SPI_PM.c **** * Summary:
+  52:.\Generated_Source\PSoC5/SPI_PM.c **** *  Empty function. Included for consistency with other components.
+  53:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  54:.\Generated_Source\PSoC5/SPI_PM.c **** * Parameters:
+  55:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  56:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  57:.\Generated_Source\PSoC5/SPI_PM.c **** * Return:
+  58:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  59:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  60:.\Generated_Source\PSoC5/SPI_PM.c **** *******************************************************************************/
+  61:.\Generated_Source\PSoC5/SPI_PM.c **** void SPI_RestoreConfig(void) 
+  62:.\Generated_Source\PSoC5/SPI_PM.c **** {
+  44              		.loc 1 62 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 7047     		bx	lr
+  50              		.cfi_endproc
+  51              	.LFE1:
+  52              		.size	SPI_RestoreConfig, .-SPI_RestoreConfig
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 3
+
+
+  53 0002 00BF     		.section	.text.SPI_Sleep,"ax",%progbits
+  54              		.align	2
+  55              		.global	SPI_Sleep
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	SPI_Sleep, %function
+  59              	SPI_Sleep:
+  60              	.LFB2:
+  63:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  64:.\Generated_Source\PSoC5/SPI_PM.c **** }
+  65:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  66:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  67:.\Generated_Source\PSoC5/SPI_PM.c **** /*******************************************************************************
+  68:.\Generated_Source\PSoC5/SPI_PM.c **** * Function Name: SPI_Sleep
+  69:.\Generated_Source\PSoC5/SPI_PM.c **** ********************************************************************************
+  70:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  71:.\Generated_Source\PSoC5/SPI_PM.c **** * Summary:
+  72:.\Generated_Source\PSoC5/SPI_PM.c **** *  Prepare SPI Slave Component goes to sleep.
+  73:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  74:.\Generated_Source\PSoC5/SPI_PM.c **** * Parameters:
+  75:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  76:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  77:.\Generated_Source\PSoC5/SPI_PM.c **** * Return:
+  78:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+  79:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  80:.\Generated_Source\PSoC5/SPI_PM.c **** * Global Variables:
+  81:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_backup - modified when non-retention registers are saved.
+  82:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  83:.\Generated_Source\PSoC5/SPI_PM.c **** * Reentrant:
+  84:.\Generated_Source\PSoC5/SPI_PM.c **** *  No.
+  85:.\Generated_Source\PSoC5/SPI_PM.c **** *
+  86:.\Generated_Source\PSoC5/SPI_PM.c **** *******************************************************************************/
+  87:.\Generated_Source\PSoC5/SPI_PM.c **** void SPI_Sleep(void) 
+  88:.\Generated_Source\PSoC5/SPI_PM.c **** {
+  61              		.loc 1 88 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		.loc 1 88 0
+  66 0000 08B5     		push	{r3, lr}
+  67              		.cfi_def_cfa_offset 8
+  68              		.cfi_offset 3, -8
+  69              		.cfi_offset 14, -4
+  89:.\Generated_Source\PSoC5/SPI_PM.c ****     /* Save components enable state */
+  90:.\Generated_Source\PSoC5/SPI_PM.c ****     if ((SPI_TX_STATUS_ACTL_REG & SPI_INT_ENABLE) != 0u)
+  70              		.loc 1 90 0
+  71 0002 074B     		ldr	r3, .L7
+  72 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  73 0006 13F0100F 		tst	r3, #16
+  74 000a 03D0     		beq	.L4
+  91:.\Generated_Source\PSoC5/SPI_PM.c ****     {
+  92:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_backup.enableState = 1u;
+  75              		.loc 1 92 0
+  76 000c 0122     		movs	r2, #1
+  77 000e 054B     		ldr	r3, .L7+4
+  78 0010 1A70     		strb	r2, [r3]
+  79 0012 02E0     		b	.L5
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 4
+
+
+  80              	.L4:
+  93:.\Generated_Source\PSoC5/SPI_PM.c ****     }
+  94:.\Generated_Source\PSoC5/SPI_PM.c ****     else /* Components block is disabled */
+  95:.\Generated_Source\PSoC5/SPI_PM.c ****     {
+  96:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_backup.enableState = 0u;
+  81              		.loc 1 96 0
+  82 0014 0022     		movs	r2, #0
+  83 0016 034B     		ldr	r3, .L7+4
+  84 0018 1A70     		strb	r2, [r3]
+  85              	.L5:
+  97:.\Generated_Source\PSoC5/SPI_PM.c ****     }
+  98:.\Generated_Source\PSoC5/SPI_PM.c **** 
+  99:.\Generated_Source\PSoC5/SPI_PM.c ****     SPI_Stop();
+  86              		.loc 1 99 0
+  87 001a FFF7FEFF 		bl	SPI_Stop
+  88              	.LVL0:
+  89 001e 08BD     		pop	{r3, pc}
+  90              	.L8:
+  91              		.align	2
+  92              	.L7:
+  93 0020 9F640040 		.word	1073767583
+  94 0024 00000000 		.word	.LANCHOR0
+  95              		.cfi_endproc
+  96              	.LFE2:
+  97              		.size	SPI_Sleep, .-SPI_Sleep
+  98              		.section	.text.SPI_Wakeup,"ax",%progbits
+  99              		.align	2
+ 100              		.global	SPI_Wakeup
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.type	SPI_Wakeup, %function
+ 104              	SPI_Wakeup:
+ 105              	.LFB3:
+ 100:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 101:.\Generated_Source\PSoC5/SPI_PM.c **** }
+ 102:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 103:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 104:.\Generated_Source\PSoC5/SPI_PM.c **** /*******************************************************************************
+ 105:.\Generated_Source\PSoC5/SPI_PM.c **** * Function Name: SPI_Wakeup
+ 106:.\Generated_Source\PSoC5/SPI_PM.c **** ********************************************************************************
+ 107:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 108:.\Generated_Source\PSoC5/SPI_PM.c **** * Summary:
+ 109:.\Generated_Source\PSoC5/SPI_PM.c **** *  Prepare SPIM Component to wake up.
+ 110:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 111:.\Generated_Source\PSoC5/SPI_PM.c **** * Parameters:
+ 112:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+ 113:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 114:.\Generated_Source\PSoC5/SPI_PM.c **** * Return:
+ 115:.\Generated_Source\PSoC5/SPI_PM.c **** *  None.
+ 116:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 117:.\Generated_Source\PSoC5/SPI_PM.c **** * Global Variables:
+ 118:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_backup - used when non-retention registers are restored.
+ 119:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_txBufferWrite - modified every function call - resets to
+ 120:.\Generated_Source\PSoC5/SPI_PM.c **** *  zero.
+ 121:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_txBufferRead - modified every function call - resets to
+ 122:.\Generated_Source\PSoC5/SPI_PM.c **** *  zero.
+ 123:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_rxBufferWrite - modified every function call - resets to
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 5
+
+
+ 124:.\Generated_Source\PSoC5/SPI_PM.c **** *  zero.
+ 125:.\Generated_Source\PSoC5/SPI_PM.c **** *  SPI_rxBufferRead - modified every function call - resets to
+ 126:.\Generated_Source\PSoC5/SPI_PM.c **** *  zero.
+ 127:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 128:.\Generated_Source\PSoC5/SPI_PM.c **** * Reentrant:
+ 129:.\Generated_Source\PSoC5/SPI_PM.c **** *  No.
+ 130:.\Generated_Source\PSoC5/SPI_PM.c **** *
+ 131:.\Generated_Source\PSoC5/SPI_PM.c **** *******************************************************************************/
+ 132:.\Generated_Source\PSoC5/SPI_PM.c **** void SPI_Wakeup(void) 
+ 133:.\Generated_Source\PSoC5/SPI_PM.c **** {
+ 106              		.loc 1 133 0
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 0
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110 0000 08B5     		push	{r3, lr}
+ 111              		.cfi_def_cfa_offset 8
+ 112              		.cfi_offset 3, -8
+ 113              		.cfi_offset 14, -4
+ 134:.\Generated_Source\PSoC5/SPI_PM.c ****     #if (SPI_TX_SOFTWARE_BUF_ENABLED)
+ 135:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_txBufferFull = 0u;
+ 136:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_txBufferRead = 0u;
+ 137:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_txBufferWrite = 0u;
+ 138:.\Generated_Source\PSoC5/SPI_PM.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 139:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 140:.\Generated_Source\PSoC5/SPI_PM.c ****     #if (SPI_RX_SOFTWARE_BUF_ENABLED)
+ 141:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_rxBufferFull = 0u;
+ 142:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_rxBufferRead = 0u;
+ 143:.\Generated_Source\PSoC5/SPI_PM.c ****         SPI_rxBufferWrite = 0u;
+ 144:.\Generated_Source\PSoC5/SPI_PM.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 145:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 146:.\Generated_Source\PSoC5/SPI_PM.c ****     SPI_ClearFIFO();
+ 114              		.loc 1 146 0
+ 115 0002 FFF7FEFF 		bl	SPI_ClearFIFO
+ 116              	.LVL1:
+ 147:.\Generated_Source\PSoC5/SPI_PM.c **** 
+ 148:.\Generated_Source\PSoC5/SPI_PM.c ****     /* Restore components block enable state */
+ 149:.\Generated_Source\PSoC5/SPI_PM.c ****     if (SPI_backup.enableState != 0u)
+ 117              		.loc 1 149 0
+ 118 0006 034B     		ldr	r3, .L12
+ 119 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 120 000a 0BB1     		cbz	r3, .L9
+ 150:.\Generated_Source\PSoC5/SPI_PM.c ****     {
+ 151:.\Generated_Source\PSoC5/SPI_PM.c ****          /* Components block was enabled */
+ 152:.\Generated_Source\PSoC5/SPI_PM.c ****          SPI_Enable();
+ 121              		.loc 1 152 0
+ 122 000c FFF7FEFF 		bl	SPI_Enable
+ 123              	.LVL2:
+ 124              	.L9:
+ 125 0010 08BD     		pop	{r3, pc}
+ 126              	.L13:
+ 127 0012 00BF     		.align	2
+ 128              	.L12:
+ 129 0014 00000000 		.word	.LANCHOR0
+ 130              		.cfi_endproc
+ 131              	.LFE3:
+ 132              		.size	SPI_Wakeup, .-SPI_Wakeup
+ 133              		.data
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 6
+
+
+ 134              		.align	2
+ 135              		.set	.LANCHOR0,. + 0
+ 136              		.type	SPI_backup, %object
+ 137              		.size	SPI_backup, 2
+ 138              	SPI_backup:
+ 139 0000 00       		.byte	0
+ 140 0001 07       		.byte	7
+ 141 0002 0000     		.text
+ 142              	.Letext0:
+ 143              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 144              		.file 3 ".\\Generated_Source\\PSoC5\\SPI.h"
+ 145              		.section	.debug_info,"",%progbits
+ 146              	.Ldebug_info0:
+ 147 0000 5B010000 		.4byte	0x15b
+ 148 0004 0400     		.2byte	0x4
+ 149 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 150 000a 04       		.byte	0x4
+ 151 000b 01       		.uleb128 0x1
+ 152 000c E4000000 		.4byte	.LASF25
+ 153 0010 01       		.byte	0x1
+ 154 0011 B7010000 		.4byte	.LASF26
+ 155 0015 4B000000 		.4byte	.LASF27
+ 156 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 157 001d 00000000 		.4byte	0
+ 158 0021 00000000 		.4byte	.Ldebug_line0
+ 159 0025 02       		.uleb128 0x2
+ 160 0026 01       		.byte	0x1
+ 161 0027 06       		.byte	0x6
+ 162 0028 E4010000 		.4byte	.LASF0
+ 163 002c 02       		.uleb128 0x2
+ 164 002d 01       		.byte	0x1
+ 165 002e 08       		.byte	0x8
+ 166 002f 85010000 		.4byte	.LASF1
+ 167 0033 02       		.uleb128 0x2
+ 168 0034 02       		.byte	0x2
+ 169 0035 05       		.byte	0x5
+ 170 0036 08020000 		.4byte	.LASF2
+ 171 003a 02       		.uleb128 0x2
+ 172 003b 02       		.byte	0x2
+ 173 003c 07       		.byte	0x7
+ 174 003d D1000000 		.4byte	.LASF3
+ 175 0041 02       		.uleb128 0x2
+ 176 0042 04       		.byte	0x4
+ 177 0043 05       		.byte	0x5
+ 178 0044 9C010000 		.4byte	.LASF4
+ 179 0048 02       		.uleb128 0x2
+ 180 0049 04       		.byte	0x4
+ 181 004a 07       		.byte	0x7
+ 182 004b A8000000 		.4byte	.LASF5
+ 183 004f 02       		.uleb128 0x2
+ 184 0050 08       		.byte	0x8
+ 185 0051 05       		.byte	0x5
+ 186 0052 00000000 		.4byte	.LASF6
+ 187 0056 02       		.uleb128 0x2
+ 188 0057 08       		.byte	0x8
+ 189 0058 07       		.byte	0x7
+ 190 0059 BA000000 		.4byte	.LASF7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 7
+
+
+ 191 005d 03       		.uleb128 0x3
+ 192 005e 04       		.byte	0x4
+ 193 005f 05       		.byte	0x5
+ 194 0060 696E7400 		.ascii	"int\000"
+ 195 0064 02       		.uleb128 0x2
+ 196 0065 04       		.byte	0x4
+ 197 0066 07       		.byte	0x7
+ 198 0067 29000000 		.4byte	.LASF8
+ 199 006b 04       		.uleb128 0x4
+ 200 006c A2000000 		.4byte	.LASF12
+ 201 0070 02       		.byte	0x2
+ 202 0071 C2       		.byte	0xc2
+ 203 0072 2C000000 		.4byte	0x2c
+ 204 0076 02       		.uleb128 0x2
+ 205 0077 04       		.byte	0x4
+ 206 0078 04       		.byte	0x4
+ 207 0079 02020000 		.4byte	.LASF9
+ 208 007d 02       		.uleb128 0x2
+ 209 007e 08       		.byte	0x8
+ 210 007f 04       		.byte	0x4
+ 211 0080 B0010000 		.4byte	.LASF10
+ 212 0084 02       		.uleb128 0x2
+ 213 0085 01       		.byte	0x1
+ 214 0086 08       		.byte	0x8
+ 215 0087 72010000 		.4byte	.LASF11
+ 216 008b 05       		.uleb128 0x5
+ 217 008c 12020000 		.4byte	.LASF13
+ 218 0090 02       		.byte	0x2
+ 219 0091 6C01     		.2byte	0x16c
+ 220 0093 97000000 		.4byte	0x97
+ 221 0097 06       		.uleb128 0x6
+ 222 0098 6B000000 		.4byte	0x6b
+ 223 009c 02       		.uleb128 0x2
+ 224 009d 04       		.byte	0x4
+ 225 009e 07       		.byte	0x7
+ 226 009f 34020000 		.4byte	.LASF14
+ 227 00a3 07       		.uleb128 0x7
+ 228 00a4 02       		.byte	0x2
+ 229 00a5 03       		.byte	0x3
+ 230 00a6 3E       		.byte	0x3e
+ 231 00a7 C4000000 		.4byte	0xc4
+ 232 00ab 08       		.uleb128 0x8
+ 233 00ac 1D000000 		.4byte	.LASF15
+ 234 00b0 03       		.byte	0x3
+ 235 00b1 40       		.byte	0x40
+ 236 00b2 6B000000 		.4byte	0x6b
+ 237 00b6 00       		.byte	0
+ 238 00b7 08       		.uleb128 0x8
+ 239 00b8 A5010000 		.4byte	.LASF16
+ 240 00bc 03       		.byte	0x3
+ 241 00bd 41       		.byte	0x41
+ 242 00be 6B000000 		.4byte	0x6b
+ 243 00c2 01       		.byte	0x1
+ 244 00c3 00       		.byte	0
+ 245 00c4 04       		.uleb128 0x4
+ 246 00c5 17020000 		.4byte	.LASF17
+ 247 00c9 03       		.byte	0x3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 8
+
+
+ 248 00ca 42       		.byte	0x42
+ 249 00cb A3000000 		.4byte	0xa3
+ 250 00cf 09       		.uleb128 0x9
+ 251 00d0 0E000000 		.4byte	.LASF18
+ 252 00d4 01       		.byte	0x1
+ 253 00d5 29       		.byte	0x29
+ 254 00d6 00000000 		.4byte	.LFB0
+ 255 00da 02000000 		.4byte	.LFE0-.LFB0
+ 256 00de 01       		.uleb128 0x1
+ 257 00df 9C       		.byte	0x9c
+ 258 00e0 09       		.uleb128 0x9
+ 259 00e1 F0010000 		.4byte	.LASF19
+ 260 00e5 01       		.byte	0x1
+ 261 00e6 3D       		.byte	0x3d
+ 262 00e7 00000000 		.4byte	.LFB1
+ 263 00eb 02000000 		.4byte	.LFE1-.LFB1
+ 264 00ef 01       		.uleb128 0x1
+ 265 00f0 9C       		.byte	0x9c
+ 266 00f1 0A       		.uleb128 0xa
+ 267 00f2 41000000 		.4byte	.LASF20
+ 268 00f6 01       		.byte	0x1
+ 269 00f7 57       		.byte	0x57
+ 270 00f8 00000000 		.4byte	.LFB2
+ 271 00fc 28000000 		.4byte	.LFE2-.LFB2
+ 272 0100 01       		.uleb128 0x1
+ 273 0101 9C       		.byte	0x9c
+ 274 0102 10010000 		.4byte	0x110
+ 275 0106 0B       		.uleb128 0xb
+ 276 0107 1E000000 		.4byte	.LVL0
+ 277 010b 49010000 		.4byte	0x149
+ 278 010f 00       		.byte	0
+ 279 0110 0A       		.uleb128 0xa
+ 280 0111 D9010000 		.4byte	.LASF21
+ 281 0115 01       		.byte	0x1
+ 282 0116 84       		.byte	0x84
+ 283 0117 00000000 		.4byte	.LFB3
+ 284 011b 18000000 		.4byte	.LFE3-.LFB3
+ 285 011f 01       		.uleb128 0x1
+ 286 0120 9C       		.byte	0x9c
+ 287 0121 38010000 		.4byte	0x138
+ 288 0125 0B       		.uleb128 0xb
+ 289 0126 06000000 		.4byte	.LVL1
+ 290 012a 50010000 		.4byte	0x150
+ 291 012e 0B       		.uleb128 0xb
+ 292 012f 10000000 		.4byte	.LVL2
+ 293 0133 57010000 		.4byte	0x157
+ 294 0137 00       		.byte	0
+ 295 0138 0C       		.uleb128 0xc
+ 296 0139 36000000 		.4byte	.LASF28
+ 297 013d 01       		.byte	0x1
+ 298 013e 14       		.byte	0x14
+ 299 013f C4000000 		.4byte	0xc4
+ 300 0143 05       		.uleb128 0x5
+ 301 0144 03       		.byte	0x3
+ 302 0145 00000000 		.4byte	SPI_backup
+ 303 0149 0D       		.uleb128 0xd
+ 304 014a 93010000 		.4byte	.LASF22
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 9
+
+
+ 305 014e 03       		.byte	0x3
+ 306 014f 4C       		.byte	0x4c
+ 307 0150 0D       		.uleb128 0xd
+ 308 0151 77010000 		.4byte	.LASF23
+ 309 0155 03       		.byte	0x3
+ 310 0156 68       		.byte	0x68
+ 311 0157 0D       		.uleb128 0xd
+ 312 0158 29020000 		.4byte	.LASF24
+ 313 015c 03       		.byte	0x3
+ 314 015d 4A       		.byte	0x4a
+ 315 015e 00       		.byte	0
+ 316              		.section	.debug_abbrev,"",%progbits
+ 317              	.Ldebug_abbrev0:
+ 318 0000 01       		.uleb128 0x1
+ 319 0001 11       		.uleb128 0x11
+ 320 0002 01       		.byte	0x1
+ 321 0003 25       		.uleb128 0x25
+ 322 0004 0E       		.uleb128 0xe
+ 323 0005 13       		.uleb128 0x13
+ 324 0006 0B       		.uleb128 0xb
+ 325 0007 03       		.uleb128 0x3
+ 326 0008 0E       		.uleb128 0xe
+ 327 0009 1B       		.uleb128 0x1b
+ 328 000a 0E       		.uleb128 0xe
+ 329 000b 55       		.uleb128 0x55
+ 330 000c 17       		.uleb128 0x17
+ 331 000d 11       		.uleb128 0x11
+ 332 000e 01       		.uleb128 0x1
+ 333 000f 10       		.uleb128 0x10
+ 334 0010 17       		.uleb128 0x17
+ 335 0011 00       		.byte	0
+ 336 0012 00       		.byte	0
+ 337 0013 02       		.uleb128 0x2
+ 338 0014 24       		.uleb128 0x24
+ 339 0015 00       		.byte	0
+ 340 0016 0B       		.uleb128 0xb
+ 341 0017 0B       		.uleb128 0xb
+ 342 0018 3E       		.uleb128 0x3e
+ 343 0019 0B       		.uleb128 0xb
+ 344 001a 03       		.uleb128 0x3
+ 345 001b 0E       		.uleb128 0xe
+ 346 001c 00       		.byte	0
+ 347 001d 00       		.byte	0
+ 348 001e 03       		.uleb128 0x3
+ 349 001f 24       		.uleb128 0x24
+ 350 0020 00       		.byte	0
+ 351 0021 0B       		.uleb128 0xb
+ 352 0022 0B       		.uleb128 0xb
+ 353 0023 3E       		.uleb128 0x3e
+ 354 0024 0B       		.uleb128 0xb
+ 355 0025 03       		.uleb128 0x3
+ 356 0026 08       		.uleb128 0x8
+ 357 0027 00       		.byte	0
+ 358 0028 00       		.byte	0
+ 359 0029 04       		.uleb128 0x4
+ 360 002a 16       		.uleb128 0x16
+ 361 002b 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 10
+
+
+ 362 002c 03       		.uleb128 0x3
+ 363 002d 0E       		.uleb128 0xe
+ 364 002e 3A       		.uleb128 0x3a
+ 365 002f 0B       		.uleb128 0xb
+ 366 0030 3B       		.uleb128 0x3b
+ 367 0031 0B       		.uleb128 0xb
+ 368 0032 49       		.uleb128 0x49
+ 369 0033 13       		.uleb128 0x13
+ 370 0034 00       		.byte	0
+ 371 0035 00       		.byte	0
+ 372 0036 05       		.uleb128 0x5
+ 373 0037 16       		.uleb128 0x16
+ 374 0038 00       		.byte	0
+ 375 0039 03       		.uleb128 0x3
+ 376 003a 0E       		.uleb128 0xe
+ 377 003b 3A       		.uleb128 0x3a
+ 378 003c 0B       		.uleb128 0xb
+ 379 003d 3B       		.uleb128 0x3b
+ 380 003e 05       		.uleb128 0x5
+ 381 003f 49       		.uleb128 0x49
+ 382 0040 13       		.uleb128 0x13
+ 383 0041 00       		.byte	0
+ 384 0042 00       		.byte	0
+ 385 0043 06       		.uleb128 0x6
+ 386 0044 35       		.uleb128 0x35
+ 387 0045 00       		.byte	0
+ 388 0046 49       		.uleb128 0x49
+ 389 0047 13       		.uleb128 0x13
+ 390 0048 00       		.byte	0
+ 391 0049 00       		.byte	0
+ 392 004a 07       		.uleb128 0x7
+ 393 004b 13       		.uleb128 0x13
+ 394 004c 01       		.byte	0x1
+ 395 004d 0B       		.uleb128 0xb
+ 396 004e 0B       		.uleb128 0xb
+ 397 004f 3A       		.uleb128 0x3a
+ 398 0050 0B       		.uleb128 0xb
+ 399 0051 3B       		.uleb128 0x3b
+ 400 0052 0B       		.uleb128 0xb
+ 401 0053 01       		.uleb128 0x1
+ 402 0054 13       		.uleb128 0x13
+ 403 0055 00       		.byte	0
+ 404 0056 00       		.byte	0
+ 405 0057 08       		.uleb128 0x8
+ 406 0058 0D       		.uleb128 0xd
+ 407 0059 00       		.byte	0
+ 408 005a 03       		.uleb128 0x3
+ 409 005b 0E       		.uleb128 0xe
+ 410 005c 3A       		.uleb128 0x3a
+ 411 005d 0B       		.uleb128 0xb
+ 412 005e 3B       		.uleb128 0x3b
+ 413 005f 0B       		.uleb128 0xb
+ 414 0060 49       		.uleb128 0x49
+ 415 0061 13       		.uleb128 0x13
+ 416 0062 38       		.uleb128 0x38
+ 417 0063 0B       		.uleb128 0xb
+ 418 0064 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 11
+
+
+ 419 0065 00       		.byte	0
+ 420 0066 09       		.uleb128 0x9
+ 421 0067 2E       		.uleb128 0x2e
+ 422 0068 00       		.byte	0
+ 423 0069 3F       		.uleb128 0x3f
+ 424 006a 19       		.uleb128 0x19
+ 425 006b 03       		.uleb128 0x3
+ 426 006c 0E       		.uleb128 0xe
+ 427 006d 3A       		.uleb128 0x3a
+ 428 006e 0B       		.uleb128 0xb
+ 429 006f 3B       		.uleb128 0x3b
+ 430 0070 0B       		.uleb128 0xb
+ 431 0071 27       		.uleb128 0x27
+ 432 0072 19       		.uleb128 0x19
+ 433 0073 11       		.uleb128 0x11
+ 434 0074 01       		.uleb128 0x1
+ 435 0075 12       		.uleb128 0x12
+ 436 0076 06       		.uleb128 0x6
+ 437 0077 40       		.uleb128 0x40
+ 438 0078 18       		.uleb128 0x18
+ 439 0079 9742     		.uleb128 0x2117
+ 440 007b 19       		.uleb128 0x19
+ 441 007c 00       		.byte	0
+ 442 007d 00       		.byte	0
+ 443 007e 0A       		.uleb128 0xa
+ 444 007f 2E       		.uleb128 0x2e
+ 445 0080 01       		.byte	0x1
+ 446 0081 3F       		.uleb128 0x3f
+ 447 0082 19       		.uleb128 0x19
+ 448 0083 03       		.uleb128 0x3
+ 449 0084 0E       		.uleb128 0xe
+ 450 0085 3A       		.uleb128 0x3a
+ 451 0086 0B       		.uleb128 0xb
+ 452 0087 3B       		.uleb128 0x3b
+ 453 0088 0B       		.uleb128 0xb
+ 454 0089 27       		.uleb128 0x27
+ 455 008a 19       		.uleb128 0x19
+ 456 008b 11       		.uleb128 0x11
+ 457 008c 01       		.uleb128 0x1
+ 458 008d 12       		.uleb128 0x12
+ 459 008e 06       		.uleb128 0x6
+ 460 008f 40       		.uleb128 0x40
+ 461 0090 18       		.uleb128 0x18
+ 462 0091 9742     		.uleb128 0x2117
+ 463 0093 19       		.uleb128 0x19
+ 464 0094 01       		.uleb128 0x1
+ 465 0095 13       		.uleb128 0x13
+ 466 0096 00       		.byte	0
+ 467 0097 00       		.byte	0
+ 468 0098 0B       		.uleb128 0xb
+ 469 0099 898201   		.uleb128 0x4109
+ 470 009c 00       		.byte	0
+ 471 009d 11       		.uleb128 0x11
+ 472 009e 01       		.uleb128 0x1
+ 473 009f 31       		.uleb128 0x31
+ 474 00a0 13       		.uleb128 0x13
+ 475 00a1 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 12
+
+
+ 476 00a2 00       		.byte	0
+ 477 00a3 0C       		.uleb128 0xc
+ 478 00a4 34       		.uleb128 0x34
+ 479 00a5 00       		.byte	0
+ 480 00a6 03       		.uleb128 0x3
+ 481 00a7 0E       		.uleb128 0xe
+ 482 00a8 3A       		.uleb128 0x3a
+ 483 00a9 0B       		.uleb128 0xb
+ 484 00aa 3B       		.uleb128 0x3b
+ 485 00ab 0B       		.uleb128 0xb
+ 486 00ac 49       		.uleb128 0x49
+ 487 00ad 13       		.uleb128 0x13
+ 488 00ae 02       		.uleb128 0x2
+ 489 00af 18       		.uleb128 0x18
+ 490 00b0 00       		.byte	0
+ 491 00b1 00       		.byte	0
+ 492 00b2 0D       		.uleb128 0xd
+ 493 00b3 2E       		.uleb128 0x2e
+ 494 00b4 00       		.byte	0
+ 495 00b5 3F       		.uleb128 0x3f
+ 496 00b6 19       		.uleb128 0x19
+ 497 00b7 03       		.uleb128 0x3
+ 498 00b8 0E       		.uleb128 0xe
+ 499 00b9 3A       		.uleb128 0x3a
+ 500 00ba 0B       		.uleb128 0xb
+ 501 00bb 3B       		.uleb128 0x3b
+ 502 00bc 0B       		.uleb128 0xb
+ 503 00bd 27       		.uleb128 0x27
+ 504 00be 19       		.uleb128 0x19
+ 505 00bf 3C       		.uleb128 0x3c
+ 506 00c0 19       		.uleb128 0x19
+ 507 00c1 00       		.byte	0
+ 508 00c2 00       		.byte	0
+ 509 00c3 00       		.byte	0
+ 510              		.section	.debug_aranges,"",%progbits
+ 511 0000 34000000 		.4byte	0x34
+ 512 0004 0200     		.2byte	0x2
+ 513 0006 00000000 		.4byte	.Ldebug_info0
+ 514 000a 04       		.byte	0x4
+ 515 000b 00       		.byte	0
+ 516 000c 0000     		.2byte	0
+ 517 000e 0000     		.2byte	0
+ 518 0010 00000000 		.4byte	.LFB0
+ 519 0014 02000000 		.4byte	.LFE0-.LFB0
+ 520 0018 00000000 		.4byte	.LFB1
+ 521 001c 02000000 		.4byte	.LFE1-.LFB1
+ 522 0020 00000000 		.4byte	.LFB2
+ 523 0024 28000000 		.4byte	.LFE2-.LFB2
+ 524 0028 00000000 		.4byte	.LFB3
+ 525 002c 18000000 		.4byte	.LFE3-.LFB3
+ 526 0030 00000000 		.4byte	0
+ 527 0034 00000000 		.4byte	0
+ 528              		.section	.debug_ranges,"",%progbits
+ 529              	.Ldebug_ranges0:
+ 530 0000 00000000 		.4byte	.LFB0
+ 531 0004 02000000 		.4byte	.LFE0
+ 532 0008 00000000 		.4byte	.LFB1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 13
+
+
+ 533 000c 02000000 		.4byte	.LFE1
+ 534 0010 00000000 		.4byte	.LFB2
+ 535 0014 28000000 		.4byte	.LFE2
+ 536 0018 00000000 		.4byte	.LFB3
+ 537 001c 18000000 		.4byte	.LFE3
+ 538 0020 00000000 		.4byte	0
+ 539 0024 00000000 		.4byte	0
+ 540              		.section	.debug_line,"",%progbits
+ 541              	.Ldebug_line0:
+ 542 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
+ 542      02004E00 
+ 542      00000201 
+ 542      FB0E0D00 
+ 542      01010101 
+ 543              	.LASF6:
+ 544 0000 6C6F6E67 		.ascii	"long long int\000"
+ 544      206C6F6E 
+ 544      6720696E 
+ 544      7400
+ 545              	.LASF18:
+ 546 000e 5350495F 		.ascii	"SPI_SaveConfig\000"
+ 546      53617665 
+ 546      436F6E66 
+ 546      696700
+ 547              	.LASF15:
+ 548 001d 656E6162 		.ascii	"enableState\000"
+ 548      6C655374 
+ 548      61746500 
+ 549              	.LASF8:
+ 550 0029 756E7369 		.ascii	"unsigned int\000"
+ 550      676E6564 
+ 550      20696E74 
+ 550      00
+ 551              	.LASF28:
+ 552 0036 5350495F 		.ascii	"SPI_backup\000"
+ 552      6261636B 
+ 552      757000
+ 553              	.LASF20:
+ 554 0041 5350495F 		.ascii	"SPI_Sleep\000"
+ 554      536C6565 
+ 554      7000
+ 555              	.LASF27:
+ 556 004b 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\lb-boards"
+ 556      73657273 
+ 556      5C444769 
+ 556      6C6C696C 
+ 556      616E645C 
+ 557 0079 5C525050 		.ascii	"\\RPPSOC\\PSOC-SPI\\PSOC-SPI\\PSOC-SPI.cydsn\000"
+ 557      534F435C 
+ 557      50534F43 
+ 557      2D535049 
+ 557      5C50534F 
+ 558              	.LASF12:
+ 559 00a2 75696E74 		.ascii	"uint8\000"
+ 559      3800
+ 560              	.LASF5:
+ 561 00a8 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 14
+
+
+ 561      20756E73 
+ 561      69676E65 
+ 561      6420696E 
+ 561      7400
+ 562              	.LASF7:
+ 563 00ba 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 563      206C6F6E 
+ 563      6720756E 
+ 563      7369676E 
+ 563      65642069 
+ 564              	.LASF3:
+ 565 00d1 73686F72 		.ascii	"short unsigned int\000"
+ 565      7420756E 
+ 565      7369676E 
+ 565      65642069 
+ 565      6E7400
+ 566              	.LASF25:
+ 567 00e4 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 567      4320342E 
+ 567      392E3320 
+ 567      32303135 
+ 567      30333033 
+ 568 0117 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 568      20726576 
+ 568      6973696F 
+ 568      6E203232 
+ 568      31323230 
+ 569 014a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 569      66756E63 
+ 569      74696F6E 
+ 569      2D736563 
+ 569      74696F6E 
+ 570              	.LASF11:
+ 571 0172 63686172 		.ascii	"char\000"
+ 571      00
+ 572              	.LASF23:
+ 573 0177 5350495F 		.ascii	"SPI_ClearFIFO\000"
+ 573      436C6561 
+ 573      72464946 
+ 573      4F00
+ 574              	.LASF1:
+ 575 0185 756E7369 		.ascii	"unsigned char\000"
+ 575      676E6564 
+ 575      20636861 
+ 575      7200
+ 576              	.LASF22:
+ 577 0193 5350495F 		.ascii	"SPI_Stop\000"
+ 577      53746F70 
+ 577      00
+ 578              	.LASF4:
+ 579 019c 6C6F6E67 		.ascii	"long int\000"
+ 579      20696E74 
+ 579      00
+ 580              	.LASF16:
+ 581 01a5 636E7472 		.ascii	"cntrPeriod\000"
+ 581      50657269 
+ 581      6F6400
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccWjFBvg.s 			page 15
+
+
+ 582              	.LASF10:
+ 583 01b0 646F7562 		.ascii	"double\000"
+ 583      6C6500
+ 584              	.LASF26:
+ 585 01b7 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\SPI_PM.c\000"
+ 585      6E657261 
+ 585      7465645F 
+ 585      536F7572 
+ 585      63655C50 
+ 586              	.LASF21:
+ 587 01d9 5350495F 		.ascii	"SPI_Wakeup\000"
+ 587      57616B65 
+ 587      757000
+ 588              	.LASF0:
+ 589 01e4 7369676E 		.ascii	"signed char\000"
+ 589      65642063 
+ 589      68617200 
+ 590              	.LASF19:
+ 591 01f0 5350495F 		.ascii	"SPI_RestoreConfig\000"
+ 591      52657374 
+ 591      6F726543 
+ 591      6F6E6669 
+ 591      6700
+ 592              	.LASF9:
+ 593 0202 666C6F61 		.ascii	"float\000"
+ 593      7400
+ 594              	.LASF2:
+ 595 0208 73686F72 		.ascii	"short int\000"
+ 595      7420696E 
+ 595      7400
+ 596              	.LASF13:
+ 597 0212 72656738 		.ascii	"reg8\000"
+ 597      00
+ 598              	.LASF17:
+ 599 0217 5350495F 		.ascii	"SPI_BACKUP_STRUCT\000"
+ 599      4241434B 
+ 599      55505F53 
+ 599      54525543 
+ 599      5400
+ 600              	.LASF24:
+ 601 0229 5350495F 		.ascii	"SPI_Enable\000"
+ 601      456E6162 
+ 601      6C6500
+ 602              	.LASF14:
+ 603 0234 73697A65 		.ascii	"sizetype\000"
+ 603      74797065 
+ 603      00
+ 604              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

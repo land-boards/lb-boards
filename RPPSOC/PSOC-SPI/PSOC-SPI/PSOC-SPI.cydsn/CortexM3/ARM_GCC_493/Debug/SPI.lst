@@ -1,0 +1,3645 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SPI.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.SPI_Enable,"ax",%progbits
+  19              		.align	2
+  20              		.global	SPI_Enable
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	SPI_Enable, %function
+  24              	SPI_Enable:
+  25              	.LFB1:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\SPI.c"
+   1:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/SPI.c **** * File Name: SPI.c
+   3:.\Generated_Source\PSoC5/SPI.c **** * Version 2.70
+   4:.\Generated_Source\PSoC5/SPI.c **** *
+   5:.\Generated_Source\PSoC5/SPI.c **** * Description:
+   6:.\Generated_Source\PSoC5/SPI.c **** *  This file provides all API functionality of the SPI Slave component.
+   7:.\Generated_Source\PSoC5/SPI.c **** *
+   8:.\Generated_Source\PSoC5/SPI.c **** * Note:
+   9:.\Generated_Source\PSoC5/SPI.c **** *  None.
+  10:.\Generated_Source\PSoC5/SPI.c **** *
+  11:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/SPI.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/SPI.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/SPI.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/SPI.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/SPI.c **** 
+  18:.\Generated_Source\PSoC5/SPI.c **** #include "SPI_PVT.h"
+  19:.\Generated_Source\PSoC5/SPI.c **** 
+  20:.\Generated_Source\PSoC5/SPI.c **** #if (SPI_TX_SOFTWARE_BUF_ENABLED)
+  21:.\Generated_Source\PSoC5/SPI.c **** 
+  22:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_txBuffer[SPI_TX_BUFFER_SIZE];
+  23:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_txBufferRead;
+  24:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_txBufferWrite;
+  25:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_txBufferFull;
+  26:.\Generated_Source\PSoC5/SPI.c **** 
+  27:.\Generated_Source\PSoC5/SPI.c **** #endif /* SPI_TX_SOFTWARE_BUF_ENABLED*/
+  28:.\Generated_Source\PSoC5/SPI.c **** 
+  29:.\Generated_Source\PSoC5/SPI.c **** #if (SPI_RX_SOFTWARE_BUF_ENABLED)
+  30:.\Generated_Source\PSoC5/SPI.c **** 
+  31:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_rxBuffer[SPI_RX_BUFFER_SIZE];
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_rxBufferRead;
+  33:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_rxBufferWrite;
+  34:.\Generated_Source\PSoC5/SPI.c ****     volatile uint8 SPI_rxBufferFull;
+  35:.\Generated_Source\PSoC5/SPI.c **** 
+  36:.\Generated_Source\PSoC5/SPI.c **** #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+  37:.\Generated_Source\PSoC5/SPI.c **** 
+  38:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_initVar = 0u;
+  39:.\Generated_Source\PSoC5/SPI.c **** 
+  40:.\Generated_Source\PSoC5/SPI.c **** volatile uint8 SPI_swStatusTx;
+  41:.\Generated_Source\PSoC5/SPI.c **** volatile uint8 SPI_swStatusRx;
+  42:.\Generated_Source\PSoC5/SPI.c **** 
+  43:.\Generated_Source\PSoC5/SPI.c **** 
+  44:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+  45:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_Init
+  46:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+  47:.\Generated_Source\PSoC5/SPI.c **** *
+  48:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+  49:.\Generated_Source\PSoC5/SPI.c **** *  Inits/Restores default SPIS configuration provided with customizer.
+  50:.\Generated_Source\PSoC5/SPI.c **** *
+  51:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+  52:.\Generated_Source\PSoC5/SPI.c **** *  None.
+  53:.\Generated_Source\PSoC5/SPI.c **** *
+  54:.\Generated_Source\PSoC5/SPI.c **** * Return:
+  55:.\Generated_Source\PSoC5/SPI.c **** *  None.
+  56:.\Generated_Source\PSoC5/SPI.c **** *
+  57:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+  58:.\Generated_Source\PSoC5/SPI.c **** *  When this function is called it initializes all of the necessary parameters
+  59:.\Generated_Source\PSoC5/SPI.c **** *  for execution. i.e. setting the initial interrupt mask, configuring the
+  60:.\Generated_Source\PSoC5/SPI.c **** *  interrupt service routine, configuring the bit-counter parameters and
+  61:.\Generated_Source\PSoC5/SPI.c **** *  clearing the FIFO and Status Register.
+  62:.\Generated_Source\PSoC5/SPI.c **** *
+  63:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+  64:.\Generated_Source\PSoC5/SPI.c **** *  No.
+  65:.\Generated_Source\PSoC5/SPI.c **** *
+  66:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+  67:.\Generated_Source\PSoC5/SPI.c **** void SPI_Init(void) 
+  68:.\Generated_Source\PSoC5/SPI.c **** {
+  69:.\Generated_Source\PSoC5/SPI.c ****     /*Initialize the Bit counter */
+  70:.\Generated_Source\PSoC5/SPI.c ****     SPI_COUNTER_PERIOD_REG = SPI_BITCTR_INIT;
+  71:.\Generated_Source\PSoC5/SPI.c **** 
+  72:.\Generated_Source\PSoC5/SPI.c ****     /* ISR initialization */
+  73:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+  74:.\Generated_Source\PSoC5/SPI.c **** 
+  75:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_TX_ISR_NUMBER);
+  76:.\Generated_Source\PSoC5/SPI.c **** 
+  77:.\Generated_Source\PSoC5/SPI.c ****         /* Set the ISR to point to the SPI_isr Interrupt. */
+  78:.\Generated_Source\PSoC5/SPI.c ****         (void)CyIntSetVector(SPI_TX_ISR_NUMBER, &SPI_TX_ISR);
+  79:.\Generated_Source\PSoC5/SPI.c **** 
+  80:.\Generated_Source\PSoC5/SPI.c ****         /* Set the priority. */
+  81:.\Generated_Source\PSoC5/SPI.c ****         CyIntSetPriority(SPI_TX_ISR_NUMBER, SPI_TX_ISR_PRIORITY);
+  82:.\Generated_Source\PSoC5/SPI.c **** 
+  83:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+  84:.\Generated_Source\PSoC5/SPI.c **** 
+  85:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+  86:.\Generated_Source\PSoC5/SPI.c **** 
+  87:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_RX_ISR_NUMBER);
+  88:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 3
+
+
+  89:.\Generated_Source\PSoC5/SPI.c ****         /* Set the ISR to point to the SPI_isr Interrupt. */
+  90:.\Generated_Source\PSoC5/SPI.c ****         (void)CyIntSetVector(SPI_RX_ISR_NUMBER, &SPI_RX_ISR);
+  91:.\Generated_Source\PSoC5/SPI.c **** 
+  92:.\Generated_Source\PSoC5/SPI.c ****         /* Set the priority. */
+  93:.\Generated_Source\PSoC5/SPI.c ****         CyIntSetPriority(SPI_RX_ISR_NUMBER, SPI_RX_ISR_PRIORITY);
+  94:.\Generated_Source\PSoC5/SPI.c **** 
+  95:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+  96:.\Generated_Source\PSoC5/SPI.c **** 
+  97:.\Generated_Source\PSoC5/SPI.c ****     /* Clear any stray data from the RX and TX FIFO */
+  98:.\Generated_Source\PSoC5/SPI.c ****     SPI_ClearFIFO();
+  99:.\Generated_Source\PSoC5/SPI.c **** 
+ 100:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_RX_SOFTWARE_BUF_ENABLED)
+ 101:.\Generated_Source\PSoC5/SPI.c ****         SPI_rxBufferFull = 0u;
+ 102:.\Generated_Source\PSoC5/SPI.c ****         SPI_rxBufferRead = 0u;
+ 103:.\Generated_Source\PSoC5/SPI.c ****         SPI_rxBufferWrite = 0u;
+ 104:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 105:.\Generated_Source\PSoC5/SPI.c **** 
+ 106:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_TX_SOFTWARE_BUF_ENABLED)
+ 107:.\Generated_Source\PSoC5/SPI.c ****         SPI_txBufferFull = 0u;
+ 108:.\Generated_Source\PSoC5/SPI.c ****         SPI_txBufferRead = 0u;
+ 109:.\Generated_Source\PSoC5/SPI.c ****         SPI_txBufferWrite = 0u;
+ 110:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 111:.\Generated_Source\PSoC5/SPI.c **** 
+ 112:.\Generated_Source\PSoC5/SPI.c ****     (void) SPI_ReadTxStatus(); /* Clear any pending status bits */
+ 113:.\Generated_Source\PSoC5/SPI.c ****     (void) SPI_ReadRxStatus(); /* Clear any pending status bits */
+ 114:.\Generated_Source\PSoC5/SPI.c **** 
+ 115:.\Generated_Source\PSoC5/SPI.c **** 
+ 116:.\Generated_Source\PSoC5/SPI.c ****     /* Configure the Initial interrupt mask */
+ 117:.\Generated_Source\PSoC5/SPI.c ****     #if (SPI_TX_SOFTWARE_BUF_ENABLED)
+ 118:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_STATUS_MASK_REG  = (SPI_TX_INIT_INTERRUPTS_MASK &
+ 119:.\Generated_Source\PSoC5/SPI.c ****                                                 (uint8)~SPI_STS_TX_FIFO_NOT_FULL);
+ 120:.\Generated_Source\PSoC5/SPI.c ****     #else /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 121:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_STATUS_MASK_REG  = SPI_TX_INIT_INTERRUPTS_MASK;
+ 122:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 123:.\Generated_Source\PSoC5/SPI.c **** 
+ 124:.\Generated_Source\PSoC5/SPI.c ****     SPI_RX_STATUS_MASK_REG  = SPI_RX_INIT_INTERRUPTS_MASK;
+ 125:.\Generated_Source\PSoC5/SPI.c **** }
+ 126:.\Generated_Source\PSoC5/SPI.c **** 
+ 127:.\Generated_Source\PSoC5/SPI.c **** 
+ 128:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 129:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_Enable
+ 130:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 131:.\Generated_Source\PSoC5/SPI.c **** *
+ 132:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 133:.\Generated_Source\PSoC5/SPI.c **** *  Enable SPIS component.
+ 134:.\Generated_Source\PSoC5/SPI.c **** *
+ 135:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 136:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 137:.\Generated_Source\PSoC5/SPI.c **** *
+ 138:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 139:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 140:.\Generated_Source\PSoC5/SPI.c **** *
+ 141:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 142:.\Generated_Source\PSoC5/SPI.c **** void SPI_Enable(void) 
+ 143:.\Generated_Source\PSoC5/SPI.c **** {
+  27              		.loc 1 143 0
+  28              		.cfi_startproc
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 4
+
+
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 3, -8
+  34              		.cfi_offset 14, -4
+ 144:.\Generated_Source\PSoC5/SPI.c ****     uint8 enableInterrupts;
+ 145:.\Generated_Source\PSoC5/SPI.c ****     enableInterrupts = CyEnterCriticalSection();
+  35              		.loc 1 145 0
+  36 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  37              	.LVL0:
+ 146:.\Generated_Source\PSoC5/SPI.c **** 
+ 147:.\Generated_Source\PSoC5/SPI.c ****     SPI_COUNTER_CONTROL_REG |= SPI_CNTR_ENABLE;
+  38              		.loc 1 147 0
+  39 0006 094A     		ldr	r2, .L3
+  40 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  41 000a 43F02003 		orr	r3, r3, #32
+  42 000e 1370     		strb	r3, [r2]
+ 148:.\Generated_Source\PSoC5/SPI.c ****     SPI_TX_STATUS_ACTL_REG |= SPI_INT_ENABLE;
+  43              		.loc 1 148 0
+  44 0010 0232     		adds	r2, r2, #2
+  45 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  46 0014 43F01003 		orr	r3, r3, #16
+  47 0018 1370     		strb	r3, [r2]
+ 149:.\Generated_Source\PSoC5/SPI.c ****     SPI_RX_STATUS_ACTL_REG |= SPI_INT_ENABLE;
+  48              		.loc 1 149 0
+  49 001a 013A     		subs	r2, r2, #1
+  50 001c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  51 001e 43F01003 		orr	r3, r3, #16
+  52 0022 1370     		strb	r3, [r2]
+ 150:.\Generated_Source\PSoC5/SPI.c **** 
+ 151:.\Generated_Source\PSoC5/SPI.c ****     CyExitCriticalSection(enableInterrupts);
+  53              		.loc 1 151 0
+  54 0024 FFF7FEFF 		bl	CyExitCriticalSection
+  55              	.LVL1:
+  56 0028 08BD     		pop	{r3, pc}
+  57              	.L4:
+  58 002a 00BF     		.align	2
+  59              	.L3:
+  60 002c 9D640040 		.word	1073767581
+  61              		.cfi_endproc
+  62              	.LFE1:
+  63              		.size	SPI_Enable, .-SPI_Enable
+  64              		.section	.text.SPI_Stop,"ax",%progbits
+  65              		.align	2
+  66              		.global	SPI_Stop
+  67              		.thumb
+  68              		.thumb_func
+  69              		.type	SPI_Stop, %function
+  70              	SPI_Stop:
+  71              	.LFB3:
+ 152:.\Generated_Source\PSoC5/SPI.c **** 
+ 153:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+ 154:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_TX_ISR_NUMBER);
+ 155:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+ 156:.\Generated_Source\PSoC5/SPI.c **** 
+ 157:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 5
+
+
+ 158:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_RX_ISR_NUMBER);
+ 159:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+ 160:.\Generated_Source\PSoC5/SPI.c **** }
+ 161:.\Generated_Source\PSoC5/SPI.c **** 
+ 162:.\Generated_Source\PSoC5/SPI.c **** 
+ 163:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 164:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_Start
+ 165:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 166:.\Generated_Source\PSoC5/SPI.c **** *
+ 167:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 168:.\Generated_Source\PSoC5/SPI.c **** *  Initialize and Enable the SPI Slave component.
+ 169:.\Generated_Source\PSoC5/SPI.c **** *
+ 170:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 171:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 172:.\Generated_Source\PSoC5/SPI.c **** *
+ 173:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 174:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 175:.\Generated_Source\PSoC5/SPI.c **** *
+ 176:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 177:.\Generated_Source\PSoC5/SPI.c **** *  SPI_initVar - used to check initial configuration, modified on
+ 178:.\Generated_Source\PSoC5/SPI.c **** *  first function call.
+ 179:.\Generated_Source\PSoC5/SPI.c **** *
+ 180:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 181:.\Generated_Source\PSoC5/SPI.c **** *  Enable the clock input to enable operation.
+ 182:.\Generated_Source\PSoC5/SPI.c **** *
+ 183:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 184:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 185:.\Generated_Source\PSoC5/SPI.c **** *
+ 186:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 187:.\Generated_Source\PSoC5/SPI.c **** void SPI_Start(void) 
+ 188:.\Generated_Source\PSoC5/SPI.c **** {
+ 189:.\Generated_Source\PSoC5/SPI.c ****     if(SPI_initVar == 0u)
+ 190:.\Generated_Source\PSoC5/SPI.c ****     {
+ 191:.\Generated_Source\PSoC5/SPI.c ****         SPI_Init();
+ 192:.\Generated_Source\PSoC5/SPI.c ****         SPI_initVar = 1u;
+ 193:.\Generated_Source\PSoC5/SPI.c ****     }
+ 194:.\Generated_Source\PSoC5/SPI.c **** 
+ 195:.\Generated_Source\PSoC5/SPI.c ****     SPI_Enable();
+ 196:.\Generated_Source\PSoC5/SPI.c **** }
+ 197:.\Generated_Source\PSoC5/SPI.c **** 
+ 198:.\Generated_Source\PSoC5/SPI.c **** 
+ 199:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 200:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_Stop
+ 201:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 202:.\Generated_Source\PSoC5/SPI.c **** *
+ 203:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 204:.\Generated_Source\PSoC5/SPI.c **** *  Disable the SPI Slave component.
+ 205:.\Generated_Source\PSoC5/SPI.c **** *
+ 206:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 207:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 208:.\Generated_Source\PSoC5/SPI.c **** *
+ 209:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 210:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 211:.\Generated_Source\PSoC5/SPI.c **** *
+ 212:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 213:.\Generated_Source\PSoC5/SPI.c **** *  Disable the internal interrupt if one is used.
+ 214:.\Generated_Source\PSoC5/SPI.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 6
+
+
+ 215:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 216:.\Generated_Source\PSoC5/SPI.c **** void SPI_Stop(void) 
+ 217:.\Generated_Source\PSoC5/SPI.c **** {
+  72              		.loc 1 217 0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76 0000 08B5     		push	{r3, lr}
+  77              		.cfi_def_cfa_offset 8
+  78              		.cfi_offset 3, -8
+  79              		.cfi_offset 14, -4
+ 218:.\Generated_Source\PSoC5/SPI.c ****     uint8 enableInterrupts;
+ 219:.\Generated_Source\PSoC5/SPI.c ****     enableInterrupts = CyEnterCriticalSection();
+  80              		.loc 1 219 0
+  81 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  82              	.LVL2:
+ 220:.\Generated_Source\PSoC5/SPI.c **** 
+ 221:.\Generated_Source\PSoC5/SPI.c ****     SPI_TX_STATUS_ACTL_REG &= (uint8)~SPI_INT_ENABLE;
+  83              		.loc 1 221 0
+  84 0006 064A     		ldr	r2, .L7
+  85 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  86 000a 03F0EF03 		and	r3, r3, #239
+  87 000e 1370     		strb	r3, [r2]
+ 222:.\Generated_Source\PSoC5/SPI.c ****     SPI_RX_STATUS_ACTL_REG &= (uint8)~SPI_INT_ENABLE;
+  88              		.loc 1 222 0
+  89 0010 013A     		subs	r2, r2, #1
+  90 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  91 0014 03F0EF03 		and	r3, r3, #239
+  92 0018 1370     		strb	r3, [r2]
+ 223:.\Generated_Source\PSoC5/SPI.c **** 
+ 224:.\Generated_Source\PSoC5/SPI.c ****     CyExitCriticalSection(enableInterrupts);
+  93              		.loc 1 224 0
+  94 001a FFF7FEFF 		bl	CyExitCriticalSection
+  95              	.LVL3:
+  96 001e 08BD     		pop	{r3, pc}
+  97              	.L8:
+  98              		.align	2
+  99              	.L7:
+ 100 0020 9F640040 		.word	1073767583
+ 101              		.cfi_endproc
+ 102              	.LFE3:
+ 103              		.size	SPI_Stop, .-SPI_Stop
+ 104              		.section	.text.SPI_EnableTxInt,"ax",%progbits
+ 105              		.align	2
+ 106              		.global	SPI_EnableTxInt
+ 107              		.thumb
+ 108              		.thumb_func
+ 109              		.type	SPI_EnableTxInt, %function
+ 110              	SPI_EnableTxInt:
+ 111              	.LFB4:
+ 225:.\Generated_Source\PSoC5/SPI.c **** 
+ 226:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+ 227:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_TX_ISR_NUMBER);
+ 228:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+ 229:.\Generated_Source\PSoC5/SPI.c **** 
+ 230:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+ 231:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_RX_ISR_NUMBER);
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 7
+
+
+ 232:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+ 233:.\Generated_Source\PSoC5/SPI.c **** }
+ 234:.\Generated_Source\PSoC5/SPI.c **** 
+ 235:.\Generated_Source\PSoC5/SPI.c **** 
+ 236:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 237:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_EnableTxInt
+ 238:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 239:.\Generated_Source\PSoC5/SPI.c **** *
+ 240:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 241:.\Generated_Source\PSoC5/SPI.c **** *  Enable internal Tx interrupt generation.
+ 242:.\Generated_Source\PSoC5/SPI.c **** *
+ 243:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 244:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 245:.\Generated_Source\PSoC5/SPI.c **** *
+ 246:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 247:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 248:.\Generated_Source\PSoC5/SPI.c **** *
+ 249:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 250:.\Generated_Source\PSoC5/SPI.c **** *  Enable the internal Tx interrupt output -or- the interrupt component itself.
+ 251:.\Generated_Source\PSoC5/SPI.c **** *
+ 252:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 253:.\Generated_Source\PSoC5/SPI.c **** void SPI_EnableTxInt(void) 
+ 254:.\Generated_Source\PSoC5/SPI.c **** {
+ 112              		.loc 1 254 0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
+ 117 0000 7047     		bx	lr
+ 118              		.cfi_endproc
+ 119              	.LFE4:
+ 120              		.size	SPI_EnableTxInt, .-SPI_EnableTxInt
+ 121 0002 00BF     		.section	.text.SPI_EnableRxInt,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	SPI_EnableRxInt
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	SPI_EnableRxInt, %function
+ 127              	SPI_EnableRxInt:
+ 128              	.LFB5:
+ 255:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+ 256:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_TX_ISR_NUMBER);
+ 257:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+ 258:.\Generated_Source\PSoC5/SPI.c **** }
+ 259:.\Generated_Source\PSoC5/SPI.c **** 
+ 260:.\Generated_Source\PSoC5/SPI.c **** 
+ 261:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 262:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_EnableRxInt
+ 263:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 264:.\Generated_Source\PSoC5/SPI.c **** *
+ 265:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 266:.\Generated_Source\PSoC5/SPI.c **** *  Enable internal Rx interrupt generation.
+ 267:.\Generated_Source\PSoC5/SPI.c **** *
+ 268:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 269:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 270:.\Generated_Source\PSoC5/SPI.c **** *
+ 271:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 8
+
+
+ 272:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 273:.\Generated_Source\PSoC5/SPI.c **** *
+ 274:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 275:.\Generated_Source\PSoC5/SPI.c **** *  Enable the internal Rx interrupt output -or- the interrupt component itself.
+ 276:.\Generated_Source\PSoC5/SPI.c **** *
+ 277:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 278:.\Generated_Source\PSoC5/SPI.c **** void SPI_EnableRxInt(void) 
+ 279:.\Generated_Source\PSoC5/SPI.c **** {
+ 129              		.loc 1 279 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 134 0000 7047     		bx	lr
+ 135              		.cfi_endproc
+ 136              	.LFE5:
+ 137              		.size	SPI_EnableRxInt, .-SPI_EnableRxInt
+ 138 0002 00BF     		.section	.text.SPI_DisableTxInt,"ax",%progbits
+ 139              		.align	2
+ 140              		.global	SPI_DisableTxInt
+ 141              		.thumb
+ 142              		.thumb_func
+ 143              		.type	SPI_DisableTxInt, %function
+ 144              	SPI_DisableTxInt:
+ 145              	.LFB6:
+ 280:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+ 281:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_RX_ISR_NUMBER);
+ 282:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+ 283:.\Generated_Source\PSoC5/SPI.c **** }
+ 284:.\Generated_Source\PSoC5/SPI.c **** 
+ 285:.\Generated_Source\PSoC5/SPI.c **** 
+ 286:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 287:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_DisableTxInt
+ 288:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 289:.\Generated_Source\PSoC5/SPI.c **** *
+ 290:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 291:.\Generated_Source\PSoC5/SPI.c **** *  Disable internal Tx interrupt generation.
+ 292:.\Generated_Source\PSoC5/SPI.c **** *
+ 293:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 294:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 295:.\Generated_Source\PSoC5/SPI.c **** *
+ 296:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 297:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 298:.\Generated_Source\PSoC5/SPI.c **** *
+ 299:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 300:.\Generated_Source\PSoC5/SPI.c **** *  Disable the internal Tx interrupt output -or- the interrupt component itself.
+ 301:.\Generated_Source\PSoC5/SPI.c **** *
+ 302:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 303:.\Generated_Source\PSoC5/SPI.c **** void SPI_DisableTxInt(void) 
+ 304:.\Generated_Source\PSoC5/SPI.c **** {
+ 146              		.loc 1 304 0
+ 147              		.cfi_startproc
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+ 151 0000 7047     		bx	lr
+ 152              		.cfi_endproc
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 9
+
+
+ 153              	.LFE6:
+ 154              		.size	SPI_DisableTxInt, .-SPI_DisableTxInt
+ 155 0002 00BF     		.section	.text.SPI_DisableRxInt,"ax",%progbits
+ 156              		.align	2
+ 157              		.global	SPI_DisableRxInt
+ 158              		.thumb
+ 159              		.thumb_func
+ 160              		.type	SPI_DisableRxInt, %function
+ 161              	SPI_DisableRxInt:
+ 162              	.LFB7:
+ 305:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+ 306:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_TX_ISR_NUMBER);
+ 307:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+ 308:.\Generated_Source\PSoC5/SPI.c **** }
+ 309:.\Generated_Source\PSoC5/SPI.c **** 
+ 310:.\Generated_Source\PSoC5/SPI.c **** 
+ 311:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 312:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_DisableRxInt
+ 313:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 314:.\Generated_Source\PSoC5/SPI.c **** *
+ 315:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 316:.\Generated_Source\PSoC5/SPI.c **** *  Disable internal Rx interrupt generation.
+ 317:.\Generated_Source\PSoC5/SPI.c **** *
+ 318:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 319:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 320:.\Generated_Source\PSoC5/SPI.c **** *
+ 321:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 322:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 323:.\Generated_Source\PSoC5/SPI.c **** *
+ 324:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 325:.\Generated_Source\PSoC5/SPI.c **** *  Disable the internal Rx interrupt output -or- the interrupt component itself.
+ 326:.\Generated_Source\PSoC5/SPI.c **** *
+ 327:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 328:.\Generated_Source\PSoC5/SPI.c **** void SPI_DisableRxInt(void) 
+ 329:.\Generated_Source\PSoC5/SPI.c **** {
+ 163              		.loc 1 329 0
+ 164              		.cfi_startproc
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+ 168 0000 7047     		bx	lr
+ 169              		.cfi_endproc
+ 170              	.LFE7:
+ 171              		.size	SPI_DisableRxInt, .-SPI_DisableRxInt
+ 172 0002 00BF     		.section	.text.SPI_SetTxInterruptMode,"ax",%progbits
+ 173              		.align	2
+ 174              		.global	SPI_SetTxInterruptMode
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.type	SPI_SetTxInterruptMode, %function
+ 178              	SPI_SetTxInterruptMode:
+ 179              	.LFB8:
+ 330:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+ 331:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_RX_ISR_NUMBER);
+ 332:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+ 333:.\Generated_Source\PSoC5/SPI.c **** }
+ 334:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 10
+
+
+ 335:.\Generated_Source\PSoC5/SPI.c **** 
+ 336:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 337:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_SetTxInterruptMode
+ 338:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 339:.\Generated_Source\PSoC5/SPI.c **** *
+ 340:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 341:.\Generated_Source\PSoC5/SPI.c **** *  Configure which status bits trigger an interrupt event.
+ 342:.\Generated_Source\PSoC5/SPI.c **** *
+ 343:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 344:.\Generated_Source\PSoC5/SPI.c **** *  intSrc: An or'd combination of the desired status bit masks (defined in the
+ 345:.\Generated_Source\PSoC5/SPI.c **** *  header file).
+ 346:.\Generated_Source\PSoC5/SPI.c **** *
+ 347:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 348:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 349:.\Generated_Source\PSoC5/SPI.c **** *
+ 350:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 351:.\Generated_Source\PSoC5/SPI.c **** *  Enables the output of specific status bits to the interrupt controller.
+ 352:.\Generated_Source\PSoC5/SPI.c **** *
+ 353:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 354:.\Generated_Source\PSoC5/SPI.c **** void SPI_SetTxInterruptMode(uint8 intSrc) 
+ 355:.\Generated_Source\PSoC5/SPI.c **** {
+ 180              		.loc 1 355 0
+ 181              		.cfi_startproc
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184              		@ link register save eliminated.
+ 185              	.LVL4:
+ 356:.\Generated_Source\PSoC5/SPI.c ****     SPI_TX_STATUS_MASK_REG  = intSrc;
+ 186              		.loc 1 356 0
+ 187 0000 014B     		ldr	r3, .L14
+ 188 0002 1870     		strb	r0, [r3]
+ 189 0004 7047     		bx	lr
+ 190              	.L15:
+ 191 0006 00BF     		.align	2
+ 192              	.L14:
+ 193 0008 8F640040 		.word	1073767567
+ 194              		.cfi_endproc
+ 195              	.LFE8:
+ 196              		.size	SPI_SetTxInterruptMode, .-SPI_SetTxInterruptMode
+ 197              		.section	.text.SPI_SetRxInterruptMode,"ax",%progbits
+ 198              		.align	2
+ 199              		.global	SPI_SetRxInterruptMode
+ 200              		.thumb
+ 201              		.thumb_func
+ 202              		.type	SPI_SetRxInterruptMode, %function
+ 203              	SPI_SetRxInterruptMode:
+ 204              	.LFB9:
+ 357:.\Generated_Source\PSoC5/SPI.c **** }
+ 358:.\Generated_Source\PSoC5/SPI.c **** 
+ 359:.\Generated_Source\PSoC5/SPI.c **** 
+ 360:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 361:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_SetRxInterruptMode
+ 362:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 363:.\Generated_Source\PSoC5/SPI.c **** *
+ 364:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 365:.\Generated_Source\PSoC5/SPI.c **** *  Configure which status bits trigger an interrupt event.
+ 366:.\Generated_Source\PSoC5/SPI.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 11
+
+
+ 367:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 368:.\Generated_Source\PSoC5/SPI.c **** *  intSrc: An or'd combination of the desired status bit masks (defined in the
+ 369:.\Generated_Source\PSoC5/SPI.c **** *  header file).
+ 370:.\Generated_Source\PSoC5/SPI.c **** *
+ 371:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 372:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 373:.\Generated_Source\PSoC5/SPI.c **** *
+ 374:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 375:.\Generated_Source\PSoC5/SPI.c **** *  Enables the output of specific status bits to the interrupt controller.
+ 376:.\Generated_Source\PSoC5/SPI.c **** *
+ 377:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 378:.\Generated_Source\PSoC5/SPI.c **** void SPI_SetRxInterruptMode(uint8 intSrc) 
+ 379:.\Generated_Source\PSoC5/SPI.c **** {
+ 205              		.loc 1 379 0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209              		@ link register save eliminated.
+ 210              	.LVL5:
+ 380:.\Generated_Source\PSoC5/SPI.c ****     SPI_RX_STATUS_MASK_REG  = intSrc;
+ 211              		.loc 1 380 0
+ 212 0000 014B     		ldr	r3, .L17
+ 213 0002 1870     		strb	r0, [r3]
+ 214 0004 7047     		bx	lr
+ 215              	.L18:
+ 216 0006 00BF     		.align	2
+ 217              	.L17:
+ 218 0008 8E640040 		.word	1073767566
+ 219              		.cfi_endproc
+ 220              	.LFE9:
+ 221              		.size	SPI_SetRxInterruptMode, .-SPI_SetRxInterruptMode
+ 222              		.section	.text.SPI_ReadTxStatus,"ax",%progbits
+ 223              		.align	2
+ 224              		.global	SPI_ReadTxStatus
+ 225              		.thumb
+ 226              		.thumb_func
+ 227              		.type	SPI_ReadTxStatus, %function
+ 228              	SPI_ReadTxStatus:
+ 229              	.LFB10:
+ 381:.\Generated_Source\PSoC5/SPI.c **** }
+ 382:.\Generated_Source\PSoC5/SPI.c **** 
+ 383:.\Generated_Source\PSoC5/SPI.c **** 
+ 384:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 385:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ReadTxStatus
+ 386:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 387:.\Generated_Source\PSoC5/SPI.c **** *
+ 388:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 389:.\Generated_Source\PSoC5/SPI.c **** *  Read the Tx status register for the component.
+ 390:.\Generated_Source\PSoC5/SPI.c **** *
+ 391:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 392:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 393:.\Generated_Source\PSoC5/SPI.c **** *
+ 394:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 395:.\Generated_Source\PSoC5/SPI.c **** *  Contents of the Tx status register.
+ 396:.\Generated_Source\PSoC5/SPI.c **** *
+ 397:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 398:.\Generated_Source\PSoC5/SPI.c **** *  SPI_swStatusTx - used to store in software status register,
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 12
+
+
+ 399:.\Generated_Source\PSoC5/SPI.c **** *  modified every function call - resets to zero.
+ 400:.\Generated_Source\PSoC5/SPI.c **** *
+ 401:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 402:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user and the API to read the Tx status register for error
+ 403:.\Generated_Source\PSoC5/SPI.c **** *  detection and flow control.
+ 404:.\Generated_Source\PSoC5/SPI.c **** *
+ 405:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 406:.\Generated_Source\PSoC5/SPI.c **** *  Clear Tx status register of the component.
+ 407:.\Generated_Source\PSoC5/SPI.c **** *
+ 408:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 409:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 410:.\Generated_Source\PSoC5/SPI.c **** *
+ 411:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 412:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_ReadTxStatus(void) 
+ 413:.\Generated_Source\PSoC5/SPI.c **** {
+ 230              		.loc 1 413 0
+ 231              		.cfi_startproc
+ 232              		@ args = 0, pretend = 0, frame = 0
+ 233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 234              		@ link register save eliminated.
+ 414:.\Generated_Source\PSoC5/SPI.c ****     uint8 tmpStatus;
+ 415:.\Generated_Source\PSoC5/SPI.c **** 
+ 416:.\Generated_Source\PSoC5/SPI.c ****     #if (SPI_TX_SOFTWARE_BUF_ENABLED)
+ 417:.\Generated_Source\PSoC5/SPI.c **** 
+ 418:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableTxInt();
+ 419:.\Generated_Source\PSoC5/SPI.c **** 
+ 420:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_GET_STATUS_TX(SPI_swStatusTx);
+ 421:.\Generated_Source\PSoC5/SPI.c **** 
+ 422:.\Generated_Source\PSoC5/SPI.c ****         SPI_swStatusTx = 0u;
+ 423:.\Generated_Source\PSoC5/SPI.c **** 
+ 424:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupts */
+ 425:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableTxInt();
+ 426:.\Generated_Source\PSoC5/SPI.c **** 
+ 427:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_TX_SOFTWARE_BUF_ENABLED */
+ 428:.\Generated_Source\PSoC5/SPI.c **** 
+ 429:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_TX_STATUS_REG;
+ 235              		.loc 1 429 0
+ 236 0000 014B     		ldr	r3, .L20
+ 237 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 238              	.LVL6:
+ 430:.\Generated_Source\PSoC5/SPI.c **** 
+ 431:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 432:.\Generated_Source\PSoC5/SPI.c **** 
+ 433:.\Generated_Source\PSoC5/SPI.c ****     return(tmpStatus);
+ 434:.\Generated_Source\PSoC5/SPI.c **** }
+ 239              		.loc 1 434 0
+ 240 0004 7047     		bx	lr
+ 241              	.L21:
+ 242 0006 00BF     		.align	2
+ 243              	.L20:
+ 244 0008 6F640040 		.word	1073767535
+ 245              		.cfi_endproc
+ 246              	.LFE10:
+ 247              		.size	SPI_ReadTxStatus, .-SPI_ReadTxStatus
+ 248              		.section	.text.SPI_ReadRxStatus,"ax",%progbits
+ 249              		.align	2
+ 250              		.global	SPI_ReadRxStatus
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 13
+
+
+ 251              		.thumb
+ 252              		.thumb_func
+ 253              		.type	SPI_ReadRxStatus, %function
+ 254              	SPI_ReadRxStatus:
+ 255              	.LFB11:
+ 435:.\Generated_Source\PSoC5/SPI.c **** 
+ 436:.\Generated_Source\PSoC5/SPI.c **** 
+ 437:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 438:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ReadRxStatus
+ 439:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 440:.\Generated_Source\PSoC5/SPI.c **** *
+ 441:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 442:.\Generated_Source\PSoC5/SPI.c **** *  Read the Rx status register for the component.
+ 443:.\Generated_Source\PSoC5/SPI.c **** *
+ 444:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 445:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 446:.\Generated_Source\PSoC5/SPI.c **** *
+ 447:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 448:.\Generated_Source\PSoC5/SPI.c **** *  Contents of the Rx status register.
+ 449:.\Generated_Source\PSoC5/SPI.c **** *
+ 450:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 451:.\Generated_Source\PSoC5/SPI.c **** *  SPI_swStatusRx - used to store in software Rx status register,
+ 452:.\Generated_Source\PSoC5/SPI.c **** *  modified every function call - resets to zero.
+ 453:.\Generated_Source\PSoC5/SPI.c **** *
+ 454:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 455:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user and the API to read the Rx status register for error
+ 456:.\Generated_Source\PSoC5/SPI.c **** *  detection and flow control.
+ 457:.\Generated_Source\PSoC5/SPI.c **** *
+ 458:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 459:.\Generated_Source\PSoC5/SPI.c **** *  Clear Rx status register of the component.
+ 460:.\Generated_Source\PSoC5/SPI.c **** *
+ 461:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 462:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 463:.\Generated_Source\PSoC5/SPI.c **** *
+ 464:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 465:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_ReadRxStatus(void) 
+ 466:.\Generated_Source\PSoC5/SPI.c **** {
+ 256              		.loc 1 466 0
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260              		@ link register save eliminated.
+ 467:.\Generated_Source\PSoC5/SPI.c ****     uint8 tmpStatus;
+ 468:.\Generated_Source\PSoC5/SPI.c **** 
+ 469:.\Generated_Source\PSoC5/SPI.c ****     #if (SPI_RX_SOFTWARE_BUF_ENABLED)
+ 470:.\Generated_Source\PSoC5/SPI.c **** 
+ 471:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableRxInt();
+ 472:.\Generated_Source\PSoC5/SPI.c **** 
+ 473:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_GET_STATUS_RX(SPI_swStatusRx);
+ 474:.\Generated_Source\PSoC5/SPI.c **** 
+ 475:.\Generated_Source\PSoC5/SPI.c ****         SPI_swStatusRx = 0u;
+ 476:.\Generated_Source\PSoC5/SPI.c **** 
+ 477:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupts */
+ 478:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableRxInt();
+ 479:.\Generated_Source\PSoC5/SPI.c **** 
+ 480:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_RX_SOFTWARE_BUF_ENABLED */
+ 481:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 14
+
+
+ 482:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_RX_STATUS_REG;
+ 261              		.loc 1 482 0
+ 262 0000 014B     		ldr	r3, .L23
+ 263 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 264              	.LVL7:
+ 483:.\Generated_Source\PSoC5/SPI.c **** 
+ 484:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 485:.\Generated_Source\PSoC5/SPI.c **** 
+ 486:.\Generated_Source\PSoC5/SPI.c ****     return(tmpStatus);
+ 487:.\Generated_Source\PSoC5/SPI.c **** }
+ 265              		.loc 1 487 0
+ 266 0004 7047     		bx	lr
+ 267              	.L24:
+ 268 0006 00BF     		.align	2
+ 269              	.L23:
+ 270 0008 6E640040 		.word	1073767534
+ 271              		.cfi_endproc
+ 272              	.LFE11:
+ 273              		.size	SPI_ReadRxStatus, .-SPI_ReadRxStatus
+ 274              		.section	.text.SPI_WriteTxData,"ax",%progbits
+ 275              		.align	2
+ 276              		.global	SPI_WriteTxData
+ 277              		.thumb
+ 278              		.thumb_func
+ 279              		.type	SPI_WriteTxData, %function
+ 280              	SPI_WriteTxData:
+ 281              	.LFB12:
+ 488:.\Generated_Source\PSoC5/SPI.c **** 
+ 489:.\Generated_Source\PSoC5/SPI.c **** 
+ 490:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 491:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_WriteTxData
+ 492:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 493:.\Generated_Source\PSoC5/SPI.c **** *
+ 494:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 495:.\Generated_Source\PSoC5/SPI.c **** *  Write a byte of data to be sent across the SPI.
+ 496:.\Generated_Source\PSoC5/SPI.c **** *
+ 497:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 498:.\Generated_Source\PSoC5/SPI.c **** *  txDataByte: The data value to send across the SPI.
+ 499:.\Generated_Source\PSoC5/SPI.c **** *
+ 500:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 501:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 502:.\Generated_Source\PSoC5/SPI.c **** *
+ 503:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 504:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferWrite - used for the account of the bytes which
+ 505:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the TX software buffer, modified every function
+ 506:.\Generated_Source\PSoC5/SPI.c **** *  call if TX Software Buffer is used.
+ 507:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferRead - used for the account of the bytes which
+ 508:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the TX software buffer.
+ 509:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBuffer[SPI_TX_BUFFER_SIZE] - used to store
+ 510:.\Generated_Source\PSoC5/SPI.c **** *  data to sending, modified every function call if TX Software Buffer is used.
+ 511:.\Generated_Source\PSoC5/SPI.c **** *
+ 512:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 513:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user to transmit any byte of data in a single transfer.
+ 514:.\Generated_Source\PSoC5/SPI.c **** *
+ 515:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 516:.\Generated_Source\PSoC5/SPI.c **** *  If this function is called again before the previous byte is finished then
+ 517:.\Generated_Source\PSoC5/SPI.c **** *  the next byte will be appended to the transfer with no time between
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 15
+
+
+ 518:.\Generated_Source\PSoC5/SPI.c **** *  the byte transfers. Clear Tx status register of the component.
+ 519:.\Generated_Source\PSoC5/SPI.c **** *
+ 520:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 521:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 522:.\Generated_Source\PSoC5/SPI.c **** *
+ 523:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 524:.\Generated_Source\PSoC5/SPI.c **** void SPI_WriteTxData(uint8 txData) 
+ 525:.\Generated_Source\PSoC5/SPI.c **** {
+ 282              		.loc 1 525 0
+ 283              		.cfi_startproc
+ 284              		@ args = 0, pretend = 0, frame = 0
+ 285              		@ frame_needed = 0, uses_anonymous_args = 0
+ 286              		@ link register save eliminated.
+ 287              	.LVL8:
+ 288              	.L26:
+ 526:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_TX_SOFTWARE_BUF_ENABLED)
+ 527:.\Generated_Source\PSoC5/SPI.c **** 
+ 528:.\Generated_Source\PSoC5/SPI.c ****         uint8 tempStatus;
+ 529:.\Generated_Source\PSoC5/SPI.c ****         uint8 tmpTxBufferRead;
+ 530:.\Generated_Source\PSoC5/SPI.c **** 
+ 531:.\Generated_Source\PSoC5/SPI.c ****         /* Block if buffer is full, so we don't overwrite. */
+ 532:.\Generated_Source\PSoC5/SPI.c ****         do
+ 533:.\Generated_Source\PSoC5/SPI.c ****         {
+ 534:.\Generated_Source\PSoC5/SPI.c ****             tmpTxBufferRead = SPI_txBufferRead;
+ 535:.\Generated_Source\PSoC5/SPI.c ****             if (0u == tmpTxBufferRead)
+ 536:.\Generated_Source\PSoC5/SPI.c ****             {
+ 537:.\Generated_Source\PSoC5/SPI.c ****                 tmpTxBufferRead = SPI_TX_BUFFER_SIZE - 1u;
+ 538:.\Generated_Source\PSoC5/SPI.c ****             }
+ 539:.\Generated_Source\PSoC5/SPI.c ****             else
+ 540:.\Generated_Source\PSoC5/SPI.c ****             {
+ 541:.\Generated_Source\PSoC5/SPI.c ****                 tmpTxBufferRead--;
+ 542:.\Generated_Source\PSoC5/SPI.c ****             }
+ 543:.\Generated_Source\PSoC5/SPI.c **** 
+ 544:.\Generated_Source\PSoC5/SPI.c ****         }
+ 545:.\Generated_Source\PSoC5/SPI.c ****         while(tmpTxBufferRead == SPI_txBufferWrite);
+ 546:.\Generated_Source\PSoC5/SPI.c **** 
+ 547:.\Generated_Source\PSoC5/SPI.c ****         /* Disable Interrupt to protect variables that could change on interrupt. */
+ 548:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableTxInt();
+ 549:.\Generated_Source\PSoC5/SPI.c **** 
+ 550:.\Generated_Source\PSoC5/SPI.c ****         tempStatus = SPI_GET_STATUS_TX(SPI_swStatusTx);
+ 551:.\Generated_Source\PSoC5/SPI.c ****         SPI_swStatusTx = tempStatus;
+ 552:.\Generated_Source\PSoC5/SPI.c **** 
+ 553:.\Generated_Source\PSoC5/SPI.c ****         if((SPI_txBufferRead == SPI_txBufferWrite) &&
+ 554:.\Generated_Source\PSoC5/SPI.c ****             (0u != (SPI_swStatusTx & SPI_STS_TX_FIFO_NOT_FULL)))
+ 555:.\Generated_Source\PSoC5/SPI.c ****         {
+ 556:.\Generated_Source\PSoC5/SPI.c ****             /* Put data element into the TX FIFO */
+ 557:.\Generated_Source\PSoC5/SPI.c ****             CY_SET_REG8(SPI_TXDATA_PTR, txData);
+ 558:.\Generated_Source\PSoC5/SPI.c ****         }
+ 559:.\Generated_Source\PSoC5/SPI.c ****         else
+ 560:.\Generated_Source\PSoC5/SPI.c ****         {
+ 561:.\Generated_Source\PSoC5/SPI.c ****             /* Put data element into the software buffer */
+ 562:.\Generated_Source\PSoC5/SPI.c ****             SPI_txBufferWrite++;
+ 563:.\Generated_Source\PSoC5/SPI.c ****             if(SPI_txBufferWrite >= SPI_TX_BUFFER_SIZE)
+ 564:.\Generated_Source\PSoC5/SPI.c ****             {
+ 565:.\Generated_Source\PSoC5/SPI.c ****                 SPI_txBufferWrite = 0u;
+ 566:.\Generated_Source\PSoC5/SPI.c ****             }
+ 567:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 16
+
+
+ 568:.\Generated_Source\PSoC5/SPI.c ****             if(SPI_txBufferWrite == SPI_txBufferRead)
+ 569:.\Generated_Source\PSoC5/SPI.c ****             {
+ 570:.\Generated_Source\PSoC5/SPI.c ****                 SPI_txBufferRead++;
+ 571:.\Generated_Source\PSoC5/SPI.c ****                 if(SPI_txBufferRead >= SPI_RX_BUFFER_SIZE)
+ 572:.\Generated_Source\PSoC5/SPI.c ****                 {
+ 573:.\Generated_Source\PSoC5/SPI.c ****                     SPI_txBufferRead = 0u;
+ 574:.\Generated_Source\PSoC5/SPI.c ****                 }
+ 575:.\Generated_Source\PSoC5/SPI.c ****                 SPI_txBufferFull = 1u;
+ 576:.\Generated_Source\PSoC5/SPI.c ****             }
+ 577:.\Generated_Source\PSoC5/SPI.c **** 
+ 578:.\Generated_Source\PSoC5/SPI.c ****             SPI_txBuffer[SPI_txBufferWrite] = txData;
+ 579:.\Generated_Source\PSoC5/SPI.c **** 
+ 580:.\Generated_Source\PSoC5/SPI.c ****             SPI_TX_STATUS_MASK_REG |= SPI_STS_TX_FIFO_NOT_FULL;
+ 581:.\Generated_Source\PSoC5/SPI.c ****         }
+ 582:.\Generated_Source\PSoC5/SPI.c **** 
+ 583:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupt. */
+ 584:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableTxInt();
+ 585:.\Generated_Source\PSoC5/SPI.c **** 
+ 586:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_TX_SOFTWARE_BUF_ENABLED */
+ 587:.\Generated_Source\PSoC5/SPI.c ****         /* Wait until TX FIFO has a place */
+ 588:.\Generated_Source\PSoC5/SPI.c ****         while(0u == (SPI_TX_STATUS_REG & SPI_STS_TX_FIFO_NOT_FULL))
+ 289              		.loc 1 588 0 discriminator 1
+ 290 0000 034B     		ldr	r3, .L27
+ 291 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 292 0004 13F0020F 		tst	r3, #2
+ 293 0008 FAD0     		beq	.L26
+ 589:.\Generated_Source\PSoC5/SPI.c ****         {
+ 590:.\Generated_Source\PSoC5/SPI.c ****         }
+ 591:.\Generated_Source\PSoC5/SPI.c **** 
+ 592:.\Generated_Source\PSoC5/SPI.c ****         /* Put data element into the TX FIFO */
+ 593:.\Generated_Source\PSoC5/SPI.c ****         CY_SET_REG8(SPI_TXDATA_PTR, txData);
+ 294              		.loc 1 593 0
+ 295 000a 024B     		ldr	r3, .L27+4
+ 296 000c 1870     		strb	r0, [r3]
+ 297 000e 7047     		bx	lr
+ 298              	.L28:
+ 299              		.align	2
+ 300              	.L27:
+ 301 0010 6F640040 		.word	1073767535
+ 302 0014 4D640040 		.word	1073767501
+ 303              		.cfi_endproc
+ 304              	.LFE12:
+ 305              		.size	SPI_WriteTxData, .-SPI_WriteTxData
+ 306              		.section	.text.SPI_WriteTxDataZero,"ax",%progbits
+ 307              		.align	2
+ 308              		.global	SPI_WriteTxDataZero
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.type	SPI_WriteTxDataZero, %function
+ 312              	SPI_WriteTxDataZero:
+ 313              	.LFB13:
+ 594:.\Generated_Source\PSoC5/SPI.c ****         
+ 595:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 596:.\Generated_Source\PSoC5/SPI.c **** }
+ 597:.\Generated_Source\PSoC5/SPI.c **** 
+ 598:.\Generated_Source\PSoC5/SPI.c **** #if(SPI_MODE_USE_ZERO != 0u)
+ 599:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 17
+
+
+ 600:.\Generated_Source\PSoC5/SPI.c ****     /*******************************************************************************
+ 601:.\Generated_Source\PSoC5/SPI.c ****     * Function Name: SPI_WriteTxDataZero
+ 602:.\Generated_Source\PSoC5/SPI.c ****     ********************************************************************************
+ 603:.\Generated_Source\PSoC5/SPI.c ****     *
+ 604:.\Generated_Source\PSoC5/SPI.c ****     * Summary:
+ 605:.\Generated_Source\PSoC5/SPI.c ****     *  Write a byte zero of data to be sent across the SPI. This must be used in
+ 606:.\Generated_Source\PSoC5/SPI.c ****     *  Mode 00 and 01 if the FIFO is empty and data is not being sent.
+ 607:.\Generated_Source\PSoC5/SPI.c ****     *
+ 608:.\Generated_Source\PSoC5/SPI.c ****     * Parameters:
+ 609:.\Generated_Source\PSoC5/SPI.c ****     *  txDataByte: The data value to send across the SPI.
+ 610:.\Generated_Source\PSoC5/SPI.c ****     *
+ 611:.\Generated_Source\PSoC5/SPI.c ****     * Return:
+ 612:.\Generated_Source\PSoC5/SPI.c ****     *  None.
+ 613:.\Generated_Source\PSoC5/SPI.c ****     *
+ 614:.\Generated_Source\PSoC5/SPI.c ****     * Theory:
+ 615:.\Generated_Source\PSoC5/SPI.c ****     *  Allows the user to transmit any byte of data in a single transfer. Clear
+ 616:.\Generated_Source\PSoC5/SPI.c ****     *  status register of the component.
+ 617:.\Generated_Source\PSoC5/SPI.c ****     *
+ 618:.\Generated_Source\PSoC5/SPI.c ****     *******************************************************************************/
+ 619:.\Generated_Source\PSoC5/SPI.c ****     void SPI_WriteTxDataZero(uint8 txDataByte)
+ 620:.\Generated_Source\PSoC5/SPI.c ****                                         
+ 621:.\Generated_Source\PSoC5/SPI.c ****     {
+ 314              		.loc 1 621 0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		@ link register save eliminated.
+ 319              	.LVL9:
+ 622:.\Generated_Source\PSoC5/SPI.c ****         CY_SET_REG8(SPI_TXDATA_ZERO_PTR, txDataByte);
+ 320              		.loc 1 622 0
+ 321 0000 014B     		ldr	r3, .L30
+ 322 0002 1870     		strb	r0, [r3]
+ 323 0004 7047     		bx	lr
+ 324              	.L31:
+ 325 0006 00BF     		.align	2
+ 326              	.L30:
+ 327 0008 0D640040 		.word	1073767437
+ 328              		.cfi_endproc
+ 329              	.LFE13:
+ 330              		.size	SPI_WriteTxDataZero, .-SPI_WriteTxDataZero
+ 331              		.section	.text.SPI_ReadRxData,"ax",%progbits
+ 332              		.align	2
+ 333              		.global	SPI_ReadRxData
+ 334              		.thumb
+ 335              		.thumb_func
+ 336              		.type	SPI_ReadRxData, %function
+ 337              	SPI_ReadRxData:
+ 338              	.LFB14:
+ 623:.\Generated_Source\PSoC5/SPI.c ****     }
+ 624:.\Generated_Source\PSoC5/SPI.c **** 
+ 625:.\Generated_Source\PSoC5/SPI.c **** #endif /* (SPI_MODE_USE_ZERO != 0u) */
+ 626:.\Generated_Source\PSoC5/SPI.c **** 
+ 627:.\Generated_Source\PSoC5/SPI.c **** 
+ 628:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 629:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ReadRxData
+ 630:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 631:.\Generated_Source\PSoC5/SPI.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 18
+
+
+ 632:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 633:.\Generated_Source\PSoC5/SPI.c **** *  Read the next byte of data received across the SPI.
+ 634:.\Generated_Source\PSoC5/SPI.c **** *
+ 635:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 636:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 637:.\Generated_Source\PSoC5/SPI.c **** *
+ 638:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 639:.\Generated_Source\PSoC5/SPI.c **** *  The next byte of data read from the FIFO.
+ 640:.\Generated_Source\PSoC5/SPI.c **** *
+ 641:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 642:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferWrite - used for the account of the bytes which
+ 643:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the RX software buffer.
+ 644:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferRead - used for the account of the bytes which
+ 645:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the RX software buffer, modified every function
+ 646:.\Generated_Source\PSoC5/SPI.c **** *  call if RX Software Buffer is used.
+ 647:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBuffer[SPI_RX_BUFFER_SIZE] - used to store
+ 648:.\Generated_Source\PSoC5/SPI.c **** *  received data.
+ 649:.\Generated_Source\PSoC5/SPI.c **** *
+ 650:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 651:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user to read a byte of data received.
+ 652:.\Generated_Source\PSoC5/SPI.c **** *
+ 653:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 654:.\Generated_Source\PSoC5/SPI.c **** *  Will return invalid data if the FIFO is empty.  User should poll for FIFO
+ 655:.\Generated_Source\PSoC5/SPI.c **** *  empty status before calling Read function.
+ 656:.\Generated_Source\PSoC5/SPI.c **** *
+ 657:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 658:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 659:.\Generated_Source\PSoC5/SPI.c **** *
+ 660:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 661:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_ReadRxData(void) 
+ 662:.\Generated_Source\PSoC5/SPI.c **** {
+ 339              		.loc 1 662 0
+ 340              		.cfi_startproc
+ 341              		@ args = 0, pretend = 0, frame = 0
+ 342              		@ frame_needed = 0, uses_anonymous_args = 0
+ 343              		@ link register save eliminated.
+ 663:.\Generated_Source\PSoC5/SPI.c ****     uint8 rxData;
+ 664:.\Generated_Source\PSoC5/SPI.c **** 
+ 665:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_RX_SOFTWARE_BUF_ENABLED)
+ 666:.\Generated_Source\PSoC5/SPI.c **** 
+ 667:.\Generated_Source\PSoC5/SPI.c ****         /* Disable Interrupt to protect variables that could change on interrupt. */
+ 668:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableRxInt();
+ 669:.\Generated_Source\PSoC5/SPI.c **** 
+ 670:.\Generated_Source\PSoC5/SPI.c ****         if(SPI_rxBufferRead != SPI_rxBufferWrite)
+ 671:.\Generated_Source\PSoC5/SPI.c ****         {
+ 672:.\Generated_Source\PSoC5/SPI.c ****             if(SPI_rxBufferFull == 0u)
+ 673:.\Generated_Source\PSoC5/SPI.c ****             {
+ 674:.\Generated_Source\PSoC5/SPI.c ****                 SPI_rxBufferRead++;
+ 675:.\Generated_Source\PSoC5/SPI.c ****                 if(SPI_rxBufferRead >= SPI_RX_BUFFER_SIZE)
+ 676:.\Generated_Source\PSoC5/SPI.c ****                 {
+ 677:.\Generated_Source\PSoC5/SPI.c ****                     SPI_rxBufferRead = 0u;
+ 678:.\Generated_Source\PSoC5/SPI.c ****                 }
+ 679:.\Generated_Source\PSoC5/SPI.c ****             }
+ 680:.\Generated_Source\PSoC5/SPI.c ****             else
+ 681:.\Generated_Source\PSoC5/SPI.c ****             {
+ 682:.\Generated_Source\PSoC5/SPI.c ****                 SPI_rxBufferFull = 0u;
+ 683:.\Generated_Source\PSoC5/SPI.c ****             }
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 19
+
+
+ 684:.\Generated_Source\PSoC5/SPI.c ****         }
+ 685:.\Generated_Source\PSoC5/SPI.c **** 
+ 686:.\Generated_Source\PSoC5/SPI.c ****         rxData = SPI_rxBuffer[SPI_rxBufferRead];
+ 687:.\Generated_Source\PSoC5/SPI.c **** 
+ 688:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupt. */
+ 689:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableRxInt();
+ 690:.\Generated_Source\PSoC5/SPI.c **** 
+ 691:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_RX_SOFTWARE_BUF_ENABLED */
+ 692:.\Generated_Source\PSoC5/SPI.c **** 
+ 693:.\Generated_Source\PSoC5/SPI.c ****         rxData = CY_GET_REG8(SPI_RXDATA_PTR);
+ 344              		.loc 1 693 0
+ 345 0000 014B     		ldr	r3, .L33
+ 346 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 347              	.LVL10:
+ 694:.\Generated_Source\PSoC5/SPI.c **** 
+ 695:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 696:.\Generated_Source\PSoC5/SPI.c **** 
+ 697:.\Generated_Source\PSoC5/SPI.c ****     return (rxData);
+ 698:.\Generated_Source\PSoC5/SPI.c **** 
+ 699:.\Generated_Source\PSoC5/SPI.c **** }
+ 348              		.loc 1 699 0
+ 349 0004 7047     		bx	lr
+ 350              	.L34:
+ 351 0006 00BF     		.align	2
+ 352              	.L33:
+ 353 0008 5D640040 		.word	1073767517
+ 354              		.cfi_endproc
+ 355              	.LFE14:
+ 356              		.size	SPI_ReadRxData, .-SPI_ReadRxData
+ 357              		.section	.text.SPI_GetRxBufferSize,"ax",%progbits
+ 358              		.align	2
+ 359              		.global	SPI_GetRxBufferSize
+ 360              		.thumb
+ 361              		.thumb_func
+ 362              		.type	SPI_GetRxBufferSize, %function
+ 363              	SPI_GetRxBufferSize:
+ 364              	.LFB15:
+ 700:.\Generated_Source\PSoC5/SPI.c **** 
+ 701:.\Generated_Source\PSoC5/SPI.c **** 
+ 702:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 703:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_GetRxBufferSize
+ 704:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 705:.\Generated_Source\PSoC5/SPI.c **** *
+ 706:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 707:.\Generated_Source\PSoC5/SPI.c **** *  Returns the number of bytes/words of data currently held in the RX buffer.
+ 708:.\Generated_Source\PSoC5/SPI.c **** *  If RX Software Buffer not used then function return 0 if FIFO empty or 1 if
+ 709:.\Generated_Source\PSoC5/SPI.c **** *  FIFO not empty. In another case function return size of RX Software Buffer.
+ 710:.\Generated_Source\PSoC5/SPI.c **** *
+ 711:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 712:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 713:.\Generated_Source\PSoC5/SPI.c **** *
+ 714:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 715:.\Generated_Source\PSoC5/SPI.c **** *  Integer count of the number of bytes/words in the RX buffer.
+ 716:.\Generated_Source\PSoC5/SPI.c **** *
+ 717:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 718:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferWrite - used for the account of the bytes which
+ 719:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the RX software buffer.
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 20
+
+
+ 720:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferRead - used for the account of the bytes which
+ 721:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the RX software buffer.
+ 722:.\Generated_Source\PSoC5/SPI.c **** *
+ 723:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 724:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user to find out how full the RX Buffer is.
+ 725:.\Generated_Source\PSoC5/SPI.c **** *
+ 726:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 727:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_GetRxBufferSize(void) 
+ 728:.\Generated_Source\PSoC5/SPI.c **** {
+ 365              		.loc 1 728 0
+ 366              		.cfi_startproc
+ 367              		@ args = 0, pretend = 0, frame = 0
+ 368              		@ frame_needed = 0, uses_anonymous_args = 0
+ 369              		@ link register save eliminated.
+ 729:.\Generated_Source\PSoC5/SPI.c ****     uint8 size;
+ 730:.\Generated_Source\PSoC5/SPI.c **** 
+ 731:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_RX_SOFTWARE_BUF_ENABLED)
+ 732:.\Generated_Source\PSoC5/SPI.c **** 
+ 733:.\Generated_Source\PSoC5/SPI.c ****         /* Disable Interrupt to protect variables that could change on interrupt. */
+ 734:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableRxInt();
+ 735:.\Generated_Source\PSoC5/SPI.c **** 
+ 736:.\Generated_Source\PSoC5/SPI.c ****         if(SPI_rxBufferRead == SPI_rxBufferWrite)
+ 737:.\Generated_Source\PSoC5/SPI.c ****         {
+ 738:.\Generated_Source\PSoC5/SPI.c ****             size = 0u; /* No data in RX buffer */
+ 739:.\Generated_Source\PSoC5/SPI.c ****         }
+ 740:.\Generated_Source\PSoC5/SPI.c ****         else if(SPI_rxBufferRead < SPI_rxBufferWrite)
+ 741:.\Generated_Source\PSoC5/SPI.c ****         {
+ 742:.\Generated_Source\PSoC5/SPI.c ****             size = (SPI_rxBufferWrite - SPI_rxBufferRead);
+ 743:.\Generated_Source\PSoC5/SPI.c ****         }
+ 744:.\Generated_Source\PSoC5/SPI.c ****         else
+ 745:.\Generated_Source\PSoC5/SPI.c ****         {
+ 746:.\Generated_Source\PSoC5/SPI.c ****             size = (SPI_RX_BUFFER_SIZE - SPI_rxBufferRead) + SPI_rxBufferWrite;
+ 747:.\Generated_Source\PSoC5/SPI.c ****         }
+ 748:.\Generated_Source\PSoC5/SPI.c **** 
+ 749:.\Generated_Source\PSoC5/SPI.c ****         /* Enable interrupt. */
+ 750:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableRxInt();
+ 751:.\Generated_Source\PSoC5/SPI.c **** 
+ 752:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_RX_SOFTWARE_BUF_ENABLED*/
+ 753:.\Generated_Source\PSoC5/SPI.c **** 
+ 754:.\Generated_Source\PSoC5/SPI.c ****         /* We can only know if there is data in the fifo. */
+ 755:.\Generated_Source\PSoC5/SPI.c ****         size = ((SPI_RX_STATUS_REG & SPI_STS_RX_FIFO_NOT_EMPTY) != 0u) ? 1u : 0u;
+ 370              		.loc 1 755 0
+ 371 0000 044B     		ldr	r3, .L38
+ 372 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 373 0004 13F0080F 		tst	r3, #8
+ 374 0008 01D0     		beq	.L37
+ 375 000a 0120     		movs	r0, #1
+ 376 000c 7047     		bx	lr
+ 377              	.L37:
+ 378 000e 0020     		movs	r0, #0
+ 379              	.LVL11:
+ 756:.\Generated_Source\PSoC5/SPI.c **** 
+ 757:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 758:.\Generated_Source\PSoC5/SPI.c **** 
+ 759:.\Generated_Source\PSoC5/SPI.c ****     return (size);
+ 760:.\Generated_Source\PSoC5/SPI.c **** }
+ 380              		.loc 1 760 0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 21
+
+
+ 381 0010 7047     		bx	lr
+ 382              	.L39:
+ 383 0012 00BF     		.align	2
+ 384              	.L38:
+ 385 0014 6E640040 		.word	1073767534
+ 386              		.cfi_endproc
+ 387              	.LFE15:
+ 388              		.size	SPI_GetRxBufferSize, .-SPI_GetRxBufferSize
+ 389              		.section	.text.SPI_GetTxBufferSize,"ax",%progbits
+ 390              		.align	2
+ 391              		.global	SPI_GetTxBufferSize
+ 392              		.thumb
+ 393              		.thumb_func
+ 394              		.type	SPI_GetTxBufferSize, %function
+ 395              	SPI_GetTxBufferSize:
+ 396              	.LFB16:
+ 761:.\Generated_Source\PSoC5/SPI.c **** 
+ 762:.\Generated_Source\PSoC5/SPI.c **** 
+ 763:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 764:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_GetTxBufferSize
+ 765:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 766:.\Generated_Source\PSoC5/SPI.c **** *
+ 767:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 768:.\Generated_Source\PSoC5/SPI.c **** *  Returns the number of bytes/words of data currently held in the TX buffer.
+ 769:.\Generated_Source\PSoC5/SPI.c **** *  If TX Software Buffer not used then function return 0 - if FIFO empty, 1 - if
+ 770:.\Generated_Source\PSoC5/SPI.c **** *  FIFO not full, 4 - if FIFO full. In another case function return size of TX
+ 771:.\Generated_Source\PSoC5/SPI.c **** *  Software Buffer.
+ 772:.\Generated_Source\PSoC5/SPI.c **** *
+ 773:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 774:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 775:.\Generated_Source\PSoC5/SPI.c **** *
+ 776:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 777:.\Generated_Source\PSoC5/SPI.c **** *  Integer count of the number of bytes/words in the TX buffer.
+ 778:.\Generated_Source\PSoC5/SPI.c **** *
+ 779:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 780:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferWrite - used for the account of the bytes which
+ 781:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the TX software buffer.
+ 782:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferRead - used for the account of the bytes which
+ 783:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the TX software buffer.
+ 784:.\Generated_Source\PSoC5/SPI.c **** *
+ 785:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 786:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user to find out how full the TX Buffer is.
+ 787:.\Generated_Source\PSoC5/SPI.c **** *
+ 788:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 789:.\Generated_Source\PSoC5/SPI.c **** *  Clear status register of the component.
+ 790:.\Generated_Source\PSoC5/SPI.c **** *
+ 791:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 792:.\Generated_Source\PSoC5/SPI.c **** uint8  SPI_GetTxBufferSize(void) 
+ 793:.\Generated_Source\PSoC5/SPI.c **** {
+ 397              		.loc 1 793 0
+ 398              		.cfi_startproc
+ 399              		@ args = 0, pretend = 0, frame = 0
+ 400              		@ frame_needed = 0, uses_anonymous_args = 0
+ 401              		@ link register save eliminated.
+ 794:.\Generated_Source\PSoC5/SPI.c ****     uint8 size;
+ 795:.\Generated_Source\PSoC5/SPI.c **** 
+ 796:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_TX_SOFTWARE_BUF_ENABLED)
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 22
+
+
+ 797:.\Generated_Source\PSoC5/SPI.c **** 
+ 798:.\Generated_Source\PSoC5/SPI.c ****         /* Disable Interrupt to protect variables that could change on interrupt. */
+ 799:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableTxInt();
+ 800:.\Generated_Source\PSoC5/SPI.c **** 
+ 801:.\Generated_Source\PSoC5/SPI.c ****         if(SPI_txBufferRead == SPI_txBufferWrite)
+ 802:.\Generated_Source\PSoC5/SPI.c ****         {
+ 803:.\Generated_Source\PSoC5/SPI.c ****             size = 0u;
+ 804:.\Generated_Source\PSoC5/SPI.c ****         }
+ 805:.\Generated_Source\PSoC5/SPI.c ****         else if(SPI_txBufferRead < SPI_txBufferWrite)
+ 806:.\Generated_Source\PSoC5/SPI.c ****         {
+ 807:.\Generated_Source\PSoC5/SPI.c ****             size = (SPI_txBufferWrite - SPI_txBufferRead);
+ 808:.\Generated_Source\PSoC5/SPI.c ****         }
+ 809:.\Generated_Source\PSoC5/SPI.c ****         else
+ 810:.\Generated_Source\PSoC5/SPI.c ****         {
+ 811:.\Generated_Source\PSoC5/SPI.c ****             size = (SPI_TX_BUFFER_SIZE - SPI_txBufferRead) + SPI_txBufferWrite;
+ 812:.\Generated_Source\PSoC5/SPI.c ****         }
+ 813:.\Generated_Source\PSoC5/SPI.c **** 
+ 814:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupt. */
+ 815:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableTxInt();
+ 816:.\Generated_Source\PSoC5/SPI.c **** 
+ 817:.\Generated_Source\PSoC5/SPI.c ****     #else /* !SPI_TX_SOFTWARE_BUF_ENABLED */
+ 818:.\Generated_Source\PSoC5/SPI.c **** 
+ 819:.\Generated_Source\PSoC5/SPI.c ****         size = SPI_TX_STATUS_REG;
+ 402              		.loc 1 819 0
+ 403 0000 074B     		ldr	r3, .L44
+ 404 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 405 0004 DBB2     		uxtb	r3, r3
+ 406              	.LVL12:
+ 820:.\Generated_Source\PSoC5/SPI.c **** 
+ 821:.\Generated_Source\PSoC5/SPI.c ****         /* Is the fifo is full. */
+ 822:.\Generated_Source\PSoC5/SPI.c ****         if((size & SPI_STS_TX_FIFO_EMPTY) != 0u)
+ 407              		.loc 1 822 0
+ 408 0006 13F0040F 		tst	r3, #4
+ 409 000a 04D1     		bne	.L42
+ 823:.\Generated_Source\PSoC5/SPI.c ****         {
+ 824:.\Generated_Source\PSoC5/SPI.c ****             size = 0u;
+ 825:.\Generated_Source\PSoC5/SPI.c ****         }
+ 826:.\Generated_Source\PSoC5/SPI.c ****         else if((size & SPI_STS_TX_FIFO_NOT_FULL) != 0u)
+ 410              		.loc 1 826 0
+ 411 000c 13F0020F 		tst	r3, #2
+ 412 0010 03D0     		beq	.L43
+ 827:.\Generated_Source\PSoC5/SPI.c ****         {
+ 828:.\Generated_Source\PSoC5/SPI.c ****             size = 1u;
+ 413              		.loc 1 828 0
+ 414 0012 0120     		movs	r0, #1
+ 415 0014 7047     		bx	lr
+ 416              	.L42:
+ 824:.\Generated_Source\PSoC5/SPI.c ****         }
+ 417              		.loc 1 824 0
+ 418 0016 0020     		movs	r0, #0
+ 419 0018 7047     		bx	lr
+ 420              	.L43:
+ 829:.\Generated_Source\PSoC5/SPI.c ****         }
+ 830:.\Generated_Source\PSoC5/SPI.c ****         else
+ 831:.\Generated_Source\PSoC5/SPI.c ****         {
+ 832:.\Generated_Source\PSoC5/SPI.c ****             size = 4u;
+ 421              		.loc 1 832 0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 23
+
+
+ 422 001a 0420     		movs	r0, #4
+ 423              	.LVL13:
+ 833:.\Generated_Source\PSoC5/SPI.c ****         }
+ 834:.\Generated_Source\PSoC5/SPI.c **** 
+ 835:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 836:.\Generated_Source\PSoC5/SPI.c **** 
+ 837:.\Generated_Source\PSoC5/SPI.c ****     return (size);
+ 838:.\Generated_Source\PSoC5/SPI.c **** }
+ 424              		.loc 1 838 0
+ 425 001c 7047     		bx	lr
+ 426              	.L45:
+ 427 001e 00BF     		.align	2
+ 428              	.L44:
+ 429 0020 6F640040 		.word	1073767535
+ 430              		.cfi_endproc
+ 431              	.LFE16:
+ 432              		.size	SPI_GetTxBufferSize, .-SPI_GetTxBufferSize
+ 433              		.section	.text.SPI_ClearRxBuffer,"ax",%progbits
+ 434              		.align	2
+ 435              		.global	SPI_ClearRxBuffer
+ 436              		.thumb
+ 437              		.thumb_func
+ 438              		.type	SPI_ClearRxBuffer, %function
+ 439              	SPI_ClearRxBuffer:
+ 440              	.LFB17:
+ 839:.\Generated_Source\PSoC5/SPI.c **** 
+ 840:.\Generated_Source\PSoC5/SPI.c **** 
+ 841:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 842:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ClearRxBuffer
+ 843:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 844:.\Generated_Source\PSoC5/SPI.c **** *
+ 845:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 846:.\Generated_Source\PSoC5/SPI.c **** *  Clear the RX RAM buffer by setting the read and write pointers both to zero.
+ 847:.\Generated_Source\PSoC5/SPI.c **** *
+ 848:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 849:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 850:.\Generated_Source\PSoC5/SPI.c **** *
+ 851:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 852:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 853:.\Generated_Source\PSoC5/SPI.c **** *
+ 854:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 855:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferWrite - used for the account of the bytes which
+ 856:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the RX software buffer, modified every function
+ 857:.\Generated_Source\PSoC5/SPI.c **** *  call - resets to zero.
+ 858:.\Generated_Source\PSoC5/SPI.c **** *  SPI_rxBufferRead - used for the account of the bytes which
+ 859:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the RX software buffer, modified every function call -
+ 860:.\Generated_Source\PSoC5/SPI.c **** *  resets to zero.
+ 861:.\Generated_Source\PSoC5/SPI.c **** *
+ 862:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 863:.\Generated_Source\PSoC5/SPI.c **** *  Setting the pointers to zero makes the system believe there is no data to
+ 864:.\Generated_Source\PSoC5/SPI.c **** *  read and writing will resume at address 0 overwriting any data that may have
+ 865:.\Generated_Source\PSoC5/SPI.c **** *  remained in the RAM.
+ 866:.\Generated_Source\PSoC5/SPI.c **** *
+ 867:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 868:.\Generated_Source\PSoC5/SPI.c **** *  Any received data not read from the RAM buffer will be lost when overwritten.
+ 869:.\Generated_Source\PSoC5/SPI.c **** *
+ 870:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 24
+
+
+ 871:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 872:.\Generated_Source\PSoC5/SPI.c **** *
+ 873:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 874:.\Generated_Source\PSoC5/SPI.c **** void SPI_ClearRxBuffer(void) 
+ 875:.\Generated_Source\PSoC5/SPI.c **** {
+ 441              		.loc 1 875 0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 0
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445              		@ link register save eliminated.
+ 876:.\Generated_Source\PSoC5/SPI.c ****     /* Clear Hardware RX FIFO */
+ 877:.\Generated_Source\PSoC5/SPI.c ****     while((SPI_RX_STATUS_REG & SPI_STS_RX_FIFO_NOT_EMPTY) != 0u)
+ 446              		.loc 1 877 0
+ 447 0000 01E0     		b	.L47
+ 448              	.L48:
+ 878:.\Generated_Source\PSoC5/SPI.c ****     {
+ 879:.\Generated_Source\PSoC5/SPI.c ****         CY_GET_REG8(SPI_RXDATA_PTR);
+ 449              		.loc 1 879 0
+ 450 0002 044B     		ldr	r3, .L49
+ 451 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 452              	.L47:
+ 877:.\Generated_Source\PSoC5/SPI.c ****     {
+ 453              		.loc 1 877 0
+ 454 0006 044B     		ldr	r3, .L49+4
+ 455 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 456 000a 13F0080F 		tst	r3, #8
+ 457 000e F8D1     		bne	.L48
+ 880:.\Generated_Source\PSoC5/SPI.c ****     }
+ 881:.\Generated_Source\PSoC5/SPI.c **** 
+ 882:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_RX_SOFTWARE_BUF_ENABLED)
+ 883:.\Generated_Source\PSoC5/SPI.c **** 
+ 884:.\Generated_Source\PSoC5/SPI.c ****         /* Disable interrupt to protect variables that could change on interrupt. */
+ 885:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableRxInt();
+ 886:.\Generated_Source\PSoC5/SPI.c **** 
+ 887:.\Generated_Source\PSoC5/SPI.c ****         SPI_rxBufferRead  = 0u;
+ 888:.\Generated_Source\PSoC5/SPI.c ****         SPI_rxBufferWrite = 0u;
+ 889:.\Generated_Source\PSoC5/SPI.c **** 		SPI_rxBufferFull  = 0u;
+ 890:.\Generated_Source\PSoC5/SPI.c ****         /* Enable interrupt. */
+ 891:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableRxInt();
+ 892:.\Generated_Source\PSoC5/SPI.c **** 
+ 893:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_RX_SOFTWARE_BUF_ENABLED */
+ 894:.\Generated_Source\PSoC5/SPI.c **** }
+ 458              		.loc 1 894 0
+ 459 0010 7047     		bx	lr
+ 460              	.L50:
+ 461 0012 00BF     		.align	2
+ 462              	.L49:
+ 463 0014 5D640040 		.word	1073767517
+ 464 0018 6E640040 		.word	1073767534
+ 465              		.cfi_endproc
+ 466              	.LFE17:
+ 467              		.size	SPI_ClearRxBuffer, .-SPI_ClearRxBuffer
+ 468              		.section	.text.SPI_ClearTxBuffer,"ax",%progbits
+ 469              		.align	2
+ 470              		.global	SPI_ClearTxBuffer
+ 471              		.thumb
+ 472              		.thumb_func
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 25
+
+
+ 473              		.type	SPI_ClearTxBuffer, %function
+ 474              	SPI_ClearTxBuffer:
+ 475              	.LFB18:
+ 895:.\Generated_Source\PSoC5/SPI.c **** 
+ 896:.\Generated_Source\PSoC5/SPI.c **** 
+ 897:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+ 898:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ClearTxBuffer
+ 899:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ 900:.\Generated_Source\PSoC5/SPI.c **** *
+ 901:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+ 902:.\Generated_Source\PSoC5/SPI.c **** *  Clear the TX RAM buffer by setting the read and write pointers both to zero.
+ 903:.\Generated_Source\PSoC5/SPI.c **** *
+ 904:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+ 905:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 906:.\Generated_Source\PSoC5/SPI.c **** *
+ 907:.\Generated_Source\PSoC5/SPI.c **** * Return:
+ 908:.\Generated_Source\PSoC5/SPI.c **** *  None.
+ 909:.\Generated_Source\PSoC5/SPI.c **** *
+ 910:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+ 911:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferWrite - used for the account of the bytes which
+ 912:.\Generated_Source\PSoC5/SPI.c **** *  have been written down in the TX software buffer, modified every function
+ 913:.\Generated_Source\PSoC5/SPI.c **** *  call - resets to zero.
+ 914:.\Generated_Source\PSoC5/SPI.c **** *  SPI_txBufferRead - used for the account of the bytes which
+ 915:.\Generated_Source\PSoC5/SPI.c **** *  have been read from the TX software buffer, modified every function call -
+ 916:.\Generated_Source\PSoC5/SPI.c **** *  resets to zero.
+ 917:.\Generated_Source\PSoC5/SPI.c **** *
+ 918:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ 919:.\Generated_Source\PSoC5/SPI.c **** *  Setting the pointers to zero makes the system believe there is no data to
+ 920:.\Generated_Source\PSoC5/SPI.c **** *  read and writing will resume at address 0 overwriting any data that may have
+ 921:.\Generated_Source\PSoC5/SPI.c **** *  remained in the RAM.
+ 922:.\Generated_Source\PSoC5/SPI.c **** *
+ 923:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+ 924:.\Generated_Source\PSoC5/SPI.c **** *  Any data not yet transmitted from the RAM buffer will be lost when
+ 925:.\Generated_Source\PSoC5/SPI.c **** *  overwritten.
+ 926:.\Generated_Source\PSoC5/SPI.c **** *
+ 927:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+ 928:.\Generated_Source\PSoC5/SPI.c **** *  No.
+ 929:.\Generated_Source\PSoC5/SPI.c **** *
+ 930:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+ 931:.\Generated_Source\PSoC5/SPI.c **** void SPI_ClearTxBuffer(void) 
+ 932:.\Generated_Source\PSoC5/SPI.c **** {
+ 476              		.loc 1 932 0
+ 477              		.cfi_startproc
+ 478              		@ args = 0, pretend = 0, frame = 0
+ 479              		@ frame_needed = 0, uses_anonymous_args = 0
+ 480 0000 08B5     		push	{r3, lr}
+ 481              		.cfi_def_cfa_offset 8
+ 482              		.cfi_offset 3, -8
+ 483              		.cfi_offset 14, -4
+ 933:.\Generated_Source\PSoC5/SPI.c ****     uint8 enableInterrupts;
+ 934:.\Generated_Source\PSoC5/SPI.c **** 
+ 935:.\Generated_Source\PSoC5/SPI.c ****     /* Clear Hardware TX FIFO */
+ 936:.\Generated_Source\PSoC5/SPI.c ****     enableInterrupts = CyEnterCriticalSection();
+ 484              		.loc 1 936 0
+ 485 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+ 486              	.LVL14:
+ 937:.\Generated_Source\PSoC5/SPI.c **** 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 26
+
+
+ 938:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_DATA_WIDTH <= 8u)
+ 939:.\Generated_Source\PSoC5/SPI.c **** 
+ 940:.\Generated_Source\PSoC5/SPI.c ****         /* Clear TX FIFO */
+ 941:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG |= (uint8)SPI_FIFO_CLR;
+ 487              		.loc 1 941 0
+ 488 0006 064B     		ldr	r3, .L53
+ 489 0008 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 490 000a 42F00302 		orr	r2, r2, #3
+ 491 000e 1A70     		strb	r2, [r3]
+ 942:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG &= (uint8)~SPI_FIFO_CLR;
+ 492              		.loc 1 942 0
+ 493 0010 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 494 0012 02F0FC02 		and	r2, r2, #252
+ 495 0016 1A70     		strb	r2, [r3]
+ 943:.\Generated_Source\PSoC5/SPI.c **** 
+ 944:.\Generated_Source\PSoC5/SPI.c ****     #else
+ 945:.\Generated_Source\PSoC5/SPI.c **** 
+ 946:.\Generated_Source\PSoC5/SPI.c ****         /* Clear TX FIFO */
+ 947:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG |= (uint8)SPI_FIFO_CLR;
+ 948:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG &= (uint8)~SPI_FIFO_CLR;
+ 949:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP1_REG |= (uint8)SPI_FIFO_CLR;
+ 950:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP1_REG &= (uint8)~SPI_FIFO_CLR;
+ 951:.\Generated_Source\PSoC5/SPI.c **** 
+ 952:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_DATA_WIDTH > 8u */
+ 953:.\Generated_Source\PSoC5/SPI.c **** 
+ 954:.\Generated_Source\PSoC5/SPI.c ****     CyExitCriticalSection(enableInterrupts);
+ 496              		.loc 1 954 0
+ 497 0018 FFF7FEFF 		bl	CyExitCriticalSection
+ 498              	.LVL15:
+ 499 001c 08BD     		pop	{r3, pc}
+ 500              	.L54:
+ 501 001e 00BF     		.align	2
+ 502              	.L53:
+ 503 0020 9D640040 		.word	1073767581
+ 504              		.cfi_endproc
+ 505              	.LFE18:
+ 506              		.size	SPI_ClearTxBuffer, .-SPI_ClearTxBuffer
+ 507              		.section	.text.SPI_PutArray,"ax",%progbits
+ 508              		.align	2
+ 509              		.global	SPI_PutArray
+ 510              		.thumb
+ 511              		.thumb_func
+ 512              		.type	SPI_PutArray, %function
+ 513              	SPI_PutArray:
+ 514              	.LFB19:
+ 955:.\Generated_Source\PSoC5/SPI.c **** 
+ 956:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_TX_SOFTWARE_BUF_ENABLED)
+ 957:.\Generated_Source\PSoC5/SPI.c **** 
+ 958:.\Generated_Source\PSoC5/SPI.c ****         /* Disable Interrupt to protect variables that could change on interrupt. */
+ 959:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableTxInt();
+ 960:.\Generated_Source\PSoC5/SPI.c **** 
+ 961:.\Generated_Source\PSoC5/SPI.c ****         SPI_txBufferRead  = 0u;
+ 962:.\Generated_Source\PSoC5/SPI.c ****         SPI_txBufferWrite = 0u;
+ 963:.\Generated_Source\PSoC5/SPI.c **** 		SPI_txBufferFull  = 0u;
+ 964:.\Generated_Source\PSoC5/SPI.c **** 		
+ 965:.\Generated_Source\PSoC5/SPI.c ****         /* If Buffer is empty then disable TX FIFO status interrupt */
+ 966:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_STATUS_MASK_REG &= (uint8)~SPI_STS_TX_FIFO_NOT_FULL;
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 27
+
+
+ 967:.\Generated_Source\PSoC5/SPI.c **** 
+ 968:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupt. */
+ 969:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableTxInt();
+ 970:.\Generated_Source\PSoC5/SPI.c **** 
+ 971:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 972:.\Generated_Source\PSoC5/SPI.c **** }
+ 973:.\Generated_Source\PSoC5/SPI.c **** 
+ 974:.\Generated_Source\PSoC5/SPI.c **** 
+ 975:.\Generated_Source\PSoC5/SPI.c **** #if (SPI_BIDIRECTIONAL_MODE != 0u)
+ 976:.\Generated_Source\PSoC5/SPI.c **** 
+ 977:.\Generated_Source\PSoC5/SPI.c ****     /*******************************************************************************
+ 978:.\Generated_Source\PSoC5/SPI.c ****     * Function Name: SPI_TxEnable
+ 979:.\Generated_Source\PSoC5/SPI.c ****     ********************************************************************************
+ 980:.\Generated_Source\PSoC5/SPI.c ****     *
+ 981:.\Generated_Source\PSoC5/SPI.c ****     * Summary:
+ 982:.\Generated_Source\PSoC5/SPI.c ****     *  If the SPI Slave is configured to use a single bi-directional pin then this
+ 983:.\Generated_Source\PSoC5/SPI.c ****     *  will set the bi-directional pin to transmit.
+ 984:.\Generated_Source\PSoC5/SPI.c ****     *
+ 985:.\Generated_Source\PSoC5/SPI.c ****     * Parameters:
+ 986:.\Generated_Source\PSoC5/SPI.c ****     *  None.
+ 987:.\Generated_Source\PSoC5/SPI.c ****     *
+ 988:.\Generated_Source\PSoC5/SPI.c ****     * Return:
+ 989:.\Generated_Source\PSoC5/SPI.c ****     *  None.
+ 990:.\Generated_Source\PSoC5/SPI.c ****     *
+ 991:.\Generated_Source\PSoC5/SPI.c ****     *******************************************************************************/
+ 992:.\Generated_Source\PSoC5/SPI.c ****     void SPI_TxEnable(void) 
+ 993:.\Generated_Source\PSoC5/SPI.c ****     {
+ 994:.\Generated_Source\PSoC5/SPI.c ****             SPI_CONTROL_REG |= SPI_CTRL_TX_SIGNAL_EN;
+ 995:.\Generated_Source\PSoC5/SPI.c ****     }
+ 996:.\Generated_Source\PSoC5/SPI.c **** 
+ 997:.\Generated_Source\PSoC5/SPI.c **** 
+ 998:.\Generated_Source\PSoC5/SPI.c ****     /*******************************************************************************
+ 999:.\Generated_Source\PSoC5/SPI.c ****     * Function Name: SPI_TxDisable
+1000:.\Generated_Source\PSoC5/SPI.c ****     ********************************************************************************
+1001:.\Generated_Source\PSoC5/SPI.c ****     *
+1002:.\Generated_Source\PSoC5/SPI.c ****     * Summary:
+1003:.\Generated_Source\PSoC5/SPI.c ****     *  If the SPI Slave is configured to use a single bi-directional pin then this
+1004:.\Generated_Source\PSoC5/SPI.c ****     *  will set the bi-directional pin to receive.
+1005:.\Generated_Source\PSoC5/SPI.c ****     *
+1006:.\Generated_Source\PSoC5/SPI.c ****     * Parameters:
+1007:.\Generated_Source\PSoC5/SPI.c ****     *  None.
+1008:.\Generated_Source\PSoC5/SPI.c ****     *
+1009:.\Generated_Source\PSoC5/SPI.c ****     * Return:
+1010:.\Generated_Source\PSoC5/SPI.c ****     *  None.
+1011:.\Generated_Source\PSoC5/SPI.c ****     *
+1012:.\Generated_Source\PSoC5/SPI.c ****     *******************************************************************************/
+1013:.\Generated_Source\PSoC5/SPI.c ****     void SPI_TxDisable(void) 
+1014:.\Generated_Source\PSoC5/SPI.c ****     {
+1015:.\Generated_Source\PSoC5/SPI.c ****             SPI_CONTROL_REG &= (uint8)~SPI_CTRL_TX_SIGNAL_EN;
+1016:.\Generated_Source\PSoC5/SPI.c ****     }
+1017:.\Generated_Source\PSoC5/SPI.c **** 
+1018:.\Generated_Source\PSoC5/SPI.c **** #endif /* SPI_BIDIRECTIONAL_MODE != 0u */
+1019:.\Generated_Source\PSoC5/SPI.c **** 
+1020:.\Generated_Source\PSoC5/SPI.c **** 
+1021:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1022:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_PutArray
+1023:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 28
+
+
+1024:.\Generated_Source\PSoC5/SPI.c **** *
+1025:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1026:.\Generated_Source\PSoC5/SPI.c **** *  Write available data from RAM/ROM to the TX buffer while space is available
+1027:.\Generated_Source\PSoC5/SPI.c **** *  in the TX buffer. Keep trying until all data is passed to the TX buffer. If
+1028:.\Generated_Source\PSoC5/SPI.c **** *  used Mode 00 or 01 before PutArray() function should be called
+1029:.\Generated_Source\PSoC5/SPI.c **** *  WriteTxDataZero() function.
+1030:.\Generated_Source\PSoC5/SPI.c **** *
+1031:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1032:.\Generated_Source\PSoC5/SPI.c **** *  *buffer: Pointer to the location in RAM containing the data to send
+1033:.\Generated_Source\PSoC5/SPI.c **** *  byteCount: The number of bytes to move to the transmit buffer.
+1034:.\Generated_Source\PSoC5/SPI.c **** *
+1035:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1036:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1037:.\Generated_Source\PSoC5/SPI.c **** *
+1038:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+1039:.\Generated_Source\PSoC5/SPI.c **** *  Will stay in this routine until all data has been sent.  May get locked in
+1040:.\Generated_Source\PSoC5/SPI.c **** *  this loop if data is not being initiated by the master if there is not
+1041:.\Generated_Source\PSoC5/SPI.c **** *  enough room in the TX FIFO.
+1042:.\Generated_Source\PSoC5/SPI.c **** *
+1043:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+1044:.\Generated_Source\PSoC5/SPI.c **** *  No.
+1045:.\Generated_Source\PSoC5/SPI.c **** *
+1046:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1047:.\Generated_Source\PSoC5/SPI.c **** void SPI_PutArray(const uint8 buffer[], uint8 byteCount)
+1048:.\Generated_Source\PSoC5/SPI.c ****                                                                     
+1049:.\Generated_Source\PSoC5/SPI.c **** {
+ 515              		.loc 1 1049 0
+ 516              		.cfi_startproc
+ 517              		@ args = 0, pretend = 0, frame = 0
+ 518              		@ frame_needed = 0, uses_anonymous_args = 0
+ 519              	.LVL16:
+ 520 0000 70B5     		push	{r4, r5, r6, lr}
+ 521              		.cfi_def_cfa_offset 16
+ 522              		.cfi_offset 4, -16
+ 523              		.cfi_offset 5, -12
+ 524              		.cfi_offset 6, -8
+ 525              		.cfi_offset 14, -4
+ 526 0002 0646     		mov	r6, r0
+ 527 0004 0C46     		mov	r4, r1
+ 528              	.LVL17:
+1050:.\Generated_Source\PSoC5/SPI.c ****     uint8 bufIndex;
+1051:.\Generated_Source\PSoC5/SPI.c ****     bufIndex = 0u;
+ 529              		.loc 1 1051 0
+ 530 0006 0025     		movs	r5, #0
+1052:.\Generated_Source\PSoC5/SPI.c **** 
+1053:.\Generated_Source\PSoC5/SPI.c ****     while(byteCount > 0u)
+ 531              		.loc 1 1053 0
+ 532 0008 06E0     		b	.L56
+ 533              	.LVL18:
+ 534              	.L57:
+1054:.\Generated_Source\PSoC5/SPI.c ****     {
+1055:.\Generated_Source\PSoC5/SPI.c ****         SPI_WriteTxData(buffer[bufIndex]);
+ 535              		.loc 1 1055 0
+ 536 000a 705D     		ldrb	r0, [r6, r5]	@ zero_extendqisi2
+ 537 000c FFF7FEFF 		bl	SPI_WriteTxData
+ 538              	.LVL19:
+1056:.\Generated_Source\PSoC5/SPI.c ****         bufIndex++;
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 29
+
+
+ 539              		.loc 1 1056 0
+ 540 0010 0135     		adds	r5, r5, #1
+ 541              	.LVL20:
+ 542 0012 EDB2     		uxtb	r5, r5
+ 543              	.LVL21:
+1057:.\Generated_Source\PSoC5/SPI.c ****         byteCount--;
+ 544              		.loc 1 1057 0
+ 545 0014 013C     		subs	r4, r4, #1
+ 546              	.LVL22:
+ 547 0016 E4B2     		uxtb	r4, r4
+ 548              	.LVL23:
+ 549              	.L56:
+1053:.\Generated_Source\PSoC5/SPI.c ****     {
+ 550              		.loc 1 1053 0
+ 551 0018 002C     		cmp	r4, #0
+ 552 001a F6D1     		bne	.L57
+1058:.\Generated_Source\PSoC5/SPI.c ****     }
+1059:.\Generated_Source\PSoC5/SPI.c **** }
+ 553              		.loc 1 1059 0
+ 554 001c 70BD     		pop	{r4, r5, r6, pc}
+ 555              		.cfi_endproc
+ 556              	.LFE19:
+ 557              		.size	SPI_PutArray, .-SPI_PutArray
+ 558 001e 00BF     		.section	.text.SPI_ClearFIFO,"ax",%progbits
+ 559              		.align	2
+ 560              		.global	SPI_ClearFIFO
+ 561              		.thumb
+ 562              		.thumb_func
+ 563              		.type	SPI_ClearFIFO, %function
+ 564              	SPI_ClearFIFO:
+ 565              	.LFB20:
+1060:.\Generated_Source\PSoC5/SPI.c **** 
+1061:.\Generated_Source\PSoC5/SPI.c **** 
+1062:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1063:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ClearFIFO
+1064:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+1065:.\Generated_Source\PSoC5/SPI.c **** *
+1066:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1067:.\Generated_Source\PSoC5/SPI.c **** *  Clear the RX and TX FIFO's of all data for a fresh start.
+1068:.\Generated_Source\PSoC5/SPI.c **** *
+1069:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1070:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1071:.\Generated_Source\PSoC5/SPI.c **** *
+1072:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1073:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1074:.\Generated_Source\PSoC5/SPI.c **** *
+1075:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+1076:.\Generated_Source\PSoC5/SPI.c **** *  Clear status register of the component.
+1077:.\Generated_Source\PSoC5/SPI.c **** *
+1078:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1079:.\Generated_Source\PSoC5/SPI.c **** void SPI_ClearFIFO(void) 
+1080:.\Generated_Source\PSoC5/SPI.c **** {
+ 566              		.loc 1 1080 0
+ 567              		.cfi_startproc
+ 568              		@ args = 0, pretend = 0, frame = 0
+ 569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 570 0000 08B5     		push	{r3, lr}
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 30
+
+
+ 571              		.cfi_def_cfa_offset 8
+ 572              		.cfi_offset 3, -8
+ 573              		.cfi_offset 14, -4
+1081:.\Generated_Source\PSoC5/SPI.c ****     uint8 enableInterrupts;
+1082:.\Generated_Source\PSoC5/SPI.c **** 
+1083:.\Generated_Source\PSoC5/SPI.c ****     while((SPI_RX_STATUS_REG & SPI_STS_RX_FIFO_NOT_EMPTY) != 0u)
+ 574              		.loc 1 1083 0
+ 575 0002 01E0     		b	.L60
+ 576              	.L61:
+1084:.\Generated_Source\PSoC5/SPI.c ****     {
+1085:.\Generated_Source\PSoC5/SPI.c ****         CY_GET_REG8(SPI_RXDATA_PTR);
+ 577              		.loc 1 1085 0
+ 578 0004 0A4B     		ldr	r3, .L63
+ 579 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 580              	.L60:
+1083:.\Generated_Source\PSoC5/SPI.c ****     {
+ 581              		.loc 1 1083 0
+ 582 0008 0A4B     		ldr	r3, .L63+4
+ 583 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 584 000c 13F0080F 		tst	r3, #8
+ 585 0010 F8D1     		bne	.L61
+1086:.\Generated_Source\PSoC5/SPI.c ****     }
+1087:.\Generated_Source\PSoC5/SPI.c **** 
+1088:.\Generated_Source\PSoC5/SPI.c ****     enableInterrupts = CyEnterCriticalSection();
+ 586              		.loc 1 1088 0
+ 587 0012 FFF7FEFF 		bl	CyEnterCriticalSection
+ 588              	.LVL24:
+1089:.\Generated_Source\PSoC5/SPI.c **** 
+1090:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_DATA_WIDTH <= 8u)
+1091:.\Generated_Source\PSoC5/SPI.c **** 
+1092:.\Generated_Source\PSoC5/SPI.c ****         /* Clear TX FIFO */
+1093:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG |= (uint8)SPI_FIFO_CLR;
+ 589              		.loc 1 1093 0
+ 590 0016 084B     		ldr	r3, .L63+8
+ 591 0018 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 592 001a 42F00302 		orr	r2, r2, #3
+ 593 001e 1A70     		strb	r2, [r3]
+1094:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG &= (uint8)~SPI_FIFO_CLR;
+ 594              		.loc 1 1094 0
+ 595 0020 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 596 0022 02F0FC02 		and	r2, r2, #252
+ 597 0026 1A70     		strb	r2, [r3]
+1095:.\Generated_Source\PSoC5/SPI.c **** 
+1096:.\Generated_Source\PSoC5/SPI.c ****     #else
+1097:.\Generated_Source\PSoC5/SPI.c **** 
+1098:.\Generated_Source\PSoC5/SPI.c ****         /* Clear TX FIFO */
+1099:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG |= (uint8)SPI_FIFO_CLR;
+1100:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP0_REG &= (uint8)~SPI_FIFO_CLR;
+1101:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP1_REG |= (uint8)SPI_FIFO_CLR;
+1102:.\Generated_Source\PSoC5/SPI.c ****         SPI_TX_AUX_CONTROL_DP1_REG &= (uint8)~SPI_FIFO_CLR;
+1103:.\Generated_Source\PSoC5/SPI.c **** 
+1104:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_DATA_WIDTH <= 8u */
+1105:.\Generated_Source\PSoC5/SPI.c **** 
+1106:.\Generated_Source\PSoC5/SPI.c ****     CyExitCriticalSection(enableInterrupts);
+ 598              		.loc 1 1106 0
+ 599 0028 FFF7FEFF 		bl	CyExitCriticalSection
+ 600              	.LVL25:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 31
+
+
+ 601 002c 08BD     		pop	{r3, pc}
+ 602              	.L64:
+ 603 002e 00BF     		.align	2
+ 604              	.L63:
+ 605 0030 5D640040 		.word	1073767517
+ 606 0034 6E640040 		.word	1073767534
+ 607 0038 9D640040 		.word	1073767581
+ 608              		.cfi_endproc
+ 609              	.LFE20:
+ 610              		.size	SPI_ClearFIFO, .-SPI_ClearFIFO
+ 611              		.section	.text.SPI_Init,"ax",%progbits
+ 612              		.align	2
+ 613              		.global	SPI_Init
+ 614              		.thumb
+ 615              		.thumb_func
+ 616              		.type	SPI_Init, %function
+ 617              	SPI_Init:
+ 618              	.LFB0:
+  68:.\Generated_Source\PSoC5/SPI.c ****     /*Initialize the Bit counter */
+ 619              		.loc 1 68 0
+ 620              		.cfi_startproc
+ 621              		@ args = 0, pretend = 0, frame = 0
+ 622              		@ frame_needed = 0, uses_anonymous_args = 0
+ 623 0000 08B5     		push	{r3, lr}
+ 624              		.cfi_def_cfa_offset 8
+ 625              		.cfi_offset 3, -8
+ 626              		.cfi_offset 14, -4
+  70:.\Generated_Source\PSoC5/SPI.c **** 
+ 627              		.loc 1 70 0
+ 628 0002 0722     		movs	r2, #7
+ 629 0004 064B     		ldr	r3, .L67
+ 630 0006 1A70     		strb	r2, [r3]
+  98:.\Generated_Source\PSoC5/SPI.c **** 
+ 631              		.loc 1 98 0
+ 632 0008 FFF7FEFF 		bl	SPI_ClearFIFO
+ 633              	.LVL26:
+ 112:.\Generated_Source\PSoC5/SPI.c ****     (void) SPI_ReadRxStatus(); /* Clear any pending status bits */
+ 634              		.loc 1 112 0
+ 635 000c FFF7FEFF 		bl	SPI_ReadTxStatus
+ 636              	.LVL27:
+ 113:.\Generated_Source\PSoC5/SPI.c **** 
+ 637              		.loc 1 113 0
+ 638 0010 FFF7FEFF 		bl	SPI_ReadRxStatus
+ 639              	.LVL28:
+ 121:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_TX_SOFTWARE_BUF_ENABLED */
+ 640              		.loc 1 121 0
+ 641 0014 0023     		movs	r3, #0
+ 642 0016 034A     		ldr	r2, .L67+4
+ 643 0018 1370     		strb	r3, [r2]
+ 124:.\Generated_Source\PSoC5/SPI.c **** }
+ 644              		.loc 1 124 0
+ 645 001a 013A     		subs	r2, r2, #1
+ 646 001c 1370     		strb	r3, [r2]
+ 647 001e 08BD     		pop	{r3, pc}
+ 648              	.L68:
+ 649              		.align	2
+ 650              	.L67:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 32
+
+
+ 651 0020 8D640040 		.word	1073767565
+ 652 0024 8F640040 		.word	1073767567
+ 653              		.cfi_endproc
+ 654              	.LFE0:
+ 655              		.size	SPI_Init, .-SPI_Init
+ 656              		.section	.text.SPI_Start,"ax",%progbits
+ 657              		.align	2
+ 658              		.global	SPI_Start
+ 659              		.thumb
+ 660              		.thumb_func
+ 661              		.type	SPI_Start, %function
+ 662              	SPI_Start:
+ 663              	.LFB2:
+ 188:.\Generated_Source\PSoC5/SPI.c ****     if(SPI_initVar == 0u)
+ 664              		.loc 1 188 0
+ 665              		.cfi_startproc
+ 666              		@ args = 0, pretend = 0, frame = 0
+ 667              		@ frame_needed = 0, uses_anonymous_args = 0
+ 668 0000 08B5     		push	{r3, lr}
+ 669              		.cfi_def_cfa_offset 8
+ 670              		.cfi_offset 3, -8
+ 671              		.cfi_offset 14, -4
+ 189:.\Generated_Source\PSoC5/SPI.c ****     {
+ 672              		.loc 1 189 0
+ 673 0002 054B     		ldr	r3, .L72
+ 674 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 675 0006 23B9     		cbnz	r3, .L70
+ 191:.\Generated_Source\PSoC5/SPI.c ****         SPI_initVar = 1u;
+ 676              		.loc 1 191 0
+ 677 0008 FFF7FEFF 		bl	SPI_Init
+ 678              	.LVL29:
+ 192:.\Generated_Source\PSoC5/SPI.c ****     }
+ 679              		.loc 1 192 0
+ 680 000c 0122     		movs	r2, #1
+ 681 000e 024B     		ldr	r3, .L72
+ 682 0010 1A70     		strb	r2, [r3]
+ 683              	.L70:
+ 195:.\Generated_Source\PSoC5/SPI.c **** }
+ 684              		.loc 1 195 0
+ 685 0012 FFF7FEFF 		bl	SPI_Enable
+ 686              	.LVL30:
+ 687 0016 08BD     		pop	{r3, pc}
+ 688              	.L73:
+ 689              		.align	2
+ 690              	.L72:
+ 691 0018 00000000 		.word	.LANCHOR0
+ 692              		.cfi_endproc
+ 693              	.LFE2:
+ 694              		.size	SPI_Start, .-SPI_Start
+ 695              		.section	.text.SPI_EnableInt,"ax",%progbits
+ 696              		.align	2
+ 697              		.global	SPI_EnableInt
+ 698              		.thumb
+ 699              		.thumb_func
+ 700              		.type	SPI_EnableInt, %function
+ 701              	SPI_EnableInt:
+ 702              	.LFB21:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 33
+
+
+1107:.\Generated_Source\PSoC5/SPI.c **** }
+1108:.\Generated_Source\PSoC5/SPI.c **** 
+1109:.\Generated_Source\PSoC5/SPI.c **** 
+1110:.\Generated_Source\PSoC5/SPI.c **** /* Following functions are for version Compatibility, they are obsolete.
+1111:.\Generated_Source\PSoC5/SPI.c **** *  Please do not use it in new projects.
+1112:.\Generated_Source\PSoC5/SPI.c **** */
+1113:.\Generated_Source\PSoC5/SPI.c **** 
+1114:.\Generated_Source\PSoC5/SPI.c **** 
+1115:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1116:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_EnableInt
+1117:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+1118:.\Generated_Source\PSoC5/SPI.c **** *
+1119:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1120:.\Generated_Source\PSoC5/SPI.c **** *  Enable internal interrupt generation.
+1121:.\Generated_Source\PSoC5/SPI.c **** *
+1122:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1123:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1124:.\Generated_Source\PSoC5/SPI.c **** *
+1125:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1126:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1127:.\Generated_Source\PSoC5/SPI.c **** *
+1128:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+1129:.\Generated_Source\PSoC5/SPI.c **** *  Enable the internal interrupt output -or- the interrupt component itself.
+1130:.\Generated_Source\PSoC5/SPI.c **** *
+1131:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1132:.\Generated_Source\PSoC5/SPI.c **** void SPI_EnableInt(void) 
+1133:.\Generated_Source\PSoC5/SPI.c **** {
+ 703              		.loc 1 1133 0
+ 704              		.cfi_startproc
+ 705              		@ args = 0, pretend = 0, frame = 0
+ 706              		@ frame_needed = 0, uses_anonymous_args = 0
+ 707              		@ link register save eliminated.
+ 708 0000 7047     		bx	lr
+ 709              		.cfi_endproc
+ 710              	.LFE21:
+ 711              		.size	SPI_EnableInt, .-SPI_EnableInt
+ 712 0002 00BF     		.section	.text.SPI_DisableInt,"ax",%progbits
+ 713              		.align	2
+ 714              		.global	SPI_DisableInt
+ 715              		.thumb
+ 716              		.thumb_func
+ 717              		.type	SPI_DisableInt, %function
+ 718              	SPI_DisableInt:
+ 719              	.LFB22:
+1134:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+1135:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_TX_ISR_NUMBER);
+1136:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+1137:.\Generated_Source\PSoC5/SPI.c **** 
+1138:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+1139:.\Generated_Source\PSoC5/SPI.c ****         CyIntEnable(SPI_RX_ISR_NUMBER);
+1140:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+1141:.\Generated_Source\PSoC5/SPI.c **** }
+1142:.\Generated_Source\PSoC5/SPI.c **** 
+1143:.\Generated_Source\PSoC5/SPI.c **** 
+1144:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1145:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_DisableInt
+1146:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 34
+
+
+1147:.\Generated_Source\PSoC5/SPI.c **** *
+1148:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1149:.\Generated_Source\PSoC5/SPI.c **** *  Disable internal interrupt generation.
+1150:.\Generated_Source\PSoC5/SPI.c **** *
+1151:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1152:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1153:.\Generated_Source\PSoC5/SPI.c **** *
+1154:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1155:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1156:.\Generated_Source\PSoC5/SPI.c **** *
+1157:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+1158:.\Generated_Source\PSoC5/SPI.c **** *  Disable the internal interrupt output -or- the interrupt component itself.
+1159:.\Generated_Source\PSoC5/SPI.c **** *
+1160:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1161:.\Generated_Source\PSoC5/SPI.c **** void SPI_DisableInt(void) 
+1162:.\Generated_Source\PSoC5/SPI.c **** {
+ 720              		.loc 1 1162 0
+ 721              		.cfi_startproc
+ 722              		@ args = 0, pretend = 0, frame = 0
+ 723              		@ frame_needed = 0, uses_anonymous_args = 0
+ 724              		@ link register save eliminated.
+ 725 0000 7047     		bx	lr
+ 726              		.cfi_endproc
+ 727              	.LFE22:
+ 728              		.size	SPI_DisableInt, .-SPI_DisableInt
+ 729 0002 00BF     		.section	.text.SPI_SetInterruptMode,"ax",%progbits
+ 730              		.align	2
+ 731              		.global	SPI_SetInterruptMode
+ 732              		.thumb
+ 733              		.thumb_func
+ 734              		.type	SPI_SetInterruptMode, %function
+ 735              	SPI_SetInterruptMode:
+ 736              	.LFB23:
+1163:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_TX_INT_ENABLED)
+1164:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_TX_ISR_NUMBER);
+1165:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_TX_INT_ENABLED */
+1166:.\Generated_Source\PSoC5/SPI.c **** 
+1167:.\Generated_Source\PSoC5/SPI.c ****     #if(SPI_INTERNAL_RX_INT_ENABLED)
+1168:.\Generated_Source\PSoC5/SPI.c ****         CyIntDisable(SPI_RX_ISR_NUMBER);
+1169:.\Generated_Source\PSoC5/SPI.c ****     #endif /* SPI_INTERNAL_RX_INT_ENABLED */
+1170:.\Generated_Source\PSoC5/SPI.c **** }
+1171:.\Generated_Source\PSoC5/SPI.c **** 
+1172:.\Generated_Source\PSoC5/SPI.c **** 
+1173:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1174:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_SetInterruptMode
+1175:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+1176:.\Generated_Source\PSoC5/SPI.c **** *
+1177:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1178:.\Generated_Source\PSoC5/SPI.c **** *  Configure which status bits trigger an interrupt event.
+1179:.\Generated_Source\PSoC5/SPI.c **** *
+1180:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1181:.\Generated_Source\PSoC5/SPI.c **** *  intSrc: An or'd combination of the desired status bit masks (defined in the
+1182:.\Generated_Source\PSoC5/SPI.c **** *  header file).
+1183:.\Generated_Source\PSoC5/SPI.c **** *
+1184:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1185:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1186:.\Generated_Source\PSoC5/SPI.c **** *
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 35
+
+
+1187:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+1188:.\Generated_Source\PSoC5/SPI.c **** *  Enables the output of specific status bits to the interrupt controller.
+1189:.\Generated_Source\PSoC5/SPI.c **** *
+1190:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1191:.\Generated_Source\PSoC5/SPI.c **** void SPI_SetInterruptMode(uint8 intSrc) 
+1192:.\Generated_Source\PSoC5/SPI.c **** {
+ 737              		.loc 1 1192 0
+ 738              		.cfi_startproc
+ 739              		@ args = 0, pretend = 0, frame = 0
+ 740              		@ frame_needed = 0, uses_anonymous_args = 0
+ 741              		@ link register save eliminated.
+ 742              	.LVL31:
+1193:.\Generated_Source\PSoC5/SPI.c ****     SPI_TX_STATUS_MASK_REG  = intSrc;
+ 743              		.loc 1 1193 0
+ 744 0000 024B     		ldr	r3, .L77
+ 745 0002 1870     		strb	r0, [r3]
+1194:.\Generated_Source\PSoC5/SPI.c ****     SPI_RX_STATUS_MASK_REG  = intSrc;
+ 746              		.loc 1 1194 0
+ 747 0004 013B     		subs	r3, r3, #1
+ 748 0006 1870     		strb	r0, [r3]
+ 749 0008 7047     		bx	lr
+ 750              	.L78:
+ 751 000a 00BF     		.align	2
+ 752              	.L77:
+ 753 000c 8F640040 		.word	1073767567
+ 754              		.cfi_endproc
+ 755              	.LFE23:
+ 756              		.size	SPI_SetInterruptMode, .-SPI_SetInterruptMode
+ 757              		.section	.text.SPI_ReadStatus,"ax",%progbits
+ 758              		.align	2
+ 759              		.global	SPI_ReadStatus
+ 760              		.thumb
+ 761              		.thumb_func
+ 762              		.type	SPI_ReadStatus, %function
+ 763              	SPI_ReadStatus:
+ 764              	.LFB24:
+1195:.\Generated_Source\PSoC5/SPI.c **** }
+1196:.\Generated_Source\PSoC5/SPI.c **** 
+1197:.\Generated_Source\PSoC5/SPI.c **** 
+1198:.\Generated_Source\PSoC5/SPI.c **** /*******************************************************************************
+1199:.\Generated_Source\PSoC5/SPI.c **** * Function Name: SPI_ReadStatus
+1200:.\Generated_Source\PSoC5/SPI.c **** ********************************************************************************
+1201:.\Generated_Source\PSoC5/SPI.c **** *
+1202:.\Generated_Source\PSoC5/SPI.c **** * Summary:
+1203:.\Generated_Source\PSoC5/SPI.c **** *  Read the status register for the component.
+1204:.\Generated_Source\PSoC5/SPI.c **** *
+1205:.\Generated_Source\PSoC5/SPI.c **** * Parameters:
+1206:.\Generated_Source\PSoC5/SPI.c **** *  None.
+1207:.\Generated_Source\PSoC5/SPI.c **** *
+1208:.\Generated_Source\PSoC5/SPI.c **** * Return:
+1209:.\Generated_Source\PSoC5/SPI.c **** *  Contents of the status register.
+1210:.\Generated_Source\PSoC5/SPI.c **** *
+1211:.\Generated_Source\PSoC5/SPI.c **** * Global variables:
+1212:.\Generated_Source\PSoC5/SPI.c **** *  SPI_swStatus - used to store in software status register,
+1213:.\Generated_Source\PSoC5/SPI.c **** *  modified every function call - resets to zero.
+1214:.\Generated_Source\PSoC5/SPI.c **** *
+1215:.\Generated_Source\PSoC5/SPI.c **** * Theory:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 36
+
+
+1216:.\Generated_Source\PSoC5/SPI.c **** *  Allows the user and the API to read the status register for error detection
+1217:.\Generated_Source\PSoC5/SPI.c **** *  and flow control.
+1218:.\Generated_Source\PSoC5/SPI.c **** *
+1219:.\Generated_Source\PSoC5/SPI.c **** * Side Effects:
+1220:.\Generated_Source\PSoC5/SPI.c **** *  Clear status register of the component.
+1221:.\Generated_Source\PSoC5/SPI.c **** *
+1222:.\Generated_Source\PSoC5/SPI.c **** * Reentrant:
+1223:.\Generated_Source\PSoC5/SPI.c **** *  No.
+1224:.\Generated_Source\PSoC5/SPI.c **** *
+1225:.\Generated_Source\PSoC5/SPI.c **** *******************************************************************************/
+1226:.\Generated_Source\PSoC5/SPI.c **** uint8 SPI_ReadStatus(void) 
+1227:.\Generated_Source\PSoC5/SPI.c **** {
+ 765              		.loc 1 1227 0
+ 766              		.cfi_startproc
+ 767              		@ args = 0, pretend = 0, frame = 0
+ 768              		@ frame_needed = 0, uses_anonymous_args = 0
+ 769              		@ link register save eliminated.
+1228:.\Generated_Source\PSoC5/SPI.c ****     uint8 tmpStatus;
+1229:.\Generated_Source\PSoC5/SPI.c **** 
+1230:.\Generated_Source\PSoC5/SPI.c ****     #if ((SPI_TX_SOFTWARE_BUF_ENABLED) || (SPI_RX_SOFTWARE_BUF_ENABLED))
+1231:.\Generated_Source\PSoC5/SPI.c **** 
+1232:.\Generated_Source\PSoC5/SPI.c ****         SPI_DisableInt();
+1233:.\Generated_Source\PSoC5/SPI.c **** 
+1234:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_GET_STATUS_TX(SPI_swStatusTx) |
+1235:.\Generated_Source\PSoC5/SPI.c ****               (SPI_GET_STATUS_RX(SPI_swStatusRx) & (uint8)~SPI_STS_RX_FIFO_FULL);
+1236:.\Generated_Source\PSoC5/SPI.c **** 
+1237:.\Generated_Source\PSoC5/SPI.c ****         SPI_swStatusTx = 0u;
+1238:.\Generated_Source\PSoC5/SPI.c ****         SPI_swStatusRx = 0u;
+1239:.\Generated_Source\PSoC5/SPI.c **** 
+1240:.\Generated_Source\PSoC5/SPI.c ****         /* Enable Interrupts */
+1241:.\Generated_Source\PSoC5/SPI.c ****         SPI_EnableInt();
+1242:.\Generated_Source\PSoC5/SPI.c **** 
+1243:.\Generated_Source\PSoC5/SPI.c ****     #else /* !((SPI_TX_SOFTWARE_BUF_ENABLED) || (SPI_RX_SOFTWARE_BUF_ENABLED)) */
+1244:.\Generated_Source\PSoC5/SPI.c **** 
+1245:.\Generated_Source\PSoC5/SPI.c ****         tmpStatus = SPI_TX_STATUS_REG | (SPI_RX_STATUS_REG &
+ 770              		.loc 1 1245 0
+ 771 0000 034B     		ldr	r3, .L80
+ 772 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 773 0004 013B     		subs	r3, r3, #1
+ 774 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 775 0008 03F0BF03 		and	r3, r3, #191
+ 776              	.LVL32:
+1246:.\Generated_Source\PSoC5/SPI.c ****                                                       (uint8)~SPI_STS_RX_FIFO_FULL);
+1247:.\Generated_Source\PSoC5/SPI.c **** 
+1248:.\Generated_Source\PSoC5/SPI.c ****     #endif /* (SPI_TX_SOFTWARE_BUF_ENABLED) || (SPI_RX_SOFTWARE_BUF_ENABLED) */
+1249:.\Generated_Source\PSoC5/SPI.c **** 
+1250:.\Generated_Source\PSoC5/SPI.c ****     return(tmpStatus);
+1251:.\Generated_Source\PSoC5/SPI.c **** }
+ 777              		.loc 1 1251 0
+ 778 000c 1843     		orrs	r0, r0, r3
+ 779              	.LVL33:
+ 780 000e 7047     		bx	lr
+ 781              	.L81:
+ 782              		.align	2
+ 783              	.L80:
+ 784 0010 6F640040 		.word	1073767535
+ 785              		.cfi_endproc
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 37
+
+
+ 786              	.LFE24:
+ 787              		.size	SPI_ReadStatus, .-SPI_ReadStatus
+ 788              		.comm	SPI_swStatusRx,1,1
+ 789              		.comm	SPI_swStatusTx,1,1
+ 790              		.global	SPI_initVar
+ 791              		.bss
+ 792              		.set	.LANCHOR0,. + 0
+ 793              		.type	SPI_initVar, %object
+ 794              		.size	SPI_initVar, 1
+ 795              	SPI_initVar:
+ 796 0000 00       		.space	1
+ 797              		.text
+ 798              	.Letext0:
+ 799              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 800              		.file 3 ".\\Generated_Source\\PSoC5\\CyLib.h"
+ 801              		.section	.debug_info,"",%progbits
+ 802              	.Ldebug_info0:
+ 803 0000 AF040000 		.4byte	0x4af
+ 804 0004 0400     		.2byte	0x4
+ 805 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 806 000a 04       		.byte	0x4
+ 807 000b 01       		.uleb128 0x1
+ 808 000c 1E020000 		.4byte	.LASF53
+ 809 0010 01       		.byte	0x1
+ 810 0011 CE000000 		.4byte	.LASF54
+ 811 0015 5B000000 		.4byte	.LASF55
+ 812 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 813 001d 00000000 		.4byte	0
+ 814 0021 00000000 		.4byte	.Ldebug_line0
+ 815 0025 02       		.uleb128 0x2
+ 816 0026 01       		.byte	0x1
+ 817 0027 06       		.byte	0x6
+ 818 0028 AD030000 		.4byte	.LASF0
+ 819 002c 02       		.uleb128 0x2
+ 820 002d 01       		.byte	0x1
+ 821 002e 08       		.byte	0x8
+ 822 002f AD010000 		.4byte	.LASF1
+ 823 0033 02       		.uleb128 0x2
+ 824 0034 02       		.byte	0x2
+ 825 0035 05       		.byte	0x5
+ 826 0036 63030000 		.4byte	.LASF2
+ 827 003a 02       		.uleb128 0x2
+ 828 003b 02       		.byte	0x2
+ 829 003c 07       		.byte	0x7
+ 830 003d B2000000 		.4byte	.LASF3
+ 831 0041 02       		.uleb128 0x2
+ 832 0042 04       		.byte	0x4
+ 833 0043 05       		.byte	0x5
+ 834 0044 85030000 		.4byte	.LASF4
+ 835 0048 02       		.uleb128 0x2
+ 836 0049 04       		.byte	0x4
+ 837 004a 07       		.byte	0x7
+ 838 004b 6A010000 		.4byte	.LASF5
+ 839 004f 02       		.uleb128 0x2
+ 840 0050 08       		.byte	0x8
+ 841 0051 05       		.byte	0x5
+ 842 0052 00000000 		.4byte	.LASF6
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 38
+
+
+ 843 0056 02       		.uleb128 0x2
+ 844 0057 08       		.byte	0x8
+ 845 0058 07       		.byte	0x7
+ 846 0059 38010000 		.4byte	.LASF7
+ 847 005d 03       		.uleb128 0x3
+ 848 005e 04       		.byte	0x4
+ 849 005f 05       		.byte	0x5
+ 850 0060 696E7400 		.ascii	"int\000"
+ 851 0064 02       		.uleb128 0x2
+ 852 0065 04       		.byte	0x4
+ 853 0066 07       		.byte	0x7
+ 854 0067 C3020000 		.4byte	.LASF8
+ 855 006b 04       		.uleb128 0x4
+ 856 006c 7C010000 		.4byte	.LASF12
+ 857 0070 02       		.byte	0x2
+ 858 0071 C2       		.byte	0xc2
+ 859 0072 2C000000 		.4byte	0x2c
+ 860 0076 02       		.uleb128 0x2
+ 861 0077 04       		.byte	0x4
+ 862 0078 04       		.byte	0x4
+ 863 0079 24010000 		.4byte	.LASF9
+ 864 007d 02       		.uleb128 0x2
+ 865 007e 08       		.byte	0x8
+ 866 007f 04       		.byte	0x4
+ 867 0080 BB010000 		.4byte	.LASF10
+ 868 0084 02       		.uleb128 0x2
+ 869 0085 01       		.byte	0x1
+ 870 0086 08       		.byte	0x8
+ 871 0087 44030000 		.4byte	.LASF11
+ 872 008b 05       		.uleb128 0x5
+ 873 008c 54010000 		.4byte	.LASF13
+ 874 0090 02       		.byte	0x2
+ 875 0091 6C01     		.2byte	0x16c
+ 876 0093 97000000 		.4byte	0x97
+ 877 0097 06       		.uleb128 0x6
+ 878 0098 6B000000 		.4byte	0x6b
+ 879 009c 02       		.uleb128 0x2
+ 880 009d 04       		.byte	0x4
+ 881 009e 07       		.byte	0x7
+ 882 009f 1F030000 		.4byte	.LASF14
+ 883 00a3 07       		.uleb128 0x7
+ 884 00a4 49030000 		.4byte	.LASF15
+ 885 00a8 01       		.byte	0x1
+ 886 00a9 8E       		.byte	0x8e
+ 887 00aa 00000000 		.4byte	.LFB1
+ 888 00ae 30000000 		.4byte	.LFE1-.LFB1
+ 889 00b2 01       		.uleb128 0x1
+ 890 00b3 9C       		.byte	0x9c
+ 891 00b4 DA000000 		.4byte	0xda
+ 892 00b8 08       		.uleb128 0x8
+ 893 00b9 28030000 		.4byte	.LASF17
+ 894 00bd 01       		.byte	0x1
+ 895 00be 90       		.byte	0x90
+ 896 00bf 6B000000 		.4byte	0x6b
+ 897 00c3 00000000 		.4byte	.LLST0
+ 898 00c7 09       		.uleb128 0x9
+ 899 00c8 06000000 		.4byte	.LVL0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 39
+
+
+ 900 00cc 9A040000 		.4byte	0x49a
+ 901 00d0 09       		.uleb128 0x9
+ 902 00d1 28000000 		.4byte	.LVL1
+ 903 00d5 A5040000 		.4byte	0x4a5
+ 904 00d9 00       		.byte	0
+ 905 00da 07       		.uleb128 0x7
+ 906 00db 01020000 		.4byte	.LASF16
+ 907 00df 01       		.byte	0x1
+ 908 00e0 D8       		.byte	0xd8
+ 909 00e1 00000000 		.4byte	.LFB3
+ 910 00e5 24000000 		.4byte	.LFE3-.LFB3
+ 911 00e9 01       		.uleb128 0x1
+ 912 00ea 9C       		.byte	0x9c
+ 913 00eb 11010000 		.4byte	0x111
+ 914 00ef 08       		.uleb128 0x8
+ 915 00f0 28030000 		.4byte	.LASF17
+ 916 00f4 01       		.byte	0x1
+ 917 00f5 DA       		.byte	0xda
+ 918 00f6 6B000000 		.4byte	0x6b
+ 919 00fa 13000000 		.4byte	.LLST1
+ 920 00fe 09       		.uleb128 0x9
+ 921 00ff 06000000 		.4byte	.LVL2
+ 922 0103 9A040000 		.4byte	0x49a
+ 923 0107 09       		.uleb128 0x9
+ 924 0108 1E000000 		.4byte	.LVL3
+ 925 010c A5040000 		.4byte	0x4a5
+ 926 0110 00       		.byte	0
+ 927 0111 0A       		.uleb128 0xa
+ 928 0112 9D010000 		.4byte	.LASF18
+ 929 0116 01       		.byte	0x1
+ 930 0117 FD       		.byte	0xfd
+ 931 0118 00000000 		.4byte	.LFB4
+ 932 011c 02000000 		.4byte	.LFE4-.LFB4
+ 933 0120 01       		.uleb128 0x1
+ 934 0121 9C       		.byte	0x9c
+ 935 0122 0B       		.uleb128 0xb
+ 936 0123 C8030000 		.4byte	.LASF19
+ 937 0127 01       		.byte	0x1
+ 938 0128 1601     		.2byte	0x116
+ 939 012a 00000000 		.4byte	.LFB5
+ 940 012e 02000000 		.4byte	.LFE5-.LFB5
+ 941 0132 01       		.uleb128 0x1
+ 942 0133 9C       		.byte	0x9c
+ 943 0134 0B       		.uleb128 0xb
+ 944 0135 74030000 		.4byte	.LASF20
+ 945 0139 01       		.byte	0x1
+ 946 013a 2F01     		.2byte	0x12f
+ 947 013c 00000000 		.4byte	.LFB6
+ 948 0140 02000000 		.4byte	.LFE6-.LFB6
+ 949 0144 01       		.uleb128 0x1
+ 950 0145 9C       		.byte	0x9c
+ 951 0146 0B       		.uleb128 0xb
+ 952 0147 59010000 		.4byte	.LASF21
+ 953 014b 01       		.byte	0x1
+ 954 014c 4801     		.2byte	0x148
+ 955 014e 00000000 		.4byte	.LFB7
+ 956 0152 02000000 		.4byte	.LFE7-.LFB7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 40
+
+
+ 957 0156 01       		.uleb128 0x1
+ 958 0157 9C       		.byte	0x9c
+ 959 0158 0C       		.uleb128 0xc
+ 960 0159 D0020000 		.4byte	.LASF22
+ 961 015d 01       		.byte	0x1
+ 962 015e 6201     		.2byte	0x162
+ 963 0160 00000000 		.4byte	.LFB8
+ 964 0164 0C000000 		.4byte	.LFE8-.LFB8
+ 965 0168 01       		.uleb128 0x1
+ 966 0169 9C       		.byte	0x9c
+ 967 016a 7D010000 		.4byte	0x17d
+ 968 016e 0D       		.uleb128 0xd
+ 969 016f D9010000 		.4byte	.LASF24
+ 970 0173 01       		.byte	0x1
+ 971 0174 6201     		.2byte	0x162
+ 972 0176 6B000000 		.4byte	0x6b
+ 973 017a 01       		.uleb128 0x1
+ 974 017b 50       		.byte	0x50
+ 975 017c 00       		.byte	0
+ 976 017d 0C       		.uleb128 0xc
+ 977 017e C2010000 		.4byte	.LASF23
+ 978 0182 01       		.byte	0x1
+ 979 0183 7A01     		.2byte	0x17a
+ 980 0185 00000000 		.4byte	.LFB9
+ 981 0189 0C000000 		.4byte	.LFE9-.LFB9
+ 982 018d 01       		.uleb128 0x1
+ 983 018e 9C       		.byte	0x9c
+ 984 018f A2010000 		.4byte	0x1a2
+ 985 0193 0D       		.uleb128 0xd
+ 986 0194 D9010000 		.4byte	.LASF24
+ 987 0198 01       		.byte	0x1
+ 988 0199 7A01     		.2byte	0x17a
+ 989 019b 6B000000 		.4byte	0x6b
+ 990 019f 01       		.uleb128 0x1
+ 991 01a0 50       		.byte	0x50
+ 992 01a1 00       		.byte	0
+ 993 01a2 0E       		.uleb128 0xe
+ 994 01a3 8C010000 		.4byte	.LASF26
+ 995 01a7 01       		.byte	0x1
+ 996 01a8 9C01     		.2byte	0x19c
+ 997 01aa 6B000000 		.4byte	0x6b
+ 998 01ae 00000000 		.4byte	.LFB10
+ 999 01b2 0C000000 		.4byte	.LFE10-.LFB10
+ 1000 01b6 01       		.uleb128 0x1
+ 1001 01b7 9C       		.byte	0x9c
+ 1002 01b8 CB010000 		.4byte	0x1cb
+ 1003 01bc 0F       		.uleb128 0xf
+ 1004 01bd 8E030000 		.4byte	.LASF25
+ 1005 01c1 01       		.byte	0x1
+ 1006 01c2 9E01     		.2byte	0x19e
+ 1007 01c4 6B000000 		.4byte	0x6b
+ 1008 01c8 01       		.uleb128 0x1
+ 1009 01c9 50       		.byte	0x50
+ 1010 01ca 00       		.byte	0
+ 1011 01cb 0E       		.uleb128 0xe
+ 1012 01cc E2030000 		.4byte	.LASF27
+ 1013 01d0 01       		.byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 41
+
+
+ 1014 01d1 D101     		.2byte	0x1d1
+ 1015 01d3 6B000000 		.4byte	0x6b
+ 1016 01d7 00000000 		.4byte	.LFB11
+ 1017 01db 0C000000 		.4byte	.LFE11-.LFB11
+ 1018 01df 01       		.uleb128 0x1
+ 1019 01e0 9C       		.byte	0x9c
+ 1020 01e1 F4010000 		.4byte	0x1f4
+ 1021 01e5 0F       		.uleb128 0xf
+ 1022 01e6 8E030000 		.4byte	.LASF25
+ 1023 01ea 01       		.byte	0x1
+ 1024 01eb D301     		.2byte	0x1d3
+ 1025 01ed 6B000000 		.4byte	0x6b
+ 1026 01f1 01       		.uleb128 0x1
+ 1027 01f2 50       		.byte	0x50
+ 1028 01f3 00       		.byte	0
+ 1029 01f4 0C       		.uleb128 0xc
+ 1030 01f5 30000000 		.4byte	.LASF28
+ 1031 01f9 01       		.byte	0x1
+ 1032 01fa 0C02     		.2byte	0x20c
+ 1033 01fc 00000000 		.4byte	.LFB12
+ 1034 0200 18000000 		.4byte	.LFE12-.LFB12
+ 1035 0204 01       		.uleb128 0x1
+ 1036 0205 9C       		.byte	0x9c
+ 1037 0206 19020000 		.4byte	0x219
+ 1038 020a 0D       		.uleb128 0xd
+ 1039 020b 06030000 		.4byte	.LASF29
+ 1040 020f 01       		.byte	0x1
+ 1041 0210 0C02     		.2byte	0x20c
+ 1042 0212 6B000000 		.4byte	0x6b
+ 1043 0216 01       		.uleb128 0x1
+ 1044 0217 50       		.byte	0x50
+ 1045 0218 00       		.byte	0
+ 1046 0219 0C       		.uleb128 0xc
+ 1047 021a 1C000000 		.4byte	.LASF30
+ 1048 021e 01       		.byte	0x1
+ 1049 021f 6B02     		.2byte	0x26b
+ 1050 0221 00000000 		.4byte	.LFB13
+ 1051 0225 0C000000 		.4byte	.LFE13-.LFB13
+ 1052 0229 01       		.uleb128 0x1
+ 1053 022a 9C       		.byte	0x9c
+ 1054 022b 3E020000 		.4byte	0x23e
+ 1055 022f 0D       		.uleb128 0xd
+ 1056 0230 39030000 		.4byte	.LASF31
+ 1057 0234 01       		.byte	0x1
+ 1058 0235 6B02     		.2byte	0x26b
+ 1059 0237 6B000000 		.4byte	0x6b
+ 1060 023b 01       		.uleb128 0x1
+ 1061 023c 50       		.byte	0x50
+ 1062 023d 00       		.byte	0
+ 1063 023e 0E       		.uleb128 0xe
+ 1064 023f 4C000000 		.4byte	.LASF32
+ 1065 0243 01       		.byte	0x1
+ 1066 0244 9502     		.2byte	0x295
+ 1067 0246 6B000000 		.4byte	0x6b
+ 1068 024a 00000000 		.4byte	.LFB14
+ 1069 024e 0C000000 		.4byte	.LFE14-.LFB14
+ 1070 0252 01       		.uleb128 0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 42
+
+
+ 1071 0253 9C       		.byte	0x9c
+ 1072 0254 67020000 		.4byte	0x267
+ 1073 0258 0F       		.uleb128 0xf
+ 1074 0259 1D010000 		.4byte	.LASF33
+ 1075 025d 01       		.byte	0x1
+ 1076 025e 9702     		.2byte	0x297
+ 1077 0260 6B000000 		.4byte	0x6b
+ 1078 0264 01       		.uleb128 0x1
+ 1079 0265 50       		.byte	0x50
+ 1080 0266 00       		.byte	0
+ 1081 0267 0E       		.uleb128 0xe
+ 1082 0268 0A020000 		.4byte	.LASF34
+ 1083 026c 01       		.byte	0x1
+ 1084 026d D702     		.2byte	0x2d7
+ 1085 026f 6B000000 		.4byte	0x6b
+ 1086 0273 00000000 		.4byte	.LFB15
+ 1087 0277 18000000 		.4byte	.LFE15-.LFB15
+ 1088 027b 01       		.uleb128 0x1
+ 1089 027c 9C       		.byte	0x9c
+ 1090 027d 90020000 		.4byte	0x290
+ 1091 0281 0F       		.uleb128 0xf
+ 1092 0282 4F010000 		.4byte	.LASF35
+ 1093 0286 01       		.byte	0x1
+ 1094 0287 D902     		.2byte	0x2d9
+ 1095 0289 6B000000 		.4byte	0x6b
+ 1096 028d 01       		.uleb128 0x1
+ 1097 028e 50       		.byte	0x50
+ 1098 028f 00       		.byte	0
+ 1099 0290 0E       		.uleb128 0xe
+ 1100 0291 ED010000 		.4byte	.LASF36
+ 1101 0295 01       		.byte	0x1
+ 1102 0296 1803     		.2byte	0x318
+ 1103 0298 6B000000 		.4byte	0x6b
+ 1104 029c 00000000 		.4byte	.LFB16
+ 1105 02a0 24000000 		.4byte	.LFE16-.LFB16
+ 1106 02a4 01       		.uleb128 0x1
+ 1107 02a5 9C       		.byte	0x9c
+ 1108 02a6 BB020000 		.4byte	0x2bb
+ 1109 02aa 10       		.uleb128 0x10
+ 1110 02ab 4F010000 		.4byte	.LASF35
+ 1111 02af 01       		.byte	0x1
+ 1112 02b0 1A03     		.2byte	0x31a
+ 1113 02b2 6B000000 		.4byte	0x6b
+ 1114 02b6 26000000 		.4byte	.LLST2
+ 1115 02ba 00       		.byte	0
+ 1116 02bb 0B       		.uleb128 0xb
+ 1117 02bc 0D030000 		.4byte	.LASF37
+ 1118 02c0 01       		.byte	0x1
+ 1119 02c1 6A03     		.2byte	0x36a
+ 1120 02c3 00000000 		.4byte	.LFB17
+ 1121 02c7 1C000000 		.4byte	.LFE17-.LFB17
+ 1122 02cb 01       		.uleb128 0x1
+ 1123 02cc 9C       		.byte	0x9c
+ 1124 02cd 0C       		.uleb128 0xc
+ 1125 02ce FC000000 		.4byte	.LASF38
+ 1126 02d2 01       		.byte	0x1
+ 1127 02d3 A303     		.2byte	0x3a3
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 43
+
+
+ 1128 02d5 00000000 		.4byte	.LFB18
+ 1129 02d9 24000000 		.4byte	.LFE18-.LFB18
+ 1130 02dd 01       		.uleb128 0x1
+ 1131 02de 9C       		.byte	0x9c
+ 1132 02df 06030000 		.4byte	0x306
+ 1133 02e3 10       		.uleb128 0x10
+ 1134 02e4 28030000 		.4byte	.LASF17
+ 1135 02e8 01       		.byte	0x1
+ 1136 02e9 A503     		.2byte	0x3a5
+ 1137 02eb 6B000000 		.4byte	0x6b
+ 1138 02ef 44000000 		.4byte	.LLST3
+ 1139 02f3 09       		.uleb128 0x9
+ 1140 02f4 06000000 		.4byte	.LVL14
+ 1141 02f8 9A040000 		.4byte	0x49a
+ 1142 02fc 09       		.uleb128 0x9
+ 1143 02fd 1C000000 		.4byte	.LVL15
+ 1144 0301 A5040000 		.4byte	0x4a5
+ 1145 0305 00       		.byte	0
+ 1146 0306 0C       		.uleb128 0xc
+ 1147 0307 E0010000 		.4byte	.LASF39
+ 1148 030b 01       		.byte	0x1
+ 1149 030c 1704     		.2byte	0x417
+ 1150 030e 00000000 		.4byte	.LFB19
+ 1151 0312 1E000000 		.4byte	.LFE19-.LFB19
+ 1152 0316 01       		.uleb128 0x1
+ 1153 0317 9C       		.byte	0x9c
+ 1154 0318 56030000 		.4byte	0x356
+ 1155 031c 11       		.uleb128 0x11
+ 1156 031d 6D030000 		.4byte	.LASF40
+ 1157 0321 01       		.byte	0x1
+ 1158 0322 1704     		.2byte	0x417
+ 1159 0324 56030000 		.4byte	0x356
+ 1160 0328 57000000 		.4byte	.LLST4
+ 1161 032c 11       		.uleb128 0x11
+ 1162 032d 82010000 		.4byte	.LASF41
+ 1163 0331 01       		.byte	0x1
+ 1164 0332 1704     		.2byte	0x417
+ 1165 0334 6B000000 		.4byte	0x6b
+ 1166 0338 75000000 		.4byte	.LLST5
+ 1167 033c 10       		.uleb128 0x10
+ 1168 033d FD020000 		.4byte	.LASF42
+ 1169 0341 01       		.byte	0x1
+ 1170 0342 1A04     		.2byte	0x41a
+ 1171 0344 6B000000 		.4byte	0x6b
+ 1172 0348 9E000000 		.4byte	.LLST6
+ 1173 034c 09       		.uleb128 0x9
+ 1174 034d 10000000 		.4byte	.LVL19
+ 1175 0351 F4010000 		.4byte	0x1f4
+ 1176 0355 00       		.byte	0
+ 1177 0356 12       		.uleb128 0x12
+ 1178 0357 04       		.byte	0x4
+ 1179 0358 5C030000 		.4byte	0x35c
+ 1180 035c 13       		.uleb128 0x13
+ 1181 035d 6B000000 		.4byte	0x6b
+ 1182 0361 0C       		.uleb128 0xc
+ 1183 0362 2A010000 		.4byte	.LASF43
+ 1184 0366 01       		.byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 44
+
+
+ 1185 0367 3704     		.2byte	0x437
+ 1186 0369 00000000 		.4byte	.LFB20
+ 1187 036d 3C000000 		.4byte	.LFE20-.LFB20
+ 1188 0371 01       		.uleb128 0x1
+ 1189 0372 9C       		.byte	0x9c
+ 1190 0373 9A030000 		.4byte	0x39a
+ 1191 0377 10       		.uleb128 0x10
+ 1192 0378 28030000 		.4byte	.LASF17
+ 1193 037c 01       		.byte	0x1
+ 1194 037d 3904     		.2byte	0x439
+ 1195 037f 6B000000 		.4byte	0x6b
+ 1196 0383 C8000000 		.4byte	.LLST7
+ 1197 0387 09       		.uleb128 0x9
+ 1198 0388 16000000 		.4byte	.LVL24
+ 1199 038c 9A040000 		.4byte	0x49a
+ 1200 0390 09       		.uleb128 0x9
+ 1201 0391 2C000000 		.4byte	.LVL25
+ 1202 0395 A5040000 		.4byte	0x4a5
+ 1203 0399 00       		.byte	0
+ 1204 039a 07       		.uleb128 0x7
+ 1205 039b C5000000 		.4byte	.LASF44
+ 1206 039f 01       		.byte	0x1
+ 1207 03a0 43       		.byte	0x43
+ 1208 03a1 00000000 		.4byte	.LFB0
+ 1209 03a5 28000000 		.4byte	.LFE0-.LFB0
+ 1210 03a9 01       		.uleb128 0x1
+ 1211 03aa 9C       		.byte	0x9c
+ 1212 03ab CB030000 		.4byte	0x3cb
+ 1213 03af 09       		.uleb128 0x9
+ 1214 03b0 0C000000 		.4byte	.LVL26
+ 1215 03b4 61030000 		.4byte	0x361
+ 1216 03b8 09       		.uleb128 0x9
+ 1217 03b9 10000000 		.4byte	.LVL27
+ 1218 03bd A2010000 		.4byte	0x1a2
+ 1219 03c1 09       		.uleb128 0x9
+ 1220 03c2 14000000 		.4byte	.LVL28
+ 1221 03c6 CB010000 		.4byte	0x1cb
+ 1222 03ca 00       		.byte	0
+ 1223 03cb 07       		.uleb128 0x7
+ 1224 03cc D8030000 		.4byte	.LASF45
+ 1225 03d0 01       		.byte	0x1
+ 1226 03d1 BB       		.byte	0xbb
+ 1227 03d2 00000000 		.4byte	.LFB2
+ 1228 03d6 1C000000 		.4byte	.LFE2-.LFB2
+ 1229 03da 01       		.uleb128 0x1
+ 1230 03db 9C       		.byte	0x9c
+ 1231 03dc F3030000 		.4byte	0x3f3
+ 1232 03e0 09       		.uleb128 0x9
+ 1233 03e1 0C000000 		.4byte	.LVL29
+ 1234 03e5 9A030000 		.4byte	0x39a
+ 1235 03e9 09       		.uleb128 0x9
+ 1236 03ea 16000000 		.4byte	.LVL30
+ 1237 03ee A3000000 		.4byte	0xa3
+ 1238 03f2 00       		.byte	0
+ 1239 03f3 0B       		.uleb128 0xb
+ 1240 03f4 0E000000 		.4byte	.LASF46
+ 1241 03f8 01       		.byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 45
+
+
+ 1242 03f9 6C04     		.2byte	0x46c
+ 1243 03fb 00000000 		.4byte	.LFB21
+ 1244 03ff 02000000 		.4byte	.LFE21-.LFB21
+ 1245 0403 01       		.uleb128 0x1
+ 1246 0404 9C       		.byte	0x9c
+ 1247 0405 0B       		.uleb128 0xb
+ 1248 0406 54030000 		.4byte	.LASF47
+ 1249 040a 01       		.byte	0x1
+ 1250 040b 8904     		.2byte	0x489
+ 1251 040d 00000000 		.4byte	.LFB22
+ 1252 0411 02000000 		.4byte	.LFE22-.LFB22
+ 1253 0415 01       		.uleb128 0x1
+ 1254 0416 9C       		.byte	0x9c
+ 1255 0417 0C       		.uleb128 0xc
+ 1256 0418 98030000 		.4byte	.LASF48
+ 1257 041c 01       		.byte	0x1
+ 1258 041d A704     		.2byte	0x4a7
+ 1259 041f 00000000 		.4byte	.LFB23
+ 1260 0423 10000000 		.4byte	.LFE23-.LFB23
+ 1261 0427 01       		.uleb128 0x1
+ 1262 0428 9C       		.byte	0x9c
+ 1263 0429 3C040000 		.4byte	0x43c
+ 1264 042d 0D       		.uleb128 0xd
+ 1265 042e D9010000 		.4byte	.LASF24
+ 1266 0432 01       		.byte	0x1
+ 1267 0433 A704     		.2byte	0x4a7
+ 1268 0435 6B000000 		.4byte	0x6b
+ 1269 0439 01       		.uleb128 0x1
+ 1270 043a 50       		.byte	0x50
+ 1271 043b 00       		.byte	0
+ 1272 043c 0E       		.uleb128 0xe
+ 1273 043d B9030000 		.4byte	.LASF49
+ 1274 0441 01       		.byte	0x1
+ 1275 0442 CA04     		.2byte	0x4ca
+ 1276 0444 6B000000 		.4byte	0x6b
+ 1277 0448 00000000 		.4byte	.LFB24
+ 1278 044c 14000000 		.4byte	.LFE24-.LFB24
+ 1279 0450 01       		.uleb128 0x1
+ 1280 0451 9C       		.byte	0x9c
+ 1281 0452 67040000 		.4byte	0x467
+ 1282 0456 10       		.uleb128 0x10
+ 1283 0457 8E030000 		.4byte	.LASF25
+ 1284 045b 01       		.byte	0x1
+ 1285 045c CC04     		.2byte	0x4cc
+ 1286 045e 6B000000 		.4byte	0x6b
+ 1287 0462 DB000000 		.4byte	.LLST8
+ 1288 0466 00       		.byte	0
+ 1289 0467 14       		.uleb128 0x14
+ 1290 0468 40000000 		.4byte	.LASF50
+ 1291 046c 01       		.byte	0x1
+ 1292 046d 26       		.byte	0x26
+ 1293 046e 6B000000 		.4byte	0x6b
+ 1294 0472 05       		.uleb128 0x5
+ 1295 0473 03       		.byte	0x3
+ 1296 0474 00000000 		.4byte	SPI_initVar
+ 1297 0478 14       		.uleb128 0x14
+ 1298 0479 0E010000 		.4byte	.LASF51
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 46
+
+
+ 1299 047d 01       		.byte	0x1
+ 1300 047e 28       		.byte	0x28
+ 1301 047f 97000000 		.4byte	0x97
+ 1302 0483 05       		.uleb128 0x5
+ 1303 0484 03       		.byte	0x3
+ 1304 0485 00000000 		.4byte	SPI_swStatusTx
+ 1305 0489 14       		.uleb128 0x14
+ 1306 048a ED000000 		.4byte	.LASF52
+ 1307 048e 01       		.byte	0x1
+ 1308 048f 29       		.byte	0x29
+ 1309 0490 97000000 		.4byte	0x97
+ 1310 0494 05       		.uleb128 0x5
+ 1311 0495 03       		.byte	0x3
+ 1312 0496 00000000 		.4byte	SPI_swStatusRx
+ 1313 049a 15       		.uleb128 0x15
+ 1314 049b AC020000 		.4byte	.LASF56
+ 1315 049f 03       		.byte	0x3
+ 1316 04a0 7E       		.byte	0x7e
+ 1317 04a1 6B000000 		.4byte	0x6b
+ 1318 04a5 16       		.uleb128 0x16
+ 1319 04a6 E7020000 		.4byte	.LASF57
+ 1320 04aa 03       		.byte	0x3
+ 1321 04ab 7F       		.byte	0x7f
+ 1322 04ac 17       		.uleb128 0x17
+ 1323 04ad 6B000000 		.4byte	0x6b
+ 1324 04b1 00       		.byte	0
+ 1325 04b2 00       		.byte	0
+ 1326              		.section	.debug_abbrev,"",%progbits
+ 1327              	.Ldebug_abbrev0:
+ 1328 0000 01       		.uleb128 0x1
+ 1329 0001 11       		.uleb128 0x11
+ 1330 0002 01       		.byte	0x1
+ 1331 0003 25       		.uleb128 0x25
+ 1332 0004 0E       		.uleb128 0xe
+ 1333 0005 13       		.uleb128 0x13
+ 1334 0006 0B       		.uleb128 0xb
+ 1335 0007 03       		.uleb128 0x3
+ 1336 0008 0E       		.uleb128 0xe
+ 1337 0009 1B       		.uleb128 0x1b
+ 1338 000a 0E       		.uleb128 0xe
+ 1339 000b 55       		.uleb128 0x55
+ 1340 000c 17       		.uleb128 0x17
+ 1341 000d 11       		.uleb128 0x11
+ 1342 000e 01       		.uleb128 0x1
+ 1343 000f 10       		.uleb128 0x10
+ 1344 0010 17       		.uleb128 0x17
+ 1345 0011 00       		.byte	0
+ 1346 0012 00       		.byte	0
+ 1347 0013 02       		.uleb128 0x2
+ 1348 0014 24       		.uleb128 0x24
+ 1349 0015 00       		.byte	0
+ 1350 0016 0B       		.uleb128 0xb
+ 1351 0017 0B       		.uleb128 0xb
+ 1352 0018 3E       		.uleb128 0x3e
+ 1353 0019 0B       		.uleb128 0xb
+ 1354 001a 03       		.uleb128 0x3
+ 1355 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 47
+
+
+ 1356 001c 00       		.byte	0
+ 1357 001d 00       		.byte	0
+ 1358 001e 03       		.uleb128 0x3
+ 1359 001f 24       		.uleb128 0x24
+ 1360 0020 00       		.byte	0
+ 1361 0021 0B       		.uleb128 0xb
+ 1362 0022 0B       		.uleb128 0xb
+ 1363 0023 3E       		.uleb128 0x3e
+ 1364 0024 0B       		.uleb128 0xb
+ 1365 0025 03       		.uleb128 0x3
+ 1366 0026 08       		.uleb128 0x8
+ 1367 0027 00       		.byte	0
+ 1368 0028 00       		.byte	0
+ 1369 0029 04       		.uleb128 0x4
+ 1370 002a 16       		.uleb128 0x16
+ 1371 002b 00       		.byte	0
+ 1372 002c 03       		.uleb128 0x3
+ 1373 002d 0E       		.uleb128 0xe
+ 1374 002e 3A       		.uleb128 0x3a
+ 1375 002f 0B       		.uleb128 0xb
+ 1376 0030 3B       		.uleb128 0x3b
+ 1377 0031 0B       		.uleb128 0xb
+ 1378 0032 49       		.uleb128 0x49
+ 1379 0033 13       		.uleb128 0x13
+ 1380 0034 00       		.byte	0
+ 1381 0035 00       		.byte	0
+ 1382 0036 05       		.uleb128 0x5
+ 1383 0037 16       		.uleb128 0x16
+ 1384 0038 00       		.byte	0
+ 1385 0039 03       		.uleb128 0x3
+ 1386 003a 0E       		.uleb128 0xe
+ 1387 003b 3A       		.uleb128 0x3a
+ 1388 003c 0B       		.uleb128 0xb
+ 1389 003d 3B       		.uleb128 0x3b
+ 1390 003e 05       		.uleb128 0x5
+ 1391 003f 49       		.uleb128 0x49
+ 1392 0040 13       		.uleb128 0x13
+ 1393 0041 00       		.byte	0
+ 1394 0042 00       		.byte	0
+ 1395 0043 06       		.uleb128 0x6
+ 1396 0044 35       		.uleb128 0x35
+ 1397 0045 00       		.byte	0
+ 1398 0046 49       		.uleb128 0x49
+ 1399 0047 13       		.uleb128 0x13
+ 1400 0048 00       		.byte	0
+ 1401 0049 00       		.byte	0
+ 1402 004a 07       		.uleb128 0x7
+ 1403 004b 2E       		.uleb128 0x2e
+ 1404 004c 01       		.byte	0x1
+ 1405 004d 3F       		.uleb128 0x3f
+ 1406 004e 19       		.uleb128 0x19
+ 1407 004f 03       		.uleb128 0x3
+ 1408 0050 0E       		.uleb128 0xe
+ 1409 0051 3A       		.uleb128 0x3a
+ 1410 0052 0B       		.uleb128 0xb
+ 1411 0053 3B       		.uleb128 0x3b
+ 1412 0054 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 48
+
+
+ 1413 0055 27       		.uleb128 0x27
+ 1414 0056 19       		.uleb128 0x19
+ 1415 0057 11       		.uleb128 0x11
+ 1416 0058 01       		.uleb128 0x1
+ 1417 0059 12       		.uleb128 0x12
+ 1418 005a 06       		.uleb128 0x6
+ 1419 005b 40       		.uleb128 0x40
+ 1420 005c 18       		.uleb128 0x18
+ 1421 005d 9742     		.uleb128 0x2117
+ 1422 005f 19       		.uleb128 0x19
+ 1423 0060 01       		.uleb128 0x1
+ 1424 0061 13       		.uleb128 0x13
+ 1425 0062 00       		.byte	0
+ 1426 0063 00       		.byte	0
+ 1427 0064 08       		.uleb128 0x8
+ 1428 0065 34       		.uleb128 0x34
+ 1429 0066 00       		.byte	0
+ 1430 0067 03       		.uleb128 0x3
+ 1431 0068 0E       		.uleb128 0xe
+ 1432 0069 3A       		.uleb128 0x3a
+ 1433 006a 0B       		.uleb128 0xb
+ 1434 006b 3B       		.uleb128 0x3b
+ 1435 006c 0B       		.uleb128 0xb
+ 1436 006d 49       		.uleb128 0x49
+ 1437 006e 13       		.uleb128 0x13
+ 1438 006f 02       		.uleb128 0x2
+ 1439 0070 17       		.uleb128 0x17
+ 1440 0071 00       		.byte	0
+ 1441 0072 00       		.byte	0
+ 1442 0073 09       		.uleb128 0x9
+ 1443 0074 898201   		.uleb128 0x4109
+ 1444 0077 00       		.byte	0
+ 1445 0078 11       		.uleb128 0x11
+ 1446 0079 01       		.uleb128 0x1
+ 1447 007a 31       		.uleb128 0x31
+ 1448 007b 13       		.uleb128 0x13
+ 1449 007c 00       		.byte	0
+ 1450 007d 00       		.byte	0
+ 1451 007e 0A       		.uleb128 0xa
+ 1452 007f 2E       		.uleb128 0x2e
+ 1453 0080 00       		.byte	0
+ 1454 0081 3F       		.uleb128 0x3f
+ 1455 0082 19       		.uleb128 0x19
+ 1456 0083 03       		.uleb128 0x3
+ 1457 0084 0E       		.uleb128 0xe
+ 1458 0085 3A       		.uleb128 0x3a
+ 1459 0086 0B       		.uleb128 0xb
+ 1460 0087 3B       		.uleb128 0x3b
+ 1461 0088 0B       		.uleb128 0xb
+ 1462 0089 27       		.uleb128 0x27
+ 1463 008a 19       		.uleb128 0x19
+ 1464 008b 11       		.uleb128 0x11
+ 1465 008c 01       		.uleb128 0x1
+ 1466 008d 12       		.uleb128 0x12
+ 1467 008e 06       		.uleb128 0x6
+ 1468 008f 40       		.uleb128 0x40
+ 1469 0090 18       		.uleb128 0x18
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 49
+
+
+ 1470 0091 9742     		.uleb128 0x2117
+ 1471 0093 19       		.uleb128 0x19
+ 1472 0094 00       		.byte	0
+ 1473 0095 00       		.byte	0
+ 1474 0096 0B       		.uleb128 0xb
+ 1475 0097 2E       		.uleb128 0x2e
+ 1476 0098 00       		.byte	0
+ 1477 0099 3F       		.uleb128 0x3f
+ 1478 009a 19       		.uleb128 0x19
+ 1479 009b 03       		.uleb128 0x3
+ 1480 009c 0E       		.uleb128 0xe
+ 1481 009d 3A       		.uleb128 0x3a
+ 1482 009e 0B       		.uleb128 0xb
+ 1483 009f 3B       		.uleb128 0x3b
+ 1484 00a0 05       		.uleb128 0x5
+ 1485 00a1 27       		.uleb128 0x27
+ 1486 00a2 19       		.uleb128 0x19
+ 1487 00a3 11       		.uleb128 0x11
+ 1488 00a4 01       		.uleb128 0x1
+ 1489 00a5 12       		.uleb128 0x12
+ 1490 00a6 06       		.uleb128 0x6
+ 1491 00a7 40       		.uleb128 0x40
+ 1492 00a8 18       		.uleb128 0x18
+ 1493 00a9 9742     		.uleb128 0x2117
+ 1494 00ab 19       		.uleb128 0x19
+ 1495 00ac 00       		.byte	0
+ 1496 00ad 00       		.byte	0
+ 1497 00ae 0C       		.uleb128 0xc
+ 1498 00af 2E       		.uleb128 0x2e
+ 1499 00b0 01       		.byte	0x1
+ 1500 00b1 3F       		.uleb128 0x3f
+ 1501 00b2 19       		.uleb128 0x19
+ 1502 00b3 03       		.uleb128 0x3
+ 1503 00b4 0E       		.uleb128 0xe
+ 1504 00b5 3A       		.uleb128 0x3a
+ 1505 00b6 0B       		.uleb128 0xb
+ 1506 00b7 3B       		.uleb128 0x3b
+ 1507 00b8 05       		.uleb128 0x5
+ 1508 00b9 27       		.uleb128 0x27
+ 1509 00ba 19       		.uleb128 0x19
+ 1510 00bb 11       		.uleb128 0x11
+ 1511 00bc 01       		.uleb128 0x1
+ 1512 00bd 12       		.uleb128 0x12
+ 1513 00be 06       		.uleb128 0x6
+ 1514 00bf 40       		.uleb128 0x40
+ 1515 00c0 18       		.uleb128 0x18
+ 1516 00c1 9742     		.uleb128 0x2117
+ 1517 00c3 19       		.uleb128 0x19
+ 1518 00c4 01       		.uleb128 0x1
+ 1519 00c5 13       		.uleb128 0x13
+ 1520 00c6 00       		.byte	0
+ 1521 00c7 00       		.byte	0
+ 1522 00c8 0D       		.uleb128 0xd
+ 1523 00c9 05       		.uleb128 0x5
+ 1524 00ca 00       		.byte	0
+ 1525 00cb 03       		.uleb128 0x3
+ 1526 00cc 0E       		.uleb128 0xe
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 50
+
+
+ 1527 00cd 3A       		.uleb128 0x3a
+ 1528 00ce 0B       		.uleb128 0xb
+ 1529 00cf 3B       		.uleb128 0x3b
+ 1530 00d0 05       		.uleb128 0x5
+ 1531 00d1 49       		.uleb128 0x49
+ 1532 00d2 13       		.uleb128 0x13
+ 1533 00d3 02       		.uleb128 0x2
+ 1534 00d4 18       		.uleb128 0x18
+ 1535 00d5 00       		.byte	0
+ 1536 00d6 00       		.byte	0
+ 1537 00d7 0E       		.uleb128 0xe
+ 1538 00d8 2E       		.uleb128 0x2e
+ 1539 00d9 01       		.byte	0x1
+ 1540 00da 3F       		.uleb128 0x3f
+ 1541 00db 19       		.uleb128 0x19
+ 1542 00dc 03       		.uleb128 0x3
+ 1543 00dd 0E       		.uleb128 0xe
+ 1544 00de 3A       		.uleb128 0x3a
+ 1545 00df 0B       		.uleb128 0xb
+ 1546 00e0 3B       		.uleb128 0x3b
+ 1547 00e1 05       		.uleb128 0x5
+ 1548 00e2 27       		.uleb128 0x27
+ 1549 00e3 19       		.uleb128 0x19
+ 1550 00e4 49       		.uleb128 0x49
+ 1551 00e5 13       		.uleb128 0x13
+ 1552 00e6 11       		.uleb128 0x11
+ 1553 00e7 01       		.uleb128 0x1
+ 1554 00e8 12       		.uleb128 0x12
+ 1555 00e9 06       		.uleb128 0x6
+ 1556 00ea 40       		.uleb128 0x40
+ 1557 00eb 18       		.uleb128 0x18
+ 1558 00ec 9742     		.uleb128 0x2117
+ 1559 00ee 19       		.uleb128 0x19
+ 1560 00ef 01       		.uleb128 0x1
+ 1561 00f0 13       		.uleb128 0x13
+ 1562 00f1 00       		.byte	0
+ 1563 00f2 00       		.byte	0
+ 1564 00f3 0F       		.uleb128 0xf
+ 1565 00f4 34       		.uleb128 0x34
+ 1566 00f5 00       		.byte	0
+ 1567 00f6 03       		.uleb128 0x3
+ 1568 00f7 0E       		.uleb128 0xe
+ 1569 00f8 3A       		.uleb128 0x3a
+ 1570 00f9 0B       		.uleb128 0xb
+ 1571 00fa 3B       		.uleb128 0x3b
+ 1572 00fb 05       		.uleb128 0x5
+ 1573 00fc 49       		.uleb128 0x49
+ 1574 00fd 13       		.uleb128 0x13
+ 1575 00fe 02       		.uleb128 0x2
+ 1576 00ff 18       		.uleb128 0x18
+ 1577 0100 00       		.byte	0
+ 1578 0101 00       		.byte	0
+ 1579 0102 10       		.uleb128 0x10
+ 1580 0103 34       		.uleb128 0x34
+ 1581 0104 00       		.byte	0
+ 1582 0105 03       		.uleb128 0x3
+ 1583 0106 0E       		.uleb128 0xe
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 51
+
+
+ 1584 0107 3A       		.uleb128 0x3a
+ 1585 0108 0B       		.uleb128 0xb
+ 1586 0109 3B       		.uleb128 0x3b
+ 1587 010a 05       		.uleb128 0x5
+ 1588 010b 49       		.uleb128 0x49
+ 1589 010c 13       		.uleb128 0x13
+ 1590 010d 02       		.uleb128 0x2
+ 1591 010e 17       		.uleb128 0x17
+ 1592 010f 00       		.byte	0
+ 1593 0110 00       		.byte	0
+ 1594 0111 11       		.uleb128 0x11
+ 1595 0112 05       		.uleb128 0x5
+ 1596 0113 00       		.byte	0
+ 1597 0114 03       		.uleb128 0x3
+ 1598 0115 0E       		.uleb128 0xe
+ 1599 0116 3A       		.uleb128 0x3a
+ 1600 0117 0B       		.uleb128 0xb
+ 1601 0118 3B       		.uleb128 0x3b
+ 1602 0119 05       		.uleb128 0x5
+ 1603 011a 49       		.uleb128 0x49
+ 1604 011b 13       		.uleb128 0x13
+ 1605 011c 02       		.uleb128 0x2
+ 1606 011d 17       		.uleb128 0x17
+ 1607 011e 00       		.byte	0
+ 1608 011f 00       		.byte	0
+ 1609 0120 12       		.uleb128 0x12
+ 1610 0121 0F       		.uleb128 0xf
+ 1611 0122 00       		.byte	0
+ 1612 0123 0B       		.uleb128 0xb
+ 1613 0124 0B       		.uleb128 0xb
+ 1614 0125 49       		.uleb128 0x49
+ 1615 0126 13       		.uleb128 0x13
+ 1616 0127 00       		.byte	0
+ 1617 0128 00       		.byte	0
+ 1618 0129 13       		.uleb128 0x13
+ 1619 012a 26       		.uleb128 0x26
+ 1620 012b 00       		.byte	0
+ 1621 012c 49       		.uleb128 0x49
+ 1622 012d 13       		.uleb128 0x13
+ 1623 012e 00       		.byte	0
+ 1624 012f 00       		.byte	0
+ 1625 0130 14       		.uleb128 0x14
+ 1626 0131 34       		.uleb128 0x34
+ 1627 0132 00       		.byte	0
+ 1628 0133 03       		.uleb128 0x3
+ 1629 0134 0E       		.uleb128 0xe
+ 1630 0135 3A       		.uleb128 0x3a
+ 1631 0136 0B       		.uleb128 0xb
+ 1632 0137 3B       		.uleb128 0x3b
+ 1633 0138 0B       		.uleb128 0xb
+ 1634 0139 49       		.uleb128 0x49
+ 1635 013a 13       		.uleb128 0x13
+ 1636 013b 3F       		.uleb128 0x3f
+ 1637 013c 19       		.uleb128 0x19
+ 1638 013d 02       		.uleb128 0x2
+ 1639 013e 18       		.uleb128 0x18
+ 1640 013f 00       		.byte	0
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 52
+
+
+ 1641 0140 00       		.byte	0
+ 1642 0141 15       		.uleb128 0x15
+ 1643 0142 2E       		.uleb128 0x2e
+ 1644 0143 00       		.byte	0
+ 1645 0144 3F       		.uleb128 0x3f
+ 1646 0145 19       		.uleb128 0x19
+ 1647 0146 03       		.uleb128 0x3
+ 1648 0147 0E       		.uleb128 0xe
+ 1649 0148 3A       		.uleb128 0x3a
+ 1650 0149 0B       		.uleb128 0xb
+ 1651 014a 3B       		.uleb128 0x3b
+ 1652 014b 0B       		.uleb128 0xb
+ 1653 014c 27       		.uleb128 0x27
+ 1654 014d 19       		.uleb128 0x19
+ 1655 014e 49       		.uleb128 0x49
+ 1656 014f 13       		.uleb128 0x13
+ 1657 0150 3C       		.uleb128 0x3c
+ 1658 0151 19       		.uleb128 0x19
+ 1659 0152 00       		.byte	0
+ 1660 0153 00       		.byte	0
+ 1661 0154 16       		.uleb128 0x16
+ 1662 0155 2E       		.uleb128 0x2e
+ 1663 0156 01       		.byte	0x1
+ 1664 0157 3F       		.uleb128 0x3f
+ 1665 0158 19       		.uleb128 0x19
+ 1666 0159 03       		.uleb128 0x3
+ 1667 015a 0E       		.uleb128 0xe
+ 1668 015b 3A       		.uleb128 0x3a
+ 1669 015c 0B       		.uleb128 0xb
+ 1670 015d 3B       		.uleb128 0x3b
+ 1671 015e 0B       		.uleb128 0xb
+ 1672 015f 27       		.uleb128 0x27
+ 1673 0160 19       		.uleb128 0x19
+ 1674 0161 3C       		.uleb128 0x3c
+ 1675 0162 19       		.uleb128 0x19
+ 1676 0163 00       		.byte	0
+ 1677 0164 00       		.byte	0
+ 1678 0165 17       		.uleb128 0x17
+ 1679 0166 05       		.uleb128 0x5
+ 1680 0167 00       		.byte	0
+ 1681 0168 49       		.uleb128 0x49
+ 1682 0169 13       		.uleb128 0x13
+ 1683 016a 00       		.byte	0
+ 1684 016b 00       		.byte	0
+ 1685 016c 00       		.byte	0
+ 1686              		.section	.debug_loc,"",%progbits
+ 1687              	.Ldebug_loc0:
+ 1688              	.LLST0:
+ 1689 0000 06000000 		.4byte	.LVL0
+ 1690 0004 27000000 		.4byte	.LVL1-1
+ 1691 0008 0100     		.2byte	0x1
+ 1692 000a 50       		.byte	0x50
+ 1693 000b 00000000 		.4byte	0
+ 1694 000f 00000000 		.4byte	0
+ 1695              	.LLST1:
+ 1696 0013 06000000 		.4byte	.LVL2
+ 1697 0017 1D000000 		.4byte	.LVL3-1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 53
+
+
+ 1698 001b 0100     		.2byte	0x1
+ 1699 001d 50       		.byte	0x50
+ 1700 001e 00000000 		.4byte	0
+ 1701 0022 00000000 		.4byte	0
+ 1702              	.LLST2:
+ 1703 0026 06000000 		.4byte	.LVL12
+ 1704 002a 1C000000 		.4byte	.LVL13
+ 1705 002e 0100     		.2byte	0x1
+ 1706 0030 53       		.byte	0x53
+ 1707 0031 1C000000 		.4byte	.LVL13
+ 1708 0035 24000000 		.4byte	.LFE16
+ 1709 0039 0100     		.2byte	0x1
+ 1710 003b 50       		.byte	0x50
+ 1711 003c 00000000 		.4byte	0
+ 1712 0040 00000000 		.4byte	0
+ 1713              	.LLST3:
+ 1714 0044 06000000 		.4byte	.LVL14
+ 1715 0048 1B000000 		.4byte	.LVL15-1
+ 1716 004c 0100     		.2byte	0x1
+ 1717 004e 50       		.byte	0x50
+ 1718 004f 00000000 		.4byte	0
+ 1719 0053 00000000 		.4byte	0
+ 1720              	.LLST4:
+ 1721 0057 00000000 		.4byte	.LVL16
+ 1722 005b 0A000000 		.4byte	.LVL18
+ 1723 005f 0100     		.2byte	0x1
+ 1724 0061 50       		.byte	0x50
+ 1725 0062 0A000000 		.4byte	.LVL18
+ 1726 0066 1E000000 		.4byte	.LFE19
+ 1727 006a 0100     		.2byte	0x1
+ 1728 006c 56       		.byte	0x56
+ 1729 006d 00000000 		.4byte	0
+ 1730 0071 00000000 		.4byte	0
+ 1731              	.LLST5:
+ 1732 0075 00000000 		.4byte	.LVL16
+ 1733 0079 0A000000 		.4byte	.LVL18
+ 1734 007d 0100     		.2byte	0x1
+ 1735 007f 51       		.byte	0x51
+ 1736 0080 0A000000 		.4byte	.LVL18
+ 1737 0084 16000000 		.4byte	.LVL22
+ 1738 0088 0100     		.2byte	0x1
+ 1739 008a 54       		.byte	0x54
+ 1740 008b 18000000 		.4byte	.LVL23
+ 1741 008f 1E000000 		.4byte	.LFE19
+ 1742 0093 0100     		.2byte	0x1
+ 1743 0095 54       		.byte	0x54
+ 1744 0096 00000000 		.4byte	0
+ 1745 009a 00000000 		.4byte	0
+ 1746              	.LLST6:
+ 1747 009e 06000000 		.4byte	.LVL17
+ 1748 00a2 0A000000 		.4byte	.LVL18
+ 1749 00a6 0200     		.2byte	0x2
+ 1750 00a8 30       		.byte	0x30
+ 1751 00a9 9F       		.byte	0x9f
+ 1752 00aa 0A000000 		.4byte	.LVL18
+ 1753 00ae 12000000 		.4byte	.LVL20
+ 1754 00b2 0100     		.2byte	0x1
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 54
+
+
+ 1755 00b4 55       		.byte	0x55
+ 1756 00b5 14000000 		.4byte	.LVL21
+ 1757 00b9 1E000000 		.4byte	.LFE19
+ 1758 00bd 0100     		.2byte	0x1
+ 1759 00bf 55       		.byte	0x55
+ 1760 00c0 00000000 		.4byte	0
+ 1761 00c4 00000000 		.4byte	0
+ 1762              	.LLST7:
+ 1763 00c8 16000000 		.4byte	.LVL24
+ 1764 00cc 2B000000 		.4byte	.LVL25-1
+ 1765 00d0 0100     		.2byte	0x1
+ 1766 00d2 50       		.byte	0x50
+ 1767 00d3 00000000 		.4byte	0
+ 1768 00d7 00000000 		.4byte	0
+ 1769              	.LLST8:
+ 1770 00db 0C000000 		.4byte	.LVL32
+ 1771 00df 0E000000 		.4byte	.LVL33
+ 1772 00e3 0600     		.2byte	0x6
+ 1773 00e5 70       		.byte	0x70
+ 1774 00e6 00       		.sleb128 0
+ 1775 00e7 73       		.byte	0x73
+ 1776 00e8 00       		.sleb128 0
+ 1777 00e9 21       		.byte	0x21
+ 1778 00ea 9F       		.byte	0x9f
+ 1779 00eb 00000000 		.4byte	0
+ 1780 00ef 00000000 		.4byte	0
+ 1781              		.section	.debug_aranges,"",%progbits
+ 1782 0000 DC000000 		.4byte	0xdc
+ 1783 0004 0200     		.2byte	0x2
+ 1784 0006 00000000 		.4byte	.Ldebug_info0
+ 1785 000a 04       		.byte	0x4
+ 1786 000b 00       		.byte	0
+ 1787 000c 0000     		.2byte	0
+ 1788 000e 0000     		.2byte	0
+ 1789 0010 00000000 		.4byte	.LFB1
+ 1790 0014 30000000 		.4byte	.LFE1-.LFB1
+ 1791 0018 00000000 		.4byte	.LFB3
+ 1792 001c 24000000 		.4byte	.LFE3-.LFB3
+ 1793 0020 00000000 		.4byte	.LFB4
+ 1794 0024 02000000 		.4byte	.LFE4-.LFB4
+ 1795 0028 00000000 		.4byte	.LFB5
+ 1796 002c 02000000 		.4byte	.LFE5-.LFB5
+ 1797 0030 00000000 		.4byte	.LFB6
+ 1798 0034 02000000 		.4byte	.LFE6-.LFB6
+ 1799 0038 00000000 		.4byte	.LFB7
+ 1800 003c 02000000 		.4byte	.LFE7-.LFB7
+ 1801 0040 00000000 		.4byte	.LFB8
+ 1802 0044 0C000000 		.4byte	.LFE8-.LFB8
+ 1803 0048 00000000 		.4byte	.LFB9
+ 1804 004c 0C000000 		.4byte	.LFE9-.LFB9
+ 1805 0050 00000000 		.4byte	.LFB10
+ 1806 0054 0C000000 		.4byte	.LFE10-.LFB10
+ 1807 0058 00000000 		.4byte	.LFB11
+ 1808 005c 0C000000 		.4byte	.LFE11-.LFB11
+ 1809 0060 00000000 		.4byte	.LFB12
+ 1810 0064 18000000 		.4byte	.LFE12-.LFB12
+ 1811 0068 00000000 		.4byte	.LFB13
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 55
+
+
+ 1812 006c 0C000000 		.4byte	.LFE13-.LFB13
+ 1813 0070 00000000 		.4byte	.LFB14
+ 1814 0074 0C000000 		.4byte	.LFE14-.LFB14
+ 1815 0078 00000000 		.4byte	.LFB15
+ 1816 007c 18000000 		.4byte	.LFE15-.LFB15
+ 1817 0080 00000000 		.4byte	.LFB16
+ 1818 0084 24000000 		.4byte	.LFE16-.LFB16
+ 1819 0088 00000000 		.4byte	.LFB17
+ 1820 008c 1C000000 		.4byte	.LFE17-.LFB17
+ 1821 0090 00000000 		.4byte	.LFB18
+ 1822 0094 24000000 		.4byte	.LFE18-.LFB18
+ 1823 0098 00000000 		.4byte	.LFB19
+ 1824 009c 1E000000 		.4byte	.LFE19-.LFB19
+ 1825 00a0 00000000 		.4byte	.LFB20
+ 1826 00a4 3C000000 		.4byte	.LFE20-.LFB20
+ 1827 00a8 00000000 		.4byte	.LFB0
+ 1828 00ac 28000000 		.4byte	.LFE0-.LFB0
+ 1829 00b0 00000000 		.4byte	.LFB2
+ 1830 00b4 1C000000 		.4byte	.LFE2-.LFB2
+ 1831 00b8 00000000 		.4byte	.LFB21
+ 1832 00bc 02000000 		.4byte	.LFE21-.LFB21
+ 1833 00c0 00000000 		.4byte	.LFB22
+ 1834 00c4 02000000 		.4byte	.LFE22-.LFB22
+ 1835 00c8 00000000 		.4byte	.LFB23
+ 1836 00cc 10000000 		.4byte	.LFE23-.LFB23
+ 1837 00d0 00000000 		.4byte	.LFB24
+ 1838 00d4 14000000 		.4byte	.LFE24-.LFB24
+ 1839 00d8 00000000 		.4byte	0
+ 1840 00dc 00000000 		.4byte	0
+ 1841              		.section	.debug_ranges,"",%progbits
+ 1842              	.Ldebug_ranges0:
+ 1843 0000 00000000 		.4byte	.LFB1
+ 1844 0004 30000000 		.4byte	.LFE1
+ 1845 0008 00000000 		.4byte	.LFB3
+ 1846 000c 24000000 		.4byte	.LFE3
+ 1847 0010 00000000 		.4byte	.LFB4
+ 1848 0014 02000000 		.4byte	.LFE4
+ 1849 0018 00000000 		.4byte	.LFB5
+ 1850 001c 02000000 		.4byte	.LFE5
+ 1851 0020 00000000 		.4byte	.LFB6
+ 1852 0024 02000000 		.4byte	.LFE6
+ 1853 0028 00000000 		.4byte	.LFB7
+ 1854 002c 02000000 		.4byte	.LFE7
+ 1855 0030 00000000 		.4byte	.LFB8
+ 1856 0034 0C000000 		.4byte	.LFE8
+ 1857 0038 00000000 		.4byte	.LFB9
+ 1858 003c 0C000000 		.4byte	.LFE9
+ 1859 0040 00000000 		.4byte	.LFB10
+ 1860 0044 0C000000 		.4byte	.LFE10
+ 1861 0048 00000000 		.4byte	.LFB11
+ 1862 004c 0C000000 		.4byte	.LFE11
+ 1863 0050 00000000 		.4byte	.LFB12
+ 1864 0054 18000000 		.4byte	.LFE12
+ 1865 0058 00000000 		.4byte	.LFB13
+ 1866 005c 0C000000 		.4byte	.LFE13
+ 1867 0060 00000000 		.4byte	.LFB14
+ 1868 0064 0C000000 		.4byte	.LFE14
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 56
+
+
+ 1869 0068 00000000 		.4byte	.LFB15
+ 1870 006c 18000000 		.4byte	.LFE15
+ 1871 0070 00000000 		.4byte	.LFB16
+ 1872 0074 24000000 		.4byte	.LFE16
+ 1873 0078 00000000 		.4byte	.LFB17
+ 1874 007c 1C000000 		.4byte	.LFE17
+ 1875 0080 00000000 		.4byte	.LFB18
+ 1876 0084 24000000 		.4byte	.LFE18
+ 1877 0088 00000000 		.4byte	.LFB19
+ 1878 008c 1E000000 		.4byte	.LFE19
+ 1879 0090 00000000 		.4byte	.LFB20
+ 1880 0094 3C000000 		.4byte	.LFE20
+ 1881 0098 00000000 		.4byte	.LFB0
+ 1882 009c 28000000 		.4byte	.LFE0
+ 1883 00a0 00000000 		.4byte	.LFB2
+ 1884 00a4 1C000000 		.4byte	.LFE2
+ 1885 00a8 00000000 		.4byte	.LFB21
+ 1886 00ac 02000000 		.4byte	.LFE21
+ 1887 00b0 00000000 		.4byte	.LFB22
+ 1888 00b4 02000000 		.4byte	.LFE22
+ 1889 00b8 00000000 		.4byte	.LFB23
+ 1890 00bc 10000000 		.4byte	.LFE23
+ 1891 00c0 00000000 		.4byte	.LFB24
+ 1892 00c4 14000000 		.4byte	.LFE24
+ 1893 00c8 00000000 		.4byte	0
+ 1894 00cc 00000000 		.4byte	0
+ 1895              		.section	.debug_line,"",%progbits
+ 1896              	.Ldebug_line0:
+ 1897 0000 40020000 		.section	.debug_str,"MS",%progbits,1
+ 1897      02004D00 
+ 1897      00000201 
+ 1897      FB0E0D00 
+ 1897      01010101 
+ 1898              	.LASF6:
+ 1899 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1899      206C6F6E 
+ 1899      6720696E 
+ 1899      7400
+ 1900              	.LASF46:
+ 1901 000e 5350495F 		.ascii	"SPI_EnableInt\000"
+ 1901      456E6162 
+ 1901      6C65496E 
+ 1901      7400
+ 1902              	.LASF30:
+ 1903 001c 5350495F 		.ascii	"SPI_WriteTxDataZero\000"
+ 1903      57726974 
+ 1903      65547844 
+ 1903      6174615A 
+ 1903      65726F00 
+ 1904              	.LASF28:
+ 1905 0030 5350495F 		.ascii	"SPI_WriteTxData\000"
+ 1905      57726974 
+ 1905      65547844 
+ 1905      61746100 
+ 1906              	.LASF50:
+ 1907 0040 5350495F 		.ascii	"SPI_initVar\000"
+ 1907      696E6974 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 57
+
+
+ 1907      56617200 
+ 1908              	.LASF32:
+ 1909 004c 5350495F 		.ascii	"SPI_ReadRxData\000"
+ 1909      52656164 
+ 1909      52784461 
+ 1909      746100
+ 1910              	.LASF55:
+ 1911 005b 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\lb-boards"
+ 1911      73657273 
+ 1911      5C444769 
+ 1911      6C6C696C 
+ 1911      616E645C 
+ 1912 0089 5C525050 		.ascii	"\\RPPSOC\\PSOC-SPI\\PSOC-SPI\\PSOC-SPI.cydsn\000"
+ 1912      534F435C 
+ 1912      50534F43 
+ 1912      2D535049 
+ 1912      5C50534F 
+ 1913              	.LASF3:
+ 1914 00b2 73686F72 		.ascii	"short unsigned int\000"
+ 1914      7420756E 
+ 1914      7369676E 
+ 1914      65642069 
+ 1914      6E7400
+ 1915              	.LASF44:
+ 1916 00c5 5350495F 		.ascii	"SPI_Init\000"
+ 1916      496E6974 
+ 1916      00
+ 1917              	.LASF54:
+ 1918 00ce 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\SPI.c\000"
+ 1918      6E657261 
+ 1918      7465645F 
+ 1918      536F7572 
+ 1918      63655C50 
+ 1919              	.LASF52:
+ 1920 00ed 5350495F 		.ascii	"SPI_swStatusRx\000"
+ 1920      73775374 
+ 1920      61747573 
+ 1920      527800
+ 1921              	.LASF38:
+ 1922 00fc 5350495F 		.ascii	"SPI_ClearTxBuffer\000"
+ 1922      436C6561 
+ 1922      72547842 
+ 1922      75666665 
+ 1922      7200
+ 1923              	.LASF51:
+ 1924 010e 5350495F 		.ascii	"SPI_swStatusTx\000"
+ 1924      73775374 
+ 1924      61747573 
+ 1924      547800
+ 1925              	.LASF33:
+ 1926 011d 72784461 		.ascii	"rxData\000"
+ 1926      746100
+ 1927              	.LASF9:
+ 1928 0124 666C6F61 		.ascii	"float\000"
+ 1928      7400
+ 1929              	.LASF43:
+ 1930 012a 5350495F 		.ascii	"SPI_ClearFIFO\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 58
+
+
+ 1930      436C6561 
+ 1930      72464946 
+ 1930      4F00
+ 1931              	.LASF7:
+ 1932 0138 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1932      206C6F6E 
+ 1932      6720756E 
+ 1932      7369676E 
+ 1932      65642069 
+ 1933              	.LASF35:
+ 1934 014f 73697A65 		.ascii	"size\000"
+ 1934      00
+ 1935              	.LASF13:
+ 1936 0154 72656738 		.ascii	"reg8\000"
+ 1936      00
+ 1937              	.LASF21:
+ 1938 0159 5350495F 		.ascii	"SPI_DisableRxInt\000"
+ 1938      44697361 
+ 1938      626C6552 
+ 1938      78496E74 
+ 1938      00
+ 1939              	.LASF5:
+ 1940 016a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1940      20756E73 
+ 1940      69676E65 
+ 1940      6420696E 
+ 1940      7400
+ 1941              	.LASF12:
+ 1942 017c 75696E74 		.ascii	"uint8\000"
+ 1942      3800
+ 1943              	.LASF41:
+ 1944 0182 62797465 		.ascii	"byteCount\000"
+ 1944      436F756E 
+ 1944      7400
+ 1945              	.LASF26:
+ 1946 018c 5350495F 		.ascii	"SPI_ReadTxStatus\000"
+ 1946      52656164 
+ 1946      54785374 
+ 1946      61747573 
+ 1946      00
+ 1947              	.LASF18:
+ 1948 019d 5350495F 		.ascii	"SPI_EnableTxInt\000"
+ 1948      456E6162 
+ 1948      6C655478 
+ 1948      496E7400 
+ 1949              	.LASF1:
+ 1950 01ad 756E7369 		.ascii	"unsigned char\000"
+ 1950      676E6564 
+ 1950      20636861 
+ 1950      7200
+ 1951              	.LASF10:
+ 1952 01bb 646F7562 		.ascii	"double\000"
+ 1952      6C6500
+ 1953              	.LASF23:
+ 1954 01c2 5350495F 		.ascii	"SPI_SetRxInterruptMode\000"
+ 1954      53657452 
+ 1954      78496E74 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 59
+
+
+ 1954      65727275 
+ 1954      70744D6F 
+ 1955              	.LASF24:
+ 1956 01d9 696E7453 		.ascii	"intSrc\000"
+ 1956      726300
+ 1957              	.LASF39:
+ 1958 01e0 5350495F 		.ascii	"SPI_PutArray\000"
+ 1958      50757441 
+ 1958      72726179 
+ 1958      00
+ 1959              	.LASF36:
+ 1960 01ed 5350495F 		.ascii	"SPI_GetTxBufferSize\000"
+ 1960      47657454 
+ 1960      78427566 
+ 1960      66657253 
+ 1960      697A6500 
+ 1961              	.LASF16:
+ 1962 0201 5350495F 		.ascii	"SPI_Stop\000"
+ 1962      53746F70 
+ 1962      00
+ 1963              	.LASF34:
+ 1964 020a 5350495F 		.ascii	"SPI_GetRxBufferSize\000"
+ 1964      47657452 
+ 1964      78427566 
+ 1964      66657253 
+ 1964      697A6500 
+ 1965              	.LASF53:
+ 1966 021e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1966      4320342E 
+ 1966      392E3320 
+ 1966      32303135 
+ 1966      30333033 
+ 1967 0251 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1967      20726576 
+ 1967      6973696F 
+ 1967      6E203232 
+ 1967      31323230 
+ 1968 0284 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1968      66756E63 
+ 1968      74696F6E 
+ 1968      2D736563 
+ 1968      74696F6E 
+ 1969              	.LASF56:
+ 1970 02ac 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1970      74657243 
+ 1970      72697469 
+ 1970      63616C53 
+ 1970      65637469 
+ 1971              	.LASF8:
+ 1972 02c3 756E7369 		.ascii	"unsigned int\000"
+ 1972      676E6564 
+ 1972      20696E74 
+ 1972      00
+ 1973              	.LASF22:
+ 1974 02d0 5350495F 		.ascii	"SPI_SetTxInterruptMode\000"
+ 1974      53657454 
+ 1974      78496E74 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 60
+
+
+ 1974      65727275 
+ 1974      70744D6F 
+ 1975              	.LASF57:
+ 1976 02e7 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1976      69744372 
+ 1976      69746963 
+ 1976      616C5365 
+ 1976      6374696F 
+ 1977              	.LASF42:
+ 1978 02fd 62756649 		.ascii	"bufIndex\000"
+ 1978      6E646578 
+ 1978      00
+ 1979              	.LASF29:
+ 1980 0306 74784461 		.ascii	"txData\000"
+ 1980      746100
+ 1981              	.LASF37:
+ 1982 030d 5350495F 		.ascii	"SPI_ClearRxBuffer\000"
+ 1982      436C6561 
+ 1982      72527842 
+ 1982      75666665 
+ 1982      7200
+ 1983              	.LASF14:
+ 1984 031f 73697A65 		.ascii	"sizetype\000"
+ 1984      74797065 
+ 1984      00
+ 1985              	.LASF17:
+ 1986 0328 656E6162 		.ascii	"enableInterrupts\000"
+ 1986      6C65496E 
+ 1986      74657272 
+ 1986      75707473 
+ 1986      00
+ 1987              	.LASF31:
+ 1988 0339 74784461 		.ascii	"txDataByte\000"
+ 1988      74614279 
+ 1988      746500
+ 1989              	.LASF11:
+ 1990 0344 63686172 		.ascii	"char\000"
+ 1990      00
+ 1991              	.LASF15:
+ 1992 0349 5350495F 		.ascii	"SPI_Enable\000"
+ 1992      456E6162 
+ 1992      6C6500
+ 1993              	.LASF47:
+ 1994 0354 5350495F 		.ascii	"SPI_DisableInt\000"
+ 1994      44697361 
+ 1994      626C6549 
+ 1994      6E7400
+ 1995              	.LASF2:
+ 1996 0363 73686F72 		.ascii	"short int\000"
+ 1996      7420696E 
+ 1996      7400
+ 1997              	.LASF40:
+ 1998 036d 62756666 		.ascii	"buffer\000"
+ 1998      657200
+ 1999              	.LASF20:
+ 2000 0374 5350495F 		.ascii	"SPI_DisableTxInt\000"
+ 2000      44697361 
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccZpFL94.s 			page 61
+
+
+ 2000      626C6554 
+ 2000      78496E74 
+ 2000      00
+ 2001              	.LASF4:
+ 2002 0385 6C6F6E67 		.ascii	"long int\000"
+ 2002      20696E74 
+ 2002      00
+ 2003              	.LASF25:
+ 2004 038e 746D7053 		.ascii	"tmpStatus\000"
+ 2004      74617475 
+ 2004      7300
+ 2005              	.LASF48:
+ 2006 0398 5350495F 		.ascii	"SPI_SetInterruptMode\000"
+ 2006      53657449 
+ 2006      6E746572 
+ 2006      72757074 
+ 2006      4D6F6465 
+ 2007              	.LASF0:
+ 2008 03ad 7369676E 		.ascii	"signed char\000"
+ 2008      65642063 
+ 2008      68617200 
+ 2009              	.LASF49:
+ 2010 03b9 5350495F 		.ascii	"SPI_ReadStatus\000"
+ 2010      52656164 
+ 2010      53746174 
+ 2010      757300
+ 2011              	.LASF19:
+ 2012 03c8 5350495F 		.ascii	"SPI_EnableRxInt\000"
+ 2012      456E6162 
+ 2012      6C655278 
+ 2012      496E7400 
+ 2013              	.LASF45:
+ 2014 03d8 5350495F 		.ascii	"SPI_Start\000"
+ 2014      53746172 
+ 2014      7400
+ 2015              	.LASF27:
+ 2016 03e2 5350495F 		.ascii	"SPI_ReadRxStatus\000"
+ 2016      52656164 
+ 2016      52785374 
+ 2016      61747573 
+ 2016      00
+ 2017              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

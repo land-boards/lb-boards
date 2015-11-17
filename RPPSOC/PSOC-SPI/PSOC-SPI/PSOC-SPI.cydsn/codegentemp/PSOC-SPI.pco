@@ -1,0 +1,52 @@
+# PSOC-SPI
+# 2015-11-17 19:21:01Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+dont_use_location comparatorcell -1 -1 1
+dont_use_location comparatorcell -1 -1 3
+dont_use_location sccell -1 -1 0
+dont_use_location sccell -1 -1 1
+dont_use_location sccell -1 -1 2
+dont_use_location sccell -1 -1 3
+dont_use_location vidaccell -1 -1 1
+dont_use_location vidaccell -1 -1 2
+dont_use_location vidaccell -1 -1 3
+dont_use_location sarcell -1 -1 1
+dont_use_location abufcell -1 -1 0
+dont_use_location abufcell -1 -1 2
+dont_use_location abufcell -1 -1 1
+dont_use_location abufcell -1 -1 3
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "SCLK(0)" iocell 6 5
+set_io "SS(0)" iocell 6 4
+set_io "MOSI(0)" iocell 6 6
+set_io "MISO(0)" iocell 6 7
+set_io "SDA_1(0)" iocell 0 1
+set_io "SCL_1(0)" iocell 0 0
+set_location "\SPI:BSPIS:inv_ss\" 0 5 1 0
+set_location "\SPI:BSPIS:tx_load\" 0 4 0 2
+set_location "\SPI:BSPIS:byte_complete\" 1 5 1 0
+set_location "\SPI:BSPIS:rx_buf_overrun\" 1 5 1 2
+set_location "Net_14" 0 5 0 2
+set_location "\SPI:BSPIS:mosi_buf_overrun\" 0 4 0 3
+set_location "\SPI:BSPIS:tx_status_0\" 1 5 0 0
+set_location "\SPI:BSPIS:rx_status_4\" 0 5 0 3
+set_location "\SPI:BSPIS:mosi_to_dp\" 0 4 0 0
+set_location "\SPI:BSPIS:sync_1\" 1 4 5 3
+set_location "\SPI:BSPIS:sync_2\" 1 4 5 0
+set_location "\SPI:BSPIS:sync_3\" 1 4 5 2
+set_location "\SPI:BSPIS:sync_4\" 1 4 5 1
+set_location "\SPI:BSPIS:BitCounter\" 0 4 7
+set_location "\SPI:BSPIS:TxStsReg\" 1 5 4
+set_location "\SPI:BSPIS:RxStsReg\" 0 5 4
+set_location "\SPI:BSPIS:sR8:Dp:u0\" 0 4 2
+set_location "\I2C_1:I2C_IRQ\" interrupt -1 -1 15
+set_location "\I2C_1:I2C_FF\" i2ccell -1 -1 0
+set_location "\SPI:BSPIS:dpcounter_one_reg\" 1 5 1 1
+set_location "\SPI:BSPIS:mosi_buf_overrun_fin\" 1 5 0 2
+set_location "\SPI:BSPIS:mosi_tmp\" 0 4 0 1

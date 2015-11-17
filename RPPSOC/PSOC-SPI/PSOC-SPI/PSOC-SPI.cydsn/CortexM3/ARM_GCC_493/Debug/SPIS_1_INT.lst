@@ -1,0 +1,511 @@
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SPIS_1_INT.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.SPIS_1_TX_ISR,"ax",%progbits
+  19              		.align	2
+  20              		.global	SPIS_1_TX_ISR
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	SPIS_1_TX_ISR, %function
+  24              	SPIS_1_TX_ISR:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\SPIS_1_INT.c"
+   1:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * File Name: SPIS_1_INT.c
+   3:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Version 2.70
+   4:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+   5:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Description:
+   6:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  This file provides all Interrupt Service Routine (ISR) for the SPI Slave
+   7:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  component.
+   8:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+   9:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Note:
+  10:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
+  11:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  12:.\Generated_Source\PSoC5/SPIS_1_INT.c **** ********************************************************************************
+  13:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *******************************************************************************/
+  18:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  19:.\Generated_Source\PSoC5/SPIS_1_INT.c **** #include "SPIS_1_PVT.h"
+  20:.\Generated_Source\PSoC5/SPIS_1_INT.c **** #include "cyapicallbacks.h"
+  21:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  22:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /* User code required at start of ISR */
+  23:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /* `#START SPIS_1_ISR_START_DEF` */
+  24:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  25:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /* `#END` */
+  26:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  27:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  28:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /*******************************************************************************
+  29:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Function Name: SPIS_1_TX_ISR
+  30:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  31:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Summary:
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  Interrupt Service Routine for TX portion of the SPI Slave.
+  33:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  34:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Parameters:
+  35:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
+  36:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  37:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Return:
+  38:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
+  39:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  40:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Global variables:
+  41:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_txBufferWrite - used for the account of the bytes which
+  42:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  have been written down in the TX software buffer.
+  43:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_txBufferRead - used for the account of the bytes which
+  44:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  have been read from the TX software buffer, modified when exist data to
+  45:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  sending and FIFO Not Full.
+  46:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_txBuffer[SPIS_1_TX_BUFFER_SIZE] - used to store
+  47:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  data to sending.
+  48:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  All described above Global variables are used when Software Buffer is used.
+  49:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+  50:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *******************************************************************************/
+  51:.\Generated_Source\PSoC5/SPIS_1_INT.c **** CY_ISR(SPIS_1_TX_ISR)
+  52:.\Generated_Source\PSoC5/SPIS_1_INT.c **** {
+  27              		.loc 1 52 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 7047     		bx	lr
+  33              		.cfi_endproc
+  34              	.LFE0:
+  35              		.size	SPIS_1_TX_ISR, .-SPIS_1_TX_ISR
+  36 0002 00BF     		.section	.text.SPIS_1_RX_ISR,"ax",%progbits
+  37              		.align	2
+  38              		.global	SPIS_1_RX_ISR
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	SPIS_1_RX_ISR, %function
+  42              	SPIS_1_RX_ISR:
+  43              	.LFB1:
+  53:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  54:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #if(SPIS_1_TX_SOFTWARE_BUF_ENABLED)
+  55:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         uint8 tmpStatus;
+  56:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #endif /* (SPIS_1_TX_SOFTWARE_BUF_ENABLED) */
+  57:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  58:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #ifdef SPIS_1_TX_ISR_ENTRY_CALLBACK
+  59:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         SPIS_1_TX_ISR_EntryCallback();
+  60:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #endif /* SPIS_1_TX_ISR_ENTRY_CALLBACK */
+  61:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  62:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* User code required at start of ISR */
+  63:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* `#START SPIS_1_ISR_TX_START` */
+  64:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  65:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* `#END` */
+  66:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  67:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #if(SPIS_1_TX_SOFTWARE_BUF_ENABLED)
+  68:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         /* Component interrupt service code */
+  69:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  70:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         /* See if TX data buffer is not empty and there is space in TX FIFO */
+  71:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         while(SPIS_1_txBufferRead != SPIS_1_txBufferWrite)
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 3
+
+
+  72:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         {
+  73:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             tmpStatus = SPIS_1_GET_STATUS_TX(SPIS_1_swStatusTx);
+  74:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             SPIS_1_swStatusTx = tmpStatus;
+  75:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  76:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             if ((SPIS_1_swStatusTx & SPIS_1_STS_TX_FIFO_NOT_FULL) != 0u)
+  77:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             {
+  78:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 if(SPIS_1_txBufferFull == 0u)
+  79:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 {
+  80:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                    SPIS_1_txBufferRead++;
+  81:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  82:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                     if(SPIS_1_txBufferRead >= SPIS_1_TX_BUFFER_SIZE)
+  83:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                     {
+  84:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                         SPIS_1_txBufferRead = 0u;
+  85:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                     }
+  86:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 }
+  87:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 else
+  88:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 {
+  89:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                     SPIS_1_txBufferFull = 0u;
+  90:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 }
+  91:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+  92:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 /* Put data element into the TX FIFO */
+  93:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 CY_SET_REG8(SPIS_1_TXDATA_PTR, 
+  94:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                                              SPIS_1_txBuffer[SPIS_1_txBufferRead]);
+  95:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             }
+  96:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             else
+  97:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             {
+  98:.\Generated_Source\PSoC5/SPIS_1_INT.c ****                 break;
+  99:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             }
+ 100:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         }
+ 101:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 102:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         /* If Buffer is empty then disable TX FIFO status interrupt until there is data in the buff
+ 103:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         if(SPIS_1_txBufferRead == SPIS_1_txBufferWrite)
+ 104:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         {
+ 105:.\Generated_Source\PSoC5/SPIS_1_INT.c ****             SPIS_1_TX_STATUS_MASK_REG &= ((uint8)~SPIS_1_STS_TX_FIFO_NOT_FULL);
+ 106:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         }
+ 107:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 108:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #endif /* SPIS_1_TX_SOFTWARE_BUF_ENABLED */
+ 109:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 110:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* User code required at end of ISR (Optional) */
+ 111:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* `#START SPIS_1_ISR_TX_END` */
+ 112:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 113:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     /* `#END` */
+ 114:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     
+ 115:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #ifdef SPIS_1_TX_ISR_EXIT_CALLBACK
+ 116:.\Generated_Source\PSoC5/SPIS_1_INT.c ****         SPIS_1_TX_ISR_ExitCallback();
+ 117:.\Generated_Source\PSoC5/SPIS_1_INT.c ****     #endif /* SPIS_1_TX_ISR_EXIT_CALLBACK */
+ 118:.\Generated_Source\PSoC5/SPIS_1_INT.c ****    }
+ 119:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 120:.\Generated_Source\PSoC5/SPIS_1_INT.c **** 
+ 121:.\Generated_Source\PSoC5/SPIS_1_INT.c **** /*******************************************************************************
+ 122:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Function Name: SPIS_1_RX_ISR
+ 123:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+ 124:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Summary:
+ 125:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  Interrupt Service Routine for RX portion of the SPI Slave.
+ 126:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+ 127:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Parameters:
+ 128:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 4
+
+
+ 129:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+ 130:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Return:
+ 131:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  None.
+ 132:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+ 133:.\Generated_Source\PSoC5/SPIS_1_INT.c **** * Global variables:
+ 134:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_rxBufferWrite - used for the account of the bytes which
+ 135:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  have been written down in the RX software buffer modified when FIFO contains
+ 136:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  new data.
+ 137:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_rxBufferRead - used for the account of the bytes which
+ 138:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  have been read from the RX software buffer, modified when overflow occurred.
+ 139:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  SPIS_1_rxBuffer[SPIS_1_RX_BUFFER_SIZE] - used to store
+ 140:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  received data, modified when FIFO contains new data.
+ 141:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *  All described above Global variables are used when Software Buffer is used.
+ 142:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *
+ 143:.\Generated_Source\PSoC5/SPIS_1_INT.c **** *******************************************************************************/
+ 144:.\Generated_Source\PSoC5/SPIS_1_INT.c **** CY_ISR(SPIS_1_RX_ISR)
+ 145:.\Generated_Source\PSoC5/SPIS_1_INT.c **** {
+  44              		.loc 1 145 0
+  45              		.cfi_startproc
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 7047     		bx	lr
+  50              		.cfi_endproc
+  51              	.LFE1:
+  52              		.size	SPIS_1_RX_ISR, .-SPIS_1_RX_ISR
+  53 0002 00BF     		.text
+  54              	.Letext0:
+  55              		.section	.debug_info,"",%progbits
+  56              	.Ldebug_info0:
+  57 0000 A6000000 		.4byte	0xa6
+  58 0004 0400     		.2byte	0x4
+  59 0006 00000000 		.4byte	.Ldebug_abbrev0
+  60 000a 04       		.byte	0x4
+  61 000b 01       		.uleb128 0x1
+  62 000c B7000000 		.4byte	.LASF15
+  63 0010 01       		.byte	0x1
+  64 0011 8D010000 		.4byte	.LASF16
+  65 0015 37000000 		.4byte	.LASF17
+  66 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  67 001d 00000000 		.4byte	0
+  68 0021 00000000 		.4byte	.Ldebug_line0
+  69 0025 02       		.uleb128 0x2
+  70 0026 01       		.byte	0x1
+  71 0027 06       		.byte	0x6
+  72 0028 7B010000 		.4byte	.LASF0
+  73 002c 02       		.uleb128 0x2
+  74 002d 01       		.byte	0x1
+  75 002e 08       		.byte	0x8
+  76 002f 45010000 		.4byte	.LASF1
+  77 0033 02       		.uleb128 0x2
+  78 0034 02       		.byte	0x2
+  79 0035 05       		.byte	0x5
+  80 0036 B3010000 		.4byte	.LASF2
+  81 003a 02       		.uleb128 0x2
+  82 003b 02       		.byte	0x2
+  83 003c 07       		.byte	0x7
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 5
+
+
+  84 003d 68010000 		.4byte	.LASF3
+  85 0041 02       		.uleb128 0x2
+  86 0042 04       		.byte	0x4
+  87 0043 05       		.byte	0x5
+  88 0044 58010000 		.4byte	.LASF4
+  89 0048 02       		.uleb128 0x2
+  90 0049 04       		.byte	0x4
+  91 004a 07       		.byte	0x7
+  92 004b 8E000000 		.4byte	.LASF5
+  93 004f 02       		.uleb128 0x2
+  94 0050 08       		.byte	0x8
+  95 0051 05       		.byte	0x5
+  96 0052 00000000 		.4byte	.LASF6
+  97 0056 02       		.uleb128 0x2
+  98 0057 08       		.byte	0x8
+  99 0058 07       		.byte	0x7
+ 100 0059 A0000000 		.4byte	.LASF7
+ 101 005d 03       		.uleb128 0x3
+ 102 005e 04       		.byte	0x4
+ 103 005f 05       		.byte	0x5
+ 104 0060 696E7400 		.ascii	"int\000"
+ 105 0064 02       		.uleb128 0x2
+ 106 0065 04       		.byte	0x4
+ 107 0066 07       		.byte	0x7
+ 108 0067 0E000000 		.4byte	.LASF8
+ 109 006b 02       		.uleb128 0x2
+ 110 006c 04       		.byte	0x4
+ 111 006d 04       		.byte	0x4
+ 112 006e 87010000 		.4byte	.LASF9
+ 113 0072 02       		.uleb128 0x2
+ 114 0073 08       		.byte	0x8
+ 115 0074 04       		.byte	0x4
+ 116 0075 61010000 		.4byte	.LASF10
+ 117 0079 02       		.uleb128 0x2
+ 118 007a 01       		.byte	0x1
+ 119 007b 08       		.byte	0x8
+ 120 007c 53010000 		.4byte	.LASF11
+ 121 0080 02       		.uleb128 0x2
+ 122 0081 04       		.byte	0x4
+ 123 0082 07       		.byte	0x7
+ 124 0083 BD010000 		.4byte	.LASF12
+ 125 0087 04       		.uleb128 0x4
+ 126 0088 29000000 		.4byte	.LASF13
+ 127 008c 01       		.byte	0x1
+ 128 008d 33       		.byte	0x33
+ 129 008e 00000000 		.4byte	.LFB0
+ 130 0092 02000000 		.4byte	.LFE0-.LFB0
+ 131 0096 01       		.uleb128 0x1
+ 132 0097 9C       		.byte	0x9c
+ 133 0098 04       		.uleb128 0x4
+ 134 0099 1B000000 		.4byte	.LASF14
+ 135 009d 01       		.byte	0x1
+ 136 009e 90       		.byte	0x90
+ 137 009f 00000000 		.4byte	.LFB1
+ 138 00a3 02000000 		.4byte	.LFE1-.LFB1
+ 139 00a7 01       		.uleb128 0x1
+ 140 00a8 9C       		.byte	0x9c
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 6
+
+
+ 141 00a9 00       		.byte	0
+ 142              		.section	.debug_abbrev,"",%progbits
+ 143              	.Ldebug_abbrev0:
+ 144 0000 01       		.uleb128 0x1
+ 145 0001 11       		.uleb128 0x11
+ 146 0002 01       		.byte	0x1
+ 147 0003 25       		.uleb128 0x25
+ 148 0004 0E       		.uleb128 0xe
+ 149 0005 13       		.uleb128 0x13
+ 150 0006 0B       		.uleb128 0xb
+ 151 0007 03       		.uleb128 0x3
+ 152 0008 0E       		.uleb128 0xe
+ 153 0009 1B       		.uleb128 0x1b
+ 154 000a 0E       		.uleb128 0xe
+ 155 000b 55       		.uleb128 0x55
+ 156 000c 17       		.uleb128 0x17
+ 157 000d 11       		.uleb128 0x11
+ 158 000e 01       		.uleb128 0x1
+ 159 000f 10       		.uleb128 0x10
+ 160 0010 17       		.uleb128 0x17
+ 161 0011 00       		.byte	0
+ 162 0012 00       		.byte	0
+ 163 0013 02       		.uleb128 0x2
+ 164 0014 24       		.uleb128 0x24
+ 165 0015 00       		.byte	0
+ 166 0016 0B       		.uleb128 0xb
+ 167 0017 0B       		.uleb128 0xb
+ 168 0018 3E       		.uleb128 0x3e
+ 169 0019 0B       		.uleb128 0xb
+ 170 001a 03       		.uleb128 0x3
+ 171 001b 0E       		.uleb128 0xe
+ 172 001c 00       		.byte	0
+ 173 001d 00       		.byte	0
+ 174 001e 03       		.uleb128 0x3
+ 175 001f 24       		.uleb128 0x24
+ 176 0020 00       		.byte	0
+ 177 0021 0B       		.uleb128 0xb
+ 178 0022 0B       		.uleb128 0xb
+ 179 0023 3E       		.uleb128 0x3e
+ 180 0024 0B       		.uleb128 0xb
+ 181 0025 03       		.uleb128 0x3
+ 182 0026 08       		.uleb128 0x8
+ 183 0027 00       		.byte	0
+ 184 0028 00       		.byte	0
+ 185 0029 04       		.uleb128 0x4
+ 186 002a 2E       		.uleb128 0x2e
+ 187 002b 00       		.byte	0
+ 188 002c 3F       		.uleb128 0x3f
+ 189 002d 19       		.uleb128 0x19
+ 190 002e 03       		.uleb128 0x3
+ 191 002f 0E       		.uleb128 0xe
+ 192 0030 3A       		.uleb128 0x3a
+ 193 0031 0B       		.uleb128 0xb
+ 194 0032 3B       		.uleb128 0x3b
+ 195 0033 0B       		.uleb128 0xb
+ 196 0034 27       		.uleb128 0x27
+ 197 0035 19       		.uleb128 0x19
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 7
+
+
+ 198 0036 11       		.uleb128 0x11
+ 199 0037 01       		.uleb128 0x1
+ 200 0038 12       		.uleb128 0x12
+ 201 0039 06       		.uleb128 0x6
+ 202 003a 40       		.uleb128 0x40
+ 203 003b 18       		.uleb128 0x18
+ 204 003c 9742     		.uleb128 0x2117
+ 205 003e 19       		.uleb128 0x19
+ 206 003f 00       		.byte	0
+ 207 0040 00       		.byte	0
+ 208 0041 00       		.byte	0
+ 209              		.section	.debug_aranges,"",%progbits
+ 210 0000 24000000 		.4byte	0x24
+ 211 0004 0200     		.2byte	0x2
+ 212 0006 00000000 		.4byte	.Ldebug_info0
+ 213 000a 04       		.byte	0x4
+ 214 000b 00       		.byte	0
+ 215 000c 0000     		.2byte	0
+ 216 000e 0000     		.2byte	0
+ 217 0010 00000000 		.4byte	.LFB0
+ 218 0014 02000000 		.4byte	.LFE0-.LFB0
+ 219 0018 00000000 		.4byte	.LFB1
+ 220 001c 02000000 		.4byte	.LFE1-.LFB1
+ 221 0020 00000000 		.4byte	0
+ 222 0024 00000000 		.4byte	0
+ 223              		.section	.debug_ranges,"",%progbits
+ 224              	.Ldebug_ranges0:
+ 225 0000 00000000 		.4byte	.LFB0
+ 226 0004 02000000 		.4byte	.LFE0
+ 227 0008 00000000 		.4byte	.LFB1
+ 228 000c 02000000 		.4byte	.LFE1
+ 229 0010 00000000 		.4byte	0
+ 230 0014 00000000 		.4byte	0
+ 231              		.section	.debug_line,"",%progbits
+ 232              	.Ldebug_line0:
+ 233 0000 61000000 		.section	.debug_str,"MS",%progbits,1
+ 233      02003C00 
+ 233      00000201 
+ 233      FB0E0D00 
+ 233      01010101 
+ 234              	.LASF6:
+ 235 0000 6C6F6E67 		.ascii	"long long int\000"
+ 235      206C6F6E 
+ 235      6720696E 
+ 235      7400
+ 236              	.LASF8:
+ 237 000e 756E7369 		.ascii	"unsigned int\000"
+ 237      676E6564 
+ 237      20696E74 
+ 237      00
+ 238              	.LASF14:
+ 239 001b 53504953 		.ascii	"SPIS_1_RX_ISR\000"
+ 239      5F315F52 
+ 239      585F4953 
+ 239      5200
+ 240              	.LASF13:
+ 241 0029 53504953 		.ascii	"SPIS_1_TX_ISR\000"
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 8
+
+
+ 241      5F315F54 
+ 241      585F4953 
+ 241      5200
+ 242              	.LASF17:
+ 243 0037 433A5C55 		.ascii	"C:\\Users\\DGilliland\\Documents\\GitHub\\lb-boards"
+ 243      73657273 
+ 243      5C444769 
+ 243      6C6C696C 
+ 243      616E645C 
+ 244 0065 5C525050 		.ascii	"\\RPPSOC\\PSOC-SPI\\PSOC-SPI\\PSOC-SPI.cydsn\000"
+ 244      534F435C 
+ 244      50534F43 
+ 244      2D535049 
+ 244      5C50534F 
+ 245              	.LASF5:
+ 246 008e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 246      20756E73 
+ 246      69676E65 
+ 246      6420696E 
+ 246      7400
+ 247              	.LASF7:
+ 248 00a0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 248      206C6F6E 
+ 248      6720756E 
+ 248      7369676E 
+ 248      65642069 
+ 249              	.LASF15:
+ 250 00b7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 250      4320342E 
+ 250      392E3320 
+ 250      32303135 
+ 250      30333033 
+ 251 00ea 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 251      20726576 
+ 251      6973696F 
+ 251      6E203232 
+ 251      31323230 
+ 252 011d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 252      66756E63 
+ 252      74696F6E 
+ 252      2D736563 
+ 252      74696F6E 
+ 253              	.LASF1:
+ 254 0145 756E7369 		.ascii	"unsigned char\000"
+ 254      676E6564 
+ 254      20636861 
+ 254      7200
+ 255              	.LASF11:
+ 256 0153 63686172 		.ascii	"char\000"
+ 256      00
+ 257              	.LASF4:
+ 258 0158 6C6F6E67 		.ascii	"long int\000"
+ 258      20696E74 
+ 258      00
+ 259              	.LASF10:
+ 260 0161 646F7562 		.ascii	"double\000"
+ 260      6C6500
+ARM GAS  C:\Users\DGILLI~1\AppData\Local\Temp\ccrBSITO.s 			page 9
+
+
+ 261              	.LASF3:
+ 262 0168 73686F72 		.ascii	"short unsigned int\000"
+ 262      7420756E 
+ 262      7369676E 
+ 262      65642069 
+ 262      6E7400
+ 263              	.LASF0:
+ 264 017b 7369676E 		.ascii	"signed char\000"
+ 264      65642063 
+ 264      68617200 
+ 265              	.LASF9:
+ 266 0187 666C6F61 		.ascii	"float\000"
+ 266      7400
+ 267              	.LASF16:
+ 268 018d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\SPIS_1_INT.c\000"
+ 268      6E657261 
+ 268      7465645F 
+ 268      536F7572 
+ 268      63655C50 
+ 269              	.LASF2:
+ 270 01b3 73686F72 		.ascii	"short int\000"
+ 270      7420696E 
+ 270      7400
+ 271              	.LASF12:
+ 272 01bd 73697A65 		.ascii	"sizetype\000"
+ 272      74797065 
+ 272      00
+ 273              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

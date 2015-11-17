@@ -1,0 +1,1045 @@
+##################################################################### 
+                    Table of Contents
+===================================================================== 
+	1::Clock Frequency Summary
+	2::Clock Relationship Summary
+	3::Datasheet Report
+		3.1::Setup to Clock
+		3.2::Clock to Out
+		3.3::Pad to Pad
+	4::Path Details for Clock Frequency Summary
+		4.1::Critical Path Report for Clock_1
+		4.2::Critical Path Report for CyBUS_CLK
+		4.3::Critical Path Report for SCLK(0)/fb
+	5::Path Details for Clock Relationship Summary
+		5.1::Critical Path Report for (CyBUS_CLK:R vs. SCLK(0)/fb:R)
+		5.2::Critical Path Report for (CyBUS_CLK:R vs. SCLK(0)/fb:F)
+		5.3::Critical Path Report for (Clock_1:R vs. Clock_1:R)
+		5.4::Critical Path Report for (SCLK(0)/fb:R vs. SCLK(0)/fb:F)
+		5.5::Critical Path Report for (SCLK(0)/fb:F vs. SCLK(0)/fb:F)
+		5.6::Critical Path Report for (SCLK(0)/fb:F vs. SCLK(0)/fb:R)
+===================================================================== 
+                    End of Table of Contents
+##################################################################### 
+
+##################################################################### 
+                    1::Clock Frequency Summary
+===================================================================== 
+Number of clocks: 8
+Clock: Clock_1                    | Frequency: 82.43 MHz  | Target: 1.00 MHz   | 
+Clock: CyBUS_CLK                  | Frequency: 97.18 MHz  | Target: 24.00 MHz  | 
+Clock: CyBUS_CLK(fixed-function)  | N/A                   | Target: 24.00 MHz  | 
+Clock: CyILO                      | N/A                   | Target: 0.00 MHz   | 
+Clock: CyIMO                      | N/A                   | Target: 3.00 MHz   | 
+Clock: CyMASTER_CLK               | N/A                   | Target: 24.00 MHz  | 
+Clock: CyPLL_OUT                  | N/A                   | Target: 24.00 MHz  | 
+Clock: SCLK(0)/fb                 | Frequency: 43.48 MHz  | Target: 12.00 MHz  | 
+
+ =====================================================================
+                    End of Clock Frequency Summary
+ #####################################################################
+
+
+ #####################################################################
+                    2::Clock Relationship Summary
+ =====================================================================
+
+Launch Clock  Capture Clock  Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
+------------  -------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
+Clock_1       Clock_1        1e+006           987869      N/A              N/A         N/A              N/A         N/A              N/A         
+CyBUS_CLK     SCLK(0)/fb     41666.7          39119       41666.7          31377       N/A              N/A         N/A              N/A         
+SCLK(0)/fb    SCLK(0)/fb     N/A              N/A         41666.7          30519       83333.3          67355       41666.7          30168       
+
+ =====================================================================
+                    End of Clock Relationship Summary
+ #####################################################################
+
+
+ #####################################################################
+                    3::Datasheet Report
+
+All values are in Picoseconds
+ =====================================================================
+
+3.1::Setup to Clock                     
+-------------------                     
+
+Port Name  Setup to Clk  Clock Name:Phase  
+---------  ------------  ----------------  
+
+
+-----------------------3.2::Clock to Out
+----------------------------------------
+
+Port Name         Clock to Out  Clock Name:Phase             
+----------------  ------------  ---------------------------  
+MISO(0)_PAD       44494         SCLK(0)/fb:F                 
+MISO(0)_PAD       31677         CyBUS_CLK:R                  
+SCL_1(0)_PAD:out  26018         CyBUS_CLK(fixed-function):R  
+SDA_1(0)_PAD:out  26933         CyBUS_CLK(fixed-function):R  
+
+
+                         3.3::Pad to Pad
+                         ---------------
+
+Port Name (Source)  Port Name (Destination)  Delay  
+------------------  -----------------------  -----  
+
+===================================================================== 
+                    End of Datasheet Report
+##################################################################### 
+##################################################################### 
+                    4::Path Details for Clock Frequency Summary
+===================================================================== 
+4.1::Critical Path Report for Clock_1
+*************************************
+Clock: Clock_1
+Frequency: 82.43 MHz | Target: 1.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_1\/out
+Path End       : \SPI:BSPIS:TxStsReg\/status_6
+Capture Clock  : \SPI:BSPIS:TxStsReg\/clock
+Path slack     : 987869p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                      -500
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11631
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11631
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_1\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                          model name    delay     AT   slack  edge  Fanout
+--------------------------------  ------------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_1\/out            synccell       1020   1020  987869  RISE       1
+\SPI:BSPIS:byte_complete\/main_0  macrocell3     3059   4079  987869  RISE       1
+\SPI:BSPIS:byte_complete\/q       macrocell3     3350   7429  987869  RISE       1
+\SPI:BSPIS:TxStsReg\/status_6     statusicell1   4202  11631  987869  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:TxStsReg\/clock                                 statusicell1        0      0  RISE       1
+
+
+===================================================================== 
+4.2::Critical Path Report for CyBUS_CLK
+***************************************
+Clock: CyBUS_CLK
+Frequency: 97.18 MHz | Target: 24.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : SS(0)/fb
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/cs_addr_2
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 31377p
+
+Capture Clock Arrival Time                          41667
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                        -4480
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      45541
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       14164
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           14164
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SS(0)/in_clock                                              iocell2             0      0  RISE       1
+
+Data path
+pin name                         model name     delay     AT  slack  edge  Fanout
+-------------------------------  -------------  -----  -----  -----  ----  ------
+SS(0)/fb                         iocell2         2231   2231  31377  RISE       1
+\SPI:BSPIS:inv_ss\/main_0        macrocell1      5365   7596  31377  RISE       1
+\SPI:BSPIS:inv_ss\/q             macrocell1      3350  10946  31377  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/cs_addr_2  datapathcell1   3218  14164  31377  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+===================================================================== 
+4.3::Critical Path Report for SCLK(0)/fb
+****************************************
+Clock: SCLK(0)/fb
+Frequency: 43.48 MHz | Target: 12.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:BitCounter\/count_0
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/f1_load
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 30168p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:F#1 vs. SCLK(0)/fb:R#2)   83333
+- Setup time                                             0
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       91688
+
+Launch Clock Arrival Time                   41667
++ Clock path delay                       8354
++ Data path delay                       11498
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           61519
+ 
+Launch Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+Data path
+pin name                        model name     delay     AT  slack  edge  Fanout
+------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:BitCounter\/count_0  count7cell      1940  51961  30168  RISE       1
+\SPI:BSPIS:tx_load\/main_3      macrocell2      2325  54286  30168  RISE       1
+\SPI:BSPIS:tx_load\/q           macrocell2      3350  57636  30168  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/f1_load   datapathcell1   3883  61519  30168  RISE       1
+
+Capture Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:sR8:Dp:u0\/clock                                 datapathcell1    5869   8354  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Frequency Summary
+##################################################################### 
+
+
+##################################################################### 
+                    5::Path Details for Clock Relationship Summary
+===================================================================== 
+
+5.1::Critical Path Report for (CyBUS_CLK:R vs. SCLK(0)/fb:R)
+************************************************************
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : MOSI(0)/fb
+Path End       : \SPI:BSPIS:mosi_tmp\/main_0
+Capture Clock  : \SPI:BSPIS:mosi_tmp\/clock_0
+Path slack     : 39119p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#2 vs. SCLK(0)/fb:R#2)   41667
+- Setup time                                        -3510
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      46511
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7392
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7392
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+MOSI(0)/in_clock                                            iocell3             0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT  slack  edge  Fanout
+---------------------------  -----------  -----  -----  -----  ----  ------
+MOSI(0)/fb                   iocell3       2133   2133  39119  RISE       1
+\SPI:BSPIS:mosi_tmp\/main_0  macrocell12   5259   7392  39119  RISE       1
+
+Capture Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:mosi_tmp\/clock_0                                macrocell12      5869   8354  RISE       1
+
+
+5.2::Critical Path Report for (CyBUS_CLK:R vs. SCLK(0)/fb:F)
+************************************************************
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : SS(0)/fb
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/cs_addr_2
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 31377p
+
+Capture Clock Arrival Time                          41667
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                        -4480
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      45541
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       14164
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           14164
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SS(0)/in_clock                                              iocell2             0      0  RISE       1
+
+Data path
+pin name                         model name     delay     AT  slack  edge  Fanout
+-------------------------------  -------------  -----  -----  -----  ----  ------
+SS(0)/fb                         iocell2         2231   2231  31377  RISE       1
+\SPI:BSPIS:inv_ss\/main_0        macrocell1      5365   7596  31377  RISE       1
+\SPI:BSPIS:inv_ss\/q             macrocell1      3350  10946  31377  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/cs_addr_2  datapathcell1   3218  14164  31377  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+5.3::Critical Path Report for (Clock_1:R vs. Clock_1:R)
+*******************************************************
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_1\/out
+Path End       : \SPI:BSPIS:TxStsReg\/status_6
+Capture Clock  : \SPI:BSPIS:TxStsReg\/clock
+Path slack     : 987869p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                      -500
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11631
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11631
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_1\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                          model name    delay     AT   slack  edge  Fanout
+--------------------------------  ------------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_1\/out            synccell       1020   1020  987869  RISE       1
+\SPI:BSPIS:byte_complete\/main_0  macrocell3     3059   4079  987869  RISE       1
+\SPI:BSPIS:byte_complete\/q       macrocell3     3350   7429  987869  RISE       1
+\SPI:BSPIS:TxStsReg\/status_6     statusicell1   4202  11631  987869  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:TxStsReg\/clock                                 statusicell1        0      0  RISE       1
+
+
+5.4::Critical Path Report for (SCLK(0)/fb:R vs. SCLK(0)/fb:F)
+*************************************************************
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:mosi_tmp\/q
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/route_si
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 30519p
+
+Capture Clock Arrival Time                           41667
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                         -1970
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       48051
+
+Launch Clock Arrival Time                      0
++ Clock path delay                      8354
++ Data path delay                       9178
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           17532
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:mosi_tmp\/clock_0                                macrocell12      5869   8354  RISE       1
+
+Data path
+pin name                        model name     delay     AT  slack  edge  Fanout
+------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:mosi_tmp\/q          macrocell12     1250   9604  30519  RISE       1
+\SPI:BSPIS:mosi_to_dp\/main_4   macrocell9      2288  11892  30519  RISE       1
+\SPI:BSPIS:mosi_to_dp\/q        macrocell9      3350  15242  30519  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/route_si  datapathcell1   2291  17532  30519  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+5.5::Critical Path Report for (SCLK(0)/fb:F vs. SCLK(0)/fb:F)
+*************************************************************
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:BitCounter\/count_0
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/cs_addr_0
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 67355p
+
+Capture Clock Arrival Time                           41667
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:F#1 vs. SCLK(0)/fb:F#2)   83333
+- Setup time                                         -4480
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       128874
+
+Launch Clock Arrival Time                   41667
++ Clock path delay                       8354
++ Data path delay                       11498
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           61519
+ 
+Launch Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+Data path
+pin name                         model name     delay     AT  slack  edge  Fanout
+-------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:BitCounter\/count_0   count7cell      1940  51961  67355  RISE       1
+\SPI:BSPIS:tx_load\/main_3       macrocell2      2325  54286  67355  RISE       1
+\SPI:BSPIS:tx_load\/q            macrocell2      3350  57636  67355  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/cs_addr_0  datapathcell1   3883  61519  67355  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+5.6::Critical Path Report for (SCLK(0)/fb:F vs. SCLK(0)/fb:R)
+*************************************************************
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:BitCounter\/count_0
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/f1_load
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 30168p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:F#1 vs. SCLK(0)/fb:R#2)   83333
+- Setup time                                             0
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       91688
+
+Launch Clock Arrival Time                   41667
++ Clock path delay                       8354
++ Data path delay                       11498
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           61519
+ 
+Launch Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+Data path
+pin name                        model name     delay     AT  slack  edge  Fanout
+------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:BitCounter\/count_0  count7cell      1940  51961  30168  RISE       1
+\SPI:BSPIS:tx_load\/main_3      macrocell2      2325  54286  30168  RISE       1
+\SPI:BSPIS:tx_load\/q           macrocell2      3350  57636  30168  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/f1_load   datapathcell1   3883  61519  30168  RISE       1
+
+Capture Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:sR8:Dp:u0\/clock                                 datapathcell1    5869   8354  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Relationship Summary
+##################################################################### 
+
+##################################################################### 
+                    Detailed Report for all timing paths 
+===================================================================== 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:BitCounter\/count_0
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/f1_load
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 30168p
+
+Capture Clock Arrival Time                               0
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:F#1 vs. SCLK(0)/fb:R#2)   83333
+- Setup time                                             0
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       91688
+
+Launch Clock Arrival Time                   41667
++ Clock path delay                       8354
++ Data path delay                       11498
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           61519
+ 
+Launch Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+Data path
+pin name                        model name     delay     AT  slack  edge  Fanout
+------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:BitCounter\/count_0  count7cell      1940  51961  30168  RISE       1
+\SPI:BSPIS:tx_load\/main_3      macrocell2      2325  54286  30168  RISE       1
+\SPI:BSPIS:tx_load\/q           macrocell2      3350  57636  30168  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/f1_load   datapathcell1   3883  61519  30168  RISE       1
+
+Capture Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:sR8:Dp:u0\/clock                                 datapathcell1    5869   8354  RISE       1
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:mosi_tmp\/q
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/route_si
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 30519p
+
+Capture Clock Arrival Time                           41667
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                         -1970
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       48051
+
+Launch Clock Arrival Time                      0
++ Clock path delay                      8354
++ Data path delay                       9178
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           17532
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:mosi_tmp\/clock_0                                macrocell12      5869   8354  RISE       1
+
+Data path
+pin name                        model name     delay     AT  slack  edge  Fanout
+------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:mosi_tmp\/q          macrocell12     1250   9604  30519  RISE       1
+\SPI:BSPIS:mosi_to_dp\/main_4   macrocell9      2288  11892  30519  RISE       1
+\SPI:BSPIS:mosi_to_dp\/q        macrocell9      3350  15242  30519  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/route_si  datapathcell1   2291  17532  30519  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : SS(0)/fb
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/cs_addr_2
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 31377p
+
+Capture Clock Arrival Time                          41667
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                        -4480
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      45541
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       14164
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           14164
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SS(0)/in_clock                                              iocell2             0      0  RISE       1
+
+Data path
+pin name                         model name     delay     AT  slack  edge  Fanout
+-------------------------------  -------------  -----  -----  -----  ----  ------
+SS(0)/fb                         iocell2         2231   2231  31377  RISE       1
+\SPI:BSPIS:inv_ss\/main_0        macrocell1      5365   7596  31377  RISE       1
+\SPI:BSPIS:inv_ss\/q             macrocell1      3350  10946  31377  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/cs_addr_2  datapathcell1   3218  14164  31377  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : SS(0)/fb
+Path End       : \SPI:BSPIS:BitCounter\/enable
+Capture Clock  : \SPI:BSPIS:BitCounter\/clock_n
+Path slack     : 31790p
+
+Capture Clock Arrival Time                          41667
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#1 vs. SCLK(0)/fb:F#1)       0
+- Setup time                                        -4060
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      45961
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       14171
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           14171
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SS(0)/in_clock                                              iocell2             0      0  RISE       1
+
+Data path
+pin name                       model name   delay     AT  slack  edge  Fanout
+-----------------------------  -----------  -----  -----  -----  ----  ------
+SS(0)/fb                       iocell2       2231   2231  31377  RISE       1
+\SPI:BSPIS:inv_ss\/main_0      macrocell1    5365   7596  31377  RISE       1
+\SPI:BSPIS:inv_ss\/q           macrocell1    3350  10946  31377  RISE       1
+\SPI:BSPIS:BitCounter\/enable  count7cell    3225  14171  31790  RISE       1
+
+Capture Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : MOSI(0)/fb
+Path End       : \SPI:BSPIS:mosi_tmp\/main_0
+Capture Clock  : \SPI:BSPIS:mosi_tmp\/clock_0
+Path slack     : 39119p
+
+Capture Clock Arrival Time                              0
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#2 vs. SCLK(0)/fb:R#2)   41667
+- Setup time                                        -3510
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      46511
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7392
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7392
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+MOSI(0)/in_clock                                            iocell3             0      0  RISE       1
+
+Data path
+pin name                     model name   delay     AT  slack  edge  Fanout
+---------------------------  -----------  -----  -----  -----  ----  ------
+MOSI(0)/fb                   iocell3       2133   2133  39119  RISE       1
+\SPI:BSPIS:mosi_tmp\/main_0  macrocell12   5259   7392  39119  RISE       1
+
+Capture Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SCLK(0)/in_clock                                            iocell1             0      0  RISE       1
+SCLK(0)/fb                                                  iocell1          2485   2485  
+SCLK(0)/fb (TOTAL_ADJUSTMENTS)                              iocell1             0   2485  RISE       1
+--SCLK(0)/fb (Clock Phase Adjustment Delay)                 iocell1             0    N/A  
+\SPI:BSPIS:mosi_tmp\/clock_0                                macrocell12      5869   8354  RISE       1
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : SS(0)/fb
+Path End       : \SPI:BSPIS:BitCounter\/reset
+Capture Clock  : \SPI:BSPIS:BitCounter\/clock_n
+Path slack     : 41826p
+
+Capture Clock Arrival Time                          41667
++ Clock path delay                                   8354
++ Cycle adjust (CyBUS_CLK:R#1 vs. SCLK(0)/fb:F#1)       0
+- Recovery time                                         0
+-------------------------------------------------   ----- 
+End-of-path required time (ps)                      50021
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8195
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8195
+ 
+Launch Clock Path
+pin name                                                    model name      delay     AT  edge  Fanout
+----------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
+SS(0)/in_clock                                              iocell2             0      0  RISE       1
+
+Data path
+pin name                      model name   delay     AT  slack  edge  Fanout
+----------------------------  -----------  -----  -----  -----  ----  ------
+SS(0)/fb                      iocell2       2231   2231  31377  RISE       1
+\SPI:BSPIS:BitCounter\/reset  count7cell    5964   8195  41826  RISE       1
+
+Capture Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:BitCounter\/count_0
+Path End       : \SPI:BSPIS:sR8:Dp:u0\/cs_addr_0
+Capture Clock  : \SPI:BSPIS:sR8:Dp:u0\/clock
+Path slack     : 67355p
+
+Capture Clock Arrival Time                           41667
++ Clock path delay                                    8354
++ Cycle adjust (SCLK(0)/fb:F#1 vs. SCLK(0)/fb:F#2)   83333
+- Setup time                                         -4480
+--------------------------------------------------   ----- 
+End-of-path required time (ps)                       128874
+
+Launch Clock Arrival Time                   41667
++ Clock path delay                       8354
++ Data path delay                       11498
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           61519
+ 
+Launch Clock Path
+pin name                                        model name   delay     AT  edge  Fanout
+----------------------------------------------  -----------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1          0  44152  FALL       1
+\SPI:BSPIS:BitCounter\/clock_n                  count7cell    5869  50021  FALL       1
+
+Data path
+pin name                         model name     delay     AT  slack  edge  Fanout
+-------------------------------  -------------  -----  -----  -----  ----  ------
+\SPI:BSPIS:BitCounter\/count_0   count7cell      1940  51961  67355  RISE       1
+\SPI:BSPIS:tx_load\/main_3       macrocell2      2325  54286  67355  RISE       1
+\SPI:BSPIS:tx_load\/q            macrocell2      3350  57636  67355  RISE       1
+\SPI:BSPIS:sR8:Dp:u0\/cs_addr_0  datapathcell1   3883  61519  67355  RISE       1
+
+Capture Clock Path
+pin name                                        model name     delay     AT  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ----  ------
+SCLK(0)/fb                                      iocell1            0  44152  FALL       1
+\SPI:BSPIS:sR8:Dp:u0\/clock                     datapathcell1   5869  50021  FALL       1
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_1\/out
+Path End       : \SPI:BSPIS:TxStsReg\/status_6
+Capture Clock  : \SPI:BSPIS:TxStsReg\/clock
+Path slack     : 987869p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                      -500
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11631
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11631
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_1\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                          model name    delay     AT   slack  edge  Fanout
+--------------------------------  ------------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_1\/out            synccell       1020   1020  987869  RISE       1
+\SPI:BSPIS:byte_complete\/main_0  macrocell3     3059   4079  987869  RISE       1
+\SPI:BSPIS:byte_complete\/q       macrocell3     3350   7429  987869  RISE       1
+\SPI:BSPIS:TxStsReg\/status_6     statusicell1   4202  11631  987869  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:TxStsReg\/clock                                 statusicell1        0      0  RISE       1
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_2\/out
+Path End       : \SPI:BSPIS:TxStsReg\/status_0
+Capture Clock  : \SPI:BSPIS:TxStsReg\/clock
+Path slack     : 988807p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                      -500
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       10693
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           10693
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_2\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                        model name    delay     AT   slack  edge  Fanout
+------------------------------  ------------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_2\/out          synccell       1020   1020  988807  RISE       1
+\SPI:BSPIS:tx_status_0\/main_2  macrocell7     4012   5032  988807  RISE       1
+\SPI:BSPIS:tx_status_0\/q       macrocell7     3350   8382  988807  RISE       1
+\SPI:BSPIS:TxStsReg\/status_0   statusicell1   2311  10693  988807  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:TxStsReg\/clock                                 statusicell1        0      0  RISE       1
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_3\/out
+Path End       : \SPI:BSPIS:RxStsReg\/status_5
+Capture Clock  : \SPI:BSPIS:RxStsReg\/clock
+Path slack     : 988991p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                      -500
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       10509
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           10509
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_3\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                           model name    delay     AT   slack  edge  Fanout
+---------------------------------  ------------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_3\/out             synccell       1020   1020  988991  RISE       1
+\SPI:BSPIS:rx_buf_overrun\/main_0  macrocell4     3810   4830  988991  RISE       1
+\SPI:BSPIS:rx_buf_overrun\/q       macrocell4     3350   8180  988991  RISE       1
+\SPI:BSPIS:RxStsReg\/status_5      statusicell2   2329  10509  988991  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:RxStsReg\/clock                                 statusicell2        0      0  RISE       1
+
+
+
+++++ Path 11 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_3\/out
+Path End       : \SPI:BSPIS:mosi_buf_overrun_fin\/main_0
+Capture Clock  : \SPI:BSPIS:mosi_buf_overrun_fin\/clock_0
+Path slack     : 991099p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                     -3510
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5391
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5391
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_3\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT   slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_3\/out                   synccell      1020   1020  988991  RISE       1
+\SPI:BSPIS:mosi_buf_overrun_fin\/main_0  macrocell11   4371   5391  991099  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:mosi_buf_overrun_fin\/clock_0                   macrocell11         0      0  RISE       1
+
+
+
+++++ Path 12 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \SPI:BSPIS:sync_1\/out
+Path End       : \SPI:BSPIS:dpcounter_one_reg\/main_0
+Capture Clock  : \SPI:BSPIS:dpcounter_one_reg\/clock_0
+Path slack     : 992411p
+
+Capture Clock Arrival Time                           0
++ Clock path delay                                   0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   1000000
+- Setup time                                     -3510
+--------------------------------------------   ------- 
+End-of-path required time (ps)                  996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4079
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4079
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:sync_1\/clock                                   synccell            0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT   slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ------  ----  ------
+\SPI:BSPIS:sync_1\/out                synccell      1020   1020  987869  RISE       1
+\SPI:BSPIS:dpcounter_one_reg\/main_0  macrocell10   3059   4079  992411  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\SPI:BSPIS:dpcounter_one_reg\/clock_0                      macrocell10         0      0  RISE       1
+
+
+===================================================================== 
+                    End of Detailed Report for all timing paths 
+##################################################################### 
+
+##################################################################### 
+                    End of Timing Report 
+##################################################################### 
+
