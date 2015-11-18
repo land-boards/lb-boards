@@ -1,4 +1,4 @@
-update=11/17/2015 12:43:03 PM
+update=11/18/2015 10:31:23 AM
 version=1
 last_client=kicad
 [general]
@@ -39,19 +39,6 @@ LibName7=smd_transistors
 LibName8=libcms
 LibName9=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName10=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -62,3 +49,16 @@ LibName3=conn
 LibName4=atmel
 LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
