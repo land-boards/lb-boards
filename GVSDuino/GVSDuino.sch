@@ -7,6 +7,7 @@ LIBS:linear
 LIBS:regul
 LIBS:microcontrollers
 LIBS:atmel
+LIBS:GVSDuino-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
@@ -958,7 +959,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 5150 2150 5150
 Wire Wire Line
-	3800 6950 3800 7150
+	3800 6950 3800 7100
 Text Label 3900 6950 0    60   ~ 0
 VREG
 Wire Wire Line
