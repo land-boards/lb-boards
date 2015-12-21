@@ -3,6 +3,7 @@ LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:mcp23008
+LIBS:DougsSch
 LIBS:I2CIO-8-cache
 EELAYER 25 0
 EELAYER END
@@ -764,6 +765,4 @@ Connection ~ 6600 4450
 Wire Wire Line
 	3700 5400 3600 5400
 Connection ~ 3700 4650
-Text Label 4550 4450 0    60   ~ 0
-INT
 $EndSCHEMATC
