@@ -1,0 +1,63 @@
+EESchema Schematic File Version 2
+LIBS:device
+LIBS:DougsSch
+LIBS:conn
+LIBS:PWR-BLK-03-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 4 4
+Title "FTDI USB-TTL Cable"
+Date "8 jan 2015"
+Rev "X2"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 1700 3450
+$Comp
+L USB-B J1
+U 1 1 4FF311FD
+P 2250 3950
+F 0 "J1" H 2350 4700 60  0000 C CNN
+F 1 "USB-B" H 2450 4050 60  0000 C CNN
+F 2 "USB-B-MINI" H 2250 3800 60  0000 C CNN
+F 3 "" H 2250 3950 60  0001 C CNN
+F 4 "Hirose" H 2250 3950 60  0001 C CNN "Mfg"
+F 5 "UX60SC-MB-5ST(80)" H 2250 3950 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 2250 3950 60  0001 C CNN "Vendor"
+F 7 "798-UX60SC-MB-5ST80 " H 2250 3950 60  0001 C CNN "VendorPN"
+	1    2250 3950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2200 4000
+NoConn ~ 2100 4000
+Wire Wire Line
+	3750 3700 2700 3700
+Wire Wire Line
+	2700 3400 2900 3400
+$Comp
+L FUSE F1
+U 1 1 53EF87F2
+P 3150 3400
+F 0 "F1" H 3250 3450 40  0000 C CNN
+F 1 "FUSE" H 3050 3350 40  0000 C CNN
+F 2 "SM1206" H 3150 3400 60  0000 C CNN
+F 3 "~" H 3150 3400 60  0000 C CNN
+F 4 "Cooper Bussman" H 3150 3400 60  0001 C CNN "Mfg"
+F 5 "PTS120615V050" H 3150 3400 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 3150 3400 60  0001 C CNN "Vendor"
+F 7 "PTS120615V050" H 3150 3400 60  0001 C CNN "VendorPN"
+	1    3150 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3400 3750 3400
+Text HLabel 3750 3400 2    60   Output ~ 0
++5V
+Text HLabel 3750 3700 2    60   Output ~ 0
+GND
+$EndSCHEMATC
