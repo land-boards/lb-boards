@@ -1,4 +1,4 @@
-update=12/22/2015 7:25:53 PM
+update=12/25/2015 1:04:24 PM
 version=1
 last_client=kicad
 [general]
@@ -11,20 +11,16 @@ EquName1=devcms
 [eeschema]
 version=1
 LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
 LibName1=device
 LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName3=conn
+LibName4=power
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=
-UseCmpFile=1
+LastNetListRead=PWR-BLK-03.net
+UseCmpFile=0
 PadDrill=3.175
 PadDrillOvalY=3.175
 PadSizeH=6.35
