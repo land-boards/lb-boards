@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/doug_000/Documents/GitHub/lb-boards/PWR-BLK-03/PWR-BLK-03.sch)
-    (date "12/26/2015 8:11:55 PM")
+    (date "12/30/2015 11:41:13 AM")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -102,7 +102,7 @@
       (fields
         (field (name Mfg) "JST Sales America Inc")
         (field (name MfgPN) "S2B-PH-SM4-TB(LF)(SN)")
-        (field (name Vendor) Mouser)
+        (field (name Digikey) Mouser)
         (field (name VendorPN) 455-1749-1-ND))
       (libsource (lib DougsSch) (part CONN_2))
       (sheetpath (names "/LiPo Battery Charger/") (tstamps /517C5D95/))
@@ -166,22 +166,32 @@
       (value 10K)
       (footprint Resistors_SMD:R_0805_HandSoldering)
       (fields
-        (field (name Mfg) Vishay)
-        (field (name MfgPN) CRCW08052K20JNEB)
+        (field (name Mfg) KOA)
+        (field (name MfgPN) RK73B2ATTD103J)
         (field (name Vendor) Mouser)
-        (field (name VendorPN) 71-CRCW08052K20JNEB))
+        (field (name VendorPN) "660-RK73B2ATTD103J "))
       (libsource (lib device) (part R))
       (sheetpath (names "/LiPo Battery Charger/") (tstamps /517C5D95/))
       (tstamp 567A0BDC))
     (comp (ref D1)
-      (value D_Schottky_FixedPinout)
+      (value BAT20)
       (footprint Diodes_SMD:SOD-323)
+      (fields
+        (field (name Mfg) STMicroelectronics)
+        (field (name MfgPN) BAT20JFILM)
+        (field (name Vendor) Mouser)
+        (field (name VendorPN) 511-BAT20JFILM))
       (libsource (lib DougsSch) (part D_Schottky_FixedPinout))
       (sheetpath (names "/LiPo Battery Charger/") (tstamps /517C5D95/))
       (tstamp 567D87A7))
     (comp (ref Q1)
       (value PMV48XP)
       (footprint TO_SOT_Packages_SMD:SOT-23)
+      (fields
+        (field (name Mfg) NXP)
+        (field (name MfgPN) PMV48XP,215)
+        (field (name Vendor) Mouser)
+        (field (name VendorPN) 771-PMV48XP215))
       (libsource (lib device) (part Q_PMOS_GSD))
       (sheetpath (names "/LiPo Battery Charger/") (tstamps /517C5D95/))
       (tstamp 567F329F))
@@ -302,6 +312,20 @@
       (sheetpath (names /USB/) (tstamps /53C9C2FF/))
       (tstamp 567EEACC)))
   (libparts
+    (libpart (lib device) (part C)
+      (description "Unpolarized capacitor")
+      (footprints
+        (fp C?)
+        (fp C_????_*)
+        (fp C_????)
+        (fp SMD*_c)
+        (fp Capacitor*))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib device) (part CP1)
       (description "Polarised capacitor")
       (footprints
@@ -314,20 +338,6 @@
       (fields
         (field (name Reference) C)
         (field (name Value) CP1))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part C)
-      (description "Unpolarized capacitor")
-      (footprints
-        (fp C?)
-        (fp C_????_*)
-        (fp C_????)
-        (fp SMD*_c)
-        (fp Capacitor*))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
@@ -360,6 +370,15 @@
       (pins
         (pin (num 1) (name A) (type passive))
         (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part Q_PMOS_GSD)
+      (description "Transistor P-MOSFET (general)")
+      (fields
+        (field (name Reference) Q)
+        (field (name Value) Q_PMOS_GSD))
+      (pins
+        (pin (num 1) (name G) (type input))
+        (pin (num 2) (name S) (type openEm))
+        (pin (num 3) (name D) (type openCol))))
     (libpart (lib device) (part R)
       (description Resistor)
       (footprints
@@ -371,15 +390,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part Q_PMOS_GSD)
-      (description "Transistor P-MOSFET (general)")
-      (fields
-        (field (name Reference) Q)
-        (field (name Value) Q_PMOS_GSD))
-      (pins
-        (pin (num 1) (name G) (type input))
-        (pin (num 2) (name S) (type openEm))
-        (pin (num 3) (name D) (type openCol))))
     (libpart (lib device) (part Switch_SPDT_x2)
       (description "Double Single Pole Double Throw (SPDT) switch")
       (fields
@@ -392,19 +402,20 @@
         (pin (num 4) (name A) (type passive))
         (pin (num 5) (name B) (type passive))
         (pin (num 6) (name C) (type passive))))
-    (libpart (lib DougsSch) (part CONN_2)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_2))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))))
     (libpart (lib DougsSch) (part CONN_1)
       (fields
         (field (name Reference) P)
         (field (name Value) CONN_1))
       (pins
         (pin (num 1) (name 1) (type passive))))
+    (libpart (lib DougsSch) (part DIODE)
+      (description DIODE)
+      (fields
+        (field (name Reference) D)
+        (field (name Value) DIODE))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
     (libpart (lib DougsSch) (part CONN_3X2)
       (fields
         (field (name Reference) P)
@@ -430,24 +441,13 @@
       (pins
         (pin (num 1) (name C) (type passive))
         (pin (num 2) (name A) (type passive))))
-    (libpart (lib DougsSch) (part DIODE)
-      (description DIODE)
+    (libpart (lib DougsSch) (part CONN_2)
       (fields
-        (field (name Reference) D)
-        (field (name Value) DIODE))
+        (field (name Reference) P)
+        (field (name Value) CONN_2))
       (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib DougsSch) (part LMR62014)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) LMR62014))
-      (pins
-        (pin (num 1) (name SW) (type passive))
-        (pin (num 2) (name GND) (type power_in))
-        (pin (num 3) (name FB) (type passive))
-        (pin (num 4) (name ~SHDN) (type input))
-        (pin (num 5) (name VIN) (type power_in))))
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
     (libpart (lib DougsSch) (part MCP73831)
       (description "LiPo Battery Charger, One Cell, 5V")
       (fields
@@ -459,6 +459,16 @@
         (pin (num 3) (name VBAT) (type power_in))
         (pin (num 4) (name VIN) (type power_in))
         (pin (num 5) (name PROG) (type input))))
+    (libpart (lib DougsSch) (part LMR62014)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) LMR62014))
+      (pins
+        (pin (num 1) (name SW) (type passive))
+        (pin (num 2) (name GND) (type power_in))
+        (pin (num 3) (name FB) (type passive))
+        (pin (num 4) (name ~SHDN) (type input))
+        (pin (num 5) (name VIN) (type power_in))))
     (libpart (lib conn) (part USB-MINI-B)
       (aliases
         (alias USB-MICRO-B))
