@@ -149,6 +149,14 @@ D DIODE
 K DIODE
 $ENDCMP
 #
+$CMP D_Schottky_FixedPinout
+D Diode Schottky
+$ENDCMP
+#
+$CMP D_Schottky_Small
+D Diode Schottky
+$ENDCMP
+#
 $CMP FGPMMOPA6H
 D GPS
 K GPS
@@ -176,6 +184,11 @@ $ENDCMP
 $CMP GVS
 D GVS Connector
 K GVS Connector
+$ENDCMP
+#
+$CMP GVS-8X3
+D CONNECTOR, SIL-26
+K CONNECTOR, SIL-26
 $ENDCMP
 #
 $CMP GVSS
