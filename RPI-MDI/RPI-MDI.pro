@@ -1,6 +1,6 @@
-update=11/27/2014 11:11:34 AM
+update=1/3/2016 4:24:22 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -53,3 +53,16 @@ LibName7=smd_resistors
 LibName8=smd_dil
 LibName9=smd_transistors
 LibName10=libcms
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
