@@ -21,8 +21,17 @@ if gtk.pygtk_version < (2,3,90):
 
 import csv
 import string
-import sys
 import os
+import sys
+
+sys.path.append('C:\\Users\\DGilliland\\Documents\\Subversion\\python\\dgCommonModules')
+sys.path.append('C:\\Python27\\Lib\\site-packages\\dgCommonModules')
+
+defaultPath = '.'
+
+from dgProgDefaults import *
+from dgWriteListtoCSV import *
+
 
 from sys import argv
 
@@ -41,11 +50,16 @@ def errorDialog(errorString):
 
 
 class FindaNetFile:
+	def	extractPathFromPathfilename(self,fullPathFilename):
+		"""Extract Path from fullPathFilename
+		"""
+		return(fullPathFilename[0:fullPathFilename.rfind('\\')+1])
 	def findNetFile(self, startingPath):
 		"""findNetFile() - This is the dialog which locates the csv files
 	
 		:returns: path/name of the file that was selected
 		"""
+		global defaultPath
 		csvFileString = "Select file"
 		dialog = gtk.FileChooserDialog(csvFileString,
 			None,
@@ -65,6 +79,7 @@ class FindaNetFile:
 		if response == gtk.RESPONSE_OK:
 			retFileName = dialog.get_filename()
 			dialog.destroy()
+			defaultPath = self.extractPathFromPathfilename(retFileName)
 			return retFileName
 		elif response == gtk.RESPONSE_CANCEL:
 			print 'Closed, no files selected'
@@ -239,12 +254,24 @@ class ControlClass:
 		return newOutPL
 
 	def theExecutive(self):
+		"""theExecutive - Function that runs the whole thing
+		"""
+		global defaultPath
+		#Load the default path
+		defaultParmsClass = HandleDefault()
+		#defaultParmsClass.setVerboseMode(False)
+		defaultParmsClass.initDefaults()
+		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
+		#print 'defaultPath was :', defaultPath
+		
 		myCSV = FindaNetFile()
-		fileToRead = myCSV.findNetFile('.')
-
+		fileToRead = myCSV.findNetFile(defaultPath)
+		
 		if fileToRead.upper()[-3:] != 'NET':
-			print 'ERROR - Expected a net file type'
+			errorDialog('ERROR - Expected a net file type')
 			exit()
+		defaultParmsClass.storeKeyValuePair('DEFAULT_PATH',defaultPath)
+		#print 'defaultPath now is :', defaultPath
 
 		fileToWrite = fileToRead[:-4] + "_PL.csv"
 
@@ -271,7 +298,7 @@ class ControlClass:
 		reduxPL = self.combineRefDes(sortedPL)
 		outCSVFile.writerow(['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
 		outCSVFile.writerows(reduxPL)
-		print 'complete'
+		#print 'complete'
 
 class UIManager:
 	"""The UI manager
