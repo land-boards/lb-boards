@@ -138,17 +138,17 @@ NoConn ~ 1600 5650
 NoConn ~ 1600 5550
 NoConn ~ 1600 4850
 NoConn ~ 1600 4750
-Text Label 3650 4700 0    60   ~ 0
+Text Label 3650 4400 0    60   ~ 0
 EHRPWM2A
-Text Label 3650 4500 0    60   ~ 0
+Text Label 3650 4600 0    60   ~ 0
 GPIO0_27
-Text Label 3650 2650 0    60   ~ 0
+Text Label 3700 1950 0    60   ~ 0
 GPIO1_15
-Text Label 3650 2550 0    60   ~ 0
+Text Label 3700 2050 0    60   ~ 0
 EHRPWM2B
-Text Label 3650 2350 0    60   ~ 0
+Text Label 3700 2250 0    60   ~ 0
 GPIO1_13
-Text Label 3650 2050 0    60   ~ 0
+Text Label 3700 2550 0    60   ~ 0
 TIMER4
 Wire Wire Line
 	4450 2050 3600 2050
@@ -164,15 +164,15 @@ Wire Wire Line
 	4450 2550 3600 2550
 Text Label 3700 5600 0    60   ~ 0
 GPIO1_29
-Text Label 3650 4600 0    60   ~ 0
+Text Label 3650 4500 0    60   ~ 0
 GPIO2_1
-Text Label 3650 4400 0    60   ~ 0
+Text Label 3650 4700 0    60   ~ 0
 GPIO1_14
-Text Label 3650 2450 0    60   ~ 0
+Text Label 3700 2150 0    60   ~ 0
 GPIO1_12
-Text Label 3650 2150 0    60   ~ 0
+Text Label 3700 2450 0    60   ~ 0
 TIMER6
-Text Label 3650 1950 0    60   ~ 0
+Text Label 3700 2650 0    60   ~ 0
 TIMER7
 Wire Wire Line
 	4500 5600 3650 5600
@@ -218,7 +218,7 @@ Text Label 1050 1350 0    60   ~ 0
 TIMER5
 Wire Wire Line
 	1000 1350 1650 1350
-Text Label 3650 2250 0    60   ~ 0
+Text Label 3700 2350 0    60   ~ 0
 TIMER5
 Wire Wire Line
 	4450 2250 3600 2250
@@ -336,10 +336,10 @@ Wire Wire Line
 	5300 5000 5400 5000
 Connection ~ 5400 5000
 $Comp
-L GND #PWR?
+L GND #PWR06
 U 1 1 56883EC8
 P 5400 5200
-F 0 "#PWR?" H 5400 5200 30  0001 C CNN
+F 0 "#PWR06" H 5400 5200 30  0001 C CNN
 F 1 "GND" H 5400 5130 30  0001 C CNN
 F 2 "" H 5400 5200 60  0000 C CNN
 F 3 "" H 5400 5200 60  0000 C CNN
