@@ -747,4 +747,20 @@ F 3 "" H 10100 7700 60  0000 C CNN
 	1    10100 7850
 	-1   0    0    -1  
 $EndComp
+Text Label 7600 2600 0    60   ~ 0
+SCK0
+Text Label 7600 2700 0    60   ~ 0
+SDA0
+Text Label 7600 3000 0    60   ~ 0
+SCK1
+Text Label 7600 3100 0    60   ~ 0
+SDA1
+Text Label 7600 3400 0    60   ~ 0
+SCK2
+Text Label 7600 3500 0    60   ~ 0
+SDA2
+Text Label 7800 7800 0    60   ~ 0
+SCK3
+Text Label 7800 7900 0    60   ~ 0
+SDA3
 $EndSCHEMATC
