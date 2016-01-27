@@ -1,4 +1,4 @@
-update=1/18/2016 2:31:38 PM
+update=1/27/2016 12:07:05 PM
 version=1
 last_client=kicad
 [general]
@@ -38,3 +38,4 @@ LibName3=conn
 LibName4=power
 LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName6=linear
+LibName7=analog_devices
