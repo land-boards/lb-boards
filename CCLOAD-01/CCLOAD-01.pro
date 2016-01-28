@@ -1,4 +1,4 @@
-update=1/27/2016 12:07:05 PM
+update=1/28/2016 4:17:38 PM
 version=1
 last_client=kicad
 [general]
@@ -32,10 +32,11 @@ ModuleOutlineThickness=0.15
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=device
-LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName3=conn
-LibName4=power
-LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=linear
-LibName7=analog_devices
+LibName1=CCLOAD-01-rescue
+LibName2=device
+LibName3=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName4=conn
+LibName5=power
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName7=linear
+LibName8=analog_devices
