@@ -1,0 +1,186 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:switch-enc
+LIBS:NewPot-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "TINYGRID85"
+Date "28 mar 2015"
+Rev "X2"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 3050 3050 0    60   ~ 0
+RST*
+Text Label 4600 2900 0    60   ~ 0
+D4
+Text Label 4600 3000 0    60   ~ 0
+D3
+Text Label 4600 3100 0    60   ~ 0
+D2
+Text Label 4600 3200 0    60   ~ 0
+D1
+Text Label 4600 3300 0    60   ~ 0
+D0
+$Comp
+L GND #PWR01
+U 1 1 5030F049
+P 3650 3800
+F 0 "#PWR01" H 3650 3800 30  0001 C CNN
+F 1 "GND" H 3650 3730 30  0001 C CNN
+F 2 "" H 3650 3800 60  0001 C CNN
+F 3 "" H 3650 3800 60  0001 C CNN
+	1    3650 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 5030EFF4
+P 3600 2350
+F 0 "#PWR02" H 3600 2450 30  0001 C CNN
+F 1 "VCC" H 3600 2450 30  0000 C CNN
+F 2 "" H 3600 2350 60  0001 C CNN
+F 3 "" H 3600 2350 60  0001 C CNN
+	1    3600 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5030EFB9
+P 2850 3350
+F 0 "C1" H 2900 3450 50  0000 L CNN
+F 1 "0.1uF" H 2900 3250 50  0000 L CNN
+F 2 "SM0805" H 2850 3350 60  0001 C CNN
+F 3 "" H 2850 3350 60  0001 C CNN
+	1    2850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5030EFB3
+P 2850 2750
+F 0 "R1" V 2930 2750 50  0000 C CNN
+F 1 "10K" V 2850 2750 50  0000 C CNN
+F 2 "SM0805" H 2850 2750 60  0001 C CNN
+F 3 "" H 2850 2750 60  0001 C CNN
+	1    2850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATTINY85 U1
+U 1 1 5030EBB2
+P 3950 3450
+F 0 "U1" H 4100 4250 60  0000 C CNN
+F 1 "ATTINY85" H 4300 3400 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5000 3300 60  0000 C CNN
+F 3 "" H 3950 3450 60  0001 C CNN
+	1    3950 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 3800 3850 0    60   ~ 0
+MICROPROCESSOR
+$Comp
+L CONN_3X2 H2
+U 1 1 51D43962
+P 4300 1550
+F 0 "H2" H 4300 1800 50  0000 C CNN
+F 1 "CONN_3X2" V 4300 1600 40  0000 C CNN
+F 2 "pin_array_3x2" H 4300 1350 60  0000 C CNN
+F 3 "" H 4300 1550 60  0000 C CNN
+	1    4300 1550
+	1    0    0    -1  
+$EndComp
+Text Label 3500 1400 0    60   ~ 0
+D1
+Connection ~ 3600 2450
+Wire Wire Line
+	3600 2350 3600 2450
+Wire Wire Line
+	2850 2600 2850 2450
+Wire Wire Line
+	2850 2450 3600 2450
+Wire Wire Line
+	3600 2450 3900 2450
+Wire Wire Line
+	3900 2450 3900 2500
+Wire Wire Line
+	2850 2900 2850 3050
+Wire Wire Line
+	2850 3050 2850 3200
+Connection ~ 2850 3050
+Wire Wire Line
+	2850 3500 2850 3700
+Wire Wire Line
+	2850 3700 3650 3700
+Wire Wire Line
+	3650 3700 3850 3700
+Wire Wire Line
+	3850 3700 3850 3650
+Wire Wire Line
+	3650 3800 3650 3700
+Connection ~ 3650 3700
+Wire Wire Line
+	4550 2900 5000 2900
+Wire Wire Line
+	4550 3000 5000 3000
+Wire Wire Line
+	4550 3100 5000 3100
+Wire Wire Line
+	4550 3200 5000 3200
+Wire Wire Line
+	4550 3300 5000 3300
+Wire Wire Line
+	3350 3050 2850 3050
+Wire Wire Line
+	3900 1400 3300 1400
+Wire Wire Line
+	3300 1500 3900 1500
+Wire Wire Line
+	3900 1600 3300 1600
+Wire Wire Line
+	4700 1500 5400 1500
+Wire Wire Line
+	4700 1400 4850 1400
+Wire Wire Line
+	4850 1400 4850 1200
+Wire Wire Line
+	4700 1600 4850 1600
+Wire Wire Line
+	4850 1600 4850 1750
+$Comp
+L VCC #PWR09
+U 1 1 51D44694
+P 4850 1200
+F 0 "#PWR09" H 4850 1300 30  0001 C CNN
+F 1 "VCC" H 4850 1300 30  0000 C CNN
+F 2 "" H 4850 1200 60  0000 C CNN
+F 3 "" H 4850 1200 60  0000 C CNN
+	1    4850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 51D446A3
+P 4850 1750
+F 0 "#PWR010" H 4850 1750 30  0001 C CNN
+F 1 "GND" H 4850 1680 30  0001 C CNN
+F 2 "" H 4850 1750 60  0000 C CNN
+F 3 "" H 4850 1750 60  0000 C CNN
+	1    4850 1750
+	1    0    0    -1  
+$EndComp
+Text Label 3500 1500 0    60   ~ 0
+D2
+Text Label 5100 1500 0    60   ~ 0
+D0
+Text Label 3500 1600 0    60   ~ 0
+RST*
+$EndSCHEMATC
