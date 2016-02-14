@@ -1,4 +1,4 @@
-update=2/5/2016 4:16:11 PM
+update=2/12/2016 9:41:53 PM
 version=1
 last_client=kicad
 [general]
@@ -47,3 +47,4 @@ LibName3=conn
 LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/switch-enc
 LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName6=analog_devices
+LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
