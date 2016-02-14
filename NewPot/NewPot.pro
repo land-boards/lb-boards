@@ -1,4 +1,4 @@
-update=2/1/2016 4:43:03 PM
+update=2/14/2016 11:08:56 AM
 version=1
 last_client=kicad
 [general]
@@ -44,4 +44,5 @@ LibDir=
 LibName1=power
 LibName2=device
 LibName3=conn
-LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/switch-enc
+LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName5=switches
