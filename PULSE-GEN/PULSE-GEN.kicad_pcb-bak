@@ -14,10 +14,10 @@
 
   (page A3)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal)
-    (36 B.SilkS user)
-    (37 F.SilkS user hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal hide)
+    (36 B.SilkS user hide)
+    (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user hide)
@@ -52,7 +52,7 @@
     (pad_drill 0.6)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFD5F)
+    (visible_elements 7FFFFB3F)
     (pcbplotparams
       (layerselection 0x010f0_80000001)
       (usegerberextensions true)
@@ -115,11 +115,11 @@
     (add_net VCC)
   )
 
-  (module SM0805 (layer B.Cu) (tedit 56C23495) (tstamp 519A5118)
+  (module SM0805 (layer B.Cu) (tedit 54566898) (tstamp 519A5118)
     (at 22.225 17.78 90)
     (path /519A4DEE)
     (attr smd)
-    (fp_text reference R2 (at 0 1.651 90) (layer B.SilkS)
+    (fp_text reference R2 (at -0.127 1.778 90) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value 240 (at 0 -0.381 90) (layer B.SilkS) hide
@@ -594,12 +594,12 @@
     )
   )
 
-  (module SOD-123 (layer B.Cu) (tedit 56C2348C) (tstamp 519BF673)
+  (module SOD-123 (layer B.Cu) (tedit 54566933) (tstamp 519BF673)
     (at 23.241 23.114 180)
     (tags "CMS SM")
     (path /519BB09A)
     (attr smd)
-    (fp_text reference D1 (at -3.556 -0.127 180) (layer B.SilkS)
+    (fp_text reference D1 (at 2.667 -2.159 180) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value 1N4148 (at 0.127 -2.159 180) (layer B.SilkS) hide
@@ -623,11 +623,11 @@
     )
   )
 
-  (module SM0805 (layer B.Cu) (tedit 56C23485) (tstamp 519BF680)
+  (module SM0805 (layer B.Cu) (tedit 519BBCE0) (tstamp 519BF680)
     (at 23.876 20.828)
     (path /519BB0A9)
     (attr smd)
-    (fp_text reference R7 (at -2.54 0.127) (layer B.SilkS)
+    (fp_text reference R7 (at -0.254 1.778) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value 150 (at 0 -0.381) (layer B.SilkS) hide

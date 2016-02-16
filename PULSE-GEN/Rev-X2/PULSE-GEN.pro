@@ -1,4 +1,4 @@
-update=2/15/2016 2:51:51 PM
+update=4/20/2015 2:56:30 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -43,9 +43,8 @@ LibName10=pin_array
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=PULSE-GEN-rescue
-LibName2=power
-LibName3=device
-LibName4=conn
-LibName5=74xx
-LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=74xx
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
