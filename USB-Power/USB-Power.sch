@@ -7,7 +7,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 4
+Sheet 1 3
 Title "One Wire Logger"
 Date "8 jan 2015"
 Rev "X1"
@@ -143,10 +143,10 @@ Text Label 7050 3600 0    60   ~ 0
 GND
 Connection ~ 8500 3600
 $Comp
-L GND #PWR01
+L GND #PWR1
 U 1 1 567D92C4
 P 8500 3700
-F 0 "#PWR01" H 8500 3450 50  0001 C CNN
+F 0 "#PWR1" H 8500 3450 50  0001 C CNN
 F 1 "GND" H 8500 3550 50  0000 C CNN
 F 2 "" H 8500 3700 60  0000 C CNN
 F 3 "" H 8500 3700 60  0000 C CNN
