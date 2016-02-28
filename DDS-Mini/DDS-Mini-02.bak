@@ -33,6 +33,8 @@ Text HLabel 8550 3450 2    60   Output ~ 0
 VOUT
 Wire Wire Line
 	7100 3450 8550 3450
+Text Label 6000 4800 0    60   ~ 0
+AGND
 $Comp
 L C C2
 U 1 1 514778DD
@@ -157,6 +159,10 @@ Wire Wire Line
 	6300 4600 6300 4350
 Connection ~ 4250 4600
 Wire Wire Line
+	6450 4350 6450 4800
+Wire Wire Line
+	6450 4800 5900 4800
+Wire Wire Line
 	7600 4600 7600 4350
 Connection ~ 6300 4600
 Wire Wire Line
@@ -254,13 +260,4 @@ Text Label 5200 3350 0    60   ~ 0
 MCLK
 Wire Wire Line
 	4900 4050 4900 3350
-Wire Wire Line
-	6450 4350 6450 4600
-Connection ~ 6450 4600
-Text HLabel 3750 4600 0    60   Output ~ 0
-DGND
-Text HLabel 3750 3550 0    60   Output ~ 0
-DVDD
-Text HLabel 5900 2300 0    60   Output ~ 0
-AVDD
 $EndSCHEMATC

@@ -1,6 +1,6 @@
-update=6/7/2013 7:52:21 AM
+update=2/26/2016 7:10:32 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -35,10 +35,7 @@ LibName3=pin_array
 [eeschema]
 version=1
 LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/arduino
+LibName3=conn
