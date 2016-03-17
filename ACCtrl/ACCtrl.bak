@@ -1,0 +1,120 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:DougsSch
+LIBS:switches
+LIBS:transistors
+LIBS:opto
+LIBS:ACCtrl-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "TINYGRID85"
+Date "28 mar 2015"
+Rev "X2"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TRIAC U1
+U 1 1 56DB304D
+P 5000 3650
+F 0 "U1" H 4750 4000 50  0000 C CNN
+F 1 "TRIAC" H 4700 3400 50  0000 C CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Neutral123_Vertical" H 5000 3650 50  0000 C CNN
+F 3 "" H 5000 3650 50  0000 C CNN
+	1    5000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 56DB30AE
+P 4200 3850
+F 0 "R1" V 4280 3850 50  0000 C CNN
+F 1 "R" V 4200 3850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 3850 50  0000 C CNN
+F 3 "" H 4200 3850 50  0000 C CNN
+	1    4200 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 3850 4500 3850
+$Comp
+L MOC3052M U2
+U 1 1 56DB3315
+P 3600 3950
+F 0 "U2" H 3400 4150 50  0000 L CNN
+F 1 "MOC3052M" H 3600 4150 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 3400 3750 50  0000 L CIN
+F 3 "" H 3575 3950 50  0000 L CNN
+	1    3600 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3850 4050 3850
+$Comp
+L CONN_01X01 P3
+U 1 1 56DB35D8
+P 5700 7600
+F 0 "P3" H 5700 7700 50  0000 C CNN
+F 1 "CONN_01X01" V 5800 7600 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3-5mm" H 5700 7600 50  0000 C CNN
+F 3 "" H 5700 7600 50  0000 C CNN
+	1    5700 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P1
+U 1 1 56DB3618
+P 4600 7600
+F 0 "P1" H 4600 7700 50  0000 C CNN
+F 1 "CONN_01X01" V 4700 7600 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3-5mm" H 4600 7600 50  0000 C CNN
+F 3 "" H 4600 7600 50  0000 C CNN
+	1    4600 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P2
+U 1 1 56DB3641
+P 4650 7200
+F 0 "P2" H 4650 7300 50  0000 C CNN
+F 1 "CONN_01X01" V 4750 7200 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3-5mm" H 4650 7200 50  0000 C CNN
+F 3 "" H 4650 7200 50  0000 C CNN
+	1    4650 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P4
+U 1 1 56DB366D
+P 5800 7200
+F 0 "P4" H 5800 7300 50  0000 C CNN
+F 1 "CONN_01X01" V 5900 7200 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3-5mm" H 5800 7200 50  0000 C CNN
+F 3 "" H 5800 7200 50  0000 C CNN
+	1    5800 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P5
+U 1 1 56DB3832
+P 6000 3200
+F 0 "P5" H 6000 3400 50  0000 C CNN
+F 1 "CONN_01X03" V 6100 3200 50  0000 C CNN
+F 2 "Connect:Banana_Jack_3Pin" H 6000 2950 50  0000 C CNN
+F 3 "" H 6000 3200 50  0000 C CNN
+	1    6000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3250 5000 3100
+Wire Wire Line
+	5000 3100 5800 3100
+$EndSCHEMATC
