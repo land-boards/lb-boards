@@ -1,4 +1,4 @@
-update=12/19/2015 11:53:22 AM
+update=5/14/2016 11:56:11 AM
 version=1
 last_client=kicad
 [general]
@@ -56,8 +56,9 @@ LabSize=60
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=RPPSOC-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=atmel
+LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
