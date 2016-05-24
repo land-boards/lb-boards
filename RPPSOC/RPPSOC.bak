@@ -436,12 +436,6 @@ F 3 "" H 6100 850 60  0000 C CNN
 $EndComp
 Text Label 10700 3850 0    60   ~ 0
 IO_25
-Text Label 10700 3750 0    60   ~ 0
-IO_24
-Text Label 10700 3650 0    60   ~ 0
-IO_23
-Text Label 10700 3550 0    60   ~ 0
-IO_22
 Text Label 7800 850  0    60   ~ 0
 VZ3
 Text Label 7800 1300 0    60   ~ 0
@@ -1120,13 +1114,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 850  8750 850 
 Wire Wire Line
-	10450 3750 11400 3750
-Wire Wire Line
 	10450 3850 11400 3850
-Wire Wire Line
-	10450 3550 11400 3550
-Wire Wire Line
-	10450 3650 11400 3650
 Connection ~ 1450 4600
 Wire Wire Line
 	10450 5150 11400 5150
@@ -1462,4 +1450,7 @@ Text Label 7050 4650 0    60   ~ 0
 IO_23
 Text Label 7050 4750 0    60   ~ 0
 IO_24
+NoConn ~ 10450 3550
+NoConn ~ 10450 3650
+NoConn ~ 10450 3750
 $EndSCHEMATC
