@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:/Users/DGilliland/Documents/GitHub/lb-boards/PiATX/PiATX.sch)
-    (date "6/29/2016 10:19:52 AM")
-    (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
+    (source C:/Users/doug_000/Documents/GitHub/lb-boards/PiATX/PiATX.sch)
+    (date "7/1/2016 2:19:28 PM")
+    (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title PiATX)
@@ -84,7 +84,7 @@
     (comp (ref J3)
       (value USB-MICRO-B)
       (footprint DougsNewMods:USB_Micro-B-Wellco-SMT)
-      (libsource (lib conn) (part USB-MICRO-B))
+      (libsource (lib PiATX-cache) (part USB-MICRO-B))
       (sheetpath (names /) (tstamps /))
       (tstamp 5772F434))
     (comp (ref F1)
@@ -101,8 +101,8 @@
       (tstamp 5772F818))
     (comp (ref D1)
       (value LED)
-      (footprint LEDs:LED-5MM)
-      (libsource (lib device) (part LED))
+      (footprint dougsLib:LED-5MM)
+      (libsource (lib PiATX-rescue) (part LED-RESCUE-PiATX))
       (sheetpath (names /) (tstamps /))
       (tstamp 5772FA0A))
     (comp (ref J4)
@@ -112,40 +112,8 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5773D219)))
   (libparts
-    (libpart (lib device) (part FUSE)
-      (fields
-        (field (name Reference) F)
-        (field (name Value) FUSE))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))))
-    (libpart (lib device) (part LED)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) LED))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib conn) (part CONN_01X02)
+      (description "Connector 01x02")
       (footprints
         (fp Pin_Header_Straight_1X02)
         (fp Pin_Header_Angled_1X02)
@@ -158,6 +126,7 @@
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name P2) (type passive))))
     (libpart (lib conn) (part CONN_02X05)
+      (description "Connector 02x05")
       (footprints
         (fp Pin_Header_Straight_2X05)
         (fp Pin_Header_Angled_2X05)
@@ -177,25 +146,6 @@
         (pin (num 8) (name P8) (type passive))
         (pin (num 9) (name P9) (type passive))
         (pin (num 10) (name P10) (type passive))))
-    (libpart (lib conn) (part USB-MINI-B)
-      (aliases
-        (alias USB-MICRO-B))
-      (description "USB Mini B connector")
-      (footprints
-        (fp USB-Mini-B-Jack))
-      (fields
-        (field (name Reference) CON)
-        (field (name Value) USB-MINI-B))
-      (pins
-        (pin (num 1) (name VBUS) (type power_in))
-        (pin (num 2) (name D-) (type BiDi))
-        (pin (num 3) (name D+) (type BiDi))
-        (pin (num 4) (name ID) (type BiDi))
-        (pin (num 5) (name GND) (type power_in))
-        (pin (num 6) (name SHELL1) (type passive))
-        (pin (num 7) (name SHELL2) (type passive))
-        (pin (num 8) (name SHELL3) (type passive))
-        (pin (num 9) (name SHELL4) (type passive))))
     (libpart (lib DougsSch) (part CONN_1)
       (fields
         (field (name Reference) P)
@@ -206,6 +156,39 @@
       (fields
         (field (name Reference) COUP?)
         (field (name Value) COUPON)))
+    (libpart (lib device) (part FUSE)
+      (fields
+        (field (name Reference) F)
+        (field (name Value) FUSE))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib PiATX-rescue) (part LED-RESCUE-PiATX)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED-RESCUE-PiATX))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib DougsSch) (part RASPIO)
       (fields
         (field (name Reference) J)
@@ -236,14 +219,36 @@
         (pin (num 23) (name SPI_SCLK) (type output))
         (pin (num 24) (name SPI_CE0) (type output))
         (pin (num 25) (name GND) (type power_out))
-        (pin (num 26) (name SPI_CE1) (type BiDi)))))
+        (pin (num 26) (name SPI_CE1) (type BiDi))))
+    (libpart (lib PiATX-cache) (part USB-MINI-B)
+      (aliases
+        (alias USB-MICRO-B))
+      (footprints
+        (fp USB-Mini-B-Jack))
+      (fields
+        (field (name Reference) CON)
+        (field (name Value) USB-MINI-B))
+      (pins
+        (pin (num 1) (name VBUS) (type power_in))
+        (pin (num 2) (name D-) (type BiDi))
+        (pin (num 3) (name D+) (type BiDi))
+        (pin (num 4) (name ID) (type BiDi))
+        (pin (num 5) (name GND) (type power_in))
+        (pin (num 6) (name SHELL1) (type passive))
+        (pin (num 7) (name SHELL2) (type passive))
+        (pin (num 8) (name SHELL3) (type passive))
+        (pin (num 9) (name SHELL4) (type passive)))))
   (libraries
-    (library (logical device)
-      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\device.lib"))
-    (library (logical conn)
-      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\conn.lib"))
     (library (logical DougsSch)
-      (uri C:\Users\DGilliland\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib)))
+      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib))
+    (library (logical conn)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical PiATX-rescue)
+      (uri PiATX-rescue.lib))
+    (library (logical device)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
+    (library (logical PiATX-cache)
+      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\PiATX\PiATX-cache.lib)))
   (nets
     (net (code 1) (name "Net-(J2-Pad9)")
       (node (ref R2) (pin 2))
@@ -292,11 +297,11 @@
       (node (ref J2) (pin 8))
       (node (ref J2) (pin 5))
       (node (ref J1) (pin 25))
-      (node (ref J4) (pin 1))
-      (node (ref D1) (pin 1)))
-    (net (code 14) (name "Net-(D1-Pad2)")
       (node (ref D1) (pin 2))
-      (node (ref R1) (pin 1)))
+      (node (ref J4) (pin 1)))
+    (net (code 14) (name "Net-(D1-Pad1)")
+      (node (ref R1) (pin 1))
+      (node (ref D1) (pin 1)))
     (net (code 15) (name /FP_PWR_SLP_1)
       (node (ref J2) (pin 2))
       (node (ref R6) (pin 2))

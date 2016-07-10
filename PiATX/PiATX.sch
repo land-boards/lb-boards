@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:PiATX-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
@@ -477,15 +478,15 @@ Wire Wire Line
 Wire Wire Line
 	4400 3250 4750 3250
 $Comp
-L LED D1
+L LED-RESCUE-PiATX D1
 U 1 1 5772FA0A
 P 4950 3250
 F 0 "D1" H 4950 3350 50  0000 C CNN
 F 1 "LED" H 4950 3150 50  0000 C CNN
-F 2 "LEDs:LED-5MM" H 4950 3250 50  0000 C CNN
+F 2 "dougsLib:LED-5MM" H 4950 3250 50  0000 C CNN
 F 3 "" H 4950 3250 50  0000 C CNN
 	1    4950 3250
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5150 3250 5450 3250

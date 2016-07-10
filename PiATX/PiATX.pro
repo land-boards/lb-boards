@@ -1,4 +1,4 @@
-update=6/28/2016 10:58:36 AM
+update=7/1/2016 2:18:24 PM
 version=1
 last_client=kicad
 [general]
@@ -44,8 +44,10 @@ LibName11=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=PiATX-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=atmel
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
