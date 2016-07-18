@@ -1,4 +1,4 @@
-update=4/21/2015 11:56:25 AM
+update=7/14/2016 7:17:35 PM
 version=1
 last_client=kicad
 [general]
@@ -44,8 +44,9 @@ LibName11=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=RP-Console-u-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=atmel
+LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

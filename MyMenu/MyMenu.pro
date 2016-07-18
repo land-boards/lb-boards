@@ -1,6 +1,6 @@
-update=3/7/2015 11:20:37 AM
+update=7/13/2016 4:19:11 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -8,20 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=MyMenu.net
@@ -47,3 +33,13 @@ LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-co
 LibName2=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/smd_resistors
 LibName3=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/libcms
 LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=MyMenu-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

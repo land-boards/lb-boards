@@ -1,9 +1,11 @@
 EESchema Schematic File Version 2
+LIBS:RP-Console-u-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:RP-Console-cache
+LIBS:DougsSch
+LIBS:RP-Console-u-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
@@ -288,7 +290,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 1450 6300 1450
 $Comp
-L LED D1
+L LED-RESCUE-RP-Console-u D1
 U 1 1 548489AA
 P 9600 2550
 F 0 "D1" H 9600 2650 50  0000 C CNN
@@ -299,7 +301,7 @@ F 3 "~" H 9600 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D2
+L LED-RESCUE-RP-Console-u D2
 U 1 1 548489B0
 P 9600 2800
 F 0 "D2" H 9600 2900 50  0000 C CNN
@@ -363,7 +365,7 @@ L R R3
 U 1 1 562667AB
 P 5400 3000
 F 0 "R3" V 5480 3000 50  0000 C CNN
-F 1 "130K" V 5400 3000 50  0000 C CNN
+F 1 "DNP" V 5400 3000 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 5350 2700 60  0000 C CNN
 F 3 "" H 5400 3000 60  0001 C CNN
 F 4 "TE" H 5400 3000 60  0001 C CNN "Mfg"
