@@ -1,6 +1,6 @@
-update=1/14/2015 9:22:42 PM
+update=7/31/2016 1:27:46 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -44,15 +44,11 @@ LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/pi
 [eeschema]
 version=1
 LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=regul
+LibName1=IReflow-rescue
+LibName2=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
+LibName3=power
+LibName4=device
+LibName5=transistors
+LibName6=conn
+LibName7=regul
