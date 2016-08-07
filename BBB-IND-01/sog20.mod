@@ -1,0 +1,173 @@
+PCBNEW-LibModule-V1  6/28/2014 7:36:49 AM
+# encoding utf-8
+Units mm
+$INDEX
+SOG20
+$EndINDEX
+$MODULE SOG20
+Po 0 0 0 15 53AEA86F 00000000 ~~
+Li SOG20
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 0
+AR /4EB0F8E9/53ACAB04
+Op 0 0 0
+At SMD
+T0 -4.318 2.032 0.75 0.75 0 0.15 N V 21 N "U4"
+T1 0 0.254 1.524 1.27 0 0.127 N I 21 N "TXB0108EPWR"
+DS -2.4892 -0.762 -2.4892 0.7112 0.381 21
+DS -3.25 -0.774 -2.5 -0.774 0.381 21
+DS -3.2512 -1.5748 -3.2512 -0.8128 0.381 21
+DS 3.2512 -1.5748 3.2512 1.4732 0.381 21
+DS -3.2512 -1.5748 3.2512 -1.5748 0.381 21
+DS 3.25 1.5 -3.25 1.5 0.381 21
+DS -3.25 1.5 -3.25 0.75 0.381 21
+DS -3.25 0.75 -2.5 0.75 0.381 21
+$PAD
+Sh "11" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "GND"
+Po 2.95 -2.8
+$EndPAD
+$PAD
+Sh "12" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 5 "/P9 Connector/SP1CK"
+Po 2.275 -2.8
+$EndPAD
+$PAD
+Sh "13" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 7 "/P9 Connector/SP1DI"
+Po 1.625 -2.8
+$EndPAD
+$PAD
+Sh "14" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 8 "/P9 Connector/SP1DO"
+Po 0.975 -2.8
+$EndPAD
+$PAD
+Sh "15" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 6 "/P9 Connector/SP1CS"
+Po 0.325 -2.8
+$EndPAD
+$PAD
+Sh "16" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 13 "/P9 Connector/U1RX"
+Po -0.325 -2.8
+$EndPAD
+$PAD
+Sh "17" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "/P9 Connector/GP3_21"
+Po -0.975 -2.8
+$EndPAD
+$PAD
+Sh "18" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 14 "/P9 Connector/U1TX"
+Po -1.625 -2.8
+$EndPAD
+$PAD
+Sh "19" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 19 "VDD_5V"
+Po -2.275 -2.8
+$EndPAD
+$PAD
+Sh "20" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "/P9 Connector/GP1_17"
+Po -2.925 -2.8
+$EndPAD
+$PAD
+Sh "1" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "/P9 Connector/GPIO1_17"
+Po -2.925 2.8
+$EndPAD
+$PAD
+Sh "2" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 18 "VDD_3V3EXP"
+Po -2.275 2.8
+$EndPAD
+$PAD
+Sh "3" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "/P9 Connector/UART1_TXD"
+Po -1.625 2.8
+$EndPAD
+$PAD
+Sh "4" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "/P9 Connector/GPIO3_21"
+Po -0.975 2.8
+$EndPAD
+$PAD
+Sh "5" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 15 "/P9 Connector/UART1_RXD"
+Po -0.325 2.8
+$EndPAD
+$PAD
+Sh "6" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 9 "/P9 Connector/SPI1_CS0"
+Po 0.325 2.8
+$EndPAD
+$PAD
+Sh "7" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 10 "/P9 Connector/SPI1_D0"
+Po 0.975 2.8
+$EndPAD
+$PAD
+Sh "8" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 11 "/P9 Connector/SPI1_D1"
+Po 1.625 2.8
+$EndPAD
+$PAD
+Sh "9" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 12 "/P9 Connector/SPI1_SCLK"
+Po 2.275 2.8
+$EndPAD
+$PAD
+Sh "10" R 0.25 1.55 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 18 "VDD_3V3EXP"
+Po 2.925 2.8
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.5 0.6 0.5
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE SOG20
+$EndLIBRARY
