@@ -47,8 +47,6 @@ def errorDialog(errorString):
 	message.run()		# Display the dialog box and hang around waiting for the "OK" button
 	message.destroy()	# Takes down the dialog box
 	return
-			
-
 
 class FindaNetFile:
 	def	extractPathFromPathfilename(self,fullPathFilename):
@@ -90,23 +88,23 @@ class FindaNetFile:
 
 class ControlClass:
 	def readInParts(self, inFile):
-		'''
+		"""
 		(design
 		(components
-			(comp (ref J4)
-				(value CONN_6)
-				(footprint MTA-156-6PIN-ALT)
-				(fields
-					(field (name Mfg) TE)
-					(field (name MfgPN) 640445-6)
-					(field (name Vendor) Mouser)
-					(field (name VendorPN) 571-6404456)
-					(field (name AACPN) 00779-640445-6))
-			...
-			(comp (ref J3)
-				(value IEC-C14)
-				(footprint C14R)
-		'''
+		(comp (ref J4)
+		(value CONN_6)
+		(footprint MTA-156-6PIN-ALT)
+		(fields
+		(field (name Mfg) TE)
+		(field (name MfgPN) 640445-6)
+		(field (name Vendor) Mouser)
+		(field (name VendorPN) 571-6404456)
+		(field (name AACPN) 00779-640445-6))
+		...
+		(comp (ref J3)
+		(value IEC-C14)
+		(footprint C14R)
+		"""
 
 		LOOKING_FOR_DESIGN = 1
 		LOOKING_FOR_COMPONENTS = 2
@@ -191,8 +189,8 @@ class ControlClass:
 		return outCSVList
 
 	def combineRefDes(self,outCSVList):
-		''' RefDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN
-		'''
+		""" RefDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN
+		"""
 		lastPart	= []
 		gotFirstPart = False
 		newComboPart = ''
