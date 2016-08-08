@@ -9,9 +9,9 @@ The result is _not_ alphabetically sorted.
 The parts that have matching part names are not written out.
 The parts that have matching part names result in an warning message.
 
-  Revision History
-  2013-03-04 - Added strip crlf to lines so that Windoze and Unix file formats would not cause 
-    excessive misses.
+Revision History
+013-03-04 - Added strip crlf to lines so that Windoze and Unix file formats would not cause 
+excessive misses.
 """
 
 import string
@@ -312,4 +312,3 @@ if warnings != 0:
 inFile1.close()
 inFile2.close()
 outFile.close()
-exit()

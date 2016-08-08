@@ -1,12 +1,14 @@
-"""Back-annotate footprints on a Kicad schematic from the .cmp file.
+"""
+Back-annotate footprints on a Kicad schematic from the .cmp file.
 
+========
 Workflow
+========
 
 * Create Initial schematic
 * Use CvPCB to associate any parts which do not have associated footprints.
 * Back annotate the schematic to match the CvPCB footprints.
 * Stop using CvPCB.
-* 
 
 =====
 Usage
@@ -66,12 +68,9 @@ class ProcessKicadSchematic:
 		"""selectKicadSchematic() - This is the dialog which locates the Kicad Schematic files
 	
 		:returns: path/name of the file that was selected
+		
 		"""
-		dialog = gtk.FileChooserDialog("Select sch file",
-	                               None,
-	                               gtk.FILE_CHOOSER_ACTION_OPEN,
-	                               (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-	                               gtk.STOCK_OPEN, gtk.RESPONSE_OK))
+		dialog = gtk.FileChooserDialog("Select sch file",None,gtk.FILE_CHOOSER_ACTION_OPEN,(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,gtk.STOCK_OPEN, gtk.RESPONSE_OK))
 		dialog.set_default_response(gtk.RESPONSE_OK)
 
 		filter = gtk.FileFilter()
@@ -89,10 +88,10 @@ class ProcessKicadSchematic:
 			return ''
 	
 	def readInSchematic(self, schFileName):
-		'''Read the schematic text file into a list for easier processing.
+		"""Read the schematic text file into a list for easier processing.
 		
 		:returns: list of the lines in the schematic file
-		'''
+		"""
 		schFilePtr = open(schFileName,'rb')
 		schList = []
 		for line in schFilePtr:
@@ -101,11 +100,11 @@ class ProcessKicadSchematic:
 		return schList
 
 	def backupSchematic(self, schFileName):
-		'''Back up the schematic file by renaming the file as _sch.bak.
+		"""Back up the schematic file by renaming the file as _sch.bak.
 		
 		:param schFileName: The name of the schematic file
 		:returns: True if passed, exits if fails
-		'''
+		"""
 		cmdString = 'copy '
 		cmdString += schFileName
 		cmdString += ' '
@@ -159,7 +158,7 @@ class ProcessKicadSchematic:
 		return cmpList
 	
 	def createCmpFootPrintList(self, cmpList):
-		'''Takes the cmp file and creates a list of ref des vs footprints
+		"""Takes the cmp file and creates a list of ref des vs footprints
 		Component Footprint list looks like:
 		BeginCmp
 		TimeStamp = /537A4DC8;
@@ -171,7 +170,7 @@ class ProcessKicadSchematic:
 		:param cmpList: Component file list
 	
 		:returns" list of ref des and footprints
-		'''
+		"""
 		cmpFootPrintList = []
 		for row in cmpList:
 			row = row.strip('\n\r')
@@ -221,12 +220,12 @@ class ProcessKicadSchematic:
 		return outSchList
 	
 	def searchCmpList(self, refDesFromLine, cmpList):
-		'''Search the component list and return the footprint
+		"""Search the component list and return the footprint
 		
 		:param refDesFromLine: The reference designator of the current line
 		
 		:returns" the new reference designator from the cmp file
-		'''
+		"""
 		for row in cmpList:
 #			print 'comparing', refDesFromLine,
 #			print ' to', row[0]
@@ -236,7 +235,9 @@ class ProcessKicadSchematic:
 		return '~'
 		
 	def backAnnotateSchematic(self,cmpList,schList):
-		'''
+		"""
+		:param cmpList: List of components in RefDes, 
+		
 		$Comp
 		L 4N26 U1
 		U 1 1 537A4D39
@@ -245,12 +246,11 @@ class ProcessKicadSchematic:
 		F 1 "4N26" H 8380 3465 40  0000 C CNN
 		F 2 "DIP6" H 8001 3470 29  0000 C CNN
 		F 3 "" H 8200 3650 60  0000 C CNN
-			1    8200 3650
-			1    0    0    -1  
+		1    8200 3650
+		1    0    0    -1  
 		$EndComp
 		
-		:param cmpList: List of components in RefDes, 
-		'''
+		"""
 		refDesVsFootprintInCmp = self.createCmpFootPrintList(cmpList)
 		outSchList = []
 		state = 'lookingForComp'
@@ -282,28 +282,29 @@ class ProcessKicadSchematic:
 		return outSchList
 
 	def createF2LineFromF1Line(self, f1Line, newFootpr):
-		'''
+		"""
 		F 1 "4N26" H 8380 3465 40  0000 C CNN
 		F 2 "DIP6" H 8001 3470 29  0000 C CNN		
-		'''
+		"""
 		F2Line = self.subRefDes(newFootpr, f1Line)
 		F2Line = F2Line[0:2] + '2' + F2Line[3:]
 		print F2Line
 		return F2Line
 		
 	def getRefDes(self, line):
-		'''Extract the ref des from the line and return it
-		
+		"""
 		:param line: The line that has the ref des, formated like 'L 4N26 U1'
 		
 		:returns: refDes String
-		'''
+		
+		Extract the ref des from the line and return it
+		"""
 		return line[string.rfind(line,' ')+1:]
 		
 	def subRefDes(self, subString, line):
-		'''Insert the refDes string into the line in place of the old ref des.
+		"""Insert the refDes string into the line in place of the old ref des.
 		line format is: 'F 2 "DIP6" H 8001 3470 29  0000 C CNN'
-		'''
+		"""
 		
 		outString = line[0:5]
 		outString += subString
@@ -311,6 +312,8 @@ class ProcessKicadSchematic:
 		return outString
 		
 	def writeOutSchematic(self, outList, outFileName):
+		"""
+		"""
 #		outFileName = outFileName[0:-4] + '_test.sch'
 		outSchFilePtr = open(outFileName,'wb')
 		for line in outList:
@@ -319,8 +322,8 @@ class ProcessKicadSchematic:
 		return True
 
 	def doKiSch2Cmp(self):
-		'''The executive which calls all of the other functions.
-		'''
+		"""The executive which calls all of the other functions.
+		"""
 		schFileName = self.selectKicadSchematic()
 		if schFileName == '':
 			errorDialog("Failed to open schematic file")
@@ -342,8 +345,8 @@ class ProcessKicadSchematic:
 		return True
 	
 	def checkSchematic(self, cmpList, schList):
-		'''Check the schematic to see what the issues are
-		'''
+		"""Check the schematic to see what the issues are
+		"""
 		cmpCrossRefList = self.createCmpFootPrintList(cmpList)
 		schCrossRefList = self.createSchFootPrintList(schList)
 		cmpCrossRefList = sorted(cmpCrossRefList, key = lambda errs: errs[0])	
@@ -366,8 +369,8 @@ class ProcessKicadSchematic:
 		return True
 	
 	def doKiSchChk(self):
-		'''The executive which calls all of the other functions.
-		'''
+		"""The executive which calls all of the other functions.
+		"""
 		print 'called doKiSchChk'
 		schFileName = self.selectKicadSchematic()
 		if schFileName == '':
@@ -411,7 +414,9 @@ class UIManager:
 	"""
 
 	def __init__(self):
-		# Create the top level window
+		"""
+		Create the top level window
+		"""
 		window = gtk.Window()
 		window.connect('destroy', lambda w: gtk.main_quit())
 		window.set_default_size(200, 200)
@@ -454,6 +459,8 @@ class UIManager:
 		window.show_all()
 
 	def openIF(self, b):
+		"""
+		"""
 		SchClass = ProcessKicadSchematic()
 		if backAnnotate == True:
 			if SchClass.doKiSch2Cmp() != False:
@@ -470,12 +477,16 @@ class UIManager:
 		return
 
 	def about_pykifoot(self, b):
+		"""
+		"""
 		message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
 		message.set_markup("About pyKiBackannSchem\nAuthor: Doug Gilliland\n(c) 2014 - All rights reserved\nProgram backannotates a Kicad sch file from a cmp file")
 		message.run()
 		message.destroy()
 		
 	def setSelProcess(self, action, current):
+		"""
+		"""
 		global backAnnotate
 		text = current.get_name()
 		if (text == "BackAnn"):
