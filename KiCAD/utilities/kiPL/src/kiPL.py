@@ -24,8 +24,6 @@ import string
 import os
 import sys
 
-sys.path.append('C:\\Users\\DGilliland\\Documents\\Subversion\\python\\dgCommonModules')
-sys.path.append('C:\\Users\\DGilliland\\Documents\\Subversion\\python\\dgCommonModules')
 sys.path.append('C:\\Users\\doug_000\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 
 defaultPath = '.'

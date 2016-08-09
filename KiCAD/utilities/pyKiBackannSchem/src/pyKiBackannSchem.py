@@ -1,14 +1,14 @@
 """
-Back-annotate footprints on a Kicad schematic from the .cmp file.
+Back-annotate footprints on a Kicad schematic from the PCB.
 
 ========
 Workflow
 ========
 
-* Create Initial schematic
-* Use CvPCB to associate any parts which do not have associated footprints.
-* Back annotate the schematic to match the CvPCB footprints.
-* Stop using CvPCB.
+* Run this program
+* Select the .sch file
+* The netlist file and pcb file are automatically loaded
+* Only works for single file schematics
 
 =====
 Usage
@@ -16,25 +16,82 @@ Usage
 
 Program is run by either typing python pyKiBackannSchem.py or double clicking pyKiBackannSchem.py.
 
+=======
+Formats
+=======
+
+NetList format
 ==============
-Output Message
-==============
 
-There are three classes of messages:
+* (comp (ref D99)
+* (net (code 26) (name "Net-(D99-Pad1)")
+* (node (ref RP4) (pin 8))
+* (node (ref D99) (pin 1)))
 
-* Errors
-* Warnings
-* Notes
+PCB format
+==========
 
-There are a couple of Errors:
+* (L130) (net 47 "Net-(D99-Pad1)")
+* (L131) (net 48 "Net-(D99-Pad2)")
+* (L170) (add_net "Net-(D99-Pad1)")
+* (L171) (add_net "Net-(D99-Pad2)")
+* (L580) (fp_text reference D99 (at 1.905 5.08 180) (layer F.SilkS)
+* (L851) (pad 1 thru_hole circle (at -1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+* (L596) (net 47 "Net-(D99-Pad1)"))
+* (L597) (pad 2 thru_hole circle (at 1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+* (L598) (net 48 "Net-(D99-Pad2)"))
+* (L792) (pad 1 thru_hole rect (at -1.27 0 180) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
+* (L793) (net 48 "Net-(D99-Pad2)"))
+* (L1298) (pad 8 thru_hole circle (at 8.89 0 90) (size 1.397 1.397) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+* (L1299) (net 47 "Net-(D99-Pad1)"))
 
-* No match for part
+Schematic format
+================
 
-============
-Code follows
-============
+* $Comp
+* L LED-RESCUE-LED-TEST-2 D99
+* U 1 1 544A66CA
+* P 6850 4650
+* F 0 "D99" H 6850 4750 50  0000 C CNN
+* F 1 "LED" H 6850 4550 50  0000 C CNN
+* F 2 "LEDs:LED-5MM" H 6850 4650 60  0000 C CNN
+* F 3 "" H 6850 4650 60  0001 C CNN
+* 	1    6850 4650
+* 	-1   0    0    -1  
+* $EndComp
+
+
+===============
+Output Messages
+===============
+
+* Error message are sent to the stdout.
+* When the program is done it has a dialog box which gives time to look at the error log.
+
+=======
+Options
+=======
+
+* Check only
+* Back annotate (default choice)
+
+===
+API
+===
 
 """
+
+import csv
+import os
+import sys
+import string
+sys.path.append('C:\\Users\\doug_000\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
+
+defaultPath = '.'
+
+from dgProgDefaults import *
+
+backAnnotate = True
 
 import pygtk
 pygtk.require('2.0')
@@ -45,13 +102,6 @@ import gtk
 if gtk.pygtk_version < (2,3,90):
    print "PyGtk 2.3.90 or later required for this example"
    raise SystemExit
-
-import csv
-import os
-import sys
-import string
-
-backAnnotate = True
 
 def errorDialog(errorString):
 	"""
@@ -64,12 +114,24 @@ def errorDialog(errorString):
 	return
 
 class ProcessKicadSchematic:
-	def selectKicadSchematic(self):
-		"""selectKicadSchematic() - This is the dialog which locates the Kicad Schematic files
+	"""Methods related to reading KiCad schematic, netlist and pcb files
+	"""
+	def	extractPathFromPathfilename(self,fullPathFilename):
+		"""
+		:param fullPathFilename: The path with file name
+		:returns: the path without the file name
+		
+		Extract Path from fullPathFilename
+		"""
+		return(fullPathFilename[0:fullPathFilename.rfind('\\')+1])
 	
+	def selectKicadSchematic(self):
+		"""
 		:returns: path/name of the file that was selected
 		
+		This is the dialog which locates the Kicad Schematic files
 		"""
+		global defaultPath
 		dialog = gtk.FileChooserDialog("Select sch file",None,gtk.FILE_CHOOSER_ACTION_OPEN,(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,gtk.STOCK_OPEN, gtk.RESPONSE_OK))
 		dialog.set_default_response(gtk.RESPONSE_OK)
 
@@ -82,17 +144,20 @@ class ProcessKicadSchematic:
 		if response == gtk.RESPONSE_OK:
 			retFileName = dialog.get_filename()
 			dialog.destroy()
+			defaultPath = self.extractPathFromPathfilename(retFileName)
 			return retFileName
 		elif response == gtk.RESPONSE_CANCEL:
 			dialog.destroy()
 			return ''
 	
-	def readInSchematic(self, schFileName):
-		"""Read the schematic text file into a list for easier processing.
-		
-		:returns: list of the lines in the schematic file
+	def readInFile(self, inFileName):
 		"""
-		schFilePtr = open(schFileName,'rb')
+		:param inFileName: The path with file name
+		:returns: list of the lines in the schematic file
+		
+		Read the text file into a list for  processing.
+		"""
+		schFilePtr = open(inFileName,'r')
 		schList = []
 		for line in schFilePtr:
 			schList.append(line)
@@ -116,200 +181,96 @@ class ProcessKicadSchematic:
 			print "Couldn't backup the schematic"
 			raise SystemExit
 		return True
-		
-	def selectCmpFile(self):
-		"""selectKicadSchematic() - This is the dialog which locates the Kicad Schematic files
 	
-		:returns: path/name of the file that was selected
+	def replaceRefDesInSch(self,row,refDesSchVsPc):
 		"""
-		dialog = gtk.FileChooserDialog("Select comp file",
-	                               None,
-	                               gtk.FILE_CHOOSER_ACTION_OPEN,
-	                               (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-	                               gtk.STOCK_OPEN, gtk.RESPONSE_OK))
-		dialog.set_default_response(gtk.RESPONSE_OK)
-
-		filter = gtk.FileFilter()
-		filter.set_name("Kicad Component files")
-		filter.add_pattern("*.cmp")
-		dialog.add_filter(filter)
-
-		response = dialog.run()
-		if response == gtk.RESPONSE_OK:
-			retFileName = dialog.get_filename()
-			dialog.destroy()
-			return retFileName
-		elif response == gtk.RESPONSE_CANCEL:
-			print 'Closed, no files selected'
-			dialog.destroy()
-			exit()
-		dialog.destroy()
-		return
-	
-	def readInCmpFile(self, cmpFileName):
-		try:
-			cmpFilePtr = open(cmpFileName,'rb')
-		except:
-			return []
-		cmpList = []
-		for line in cmpFilePtr:
-			cmpList.append(line)
-		cmpFilePtr.close()
-		return cmpList
-	
-	def createCmpFootPrintList(self, cmpList):
-		"""Takes the cmp file and creates a list of ref des vs footprints
-		Component Footprint list looks like:
-		BeginCmp
-		TimeStamp = /537A4DC8;
-		Reference = R4;
-		ValeurCmp = R;
-		IdModule  = R4-5;
-		EndCmp
-	
-		:param cmpList: Component file list
-	
-		:returns" list of ref des and footprints
+		L LED-RESCUE-LED-TEST-2 D99
 		"""
-		cmpFootPrintList = []
-		for row in cmpList:
-			row = row.strip('\n\r')
-			if string.find(row,'Reference = ') != -1:
-				refDes = row[12:-1]
-			if string.find(row,'IdModule  = ') != -1:
-				footprint = row[12:-1]
-				cmpLine = []
-				cmpLine.append(refDes)
-				cmpLine.append(footprint)
-				cmpFootPrintList.append(cmpLine)
-#		print cmpFootPrintList
-		return cmpFootPrintList
+		rowPrefix = row[0:row.rfind(' ')]
+		oldRefDes = row[row.rfind(' ') + 1:-1]
+		# print 'replaceRefDesInSch: old ref des',oldRefDes
+		newRefDes = ''
+		for refDesPair in refDesSchVsPc:
+			if refDesPair[0] == oldRefDes:
+				newRefDes = refDesPair[1]
+		if newRefDes == '':
+			# print 'replaceRefDesInSch: could not match ref des', oldRefDes
+			newRow = row
+		elif newRefDes == oldRefDes:
+			newRow = row
+		else:
+			# print 'substituting ref des',newRefDes,'for ref des',oldRefDes
+			newRow = rowPrefix + ' ' + newRefDes + '\n'
+		return newRow
 	
-	def createSchFootPrintList(self, schList):
-		outSchList = []
-		state = 'lookingForComp'
-		outSchLine = []
-		for line in schList:
-			outLine = line
-#			print state
-			if state == 'lookingForComp' and line[0:5] == '$Comp':	# $Comp is the flag that I am in a part
-				state = 'lookingForL'
-			elif state == 'lookingForL' and line[0] == 'L':			# L has the ref des
-				refDesFromLine = self.getRefDes(line)
-#				print 'found a ref des:', refDesFromLine
-				outSchLine.append(refDesFromLine.strip('\n\r'))
-				state = 'lookingForF1'
-			elif state == 'lookingForF1' and line[0:3] == 'F 1':
-				keepF1LineJIK = line
-				state = 'lookingForF2'
-			elif state == 'lookingForF2' and line[0:3] == 'F 2':
-#				F 2 "DIP6" H 8001 3470 29  0000 C CNN
-				footPrintLine = line[5:string.rfind(line,'\"')]
-				outSchLine.append(footPrintLine.strip('\n\r'))
-#				print 'found a footprint', footPrintLine
-				state = 'lookingForComp'
-			elif state == 'lookingForF2' and line[0] == '\t':
-#				print 'found a part without a preexisting footprint', refDesFromLine.strip('\n\r')
-				outSchLine.append('')
-				state = 'lookingForComp'
-			elif line.strip('\n\r') == '$EndComp':
-				state = 'lookingForComp'
-				outSchList.append(outSchLine)
-				outSchLine = []
-#		print outSchList
-		return outSchList
+	def replaceRefDesInSchSilkscreen(self,row,refDesSchVsPc):
+		"""
+		F 0 "D99" H 6850 4750 50  0000 C CNN
+		"""
+		vect = []
+		rowPrefix = row[0:row.find('"')+1]
+		rowSuffix = row[row.rfind('"'):-1]
+		oldRefDes = row[row.find('"')+1:row.rfind('"')]
+		vect.append(rowPrefix)
+		vect.append(rowSuffix)
+		vect.append(oldRefDes)
+		# print 'vect',vect
+		# print 'replaceRefDesInSchSilkscreen: old ref des',oldRefDes
+		newRefDes = ''
+		for refDesPair in refDesSchVsPc:
+			if refDesPair[0] == oldRefDes:
+				newRefDes = refDesPair[1]
+		if newRefDes == '':
+			# print 'replaceRefDesInSchSilkscreen: could not match ref des', oldRefDes
+			newRow = row
+		elif newRefDes == oldRefDes:
+			newRow = row
+		else:
+			# print 'substituting ref des',newRefDes,'for ref des',oldRefDes
+			newRow = rowPrefix + newRefDes + rowSuffix + '\n'
+		return newRow
 	
-	def searchCmpList(self, refDesFromLine, cmpList):
-		"""Search the component list and return the footprint
-		
-		:param refDesFromLine: The reference designator of the current line
-		
-		:returns" the new reference designator from the cmp file
+	def backAnnotateSch(self,schList,refDesSchVsPc):
 		"""
-		for row in cmpList:
-#			print 'comparing', refDesFromLine,
-#			print ' to', row[0]
-			if row[0].strip('\n\r') == refDesFromLine.strip('\n\r'):
-				return row[1]
-		print 'did not find footprint for ref des:', refDesFromLine
-		return '~'
-		
-	def backAnnotateSchematic(self,cmpList,schList):
-		"""
-		:param cmpList: List of components in RefDes, 
-		
 		$Comp
-		L 4N26 U1
-		U 1 1 537A4D39
-		P 8200 3650
-		F 0 "U1" H 7986 3829 40  0000 C CNN
-		F 1 "4N26" H 8380 3465 40  0000 C CNN
-		F 2 "DIP6" H 8001 3470 29  0000 C CNN
-		F 3 "" H 8200 3650 60  0000 C CNN
-		1    8200 3650
-		1    0    0    -1  
+		L LED-RESCUE-LED-TEST-2 D16
+		U 1 1 544A66CA
+		P 6850 4650
+		F 0 "D99" H 6850 4750 50  0000 C CNN
+		F 1 "LED" H 6850 4550 50  0000 C CNN
+		F 2 "LEDs:LED-5MM" H 6850 4650 60  0000 C CNN
+		F 3 "" H 6850 4650 60  0001 C CNN
+		1    6850 4650
+		1   0    0    -1  
 		$EndComp
-		
 		"""
-		refDesVsFootprintInCmp = self.createCmpFootPrintList(cmpList)
-		outSchList = []
-		state = 'lookingForComp'
-		for line in schList:
-			outLine = line
-#			print state
-			if state == 'lookingForComp' and line[0:5] == '$Comp':	# $Comp is the flag that I am in a part
-				state = 'lookingForL'
-			elif state == 'lookingForL' and line[0] == 'L':			# L has the ref des
-				refDesFromLine = self.getRefDes(line)
-				newFootprint = self.searchCmpList(refDesFromLine, refDesVsFootprintInCmp)		# 
-				state = 'lookingForF1'
-			elif state == 'lookingForF1' and line[0:3] == 'F 1':
-				keepF1LineJIK = line
-				state = 'lookingForF2'
-			elif state == 'lookingForF2' and line[0:3] == 'F 2' and newFootprint != '~':
-				outLine = self.subRefDes(newFootprint, line)
-				print 'replaced ', line
-				print 'with', outLine
-				state = 'lookingForComp'
-			elif state == 'lookingForF2' and line[0] == '\t':
-				print 'found a part without a preexisting footprint', refDesFromLine.strip('\n\r')
-				newF2Line = self.createF2LineFromF1Line(keepF1LineJIK, newFootprint)
-				outSchList.append(newF2Line)	# inserts the F2 line
-				state = 'lookingForComp'
-			elif line.strip('\n\r') == '$EndComp':
-				state = 'lookingForComp'
-			outSchList.append(outLine)
-		return outSchList
-
-	def createF2LineFromF1Line(self, f1Line, newFootpr):
-		"""
-		F 1 "4N26" H 8380 3465 40  0000 C CNN
-		F 2 "DIP6" H 8001 3470 29  0000 C CNN		
-		"""
-		F2Line = self.subRefDes(newFootpr, f1Line)
-		F2Line = F2Line[0:2] + '2' + F2Line[3:]
-		print F2Line
-		return F2Line
-		
-	def getRefDes(self, line):
-		"""
-		:param line: The line that has the ref des, formated like 'L 4N26 U1'
-		
-		:returns: refDes String
-		
-		Extract the ref des from the line and return it
-		"""
-		return line[string.rfind(line,' ')+1:]
-		
-	def subRefDes(self, subString, line):
-		"""Insert the refDes string into the line in place of the old ref des.
-		line format is: 'F 2 "DIP6" H 8001 3470 29  0000 C CNN'
-		"""
-		
-		outString = line[0:5]
-		outString += subString
-		outString += line[string.rfind(line,'\"'):]
-		return outString
+		# print 'backAnnotateSch'
+		newSchList = []
+		state = 'waitForComp'
+		for row in schList:
+			if '$Comp' in row and state == 'waitForComp':
+				newSchList.append(row)
+				state = 'gotComp'
+			elif state == 'gotComp':
+				# print 'ref des was', row,
+				newRefDesRow = self.replaceRefDesInSch(row,refDesSchVsPc)
+				# print 'ref des new',newRefDesRow
+				newSchList.append(newRefDesRow)
+				state = 'waitingForF0'
+			elif state == 'waitingForF0' and 'F 0 "' in row:
+				# print 'waitingForF0 ref des was', row,
+				newRefDesRow = self.replaceRefDesInSchSilkscreen(row,refDesSchVsPc)
+				# print 'waitingForF0 ref des new',newRefDesRow
+				newSchList.append(newRefDesRow)
+				state = 'waitingForEndComp'
+			elif '$EndComp' in row and state == 'waitingForEndComp':
+				newSchList.append(row)
+				state = 'waitForComp'
+			else:
+				newSchList.append(row)
+			# if state != 'waitForComp':
+				# print 'state',state
+		return newSchList
 		
 	def writeOutSchematic(self, outList, outFileName):
 		"""
@@ -321,51 +282,209 @@ class ProcessKicadSchematic:
 #			print line.strip('\n\r')
 		return True
 
-	def doKiSch2Cmp(self):
+	def checkSchematicvsNetlist(self, schList, netList):
+		"""Check the schematic against the netlist
+		"""
+		errorsFound = False
+		schTimestampList = []
+		for rdtsPair in schList:
+			schTimestampList.append(rdtsPair[1])
+		for rdtsPair in netList:
+			if rdtsPair[1] not in schTimestampList:
+				print 'checkSchematicvsNetlist: could not find ref des in schematic',rdtsPair[0]
+				errorsFound = True
+		netTimestampList = []
+		for rdtsPair in netList:
+			netTimestampList.append(rdtsPair[1])
+		for rdtsPair in schList:
+			if rdtsPair[1] not in netTimestampList:
+				print 'checkSchematicvsNetlist: could not find ref des in netlist',rdtsPair[0]
+				errorsFound = True
+		return not errorsFound
+	
+	def makeSchVsPcbRefDesList(self, schList, pcbList):
+		"""Make the schematic vs netlist ref des list
+		"""
+		newRefDes = []
+		for rtdsPairSch in schList:
+			for rtdsPairPcb in pcbList:
+				if rtdsPairSch[1] == rtdsPairPcb[1]:
+					refDesLine = []
+					refDesLine.append(rtdsPairSch[0])
+					refDesLine.append(rtdsPairPcb[0])
+					newRefDes.append(refDesLine)
+		for row in newRefDes:
+			if row[0] != row[1]:
+				print 'makeSchVsPcbRefDesList: Difference (sch,pcb):',row[0], row[1]
+		# print 'makeSchVsPcbRefDesList',newRefDes
+		return(newRefDes)
+	
+	def checkSchematicvsPcb(self, schList, pcbList):
+		"""Check the schematic against the pcb
+		"""
+		errorsFound = False
+		schTimestampList = []
+		for rdtsPair in schList:
+			schTimestampList.append(rdtsPair[1])
+		for rdtsPair in pcbList:
+			if rdtsPair[1] not in schTimestampList:
+				print 'checkSchematicvsPcb: could not find ref des in schematic',rdtsPair[0]
+				errorsFound = True
+		netTimestampList = []
+		for rdtsPair in pcbList:
+			netTimestampList.append(rdtsPair[1])
+		for rdtsPair in schList:
+			if rdtsPair[1] not in netTimestampList:
+				print 'checkSchematicvsPcb: could not find ref des in pcb',rdtsPair[0]
+				errorsFound = True
+
+		return not errorsFound
+
+	def getSchematicRefDesTimestamp(self, schList):
+		"""
+		Make a list of ref des vs timestamp for schematics
+		$Comp
+		L CONN_2 P6
+		U 1 1 544A664D
+		P 3200 3750
+		F 0 "P6" V 3150 3750 40  0000 C CNN
+		F 1 "CONN_2" V 3250 3750 40  0000 C CNN
+		F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 3200 3750 60  0000 C CNN
+		F 3 "" H 3200 3750 60  0000 C CNN
+			1    3200 3750
+			-1   0    0    1   
+		$EndComp
+		"""
+		schRefDesList = []
+		state = 'waiting'
+		newLine = []
+		for line in schList:
+			if '$Comp' in line and state == 'waiting':
+				state = 'gotComp'
+			elif line[0] == 'L' and state == 'gotComp':
+				state = 'gotRefDes'
+				newLine.append(line[line.rfind(' ')+1:-1])
+			elif line[0] == 'U' and state == 'gotRefDes':
+				state = 'gotTimeStamp'
+				newLine.append(line[line.rfind(' ')+1:-1])
+				schRefDesList.append(newLine)
+				newLine = []
+			elif '$EndComp' in line and state == 'gotTimeStamp':
+				state = 'waiting'
+		#print 'sch - ref des vs time stamps',schRefDesList
+		return schRefDesList
+	
+	def getNetListRefDesTimestamp(self, netList):
+		"""
+		Make a list of ref des vs timestamp for netlists
+		(comp (ref RP4)
+		(value RP4X2)
+		(footprint Resistors_ThroughHole:Resistor_Array_SIP8)
+		(libsource (lib DougsSch) (part RP4X2))
+		(sheetpath (names /) (tstamps /))
+		(tstamp 546FA54B)))
+		"""
+		netRefDesList = []
+		state = 'waiting'
+		newLine = []
+		for line in netList:
+			if '(comp (ref ' in line and state == 'waiting':
+				newLine.append(line[line.rfind(' ')+1:line.find(')')])
+				state = 'gotComp'
+			elif '(tstamp ' in line and state == 'gotComp':
+				newLine.append(line[line.rfind(' ')+1:line.find(')')])
+				state = 'waiting'
+				netRefDesList.append(newLine)
+				newLine = []
+		#print 'net - ref des vs time stamps',netRefDesList
+		return netRefDesList
+	
+	def getPcbRefDesTimestamp(self, pcbList):
+		"""
+		(path /544A6677)
+		(fp_text reference D12 (at 1.27 5.08 180) (layer F.SilkS)
+		"""
+		pcbRefDesList = []
+		#print 'getPcbRefDesTimestamp',pcbList
+		state = 'waiting'
+		newLine = []
+		# print 'state',state
+		timeStamp = ''
+		for line in pcbList:
+			if '(path /' in line and state == 'waiting':
+				timeStamp = line[line.rfind('/')+1:-2]
+				# print 'timeStamp:',timeStamp
+				state = 'gotTimeStamp'
+			elif '(fp_text reference ' in line and state == 'gotTimeStamp':
+				refDes = line[23:line.find('(',24)-1]
+				# print 'refDes',refDes
+				newLine.append(refDes)
+				newLine.append(timeStamp)
+				pcbRefDesList.append(newLine)
+				newLine = []
+				state = 'waiting'
+			# if state != 'waiting':
+				# print 'state',state
+		# print 'pcb - ref des vs time stamps',pcbRefDesList
+		# sys.exit()
+		return pcbRefDesList
+	
+	def doKiPcb2Sch(self):
 		"""The executive which calls all of the other functions.
 		"""
+		global defaultPath
+		#Load the default path
+		defaultParmsClass = HandleDefault()
+		#defaultParmsClass.setVerboseMode(False)
+		defaultParmsClass.initDefaults()
+		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
+		#print 'defaultPath was :', defaultPath
+		
 		schFileName = self.selectKicadSchematic()
 		if schFileName == '':
 			errorDialog("Failed to open schematic file")
 			return False
-		schematicAsList = self.readInSchematic(schFileName)
+		if self.backupSchematic(schFileName) != True:
+			errorDialog("Failed to back up the schematic file")
+			return False
+		schematicAsList = self.readInFile(schFileName)
 		if schematicAsList == []:
 			errorDialog("Failed to read in the schematic file")
 			return False
-		cmpFileName = schFileName[0:-4] + '.cmp'
-		cmpFileAsList = self.readInCmpFile(cmpFileName)
-		if cmpFileAsList == []:
-			failString = "Failed to read in the cmp file\n" + cmpFileName + "\nFile not found."
+		pcbFileName = schFileName[0:-4] + '.kicad_pcb'
+		pcbFileAsList = self.readInFile(pcbFileName)
+		if pcbFileAsList == []:
+			failString = "Failed to read in the pcb file\n" + pcbFileName + "\nFile not found."
+			errorDialog(failString)
+			return False
+		netFileName = schFileName[0:-4] + '.net'
+		netFileAsList = self.readInFile(netFileName)
+		if netFileAsList == []:
+			failString = "Failed to read in the net file\n" + netFileName + "\nFile not found."
 			errorDialog(failString)
 			return False
 		print 'schematic file has lines:', len(schematicAsList)
-		print 'cmp file has lines:', len(cmpFileAsList)
-		newSchematicList = self.backAnnotateSchematic(cmpFileAsList, schematicAsList)
-		self.writeOutSchematic(newSchematicList, schFileName)
-		return True
-	
-	def checkSchematic(self, cmpList, schList):
-		"""Check the schematic to see what the issues are
-		"""
-		cmpCrossRefList = self.createCmpFootPrintList(cmpList)
-		schCrossRefList = self.createSchFootPrintList(schList)
-		cmpCrossRefList = sorted(cmpCrossRefList, key = lambda errs: errs[0])	
-		schCrossRefList = sorted(schCrossRefList, key = lambda errs: errs[0])	
-#		print 'cmp file =', cmpCrossRefList
-#		print 'sch file =', schCrossRefList
-		if cmpCrossRefList == schCrossRefList:
-			errorDialog('lists match no action required')
+		print 'net file has lines:', len(netFileAsList)
+		print 'pcb file has lines:', len(pcbFileAsList)
+		schGetRefDesTimestamp = self.getSchematicRefDesTimestamp(schematicAsList)
+		netGetRefDesTimestamp = self.getNetListRefDesTimestamp(netFileAsList)
+		pcbGetRefDesTimestamp = self.getPcbRefDesTimestamp(pcbFileAsList)
+		
+		if self.checkSchematicvsNetlist(schGetRefDesTimestamp, netGetRefDesTimestamp):
+			print 'checkSchematicvsNetlist: OK'
 		else:
-			errorDialog('lists are different')
-			for line in cmpCrossRefList:
-				if line not in schCrossRefList:
-					print 'cmp file has part not in sch file. Ref Des:', line[0].strip('\n\r'),
-					print 'footprint:', line[1].strip('\n\r')
-			for line in schCrossRefList:
-				if line not in cmpCrossRefList:
-					print 'sch file has part not in cmp file. Ref des:', line[0].strip('\n\r'),
-					if line[1].strip('\n\r') != '':
-						print 'footprint:', line[1].strip('\n\r')
+			errorDialog('Schematic vs netlist - error')
+		refDesSchVsPc = self.makeSchVsPcbRefDesList(schGetRefDesTimestamp, pcbGetRefDesTimestamp)
+
+		if self.checkSchematicvsPcb(schGetRefDesTimestamp, pcbGetRefDesTimestamp):
+			print 'checkSchematicvsPcb: OK'
+		else:
+			errorDialog('Schematic vs pcb - error')
+		
+		# print 'refDesSchVsPc list:',refDesSchVsPc
+		outList = self.backAnnotateSch(schematicAsList,refDesSchVsPc)
+		outFileName = schFileName
+		self.writeOutSchematic(outList,outFileName)
 		return True
 	
 	def doKiSchChk(self):
@@ -379,22 +498,46 @@ class ProcessKicadSchematic:
 		if self.backupSchematic(schFileName) != True:
 			errorDialog("Failed to back up the schematic file")
 			return False
-		schematicAsList = self.readInSchematic(schFileName)
+		schematicAsList = self.readInFile(schFileName)
 		if schematicAsList == []:
 			errorDialog("Failed to read in the schematic file")
 			return False
-		cmpFileName = schFileName[0:-4] + '.cmp'
-		cmpFileAsList = self.readInCmpFile(cmpFileName)
-		if cmpFileAsList == []:
-			failString = "Failed to read in the cmp file\n" + cmpFileName + "\nFile not found."
+		pcbFileName = schFileName[0:-4] + '.kicad_pcb'
+		pcbFileAsList = self.readInFile(pcbFileName)
+		if pcbFileAsList == []:
+			failString = "Failed to read in the pcb file\n" + pcbFileName + "\nFile not found."
+			errorDialog(failString)
+			return False
+		netFileName = schFileName[0:-4] + '.net'
+		netFileAsList = self.readInFile(netFileName)
+		if netFileAsList == []:
+			failString = "Failed to read in the net file\n" + netFileName + "\nFile not found."
 			errorDialog(failString)
 			return False
 		print 'schematic file has lines:', len(schematicAsList)
-		print 'cmp file has lines:', len(cmpFileAsList)
-		newSchematicList = self.checkSchematic(cmpFileAsList, schematicAsList)
+		print 'net file has lines:', len(netFileAsList)
+		print 'pcb file has lines:', len(pcbFileAsList)
+		schGetRefDesTimestamp = self.getSchematicRefDesTimestamp(schematicAsList)
+		netGetRefDesTimestamp = self.getNetListRefDesTimestamp(netFileAsList)
+		pcbGetRefDesTimestamp = self.getPcbRefDesTimestamp(pcbFileAsList)
+		
+		if self.checkSchematicvsNetlist(schGetRefDesTimestamp, netGetRefDesTimestamp):
+			print 'OK'
+		else:
+			errorDialog('Schematic vs netlist - error')
+		self.makeSchVsPcbRefDesList(schGetRefDesTimestamp, pcbGetRefDesTimestamp)
+
+		if self.checkSchematicvsPcb(schGetRefDesTimestamp, pcbGetRefDesTimestamp):
+			print 'OK'
+		else:
+			errorDialog('Schematic vs pcb - error')
+			
+		
 		return True
 	
 class UIManager:
+	"""User Interface
+	"""
 	interface = """
 	<ui>
 		<menubar name="MenuBar">
@@ -463,7 +606,7 @@ class UIManager:
 		"""
 		SchClass = ProcessKicadSchematic()
 		if backAnnotate == True:
-			if SchClass.doKiSch2Cmp() != False:
+			if SchClass.doKiPcb2Sch() != False:
 				message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
 				message.set_markup("Backannotation Completed")
 				message.run()
