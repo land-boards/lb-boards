@@ -153,7 +153,7 @@ class ProcessKicadSchematic:
 	def readInFile(self, inFileName):
 		"""
 		:param inFileName: The path with file name
-		:returns: list of the lines in the schematic file
+		:returns: list of the lines in the file
 		
 		Read the text file into a list for  processing.
 		"""
@@ -165,10 +165,11 @@ class ProcessKicadSchematic:
 		return schList
 
 	def backupSchematic(self, schFileName):
-		"""Back up the schematic file by renaming the file as _sch.bak.
-		
+		"""
 		:param schFileName: The name of the schematic file
 		:returns: True if passed, exits if fails
+		
+		Back up the schematic file by renaming the file as _sch.bak.
 		"""
 		cmdString = 'copy '
 		cmdString += schFileName
@@ -184,6 +185,10 @@ class ProcessKicadSchematic:
 	
 	def replaceRefDesInSch(self,row,refDesSchVsPc):
 		"""
+		:param row: The schematic ref des
+		:param refDesSchVsPc: Cross-reference list of ref des
+		:returns: The new row
+		
 		L LED-RESCUE-LED-TEST-2 D99
 		"""
 		rowPrefix = row[0:row.rfind(' ')]
@@ -205,6 +210,10 @@ class ProcessKicadSchematic:
 	
 	def replaceRefDesInSchSilkscreen(self,row,refDesSchVsPc):
 		"""
+		:param row: The schematic ref des silkscreen row
+		:param refDesSchVsPc: Cross-reference list of ref des
+		:returns: The new row
+		
 		F 0 "D99" H 6850 4750 50  0000 C CNN
 		"""
 		vect = []
@@ -232,6 +241,10 @@ class ProcessKicadSchematic:
 	
 	def backAnnotateSch(self,schList,refDesSchVsPc):
 		"""
+		:param schList: The schematic as a list
+		:param refDesSchVsPc: Cross-reference list of ref des
+		:returns: The new row
+		
 		$Comp
 		L LED-RESCUE-LED-TEST-2 D16
 		U 1 1 544A66CA
@@ -274,6 +287,10 @@ class ProcessKicadSchematic:
 		
 	def writeOutSchematic(self, outList, outFileName):
 		"""
+		:param outList: The new schematic as a list
+		:param outFileName: The path file name to store the list into
+		:returns: True
+		
 		"""
 #		outFileName = outFileName[0:-4] + '_test.sch'
 		outSchFilePtr = open(outFileName,'wb')
@@ -283,7 +300,12 @@ class ProcessKicadSchematic:
 		return True
 
 	def checkSchematicvsNetlist(self, schList, netList):
-		"""Check the schematic against the netlist
+		"""
+		:param schList: The schematic as a list
+		:param netList: The netlist
+		:returns: True if OK, False if error
+		
+		Check the schematic against the netlist
 		"""
 		errorsFound = False
 		schTimestampList = []
@@ -303,7 +325,12 @@ class ProcessKicadSchematic:
 		return not errorsFound
 	
 	def makeSchVsPcbRefDesList(self, schList, pcbList):
-		"""Make the schematic vs netlist ref des list
+		"""
+		:param schList: The schematic as a list
+		:param pcbList: The pcb as a list
+		:returns: True if OK, False if error
+		
+		Make the schematic vs netlist ref des list
 		"""
 		newRefDes = []
 		for rtdsPairSch in schList:
@@ -320,7 +347,12 @@ class ProcessKicadSchematic:
 		return(newRefDes)
 	
 	def checkSchematicvsPcb(self, schList, pcbList):
-		"""Check the schematic against the pcb
+		"""
+		:param schList: The schematic as a list
+		:param pcbList: The pcb as a list
+		:returns: True if OK, False if error
+		
+		Check the schematic against the pcb
 		"""
 		errorsFound = False
 		schTimestampList = []
@@ -342,6 +374,9 @@ class ProcessKicadSchematic:
 
 	def getSchematicRefDesTimestamp(self, schList):
 		"""
+		:param schList: The schematic as a list
+		:returns: list of ref des vs time stamps for the schematic
+		
 		Make a list of ref des vs timestamp for schematics
 		$Comp
 		L CONN_2 P6
@@ -376,6 +411,9 @@ class ProcessKicadSchematic:
 	
 	def getNetListRefDesTimestamp(self, netList):
 		"""
+		:param netList: The netList as a list
+		:returns: list of ref des vs time stamps for the netList
+		
 		Make a list of ref des vs timestamp for netlists
 		(comp (ref RP4)
 		(value RP4X2)
@@ -430,7 +468,8 @@ class ProcessKicadSchematic:
 		return pcbRefDesList
 	
 	def doKiPcb2Sch(self):
-		"""The executive which calls all of the other functions.
+		"""Backannotate option.
+		The executive which calls all of the other functions.
 		"""
 		global defaultPath
 		#Load the default path
@@ -488,7 +527,8 @@ class ProcessKicadSchematic:
 		return True
 	
 	def doKiSchChk(self):
-		"""The executive which calls all of the other functions.
+		"""Check option.
+		The executive which calls all of the other functions.
 		"""
 		print 'called doKiSchChk'
 		schFileName = self.selectKicadSchematic()
