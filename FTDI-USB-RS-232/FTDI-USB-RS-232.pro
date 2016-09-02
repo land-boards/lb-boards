@@ -1,4 +1,4 @@
-update=9/2/2016 1:45:21 PM
+update=9/2/2016 3:39:38 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -40,10 +40,11 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=power
-LibName2=conn
-LibName3=device
-LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName5=maxim
-LibName6=ftdi
-LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
+LibName1=FTDI-USB-RS-232-rescue
+LibName2=power
+LibName3=conn
+LibName4=device
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=maxim
+LibName7=ftdi
+LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/maxim-ic
