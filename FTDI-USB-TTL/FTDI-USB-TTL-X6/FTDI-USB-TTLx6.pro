@@ -1,6 +1,6 @@
-update=26/09/2013 17:12:08
+update=9/2/2016 11:55:35 AM
 version=1
-last_client=eeschema
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -39,13 +39,9 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=conn
-LibName3=device
-LibName4=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName1=FTDI-USB-TTLx6-rescue
+LibName2=power
+LibName3=conn
+LibName4=device
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
