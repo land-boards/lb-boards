@@ -400,9 +400,6 @@ Wire Wire Line
 	3500 9000 4200 9000
 Connection ~ 3500 2950
 Wire Wire Line
-	4200 9300 4000 9300
-Connection ~ 4000 9300
-Wire Wire Line
 	4200 9200 3900 9200
 Connection ~ 3900 9200
 Wire Wire Line
@@ -908,4 +905,9 @@ F 3 "~" H 10800 10000 60  0000 C CNN
 	1    10800 10000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4200 9300 4100 9300
+Wire Wire Line
+	4100 9300 4100 10300
+Connection ~ 4100 10300
 $EndSCHEMATC
