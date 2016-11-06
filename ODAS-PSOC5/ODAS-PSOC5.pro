@@ -1,4 +1,4 @@
-update=5/24/2015 11:02:45 AM
+update=11/6/2016 11:09:09 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -30,14 +30,15 @@ ModuleOutlineThickness=0.15
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=linear
-LibName7=regul
-LibName8=74xx
-LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
-LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName11=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
+LibName1=ODAS-PSOC5-rescue
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=power
+LibName4=device
+LibName5=transistors
+LibName6=conn
+LibName7=linear
+LibName8=regul
+LibName9=74xx
+LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
+LibName11=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName12=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
