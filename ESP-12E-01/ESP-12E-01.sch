@@ -263,8 +263,6 @@ Wire Wire Line
 Wire Wire Line
 	2400 6700 2400 6850
 Wire Wire Line
-	3050 4500 3000 4500
-Wire Wire Line
 	4750 2650 4750 3100
 Wire Wire Line
 	2450 6300 2450 6000
@@ -316,17 +314,6 @@ Wire Wire Line
 Wire Wire Line
 	2400 2650 2400 1150
 Connection ~ 2400 1150
-$Comp
-L +3.3V #PWR07
-U 1 1 57818E33
-P 3050 4200
-F 0 "#PWR07" H 3050 4050 50  0001 C CNN
-F 1 "+3.3V" H 3050 4340 50  0000 C CNN
-F 2 "" H 3050 4200 60  0000 C CNN
-F 3 "" H 3050 4200 60  0000 C CNN
-	1    3050 4200
-	1    0    0    -1  
-$EndComp
 $Comp
 L R R6
 U 1 1 5781BF0A
@@ -740,8 +727,6 @@ Wire Wire Line
 	5700 2950 4650 2950
 Wire Wire Line
 	2850 2950 1500 2950
-Wire Wire Line
-	3050 4200 3050 4500
 $Comp
 L R R8
 U 1 1 5821E0BB
@@ -856,4 +841,5 @@ F 3 "" H 5900 7400 60  0000 C CNN
 	1    5900 7400
 	1    0    0    -1  
 $EndComp
+NoConn ~ 3000 4500
 $EndSCHEMATC
