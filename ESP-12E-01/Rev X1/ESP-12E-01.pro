@@ -1,4 +1,4 @@
-update=11/8/2016 10:54:51 AM
+update=7/9/2016 12:26:06 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -52,4 +52,3 @@ LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/arduino
 LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/esp8266-esp-01
 LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/ESP8266
-LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
