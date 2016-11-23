@@ -1,4 +1,4 @@
-update=6/23/2015 3:12:39 PM
+update=11/22/2016 3:15:44 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -79,3 +79,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+LibName31=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
