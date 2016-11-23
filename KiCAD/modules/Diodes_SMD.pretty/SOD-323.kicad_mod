@@ -22,4 +22,9 @@
   (fp_line (start -1.3 -0.8) (end 1.1 -0.8) (layer F.SilkS) (width 0.15))
   (pad 1 smd rect (at -1.055 0) (size 0.59 0.45) (layers F.Cu F.Paste F.Mask))
   (pad 2 smd rect (at 1.055 0) (size 0.59 0.45) (layers F.Cu F.Paste F.Mask))
+  (model Diodes_SMD.3dshapes/SOD-323.wrl
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 180))
+  )
 )
