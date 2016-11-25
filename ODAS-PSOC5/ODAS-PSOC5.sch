@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:ODAS-PSOC5-rescue
+LIBS:DougsSch
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -7,9 +8,6 @@ LIBS:conn
 LIBS:linear
 LIBS:regul
 LIBS:74xx
-LIBS:5M160ZT100
-LIBS:DougsSch
-LIBS:JTAG
 LIBS:ODAS-PSOC5-cache
 EELAYER 25 0
 EELAYER END
@@ -1557,7 +1555,7 @@ $EndComp
 Wire Wire Line
 	12600 3400 12500 3400
 $Comp
-L GND #PWR029
+L GND-RESCUE-ODAS-PSOC5 #PWR029
 U 1 1 581F7477
 P 12350 4500
 F 0 "#PWR029" H 12350 4500 30  0001 C CNN
