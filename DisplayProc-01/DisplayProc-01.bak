@@ -266,7 +266,6 @@ Text Label 3200 6300 0    60   ~ 0
 ACKSDA
 Text Label 4100 6300 0    60   ~ 0
 AVAILSCL
-NoConn ~ 4050 6200
 NoConn ~ 3550 6200
 Text Label 4950 2600 0    60   ~ 0
 VD0
@@ -618,4 +617,10 @@ Wire Wire Line
 Wire Wire Line
 	2600 1400 2600 1500
 Connection ~ 2950 1400
+Text Label 2750 1900 0    60   ~ 0
+~RES
+Text Label 4150 6200 0    60   ~ 0
+~RES
+Wire Wire Line
+	4450 6200 4050 6200
 $EndSCHEMATC
