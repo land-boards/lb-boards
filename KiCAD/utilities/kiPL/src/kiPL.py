@@ -25,7 +25,8 @@ import os
 import sys
 
 sys.path.append('C:\\Users\\doug_000\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
-sys.path.append('C:\\Users\\doug\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
+sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
+#sys.path.append('C:\\Users\\doug\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 
 defaultPath = '.'
 
@@ -251,6 +252,31 @@ class ControlClass:
 			newOutPL.append(newOutPLRow)
 		return newOutPL
 
+	def writeOutMWTable(self, outFilePtr, theList):
+		"""
+		:param outFilePtr: Points to the output file.
+		:param theList: The list to write out.
+
+		"""
+		outFilePtr.write('{| class="wikitable"\n')
+		firstRow = True
+		for row in theList:
+#			print row
+			for cell in row:
+				newCell = ''
+				if isinstance(cell, int):
+					newCell = str(cell)
+				else:
+					newCell = cell
+#				print newCell
+				if firstRow:
+					outFilePtr.write('! ' + newCell + '\n')					
+				else:
+					outFilePtr.write('| ' + newCell + '\n')
+			firstRow = False
+			outFilePtr.write('|-\n')
+		outFilePtr.write('|}\n')
+
 	def theExecutive(self):
 		"""theExecutive - Function that runs the whole thing
 		"""
@@ -271,7 +297,8 @@ class ControlClass:
 		defaultParmsClass.storeKeyValuePair('DEFAULT_PATH',defaultPath)
 		#print 'defaultPath now is :', defaultPath
 
-		fileToWrite = fileToRead[:-4] + "_PL.csv"
+		fileToWriteCSV = fileToRead[:-4] + "_PL.csv"
+		fileToWriteMW = fileToRead[:-4] + ".MW"
 
 		try:
 			inFile = open(fileToRead, 'rb')
@@ -280,11 +307,21 @@ class ControlClass:
 			exit()
 
 		try:
-			outCSVFile = csv.writer(open(fileToWrite, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
+			outCSVFile = csv.writer(open(fileToWriteCSV, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
 		except IOError:
 			errorDialog('ERROR - Cannot open the output file.\nIs the file already open in EXCEL?\nClose the file and return.')
 			try:
-				outCSVFile = csv.writer(open(fileToWrite, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
+				outCSVFile = csv.writer(open(fileToWriteCSV, 'wb'), delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
+			except IOError:
+				errorDialog('ERROR - Tried again,  - Is the file already open in EXCEL?')
+				exit()
+
+		try:
+			outMWFile = open(fileToWriteMW, 'wb')
+		except IOError:
+			errorDialog('ERROR - Cannot open the output file.\nIs the file already open in EXCEL?\nClose the file and return.')
+			try:
+				outMWFile = open(fileToWriteMW, 'wb')
 			except IOError:
 				errorDialog('ERROR - Tried again,  - Is the file already open in EXCEL?')
 				exit()
@@ -296,6 +333,8 @@ class ControlClass:
 		reduxPL = self.combineRefDes(sortedPL)
 		outCSVFile.writerow(['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
 		outCSVFile.writerows(reduxPL)
+		
+		self.writeOutMWTable(outMWFile, reduxPL)
 		#print 'complete'
 
 class UIManager:
