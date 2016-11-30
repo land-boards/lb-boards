@@ -1,0 +1,10 @@
+(module dougsLib:MTG-2.75MM (layer F.Cu) (tedit 53F3C3D3)
+  (fp_text reference MTG2 (at -0.4318 -7.8232) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (fp_text value CONN_1 (at 0 -5.08) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (pad 1 thru_hole circle (at 0 0) (size 2.75 2.75) (drill 2.75) (layers *.Cu *.Mask F.SilkS)
+    (solder_mask_margin 1.8) (clearance 1.8))
+)

@@ -1,0 +1,9 @@
+(module dougsLib:HOLE-12AWG (layer F.Cu) (tedit 545F97D6)
+  (fp_text reference P1 (at -1.524 -2.54) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  )
+  (fp_text value CONN_1 (at 0 3) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (pad 1 thru_hole circle (at 0 0) (size 3.81 3.81) (drill 2.2225) (layers *.Cu *.Mask F.SilkS))
+)
