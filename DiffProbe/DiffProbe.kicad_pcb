@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.1-stable)
+(kicad_pcb (version 4) (host pcbnew "(after 2015-mar-04 BZR unknown)-product")
 
   (general
     (links 51)
     (no_connects 0)
-    (area -10.999999 -7.85 48.847828 37.741)
+    (area -10.999999 -7.85 47.831828 37.741)
     (thickness 1.6)
     (drawings 12)
     (tracks 118)
@@ -59,7 +59,7 @@
     (visible_elements 7FFFFF7F)
     (pcbplotparams
       (layerselection 0x010f0_80000001)
-      (usegerberextensions true)
+      (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.150000)
       (plotframeref false)
@@ -147,13 +147,13 @@
     (pad 1 np_thru_hole circle (at 0 0 180) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (module Resistors_SMD:R_1206_HandSoldering (layer B.Cu) (tedit 583667AD) (tstamp 58365C04)
+  (module Resistors_SMD:R_1206_HandSoldering (layer B.Cu) (tedit 58407451) (tstamp 58365C04)
     (at 2.032 11.43 270)
     (descr "Resistor SMD 1206, hand soldering")
     (tags "resistor 1206")
     (path /5836656E)
     (attr smd)
-    (fp_text reference C1 (at 0 2.3 270) (layer B.SilkS)
+    (fp_text reference C1 (at -3.81 0.127 360) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value 2.2nF/1kV (at 0 -2.3 270) (layer B.Fab) hide
@@ -444,13 +444,13 @@
     )
   )
 
-  (module Resistors_SMD:R_0805_HandSoldering (layer B.Cu) (tedit 583668CD) (tstamp 58365C91)
+  (module Resistors_SMD:R_0805_HandSoldering (layer B.Cu) (tedit 5840745E) (tstamp 58365C91)
     (at 6.096 9.398 180)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /58366D64)
     (attr smd)
-    (fp_text reference R1 (at 0 2.1 180) (layer B.SilkS)
+    (fp_text reference R1 (at -0.254 1.778 180) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value 49.9K (at 0 -2.1 180) (layer B.Fab) hide
@@ -874,7 +874,7 @@
   )
 
   (module DougsNewMods:TEST_BLK-REAR (layer F.Cu) (tedit 5838E4D7) (tstamp 58365D70)
-    (at 39.116 22.352)
+    (at 38.1 26.67)
     (path /580F6225)
     (fp_text reference TESTED (at 0 -3.5) (layer B.SilkS)
       (effects (font (thickness 0.3048)) (justify mirror))
