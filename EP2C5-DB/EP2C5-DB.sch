@@ -431,7 +431,7 @@ U 1 1 5834DE8A
 P 7650 3800
 F 0 "R1" V 7730 3800 50  0000 C CNN
 F 1 "470" V 7650 3800 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 3800 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 3800 30  0000 C CNN
 F 3 "" H 7650 3800 30  0000 C CNN
 	1    7650 3800
 	0    -1   -1   0   
@@ -442,7 +442,7 @@ U 1 1 5834DFC5
 P 7650 3950
 F 0 "R2" V 7730 3950 50  0000 C CNN
 F 1 "680" V 7650 3950 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 3950 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 3950 30  0000 C CNN
 F 3 "" H 7650 3950 30  0000 C CNN
 	1    7650 3950
 	0    -1   -1   0   
@@ -453,7 +453,7 @@ U 1 1 5834DFEF
 P 7650 4200
 F 0 "R3" V 7730 4200 50  0000 C CNN
 F 1 "470" V 7650 4200 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 4200 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 4200 30  0000 C CNN
 F 3 "" H 7650 4200 30  0000 C CNN
 	1    7650 4200
 	0    -1   -1   0   
@@ -464,7 +464,7 @@ U 1 1 5834E01F
 P 7650 4350
 F 0 "R4" V 7730 4350 50  0000 C CNN
 F 1 "680" V 7650 4350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 4350 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 4350 30  0000 C CNN
 F 3 "" H 7650 4350 30  0000 C CNN
 	1    7650 4350
 	0    -1   -1   0   
@@ -475,7 +475,7 @@ U 1 1 5834E04D
 P 7650 4600
 F 0 "R5" V 7730 4600 50  0000 C CNN
 F 1 "470" V 7650 4600 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 4600 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 4600 30  0000 C CNN
 F 3 "" H 7650 4600 30  0000 C CNN
 	1    7650 4600
 	0    -1   -1   0   
@@ -486,7 +486,7 @@ U 1 1 5834E081
 P 7650 4750
 F 0 "R6" V 7730 4750 50  0000 C CNN
 F 1 "680" V 7650 4750 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7580 4750 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7580 4750 30  0000 C CNN
 F 3 "" H 7650 4750 30  0000 C CNN
 	1    7650 4750
 	0    -1   -1   0   
@@ -700,9 +700,6 @@ Connection ~ 2800 4500
 Wire Wire Line
 	2200 4500 2100 4500
 Connection ~ 2100 4500
-Wire Wire Line
-	2200 5700 2100 5700
-Connection ~ 2100 5700
 Wire Wire Line
 	2800 5700 2700 5700
 Connection ~ 2800 5700
@@ -937,28 +934,28 @@ F 3 "" H 6450 6450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 5400 5500 5400
-Text Label 5650 5400 0    60   ~ 0
+	5650 5400 5050 5400
+Text Label 5150 5400 0    60   ~ 0
 P104
 Wire Wire Line
-	6550 5500 5500 5500
-Text Label 5650 5500 0    60   ~ 0
+	5650 5500 5050 5500
+Text Label 5150 5500 0    60   ~ 0
 P101
 Wire Wire Line
-	6550 5600 5500 5600
-Text Label 5650 5600 0    60   ~ 0
+	5650 5600 5050 5600
+Text Label 5150 5600 0    60   ~ 0
 P103
 Wire Wire Line
-	6550 6000 5500 6000
-Text Label 5650 6000 0    60   ~ 0
+	5650 6000 5050 6000
+Text Label 5150 6000 0    60   ~ 0
 P96
 Wire Wire Line
-	6550 6100 5500 6100
-Text Label 5650 6100 0    60   ~ 0
+	5650 6100 5050 6100
+Text Label 5150 6100 0    60   ~ 0
 P99
 Wire Wire Line
-	6550 6200 5500 6200
-Text Label 5650 6200 0    60   ~ 0
+	5650 6200 5050 6200
+Text Label 5150 6200 0    60   ~ 0
 P100
 Text Notes 6900 5700 0    60   ~ 0
 SERIAL 1\nRTS\nRX\nTX\nGND
@@ -991,9 +988,9 @@ Wire Wire Line
 Wire Wire Line
 	5400 2400 5400 2800
 Wire Wire Line
-	5500 2500 5300 2500
+	5300 2500 5500 2500
 Wire Wire Line
-	5300 2500 5300 1750
+	5300 1750 5300 2500
 $Comp
 L VCC #PWR7
 U 1 1 5835291C
@@ -1006,11 +1003,11 @@ F 3 "" H 5300 1750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 2200 4150 2200
+	4150 2200 5500 2200
 NoConn ~ 5500 2300
 NoConn ~ 5500 2700
 Wire Wire Line
-	5500 2600 4150 2600
+	4150 2600 5500 2600
 Text Label 4450 2200 0    60   ~ 0
 P87
 Text Label 4450 2600 0    60   ~ 0
@@ -1032,7 +1029,7 @@ U 1 1 58359DA5
 P 4900 7000
 F 0 "R8" V 4980 7000 50  0000 C CNN
 F 1 "1K" V 4900 7000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4830 7000 20  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 7000 20  0000 C CNN
 F 3 "" H 4900 7000 30  0000 C CNN
 	1    4900 7000
 	0    -1   -1   0   
@@ -1043,7 +1040,7 @@ U 1 1 5835A1E3
 P 4900 6800
 F 0 "R7" V 4980 6800 50  0000 C CNN
 F 1 "470" V 4900 6800 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4830 6800 20  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 6800 20  0000 C CNN
 F 3 "" H 4900 6800 30  0000 C CNN
 	1    4900 6800
 	0    -1   -1   0   
@@ -1267,7 +1264,7 @@ U 1 1 58535E20
 P 5150 2400
 F 0 "R10" V 5230 2400 50  0000 C CNN
 F 1 "10K" V 5150 2400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5080 2400 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5080 2400 30  0000 C CNN
 F 3 "" H 5150 2400 30  0000 C CNN
 	1    5150 2400
 	1    0    0    -1  
@@ -1278,7 +1275,7 @@ U 1 1 585361AA
 P 5000 2000
 F 0 "R9" V 5080 2000 50  0000 C CNN
 F 1 "10K" V 5000 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4930 2000 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4930 2000 30  0000 C CNN
 F 3 "" H 5000 2000 30  0000 C CNN
 	1    5000 2000
 	1    0    0    -1  
@@ -1297,4 +1294,86 @@ Connection ~ 5150 1800
 Wire Wire Line
 	5000 2150 5000 2200
 Connection ~ 5000 2200
+Text Label 1450 5700 0    60   ~ 0
+P144
+Wire Wire Line
+	2200 5700 1200 5700
+Wire Wire Line
+	6550 5400 5950 5400
+Wire Wire Line
+	6550 5500 5950 5500
+Wire Wire Line
+	6550 5600 5950 5600
+Wire Wire Line
+	6550 6000 5950 6000
+Wire Wire Line
+	6550 6100 5950 6100
+Wire Wire Line
+	6550 6200 5950 6200
+$Comp
+L R R11
+U 1 1 5855F6F4
+P 5800 5400
+F 0 "R11" V 5880 5400 50  0000 C CNN
+F 1 "2.7K" V 5800 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 5400 20  0000 C CNN
+F 3 "" H 5800 5400 30  0000 C CNN
+	1    5800 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R12
+U 1 1 5855F7BF
+P 5800 5500
+F 0 "R12" V 5880 5500 50  0000 C CNN
+F 1 "2.7K" V 5800 5500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 5500 20  0000 C CNN
+F 3 "" H 5800 5500 30  0000 C CNN
+	1    5800 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R13
+U 1 1 5855F824
+P 5800 5600
+F 0 "R13" V 5880 5600 50  0000 C CNN
+F 1 "2.7K" V 5800 5600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 5600 20  0000 C CNN
+F 3 "" H 5800 5600 30  0000 C CNN
+	1    5800 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R14
+U 1 1 5855F888
+P 5800 6000
+F 0 "R14" V 5880 6000 50  0000 C CNN
+F 1 "2.7K" V 5800 6000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 6000 20  0000 C CNN
+F 3 "" H 5800 6000 30  0000 C CNN
+	1    5800 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R15
+U 1 1 5855F8FB
+P 5800 6100
+F 0 "R15" V 5880 6100 50  0000 C CNN
+F 1 "2.7K" V 5800 6100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 6100 20  0000 C CNN
+F 3 "" H 5800 6100 30  0000 C CNN
+	1    5800 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R16
+U 1 1 5855F969
+P 5800 6200
+F 0 "R16" V 5880 6200 50  0000 C CNN
+F 1 "2.7K" V 5800 6200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5730 6200 20  0000 C CNN
+F 3 "" H 5800 6200 30  0000 C CNN
+	1    5800 6200
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
