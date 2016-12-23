@@ -1,4 +1,4 @@
-update=11/25/2016 9:37:35 AM
+update=12/19/2016 9:43:55 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -39,6 +39,3 @@ LibName6=conn
 LibName7=linear
 LibName8=regul
 LibName9=74xx
-LibName10=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/5M160ZT100
-LibName11=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName12=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/JTAG
