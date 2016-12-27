@@ -5,18 +5,18 @@ LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
-LIBS:DougsSch
 LIBS:74xx
+LIBS:SIOProc-01-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "LED-18"
-Date "21 nov 2014"
+Title "Serial I/O Processor"
+Date "2016-12-26"
 Rev "X2"
-Comp "dougspcbdesigns.pbworks.com"
-Comment1 ""
+Comp "land-boards.com"
+Comment1 "Rev X2: Moved Handshake from pin 6 to pin 2"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -441,9 +441,9 @@ Wire Wire Line
 Wire Wire Line
 	6650 1800 5550 1800
 Wire Wire Line
-	5550 1800 5550 4500
+	5550 4500 5550 1800
 Wire Wire Line
-	5550 4500 2900 4500
+	2900 4500 5550 4500
 Wire Wire Line
 	2900 4500 2900 4000
 Connection ~ 2900 4000
@@ -519,10 +519,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 2200 6050 2200
 Wire Wire Line
-	6050 2200 6050 2800
-Wire Wire Line
-	6050 2800 6200 2800
-NoConn ~ 6200 2400
+	6050 2200 6050 2400
 Wire Wire Line
 	4500 3800 5350 3800
 Wire Wire Line
@@ -601,4 +598,6 @@ F 3 "" H 7300 4150 60  0000 C CNN
 	1    7300 4150
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6050 2400 6200 2400
 $EndSCHEMATC
