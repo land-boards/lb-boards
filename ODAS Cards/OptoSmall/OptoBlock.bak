@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:OptoISmall-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -150,14 +149,13 @@ OUT
 Text HLabel 7050 3400 2    79   Output ~ 0
 GND2
 $Comp
-L Q_NPN_BEC-RESCUE-OptoISmall Q1
+L Q_NPN_BEC Q1
 U 1 1 557F6DD0
 P 5000 3250
 AR Path="/557B9C27/557F6DD0" Ref="Q1"  Part="1" 
 AR Path="/557BCF63/557F6DD0" Ref="Q2"  Part="1" 
 AR Path="/557BD8A1/557F6DD0" Ref="Q3"  Part="1" 
 AR Path="/557BD8A9/557F6DD0" Ref="Q4"  Part="1" 
-AR Path="/557F6DD0" Ref="Q4"  Part="1" 
 F 0 "Q4" H 5300 3300 50  0000 R CNN
 F 1 "2N3904" H 5600 3200 50  0000 R CNN
 F 2 "Housings_SOT-23_SOT-143_TSOT-6:SOT-23_Handsoldering" H 5200 3350 29  0000 C CNN
