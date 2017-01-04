@@ -1306,15 +1306,11 @@ Wire Wire Line
 Wire Wire Line
 	14200 2000 15150 2000
 Wire Wire Line
-	14200 2100 15150 2100
-Wire Wire Line
 	14200 2200 15150 2200
 Text Label 14400 1900 0    60   ~ 0
 P25
 Text Label 14400 2000 0    60   ~ 0
 P24
-Text Label 14400 2100 0    60   ~ 0
-P23
 Text Label 14400 2200 0    60   ~ 0
 P22
 Wire Wire Line
