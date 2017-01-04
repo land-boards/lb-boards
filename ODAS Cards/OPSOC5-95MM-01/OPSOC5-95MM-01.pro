@@ -1,4 +1,4 @@
-update=1/3/2017 5:13:42 PM
+update=1/3/2017 6:53:36 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -30,7 +30,8 @@ ModuleOutlineThickness=0.15
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
-LibName4=conn
+LibName1=OPSOC5-95MM-01-rescue
+LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=power
+LibName4=device
+LibName5=conn
