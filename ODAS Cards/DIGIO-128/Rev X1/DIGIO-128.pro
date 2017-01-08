@@ -1,6 +1,6 @@
-update=3/28/2015 2:01:48 PM
+update=1/8/2017 2:28:04 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -39,14 +39,10 @@ LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 [eeschema]
 version=1
 LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=DIGIO-128-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C
+LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
