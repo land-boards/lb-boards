@@ -1106,4 +1106,10 @@ F 3 "" H 1400 2750 60  0000 C CNN
 	1    1400 3950
 	1    0    0    -1  
 $EndComp
+Text Label 2150 4050 0    60   ~ 0
+A0
+Text Label 2150 3950 0    60   ~ 0
+A1
+Text Label 2150 3850 0    60   ~ 0
+A2
 $EndSCHEMATC
