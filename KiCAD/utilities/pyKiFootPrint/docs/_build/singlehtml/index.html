@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pyKiBackannSchem 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="None" href="index.html#document-index" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-pykibackannschem-s-documentation">
+<h1>Welcome to pyKiBackannSchem&#8217;s documentation!<a class="headerlink" href="#welcome-to-pykibackannschem-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-pyKiBackannSchem"></span><p>Back-annotate footprints on a Kicad schematic from the PCB.</p>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Run this program</li>
+<li>Select the .sch file</li>
+<li>The netlist file and pcb file are automatically loaded</li>
+<li>Only works for single file schematics</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Program is run by either typing python pyKiBackannSchem.py or double clicking pyKiBackannSchem.py.</p>
+</div>
+<div class="section" id="formats">
+<h2>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="netlist-format">
+<h3>NetList format<a class="headerlink" href="#netlist-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>(comp (ref D99)</li>
+<li>(net (code 26) (name &#8220;Net-(D99-Pad1)&#8221;)</li>
+<li>(node (ref RP4) (pin 8))</li>
+<li>(node (ref D99) (pin 1)))</li>
+</ul>
+</div>
+<div class="section" id="pcb-format">
+<h3>PCB format<a class="headerlink" href="#pcb-format" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>(L130) (net 47 &#8220;Net-(D99-Pad1)&#8221;)</li>
+<li>(L131) (net 48 &#8220;Net-(D99-Pad2)&#8221;)</li>
+<li>(L170) (add_net &#8220;Net-(D99-Pad1)&#8221;)</li>
+<li>(L171) (add_net &#8220;Net-(D99-Pad2)&#8221;)</li>
+<li>(L580) (fp_text reference D99 (at 1.905 5.08 180) (layer F.SilkS)</li>
+<li>(L851) (pad 1 thru_hole circle (at -1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers <a href="#id1"><span class="problematic" id="id2">*</span></a>.Cu <a href="#id3"><span class="problematic" id="id4">*</span></a>.Mask F.SilkS)</li>
+<li>(L596) (net 47 &#8220;Net-(D99-Pad1)&#8221;))</li>
+<li>(L597) (pad 2 thru_hole circle (at 1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers <a href="#id5"><span class="problematic" id="id6">*</span></a>.Cu <a href="#id7"><span class="problematic" id="id8">*</span></a>.Mask F.SilkS)</li>
+<li>(L598) (net 48 &#8220;Net-(D99-Pad2)&#8221;))</li>
+<li>(L792) (pad 1 thru_hole rect (at -1.27 0 180) (size 1.524 1.524) (drill 1.016) (layers <a href="#id9"><span class="problematic" id="id10">*</span></a>.Cu <a href="#id11"><span class="problematic" id="id12">*</span></a>.Mask F.SilkS)</li>
+<li>(L793) (net 48 &#8220;Net-(D99-Pad2)&#8221;))</li>
+<li>(L1298) (pad 8 thru_hole circle (at 8.89 0 90) (size 1.397 1.397) (drill 0.8128) (layers <a href="#id13"><span class="problematic" id="id14">*</span></a>.Cu <a href="#id15"><span class="problematic" id="id16">*</span></a>.Mask F.SilkS)</li>
+<li>(L1299) (net 47 &#8220;Net-(D99-Pad1)&#8221;))</li>
+</ul>
+</div>
+<div class="section" id="schematic-format">
+<h3>Schematic format<a class="headerlink" href="#schematic-format" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">$Comp</p>
+</li>
+<li><p class="first">L LED-RESCUE-LED-TEST-2 D99</p>
+</li>
+<li><p class="first">U 1 1 544A66CA</p>
+</li>
+<li><p class="first">P 6850 4650</p>
+</li>
+<li><p class="first">F 0 &#8220;D99&#8221; H 6850 4750 50  0000 C CNN</p>
+</li>
+<li><p class="first">F 1 &#8220;LED&#8221; H 6850 4550 50  0000 C CNN</p>
+</li>
+<li><p class="first">F 2 &#8220;LEDs:LED-5MM&#8221; H 6850 4650 60  0000 C CNN</p>
+</li>
+<li><p class="first">F 3 &#8220;&#8221; H 6850 4650 60  0001 C CNN</p>
+</li>
+<li><p class="first">1    6850 4650</p>
+</li>
+<li><table class="first docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-1</span></kbd></td>
+<td><p class="first last">0    0    -1</p>
+</td></tr>
+</tbody>
+</table>
+</li>
+<li><p class="first">$EndComp</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="output-messages">
+<h2>Output Messages<a class="headerlink" href="#output-messages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Error message are sent to the stdout.</li>
+<li>When the program is done it has a dialog box which gives time to look at the error log.</li>
+</ul>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Check only</li>
+<li>Back annotate (default choice)</li>
+</ul>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+</div>
+<dl class="class">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic">
+<em class="property">class </em><code class="descclassname">pyKiBackannSchem.</code><code class="descname">ProcessKicadSchematic</code><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Methods related to reading KiCad schematic, netlist and pcb files</p>
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.backAnnotateSch">
+<code class="descname">backAnnotateSch</code><span class="sig-paren">(</span><em>schList</em>, <em>refDesSchVsPc</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.backAnnotateSch" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schList</strong> &#8211; The schematic as a list</li>
+<li><strong>refDesSchVsPc</strong> &#8211; Cross-reference list of ref des</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new row</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>$Comp
+L LED-RESCUE-LED-TEST-2 D16
+U 1 1 544A66CA
+P 6850 4650
+F 0 &#8220;D99&#8221; H 6850 4750 50  0000 C CNN
+F 1 &#8220;LED&#8221; H 6850 4550 50  0000 C CNN
+F 2 &#8220;LEDs:LED-5MM&#8221; H 6850 4650 60  0000 C CNN
+F 3 &#8220;&#8221; H 6850 4650 60  0001 C CNN
+1    6850 4650
+1   0    0    -1  
+$EndComp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.backupSchematic">
+<code class="descname">backupSchematic</code><span class="sig-paren">(</span><em>schFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.backupSchematic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schFileName</strong> &#8211; The name of the schematic file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if passed, exits if fails</td>
+</tr>
+</tbody>
+</table>
+<p>Back up the schematic file by renaming the file as _sch.bak.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.checkSchematicvsNetlist">
+<code class="descname">checkSchematicvsNetlist</code><span class="sig-paren">(</span><em>schList</em>, <em>netList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.checkSchematicvsNetlist" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schList</strong> &#8211; The schematic as a list</li>
+<li><strong>netList</strong> &#8211; The netlist</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if OK, False if error</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Check the schematic against the netlist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.checkSchematicvsPcb">
+<code class="descname">checkSchematicvsPcb</code><span class="sig-paren">(</span><em>schList</em>, <em>pcbList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.checkSchematicvsPcb" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schList</strong> &#8211; The schematic as a list</li>
+<li><strong>pcbList</strong> &#8211; The pcb as a list</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if OK, False if error</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Check the schematic against the pcb</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.doKiPcb2Sch">
+<code class="descname">doKiPcb2Sch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.doKiPcb2Sch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backannotate option.
+The executive which calls all of the other functions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.doKiSchChk">
+<code class="descname">doKiSchChk</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.doKiSchChk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check option.
+The executive which calls all of the other functions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.extractPathFromPathfilename">
+<code class="descname">extractPathFromPathfilename</code><span class="sig-paren">(</span><em>fullPathFilename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.extractPathFromPathfilename" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fullPathFilename</strong> &#8211; The path with file name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the path without the file name</td>
+</tr>
+</tbody>
+</table>
+<p>Extract Path from fullPathFilename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.getNetListRefDesTimestamp">
+<code class="descname">getNetListRefDesTimestamp</code><span class="sig-paren">(</span><em>netList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.getNetListRefDesTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>netList</strong> &#8211; The netList as a list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of ref des vs time stamps for the netList</td>
+</tr>
+</tbody>
+</table>
+<p>Make a list of ref des vs timestamp for netlists
+(comp (ref RP4)
+(value RP4X2)
+(footprint Resistors_ThroughHole:Resistor_Array_SIP8)
+(libsource (lib DougsSch) (part RP4X2))
+(sheetpath (names /) (tstamps /))
+(tstamp 546FA54B)))</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.getPcbRefDesTimestamp">
+<code class="descname">getPcbRefDesTimestamp</code><span class="sig-paren">(</span><em>pcbList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.getPcbRefDesTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>(path /544A6677)
+(fp_text reference D12 (at 1.27 5.08 180) (layer F.SilkS)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.getSchematicRefDesTimestamp">
+<code class="descname">getSchematicRefDesTimestamp</code><span class="sig-paren">(</span><em>schList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.getSchematicRefDesTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schList</strong> &#8211; The schematic as a list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of ref des vs time stamps for the schematic</td>
+</tr>
+</tbody>
+</table>
+<p>Make a list of ref des vs timestamp for schematics
+$Comp
+L CONN_2 P6
+U 1 1 544A664D
+P 3200 3750
+F 0 &#8220;P6&#8221; V 3150 3750 40  0000 C CNN
+F 1 &#8220;CONN_2&#8221; V 3250 3750 40  0000 C CNN
+F 2 &#8220;Pin_Headers:Pin_Header_Straight_1x02&#8221; H 3200 3750 60  0000 C CNN
+F 3 &#8220;&#8221; H 3200 3750 60  0000 C CNN</p>
+<blockquote>
+<div>1    3200 3750
+-1   0    0    1</div></blockquote>
+<p>$EndComp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.makeSchVsPcbRefDesList">
+<code class="descname">makeSchVsPcbRefDesList</code><span class="sig-paren">(</span><em>schList</em>, <em>pcbList</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.makeSchVsPcbRefDesList" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schList</strong> &#8211; The schematic as a list</li>
+<li><strong>pcbList</strong> &#8211; The pcb as a list</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if OK, False if error</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Make the schematic vs netlist ref des list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.readInFile">
+<code class="descname">readInFile</code><span class="sig-paren">(</span><em>inFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.readInFile" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inFileName</strong> &#8211; The path with file name</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of the lines in the file</td>
+</tr>
+</tbody>
+</table>
+<p>Read the text file into a list for  processing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.replaceRefDesInSch">
+<code class="descname">replaceRefDesInSch</code><span class="sig-paren">(</span><em>row</em>, <em>refDesSchVsPc</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.replaceRefDesInSch" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>row</strong> &#8211; The schematic ref des</li>
+<li><strong>refDesSchVsPc</strong> &#8211; Cross-reference list of ref des</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new row</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>L LED-RESCUE-LED-TEST-2 D99</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.replaceRefDesInSchSilkscreen">
+<code class="descname">replaceRefDesInSchSilkscreen</code><span class="sig-paren">(</span><em>row</em>, <em>refDesSchVsPc</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.replaceRefDesInSchSilkscreen" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>row</strong> &#8211; The schematic ref des silkscreen row</li>
+<li><strong>refDesSchVsPc</strong> &#8211; Cross-reference list of ref des</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The new row</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>F 0 &#8220;D99&#8221; H 6850 4750 50  0000 C CNN</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.selectKicadSchematic">
+<code class="descname">selectKicadSchematic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.selectKicadSchematic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">path/name of the file that was selected</td>
+</tr>
+</tbody>
+</table>
+<p>This is the dialog which locates the Kicad Schematic files</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.ProcessKicadSchematic.writeOutSchematic">
+<code class="descname">writeOutSchematic</code><span class="sig-paren">(</span><em>outList</em>, <em>outFileName</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.ProcessKicadSchematic.writeOutSchematic" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>outList</strong> &#8211; The new schematic as a list</li>
+<li><strong>outFileName</strong> &#8211; The path file name to store the list into</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyKiBackannSchem.UIManager">
+<em class="property">class </em><code class="descclassname">pyKiBackannSchem.</code><code class="descname">UIManager</code><a class="headerlink" href="#pyKiBackannSchem.UIManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>User Interface</p>
+<dl class="method">
+<dt id="pyKiBackannSchem.UIManager.about_pykifoot">
+<code class="descname">about_pykifoot</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.UIManager.about_pykifoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.UIManager.openIF">
+<code class="descname">openIF</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.UIManager.openIF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyKiBackannSchem.UIManager.setSelProcess">
+<code class="descname">setSelProcess</code><span class="sig-paren">(</span><em>action</em>, <em>current</em><span class="sig-paren">)</span><a class="headerlink" href="#pyKiBackannSchem.UIManager.setSelProcess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html#document-index">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2014, Doug Gilliland.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
