@@ -20,47 +20,6 @@ Program is run by either typing python pyKiFootPrint.py or double clicking pyKiF
 Formats
 =======
 
-NetList format
-==============
-
-* (comp (ref D99)
-* (net (code 26) (name "Net-(D99-Pad1)")
-* (node (ref RP4) (pin 8))
-* (node (ref D99) (pin 1)))
-
-PCB format
-==========
-
-* (L130) (net 47 "Net-(D99-Pad1)")
-* (L131) (net 48 "Net-(D99-Pad2)")
-* (L170) (add_net "Net-(D99-Pad1)")
-* (L171) (add_net "Net-(D99-Pad2)")
-* (L580) (fp_text reference D99 (at 1.905 5.08 180) (layer F.SilkS)
-* (L851) (pad 1 thru_hole circle (at -1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L596) (net 47 "Net-(D99-Pad1)"))
-* (L597) (pad 2 thru_hole circle (at 1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L598) (net 48 "Net-(D99-Pad2)"))
-* (L792) (pad 1 thru_hole rect (at -1.27 0 180) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
-* (L793) (net 48 "Net-(D99-Pad2)"))
-* (L1298) (pad 8 thru_hole circle (at 8.89 0 90) (size 1.397 1.397) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L1299) (net 47 "Net-(D99-Pad1)"))
-
-footprint format
-================
-
-* $Comp
-* L LED-RESCUE-LED-TEST-2 D99
-* U 1 1 544A66CA
-* P 6850 4650
-* F 0 "D99" H 6850 4750 50  0000 C CNN
-* F 1 "LED" H 6850 4550 50  0000 C CNN
-* F 2 "LEDs:LED-5MM" H 6850 4650 60  0000 C CNN
-* F 3 "" H 6850 4650 60  0001 C CNN
-* 	1    6850 4650
-* 	-1   0    0    -1  
-* $EndComp
-
-
 ===============
 Output Messages
 ===============
@@ -72,8 +31,6 @@ Output Messages
 Options
 =======
 
-* Check only
-* Back annotate (default choice)
 
 ===
 API
