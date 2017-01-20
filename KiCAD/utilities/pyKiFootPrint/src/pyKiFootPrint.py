@@ -139,7 +139,7 @@ class ProcessFootprints:
 			raise SystemExit
 		return True
 	
-	def doKiPcb2Sch(self):
+	def doKiFootPrintMake(self):
 		"""Backannotate option.
 		The executive which calls all of the other functions.
 		"""
@@ -244,15 +244,14 @@ class UIManager:
 	def openIF(self, b):
 		"""
 		"""
-		SchClass = ProcessFootprints()
-		if backAnnotate == True:
-			if SchClass.doKiPcb2Sch() != False:
-				message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-				message.set_markup("Backannotation Completed")
-				message.run()
-				message.destroy()
+		FootPrintClass = ProcessFootprints()
+		if FootPrintClass.doKiFootPrintMake() != False:
+			message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
+			message.set_markup("Backannotation Completed")
+			message.run()
+			message.destroy()
 		else:
-			if SchClass.doKiSchChk() != False:
+			if FootPrintClass.doKiSchChk() != False:
 				message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
 				message.set_markup("Analysis Completed")
 				message.run()
