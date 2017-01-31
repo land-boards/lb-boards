@@ -910,4 +910,6 @@ Connection ~ 4100 10300
 Wire Wire Line
 	4350 3350 3400 3350
 Connection ~ 3400 3350
+Text Label 4000 8800 0    60   ~ 0
+WE
 $EndSCHEMATC
