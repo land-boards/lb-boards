@@ -1,4 +1,4 @@
-update=1/2/2017 3:27:44 PM
+update=2/4/2017 5:34:47 PM
 version=1
 last_client=kicad
 [general]
@@ -40,6 +40,7 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dou
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName2=conn
-LibName3=power
+LibName1=Carrier95to49-rescue
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=conn
+LibName4=power
