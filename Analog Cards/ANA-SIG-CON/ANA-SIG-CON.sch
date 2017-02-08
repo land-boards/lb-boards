@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ANA-SIG-CON-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
