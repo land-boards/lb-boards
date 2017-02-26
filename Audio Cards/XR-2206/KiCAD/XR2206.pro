@@ -1,5 +1,5 @@
-update=07/03/2013 11:58:17
-last_client=eeschema
+update=2/23/2017 5:07:36 PM
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -32,24 +32,20 @@ LibName3=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=special
-LibName8=audio
-LibName9=interface
-LibName10=philips
-LibName11=display
-LibName12=opto
-LibName13=atmel
-LibName14=contrib
-LibName15=EXAR
+LibName1=XR2206-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=linear
+LibName7=regul
+LibName8=special
+LibName9=audio
+LibName10=interface
+LibName11=philips
+LibName12=display
+LibName13=opto
+LibName14=atmel
+LibName15=contrib
+LibName16=EXAR

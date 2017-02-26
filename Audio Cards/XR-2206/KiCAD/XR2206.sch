@@ -1,11 +1,11 @@
 EESchema Schematic File Version 2
+LIBS:XR2206-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
-LIBS:special
 LIBS:audio
 LIBS:interface
 LIBS:philips
@@ -43,15 +43,9 @@ F 3 "" H 7100 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 2950 5300 2950
+	3850 2950 7700 2950
 Wire Wire Line
-	5300 2950 7450 2950
-Wire Wire Line
-	7450 2950 7700 2950
-Wire Wire Line
-	7650 3850 6800 3850
-Wire Wire Line
-	6800 3850 5950 3850
+	5950 3850 7650 3850
 Wire Wire Line
 	4400 5050 4400 4550
 Wire Wire Line
@@ -64,9 +58,7 @@ Wire Wire Line
 	4100 4450 4750 4450
 Connection ~ 6650 3950
 Wire Wire Line
-	6450 3950 6650 3950
-Wire Wire Line
-	6650 3950 6900 3950
+	6450 3950 6900 3950
 Connection ~ 3850 3650
 Wire Wire Line
 	3350 3650 3850 3650
@@ -109,15 +101,7 @@ Wire Wire Line
 Connection ~ 3850 4150
 Connection ~ 5300 2950
 Wire Wire Line
-	3850 5250 3850 5200
-Wire Wire Line
-	3850 5200 3850 4750
-Wire Wire Line
-	3850 4750 3850 4150
-Wire Wire Line
-	3850 4150 3850 3650
-Wire Wire Line
-	3850 3650 3850 3450
+	3850 3450 3850 5250
 Wire Wire Line
 	4750 4350 4150 4350
 Wire Wire Line
@@ -125,11 +109,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 4250 4200 4250
 Wire Wire Line
-	7550 5200 6000 5200
-Wire Wire Line
-	6000 5200 5300 5200
-Wire Wire Line
-	5300 5200 3850 5200
+	7550 5200 3850 5200
 Connection ~ 6000 5200
 Wire Wire Line
 	7550 3150 7700 3150
@@ -148,9 +128,7 @@ Wire Wire Line
 	3850 4750 3950 4750
 Connection ~ 3850 4750
 Wire Wire Line
-	7550 3150 7550 4250
-Wire Wire Line
-	7550 4250 7550 5200
+	7550 3150 7550 5200
 Wire Wire Line
 	7550 4050 7650 4050
 Text Notes 8150 3900 0    60   ~ 0
@@ -178,7 +156,7 @@ F 3 "" H 8050 3050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
+L POT-RESCUE-XR2206 RV1
 U 1 1 511E791A
 P 4100 4750
 F 0 "RV1" H 4100 4650 50  0000 C CNN
