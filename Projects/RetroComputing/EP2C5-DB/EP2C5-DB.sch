@@ -1013,13 +1013,13 @@ F 3 "" H 5200 0   60  0000 C CNN
 	1    5200 1200
 	1    0    0    -1  
 $EndComp
-Text Label 4550 2500 0    60   ~ 0
+Text Label 4450 1150 0    60   ~ 0
 P41
-Text Label 5700 2500 0    60   ~ 0
+Text Label 4450 1250 0    60   ~ 0
 P43
-Text Label 4550 1050 0    60   ~ 0
+Text Label 4450 1350 0    60   ~ 0
 P45
-Text Label 4550 1150 0    60   ~ 0
+Text Label 4450 2300 0    60   ~ 0
 P48
 Wire Wire Line
 	4950 1350 4400 1350
@@ -1029,13 +1029,13 @@ Wire Wire Line
 	4950 1150 4400 1150
 Wire Wire Line
 	4950 1250 4400 1250
-Text Label 5700 2400 0    60   ~ 0
+Text Label 5700 1150 0    60   ~ 0
 P40
-Text Label 5650 1050 0    60   ~ 0
+Text Label 5700 1250 0    60   ~ 0
 P42
-Text Label 5650 1150 0    60   ~ 0
+Text Label 5700 1350 0    60   ~ 0
 P44
-Text Label 5650 1250 0    60   ~ 0
+Text Label 5700 2300 0    60   ~ 0
 P47
 Wire Wire Line
 	6000 1050 5450 1050
@@ -1291,13 +1291,13 @@ Wire Wire Line
 	6000 2500 5450 2500
 Text Notes 4950 3750 0    60   ~ 0
 EXPANSION
-Text Label 4550 2300 0    60   ~ 0
+Text Label 4450 1050 0    60   ~ 0
 P25
 Text Label 2700 6850 0    60   ~ 0
 P24
-Text Label 5700 2300 0    60   ~ 0
+Text Label 5700 1050 0    60   ~ 0
 P31
-Text Label 4550 1250 0    60   ~ 0
+Text Label 4450 2400 0    60   ~ 0
 P52
 $Comp
 L CONN_02X06 J8
@@ -1378,8 +1378,6 @@ Wire Wire Line
 	4950 2200 4850 2200
 Wire Wire Line
 	4850 2200 4850 2150
-Text Label 6950 2550 0    60   ~ 0
-P79
 Wire Wire Line
 	8150 5850 7550 5850
 Text Label 7650 5850 0    60   ~ 0
@@ -1449,15 +1447,13 @@ Text Notes 1100 7050 0    60   ~ 0
 (V1.2-DNC)
 NoConn ~ 2350 7050
 NoConn ~ 1850 7050
-Text Label 4550 2400 0    60   ~ 0
-P32
-Text Label 5650 1350 0    60   ~ 0
+Text Label 5700 2400 0    60   ~ 0
 P51
-Text Label 6300 2750 0    60   ~ 0
+Text Label 4450 2600 0    60   ~ 0
 P76
-Text Label 4550 1350 0    60   ~ 0
+Text Label 5700 2500 0    60   ~ 0
 P55
-Text Label 4550 2600 0    60   ~ 0
+Text Label 4450 2500 0    60   ~ 0
 P58
 Text Label 5700 2600 0    60   ~ 0
 P60
@@ -1647,7 +1643,7 @@ F 3 "" H 7100 5200 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 6950 2350 0    60   ~ 0
-P22
+P32
 Text Notes 750  6750 0    60   ~ 0
 (SRAM)
 Text Notes 500  3400 0    60   ~ 0
@@ -1666,4 +1662,6 @@ NoConn ~ 2350 6650
 Text Notes 2750 6750 0    60   ~ 0
 (DEDICATED)
 NoConn ~ 2350 6750
+Text Label 6950 2550 0    60   ~ 0
+P126
 $EndSCHEMATC
