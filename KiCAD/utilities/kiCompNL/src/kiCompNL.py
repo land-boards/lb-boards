@@ -19,9 +19,8 @@ import string
 import os
 import sys
 
-#sys.path.append('C:\\Users\\DGilliland\\Documents\\Subversion\\python\\dgCommonModules')
-#sys.path.append('C:\\Users\\DGilliland\\Documents\\Subversion\\python\\dgCommonModules')
 sys.path.append('C:\\Users\\doug_000\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
+sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
 
 defaultPath = '.'
 
@@ -120,7 +119,7 @@ class ControlClass:
 				else:
 					errorDialog('Expected a net after the net start')
 					SystemExit()
-			elif progState == IN_NET:
+			elif progState == IN_NET:		## First pin in a net
 				if "(node ("  in inLine:
 					subString = inLine[11:-2]
 					subString = subString.replace(') (pin ','-')
@@ -129,7 +128,7 @@ class ControlClass:
 					theNode.append(subString)
 					progState = IN_NET_NODE
 				else:
-					errorDialog('Expected a node after the first net start')
+					errorDialog('Expected a pin after the first net start')
 					SystemExit()
 			elif progState == IN_NET_NODE:
 				if "(net ("  in inLine:
@@ -146,6 +145,7 @@ class ControlClass:
 				else:
 					errorDialog('Expected a node after the first net start')
 					SystemExit()
+		outNetList.append(theNode)
 		#print outNetList
 		print 'Number of Nets:',len(outNetList)
 		return outNetList
@@ -153,12 +153,18 @@ class ControlClass:
 	def compareNetLists(self, nl1, nl2):
 		diffs1to2 = []
 		diffs2to1 = []
+#		print '*** One ***'
 		for row in nl1:
 			if row not in nl2:
 				diffs1to2.append(row)
+#				print row
+#		print '*** Two ***'
 		for row in nl2:
 			if row not in nl1:
 				diffs2to1.append(row)
+#				print row
+				
+#		return
 				
 		for row1 in diffs1to2:
 			noNodeMatch = True
