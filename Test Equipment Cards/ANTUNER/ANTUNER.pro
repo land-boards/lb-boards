@@ -1,4 +1,4 @@
-update=4/14/2017 4:51:12 PM
+update=4/17/2017 8:08:12 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -8,16 +8,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=PULSE-GEN-rescue
-LibName2=power
-LibName3=device
-LibName4=conn
-LibName5=74xx
-LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -38,3 +28,14 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=PULSE-GEN-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
+LibName5=74xx
+LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
