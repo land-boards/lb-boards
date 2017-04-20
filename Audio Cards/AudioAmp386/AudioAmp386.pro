@@ -1,4 +1,4 @@
-update=4/19/2017 2:53:25 PM
+update=4/20/2017 9:21:59 AM
 last_client=kicad
 [cvpcb]
 version=1
@@ -36,3 +36,16 @@ LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName3=power
 LibName4=conn
 LibName5=linear
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
