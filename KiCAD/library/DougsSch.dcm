@@ -109,16 +109,6 @@ D ATTiny85
 K ATTiny85
 $ENDCMP
 #
-$CMP AUDIOAMP384BRD
-D Audio Amp, 5W
-K Audio Amp, 5W
-$ENDCMP
-#
-$CMP AUDIOAMP386BRD
-D Audio Amplifier, 3/4 W
-K Audio Amplifier, 3/4 W
-$ENDCMP
-#
 $CMP BC237
 D NPN TRANSISTOR
 K NPN TRANSISTOR
@@ -169,16 +159,6 @@ $ENDCMP
 $CMP FT232RL
 D USB to Serial TTL
 K USB to Serial TTL
-$ENDCMP
-#
-$CMP FTDI
-D FTDI Standard Connector
-K FTDI Standard Connector
-$ENDCMP
-#
-$CMP GPS
-D Adafruit GPS Module
-K Adafruit GPS Module
 $ENDCMP
 #
 $CMP GVS
@@ -242,11 +222,6 @@ D 3.5mm JACK
 K 3.5mm JACK
 $ENDCMP
 #
-$CMP KEYPAD
-D 5-Way Switch
-K 5-Way Switch
-$ENDCMP
-#
 $CMP LED-fixed
 K LED
 $ENDCMP
@@ -292,16 +267,6 @@ D LiPo Battery Charger, One Cell, 5V
 K LiPo Battery Charger, One Cell, 5V
 $ENDCMP
 #
-$CMP OptoSmall
-D FTDI Standard Connector
-K FTDI Standard Connector
-$ENDCMP
-#
-$CMP PWR-BLK-01
-D FTDI Standard Connector
-K FTDI Standard Connector
-$ENDCMP
-#
 $CMP RCA-JACK
 D JACK, RCA, PHONO
 K JACK, RCA, PHONO
@@ -321,19 +286,9 @@ D 8 resistors
 K R DEV
 $ENDCMP
 #
-$CMP TFT_16-PIN
-D Adafruit GPS Module
-K Adafruit GPS Module
-$ENDCMP
-#
 $CMP XR2206
 D VCO
 K VCO
-$ENDCMP
-#
-$CMP XR2206BRD
-D VCO BOARD
-K VCO BOARD
 $ENDCMP
 #
 #End Doc Library
