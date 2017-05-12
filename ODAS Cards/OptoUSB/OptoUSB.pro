@@ -1,4 +1,4 @@
-update=3/8/2017 9:07:30 AM
+update=5/7/2017 4:21:22 PM
 version=1
 last_client=kicad
 [general]
@@ -53,11 +53,12 @@ LabSize=60
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=74xx
-LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
-LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
-LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Cards
+LibName1=OptoUSB-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=74xx
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
+LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
+LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
+LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Cards
