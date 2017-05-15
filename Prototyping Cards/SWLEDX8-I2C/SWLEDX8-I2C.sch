@@ -234,17 +234,6 @@ F 3 "" H 3600 2500 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X05 P2
-U 1 1 5909F095
-P 2500 3000
-F 0 "P2" H 2500 3300 50  0000 C CNN
-F 1 "CONN_01X05" V 2600 3000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x05_Pitch2.54mm" H 2500 3400 25  0000 C CNN
-F 3 "" H 2500 3000 60  0000 C CNN
-	1    2500 3000
-	-1   0    0    1   
-$EndComp
-$Comp
 L GND #PWR05
 U 1 1 5909F36A
 P 2800 3400
@@ -357,7 +346,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 2250 3600 2350
 Wire Wire Line
-	3350 2250 4550 2250
+	3250 2250 4550 2250
 Connection ~ 4550 2250
 Wire Wire Line
 	3750 2350 3750 2250
@@ -366,9 +355,9 @@ Wire Wire Line
 	3900 2350 3900 2250
 Connection ~ 3900 2250
 Wire Wire Line
-	2700 3100 3350 3100
+	2700 3100 3250 3100
 Wire Wire Line
-	3350 3100 3350 2250
+	3250 3100 3250 2250
 Connection ~ 3600 2250
 $Comp
 L R R1
@@ -434,13 +423,13 @@ Wire Wire Line
 Wire Wire Line
 	3200 4700 3200 4600
 Wire Wire Line
-	2950 4700 2950 3100
+	2950 3100 2950 4700
 Connection ~ 2950 3100
 Connection ~ 3200 4700
 Wire Wire Line
-	4500 5050 3400 5050
+	3400 5050 4500 5050
 Wire Wire Line
-	3400 5050 3400 4600
+	3400 4600 3400 5050
 Connection ~ 4500 5050
 Wire Wire Line
 	3400 4700 3600 4700
@@ -482,4 +471,41 @@ Wire Wire Line
 	3400 4100 3400 3200
 Wire Wire Line
 	3400 3200 4000 3200
+$Comp
+L CONN_02X05 P2
+U 1 1 591A13B1
+P 2450 3000
+F 0 "P2" H 2450 3300 50  0000 C CNN
+F 1 "CONN_02X05" H 2450 2700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_2x05_Pitch2.54mm" H 2200 2600 30  0000 C CNN
+F 3 "" H 2450 1800 60  0000 C CNN
+	1    2450 3000
+	1    0    0    1   
+$EndComp
+Text Label 1950 2800 0    60   ~ 0
+INTS
+Text Label 1950 2900 0    60   ~ 0
+SCL
+Text Label 1950 3000 0    60   ~ 0
+SDA
+Wire Wire Line
+	2200 2800 1800 2800
+Wire Wire Line
+	2200 2900 1800 2900
+Wire Wire Line
+	2200 3000 1800 3000
+Wire Wire Line
+	2200 3200 2150 3200
+Wire Wire Line
+	2150 3200 2150 3350
+Wire Wire Line
+	2150 3350 2800 3350
+Connection ~ 2800 3350
+Wire Wire Line
+	2200 3100 2050 3100
+Wire Wire Line
+	2050 3100 2050 3650
+Wire Wire Line
+	2050 3650 2950 3650
+Connection ~ 2950 3650
 $EndSCHEMATC
