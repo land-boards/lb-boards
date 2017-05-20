@@ -1,4 +1,4 @@
-update=5/7/2017 4:21:22 PM
+update=5/20/2017 12:48:42 PM
 version=1
 last_client=kicad
 [general]
@@ -36,19 +36,6 @@ LibName4=pin_array
 LibName5=divers
 LibName6=dip_sockets
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -62,3 +49,13 @@ LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
 LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
 LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
 LibName9=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Cards
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

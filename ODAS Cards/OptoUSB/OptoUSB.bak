@@ -1,12 +1,9 @@
 EESchema Schematic File Version 2
+LIBS:OptoUSB-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:74xx
-LIBS:LandBoards_Semis
-LIBS:LandBoards_Conns
-LIBS:LandBoards
-LIBS:LandBoards_Cards
 LIBS:OptoUSB-cache
 EELAYER 25 0
 EELAYER END
@@ -14,17 +11,14 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "OptoUSB"
-Date "Tuesday, March 07, 2017"
-Rev "X1"
+Date "2017-05-20"
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 3400 5700
-Wire Wire Line
-	3400 5900 3400 5700
 Connection ~ 2100 7600
 Wire Wire Line
 	4550 6800 4650 6800
@@ -274,12 +268,12 @@ Wire Wire Line
 $Comp
 L 74HC14 U6
 U 3 1 58BFE6B2
-P 6800 5150
-F 0 "U6" H 6950 5250 40  0000 C CNN
-F 1 "74HC14" H 7000 5050 40  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 6800 5000 20  0000 C CNN
-F 3 "" H 6800 5150 60  0000 C CNN
-	3    6800 5150
+P 8050 4400
+F 0 "U6" H 8200 4500 40  0000 C CNN
+F 1 "74HC14" H 8250 4300 40  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8050 4250 20  0000 C CNN
+F 3 "" H 8050 4400 60  0000 C CNN
+	3    8050 4400
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -342,12 +336,12 @@ Wire Wire Line
 $Comp
 L 74HC14 U6
 U 2 1 58C04EEA
-P 6800 5450
-F 0 "U6" H 6950 5550 40  0000 C CNN
-F 1 "74HC14" H 7000 5350 40  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 6800 5300 20  0000 C CNN
-F 3 "" H 6800 5450 60  0000 C CNN
-	2    6800 5450
+P 8050 4750
+F 0 "U6" H 8200 4850 40  0000 C CNN
+F 1 "74HC14" H 8250 4650 40  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8050 4600 20  0000 C CNN
+F 3 "" H 8050 4750 60  0000 C CNN
+	2    8050 4750
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -375,10 +369,6 @@ Wire Wire Line
 	8650 5150 8250 5150
 Wire Wire Line
 	3600 7600 3600 7550
-Wire Wire Line
-	6350 5150 5750 5150
-Wire Wire Line
-	6350 5450 5750 5450
 Wire Wire Line
 	7350 5800 6750 5800
 Wire Wire Line
@@ -647,7 +637,7 @@ Text Label 8650 3750 0    60   ~ 0
 UCTS
 Text Label 6750 3650 0    60   ~ 0
 LCTS
-Text Label 5900 5150 0    60   ~ 0
+Text Label 7000 5150 0    60   ~ 0
 LCTS
 Text Label 6900 6100 0    60   ~ 0
 LRTS
@@ -690,7 +680,7 @@ F 7 "N/A" H 5900 7550 60  0001 C CNN "VendorPN"
 	1    5900 7550
 	1    0    0    -1  
 $EndComp
-Text Label 5900 5450 0    60   ~ 0
+Text Label 7000 5450 0    60   ~ 0
 LRX
 $Comp
 L R R14
@@ -715,9 +705,9 @@ F 3 "" H 7800 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7250 5150 7350 5150
+	6800 5150 7350 5150
 Wire Wire Line
-	7250 5450 7350 5450
+	6800 5450 7350 5450
 Wire Wire Line
 	4900 3950 4900 4150
 $Comp
@@ -768,7 +758,7 @@ $EndComp
 Wire Wire Line
 	4900 3550 4900 3650
 $Comp
-L Q_NPN_BEC Q1
+L Q_NPN_BEC-RESCUE-OptoUSB Q1
 U 1 1 58C0EE35
 P 3000 1550
 F 0 "Q1" H 3300 1600 50  0000 R CNN
@@ -779,7 +769,7 @@ F 3 "" H 3000 1550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NPN_BEC Q2
+L Q_NPN_BEC-RESCUE-OptoUSB Q2
 U 1 1 58C0F066
 P 3000 3200
 F 0 "Q2" H 3300 3250 50  0000 R CNN
@@ -814,7 +804,7 @@ F 3 "" H 4700 1800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8750 5600 8750 6400
+	8750 4400 8750 6400
 $Comp
 L GND #PWR05
 U 1 1 58C07696
@@ -878,4 +868,13 @@ F 3 "" H 8400 5700 50  0000 C CNN
 	1    8400 5700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8750 4400 8500 4400
+Connection ~ 8750 5600
+Wire Wire Line
+	8500 4750 8750 4750
+Connection ~ 8750 4750
+Wire Wire Line
+	3400 5900 3400 5800
+Connection ~ 3400 5800
 $EndSCHEMATC
