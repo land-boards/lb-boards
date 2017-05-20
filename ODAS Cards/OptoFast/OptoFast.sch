@@ -1,9 +1,9 @@
 EESchema Schematic File Version 2
+LIBS:OptoFast-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
-LIBS:DougsSch
 LIBS:OptoFast-cache
 EELAYER 25 0
 EELAYER END
