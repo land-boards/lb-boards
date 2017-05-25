@@ -13,10 +13,10 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "LED-18"
-Date "21 nov 2014"
-Rev "X2"
-Comp "dougspcbdesigns.pbworks.com"
+Title "LED-32"
+Date "Thursday, May 25, 2017"
+Rev "X1"
+Comp "land-boards.com/LED-32"
 Comment1 ""
 Comment2 ""
 Comment3 ""
