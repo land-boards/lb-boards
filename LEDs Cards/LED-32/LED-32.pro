@@ -1,4 +1,4 @@
-update=5/25/2017 1:59:26 PM
+update=5/28/2017 10:09:53 AM
 version=1
 last_client=kicad
 [general]
@@ -49,5 +49,4 @@ LibName3=transistors
 LibName4=conn
 LibName5=linear
 LibName6=regul
-LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
-LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
+LibName7=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

@@ -85,7 +85,7 @@ import csv
 import os
 import sys
 import string
-sys.path.append('C:\\Users\\doug_000\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
+sys.path.append('C:\\Users\\douglas\\My Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
 
 defaultPath = '.'

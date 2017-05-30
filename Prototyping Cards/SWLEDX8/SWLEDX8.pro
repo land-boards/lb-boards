@@ -1,4 +1,4 @@
-update=5/3/2017 9:37:53 AM
+update=5/28/2017 11:43:21 AM
 version=1
 last_client=kicad
 [general]
@@ -44,4 +44,4 @@ LibDir=
 LibName1=power
 LibName2=device
 LibName3=conn
-LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName4=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
