@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/Douglas/Documents/GitHub/lb-boards/ODAS Cards/OptoUSB/OptoUSB.sch")
-    (date "5/20/2017 3:02:41 PM")
+    (date "6/3/2017 12:36:49 PM")
     (tool "Eeschema 4.0.5")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -421,16 +421,16 @@
         (pin (num G2) (name GND2) (type passive))
         (pin (num NC) (name NC) (type power_in)))))
   (libraries
-    (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
-    (library (logical OptoUSB-cache)
-      (uri "C:\\Users\\Douglas\\Documents\\GitHub\\lb-boards\\ODAS Cards\\OptoUSB\\OptoUSB-cache.lib"))
-    (library (logical 74xx)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\74xx.lib"))
     (library (logical OptoUSB-rescue)
       (uri OptoUSB-rescue.lib))
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib")))
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
+    (library (logical 74xx)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\74xx.lib"))
+    (library (logical conn)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical OptoUSB-cache)
+      (uri "C:\\Users\\Douglas\\Documents\\GitHub\\lb-boards\\ODAS Cards\\OptoUSB\\OptoUSB-cache.lib")))
   (nets
     (net (code 1) (name "Net-(R9-Pad2)")
       (node (ref U2) (pin 6))
