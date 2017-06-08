@@ -1,17 +1,18 @@
 EESchema Schematic File Version 2
-LIBS:BBB-IND-01-rescue
+LIBS:DougsSch
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
+LIBS:beaglebone
 LIBS:linear
 LIBS:memory
-LIBS:BBB-IND-01-cache
+LIBS:BBB-GVS-3-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title "BeagleBone Cape Baseline"
 Date "24 feb 2015"
 Rev "X4"
@@ -78,48 +79,10 @@ F 3 "~" H 5200 7700 60  0000 C CNN
 	1    5200 7700
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_1 MTG3
-U 1 1 5707EA64
-P 4700 7050
-F 0 "MTG3" H 4780 7050 40  0000 L CNN
-F 1 "CONN_1" H 4700 7105 30  0001 C CNN
-F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 4700 7000 30  0000 C CNN
-F 3 "" H 4700 7050 60  0000 C CNN
-	1    4700 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_1 MTG4
-U 1 1 5707EB5A
-P 4700 7200
-F 0 "MTG4" H 4780 7200 40  0000 L CNN
-F 1 "CONN_1" H 4700 7255 30  0001 C CNN
-F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 4700 7150 30  0000 C CNN
-F 3 "" H 4700 7200 60  0000 C CNN
-	1    4700 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_1 MTG1
-U 1 1 5707EB90
-P 4700 6750
-F 0 "MTG1" H 4780 6750 40  0000 L CNN
-F 1 "CONN_1" H 4700 6805 30  0001 C CNN
-F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 4700 6700 30  0000 C CNN
-F 3 "" H 4700 6750 60  0000 C CNN
-	1    4700 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_1 MTG2
-U 1 1 5707EB96
-P 4700 6900
-F 0 "MTG2" H 4780 6900 40  0000 L CNN
-F 1 "CONN_1" H 4700 6955 30  0001 C CNN
-F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 4700 6850 30  0000 C CNN
-F 3 "" H 4700 6900 60  0000 C CNN
-	1    4700 6900
-	1    0    0    -1  
-$EndComp
+$Sheet
+S 5700 950  1200 1000
+U 4EB0F8C5
+F0 "16-bit Translator" 60
+F1 "trans16.sch" 60
+$EndSheet
 $EndSCHEMATC
