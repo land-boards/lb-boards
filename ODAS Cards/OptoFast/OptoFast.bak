@@ -11,9 +11,9 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 5
-Title "OPTO-ISOLATED CARD"
-Date "Friday, June 12, 2015"
-Rev "X1"
+Title "FAST OPTO-ISOLATOR CARD"
+Date "Thursday, June 08, 2017"
+Rev "X2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
