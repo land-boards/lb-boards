@@ -1,4 +1,4 @@
-update=2/4/2017 5:34:47 PM
+update=6/8/2017 2:26:02 PM
 version=1
 last_client=kicad
 [general]
@@ -44,3 +44,4 @@ LibName1=Carrier95to49-rescue
 LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName3=conn
 LibName4=power
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
