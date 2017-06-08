@@ -2499,13 +2499,13 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Angled_2x20_Pitch2.54mm (layer Front) (tedit 5938AA1D) (tstamp 5938A718)
+  (module Pin_Headers:Pin_Header_Angled_2x20_Pitch2.54mm (layer Front) (tedit 5938A9E0) (tstamp 5938A718)
     (at 128.524 69.342 270)
     (descr "Through hole angled pin header, 2x20, 2.54mm pitch, 6mm pin length, double rows")
     (tags "Through hole angled pin header THT 2x20 2.54mm double row")
     (path /592ADC3A)
-    (fp_text reference HDR1 (at 1.778 -2.54 270) (layer F.SilkS)
-      (effects (font (size 1.27 1.27) (thickness 0.254)))
+    (fp_text reference HDR1 (at 1.016 -2.032 270) (layer F.SilkS)
+      (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value CONN_01X40 (at 5.585 50.53 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -3016,7 +3016,7 @@
     (at 70.358 73.914)
     (path /5927C824)
     (fp_text reference TEST (at 0.148 -3.306501) (layer B.SilkS)
-      (effects (font (size 1.27 1.27) (thickness 0.254)) (justify mirror))
+      (effects (font (thickness 0.3048)) (justify mirror))
     )
     (fp_text value COUPON (at 0 4) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
@@ -3046,7 +3046,7 @@
     (at 62 41)
     (path /50D9D6EF)
     (fp_text reference MTG1 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.27 1.27) (thickness 0.254)))
+      (effects (font (thickness 0.3048)))
     )
     (fp_text value CONN_1 (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
@@ -3059,7 +3059,7 @@
     (at 147 41)
     (path /50D9D6F4)
     (fp_text reference MTG2 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.27 1.27) (thickness 0.254)))
+      (effects (font (thickness 0.3048)))
     )
     (fp_text value CONN_1 (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
@@ -3072,7 +3072,7 @@
     (at 62 76)
     (path /50D9D6F9)
     (fp_text reference MTG3 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.27 1.27) (thickness 0.254)))
+      (effects (font (thickness 0.3048)))
     )
     (fp_text value CONN_1 (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
@@ -3085,7 +3085,7 @@
     (at 147 76)
     (path /50D9D700)
     (fp_text reference MTG4 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.27 1.27) (thickness 0.254)))
+      (effects (font (thickness 0.3048)))
     )
     (fp_text value CONN_1 (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (thickness 0.3048)))
