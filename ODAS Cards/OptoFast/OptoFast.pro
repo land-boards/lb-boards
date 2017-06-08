@@ -1,4 +1,4 @@
-update=5/20/2017 3:16:39 PM
+update=6/7/2017 2:24:51 PM
 version=1
 last_client=kicad
 [general]
@@ -36,6 +36,16 @@ LibName4=pin_array
 LibName5=divers
 LibName6=dip_sockets
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=OptoFast-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -49,13 +59,3 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=OptoFast-rescue
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

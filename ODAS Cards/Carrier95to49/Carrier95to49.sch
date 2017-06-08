@@ -1,8 +1,8 @@
 EESchema Schematic File Version 2
 LIBS:Carrier95to49-rescue
-LIBS:DougsSch
 LIBS:conn
 LIBS:power
+LIBS:LandBoards
 LIBS:Carrier95to49-cache
 EELAYER 25 0
 EELAYER END
@@ -690,6 +690,17 @@ F 1 "MTG_HOLE" H 6850 9300 60  0000 C CNN
 F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 6850 9400 60  0000 C CNN
 F 3 "" H 6850 9400 60  0000 C CNN
 	1    6850 9400
+	1    0    0    -1  
+$EndComp
+$Comp
+L COUPON TEST1
+U 1 1 59399B7A
+P 11100 9300
+F 0 "TEST1" H 11100 9300 60  0000 C CNN
+F 1 "COUPON" H 11100 9300 60  0000 C CNN
+F 2 "LandBoards_Marking:TEST_BLK-REAR" H 11100 9300 60  0000 C CNN
+F 3 "" H 11100 9300 60  0000 C CNN
+	1    11100 9300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
