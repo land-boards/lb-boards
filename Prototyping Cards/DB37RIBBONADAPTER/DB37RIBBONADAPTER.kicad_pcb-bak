@@ -3,9 +3,9 @@
   (general
     (links 37)
     (no_connects 0)
-    (area -13.382001 -9.5052 99.190501 43.859001)
+    (area -13.382001 -9.5052 99.190501 46.663701)
     (thickness 1.6002)
-    (drawings 23)
+    (drawings 22)
     (tracks 121)
     (zones 0)
     (modules 9)
@@ -239,54 +239,6 @@
     (fp_line (start 2 -1) (end -2 -1) (layer F.SilkS) (width 0.65))
     (fp_line (start -2 -1) (end -2 -1.5) (layer F.SilkS) (width 0.65))
     (fp_line (start -2 -1.5) (end 2 -1.5) (layer F.SilkS) (width 0.65))
-  )
-
-  (module LandBoards_MountHoles:MTG-4-40 (layer Front) (tedit 53F3AE25) (tstamp 5909D68D)
-    (at 91 4)
-    (path /590A3FE0)
-    (fp_text reference MTG1 (at -6.858 -0.635) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module LandBoards_MountHoles:MTG-4-40 (layer Front) (tedit 53F3AE25) (tstamp 5909D692)
-    (at 4 4)
-    (path /590A3F10)
-    (fp_text reference MTG2 (at -6.858 -0.635) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module LandBoards_MountHoles:MTG-4-40 (layer Front) (tedit 53F3AE25) (tstamp 5909D457)
-    (at 91 27)
-    (path /590A3C67)
-    (fp_text reference MTG?1 (at -6.858 -0.635) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
-  )
-
-  (module LandBoards_MountHoles:MTG-4-40 (layer Front) (tedit 53F3AE25) (tstamp 5909D697)
-    (at 4 27)
-    (path /590A3EAE)
-    (fp_text reference MTG3 (at -6.858 -0.635) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
 
   (module Pin_Headers:Pin_Header_Angled_2x20_Pitch2.54mm (layer Front) (tedit 5935B802) (tstamp 5935B400)
@@ -936,6 +888,62 @@
     )
   )
 
+  (module LandBoards_MountHoles:MTG-6-32 (layer Front) (tedit 538F790A) (tstamp 593AFECF)
+    (at 89 6)
+    (path /590A3FE0)
+    (fp_text reference MTG1 (at 0 -5.588) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 9.525 9.525) (drill 3.8354) (layers *.Cu *.Mask))
+  )
+
+  (module LandBoards_MountHoles:MTG-6-32 (layer Front) (tedit 538F790A) (tstamp 593AFED3)
+    (at 6 6)
+    (path /590A3F10)
+    (fp_text reference MTG2 (at 0 -5.588) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 9.525 9.525) (drill 3.8354) (layers *.Cu *.Mask))
+  )
+
+  (module LandBoards_MountHoles:MTG-6-32 (layer Front) (tedit 538F790A) (tstamp 593AFED7)
+    (at 6 25)
+    (path /590A3EAE)
+    (fp_text reference MTG3 (at 0 -5.588) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 9.525 9.525) (drill 3.8354) (layers *.Cu *.Mask))
+  )
+
+  (module LandBoards_MountHoles:MTG-6-32 (layer Front) (tedit 538F790A) (tstamp 593AFEDB)
+    (at 89 25)
+    (path /590A3C67)
+    (fp_text reference MTG?1 (at 0 -5.588) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
+      (effects (font (thickness 0.3048)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 9.525 9.525) (drill 3.8354) (layers *.Cu *.Mask))
+  )
+
+  (gr_line (start 6 31) (end 89 31) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_line (start 0 25) (end 0 6) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_line (start 89 0) (end 6 0) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_line (start 95 25) (end 95 6) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_arc (start 6 6) (end 0 6) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_arc (start 6 25) (end 6 31) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_arc (start 89 25) (end 95 25) (angle 90) (layer Edge.Cuts) (width 0.381))
+  (gr_arc (start 89 6) (end 89 0) (angle 90) (layer Edge.Cuts) (width 0.381))
   (dimension 31 (width 0.3048) (layer Dwgs.User)
     (gr_text "31.000 mm" (at -6.6256 15.5 90) (layer Dwgs.User)
       (effects (font (size 2.032 1.524) (thickness 0.3048)))
@@ -960,18 +968,11 @@
     (arrow2a (pts (xy 0 -6) (xy 1.126504 -5.413579)))
     (arrow2b (pts (xy 0 -6) (xy 1.126504 -6.586421)))
   )
-  (gr_text 37 (at 20.32 10.414) (layer F.SilkS)
-    (effects (font (size 1.651 1.524) (thickness 0.3048)) (justify left))
-  )
-  (gr_line (start 95 4) (end 95 27) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_line (start 0 27) (end 0 4) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_line (start 47.5 20.5) (end 47.5 8.5) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 47.5 36.5) (end 47.5 20.5) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 47.5 32.5) (end 47.5 29) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 0 0) (end -5 0) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 0 -5) (end 0 0) (angle 90) (layer Dwgs.User) (width 0.381))
-  (gr_line (start 91 31) (end 4 31) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_line (start 4 0) (end 91 0) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_line (start 99 0) (end 94 0) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 95 -4) (end 95 1) (angle 90) (layer Dwgs.User) (width 0.381))
   (gr_line (start 99 0) (end 95 -4) (angle 90) (layer Dwgs.User) (width 0.381))
@@ -983,10 +984,6 @@
   (gr_text "land-boards.com/\nDB37RIBBON" (at 48.26 17.78) (layer F.SilkS)
     (effects (font (size 2.286 2.286) (thickness 0.5715)))
   )
-  (gr_arc (start 91 27) (end 95 27) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_arc (start 91 4) (end 91 0) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_arc (start 4 4) (end 0 4) (angle 90) (layer Edge.Cuts) (width 0.381))
-  (gr_arc (start 4 27) (end 4 31) (angle 90) (layer Edge.Cuts) (width 0.381))
 
   (segment (start 72.39 22.86) (end 72.39 14.986) (width 0.2032) (layer Front) (net 1))
   (segment (start 72.39 14.986) (end 70.104 12.7) (width 0.2032) (layer Front) (net 1) (tstamp 5935C0A6))
