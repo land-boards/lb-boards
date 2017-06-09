@@ -1,4 +1,4 @@
-update=5/28/2017 10:09:53 AM
+update=6/9/2017 3:19:41 PM
 version=1
 last_client=kicad
 [general]
@@ -50,3 +50,16 @@ LibName4=conn
 LibName5=linear
 LibName6=regul
 LibName7=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=../../../../../Desktop/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60

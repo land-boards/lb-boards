@@ -5,7 +5,6 @@ LIBS:transistors
 LIBS:conn
 LIBS:linear
 LIBS:regul
-LIBS:DougsSch
 LIBS:LED-32-cache
 EELAYER 25 0
 EELAYER END
