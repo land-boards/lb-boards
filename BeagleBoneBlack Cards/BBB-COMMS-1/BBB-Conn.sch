@@ -1,10 +1,13 @@
 EESchema Schematic File Version 2
+LIBS:BBB-COMMS-1-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
 LIBS:linear
 LIBS:memory
+LIBS:LandBoards_Semis
+LIBS:LandBoards_Conns
 LIBS:BBB-COMMS-1-cache
 EELAYER 25 0
 EELAYER END
@@ -138,17 +141,6 @@ $EndComp
 Text Label 2000 2450 0    60   ~ 0
 GND
 $Comp
-L LED D2
-U 1 1 53ADFF8D
-P 3550 2150
-F 0 "D2" H 3550 2250 50  0000 C CNN
-F 1 "LED" H 3550 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 3550 2350 60  0000 C CNN
-F 3 "~" H 3550 2150 60  0000 C CNN
-	1    3550 2150
-	0    1    1    0   
-$EndComp
-$Comp
 L R R2
 U 1 1 53ADFF9C
 P 3550 1650
@@ -195,17 +187,6 @@ Text Label 1650 4200 0    60   ~ 0
 VDD_3V3EXP
 Text Label 3150 4200 0    60   ~ 0
 VDD_3V3-UF
-$Comp
-L LED D1
-U 1 1 53C05879
-P 2300 2150
-F 0 "D1" H 2300 2250 50  0000 C CNN
-F 1 "LED" H 2300 2050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2300 2350 60  0000 C CNN
-F 3 "~" H 2300 2150 60  0000 C CNN
-	1    2300 2150
-	0    1    1    0   
-$EndComp
 $Comp
 L R R1
 U 1 1 53C0587F
@@ -375,4 +356,26 @@ Wire Wire Line
 Connection ~ 6850 1500
 Text Notes 9000 3200 0    60   ~ 0
 INSTALL = \nWRITE \nENABLED
+$Comp
+L LED-fixed D2
+U 1 1 5939D846
+P 3550 2150
+F 0 "D2" H 3550 2250 50  0000 C CNN
+F 1 "LED-fixed" H 3550 2050 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 3550 2400 60  0000 C CNN
+F 3 "" H 3550 2150 60  0000 C CNN
+	1    3550 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-fixed D1
+U 1 1 5939DD6A
+P 2300 2150
+F 0 "D1" H 2300 2250 50  0000 C CNN
+F 1 "LED-fixed" H 2300 2050 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 2300 2400 60  0000 C CNN
+F 3 "" H 2300 2150 60  0000 C CNN
+	1    2300 2150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

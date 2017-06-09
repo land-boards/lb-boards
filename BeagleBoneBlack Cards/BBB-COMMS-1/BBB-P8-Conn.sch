@@ -1,10 +1,13 @@
 EESchema Schematic File Version 2
+LIBS:BBB-COMMS-1-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
 LIBS:linear
 LIBS:memory
+LIBS:LandBoards_Semis
+LIBS:LandBoards_Conns
 LIBS:BBB-COMMS-1-cache
 EELAYER 25 0
 EELAYER END

@@ -1,0 +1,270 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:TXB0108
+LIBS:linear
+LIBS:memory
+LIBS:LandBoards_Semis
+LIBS:LandBoards_Conns
+LIBS:BBB-COMMS-2-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 2 4
+Title "BeagleBone Cape Baseline"
+Date "24 feb 2015"
+Rev "X4"
+Comp "Doug Gilliland <doug@douglasgilliland.com>"
+Comment1 "https://github.com/douggilliland/"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #U01
+U 1 1 53AEED58
+P 7650 3150
+F 0 "#U01" H 7650 3150 60  0001 C CNN
+F 1 "~" H 7650 3150 60  0001 C CNN
+F 2 "" H 7650 3150 60  0001 C CNN
+F 3 "" H 7650 3150 60  0001 C CNN
+	1    7650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #U02
+U 1 1 53AEED59
+P 6150 2250
+F 0 "#U02" H 6150 2250 60  0001 C CNN
+F 1 "~" H 6150 2250 60  0001 C CNN
+F 2 "" H 6150 2250 60  0001 C CNN
+F 3 "" H 6150 2250 60  0001 C CNN
+	1    6150 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 4EB9CBCB
+P 6150 1950
+F 0 "C2" H 6200 2050 50  0000 L CNN
+F 1 "1uF" H 6200 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6150 1950 60  0000 C CNN
+F 3 "" H 6150 1950 60  0001 C CNN
+	1    6150 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #U03
+U 1 1 53AEED5A
+P 6750 2550
+F 0 "#U03" H 6750 2550 60  0001 C CNN
+F 1 "~" H 6750 2550 60  0001 C CNN
+F 2 "" H 6750 2550 60  0001 C CNN
+F 3 "" H 6750 2550 60  0001 C CNN
+	1    6750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 4EB9CACE
+P 8750 1750
+F 0 "R1" V 8830 1750 50  0000 C CNN
+F 1 "5.6K" V 8750 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8800 1550 60  0000 C CNN
+F 3 "" H 8750 1750 60  0001 C CNN
+	1    8750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 4EB9CAC9
+P 8550 1750
+F 0 "R2" V 8630 1750 50  0000 C CNN
+F 1 "5.6K" V 8550 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8550 1500 60  0000 C CNN
+F 3 "" H 8550 1750 60  0001 C CNN
+	1    8550 1750
+	1    0    0    -1  
+$EndComp
+Text Label 6950 1500 0    60   ~ 0
+VDD_3V3EXP
+Text Label 8800 2700 0    60   ~ 0
+I2C2_SDA
+Text Label 8800 2600 0    60   ~ 0
+I2C2_SCL
+Text Notes 7300 3350 0    60   ~ 0
+I2C CONFIG EEPROM
+$Comp
+L C C1
+U 1 1 53ADAE5C
+P 2900 2150
+F 0 "C1" H 2900 2250 40  0000 L CNN
+F 1 "104" H 2906 2065 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2938 2000 30  0000 C CNN
+F 3 "~" H 2900 2150 60  0000 C CNN
+	1    2900 2150
+	1    0    0    -1  
+$EndComp
+Text Label 2000 2450 0    60   ~ 0
+GND
+Text Label 2500 1750 0    60   ~ 0
+VDD_3V3EXP
+$Comp
+L R R4
+U 1 1 53C0587F
+P 2300 1650
+F 0 "R4" V 2380 1650 40  0000 C CNN
+F 1 "120" V 2307 1651 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2230 1650 30  0000 C CNN
+F 3 "~" H 2300 1650 30  0000 C CNN
+	1    2300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 53F103C2
+P 8400 1750
+F 0 "R3" V 8480 1750 50  0000 C CNN
+F 1 "5.6K" V 8400 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8400 2150 60  0000 C CNN
+F 3 "" H 8400 1750 60  0001 C CNN
+	1    8400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 H1
+U 1 1 53F107E0
+P 8900 3050
+F 0 "H1" H 8900 3250 40  0000 C CNN
+F 1 "CONN_2" V 8950 3050 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 8950 2850 60  0000 C CNN
+F 3 "" H 8900 3050 60  0000 C CNN
+	1    8900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1500 8750 1500
+Wire Wire Line
+	7650 3000 7650 3150
+Wire Wire Line
+	8350 2700 9250 2700
+Wire Wire Line
+	6150 2100 6150 2250
+Connection ~ 8550 2600
+Wire Wire Line
+	8550 1900 8550 2600
+Wire Wire Line
+	8750 1900 8750 2700
+Connection ~ 8750 2700
+Wire Wire Line
+	8750 1500 8750 1600
+Wire Wire Line
+	6150 1500 6150 1800
+Wire Wire Line
+	8350 2600 9250 2600
+Wire Wire Line
+	8550 1600 8550 1500
+Connection ~ 8550 1500
+Wire Wire Line
+	7650 2000 7650 1500
+Connection ~ 7650 1500
+Wire Wire Line
+	2900 2450 2900 2300
+Connection ~ 2900 2450
+Wire Wire Line
+	2900 1750 2900 2000
+Wire Wire Line
+	2450 1750 3300 1750
+Wire Wire Line
+	2300 1500 2300 1400
+Wire Wire Line
+	2300 1800 2300 1950
+Wire Wire Line
+	2300 2450 2300 2350
+Connection ~ 2300 2450
+Wire Wire Line
+	2450 1750 2450 1400
+Wire Wire Line
+	2450 1400 2300 1400
+Wire Wire Line
+	8400 1600 8400 1500
+Connection ~ 8400 1500
+Wire Wire Line
+	8350 2400 8400 2400
+Wire Wire Line
+	8400 1900 8400 2950
+Wire Wire Line
+	8400 2950 8550 2950
+Connection ~ 8400 2400
+Wire Wire Line
+	7650 3050 8250 3050
+Wire Wire Line
+	8250 3050 8250 3150
+Wire Wire Line
+	8250 3150 8550 3150
+Connection ~ 7650 3050
+Text GLabel 6000 1500 0    60   Input ~ 0
+VDD_3V3EXP
+Connection ~ 6150 1500
+$Comp
+L I2C-EEPROM U1
+U 1 1 5633D704
+P 7650 2500
+F 0 "U1" H 7800 2850 60  0000 C CNN
+F 1 "I2C-EEPROM" H 7850 2150 60  0000 C CNN
+F 2 "dougsLib:SO8E-wider" H 7650 2050 60  0000 C CNN
+F 3 "" H 7650 2500 60  0000 C CNN
+	1    7650 2500
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 2700 2    60   BiDi ~ 0
+I2C2_SDA
+Text GLabel 9250 2600 2    60   Input ~ 0
+I2C2_SCL
+Wire Wire Line
+	1850 2450 3550 2450
+Wire Wire Line
+	6950 2300 6750 2300
+Wire Wire Line
+	6750 2300 6750 2550
+Wire Wire Line
+	6950 2400 6750 2400
+Connection ~ 6750 2400
+Wire Wire Line
+	6950 2500 6850 2500
+Wire Wire Line
+	6850 2500 6850 1500
+Connection ~ 6850 1500
+Text Notes 9000 3200 0    60   ~ 0
+INSTALL = \nWRITE \nENABLED
+$Comp
+L LED-fixed D1
+U 1 1 5939DD6A
+P 2300 2150
+F 0 "D1" H 2300 2250 50  0000 C CNN
+F 1 "LED-fixed" H 2300 2050 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 2300 2400 60  0000 C CNN
+F 3 "" H 2300 2150 60  0000 C CNN
+	1    2300 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L C C3
+U 1 1 593A7793
+P 3300 2150
+F 0 "C3" H 3300 2250 40  0000 L CNN
+F 1 "104" H 3306 2065 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3338 2000 30  0000 C CNN
+F 3 "~" H 3300 2150 60  0000 C CNN
+	1    3300 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1750 3300 2000
+Connection ~ 2900 1750
+Wire Wire Line
+	3300 2300 3300 2450
+Connection ~ 3300 2450
+$EndSCHEMATC
