@@ -1,8 +1,5 @@
-DougsPCBDesigns
-===============
-
 Doug's KiCad Utilities
-----------------------
+======================
 
 KiCAD utilities are kept here.
 KiCAD is short on support utilities, but the file format is wide open.
