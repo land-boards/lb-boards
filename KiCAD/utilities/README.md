@@ -10,3 +10,4 @@ KiCAD is short on support utilities, but the file format is wide open.
 - kiPL - Parts list processing for KiCAD
 - mergeKiLibs - Merge together two schematic libraries and deal with duplicates
 - mergKiMods - Merge together two PCB module libraries and deal with duplicates
+- KiCompNL - Compare two KiCad netlists
