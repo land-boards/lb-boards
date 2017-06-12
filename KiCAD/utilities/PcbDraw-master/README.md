@@ -1,3 +1,5 @@
+The following is from work by - Copyright (c) 2017 Jan Mrázek
+
 # PcbDraw
 
 Convert your KiCAD boards into nice looking 2D drawings suitable for pinout
