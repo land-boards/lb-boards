@@ -11,3 +11,4 @@ KiCAD is short on support utilities, but the file format is wide open.
 - mergeKiLibs - Merge together two schematic libraries and deal with duplicates
 - mergKiMods - Merge together two PCB module libraries and deal with duplicates
 - KiCompNL - Compare two KiCad netlists
+- KiListPads - Parse a KiCad module file and generates a list of unique pads per part
