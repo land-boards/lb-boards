@@ -1,5 +1,5 @@
-Doug's KiCad Utilities
-======================
+Land Boards KiCad Utilities
+===========================
 
 KiCAD utilities are kept here.
 KiCAD is short on support utilities, but the file format is wide open.
