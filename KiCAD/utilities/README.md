@@ -12,3 +12,4 @@ KiCAD is short on support utilities, but the file format is wide open.
 - mergKiMods - Merge together two PCB module libraries and deal with duplicates
 - KiCompNL - Compare two KiCad netlists
 - KiListPads - Parse a KiCad module file and generates a list of unique pads per part
+- padsolver.py - Create a footprint from the drawing of the pads of a part
