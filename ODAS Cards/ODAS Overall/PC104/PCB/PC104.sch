@@ -1,0 +1,113 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:PC104-cache
+EELAYER 25 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "16-CHANNEL DIGITAL I/O"
+Date "Thursday, May 14, 2015"
+Rev "X3"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MTG_HOLE MTG4
+U 1 1 537A5C77
+P 11150 10300
+F 0 "MTG4" H 11150 10400 60  0000 C CNN
+F 1 "MTG_HOLE" H 11150 10200 60  0000 C CNN
+F 2 "MTG-4-40" H 11150 10300 60  0000 C CNN
+F 3 "~" H 11150 10300 60  0000 C CNN
+	1    11150 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG3
+U 1 1 537A5C86
+P 10650 10300
+F 0 "MTG3" H 10650 10400 60  0000 C CNN
+F 1 "MTG_HOLE" H 10650 10200 60  0000 C CNN
+F 2 "MTG-4-40" H 10650 10300 60  0000 C CNN
+F 3 "~" H 10650 10300 60  0000 C CNN
+	1    10650 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG2
+U 1 1 537A5C95
+P 11150 10000
+F 0 "MTG2" H 11150 10100 60  0000 C CNN
+F 1 "MTG_HOLE" H 11150 9900 60  0000 C CNN
+F 2 "MTG-4-40" H 11150 10000 60  0000 C CNN
+F 3 "~" H 11150 10000 60  0000 C CNN
+	1    11150 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG1
+U 1 1 537A5CA4
+P 10650 10000
+F 0 "MTG1" H 10650 10100 60  0000 C CNN
+F 1 "MTG_HOLE" H 10650 9900 60  0000 C CNN
+F 2 "MTG-4-40" H 10650 10000 60  0000 C CNN
+F 3 "~" H 10650 10000 60  0000 C CNN
+	1    10650 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE TESTED1
+U 1 1 580F6225
+P 10100 10000
+F 0 "TESTED1" H 10100 10100 60  0000 C CNN
+F 1 "TESTED_COUPON" H 10100 9900 60  0000 C CNN
+F 2 "LandBoards_Marking:TEST_BLK-REAR" H 10100 10000 60  0000 C CNN
+F 3 "~" H 10100 10000 60  0000 C CNN
+	1    10100 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L DB25 J1
+U 1 1 5810E2D0
+P 15150 4000
+F 0 "J1" H 15200 5350 70  0000 C CNN
+F 1 "DB25" H 15100 2650 70  0000 C CNN
+F 2 "LandBoards_Conns:DB37FC_FIXED" H 15100 2500 20  0000 C CNN
+F 3 "" H 15150 4000 60  0000 C CNN
+	1    15150 4000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

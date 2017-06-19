@@ -1390,4 +1390,12 @@ F 3 "" H 4850 7150 60  0000 C CNN
 	1    4850 7150
 	1    0    0    -1  
 $EndComp
+Text Label 14850 2950 0    60   ~ 0
+R1-C
+Text Label 14850 3050 0    60   ~ 0
+R1-NC
+Text Label 14850 3150 0    60   ~ 0
+R2-C
+Text Label 14850 3250 0    60   ~ 0
+R2-NC
 $EndSCHEMATC
