@@ -8,6 +8,7 @@ Parts that are unique to each of the single files are also written out.
 The result is _not_ alphabetically sorted.
 The parts that have matching part names are not written out.
 The parts that have matching part names result in an warning message.
+File names are passed on the command line.
 
 Revision History
 013-03-04 - Added strip crlf to lines so that Windoze and Unix file formats would not cause 

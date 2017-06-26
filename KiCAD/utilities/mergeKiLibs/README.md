@@ -14,3 +14,4 @@ mergeKiLibs
 - The parts that have matching part names are not written out.
 - The parts that have matching part names result in an warning message.
 - #End Library is automatically written to the end of the file.
+- File names are passed on the command line.
