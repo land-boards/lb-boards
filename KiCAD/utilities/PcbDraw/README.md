@@ -1,4 +1,5 @@
 The following is from work by - Copyright (c) 2017 Jan Mrázek
+=============================================================
 
 # PcbDraw
 

@@ -9,6 +9,3 @@ FixKiMods
 - If the two tables match, the Modules list is printed.
 - If they don't match, an error message is printed and the differences between the modules and index lists are printed.
 - If a -s command is passed to the program, any modules with spaces will be removed.
-
-See [Doug's PCB Designs Wiki][myWiki].
-[myWiki]: dougspcbdesigns.pbworks.com/fixKiMods "Doug's PCB Wiki fixKiMods page"
