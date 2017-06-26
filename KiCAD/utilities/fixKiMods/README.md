@@ -1,8 +1,8 @@
-DougsPCBDesigns
-===============
+Land Boards, LLC - Kicad Utility
+================================
 
-Doug's FixKiMods
-----------------
+FixKiMods
+---------
 
 - Program parses a KiCad module (PCB footprint) file for errors.
 - Program compares the index table at the start to the modules later.
