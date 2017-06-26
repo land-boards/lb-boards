@@ -1,0 +1,38 @@
+== Land Boards, LLC - Kicad Utilities ==
+
+KiCAD utilities are kept here.
+KiCAD is short on support utilities, but the file format is wide open.
+
+* fixKiMods - Fixes KiCAD PCB Module files
+* fixKiSymbol - Fixes KiCAD Schematic symbol files
+* KiCompNL - Compare two KiCad netlists
+* KiListPads - Parse a KiCad module file and generates a list of unique pads per part
+* kiPL - Parts list processing for KiCAD
+* mergeKiLibs - Merge together two schematic libraries and deal with duplicates
+* mergKiMods - Merge together two PCB module libraries and deal with duplicates
+* padsolver.py - Create a footprint from the drawing of the pads of a part
+* PcbDraw.py - Create a 2D drawing from a Kicad PCB file
+* pyCompFiles.py - Compare two ASCII files and tell you if they are different
+* pyKiBackannSchem.py - Back annotate a Kicad schematic from a PCB file
+
+=== Retired Utilities ===
+
+- OSH Script - convert KiCAD default file names into OSH Park preferred name and zip up.
+
+=== Resources ===
+
+* [http://land-boards.com/content/ land-boards.com website]
+* [http://land-boards.com/blwiki/index.php Land Boards circuit cards]
+
+== Ownership ==
+
+* Some of these files (particularly libraries) were created by others.
+** There may be newer versions of these libraries "out there".
+** Some libraries even have the same names but don't work the same.
+* Many of these files were created by us based on the work of others.
+
+=== Warning ===
+
+* Use at your own risk.
+** If you brick your part or it melt to a puddle, it's on you not us.
+
