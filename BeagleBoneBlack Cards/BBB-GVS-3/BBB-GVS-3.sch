@@ -1,10 +1,9 @@
 EESchema Schematic File Version 2
-LIBS:DougsSch
+LIBS:BBB-GVS-3-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
-LIBS:beaglebone
 LIBS:linear
 LIBS:memory
 LIBS:BBB-GVS-3-cache
