@@ -36,7 +36,6 @@ LibName4=pin_array
 LibName5=divers
 LibName6=libcms
 LibName7=dip_sockets
-LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 [eeschema]
 version=1
 LibDir=
@@ -44,7 +43,4 @@ LibDir=
 LibName1=power
 LibName2=device
 LibName3=conn
-LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/switch-enc
-LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=analog_devices
-LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+
