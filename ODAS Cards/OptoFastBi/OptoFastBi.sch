@@ -285,10 +285,10 @@ Wire Wire Line
 Connection ~ 6400 2800
 Connection ~ 7650 1600
 $Comp
-L COUPON COUP?1
+L COUPON TEST
 U 1 1 5857FEAF
 P 3100 7750
-F 0 "COUP?1" H 3100 7750 60  0000 C CNN
+F 0 "TEST" H 3100 7750 60  0000 C CNN
 F 1 "COUPON" H 3100 7750 60  0000 C CNN
 F 2 "LandBoards_Marking:TEST_BLK-REAR" H 3100 7850 60  0000 C CNN
 F 3 "" H 3100 7750 60  0000 C CNN
@@ -299,8 +299,24 @@ Text Label 3350 1200 0    60   ~ 0
 IN1
 Text Label 3350 1300 0    60   ~ 0
 IN2
-Text Label 3350 1400 0    60   ~ 0
+Text Label 7200 1400 0    60   ~ 0
 IN3
-Text Label 3350 1500 0    60   ~ 0
+Text Label 7200 1500 0    60   ~ 0
 IN4
+Text Label 3350 1000 0    60   ~ 0
+VCCL
+Text Label 3350 1600 0    60   ~ 0
+GNDL
+Text Label 7150 1000 0    60   ~ 0
+VCCR
+Text Label 7150 1600 0    60   ~ 0
+GNDR
+Text Label 7200 1200 0    60   ~ 0
+OUT1
+Text Label 7200 1300 0    60   ~ 0
+OUT2
+Text Label 3350 1400 0    60   ~ 0
+OUT3
+Text Label 3350 1500 0    60   ~ 0
+OUT4
 $EndSCHEMATC
