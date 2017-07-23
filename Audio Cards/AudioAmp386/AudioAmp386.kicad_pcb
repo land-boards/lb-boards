@@ -3,7 +3,7 @@
   (general
     (links 30)
     (no_connects 0)
-    (area 22.675399 38.8622 115.984001 99.017001)
+    (area 22.675399 38.8622 127.749602 99.017001)
     (thickness 1.6002)
     (drawings 19)
     (tracks 44)
@@ -18,8 +18,8 @@
   )
 
   (layers
-    (0 Front signal)
-    (31 Back signal)
+    (0 Front signal hide)
+    (31 Back signal hide)
     (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user)
@@ -58,7 +58,7 @@
     (pad_to_mask_clearance 0.254)
     (aux_axis_origin 147.32 73.8124)
     (grid_origin 0.02 0.0124)
-    (visible_elements 7FFFEF7F)
+    (visible_elements 7FFFEB7F)
     (pcbplotparams
       (layerselection 0x010f0_80000001)
       (usegerberextensions false)
@@ -1504,7 +1504,18 @@
     )
   )
 
-  (gr_line (start 113.405 56.6134) (end 30.405 56.6134) (angle 90) (layer Dwgs.User) (width 0.381))
+  (dimension 46.5 (width 0.3048) (layer Dwgs.User)
+    (gr_text "46.500 mm" (at 121.1456 69.2624 90) (layer Dwgs.User)
+      (effects (font (size 2.032 1.524) (thickness 0.3048)))
+    )
+    (feature1 (pts (xy 112.52 46.0124) (xy 122.7712 46.0124)))
+    (feature2 (pts (xy 112.52 92.5124) (xy 122.7712 92.5124)))
+    (crossbar (pts (xy 119.52 92.5124) (xy 119.52 46.0124)))
+    (arrow1a (pts (xy 119.52 46.0124) (xy 120.106421 47.138904)))
+    (arrow1b (pts (xy 119.52 46.0124) (xy 118.933579 47.138904)))
+    (arrow2a (pts (xy 119.52 92.5124) (xy 120.106421 91.385896)))
+    (arrow2b (pts (xy 119.52 92.5124) (xy 118.933579 91.385896)))
+  )
   (dimension 62 (width 0.3048) (layer Dwgs.User)
     (gr_text "62.000 mm" (at 81.405 97.239) (layer Dwgs.User)
       (effects (font (size 2.032 1.524) (thickness 0.3048)))
