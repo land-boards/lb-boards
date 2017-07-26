@@ -1,4 +1,4 @@
-update=7/26/2017 1:59:05 PM
+update=7/26/2017 3:48:21 PM
 version=1
 last_client=kicad
 [general]
@@ -45,3 +45,4 @@ LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
 LibName3=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
 LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
 LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/dp_devices
