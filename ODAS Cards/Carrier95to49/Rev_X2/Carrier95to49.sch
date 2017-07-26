@@ -1,9 +1,8 @@
 EESchema Schematic File Version 2
+LIBS:Carrier95to49-rescue
+LIBS:conn
+LIBS:power
 LIBS:LandBoards
-LIBS:LandBoards_Cards
-LIBS:LandBoards_Conns
-LIBS:LandBoards_Semis
-LIBS:DougsSch
 LIBS:Carrier95to49-cache
 EELAYER 25 0
 EELAYER END
@@ -691,6 +690,28 @@ F 1 "CONN_02X16" V 11350 2000 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x16_Pitch2.54mm" H 11350 900 60  0000 C CNN
 F 3 "" H 11350 900 60  0000 C CNN
 	1    11350 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG18
+U 1 1 593B2D2E
+P 16150 8700
+F 0 "MTG18" H 16150 8800 60  0000 C CNN
+F 1 "MTG_HOLE" H 16150 8600 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 16150 8700 60  0000 C CNN
+F 3 "" H 16150 8700 60  0000 C CNN
+	1    16150 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG19
+U 1 1 593B2D34
+P 16150 9000
+F 0 "MTG19" H 16150 9100 60  0000 C CNN
+F 1 "MTG_HOLE" H 16150 8900 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 16150 9000 60  0000 C CNN
+F 3 "" H 16150 9000 60  0000 C CNN
+	1    16150 9000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

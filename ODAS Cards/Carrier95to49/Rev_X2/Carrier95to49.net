@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/DGilliland/Documents/GitHub/lb-boards/ODAS Cards/Carrier95to49/Carrier95to49.sch")
-    (date "7/26/2017 12:32:09 PM")
+    (date "6/9/2017 2:55:37 PM")
     (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -164,7 +164,19 @@
       (footprint Pin_Headers:Pin_Header_Straight_2x16_Pitch2.54mm)
       (libsource (lib conn) (part CONN_02X16))
       (sheetpath (names /) (tstamps /))
-      (tstamp 593B1DAC)))
+      (tstamp 593B1DAC))
+    (comp (ref MTG18)
+      (value MTG_HOLE)
+      (footprint LandBoards_MountHoles:MTG-6-32)
+      (libsource (lib LandBoards) (part MTG_HOLE))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 593B2D2E))
+    (comp (ref MTG19)
+      (value MTG_HOLE)
+      (footprint LandBoards_MountHoles:MTG-6-32)
+      (libsource (lib LandBoards) (part MTG_HOLE))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 593B2D34)))
   (libparts
     (libpart (lib conn) (part CONN_01X02)
       (footprints
@@ -192,23 +204,6 @@
         (pin (num 2) (name P2) (type passive))
         (pin (num 3) (name P3) (type passive))
         (pin (num 4) (name P4) (type passive))))
-    (libpart (lib LandBoards) (part COUPON)
-      (fields
-        (field (name Reference) COUP?)
-        (field (name Value) COUPON)))
-    (libpart (lib LandBoards) (part MTG_HOLE)
-      (fields
-        (field (name Reference) MTG?)
-        (field (name Value) MTG_HOLE)))
-    (libpart (lib Carrier95to49-cache) (part DCJ0202)
-      (fields
-        (field (name Reference) J)
-        (field (name Value) DCJ0202)
-        (field (name Footprint) con-jack-DCJ0202))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive))))
     (libpart (lib conn) (part CONN_02X16)
       (footprints
         (fp Pin_Header_Straight_2X16)
@@ -250,7 +245,24 @@
         (pin (num 29) (name P29) (type passive))
         (pin (num 30) (name P30) (type passive))
         (pin (num 31) (name P31) (type passive))
-        (pin (num 32) (name P32) (type passive)))))
+        (pin (num 32) (name P32) (type passive))))
+    (libpart (lib LandBoards) (part COUPON)
+      (fields
+        (field (name Reference) COUP?)
+        (field (name Value) COUPON)))
+    (libpart (lib LandBoards) (part MTG_HOLE)
+      (fields
+        (field (name Reference) MTG?)
+        (field (name Value) MTG_HOLE)))
+    (libpart (lib Carrier95to49-cache) (part DCJ0202)
+      (fields
+        (field (name Reference) J)
+        (field (name Value) DCJ0202)
+        (field (name Footprint) con-jack-DCJ0202))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive)))))
   (libraries
     (library (logical conn)
       (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\conn.lib"))

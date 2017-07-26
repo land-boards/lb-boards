@@ -1,4 +1,4 @@
-update=7/26/2017 1:59:05 PM
+update=6/8/2017 2:26:02 PM
 version=1
 last_client=kicad
 [general]
@@ -40,8 +40,8 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dou
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
-LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Cards
-LibName3=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
-LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
-LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=Carrier95to49-rescue
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=conn
+LibName4=power
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
