@@ -4,6 +4,8 @@ LIBS:LandBoards_Cards
 LIBS:LandBoards_Conns
 LIBS:LandBoards_Semis
 LIBS:DougsSch
+LIBS:diode
+LIBS:opto
 LIBS:Carrier95to49-cache
 EELAYER 25 0
 EELAYER END
