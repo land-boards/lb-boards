@@ -33,7 +33,6 @@ defaultPath = '.'
 from dgProgDefaults import *
 from dgWriteListtoCSV import *
 
-
 from sys import argv
 
 #print 'kiPL.py'
@@ -53,6 +52,7 @@ class FindaNetFile:
 		"""Extract Path from fullPathFilename
 		"""
 		return(fullPathFilename[0:fullPathFilename.rfind('\\')+1])
+		
 	def findNetFile(self, startingPath):
 		"""findNetFile() - This is the dialog which locates the csv files
 	
@@ -201,6 +201,7 @@ class ControlClass:
 		for row in outCSVList:
 			if gotFirstPart == False:		# the first part gets handled here
 				gotFirstPart = True
+				newComboPart += row[0]
 			else:
 				if row[1:] == lastPart[1:]:	# if this part matches the last part
 					newComboPart += ',' + row[0]
@@ -230,7 +231,7 @@ class ControlClass:
 			lastPart = row
 		# handle the last part
 		if inComboPart:
-			qty += 1
+#			qty += 1
 			outRow = []
 			outRow.append(qty)
 			outRow.append(newComboPart)
