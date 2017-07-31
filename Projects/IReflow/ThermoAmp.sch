@@ -1,18 +1,22 @@
-EESchema Schematic File Version 2  date 31/12/2014 12:02:26
+EESchema Schematic File Version 2
+LIBS:IReflow-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
 LIBS:conn
 LIBS:regul
 LIBS:DougsSch
-LIBS:atmel
-LIBS:maxim-ic
+LIBS:LandBoards
+LIBS:LandBoards_Cards
+LIBS:LandBoards_Conns
+LIBS:LandBoards_Semis
+LIBS:arduino
 LIBS:IReflow-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 3
 Title ""
 Date "31 dec 2014"
 Rev ""
@@ -23,10 +27,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MAX31855 U4
+L MAX31855 U1
 U 1 1 5474BFD8
 P 5200 2550
-F 0 "U4" H 5050 2950 60  0000 C CNN
+F 0 "U1" H 5050 2950 60  0000 C CNN
 F 1 "MAX31855" H 5200 2050 60  0000 C CNN
 F 2 "SO8E" H 5200 1950 60  0000 C CNN
 F 3 "" H 5200 2550 60  0000 C CNN
@@ -44,7 +48,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 1450 2750 1450
 Wire Wire Line
-	8700 3550 2750 3550
+	2750 3550 8700 3550
 Wire Wire Line
 	4800 2700 3750 2700
 Wire Wire Line
@@ -65,12 +69,12 @@ U 1 1 5474D4D9
 P 2400 2800
 F 0 "J5" V 2350 2800 40  0000 C CNN
 F 1 "CONN_2" V 2450 2800 40  0000 C CNN
-F 2 "TB2-5MM" H 2400 2550 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm" H 2400 2550 60  0000 C CNN
 F 3 "" H 2400 2800 60  0000 C CNN
 	1    2400 2800
 	-1   0    0    -1  
 $EndComp
-Text Notes 2150 2750 0    60   ~ 0
+Text Notes 2150 2950 0    60   ~ 0
 T+\n\nT-
 Text Label 4050 2700 0    60   ~ 0
 THERMO+
@@ -87,10 +91,10 @@ CS
 Text HLabel 7850 2600 2    60   Input ~ 0
 SCK
 $Comp
-L C C11
+L C-RESCUE-IReflow C2
 U 1 1 5474CA3D
 P 3250 2800
-F 0 "C11" H 3250 2900 40  0000 L CNN
+F 0 "C2" H 3250 2900 40  0000 L CNN
 F 1 "0.01uF" H 3256 2715 40  0000 L CNN
 F 2 "SM0805" H 3288 2650 30  0000 C CNN
 F 3 "~" H 3250 2800 60  0000 C CNN
@@ -124,10 +128,10 @@ Wire Wire Line
 Wire Wire Line
 	4100 2500 4800 2500
 $Comp
-L C C9
+L C-RESCUE-IReflow C1
 U 1 1 5474CCD1
 P 4100 1750
-F 0 "C9" H 4100 1850 40  0000 L CNN
+F 0 "C1" H 4100 1850 40  0000 L CNN
 F 1 "0.1uF" H 4106 1665 40  0000 L CNN
 F 2 "SM0805" H 4200 1600 30  0000 C CNN
 F 3 "~" H 4100 1750 60  0000 C CNN
@@ -135,7 +139,7 @@ F 3 "~" H 4100 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L R-RESCUE-IReflow R3
 U 1 1 5474CCE0
 P 3750 1450
 F 0 "R3" V 3830 1450 40  0000 C CNN
@@ -149,7 +153,6 @@ Wire Wire Line
 	4000 1450 5850 1450
 Wire Wire Line
 	4100 1450 4100 1550
-Connection ~ 4100 2050
 Wire Wire Line
 	4600 1450 4600 2300
 Wire Wire Line
@@ -158,15 +161,15 @@ Connection ~ 4100 1450
 Wire Wire Line
 	4650 2500 4650 3550
 Connection ~ 4650 2500
-Text Notes 1300 2800 0    60   ~ 0
+Text Notes 1300 2950 0    60   ~ 0
 THERMOCOUPLE\nINPUT
 Text Label 4150 1450 0    60   ~ 0
 V33COND
 $Comp
-L TXS0104 U5
+L TXS0104 U2
 U 1 1 54A19569
 P 6750 2450
-F 0 "U5" H 6700 1900 50  0000 C CNN
+F 0 "U2" H 6700 1900 50  0000 C CNN
 F 1 "TXS0104" H 6750 3000 50  0000 C CNN
 F 2 "SO14E" H 6750 3050 50  0000 C CNN
 F 3 "DOCUMENTATION" H 6750 1700 50  0001 C CNN
@@ -188,7 +191,7 @@ Wire Wire Line
 	5850 2800 6000 2800
 Connection ~ 5850 2100
 Wire Wire Line
-	8700 2100 8700 3550
+	8700 3550 8700 2100
 Connection ~ 4650 3550
 Wire Wire Line
 	8400 2800 8400 1000
@@ -203,5 +206,5 @@ NoConn ~ 6000 2300
 Wire Wire Line
 	7500 2800 8400 2800
 Wire Wire Line
-	7500 2100 8700 2100
+	8700 2100 7500 2100
 $EndSCHEMATC
