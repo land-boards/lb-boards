@@ -1,4 +1,4 @@
-update=2/15/2016 2:51:51 PM
+update=9/5/2017 9:45:48 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -8,37 +8,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[pcbnew]
-version=1
-LastNetListRead=PulseGenerator.net
-UseCmpFile=1
-PadDrill=0.600000000000
-PadDrillOvalY=0.600000000000
-PadSizeH=1.500000000000
-PadSizeV=1.500000000000
-PcbTextSizeV=1.500000000000
-PcbTextSizeH=1.500000000000
-PcbTextThickness=0.300000000000
-ModuleTextSizeV=1.000000000000
-ModuleTextSizeH=1.000000000000
-ModuleTextSizeThickness=0.150000000000
-SolderMaskClearance=0.000000000000
-SolderMaskMinWidth=0.000000000000
-DrawSegmentWidth=0.200000000000
-BoardOutlineThickness=0.100000000000
-ModuleOutlineThickness=0.150000000000
-[pcbnew/libraries]
-LibDir=
-LibName1=smd_dil
-LibName2=connect
-LibName3=discret
-LibName4=divers
-LibName5=smd_capacitors
-LibName6=smd_resistors
-LibName7=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
-LibName8=libcms
-LibName9=led
-LibName10=pin_array
 [eeschema]
 version=1
 LibDir=
@@ -49,3 +18,23 @@ LibName3=device
 LibName4=conn
 LibName5=74xx
 LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=PULSE-GEN.net
+UseCmpFile=0
+PadDrill=0.6
+PadDrillOvalY=0.6
+PadSizeH=1.5
+PadSizeV=1.5
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.09999999999999999
+ModuleOutlineThickness=0.15
