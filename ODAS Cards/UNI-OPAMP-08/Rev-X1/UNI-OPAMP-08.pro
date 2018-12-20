@@ -1,4 +1,4 @@
-update=6/6/2015 4:36:39 PM
+update=12/20/2018 9:00:16 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -51,3 +51,16 @@ LibName3=transistors
 LibName4=conn
 LibName5=regul
 LibName6=linear
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
