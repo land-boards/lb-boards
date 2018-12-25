@@ -1,4 +1,4 @@
-update=12/19/2016 9:43:55 PM
+update=6/26/2017 3:08:37 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -9,7 +9,7 @@ version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=CPLD-MAX5-100.net
+LastNetListRead=
 UseCmpFile=0
 PadDrill=0.6
 PadDrillOvalY=0.6
@@ -18,9 +18,9 @@ PadSizeV=1.5
 PcbTextSizeV=1.5
 PcbTextSizeH=1.5
 PcbTextThickness=0.3
-ModuleTextSizeV=1
-ModuleTextSizeH=1
-ModuleTextSizeThickness=0.15
+ModuleTextSizeV=1.143
+ModuleTextSizeH=1.27
+ModuleTextSizeThickness=0.1905
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
@@ -30,12 +30,11 @@ ModuleOutlineThickness=0.15
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=ODAS-PSOC5-rescue
-LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
+LibName2=ODAS-PSOC5-rescue
 LibName3=power
 LibName4=device
 LibName5=transistors
 LibName6=conn
 LibName7=linear
-LibName8=regul
-LibName9=74xx
+LibName8=74xx

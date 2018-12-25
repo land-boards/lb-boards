@@ -1,5 +1,5 @@
-update=27/02/2013 10:11:31
-last_client=eeschema
+update=8/16/2017 8:44:38 PM
+last_client=kicad
 [general]
 version=1
 [pcbnew]
@@ -37,36 +37,9 @@ EquName1=devcms
 [eeschema]
 version=1
 LibDir=/home/doug/PCB Designs/KiCAD/library
-NetFmt=1
-HPGLSpd=20
-HPGLDm=15
-HPGLNum=1
-offX_A4=0
-offY_A4=0
-offX_A3=0
-offY_A3=0
-offX_A2=0
-offY_A2=0
-offX_A1=0
-offY_A1=0
-offX_A0=0
-offY_A0=0
-offX_A=0
-offY_A=0
-offX_B=0
-offY_B=0
-offX_C=0
-offY_C=0
-offX_D=0
-offY_D=0
-offX_E=0
-offY_E=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
 [eeschema/libraries]
-LibName1=power
-LibName2=conn
-LibName3=device
-LibName4=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch
+LibName1=HVDigitalPot2-rescue
+LibName2=power
+LibName3=conn
+LibName4=device
+LibName5=/home/doug/Documents/DougsPCBDesigns/KiCAD/library/DougsSch

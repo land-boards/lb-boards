@@ -4,7 +4,6 @@ LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:atmel
-LIBS:DougsSch
 LIBS:RP-Console-u-cache
 EELAYER 25 0
 EELAYER END
@@ -355,7 +354,7 @@ U 1 1 562660F8
 P 4550 2450
 F 0 "J1" H 4250 2800 50  0000 C CNN
 F 1 "USB-MICRO-B" H 4400 2100 50  0000 C CNN
-F 2 "DougsNewMods:USB_Micro-B-Wellco-SMT" H 4500 2000 50  0000 C CNN
+F 2 "LandBoards_Conns:USB_Micro-B-Hirose-ZX62D-B-5PA9(30)" H 4500 2000 50  0000 C CNN
 F 3 "" H 4550 2350 50  0000 C CNN
 	1    4550 2450
 	-1   0    0    -1  

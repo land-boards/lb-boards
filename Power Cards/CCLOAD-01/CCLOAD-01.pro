@@ -1,4 +1,4 @@
-update=1/28/2016 4:17:38 PM
+update=6/14/2017 10:49:13 AM
 version=1
 last_client=kicad
 [general]
@@ -40,3 +40,13 @@ LibName5=power
 LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 LibName7=linear
 LibName8=analog_devices
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

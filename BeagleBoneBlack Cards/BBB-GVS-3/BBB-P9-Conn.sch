@@ -1,10 +1,9 @@
 EESchema Schematic File Version 2
-LIBS:DougsSch
+LIBS:BBB-GVS-3-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
-LIBS:beaglebone
 LIBS:linear
 LIBS:memory
 LIBS:BBB-GVS-3-cache
@@ -111,7 +110,7 @@ GND
 Text GLabel 1650 1300 0    60   UnSpc ~ 0
 VDD_3V3-UF
 $Comp
-L GND #U07
+L GND-RESCUE-BBB-GVS-3 #U07
 U 1 1 00000000
 P 2000 3550
 F 0 "#U07" H 2000 3550 60  0001 C CNN
@@ -493,7 +492,7 @@ Wire Wire Line
 	6400 5750 6600 5750
 Connection ~ 6400 5750
 $Comp
-L GND #PWR08
+L GND-RESCUE-BBB-GVS-3 #PWR08
 U 1 1 564A33E0
 P 6500 6450
 F 0 "#PWR08" H 6500 6450 30  0001 C CNN

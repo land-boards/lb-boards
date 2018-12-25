@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:/Users/doug_000/Documents/GitHub/lb-boards/PULSE-GEN/PULSE-GEN.sch)
-    (date "4/22/2016 1:33:48 PM")
-    (tool "Eeschema 4.0.1-stable")
+    (source "C:/Users/DGilliland/Documents/GitHub/lb-boards/Test Equipment Cards/PULSE-GEN/PULSE-GEN.sch")
+    (date "9/5/2017 9:45:29 AM")
+    (tool "Eeschema (after 2015-mar-04 BZR unknown)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title)
@@ -94,43 +94,43 @@
     (comp (ref P2)
       (value CONN_2)
       (footprint TB2-5MM)
-      (libsource (lib DougsSch) (part CONN_2))
+      (libsource (lib PULSE-GEN-cache) (part CONN_2))
       (sheetpath (names /) (tstamps /))
       (tstamp 519A51D3))
     (comp (ref MTG3)
       (value CONN_1)
       (footprint MTG-4-40)
-      (libsource (lib DougsSch) (part CONN_1))
+      (libsource (lib PULSE-GEN-cache) (part CONN_1))
       (sheetpath (names /) (tstamps /))
       (tstamp 519A590D))
     (comp (ref MTG2)
       (value CONN_1)
       (footprint MTG-4-40)
-      (libsource (lib DougsSch) (part CONN_1))
+      (libsource (lib PULSE-GEN-cache) (part CONN_1))
       (sheetpath (names /) (tstamps /))
       (tstamp 519A5913))
     (comp (ref MTG1)
       (value CONN_1)
       (footprint MTG-4-40)
-      (libsource (lib DougsSch) (part CONN_1))
+      (libsource (lib PULSE-GEN-cache) (part CONN_1))
       (sheetpath (names /) (tstamps /))
       (tstamp 519A5919))
     (comp (ref PA1)
       (value SMA)
-      (footprint SMA_EDGE)
-      (libsource (lib DougsSch) (part CONN_2))
+      (footprint LandBoards_Conns:SMA_EDGE-F)
+      (libsource (lib PULSE-GEN-cache) (part CONN_2))
       (sheetpath (names /) (tstamps /))
       (tstamp 519A5DA2))
     (comp (ref MTG4)
       (value CONN_1)
       (footprint MTG-4-40)
-      (libsource (lib DougsSch) (part CONN_1))
+      (libsource (lib PULSE-GEN-cache) (part CONN_1))
       (sheetpath (names /) (tstamps /))
       (tstamp 519B588C))
     (comp (ref PA2)
       (value SMA)
-      (footprint SMA_EDGE)
-      (libsource (lib DougsSch) (part CONN_2))
+      (footprint LandBoards_Conns:SMA_EDGE-F)
+      (libsource (lib PULSE-GEN-cache) (part CONN_2))
       (sheetpath (names /) (tstamps /))
       (tstamp 519B595A))
     (comp (ref C4)
@@ -142,7 +142,7 @@
     (comp (ref D1)
       (value 1N4148)
       (footprint SOD-123)
-      (libsource (lib DougsSch) (part DIODE))
+      (libsource (lib PULSE-GEN-cache) (part DIODE))
       (sheetpath (names /) (tstamps /))
       (tstamp 519BB09A))
     (comp (ref R7)
@@ -166,7 +166,7 @@
     (comp (ref P1)
       (value CONN_2)
       (footprint PIN_ARRAY_2X1)
-      (libsource (lib DougsSch) (part CONN_2))
+      (libsource (lib PULSE-GEN-cache) (part CONN_2))
       (sheetpath (names /) (tstamps /))
       (tstamp 519CDC62))
     (comp (ref PB2)
@@ -181,6 +181,63 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5535904A)))
   (libparts
+    (libpart (lib PULSE-GEN-rescue) (part LED-RESCUE-PULSE-GEN)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED-RESCUE-PULSE-GEN))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib PULSE-GEN-cache) (part CONN_1)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_1))
+      (pins
+        (pin (num 1) (name 1) (type passive))))
+    (libpart (lib PULSE-GEN-cache) (part CONN_2)
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_2))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
+    (libpart (lib PULSE-GEN-cache) (part DIODE)
+      (fields
+        (field (name Reference) D)
+        (field (name Value) DIODE))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistor)
+      (footprints
+        (fp R_*)
+        (fp Resistor_*))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib conn) (part BNC)
+      (footprints
+        (fp BNC_*)
+        (fp bnc)
+        (fp bnc-*))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) BNC))
+      (pins
+        (pin (num 1) (name In) (type passive))
+        (pin (num 2) (name Ext) (type passive))))
     (libpart (lib 74xx) (part 74HCT04)
       (aliases
         (alias 74HC14)
@@ -205,17 +262,6 @@
         (pin (num 12) (name ~) (type output))
         (pin (num 13) (name ~) (type input))
         (pin (num 14) (name VCC) (type power_in))))
-    (libpart (lib conn) (part BNC)
-      (footprints
-        (fp BNC_*)
-        (fp bnc)
-        (fp bnc-*))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) BNC))
-      (pins
-        (pin (num 1) (name In) (type passive))
-        (pin (num 2) (name Ext) (type passive))))
     (libpart (lib device) (part C)
       (description "Unpolarized capacitor")
       (footprints
@@ -230,19 +276,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib DougsSch) (part CONN_1)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_1))
-      (pins
-        (pin (num 1) (name 1) (type passive))))
-    (libpart (lib DougsSch) (part CONN_2)
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_2))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name PM) (type passive))))
     (libpart (lib device) (part CP1)
       (description "Polarised capacitor")
       (footprints
@@ -257,52 +290,18 @@
         (field (name Value) CP1))
       (pins
         (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib DougsSch) (part DIODE)
-      (description DIODE)
-      (fields
-        (field (name Reference) D)
-        (field (name Value) DIODE))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib PULSE-GEN-rescue) (part LED-RESCUE-PULSE-GEN)
-      (footprints
-        (fp LED-3MM)
-        (fp LED-5MM)
-        (fp LED-10MM)
-        (fp LED-0603)
-        (fp LED-0805)
-        (fp LED-1206)
-        (fp LEDV))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) LED-RESCUE-PULSE-GEN))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistor)
-      (footprints
-        (fp R_*)
-        (fp Resistor_*))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
     (library (logical PULSE-GEN-rescue)
       (uri PULSE-GEN-rescue.lib))
     (library (logical device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
-    (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\device.lib"))
     (library (logical 74xx)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\74xx.lib"))
-    (library (logical DougsSch)
-      (uri C:\Users\doug_000\Documents\GitHub\lb-boards\KiCAD\library\DougsSch.lib)))
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\74xx.lib"))
+    (library (logical conn)
+      (uri "C:\\Program Files (x86)\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical PULSE-GEN-cache)
+      (uri "C:\\Users\\DGilliland\\Documents\\GitHub\\lb-boards\\Test Equipment Cards\\PULSE-GEN\\PULSE-GEN-cache.lib")))
   (nets
     (net (code 1) (name "Net-(D1-Pad2)")
       (node (ref D1) (pin 2))

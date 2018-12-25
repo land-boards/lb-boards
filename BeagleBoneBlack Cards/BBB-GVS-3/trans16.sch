@@ -1,10 +1,9 @@
 EESchema Schematic File Version 2
-LIBS:DougsSch
+LIBS:BBB-GVS-3-rescue
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
-LIBS:beaglebone
 LIBS:linear
 LIBS:memory
 LIBS:BBB-GVS-3-cache
@@ -47,7 +46,7 @@ F 3 "~" H 5550 2350 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L GND-RESCUE-BBB-GVS-3 #PWR09
 U 1 1 54E26244
 P 9450 3650
 F 0 "#PWR09" H 9450 3650 30  0001 C CNN

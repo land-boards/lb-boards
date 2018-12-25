@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript" src="OSH%20Park%20%7E%20Verify%20your%20design_files/01d8c71489"></script><script src="OSH%20Park%20%7E%20Verify%20your%20design_files/nr-1026.js"></script><script type="text/javascript" async="" id="inspsync" src="OSH%20Park%20%7E%20Verify%20your%20design_files/inspectlet.js"></script><script async="" src="OSH%20Park%20%7E%20Verify%20your%20design_files/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"01d8c71489","applicationID":"133394","transactionName":"JQ4MFkEOCVtTRE0QRwoOAwZsABVHRFkUBFtJDwcV","queueTime":2,"applicationTime":65,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+    <title>OSH Park ~   Verify your design
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://oshpark.com/assets/favicon-29029e7252ffd4e90c5fcdd1e8433f345ef139da8b159606b533c8249677c47a.ico">
+    <link rel="apple-touch-icon" href="https://oshpark.com/assets/apple-touch-icon-0adde63fc0f1313075ea6bf9595b94ac44184c883fa769af158f8c3de0d9c39a.png">
+    <link rel="stylesheet" media="screen" href="OSH%20Park%20%7E%20Verify%20your%20design_files/application-090940623a8f5acf06b186b0b99b31ec14f3e9947db9a8ee.css">
+    <link rel="stylesheet" media="print" href="OSH%20Park%20%7E%20Verify%20your%20design_files/print-dd3cd79abbcbf58beb7edb5ab1670423a3670c92ac6dd22e3ea115.css">
+
+    <!--[if lt IE 9]>
+       <script src="/assets/html5-ed6cd9b5892b353538184c8e940d2e6f0c1cf8e30b98bb53a89e362373d80150.js"></script>
+    <![endif]-->
+    <script src="OSH%20Park%20%7E%20Verify%20your%20design_files/application-94137a74cc3dc39c71668c66d3221ff5e91136bfa654ba0d0.js"></script>
+
+    
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="sWrMA9xdiQzr5ZTB7sXHTgfD96HspxA3vn5yGkAxxjitugO8vMUE7EPHpSnecMwvOTjcwzvhhix9x+Bg7lFkpg==">
+  </head>
+  <body>
+    <noscript>
+      <div id="noScriptAlert">
+        This site requires JavaScript to be enabled to function properly.
+      </div>
+    </noscript>
+    
+    <div id="userPanel">
+      <div>
+<ul>
+<li>
+<img alt="" src="OSH%20Park%20%7E%20Verify%20your%20design_files/3fb236dd44695419c044e7aa0c35fd61.jpg" height="16" width="16">
+Doug Gilliland
+</li>
+<li>
+<a href="https://oshpark.com/">Home</a>
+<a href="https://oshpark.com/shared_projects">Shared Projects</a>
+<a href="http://docs.oshpark.com/services/">Pricing and Design Rules</a>
+<a href="http://docs.oshpark.com/">Support</a>
+<a href="http://blog.oshpark.com/">Blog</a>
+<a href="https://oshpark.com/users/current">Projects</a>
+<a href="https://oshpark.com/orders">Order History</a>
+<a href="https://oshpark.com/users/edit">Profile</a>
+<a href="https://oshpark.com/orders/cart">Cart</a>
+<a href="https://oshpark.com/users/sign_out">Log out</a>
+</li>
+</ul>
+</div>
+
+    </div>
+
+
+    <div id="content">
+      <div id="header">
+<img src="OSH%20Park%20%7E%20Verify%20your%20design_files/oshpark_logo-394b5d59990e1feb769d201a1bca154982ac9b9d165f54c.png" title="An electric ecosystem" height="128" width="128">
+<h1>OSH Park</h1>
+<h2>  Verify your design
+</h2>
+</div>
+
+      
+      
+<div id="accordion">
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/50c78d8d6da620e211219df4ae009382.png" title="Board Top">
+  </div>
+  <div class="tips">
+    <h2>Board Top</h2>
+    <p>
+  This shows the final manufactured board as if you
+  held it in your hand.
+</p>
+<p>
+  Your design should show gold copper, purple mask,
+  white silk, black drills, and the board outline.
+</p>
+<p>
+  Internal cutouts are indicated by a black outline
+  but are not filled in.
+</p>
+<p>
+  If the image here is entirely white, you'll want
+  to find and fix any gaps in the board outline.
+</p>
+<p>
+  There should be no dimension or measurement ruler
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/1d2613d0f5e87df5b81078e25bc14c08.png" title="Board Bottom">
+  </div>
+  <div class="tips">
+    <h2>Board Bottom</h2>
+    <p>
+  This shows the final manufactured board as if you
+  held it in your hand.
+</p>
+<p>
+  Your design should show gold copper, purple mask,
+  white silk, black drills, and the board outline.
+</p>
+<p>
+  Internal cutouts are indicated by a black outline
+  but are not filled in.
+</p>
+<p>
+  If the image here is entirely white, you'll want
+  to find and fix any gaps in the board outline.
+</p>
+<p>
+  There should be no dimension or measurement ruler
+</p>
+
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/2b26de1cdd20b46ee8e31dd66fd948d6.png" title="Drills">
+  </div>
+  <div class="tips">
+    <h2>Drills</h2>
+    <p>
+  Drills should show up as white circles on a purple background.
+</p>
+
+<p>
+  We want a single merged drill file exported in Excellon or NC
+  Drills format with 2:4 precision, absolute coordinates, and no
+  zero suppression.
+</p>
+
+<p>
+  We will merge multiple drill files into one file and only plate
+  the holes which pass through copper.
+</p>
+
+<p>
+  Drills smaller than our minimums will be increased to the
+  minimum size. See the design rules.
+</p>
+
+<ul>
+  <li>No overlapping drill hits</li>
+  <li>No blind or buried vias</li>
+  <li>Small slots and plated slots are not supported. See our <a href="http://docs.oshpark.com/submitting-orders/cutouts-and-slots/">slots page</a></li>
+  <li>No oval or other non-circular drills</li>
+</ul>
+<p>
+  We have more info on our
+  <a href="http://docs.oshpark.com/submitting-orders/drill-specs/">drills help page</a>.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/bad43fdb79619407190c3902ab2590ff.png" title="Top Solder Mask">
+      <p>
+        Rendered from "ODAS-RELAY-16-F_Mask.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Top Solder Mask</h2>
+    <p>
+  Soldermask layers show us where to remove the
+  purple solder resist. The gold-colored areas will
+  be exposed on the final board, and purple areas
+  will be covered.
+</p>
+<p>
+  If you submitted an empty file, we won't remove
+  any mask so this entire side of the board will
+  be covered in purple soldermask
+</p>
+<p>
+  To expose the entire board, submit this file with
+  a single polygon that covers the entire board. We
+  will remove all mask everywhere and expose all the
+  copper and board substrate.
+</p>
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/d77b3dfd0e2e870806b95cafe54b75aa.png" title="Bottom Solder Mask">
+      <p>
+        Rendered from "ODAS-RELAY-16-B_Mask.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Bottom Solder Mask</h2>
+    <p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  Soldermask layers show us where to remove the
+  purple solder resist. The gold-colored areas will
+  be exposed on the final board, and purple areas
+  will be covered.
+</p>
+<p>
+  If you submitted an empty file, we won't remove
+  any mask so this entire side of the board will
+  be covered in purple soldermask
+</p>
+<p>
+  To expose the entire board, submit this file with
+  a single polygon that covers the entire board. We
+  will remove all mask everywhere and expose all the
+  copper and board substrate.
+</p>
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/7b400250536779faadce071df40903d1.png" title="Bottom Silk Screen">
+      <p>
+        Rendered from "ODAS-RELAY-16-B_SilkS.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Bottom Silk Screen</h2>
+    <p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  We will ignore the portion of the silkscreen that
+  extends beyond the board outline.
+</p>
+<p>
+  We will automatically remove any silkscreen that
+  crosses drilled holes or exposed copper.
+</p>
+<p>
+  If a logo isn't showing up on this layer, try
+  changing your design tool import settings to create
+  that silk image with 400 DPI or less, or check out
+  our
+  <a href="http://docs.oshpark.com/submitting-orders/import-bmp/">Eagle-specific import-bmp script</a>
+  instructions.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/54f0901a02893a44a5df7a569760597b.png" title="Bottom Layer">
+      <p>
+        Rendered from "ODAS-RELAY-16-B_Cu.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Bottom Layer</h2>
+    <p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  We will place copper everywhere we see gold color
+  on this layer.
+</p>
+<p>
+  If you are using Altium Designer or Altium
+  CircuitMaker, carefully examine the board to make
+  sure there are no shorts from the mechanical layers
+  being included on this layer. See
+  <a href="http://docs.oshpark.com/design-tools/altium-designer/">here</a>
+  for more.
+</p>
+<p>
+  If you are using Eagle, be aware that airwires are
+  not the same as routed traces. If there are no
+  copper links between pads showing on this layer,
+  please review your .brd file for airwires.
+</p>
+<p>
+  See our
+  <a href="http://docs.oshpark.com/design-tools/">design tools pages</a>
+  for more.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/229b87f07886eb5ab973a42f6f1f8160.png" title="Board Outline">
+      <p>
+        Rendered from "ODAS-RELAY-16-Edge_Cuts.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Board Outline</h2>
+    <p>
+  The board outline should be a watertight (no gaps)
+  purple outline showing at least the edge of the
+  board with no gaps.
+</p>
+<p>
+  The outline layer can also show large drill holes
+  and cutouts. See
+  <a href="http://docs.oshpark.com/submitting-orders/board-outline/">the outline instructions</a>
+  for more.
+</p>
+<p>
+  We can cut non-rectangular board shapes, but
+  you’ll be billed for the smallest rectangle to
+  encompass the design. A circular board with a
+  two-inch diameter would cost the same as a
+  square of four square inches.
+</p>
+<p>
+  We don’t offically support cutouts or plated slots,
+  but they usually come out okay if you follow the
+  <a href="http://docs.oshpark.com/submitting-orders/cutouts-and-slots/">cutouts and slots instructions</a>.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/dd461b3805da81fbf197fdcfc71a21d7.png" title="Top Silk Screen">
+      <p>
+        Rendered from "ODAS-RELAY-16-F_SilkS.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Top Silk Screen</h2>
+    <p>
+  We will ignore the portion of the silkscreen that
+  extends beyond the board outline.
+</p>
+<p>
+  We will automatically remove any silkscreen that
+  crosses drilled holes or exposed copper.
+</p>
+<p>
+  If a logo isn't showing up on this layer, try
+  changing your design tool import settings to create
+  that silk image with 400 DPI or less, or check out
+  our
+  <a href="http://docs.oshpark.com/submitting-orders/import-bmp/">Eagle-specific import-bmp script</a>
+  instructions.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+    <div class="layerView">
+  <div class="figure">
+    <img src="OSH%20Park%20%7E%20Verify%20your%20design_files/aedef1bad6f94f3484544abb19d93113.png" title="Top Layer">
+      <p>
+        Rendered from "ODAS-RELAY-16-F_Cu.gbr"
+      </p>
+  </div>
+  <div class="tips">
+    <h2>Top Layer</h2>
+    <p>
+  We will place copper everywhere we see gold color
+  on this layer.
+</p>
+<p>
+  If you are using Altium Designer or Altium
+  CircuitMaker, carefully examine the board to make
+  sure there are no shorts from the mechanical layers
+  being included on this layer. See
+  <a href="http://docs.oshpark.com/design-tools/altium-designer/">here</a>
+  for more.
+</p>
+<p>
+  If you are using Eagle, be aware that airwires are
+  not the same as routed traces. If there are no
+  copper links between pads showing on this layer,
+  please review your .brd file for airwires.
+</p>
+<p>
+  See our
+  <a href="http://docs.oshpark.com/design-tools/">design tools pages</a>
+  for more.
+</p>
+
+  </div>
+  <div class="confirm">
+  </div>
+</div>
+
+  <div class="confirm">
+    <a class="unhappy-path emphasis button" rel="nofollow" data-method="delete" href="https://oshpark.com/uploads/zxURQ0wa">
+      Start Over
+      <i class="fa fa-repeat" aria-hidden="true"></i>
+</a>
+      <a class="button continue emphasis" rel="nofollow" data-method="post" href="https://oshpark.com/uploads/zxURQ0wa/approval?next=projects">
+        Approve
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+</a>    <a class="button continue emphasis" rel="nofollow" data-method="post" href="https://oshpark.com/uploads/zxURQ0wa/approval?next=order">
+      Approve and Order
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+</a>  </div>
+
+</div>
+      <div id="footer">
+<p>
+Designed and developed by
+<a href="http://rabid.co.nz/" title="Rabid">Rabid</a>.
+</p>
+<script id="inspectletjs" type="text/javascript">
+<!-- Begin Inspectlet Embed Code -->
+window.__insp = window.__insp || [];
+__insp.push(['wid', 916995293]);
+(function() {
+function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+})();
+<!-- End Inspectlet Embed Code -->
+</script>
+</div>
+
+    </div>
+  
+
+</body></html>

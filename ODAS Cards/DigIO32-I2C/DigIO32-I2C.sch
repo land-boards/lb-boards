@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -258,7 +257,7 @@ INT1
 NoConn ~ 5450 3750
 Text Label 4100 3550 0    60   ~ 0
 RST
-Text Label 6700 1400 0    60   ~ 0
+Text Label 9100 3000 0    60   ~ 0
 F5V
 $Comp
 L C C1
@@ -406,7 +405,7 @@ Wire Wire Line
 	4200 9100 3800 9100
 Connection ~ 3800 9100
 Wire Wire Line
-	6500 1400 9250 1400
+	6500 1400 8950 1400
 Wire Wire Line
 	3200 2050 3200 950 
 Wire Wire Line
@@ -594,12 +593,12 @@ Wire Wire Line
 Wire Wire Line
 	8400 3900 9550 3900
 Wire Wire Line
-	9250 3100 9550 3100
+	8950 3100 9550 3100
 Wire Wire Line
-	9250 1400 9250 3100
+	8950 1400 8950 3100
 Wire Wire Line
-	9550 3000 9250 3000
-Connection ~ 9250 3000
+	9550 3000 8950 3000
+Connection ~ 8950 3000
 Wire Wire Line
 	5450 4450 6600 4450
 Wire Wire Line
@@ -697,19 +696,19 @@ Wire Wire Line
 Wire Wire Line
 	9550 6500 9350 6500
 Wire Wire Line
-	9350 6500 9350 7150
+	9350 6500 9350 6750
 Wire Wire Line
 	9550 6600 9350 6600
 Connection ~ 9350 6600
 $Comp
 L GND #PWR02
 U 1 1 580EB451
-P 9350 7150
-F 0 "#PWR02" H 9350 7150 30  0001 C CNN
-F 1 "GND" H 9350 7080 30  0001 C CNN
-F 2 "" H 9350 7150 60  0000 C CNN
-F 3 "" H 9350 7150 60  0000 C CNN
-	1    9350 7150
+P 9350 6750
+F 0 "#PWR02" H 9350 6750 30  0001 C CNN
+F 1 "GND" H 9350 6680 30  0001 C CNN
+F 2 "" H 9350 6750 60  0000 C CNN
+F 3 "" H 9350 6750 60  0000 C CNN
+	1    9350 6750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -912,4 +911,68 @@ Wire Wire Line
 Connection ~ 3400 3350
 Text Label 4000 8800 0    60   ~ 0
 WE
+Text Label 9100 3200 0    60   ~ 0
+C0GPA7
+Text Label 9100 3400 0    60   ~ 0
+C0GPA6
+Text Label 9100 3600 0    60   ~ 0
+C0GPA5
+Text Label 9100 3800 0    60   ~ 0
+C0GPA4
+Text Label 9100 4000 0    60   ~ 0
+C0GPA3
+Text Label 9100 4200 0    60   ~ 0
+C0GPA2
+Text Label 9100 4400 0    60   ~ 0
+C0GPA1
+Text Label 9100 4600 0    60   ~ 0
+C0GPA0
+Text Label 9100 4700 0    60   ~ 0
+C0GPB7
+Text Label 9100 4500 0    60   ~ 0
+C0GPB6
+Text Label 9100 4300 0    60   ~ 0
+C0GPB5
+Text Label 9100 4100 0    60   ~ 0
+C0GPB4
+Text Label 9100 3900 0    60   ~ 0
+C0GPB3
+Text Label 9100 3700 0    60   ~ 0
+C0GPB2
+Text Label 9100 3500 0    60   ~ 0
+C0GPB1
+Text Label 9100 3300 0    60   ~ 0
+C0GPB0
+Text Label 9100 4900 0    60   ~ 0
+C1GPA7
+Text Label 9100 5100 0    60   ~ 0
+C1GPA6
+Text Label 9100 5300 0    60   ~ 0
+C1GPA5
+Text Label 9100 5500 0    60   ~ 0
+C1GPA4
+Text Label 9100 5700 0    60   ~ 0
+C1GPA3
+Text Label 9100 5900 0    60   ~ 0
+C1GPA2
+Text Label 9100 6100 0    60   ~ 0
+C1GPA1
+Text Label 9100 6300 0    60   ~ 0
+C1GPA0
+Text Label 9100 5000 0    60   ~ 0
+C1GPB0
+Text Label 9100 5200 0    60   ~ 0
+C1GPB1
+Text Label 9100 5400 0    60   ~ 0
+C1GPB2
+Text Label 9100 5600 0    60   ~ 0
+C1GPB3
+Text Label 9100 5800 0    60   ~ 0
+C1GPB4
+Text Label 9100 6000 0    60   ~ 0
+C1GPB5
+Text Label 9100 6200 0    60   ~ 0
+C1GPB6
+Text Label 9100 6400 0    60   ~ 0
+C1GPB7
 $EndSCHEMATC
