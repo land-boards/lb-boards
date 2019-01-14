@@ -1,4 +1,4 @@
-update=6/6/2015 4:36:39 PM
+update=1/14/2019 9:39:58 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -51,3 +51,5 @@ LibName3=transistors
 LibName4=conn
 LibName5=regul
 LibName6=linear
+LibName7=C:/HWTeam/Kicad/library/LandBoards_Conns
+LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
