@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# pyUnivBom documentation build configuration file, created by
+# KiPL documentation build configuration file, created by
 # sphinx-quickstart on Thu May 08 08:55:13 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -52,8 +52,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pyUnivBom'
-copyright = u'2014, Doug Gilliland'
+project = u'KiPL'
+copyright = u'2018, Doug Gilliland'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -205,7 +205,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'pyUnivBom.tex', u'pyUnivBom Documentation',
+  ('index', 'KiPL.tex', u'KiPL Documentation',
    u'Doug Gilliland', 'manual'),
 ]
 
@@ -235,7 +235,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'pyunivbom', u'pyUnivBom Documentation',
+    ('index', 'KiPL', u'KiPL Documentation',
      [u'Doug Gilliland'], 1)
 ]
 
@@ -249,8 +249,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'pyUnivBom', u'pyUnivBom Documentation',
-   u'Doug Gilliland', 'pyUnivBom', 'One line description of project.',
+  ('index', 'KiPL', u'KiPL Documentation',
+   u'Doug Gilliland', 'KiPL', 'One line description of project.',
    'Miscellaneous'),
 ]
 
