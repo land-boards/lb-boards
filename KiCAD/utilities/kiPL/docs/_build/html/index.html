@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to pyCompFolders’s documentation! &mdash; pyUnivBom 1.0.1 documentation</title>
+    <title>Welcome to kiPL’s documentation! &#8212; pyUnivBom 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -39,190 +39,114 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-pycompfolders-s-documentation">
-<h1>Welcome to pyCompFolders&#8217;s documentation!<a class="headerlink" href="#welcome-to-pycompfolders-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-kipl-s-documentation">
+<h1>Welcome to kiPL&#8217;s documentation!<a class="headerlink" href="#welcome-to-kipl-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 </div>
-<span class="target" id="module-pyCompFolders"></span><div class="section" id="pycompfolders-py">
-<h2>pyCompFolders.py<a class="headerlink" href="#pycompfolders-py" title="Permalink to this headline">¶</a></h2>
-<p>Compare two directory trees</p>
-</div>
-<div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="installation-usage">
-<h2>Installation/Usage<a class="headerlink" href="#installation-usage" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Browse to first folder</li>
-<li>Browse to second folder</li>
-<li>Select output folder/file name</li>
-</ul>
-</div>
-<div class="section" id="output">
-<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
-<p>Columns are:</p>
-<ul class="simple">
-<li>Code</li>
-<li>FileNum</li>
-<li>Date</li>
-<li>Time</li>
-<li>Size</li>
-<li>FileName</li>
-<li>RelPath</li>
-<li>AbsPath</li>
-<li>Date*</li>
-<li>Time*</li>
-<li>Size*</li>
-<li>FileName*</li>
-<li>RelPath*</li>
-<li>AbsPath*</li>
-</ul>
-</div>
+<span class="target" id="module-kiPL"></span><p>kiPL.py
+Generate a PL from a netlist.</p>
+<p>There is some special coding that is used here.
+The fields of the parts need to be named with particular names for this program to work.
+This is a setup thing for Kicad and only needs to be done once.
+The names must match exactly.</p>
 <dl class="class">
-<dt id="pyCompFolders.ReadDirectoryToList">
-<em class="property">class </em><code class="descclassname">pyCompFolders.</code><code class="descname">ReadDirectoryToList</code><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class does all the work of reading a directory tree into a list
-Includes the folder navigation and loading of the folder path
-Returns a list of lists.
-Each line has the directory elements (time, date, size, name, path).</p>
-<dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.browseToFolder">
-<code class="descname">browseToFolder</code><span class="sig-paren">(</span><em>startPath</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.browseToFolder" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>startPath</strong> &#8211; Where to start searching</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Path to the selected folder</td>
-</tr>
-</tbody>
-</table>
-<p>Opens a windows file browser to allow user to navigate to the directory to read
-returns the file name of the path that was selected</p>
+<dt id="kiPL.FindaNetFile">
+<em class="property">class </em><code class="descclassname">kiPL.</code><code class="descname">FindaNetFile</code><a class="headerlink" href="#kiPL.FindaNetFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="kiPL.FindaNetFile.extractPathFromPathfilename">
+<code class="descname">extractPathFromPathfilename</code><span class="sig-paren">(</span><em>fullPathFilename</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.FindaNetFile.extractPathFromPathfilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract Path from fullPathFilename</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.deleteTempFile">
-<code class="descname">deleteTempFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.deleteTempFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete the temporary file that was created</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.doReadDir">
-<code class="descname">doReadDir</code><span class="sig-paren">(</span><em>pathToDir</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.doReadDir" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
+<dt id="kiPL.FindaNetFile.findNetFile">
+<code class="descname">findNetFile</code><span class="sig-paren">(</span><em>startingPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.FindaNetFile.findNetFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>findNetFile() - This is the dialog which locates the csv files</p>
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pathToDir</strong> &#8211; Path to directory</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the directory as a list</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">path/name of the file that was selected</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.formCommandLine">
-<code class="descname">formCommandLine</code><span class="sig-paren">(</span><em>makeDirPath</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.formCommandLine" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>makeDirPath</strong> &#8211; Path to output file</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The command line</td>
-</tr>
-</tbody>
-</table>
-<p>Forms the command line string.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.openCSVFile">
-<code class="descname">openCSVFile</code><span class="sig-paren">(</span><em>csvName</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.openCSVFile" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>csvName</strong> &#8211; Path file name</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">file handle</td>
-</tr>
-</tbody>
-</table>
-<p>Opens the CSV output file as a CSV writer output</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyCompFolders.ReadDirectoryToList.parseDirTxt">
-<code class="descname">parseDirTxt</code><span class="sig-paren">(</span><em>filePtr</em>, <em>rootDirPath</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.ReadDirectoryToList.parseDirTxt" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>filePtr</strong> &#8211; Path to directory text file</li>
-<li><strong>rootDirPath</strong> &#8211; Path to root</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">list of directory contents</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>parse through the text file that was created when the directory was set up</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pyCompFolders.UIManager">
-<em class="property">class </em><code class="descclassname">pyCompFolders.</code><code class="descname">UIManager</code><a class="headerlink" href="#pyCompFolders.UIManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>The User Interface - GTK based</p>
-<dl class="method">
-<dt id="pyCompFolders.UIManager.about_pycompfolders">
-<code class="descname">about_pycompfolders</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.UIManager.about_pycompfolders" title="Permalink to this definition">¶</a></dt>
-<dd><p>About message</p>
+<dt id="kiPL.ControlClass">
+<em class="property">class </em><code class="descclassname">kiPL.</code><code class="descname">ControlClass</code><a class="headerlink" href="#kiPL.ControlClass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="kiPL.ControlClass.combineRefDes">
+<code class="descname">combineRefDes</code><span class="sig-paren">(</span><em>outCSVList</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.ControlClass.combineRefDes" title="Permalink to this definition">¶</a></dt>
+<dd><p>RefDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyCompFolders.UIManager.folderStrucChange">
-<code class="descname">folderStrucChange</code><span class="sig-paren">(</span><em>action</em>, <em>current</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.UIManager.folderStrucChange" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set folder structure change flag</p>
+<dt id="kiPL.ControlClass.readInParts">
+<code class="descname">readInParts</code><span class="sig-paren">(</span><em>inFile</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.ControlClass.readInParts" title="Permalink to this definition">¶</a></dt>
+<dd><p>(design
+(components
+(comp (ref J4)
+(value CONN_6)
+(footprint MTA-156-6PIN-ALT)
+(fields
+(field (name Mfg) TE)
+(field (name MfgPN) 640445-6)
+(field (name Vendor) Mouser)
+(field (name VendorPN) 571-6404456)
+(field (name AACPN) 00779-640445-6))
+...
+(comp (ref J3)
+(value IEC-C14)
+(footprint C14R)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyCompFolders.UIManager.openIF">
-<code class="descname">openIF</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.UIManager.openIF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single interface</p>
+<dt id="kiPL.ControlClass.theExecutive">
+<code class="descname">theExecutive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.ControlClass.theExecutive" title="Permalink to this definition">¶</a></dt>
+<dd><p>theExecutive - Function that runs the whole thing</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyCompFolders.UIManager.quit_application">
-<code class="descname">quit_application</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.UIManager.quit_application" title="Permalink to this definition">¶</a></dt>
-<dd><p>quit</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyCompFolders.UIManager.verboseSingle">
-<code class="descname">verboseSingle</code><span class="sig-paren">(</span><em>action</em>, <em>current</em><span class="sig-paren">)</span><a class="headerlink" href="#pyCompFolders.UIManager.verboseSingle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set verbose</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<dt id="kiPL.ControlClass.writeOutMWTable">
+<code class="descname">writeOutMWTable</code><span class="sig-paren">(</span><em>outFilePtr</em>, <em>theList</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.ControlClass.writeOutMWTable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>outFilePtr</strong> &#8211; Points to the output file.</li>
+<li><strong>theList</strong> &#8211; The list to write out.</li>
 </ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="kiPL.UIManager">
+<em class="property">class </em><code class="descclassname">kiPL.</code><code class="descname">UIManager</code><a class="headerlink" href="#kiPL.UIManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UI manager</p>
+<dl class="method">
+<dt id="kiPL.UIManager.about_kiPL">
+<code class="descname">about_kiPL</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.UIManager.about_kiPL" title="Permalink to this definition">¶</a></dt>
+<dd><p>The about dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="kiPL.UIManager.openIF">
+<code class="descname">openIF</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#kiPL.UIManager.openIF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the interface by calling the control class</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -230,19 +154,7 @@ returns the file name of the path that was selected</p>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to pyCompFolders&#8217;s documentation!</a><ul>
-<li><a class="reference internal" href="#pycompfolders-py">pyCompFolders.py</a></li>
-<li><a class="reference internal" href="#background">Background</a></li>
-<li><a class="reference internal" href="#installation-usage">Installation/Usage</a></li>
-<li><a class="reference internal" href="#output">Output</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-<div class="relations">
+        <div class="sphinxsidebarwrapper"><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
@@ -274,7 +186,7 @@ returns the file name of the path that was selected</p>
       &copy;2014, Doug Gilliland.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.6</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |

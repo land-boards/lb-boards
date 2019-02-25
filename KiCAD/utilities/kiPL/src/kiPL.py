@@ -151,7 +151,11 @@ class ControlClass:
 						if field[len(field) -1] == ')':
 							field = field[0:-1]
 					if (string.find(field,"MfgPN",0) != -1):
-						mfgPN = field[7:]
+						mfgPN = field[9:]
+						if mfgPN[0] == '"' and mfgPN[-1:] == '"':
+							mfgPN = mfgPN[1:-1]
+					elif (string.find(field,"Mfg PN",0) != -1):
+						mfgPN = field[10:]
 						if mfgPN[0] == '"' and mfgPN[-1:] == '"':
 							mfgPN = mfgPN[1:-1]
 					elif (string.find(field,"Mfg",0) != -1):
