@@ -1,4 +1,4 @@
-update=2/2/2019 11:23:41 PM
+update=8/7/2015 10:06:11 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -42,3 +42,10 @@ version=1
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=power
+LibName4=device
+LibName5=conn
+LibName6=atmel
