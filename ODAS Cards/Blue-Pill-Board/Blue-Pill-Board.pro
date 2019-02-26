@@ -1,4 +1,4 @@
-update=2/26/2019 10:32:39 AM
+update=2/26/2019 11:28:41 AM
 version=1
 last_client=kicad
 [general]
@@ -45,7 +45,6 @@ LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
 LibName3=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
 LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
 LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName6=diode
-LibName7=opto
-LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/bluepill
-LibName9=power
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/bluepill
+LibName7=power
+LibName8=conn
