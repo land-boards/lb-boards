@@ -1,4 +1,4 @@
-update=2/27/2019 6:36:32 PM
+update=2/26/2019 11:28:41 AM
 version=1
 last_client=kicad
 [general]
@@ -39,3 +39,12 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dou
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
+LibName2=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Cards
+LibName3=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
+LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/bluepill
+LibName7=power
+LibName8=conn
