@@ -1,4 +1,4 @@
-update=3/1/2019 1:57:43 PM
+update=11/8/2015 9:04:38 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -26,8 +26,14 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.381
 BoardOutlineThickness=0.381
 ModuleOutlineThickness=0.381
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=mcp23008
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+[general]
+version=1
