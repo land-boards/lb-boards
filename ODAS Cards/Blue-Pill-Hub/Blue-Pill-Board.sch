@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Blue-Pill-Board-rescue:MTG_HOLE MTG?1
+L Blue-Pill-Board-rescue:MTG_HOLE-Blue-Pill-Board-rescue MTG?1
 U 1 1 586AD5E2
 P 9000 10000
 F 0 "MTG?1" H 9000 10100 60  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 9000 10000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:MTG_HOLE MTG2
+L Blue-Pill-Board-rescue:MTG_HOLE-Blue-Pill-Board-rescue MTG2
 U 1 1 586AD65D
 P 9000 9700
 F 0 "MTG2" H 9000 9800 60  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 9000 9700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:MTG_HOLE MTG3
+L Blue-Pill-Board-rescue:MTG_HOLE-Blue-Pill-Board-rescue MTG3
 U 1 1 586AD691
 P 9000 10300
 F 0 "MTG3" H 9000 10400 60  0000 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 9000 10300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:MTG_HOLE MTG1
+L Blue-Pill-Board-rescue:MTG_HOLE-Blue-Pill-Board-rescue MTG1
 U 1 1 586AD6D2
 P 9000 9400
 F 0 "MTG1" H 9000 9500 60  0000 C CNN
@@ -59,7 +59,7 @@ F 3 "" H 9000 9400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:DCJ0202 J1
+L Blue-Pill-Board-rescue:DCJ0202-Blue-Pill-Board-rescue J1
 U 1 1 586AF5C9
 P 2900 1300
 F 0 "J1" H 2800 1450 50  0000 L BNN
@@ -81,7 +81,7 @@ F 3 "" H 1800 1100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49 #PWR02
+L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR02
 U 1 1 586AFC7C
 P 1750 1600
 F 0 "#PWR02" H 1750 1600 30  0001 C CNN
@@ -103,7 +103,7 @@ F 3 "" H 1450 1250 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:COUPON TEST1
+L Blue-Pill-Board-rescue:COUPON-Blue-Pill-Board-rescue TEST1
 U 1 1 59399B7A
 P 11350 10250
 F 0 "TEST1" H 11350 10550 60  0000 C CNN
@@ -114,7 +114,7 @@ F 3 "" H 11350 10250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:BP U1
+L Blue-Pill-Board-rescue:BP-Blue-Pill-Board-rescue U1
 U 1 1 5C758D26
 P 4450 8650
 F 0 "U1" H 3950 9550 60  0000 C CNN
@@ -147,7 +147,7 @@ F 3 "" H 4600 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:AP1117 U2
+L Blue-Pill-Board-rescue:AP1117-Blue-Pill-Board-rescue U2
 U 1 1 5C756322
 P 1950 2150
 F 0 "U2" H 2050 2300 60  0000 C CNN
@@ -169,7 +169,7 @@ F 3 "" H 1250 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49 #PWR06
+L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR06
 U 1 1 5C756923
 P 1850 2700
 F 0 "#PWR06" H 1850 2700 30  0001 C CNN
@@ -213,7 +213,7 @@ F 3 "" H 3950 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:FTDI-Slave P3
+L Blue-Pill-Board-rescue:FTDI-Slave-Blue-Pill-Board-rescue P3
 U 1 1 5C756BA0
 P 2650 3750
 F 0 "P3" H 2650 4150 60  0000 C CNN
@@ -224,7 +224,7 @@ F 3 "" H 2700 3400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49 #PWR09
+L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR09
 U 1 1 5C757144
 P 2050 4300
 F 0 "#PWR09" H 2050 4300 30  0001 C CNN
@@ -271,7 +271,7 @@ VO3
 Text Label 2300 1200 0    60   ~ 0
 DCIN
 $Comp
-L Blue-Pill-Board-rescue:PCA9544A U3
+L Blue-Pill-Board-rescue:PCA9544A-Blue-Pill-Board-rescue U3
 U 1 1 5C75BBCC
 P 11150 3500
 F 0 "U3" H 11300 4350 60  0000 C CNN
@@ -338,7 +338,7 @@ F 3 "" H 9350 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R16
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R16
 U 1 1 5C760B14
 P 9850 3650
 F 0 "R16" V 9930 3650 50  0000 C CNN
@@ -382,7 +382,7 @@ F 3 "" H 10050 5150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R17
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R17
 U 1 1 5C762B02
 P 10050 3650
 F 0 "R17" V 10130 3650 50  0000 C CNN
@@ -393,7 +393,7 @@ F 3 "" H 10050 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R18
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R18
 U 1 1 5C762B4E
 P 10250 3650
 F 0 "R18" V 10330 3650 50  0000 C CNN
@@ -404,7 +404,7 @@ F 3 "" H 10250 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R1
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R1
 U 1 1 5C762B9A
 P 9350 2350
 F 0 "R1" V 9430 2350 50  0000 C CNN
@@ -415,7 +415,7 @@ F 3 "" H 9350 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R2
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R2
 U 1 1 5C762E60
 P 9550 2350
 F 0 "R2" V 9630 2350 50  0000 C CNN
@@ -426,7 +426,7 @@ F 3 "" H 9550 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R3
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R3
 U 1 1 5C762F07
 P 9750 2350
 F 0 "R3" V 9830 2350 50  0000 C CNN
@@ -437,7 +437,7 @@ F 3 "" H 9750 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R11
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R11
 U 1 1 5C7640D7
 P 13200 1950
 F 0 "R11" V 13280 1950 50  0000 C CNN
@@ -448,7 +448,7 @@ F 3 "" H 13200 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R12
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R12
 U 1 1 5C76412B
 P 13350 1950
 F 0 "R12" V 13430 1950 50  0000 C CNN
@@ -459,7 +459,7 @@ F 3 "" H 13350 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R4
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R4
 U 1 1 5C7644BD
 P 11850 1950
 F 0 "R4" V 11930 1950 50  0000 C CNN
@@ -470,7 +470,7 @@ F 3 "" H 11850 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R5
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R5
 U 1 1 5C7644C3
 P 12000 1950
 F 0 "R5" V 12080 1950 50  0000 C CNN
@@ -481,7 +481,7 @@ F 3 "" H 12000 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R6
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R6
 U 1 1 5C7644C9
 P 12150 1950
 F 0 "R6" V 12230 1950 50  0000 C CNN
@@ -492,7 +492,7 @@ F 3 "" H 12150 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R8
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R8
 U 1 1 5C7644D5
 P 12600 1950
 F 0 "R8" V 12680 1950 50  0000 C CNN
@@ -503,7 +503,7 @@ F 3 "" H 12600 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R9
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R9
 U 1 1 5C7644DB
 P 12750 1950
 F 0 "R9" V 12830 1950 50  0000 C CNN
@@ -514,7 +514,7 @@ F 3 "" H 12750 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R14
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R14
 U 1 1 5C76AFD1
 P 13800 1950
 F 0 "R14" V 13880 1950 50  0000 C CNN
@@ -525,7 +525,7 @@ F 3 "" H 13800 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R15
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R15
 U 1 1 5C76AFD7
 P 13950 1950
 F 0 "R15" V 14030 1950 50  0000 C CNN
@@ -1334,7 +1334,7 @@ Connection ~ 12550 1500
 Wire Wire Line
 	12550 1500 13150 1500
 $Comp
-L Blue-Pill-Board-rescue:R R7
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R7
 U 1 1 5D0DC4CA
 P 12450 1950
 F 0 "R7" V 12530 1950 50  0000 C CNN
@@ -1345,7 +1345,7 @@ F 3 "" H 12450 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R10
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R10
 U 1 1 5D0DC53E
 P 13050 1950
 F 0 "R10" V 13130 1950 50  0000 C CNN
@@ -1356,7 +1356,7 @@ F 3 "" H 13050 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:R R13
+L Blue-Pill-Board-rescue:R-Blue-Pill-Board-rescue R13
 U 1 1 5D0DC5AE
 P 13650 1950
 F 0 "R13" V 13730 1950 50  0000 C CNN
@@ -1787,7 +1787,7 @@ F 3 "~" H 2800 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49 #PWR0108
+L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR0108
 U 1 1 5CA2F24E
 P 2800 2650
 F 0 "#PWR0108" H 2800 2650 30  0001 C CNN
