@@ -1,26 +1,13 @@
-Qty,Value,RefDes,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN
-5,0.1uF,"C1,C2,C4,C5,C6",Capacitors_SMD:C_0805_HandSoldering,N/A,N/A,N/A,N/A
-1,10uF,C3,Capacitors_SMD:C_1206_HandSoldering,N/A,N/A,N/A,N/A
-3,CONN_01X02,"H1,H2,H7",Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,N/A,N/A,N/A,N/A
-5,CONN_01X03,"H3,H4,H5,H6,H8",Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_02X03,H9,Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_01X02,J4,LandBoards_Conns:TB2-5MM,N/A,N/A,N/A,N/A
-1,Conn_01x04,J7,Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,DCJ0202,J1,LandBoards_Conns:DCJ-NEW,N/A,N/A,N/A,N/A
-4,MTG_HOLE,"MTG1,MTG2,MTG3,MTG?1",LandBoards_MountHoles:MTG-6-32,N/A,N/A,N/A,N/A
-1,CONN_01X02,P2,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,N/A,N/A,N/A,N/A
-4,CONN_01X05,"P4,P5,P6,P7",Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_01X16,P12,Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_01X18,P13,Pin_Headers:Pin_Header_Straight_1x18_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_02X16,P11,Pin_Headers:Pin_Header_Straight_2x16_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,CONN_02X18,P14,Pin_Headers:Pin_Header_Straight_2x18_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,Conn_02x03_Odd_Even,P8,Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,Conn_02x08_Odd_Even,P1,Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm,N/A,N/A,N/A,N/A
-1,FTDI-Slave,P3,Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm,N/A,N/A,N/A,N/A
-8,10K,"R1,R10,R13,R16,R17,R18,R4,R7",Resistors_SMD:R_0805_HandSoldering,N/A,N/A,N/A,N/A
-10,2.2K,"R11,R12,R14,R15,R2,R3,R5,R6,R8,R9",Resistors_SMD:R_0805_HandSoldering,N/A,N/A,N/A,N/A
-1,SW_Push,SW1,Buttons_Switches_THT:SW_PUSH_6mm_h8.5mm,N/A,N/A,N/A,N/A
-1,COUPON,TEST1,LandBoards_Marking:TEST_BLK-REAR,N/A,N/A,N/A,N/A
-1,AP1117,U2,LandBoards_SMD_Packages:SOT223,N/A,N/A,N/A,N/A
-1,BP,U1,BP:BLUEPILL,N/A,N/A,N/A,N/A
-1,PCA9544A,U3,Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm,N/A,N/A,N/A,N/A
+Qty,Value,RefDes,,Qty,Value,RefDes
+1,AP1117,U2,,1,CONN_02X03_STRT,P8
+1,PCA9544A,U3,,1,Conn_02x08_STRT,P1
+5,0.1uF (0805),"C1,C2,C4-C6",,1,CONN_01X06_STRT,P3
+1,10uF (1206),C3,,3,CONN_01X02_STRT,"H1,H2,H7"
+8,10K (0805),"R1,R4,R7,R10,R13,R16-R18",,5,CONN_01X03_STRT,"H3-H6,H8"
+10,2.2K (0805),"R2,R3,R5,R6,R8,R9,R11,R12,R14,R15",,1,CONN_02X03_STRT,H9
+1,CONN_01X02_STRT,P2,,1,CONN_01X02,J4
+4,CONN_01X05_STRT,P4-P7,,1,Conn_01x04_STRT,J7
+1,CONN_01X16_STRT,P12,,1,SW_Push (6mm),SW1
+1,CONN_01X18_STRT,P13,,1,DCJ0202,J1
+1,CONN_02X16_STRT,P11,,2,2x20 Female Header,Blue Pill Card
+1,CONN_02X18_STRT,P14,,,,
