@@ -1,6 +1,35 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:DigIO32-I2C-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -15,7 +44,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DigIO32-I2C-rescue:MTG_HOLE MTG4
+L MTG_HOLE MTG4
 U 1 1 537A5C77
 P 11850 10300
 F 0 "MTG4" H 11850 10400 60  0000 C CNN
@@ -26,7 +55,7 @@ F 3 "~" H 11850 10300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:MTG_HOLE MTG3
+L MTG_HOLE MTG3
 U 1 1 537A5C86
 P 11350 10300
 F 0 "MTG3" H 11350 10400 60  0000 C CNN
@@ -37,7 +66,7 @@ F 3 "~" H 11350 10300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:MTG_HOLE MTG2
+L MTG_HOLE MTG2
 U 1 1 537A5C95
 P 11850 10000
 F 0 "MTG2" H 11850 10100 60  0000 C CNN
@@ -48,7 +77,7 @@ F 3 "~" H 11850 10000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:MTG_HOLE MTG1
+L MTG_HOLE MTG1
 U 1 1 537A5CA4
 P 11350 10000
 F 0 "MTG1" H 11350 10100 60  0000 C CNN
@@ -73,7 +102,7 @@ A1
 Text Label 4150 3150 0    60   ~ 0
 A2
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 539081BC
 P 4900 10400
 F 0 "#PWR01" H 4900 10400 30  0001 C CNN
@@ -92,7 +121,7 @@ POWER
 Text Notes 2450 2700 0    60   ~ 0
 I2C
 $Comp
-L DigIO32-I2C-rescue:24C01 U3
+L 24C01 U3
 U 1 1 5396141F
 P 4900 9000
 F 0 "U3" H 5050 9350 60  0000 C CNN
@@ -103,7 +132,7 @@ F 3 "~" H 4900 9000 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:MCP23017P U1
+L MCP23017P U1
 U 1 1 5399A0BE
 P 4950 3500
 F 0 "U1" H 5100 4500 60  0000 C CNN
@@ -114,7 +143,7 @@ F 3 "~" H 4950 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:FUSE F1
+L FUSE F1
 U 1 1 5399AD9D
 P 6250 1400
 F 0 "F1" H 6350 1450 40  0000 C CNN
@@ -125,7 +154,7 @@ F 3 "~" H 6250 1400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:CONN_02X02 J6
+L CONN_02X02 J6
 U 1 1 553AD92A
 P 2600 3750
 F 0 "J6" H 2600 3900 50  0000 C CNN
@@ -136,7 +165,7 @@ F 3 "" H 2600 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R6
+L R R6
 U 1 1 553ADCA8
 P 1950 3700
 F 0 "R6" V 2030 3700 50  0000 C CNN
@@ -147,7 +176,7 @@ F 3 "" H 1950 3700 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R5
+L R R5
 U 1 1 553ADDB1
 P 1950 3900
 F 0 "R5" V 2030 3900 50  0000 C CNN
@@ -158,7 +187,7 @@ F 3 "" H 1950 3900 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R7
+L R R7
 U 1 1 553C09EA
 P 5600 1750
 F 0 "R7" V 5680 1750 50  0000 C CNN
@@ -169,7 +198,7 @@ F 3 "" H 5600 1750 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R2
+L R R2
 U 1 1 553C21CF
 P 3900 1800
 F 0 "R2" V 3950 1600 50  0000 C CNN
@@ -180,7 +209,7 @@ F 3 "" H 3900 1800 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R1
+L R R1
 U 1 1 553C2213
 P 3800 1800
 F 0 "R1" V 3850 1600 50  0000 C CNN
@@ -191,7 +220,7 @@ F 3 "" H 3800 1800 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R3
+L R R3
 U 1 1 553C2255
 P 3700 1800
 F 0 "R3" V 3750 1600 50  0000 C CNN
@@ -202,7 +231,7 @@ F 3 "" H 3700 1800 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R4
+L R R4
 U 1 1 553C3323
 P 2800 8800
 F 0 "R4" V 2880 8800 50  0000 C CNN
@@ -213,7 +242,7 @@ F 3 "" H 2800 8800 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:CONN_01X02 J5
+L CONN_01X02 J5
 U 1 1 553C4058
 P 2800 9400
 F 0 "J5" H 2800 9550 50  0000 C CNN
@@ -231,7 +260,7 @@ RST
 Text Label 9100 3000 0    60   ~ 0
 F5V
 $Comp
-L Device:C C1
+L C C1
 U 1 1 553D2DDF
 P 5700 9050
 F 0 "C1" H 5725 9150 50  0000 L CNN
@@ -242,7 +271,7 @@ F 3 "" H 5700 9050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L C C2
 U 1 1 553D2EE6
 P 6050 9050
 F 0 "C2" H 6075 9150 50  0000 L CNN
@@ -253,7 +282,7 @@ F 3 "" H 6050 9050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DigIO32-I2C-rescue:MCP23017P U2
+L MCP23017P U2
 U 1 1 580E4D4E
 P 4900 6450
 F 0 "U2" H 5050 7450 60  0000 C CNN
@@ -264,7 +293,7 @@ F 3 "~" H 4900 6450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:DB37 P1
+L DB37 P1
 U 1 1 580E63D0
 P 10000 4800
 F 0 "P1" H 10100 6700 70  0000 C CNN
@@ -283,34 +312,34 @@ Connection ~ 3800 10300
 Wire Wire Line
 	3900 3250 4350 3250
 Wire Wire Line
-	3900 1950 3900 3250
+	3900 1950 3900 9500
 Wire Wire Line
 	4350 3150 3800 3150
 Wire Wire Line
-	2750 2850 3600 2850
+	2750 2850 4350 2850
 Wire Wire Line
-	2750 2950 3500 2950
+	2750 2950 4350 2950
 Wire Wire Line
 	2750 3150 3400 3150
 Wire Wire Line
-	3400 2550 3400 3150
+	3400 2550 3400 10300
 Wire Wire Line
 	3300 3050 2750 3050
 Wire Wire Line
-	3300 1400 3300 2450
+	3300 1400 3300 8250
 Wire Wire Line
 	4850 4950 4850 5050
 Wire Wire Line
-	4900 9600 4900 9950
+	4900 9600 4900 10400
 Connection ~ 4900 10300
 Wire Wire Line
 	4900 1400 4900 2400
 Connection ~ 3900 3250
 Wire Wire Line
-	3800 1950 3800 3150
+	3800 1950 3800 9500
 Connection ~ 3800 3150
 Wire Wire Line
-	3700 1950 3700 3550
+	3700 1950 3700 6500
 Wire Wire Line
 	3700 3550 4350 3550
 Wire Wire Line
@@ -328,22 +357,22 @@ Wire Wire Line
 	4150 2350 4150 2950
 Connection ~ 4150 2950
 Wire Wire Line
-	1950 2450 2900 2450
+	1950 2450 3300 2450
 Connection ~ 3300 2450
 Wire Wire Line
-	1850 2550 3000 2550
+	1850 2550 3400 2550
 Connection ~ 3400 3150
 Wire Wire Line
-	3150 10300 3400 10300
+	3150 10300 4900 10300
 Wire Wire Line
-	3000 750  3000 1050
+	3000 750  3000 2550
 Wire Wire Line
 	3000 1950 2700 1950
 Connection ~ 3000 2550
 Wire Wire Line
 	2700 1850 2900 1850
 Wire Wire Line
-	2900 1650 2900 1850
+	2900 1650 2900 2450
 Connection ~ 2900 2450
 Wire Wire Line
 	2700 1750 3000 1750
@@ -357,15 +386,15 @@ Connection ~ 3000 1050
 Wire Wire Line
 	4900 8250 4900 8500
 Wire Wire Line
-	2550 8250 3300 8250
+	2550 8250 6800 8250
 Connection ~ 3300 3050
 Wire Wire Line
 	3600 8900 4200 8900
 Wire Wire Line
-	3600 2850 3600 3800
+	3600 2850 3600 8900
 Connection ~ 3600 2850
 Wire Wire Line
-	3500 2950 3500 3700
+	3500 2950 3500 9000
 Wire Wire Line
 	3500 9000 4200 9000
 Connection ~ 3500 2950
@@ -392,15 +421,15 @@ Wire Wire Line
 Wire Wire Line
 	1750 3900 1800 3900
 Wire Wire Line
-	1750 3500 1750 3700
+	1750 3500 1750 3900
 Wire Wire Line
 	1800 3700 1750 3700
 Connection ~ 1750 3700
 Wire Wire Line
-	5600 1900 5600 2050
+	5600 1900 5600 2650
 Connection ~ 5600 2050
 Wire Wire Line
-	3300 1400 3700 1400
+	3300 1400 6000 1400
 Wire Wire Line
 	5600 1400 5600 1600
 Wire Wire Line
@@ -413,7 +442,7 @@ Wire Wire Line
 	3900 1650 3900 1400
 Connection ~ 3900 1400
 Wire Wire Line
-	2950 8800 3150 8800
+	2950 8800 4200 8800
 Wire Wire Line
 	3150 8800 3150 9350
 Connection ~ 3150 8800
@@ -444,7 +473,7 @@ Connection ~ 5700 8250
 Wire Wire Line
 	6050 9950 6050 9200
 Wire Wire Line
-	4900 9950 5700 9950
+	4900 9950 6800 9950
 Connection ~ 4900 9950
 Wire Wire Line
 	5700 9200 5700 9950
@@ -566,7 +595,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 3100 9550 3100
 Wire Wire Line
-	8950 1400 8950 3000
+	8950 1400 8950 3100
 Wire Wire Line
 	9550 3000 8950 3000
 Connection ~ 8950 3000
@@ -667,12 +696,12 @@ Wire Wire Line
 Wire Wire Line
 	9550 6500 9350 6500
 Wire Wire Line
-	9350 6500 9350 6600
+	9350 6500 9350 6750
 Wire Wire Line
 	9550 6600 9350 6600
 Connection ~ 9350 6600
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 580EB451
 P 9350 6750
 F 0 "#PWR02" H 9350 6750 30  0001 C CNN
@@ -733,7 +762,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 7600 8000 5000
 $Comp
-L conn:CONN_02X02 J3
+L CONN_02X02 J3
 U 1 1 580EF093
 P 3850 9750
 F 0 "J3" H 3850 9900 50  0000 C CNN
@@ -744,7 +773,7 @@ F 3 "" H 3850 8550 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R8
+L R R8
 U 1 1 580F0555
 P 5800 1750
 F 0 "R8" V 5880 1750 50  0000 C CNN
@@ -755,7 +784,7 @@ F 3 "" H 5800 1750 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conn:CONN_01X04 J4
+L CONN_01X04 J4
 U 1 1 580F09F7
 P 3600 900
 F 0 "J4" H 3600 1150 50  0000 C CNN
@@ -769,7 +798,7 @@ Wire Wire Line
 	5800 1400 5800 1600
 Connection ~ 5600 1400
 Wire Wire Line
-	5800 1900 5800 2150
+	5800 1900 5800 5600
 Wire Wire Line
 	5800 5600 5400 5600
 Wire Wire Line
@@ -784,7 +813,7 @@ Connection ~ 4900 1400
 Connection ~ 5800 1400
 Connection ~ 5800 2150
 $Comp
-L conn:CONN_02X04 J2
+L CONN_02X04 J2
 U 1 1 580F39C0
 P 2500 3000
 F 0 "J2" H 2500 3250 50  0000 C CNN
@@ -811,7 +840,7 @@ Wire Wire Line
 Wire Wire Line
 	2150 2850 2250 2850
 $Comp
-L conn:CONN_01X05 J1
+L CONN_01X05 J1
 U 1 1 580F4DF3
 P 2500 1750
 F 0 "J1" H 2500 2050 50  0000 C CNN
@@ -828,7 +857,7 @@ Wire Wire Line
 	2700 1550 3000 1550
 Connection ~ 3000 1550
 $Comp
-L Device:C C3
+L C C3
 U 1 1 580F6242
 P 6450 9050
 F 0 "C3" H 6475 9150 50  0000 L CNN
@@ -845,7 +874,7 @@ Wire Wire Line
 	6450 9950 6450 9200
 Connection ~ 6050 9950
 $Comp
-L Device:CP1_Small C4
+L CP1_Small C4
 U 1 1 580F56EB
 P 6800 9050
 F 0 "C4" H 6810 9120 50  0000 L CNN
@@ -862,7 +891,7 @@ Wire Wire Line
 	6800 9950 6800 9150
 Connection ~ 6450 9950
 $Comp
-L DigIO32-I2C-rescue:MTG_HOLE TESTED1
+L MTG_HOLE TESTED1
 U 1 1 580F6225
 P 10800 10000
 F 0 "TESTED1" H 10800 10100 60  0000 C CNN
@@ -946,118 +975,4 @@ Text Label 9100 6200 0    60   ~ 0
 C1GPB6
 Text Label 9100 6400 0    60   ~ 0
 C1GPB7
-Wire Wire Line
-	3900 10300 4100 10300
-Wire Wire Line
-	3800 10300 3900 10300
-Wire Wire Line
-	4900 10300 4900 10400
-Wire Wire Line
-	3900 3250 3900 6200
-Wire Wire Line
-	3800 3150 3800 6100
-Wire Wire Line
-	4250 2850 4350 2850
-Wire Wire Line
-	4150 2950 4350 2950
-Wire Wire Line
-	3300 2450 3300 3050
-Wire Wire Line
-	3400 3150 3400 3350
-Wire Wire Line
-	3000 2550 3400 2550
-Wire Wire Line
-	2900 2450 3300 2450
-Wire Wire Line
-	3000 1950 3000 2550
-Wire Wire Line
-	3000 1750 3000 1950
-Wire Wire Line
-	3000 1050 3000 1550
-Wire Wire Line
-	3300 3050 3300 3500
-Wire Wire Line
-	3600 2850 4250 2850
-Wire Wire Line
-	3500 2950 4150 2950
-Wire Wire Line
-	3900 9200 3900 9500
-Wire Wire Line
-	3800 9100 3800 9500
-Wire Wire Line
-	1750 3700 1750 3900
-Wire Wire Line
-	5600 2050 5600 2650
-Wire Wire Line
-	3700 1400 3800 1400
-Wire Wire Line
-	3800 1400 3900 1400
-Wire Wire Line
-	3900 1400 4900 1400
-Wire Wire Line
-	3150 8800 4200 8800
-Wire Wire Line
-	3300 8250 4900 8250
-Wire Wire Line
-	3400 10300 3800 10300
-Wire Wire Line
-	3600 3800 3600 5800
-Wire Wire Line
-	3500 3700 3500 5900
-Wire Wire Line
-	4900 8250 5700 8250
-Wire Wire Line
-	5700 8250 6050 8250
-Wire Wire Line
-	4900 9950 4900 10300
-Wire Wire Line
-	5700 9950 6050 9950
-Wire Wire Line
-	3300 3500 3300 5200
-Wire Wire Line
-	3400 8050 3400 10300
-Wire Wire Line
-	3400 5050 3400 8050
-Wire Wire Line
-	3300 5200 3300 6300
-Wire Wire Line
-	8950 3000 8950 3100
-Wire Wire Line
-	9350 6600 9350 6750
-Wire Wire Line
-	3600 5800 3600 8900
-Wire Wire Line
-	3500 5900 3500 9000
-Wire Wire Line
-	3800 6100 3800 9100
-Wire Wire Line
-	3900 6200 3900 9200
-Wire Wire Line
-	3300 6300 3300 8250
-Wire Wire Line
-	3700 3550 3700 6500
-Wire Wire Line
-	5600 1400 5800 1400
-Wire Wire Line
-	4900 1400 5600 1400
-Wire Wire Line
-	5800 1400 6000 1400
-Wire Wire Line
-	5800 2150 5800 5600
-Wire Wire Line
-	2900 1850 2900 2450
-Wire Wire Line
-	3000 1550 3000 1750
-Wire Wire Line
-	6050 8250 6450 8250
-Wire Wire Line
-	6050 9950 6450 9950
-Wire Wire Line
-	6450 8250 6800 8250
-Wire Wire Line
-	6450 9950 6800 9950
-Wire Wire Line
-	4100 10300 4900 10300
-Wire Wire Line
-	3400 3350 3400 5050
 $EndSCHEMATC
