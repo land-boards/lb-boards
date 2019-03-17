@@ -1,4 +1,4 @@
-update=3/15/2019 12:59:29 PM
+update=3/9/2019 4:16:42 PM
 version=1
 last_client=kicad
 [general]
@@ -14,7 +14,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Blue-Pill-Board.net
+LastNetListRead=../ESP32-Hub/ESP32-Hub.net
 PadDrill=3.8354
 PadDrillOvalY=3.8354
 PadSizeH=9.525

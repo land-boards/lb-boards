@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "BLUE PILL BOARD"
 Date "Tuesday, February 26, 2019"
-Rev "11"
+Rev "2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -213,17 +213,6 @@ F 3 "" H 3950 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Blue-Pill-Board-rescue:FTDI-Slave-Blue-Pill-Board-rescue P3
-U 1 1 5C756BA0
-P 2650 3750
-F 0 "P3" H 2650 4150 60  0000 C CNN
-F 1 "FTDI-Slave" H 2650 3300 60  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 2900 3200 30  0000 C CNN
-F 3 "" H 2700 3400 60  0000 C CNN
-	1    2650 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR09
 U 1 1 5C757144
 P 2050 4300
@@ -260,9 +249,9 @@ Text Label 5300 8850 0    60   ~ 0
 STM_RX
 Text Label 5300 8950 0    60   ~ 0
 STM_TX
-Text Label 1600 3800 0    60   ~ 0
+Text Label 1550 3900 0    60   ~ 0
 STM_TX
-Text Label 1600 3900 0    60   ~ 0
+Text Label 1550 3800 0    60   ~ 0
 STM_RX
 Text Notes 2050 4650 0    60   ~ 0
 FTDI CONNECTOR
@@ -1975,7 +1964,7 @@ U 1 1 5CC29DFE
 P 5300 3900
 F 0 "P1" H 5350 4300 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 5500 3400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 5300 3900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x08_Pitch2.54mm" H 5300 3250 50  0000 C CNN
 F 3 "~" H 5300 3900 50  0001 C CNN
 	1    5300 3900
 	1    0    0    -1  
@@ -2167,4 +2156,15 @@ F 3 "" H 4250 6200 60  0000 C CNN
 $EndComp
 Text Notes 3450 6300 0    100  ~ 20
 SPI BUS
+$Comp
+L LandBoards_Cards:FTDI P3
+U 1 1 5C8EFD82
+P 2700 4100
+F 0 "P3" H 2750 4850 60  0000 R CNN
+F 1 "FTDI" H 2800 4050 60  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 3000 3950 60  0000 R CNN
+F 3 "" H 2700 4100 60  0000 C CNN
+	1    2700 4100
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
