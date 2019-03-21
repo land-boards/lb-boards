@@ -1,12 +1,14 @@
-lb-boards WiFi Cards Designs
-============================
+<a href="https://www.tindie.com/stores/land_boards/" >
+<img src="http://land-boards.com/blwiki/images/e/eb/Tindie-larges-v2.png" alt="Tindie Logo">
+</img></a>
 
-land-boards.com - WiFi Cards Printed Circuit Board Designs
-----------------------------------------------------------
 
-Design files are kept here. Most are [Kicad based designs][Kicad].
-[Kicad]: http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ "Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools."
+== lb-boards WiFi Cards Designs ==
 
-See [our PCB Designs Website][ourWebsite] and our [land-boards Wiki][ourWiki].
-[ourWebsite]: http://land-boards.com/content/ "land-boards.com website"
-[ourWiki]: http://land-boards.com/blwiki/ "land-boards.com wiki"
+=== land-boards.com - WiFi Cards Printed Circuit Board Designs ===
+
+Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad based designs].
+"Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools."
+
+See [http://land-boards.com/content/ our PCB Designs Website] and our [http://land-boards.com/blwiki/ land-boards Wiki].
+
