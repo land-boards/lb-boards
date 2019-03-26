@@ -1,4 +1,4 @@
-update=3/26/2019 8:19:08 AM
+update=3/12/2017 3:52:55 PM
 version=1
 last_client=kicad
 [general]
@@ -39,3 +39,7 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dou
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=conn
+LibName2=power
+LibName3=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
