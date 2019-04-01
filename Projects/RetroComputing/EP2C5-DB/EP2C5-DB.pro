@@ -1,4 +1,4 @@
-update=2/4/2017 6:00:50 PM
+update=3/30/2019 9:13:26 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -48,10 +48,3 @@ LibName16=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/do
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=EP2C5-DB-rescue
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
