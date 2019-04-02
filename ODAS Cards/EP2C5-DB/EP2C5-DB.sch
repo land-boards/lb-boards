@@ -914,9 +914,9 @@ Wire Wire Line
 	5200 5050 4600 5050
 Wire Wire Line
 	5200 5250 4600 5250
-Text Label 4750 5050 0    60   ~ 0
+Text Label 4650 5050 0    60   ~ 0
 P75
-Text Label 4750 5250 0    60   ~ 0
+Text Label 4650 5250 0    60   ~ 0
 P74
 $Comp
 L power:GND #PWR010
@@ -1729,4 +1729,8 @@ Wire Wire Line
 	10100 6250 10100 6450
 Text Notes 750  7150 0    60   ~ 0
 (SRAM)
+Text Notes 4850 5250 0    60   ~ 0
+(SYNC)
+Text Notes 4850 5050 0    60   ~ 0
+(VID)
 $EndSCHEMATC
