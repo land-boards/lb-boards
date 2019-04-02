@@ -1,0 +1,423 @@
+# ##############################################  Core  ##############################################
+set_location_assignment	PIN_23	-to	CLK
+
+set_location_assignment	PIN_125	-to	RESET
+
+#LED
+set_location_assignment	PIN_3	-to	LED[0]
+set_location_assignment	PIN_7	-to	LED[1]
+set_location_assignment	PIN_10	-to	LED[2]
+set_location_assignment	PIN_11	-to	LED[3]
+
+#EPCS
+set_location_assignment	 PIN_12	-to	EPCS_CLK
+set_location_assignment	 PIN_13	-to	EPCS_DATA0
+set_location_assignment	 PIN_8	-to	EPCS_SCE
+set_location_assignment	  PIN_6	-to	EPCS_SDO
+
+# Herder_Left(just for reference, can't be Actual Settings of Tcl)
+set_location_assignment	H_LEFT_1  -to	GND
+set_location_assignment	H_LEFT_2  -to	3.3V
+set_location_assignment	H_LEFT_3  -to	PIN_59
+set_location_assignment	H_LEFT_4  -to	PIN_60
+set_location_assignment	H_LEFT_5  -to	PIN_64
+set_location_assignment	H_LEFT_6  -to	PIN_65
+set_location_assignment	H_LEFT_7  -to	PIN_66
+set_location_assignment	H_LEFT_8  -to	PIN_67
+set_location_assignment	H_LEFT_9  -to	PIN_68
+set_location_assignment	H_LEFT_10 -to	PIN_69
+set_location_assignment	H_LEFT_11 -to	PIN_70
+set_location_assignment	H_LEFT_12 -to	PIN_71
+set_location_assignment	H_LEFT_13 -to	PIN_72
+set_location_assignment	H_LEFT_14 -to	PIN_73
+set_location_assignment	H_LEFT_15 -to	PIN_74
+set_location_assignment	H_LEFT_16 -to	PIN_75
+set_location_assignment	H_LEFT_17 -to	PIN_76
+set_location_assignment	H_LEFT_18 -to	PIN_77
+set_location_assignment	H_LEFT_19 -to	PIN_80
+set_location_assignment	H_LEFT_20 -to	PIN_83
+set_location_assignment	H_LEFT_21 -to	PIN_84
+set_location_assignment	H_LEFT_22 -to	PIN_85
+set_location_assignment	H_LEFT_23 -to	GND
+set_location_assignment	H_LEFT_24 -to	5V
+set_location_assignment	H_LEFT_25 -to	PIN_86
+set_location_assignment	H_LEFT_26 -to	PIN_87
+set_location_assignment	H_LEFT_27 -to	PIN_98
+set_location_assignment	H_LEFT_28 -to	PIN_99
+set_location_assignment	H_LEFT_29 -to	PIN_100	
+set_location_assignment	H_LEFT_30 -to	PIN_101
+set_location_assignment	H_LEFT_31 -to	PIN_103
+set_location_assignment	H_LEFT_32 -to	PIN_104
+set_location_assignment	H_LEFT_33 -to	PIN_105
+set_location_assignment	H_LEFT_34 -to	PIN_106
+set_location_assignment	H_LEFT_35 -to	PIN_110
+set_location_assignment	H_LEFT_36 -to	PIN_111
+set_location_assignment	H_LEFT_37 -to	PIN_112
+set_location_assignment	H_LEFT_38 -to	PIN_113
+set_location_assignment	H_LEFT_39 -to	PIN_114
+set_location_assignment	H_LEFT_40 -to	PIN_115
+set_location_assignment	H_LEFT_41 -to	PIN_119
+set_location_assignment	H_LEFT_42 -to	PIN_120
+set_location_assignment	H_LEFT_43 -to	PIN_121
+set_location_assignment	H_LEFT_44 -to	PIN_124
+
+# Herder_Right(just for reference, can't be Actual Settings of Tcl)
+set_location_assignment	H_Right_1 -to		GND
+set_location_assignment	H_Right_2 -to		3.3V
+set_location_assignment	H_Right_3 -to		PIN_58
+set_location_assignment	H_Right_4 -to		PIN_55
+set_location_assignment	H_Right_5 -to		PIN_54
+set_location_assignment	H_Right_6 -to		PIN_53
+set_location_assignment	H_Right_7 -to		PIN_52
+set_location_assignment	H_Right_8 -to		PIN_51
+set_location_assignment	H_Right_9 -to		PIN_50
+set_location_assignment	H_Right_10 -to	PIN_49
+set_location_assignment	H_Right_11 -to	PIN_46
+set_location_assignment	H_Right_12 -to	PIN_44
+set_location_assignment	H_Right_13 -to	PIN_43
+set_location_assignment	H_Right_14 -to	PIN_42
+set_location_assignment	H_Right_15 -to	PIN_39
+set_location_assignment	H_Right_16 -to	PIN_38
+set_location_assignment	H_Right_17 -to	PIN_34
+set_location_assignment	H_Right_18 -to	PIN_33
+set_location_assignment	H_Right_19 -to	PIN_32
+set_location_assignment	H_Right_20 -to	PIN_31
+set_location_assignment	H_Right_21 -to	PIN_30
+set_location_assignment	H_Right_22 -to	PIN_28
+set_location_assignment	H_Right_23 -to	GND
+set_location_assignment	H_Right_24 -to	5V
+set_location_assignment	H_Right_25 -to	PIN_11
+set_location_assignment	H_Right_26 -to	PIN_10
+set_location_assignment	H_Right_27 -to	PIN_7
+set_location_assignment	H_Right_28 -to	PIN_3
+set_location_assignment	H_Right_29 -to	PIN_2
+set_location_assignment	H_Right_30 -to	PIN_1
+set_location_assignment	H_Right_31 -to	PIN_144
+set_location_assignment	H_Right_32 -to	PIN_143
+set_location_assignment	H_Right_33 -to	PIN_142
+set_location_assignment	H_Right_34 -to	PIN_141
+set_location_assignment	H_Right_35 -to	PIN_138
+set_location_assignment	H_Right_36 -to	PIN_137
+set_location_assignment	H_Right_37 -to	PIN_136
+set_location_assignment	H_Right_38 -to	PIN_135
+set_location_assignment	H_Right_39 -to	PIN_133
+set_location_assignment	H_Right_40 -to	PIN_132
+set_location_assignment	H_Right_41 -to	PIN_129
+set_location_assignment	H_Right_42 -to	PIN_128
+set_location_assignment	H_Right_43 -to	PIN_127
+set_location_assignment	H_Right_44 -to	PIN_126
+
+#################################################################  DVK601  ##################################
+
+#Buzzer
+set_location_assignment	Buz -to		PIN_1
+
+#DS18B20
+set_location_assignment	DS18B20 -to	PIN_2
+
+#JOYSTICK
+set_location_assignment	DOWN 	 -to	PIN_142
+set_location_assignment	LEFT	 -to	PIN_141
+set_location_assignment	RIGHT    -to	PIN_138
+set_location_assignment	UP	 -to	PIN_137
+set_location_assignment	press 	 -to	PIN_136
+# H1
+set_location_assignment	H1_1 -to	PIN_59
+set_location_assignment	H1_2 -to	PIN_60
+set_location_assignment	H1_3 -to	PIN_64
+set_location_assignment	H1_4 -to	PIN_65
+set_location_assignment	H1_5 -to	PIN_66
+set_location_assignment	H1_6 -to	PIN_67
+set_location_assignment	H1_7 -to	PIN_68
+set_location_assignment	H1_8 -to	PIN_69
+set_location_assignment	H1_9 -to	PIN_70
+set_location_assignment	H1_10 -to	PIN_71
+set_location_assignment	H1_11 -to	PIN_72
+set_location_assignment	H1_12 -to	PIN_73
+set_location_assignment	H1_13 -to	PIN_74
+set_location_assignment	H1_14 -to	PIN_75
+set_location_assignment	H1_15 -to	PIN_76
+set_location_assignment	H1_16 -to	PIN_77
+set_location_assignment	H1_17 -to	PIN_80
+set_location_assignment	H1_18 -to	PIN_83
+set_location_assignment	H1_19 -to	PIN_84
+set_location_assignment	H1_20 -to	PIN_85
+
+set_location_assignment	H1_21 -to	PIN_86
+set_location_assignment	H1_22 -to	PIN_87
+set_location_assignment	H1_23 -to	PIN_98
+set_location_assignment	H1_24 -to	PIN_99
+set_location_assignment	H1_25 -to	PIN_100	
+set_location_assignment	H1_26 -to	PIN_101
+set_location_assignment	H1_27 -to	PIN_103
+set_location_assignment	H1_28 -to	PIN_104
+set_location_assignment	H1_29 -to	PIN_105
+set_location_assignment	H1_30 -to	PIN_106
+set_location_assignment	H1_31 -to 	PIN_110
+set_location_assignment	H1_32 -to 	PIN_111
+set_location_assignment	H1_33 -to 	PIN_112
+set_location_assignment	H1_34 -to 	PIN_113
+set_location_assignment	H1_35 -to 	PIN_114
+set_location_assignment	H1_36 -to 	PIN_115
+set_location_assignment	H1_37 -to 	PIN_119
+set_location_assignment	H1_38 -to 	PIN_120
+set_location_assignment	H1_39 -to 	PIN_121
+set_location_assignment	H1_40 -to 	PIN_124
+
+
+# H2
+
+set_location_assignment	H2_1  -to	PIN_58
+set_location_assignment	H2_2  -to	PIN_55
+set_location_assignment	H2_3  -to	PIN_54
+set_location_assignment	H2_4  -to	PIN_53
+set_location_assignment	H2_5 -to	PIN_52
+set_location_assignment	H2_6  -to	PIN_51
+set_location_assignment	H2_7  -to	PIN_50
+set_location_assignment	H2_8 -to	PIN_49
+set_location_assignment	H2_9 -to	PIN_46
+set_location_assignment	H2_10 -to	PIN_44
+set_location_assignment	H2_11 -to	PIN_43
+set_location_assignment	H2_12 -to	PIN_42
+set_location_assignment	H2_13 -to	PIN_39
+set_location_assignment	H2_14 -to	PIN_38
+set_location_assignment	H2_15 -to	PIN_34
+set_location_assignment	H2_16 -to	PIN_33
+set_location_assignment	H2_17 -to	PIN_32
+set_location_assignment	H2_18 -to	PIN_31
+set_location_assignment	H2_19 -to	PIN_30
+set_location_assignment	H2_20 -to	PIN_28
+
+set_location_assignment	H2_21 -to	PIN_11
+set_location_assignment	H2_22 -to	PIN_10
+set_location_assignment	H2_23 -to	PIN_7
+set_location_assignment	H2_24 -to	PIN_3
+set_location_assignment	H2_25 -to	PIN_2
+set_location_assignment	H2_26 -to	PIN_1
+set_location_assignment	H2_27 -to	PIN_144
+set_location_assignment	H2_28 -to	PIN_143
+set_location_assignment	H2_29 -to	PIN_142
+set_location_assignment	H2_30 -to	PIN_141
+set_location_assignment	H2_31 -to	PIN_138
+set_location_assignment	H2_32 -to	PIN_137
+set_location_assignment	H2_33 -to	PIN_136
+set_location_assignment	H2_34 -to	PIN_135
+set_location_assignment	H2_35 -to	PIN_133
+set_location_assignment	H2_36 -to	PIN_132
+set_location_assignment	H2_37 -to	PIN_129
+set_location_assignment	H2_38 -to	PIN_128
+set_location_assignment	H2_39 -to	PIN_127
+set_location_assignment	H2_40 -to	PIN_126
+
+#SDRAM
+set_location_assignment	PIN_54	-to	RA[0]
+set_location_assignment	PIN_53	-to	RA[1]
+set_location_assignment	PIN_58	-to	RA[2]
+set_location_assignment	PIN_55	-to	RA[3]
+set_location_assignment	PIN_60	-to	RA[4]
+set_location_assignment	PIN_59	-to	RA[5]
+set_location_assignment	PIN_65	-to	RA[6]
+set_location_assignment	PIN_64	-to	RA[7]
+set_location_assignment	PIN_67	-to	RA[8]
+set_location_assignment	PIN_66	-to	RA[9]
+set_location_assignment	PIN_51	-to	RA[10]
+set_location_assignment	PIN_69	-to	RA[11]
+set_location_assignment	PIN_68	-to	RA[12]
+
+set_location_assignment	PIN_30	-to	DQ[0]
+set_location_assignment	PIN_28	-to	DQ[1]
+set_location_assignment	PIN_32	-to	DQ[2]
+set_location_assignment	PIN_31	-to	DQ[3]
+set_location_assignment	PIN_34	-to	DQ[4]
+set_location_assignment	PIN_33	-to	DQ[5]
+set_location_assignment	PIN_39	-to	DQ[6]
+set_location_assignment	PIN_38	-to	DQ[7]
+set_location_assignment	PIN_72	-to	DQ[8]
+set_location_assignment	PIN_75	-to	DQ[9]
+set_location_assignment	PIN_74	-to	DQ[10]
+set_location_assignment	PIN_77	-to	DQ[11]
+set_location_assignment	PIN_76	-to	DQ[12]
+set_location_assignment	PIN_83	-to	DQ[13]
+set_location_assignment	PIN_80	-to	DQ[14]
+set_location_assignment	PIN_85	-to	DQ[15]
+
+set_location_assignment	PIN_70	-to	S_CLK
+#UMQM
+set_location_assignment	PIN_73	-to	S_DQM[1]    
+#LDQM
+set_location_assignment	PIN_43	-to	S_DQM[0]   
+set_location_assignment	PIN_52	-to	BA[1]
+set_location_assignment	PIN_49	-to	BA[0]
+
+set_location_assignment	PIN_50	-to	CS
+set_location_assignment	PIN_46	-to	CAS
+set_location_assignment	PIN_44	-to	RAS
+set_location_assignment	PIN_42	-to	WE
+set_location_assignment	PIN_71	-to	CKE
+
+
+#LCD12864
+set_location_assignment	PIN_98	-to	RS   
+set_location_assignment	PIN_100	-to	R/W
+set_location_assignment	PIN_101	-to	E
+set_location_assignment	PIN_103	-to	D0
+set_location_assignment	PIN_104	-to	D1
+set_location_assignment	PIN_105	-to	D2
+set_location_assignment	PIN_106	-to	D3
+set_location_assignment	PIN_110	-to	D4
+set_location_assignment	PIN_111	-to	D5
+set_location_assignment	PIN_112	-to	D6
+set_location_assignment	PIN_113	-to	D7
+set_location_assignment	PIN_114	-to	PSB
+set_location_assignment	PIN_115	-to	
+set_location_assignment	PIN_119	-to	RST
+set_location_assignment	PIN_120	-to	
+set_location_assignment	PIN_121	-to	A
+set_location_assignment	PIN_124	-to	K
+
+#LCD1602
+set_location_assignment	PIN_98	-to	RS   
+set_location_assignment	PIN_100	-to	R/W
+set_location_assignment	PIN_101	-to	E
+set_location_assignment	PIN_103	-to	D0
+set_location_assignment	PIN_104	-to	D1
+set_location_assignment	PIN_105	-to	D2
+set_location_assignment	PIN_106	-to	D3
+set_location_assignment	PIN_110	-to	D4
+set_location_assignment	PIN_111	-to	D5
+set_location_assignment	PIN_112	-to	D6
+set_location_assignment	PIN_113	-to	D7
+set_location_assignment	PIN_114	-to	A
+set_location_assignment	PIN_115	-to	K
+#LCD22	 
+set_location_assignment	PIN_106	-to	IRQ	 
+set_location_assignment	PIN_111	-to	DCS
+set_location_assignment	PIN_112	-to	DCLK
+set_location_assignment	PIN_113	-to	DIN
+set_location_assignment	PIN_114	-to	DOUT
+set_location_assignment	PIN_115	-to	RST
+set_location_assignment	PIN_119	-to	SCI
+set_location_assignment	PIN_120	-to	SCLK
+set_location_assignment	PIN_121	-to	CS
+set_location_assignment	PIN_124	-to	RS
+#8I/Os_1
+set_location_assignment	PIN_112	-to	8I/Os_1_8	  
+set_location_assignment	PIN_113	-to	8I/Os_1_7
+set_location_assignment	PIN_114	-to	8I/Os_1_6
+set_location_assignment	PIN_115	-to	8I/Os_1_5
+set_location_assignment	PIN_119	-to	8I/Os_1_4
+set_location_assignment	PIN_120	-to	8I/Os_1_3
+set_location_assignment	PIN_121	-to	8I/Os_1_2
+set_location_assignment	PIN_124	-to	8I/Os_1_1
+#8I/Os_2
+set_location_assignment	PIN_3	-to	8I/Os_2_8	  
+set_location_assignment	PIN_7	-to	8I/Os_2_7
+set_location_assignment	PIN_10	-to	8I/Os_2_6
+set_location_assignment	PIN_11	-to	8I/Os_2_5
+set_location_assignment	PIN_28	-to	8I/Os_2_4
+set_location_assignment	PIN_30	-to	8I/Os_2_3
+set_location_assignment	PIN_31	-to	8I/Os_2_2
+set_location_assignment	PIN_32	-to	8I/Os_2_1
+#16I/Os_1
+set_location_assignment	PIN_58	-to	16I/Os_1_1	   
+set_location_assignment	PIN_55	-to	16I/Os_1_2
+set_location_assignment	PIN_54	-to	16I/Os_1_3
+set_location_assignment	PIN_53	-to	16I/Os_1_4
+set_location_assignment	PIN_52	-to	16I/Os_1_5
+set_location_assignment	PIN_51	-to	16I/Os_1_6
+set_location_assignment	PIN_50	-to	16I/Os_1_7
+set_location_assignment	PIN_49	-to	16I/Os_1_8
+set_location_assignment	PIN_46	-to	16I/Os_1_9
+set_location_assignment	PIN_44	-to	16I/Os_1_10
+set_location_assignment	PIN_43	-to	16I/Os_1_11
+set_location_assignment	PIN_42	-to	16I/Os_1_12
+set_location_assignment	PIN_39	-to	16I/Os_1_13
+set_location_assignment	PIN_38	-to	16I/Os_1_14
+set_location_assignment	PIN_34	-to	16I/Os_1_15
+set_location_assignment	PIN_33	-to	16I/Os_1_16
+
+#16I/Os_2
+set_location_assignment	PIN_2	-to	16I/Os_2_1	   
+set_location_assignment	PIN_1	-to	16I/Os_2_2
+set_location_assignment	PIN_144	-to	16I/Os_2_3
+set_location_assignment	PIN_143	-to	16I/Os_2_4
+set_location_assignment	PIN_142	-to	16I/Os_2_5
+set_location_assignment	PIN_141	-to	16I/Os_2_6
+set_location_assignment	PIN_138	-to	16I/Os_2_7
+set_location_assignment	PIN_137	-to	16I/Os_2_8
+set_location_assignment	PIN_136	-to	16I/Os_2_9
+set_location_assignment	PIN_135	-to	16I/Os_2_10
+set_location_assignment	PIN_133	-to	16I/Os_2_11
+set_location_assignment	PIN_132	-to	16I/Os_2_12
+set_location_assignment	PIN_129	-to	16I/Os_2_13
+set_location_assignment	PIN_128	-to	16I/Os_2_14
+set_location_assignment	PIN_127	-to	16I/Os_2_15
+set_location_assignment	PIN_126	-to	16I/Os_2_16
+
+#32I/Os_1
+set_location_assignment	PIN_111	-to	32I/Os_1_1	   
+set_location_assignment	PIN_110	-to	32I/Os_1_2
+set_location_assignment	PIN_106	-to	32I/Os_1_3
+set_location_assignment	PIN_105	-to	32I/Os_1_4
+set_location_assignment	PIN_104	-to	32I/Os_1_5
+set_location_assignment	PIN_103	-to	32I/Os_1_6
+set_location_assignment	PIN_101	-to	32I/Os_1_7
+set_location_assignment	PIN_100	-to	32I/Os_1_8
+set_location_assignment	PIN_99	-to	32I/Os_1_9
+set_location_assignment	PIN_98	-to	32I/Os_1_10
+set_location_assignment	PIN_87	-to	32I/Os_1_11
+set_location_assignment	PIN_86	-to	32I/Os_1_12
+set_location_assignment	PIN_85	-to	32I/Os_1_13
+set_location_assignment	PIN_84	-to	32I/Os_1_14
+set_location_assignment	PIN_83	-to	32I/Os_1_15
+set_location_assignment	PIN_80	-to	32I/Os_1_16
+set_location_assignment	PIN_77	-to	32I/Os_1_17	   
+set_location_assignment	PIN_76	-to	32I/Os_1_18
+set_location_assignment	PIN_75	-to	32I/Os_1_19
+set_location_assignment	PIN_74	-to	32I/Os_1_20
+set_location_assignment	PIN_73	-to	32I/Os_1_21
+set_location_assignment	PIN_72	-to	32I/Os_1_22
+set_location_assignment	PIN_71	-to	32I/Os_1_23
+set_location_assignment	PIN_70	-to	32I/Os_1_24
+set_location_assignment	PIN_69	-to	32I/Os_1_25
+set_location_assignment	PIN_68	-to	32I/Os_1_26
+set_location_assignment	PIN_67	-to	32I/Os_1_27
+set_location_assignment	PIN_66	-to	32I/Os_1_28
+set_location_assignment	PIN_65	-to	32I/Os_1_29
+set_location_assignment	PIN_64	-to	32I/Os_1_30
+set_location_assignment	PIN_60	-to	32I/Os_1_31
+set_location_assignment	PIN_59	-to	32I/Os_1_32
+
+#32I/Os_2
+set_location_assignment	PIN_86	-to	32I/Os_2_1	   
+set_location_assignment	PIN_87	-to	32I/Os_2_2
+set_location_assignment	PIN_98	-to	32I/Os_2_3
+set_location_assignment	PIN_99	-to	32I/Os_2_4
+set_location_assignment	PIN_100	-to	32I/Os_2_5
+set_location_assignment	PIN_101	-to	32I/Os_2_6
+set_location_assignment	PIN_103	-to	32I/Os_2_7
+set_location_assignment	PIN_104	-to	32I/Os_2_8
+set_location_assignment	PIN_105	-to	32I/Os_2_9
+set_location_assignment	PIN_106	-to	32I/Os_2_10
+set_location_assignment	PIN_110	-to	32I/Os_2_11
+set_location_assignment	PIN_111	-to	32I/Os_2_12
+set_location_assignment	PIN_112	-to	32I/Os_2_13
+set_location_assignment	PIN_113	-to	32I/Os_2_14
+set_location_assignment	PIN_114	-to	32I/Os_2_15
+set_location_assignment	PIN_115	-to	32I/Os_2_16
+set_location_assignment	PIN_119	-to	32I/Os_2_17	   
+set_location_assignment	PIN_120	-to	32I/Os_2_18
+set_location_assignment	PIN_121	-to	32I/Os_2_19
+set_location_assignment	PIN_124	-to	32I/Os_2_20
+set_location_assignment	PIN_127	-to	32I/Os_2_21
+set_location_assignment	PIN_126	-to	32I/Os_2_22
+set_location_assignment	PIN_129	-to	32I/Os_2_23
+set_location_assignment	PIN_128	-to	32I/Os_2_24
+set_location_assignment	PIN_133	-to	32I/Os_2_25
+set_location_assignment	PIN_132	-to	32I/Os_2_26
+set_location_assignment	PIN_136	-to	32I/Os_2_27
+set_location_assignment	PIN_135	-to	32I/Os_2_28
+set_location_assignment	PIN_138	-to	32I/Os_2_29
+set_location_assignment	PIN_137	-to	32I/Os_2_30
+set_location_assignment	PIN_142	-to	32I/Os_2_31
+set_location_assignment	PIN_141	-to	32I/Os_2_32
