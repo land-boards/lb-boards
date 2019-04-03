@@ -24,7 +24,7 @@
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user)
-    (42 Eco1.User user)
+    (42 Eco1.User user hide)
     (44 Edge.Cuts user)
   )
 
@@ -56,7 +56,7 @@
     (pad_to_mask_clearance 0)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFF7F)
+    (visible_elements 7FFFEF7F)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
       (usegerberextensions false)
@@ -1743,7 +1743,7 @@
     )
   )
 
-  (gr_text "pads bad" (at 124.206 30.988) (layer Dwgs.User)
+  (gr_text "pads bad" (at 124.206 30.988) (layer Eco1.User)
     (effects (font (size 6.35 6.35) (thickness 1.5875)))
   )
   (dimension 11.43 (width 0.3) (layer Dwgs.User)
@@ -1792,7 +1792,7 @@
     (arrow2b (pts (xy 111 10) (xy 111.586421 11.126504)))
   )
   (dimension 95 (width 0.3) (layer Dwgs.User)
-    (gr_text "95.000 mm" (at 57.590501 4.080417) (layer Dwgs.User) (tstamp 5CA41113)
+    (gr_text "95.000 mm" (at 57.590501 4.080417) (layer Dwgs.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
     )
     (feature1 (pts (xy 105.090501 15.430417) (xy 105.090501 2.730417)))
