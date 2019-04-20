@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LandBoards:MTG_HOLE MTG?1
+L ESP32-Hub-rescue:MTG_HOLE-LandBoards MTG?1
 U 1 1 586AD5E2
 P 9000 10000
 F 0 "MTG?1" H 9000 10100 60  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 9000 10000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG2
+L ESP32-Hub-rescue:MTG_HOLE-LandBoards MTG2
 U 1 1 586AD65D
 P 9000 9700
 F 0 "MTG2" H 9000 9800 60  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 9000 9700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG3
+L ESP32-Hub-rescue:MTG_HOLE-LandBoards MTG3
 U 1 1 586AD691
 P 9000 10300
 F 0 "MTG3" H 9000 10400 60  0000 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 9000 10300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG1
+L ESP32-Hub-rescue:MTG_HOLE-LandBoards MTG1
 U 1 1 586AD6D2
 P 9000 9400
 F 0 "MTG1" H 9000 9500 60  0000 C CNN
@@ -59,7 +59,7 @@ F 3 "" H 9000 9400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR01
+L ESP32-Hub-rescue:+5V-power #PWR01
 U 1 1 586AF77F
 P 1800 1100
 F 0 "#PWR01" H 1800 1190 20  0001 C CNN
@@ -70,7 +70,7 @@ F 3 "" H 1800 1100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:COUPON TEST1
+L ESP32-Hub-rescue:COUPON-LandBoards TEST1
 U 1 1 59399B7A
 P 11350 10250
 F 0 "TEST1" H 11350 10550 60  0000 C CNN
@@ -81,7 +81,7 @@ F 3 "" H 11350 10250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR03
+L ESP32-Hub-rescue:GND-power #PWR03
 U 1 1 5C75909D
 P 3450 9450
 F 0 "#PWR03" H 3450 9200 50  0001 C CNN
@@ -92,7 +92,7 @@ F 3 "" H 3450 9450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR05
+L ESP32-Hub-rescue:+5V-power #PWR05
 U 1 1 5C7568E3
 P 1250 2100
 F 0 "#PWR05" H 1250 2190 20  0001 C CNN
@@ -103,18 +103,7 @@ F 3 "" H 1250 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR07
-U 1 1 5C75732E
-P 3450 7250
-F 0 "#PWR07" H 3450 7100 50  0001 C CNN
-F 1 "+3V3" H 3450 7390 50  0000 C CNN
-F 2 "" H 3450 7250 50  0001 C CNN
-F 3 "" H 3450 7250 50  0001 C CNN
-	1    3450 7250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR08
+L ESP32-Hub-rescue:+3V3-power #PWR08
 U 1 1 5C7574C1
 P 3950 2150
 F 0 "#PWR08" H 3950 2000 50  0001 C CNN
@@ -125,7 +114,7 @@ F 3 "" H 3950 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR010
+L ESP32-Hub-rescue:+5V-power #PWR010
 U 1 1 5C7581DE
 P 2200 3150
 F 0 "#PWR010" H 2200 3240 20  0001 C CNN
@@ -142,7 +131,7 @@ VO3
 Text Label 2300 1200 0    60   ~ 0
 DCIN
 $Comp
-L power:GND #PWR012
+L ESP32-Hub-rescue:GND-power #PWR012
 U 1 1 5C75CA4F
 P 11150 4600
 F 0 "#PWR012" H 11150 4350 50  0001 C CNN
@@ -153,7 +142,7 @@ F 3 "" H 11150 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR013
+L ESP32-Hub-rescue:+3V3-power #PWR013
 U 1 1 5C75CD18
 P 11150 2500
 F 0 "#PWR013" H 11150 2350 50  0001 C CNN
@@ -168,7 +157,7 @@ STM_SDA
 Text Label 10150 2900 0    60   ~ 0
 STM_SCL
 $Comp
-L power:+3V3 #PWR016
+L ESP32-Hub-rescue:+3V3-power #PWR016
 U 1 1 5C760023
 P 9500 2100
 F 0 "#PWR016" H 9500 1950 50  0001 C CNN
@@ -179,7 +168,7 @@ F 3 "" H 9500 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR017
+L ESP32-Hub-rescue:+3V3-power #PWR017
 U 1 1 5C7613A7
 P 10000 3500
 F 0 "#PWR017" H 10000 3350 50  0001 C CNN
@@ -190,7 +179,7 @@ F 3 "" H 10000 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR018
+L ESP32-Hub-rescue:GND-power #PWR018
 U 1 1 5C761E7F
 P 10200 5150
 F 0 "#PWR018" H 10200 4900 50  0001 C CNN
@@ -462,7 +451,7 @@ Connection ~ 2400 9150
 Wire Wire Line
 	2300 9250 2400 9250
 $Comp
-L power:+3V3 #PWR021
+L ESP32-Hub-rescue:+3V3-power #PWR021
 U 1 1 5C775566
 P 2400 7850
 F 0 "#PWR021" H 2400 7700 50  0001 C CNN
@@ -473,7 +462,7 @@ F 3 "" H 2400 7850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L ESP32-Hub-rescue:GND-power #PWR022
 U 1 1 5C7755CB
 P 1700 9350
 F 0 "#PWR022" H 1700 9100 50  0001 C CNN
@@ -521,7 +510,7 @@ Wire Wire Line
 	6550 9350 6450 9350
 Connection ~ 6450 9350
 $Comp
-L power:GND #PWR023
+L ESP32-Hub-rescue:GND-power #PWR023
 U 1 1 5C77586C
 P 6450 9500
 F 0 "#PWR023" H 6450 9250 50  0001 C CNN
@@ -575,7 +564,7 @@ Connection ~ 7150 9250
 Wire Wire Line
 	7050 9350 7150 9350
 $Comp
-L power:+3V3 #PWR024
+L ESP32-Hub-rescue:+3V3-power #PWR024
 U 1 1 5C7758EC
 P 7150 7950
 F 0 "#PWR024" H 7150 7800 50  0001 C CNN
@@ -592,7 +581,7 @@ Wire Wire Line
 	6550 8150 6450 8150
 Connection ~ 6450 8150
 $Comp
-L power:+3V3 #PWR0102
+L ESP32-Hub-rescue:+3V3-power #PWR0102
 U 1 1 5C780552
 P 11500 1300
 F 0 "#PWR0102" H 11500 1150 50  0001 C CNN
@@ -603,7 +592,7 @@ F 3 "" H 11500 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0103
+L ESP32-Hub-rescue:+5V-power #PWR0103
 U 1 1 5C7805B3
 P 13950 1300
 F 0 "#PWR0103" H 13950 1390 20  0001 C CNN
@@ -904,7 +893,7 @@ Connection ~ 14600 5300
 Wire Wire Line
 	14600 5300 14600 5450
 $Comp
-L power:GND #PWR0104
+L ESP32-Hub-rescue:GND-power #PWR0104
 U 1 1 5D2BE257
 P 14600 5450
 F 0 "#PWR0104" H 14600 5200 50  0001 C CNN
@@ -985,14 +974,6 @@ Wire Wire Line
 Connection ~ 13950 5100
 Wire Wire Line
 	13950 5100 15200 5100
-Wire Wire Line
-	3300 7350 3450 7350
-Wire Wire Line
-	3450 7350 3450 7250
-Wire Wire Line
-	3300 7450 3350 7450
-Wire Wire Line
-	3350 7450 3350 7850
 Text Label 5350 8050 0    50   ~ 0
 GP13
 Text Label 14750 2800 0    50   ~ 0
@@ -1034,7 +1015,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 2800 7250 2800
 $Comp
-L power:+3V3 #PWR0105
+L ESP32-Hub-rescue:+3V3-power #PWR0105
 U 1 1 5C9061D2
 P 7150 2550
 F 0 "#PWR0105" H 7150 2400 50  0001 C CNN
@@ -1053,7 +1034,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 3000 7150 3350
 $Comp
-L power:GND #PWR0106
+L ESP32-Hub-rescue:GND-power #PWR0106
 U 1 1 5C945BF0
 P 7150 3350
 F 0 "#PWR0106" H 7150 3100 50  0001 C CNN
@@ -1069,7 +1050,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 2150 2550 2150
 $Comp
-L Device:C C3
+L ESP32-Hub-rescue:C-Device C3
 U 1 1 5CA2EF30
 P 3250 2400
 F 0 "C3" H 3365 2491 50  0000 L CNN
@@ -1080,7 +1061,7 @@ F 3 "~" H 3250 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L ESP32-Hub-rescue:C-Device C2
 U 1 1 5CA2F02E
 P 2800 2400
 F 0 "C2" H 2915 2491 50  0000 L CNN
@@ -1110,7 +1091,7 @@ Connection ~ 2800 2600
 Wire Wire Line
 	2800 2600 2800 2650
 $Comp
-L Device:C C4
+L ESP32-Hub-rescue:C-Device C4
 U 1 1 5CAFBAEC
 P 10750 9100
 F 0 "C4" H 10865 9191 50  0000 L CNN
@@ -1121,7 +1102,7 @@ F 3 "~" H 10750 9100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L ESP32-Hub-rescue:C-Device C5
 U 1 1 5CAFC032
 P 11200 9100
 F 0 "C5" H 11315 9191 50  0000 L CNN
@@ -1132,7 +1113,7 @@ F 3 "~" H 11200 9100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C6
+L ESP32-Hub-rescue:C-Device C6
 U 1 1 5CAFC0BA
 P 11650 9100
 F 0 "C6" H 11765 9191 50  0000 L CNN
@@ -1157,7 +1138,7 @@ Wire Wire Line
 	10750 9300 10750 9400
 Connection ~ 10750 9300
 $Comp
-L power:GND #PWR0101
+L ESP32-Hub-rescue:GND-power #PWR0101
 U 1 1 5CB6817D
 P 10750 9400
 F 0 "#PWR0101" H 10750 9150 50  0001 C CNN
@@ -1168,7 +1149,7 @@ F 3 "" H 10750 9400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0109
+L ESP32-Hub-rescue:+3V3-power #PWR0109
 U 1 1 5CB685C0
 P 10750 8850
 F 0 "#PWR0109" H 10750 8700 50  0001 C CNN
@@ -1193,7 +1174,7 @@ Connection ~ 11200 8900
 Wire Wire Line
 	11200 8900 11650 8900
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even P1
+L ESP32-Hub-rescue:Conn_02x08_Odd_Even-Connector_Generic P1
 U 1 1 5CC29DFE
 P 5300 3900
 F 0 "P1" H 5350 4300 50  0000 C CNN
@@ -1212,7 +1193,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 4300 5700 4200
 $Comp
-L power:GND #PWR011
+L ESP32-Hub-rescue:GND-power #PWR011
 U 1 1 5CC79459
 P 5000 4400
 F 0 "#PWR011" H 5000 4150 50  0001 C CNN
@@ -1223,7 +1204,7 @@ F 3 "" H 5000 4400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR014
+L ESP32-Hub-rescue:+5V-power #PWR014
 U 1 1 5CC79544
 P 5700 3500
 F 0 "#PWR014" H 5700 3590 20  0001 C CNN
@@ -1310,7 +1291,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 3400 1450 3200
 $Comp
-L power:+3V3 #PWR0111
+L ESP32-Hub-rescue:+3V3-power #PWR0111
 U 1 1 5CF0CBA6
 P 1450 3200
 F 0 "#PWR0111" H 1450 3050 50  0001 C CNN
@@ -1321,7 +1302,7 @@ F 3 "" H 1450 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even P8
+L ESP32-Hub-rescue:Conn_02x03_Odd_Even-Connector_Generic P8
 U 1 1 5CF3D6BD
 P 3800 5800
 F 0 "P8" H 3850 6000 50  0000 C CNN
@@ -1344,7 +1325,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 5700 2900 5700
 $Comp
-L power:+3V3 #PWR0112
+L ESP32-Hub-rescue:+3V3-power #PWR0112
 U 1 1 5D0973AC
 P 4250 5650
 F 0 "#PWR0112" H 4250 5500 50  0001 C CNN
@@ -1359,7 +1340,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 5900 4250 6200
 $Comp
-L power:GND #PWR0113
+L ESP32-Hub-rescue:GND-power #PWR0113
 U 1 1 5D15EB5E
 P 4250 6200
 F 0 "#PWR0113" H 4250 5950 50  0001 C CNN
@@ -1372,7 +1353,7 @@ $EndComp
 Text Notes 3450 6300 0    100  ~ 20
 SPI BUS
 $Comp
-L ESP32:ESP32 U1
+L ESP32-Hub-rescue:ESP32-ESP32 U1
 U 1 1 5C875761
 P 4350 8550
 F 0 "U1" H 4350 9500 50  0000 C CNN
@@ -1383,7 +1364,7 @@ F 3 "DOCUMENTATION" H 4350 8550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0108
+L ESP32-Hub-rescue:GND-power #PWR0108
 U 1 1 5C875A68
 P 2800 2650
 F 0 "#PWR0108" H 2800 2400 50  0001 C CNN
@@ -1394,7 +1375,7 @@ F 3 "" H 2800 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0114
+L ESP32-Hub-rescue:GND-power #PWR0114
 U 1 1 5C876006
 P 1750 1600
 F 0 "#PWR0114" H 1750 1350 50  0001 C CNN
@@ -1405,7 +1386,7 @@ F 3 "" H 1750 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
+L ESP32-Hub-rescue:R-Device R3
 U 1 1 5C87652B
 P 9900 2450
 F 0 "R3" H 9970 2496 50  0000 L CNN
@@ -1416,7 +1397,7 @@ F 3 "~" H 9900 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L ESP32-Hub-rescue:R-Device R2
 U 1 1 5C87661F
 P 9700 2450
 F 0 "R2" H 9770 2496 50  0000 L CNN
@@ -1427,7 +1408,7 @@ F 3 "~" H 9700 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L ESP32-Hub-rescue:R-Device R1
 U 1 1 5C8766BF
 P 9500 2450
 F 0 "R1" H 9570 2496 50  0000 L CNN
@@ -1438,7 +1419,7 @@ F 3 "~" H 9500 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R7
+L ESP32-Hub-rescue:R-Device R7
 U 1 1 5C8A8DDE
 P 11850 1950
 F 0 "R7" H 11920 1996 50  0000 L CNN
@@ -1449,7 +1430,7 @@ F 3 "~" H 11850 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R8
+L ESP32-Hub-rescue:R-Device R8
 U 1 1 5C8A94C4
 P 12000 1950
 F 0 "R8" H 12070 1996 50  0000 L CNN
@@ -1460,7 +1441,7 @@ F 3 "~" H 12000 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R9
+L ESP32-Hub-rescue:R-Device R9
 U 1 1 5C8A9536
 P 12150 1950
 F 0 "R9" H 12220 1996 50  0000 L CNN
@@ -1471,7 +1452,7 @@ F 3 "~" H 12150 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R10
+L ESP32-Hub-rescue:R-Device R10
 U 1 1 5C8A95AA
 P 12450 1950
 F 0 "R10" H 12520 1996 50  0000 L CNN
@@ -1482,7 +1463,7 @@ F 3 "~" H 12450 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R11
+L ESP32-Hub-rescue:R-Device R11
 U 1 1 5C8A962A
 P 12600 1950
 F 0 "R11" H 12670 1996 50  0000 L CNN
@@ -1493,7 +1474,7 @@ F 3 "~" H 12600 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R12
+L ESP32-Hub-rescue:R-Device R12
 U 1 1 5C8A96AA
 P 12750 1950
 F 0 "R12" H 12820 1996 50  0000 L CNN
@@ -1504,7 +1485,7 @@ F 3 "~" H 12750 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R13
+L ESP32-Hub-rescue:R-Device R13
 U 1 1 5C8A9728
 P 13050 1950
 F 0 "R13" H 13120 1996 50  0000 L CNN
@@ -1515,7 +1496,7 @@ F 3 "~" H 13050 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R14
+L ESP32-Hub-rescue:R-Device R14
 U 1 1 5C8A97AA
 P 13200 1950
 F 0 "R14" H 13270 1996 50  0000 L CNN
@@ -1526,7 +1507,7 @@ F 3 "~" H 13200 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R15
+L ESP32-Hub-rescue:R-Device R15
 U 1 1 5C8A982C
 P 13350 1950
 F 0 "R15" H 13420 1996 50  0000 L CNN
@@ -1537,7 +1518,7 @@ F 3 "~" H 13350 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R16
+L ESP32-Hub-rescue:R-Device R16
 U 1 1 5C8A98B4
 P 13650 1950
 F 0 "R16" H 13720 1996 50  0000 L CNN
@@ -1548,7 +1529,7 @@ F 3 "~" H 13650 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R17
+L ESP32-Hub-rescue:R-Device R17
 U 1 1 5C8A993C
 P 13800 1950
 F 0 "R17" H 13870 1996 50  0000 L CNN
@@ -1559,7 +1540,7 @@ F 3 "~" H 13800 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R18
+L ESP32-Hub-rescue:R-Device R18
 U 1 1 5C8A99C4
 P 13950 1950
 F 0 "R18" H 14020 1996 50  0000 L CNN
@@ -1570,7 +1551,7 @@ F 3 "~" H 13950 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J8
+L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J8
 U 1 1 5CD8EC90
 P 13650 1100
 F 0 "J8" V 13616 912 50  0000 R CNN
@@ -1581,7 +1562,7 @@ F 3 "~" H 13650 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J6
+L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J6
 U 1 1 5CD8EE18
 P 13050 1100
 F 0 "J6" V 13016 912 50  0000 R CNN
@@ -1592,7 +1573,7 @@ F 3 "~" H 13050 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J5
+L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J5
 U 1 1 5CD8EEAE
 P 12450 1100
 F 0 "J5" V 12416 912 50  0000 R CNN
@@ -1603,7 +1584,7 @@ F 3 "~" H 12450 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J4
+L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J4
 U 1 1 5CD8EF4E
 P 11850 1100
 F 0 "J4" V 11816 912 50  0000 R CNN
@@ -1614,7 +1595,7 @@ F 3 "~" H 11850 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J9
+L ESP32-Hub-rescue:Conn_01x05-Connector_Generic J9
 U 1 1 5CD8F618
 P 15400 3000
 F 0 "J9" H 15480 3042 50  0000 L CNN
@@ -1625,7 +1606,7 @@ F 3 "~" H 15400 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J10
+L ESP32-Hub-rescue:Conn_01x05-Connector_Generic J10
 U 1 1 5CD8F6E0
 P 15400 3700
 F 0 "J10" H 15480 3742 50  0000 L CNN
@@ -1636,7 +1617,7 @@ F 3 "~" H 15400 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J11
+L ESP32-Hub-rescue:Conn_01x05-Connector_Generic J11
 U 1 1 5CD8F78C
 P 15400 5100
 F 0 "J11" H 15480 5142 50  0000 L CNN
@@ -1647,7 +1628,7 @@ F 3 "~" H 15400 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J12
+L ESP32-Hub-rescue:Conn_01x05-Connector_Generic J12
 U 1 1 5CD8F828
 P 15400 4400
 F 0 "J12" H 15480 4442 50  0000 L CNN
@@ -1658,7 +1639,7 @@ F 3 "~" H 15400 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J3
+L ESP32-Hub-rescue:Conn_02x03_Odd_Even-Connector_Generic J3
 U 1 1 5CDC1E38
 P 10300 4600
 F 0 "J3" V 10304 4780 50  0000 L CNN
@@ -1669,7 +1650,7 @@ F 3 "~" H 10300 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R4
+L ESP32-Hub-rescue:R-Device R4
 U 1 1 5CDC21F5
 P 10000 3750
 F 0 "R4" H 10070 3796 50  0000 L CNN
@@ -1680,7 +1661,7 @@ F 3 "~" H 10000 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R5
+L ESP32-Hub-rescue:R-Device R5
 U 1 1 5CDC2629
 P 10200 3750
 F 0 "R5" H 10270 3796 50  0000 L CNN
@@ -1691,7 +1672,7 @@ F 3 "~" H 10200 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R6
+L ESP32-Hub-rescue:R-Device R6
 U 1 1 5CDC26AF
 P 10400 3750
 F 0 "R6" H 10470 3796 50  0000 L CNN
@@ -1702,7 +1683,7 @@ F 3 "~" H 10400 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_Expansion:TCA9544A U3
+L ESP32-Hub-rescue:TCA9544A-Interface_Expansion U3
 U 1 1 5CDF4B18
 P 11150 3500
 F 0 "U3" H 11200 4578 50  0000 C CNN
@@ -1713,7 +1694,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tca9544a.pdf" H 11200 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J16
+L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J16
 U 1 1 5C8756E6
 P 1800 3150
 F 0 "J16" V 1766 2962 50  0000 R CNN
@@ -1724,7 +1705,7 @@ F 3 "~" H 1800 3150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0115
+L ESP32-Hub-rescue:GND-power #PWR0115
 U 1 1 5C876212
 P 2050 4300
 F 0 "#PWR0115" H 2050 4050 50  0001 C CNN
@@ -1735,7 +1716,7 @@ F 3 "" H 2050 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J15
+L ESP32-Hub-rescue:Conn_01x02-Connector_Generic J15
 U 1 1 5C905C47
 P 1450 1200
 F 0 "J15" H 1370 1477 50  0000 C CNN
@@ -1746,7 +1727,7 @@ F 3 "~" H 1450 1200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 H2
+L ESP32-Hub-rescue:Conn_01x02-Connector_Generic H2
 U 1 1 5C905FC2
 P 2700 800
 F 0 "H2" H 2779 822 50  0000 L CNN
@@ -1757,7 +1738,7 @@ F 3 "~" H 2700 800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards_Conns:DCJ0202 J1
+L ESP32-Hub-rescue:DCJ0202-LandBoards_Conns J1
 U 1 1 5C9064A0
 P 2900 1300
 F 0 "J1" H 2743 1403 50  0000 R CNN
@@ -1768,7 +1749,7 @@ F 3 "" H 2900 1300 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L LandBoards_Semis:AP1117 U2
+L ESP32-Hub-rescue:AP1117-LandBoards_Semis U2
 U 1 1 5C906844
 P 1950 2150
 F 0 "U2" H 1875 2497 60  0000 C CNN
@@ -1779,7 +1760,7 @@ F 3 "" H 1950 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0116
+L ESP32-Hub-rescue:GND-power #PWR0116
 U 1 1 5C906B9A
 P 1850 2700
 F 0 "#PWR0116" H 1850 2450 50  0001 C CNN
@@ -1790,7 +1771,7 @@ F 3 "" H 1850 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 H1
+L ESP32-Hub-rescue:Conn_01x02-Connector_Generic H1
 U 1 1 5C906D65
 P 3850 2450
 F 0 "H1" V 3678 2262 50  0000 R CNN
@@ -1801,35 +1782,22 @@ F 3 "~" H 3850 2450 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 H7
-U 1 1 5C96D214
-P 3100 7350
-F 0 "H7" H 3150 7450 50  0000 R CNN
-F 1 "Conn_01x02" H 3300 7150 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3550 7100 30  0000 R CNN
-F 3 "~" H 3100 7350 50  0001 C CNN
-	1    3100 7350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0107
+L ESP32-Hub-rescue:+5V-power #PWR0107
 U 1 1 5CA6E73D
-P 5200 7700
-F 0 "#PWR0107" H 5200 7790 20  0001 C CNN
-F 1 "+5V" H 5200 7790 30  0000 C CNN
-F 2 "" H 5200 7700 60  0000 C CNN
-F 3 "" H 5200 7700 60  0000 C CNN
-	1    5200 7700
+P 5850 7250
+F 0 "#PWR0107" H 5850 7340 20  0001 C CNN
+F 1 "+5V" H 5850 7340 30  0000 C CNN
+F 2 "" H 5850 7250 60  0000 C CNN
+F 3 "" H 5850 7250 60  0000 C CNN
+	1    5850 7250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5200 7700 5200 7850
 Wire Wire Line
 	3500 7950 3450 7950
 Wire Wire Line
 	3450 7950 3450 9450
 $Comp
-L power:GND #PWR0110
+L ESP32-Hub-rescue:GND-power #PWR0110
 U 1 1 5CB5EDF0
 P 5250 9450
 F 0 "#PWR0110" H 5250 9200 50  0001 C CNN
@@ -1884,7 +1852,7 @@ TX0
 Text Label 3000 9250 0    50   ~ 0
 GP23
 $Comp
-L Connector_Generic:Conn_01x14 P12
+L ESP32-Hub-rescue:Conn_01x14-Connector_Generic P12
 U 1 1 5CED420B
 P 2650 8550
 F 0 "P12" H 2650 9250 50  0000 C CNN
@@ -1897,7 +1865,7 @@ $EndComp
 Wire Wire Line
 	1700 9250 1700 9350
 $Comp
-L Connector_Generic:Conn_01x14 P13
+L ESP32-Hub-rescue:Conn_01x14-Connector_Generic P13
 U 1 1 5CF2F06C
 P 6100 8550
 F 0 "P13" H 6100 9250 50  0000 C CNN
@@ -1914,7 +1882,7 @@ RX0
 Text Label 1600 3900 0    50   ~ 0
 TX0
 $Comp
-L LandBoards_Cards:FTDI J2
+L ESP32-Hub-rescue:FTDI-LandBoards_Cards J2
 U 1 1 5CF868F5
 P 2700 4100
 F 0 "J2" H 2750 4850 60  0000 R CNN
@@ -1929,7 +1897,7 @@ STM_SDA
 Text Label 3000 9150 0    50   ~ 0
 STM_SCL
 $Comp
-L Connector_Generic:Conn_02x14_Odd_Even P11
+L ESP32-Hub-rescue:Conn_02x14_Odd_Even-Connector_Generic P11
 U 1 1 5D161087
 P 2000 8550
 F 0 "P11" H 2050 9367 50  0000 C CNN
@@ -1940,7 +1908,7 @@ F 3 "~" H 2000 8550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x14_Odd_Even P2
+L ESP32-Hub-rescue:Conn_02x14_Odd_Even-Connector_Generic P2
 U 1 1 5D161570
 P 6750 8650
 F 0 "P2" H 6800 9467 50  0000 C CNN
@@ -1955,7 +1923,7 @@ GP23
 Wire Wire Line
 	6400 2600 7250 2600
 $Comp
-L Connector_Generic:Conn_01x05 J7
+L ESP32-Hub-rescue:Conn_01x05-Connector_Generic J7
 U 1 1 5D18C087
 P 7450 2800
 F 0 "J7" H 7400 3100 50  0000 L CNN
@@ -1976,12 +1944,9 @@ Wire Wire Line
 Wire Wire Line
 	5200 7850 5750 7850
 Wire Wire Line
-	3350 7850 3050 7850
-Wire Wire Line
 	3050 7850 3050 7950
 Wire Wire Line
 	3050 7950 2850 7950
-Connection ~ 3350 7850
 Wire Wire Line
 	5750 7850 5750 7950
 Wire Wire Line
@@ -1992,9 +1957,6 @@ Text Label 5350 9150 0    50   ~ 0
 VP
 Text Label 5350 9250 0    50   ~ 0
 EN
-Connection ~ 5200 7850
-Wire Wire Line
-	3350 7850 3500 7850
 Wire Wire Line
 	2850 8050 3500 8050
 Wire Wire Line
@@ -2027,4 +1989,26 @@ Text Label 3100 5800 0    50   ~ 0
 GP18
 Text Label 4400 5800 0    50   ~ 0
 GP23
+$Comp
+L ESP32-Hub-rescue:Conn_01x02-Connector_Generic H7
+U 1 1 5C96D214
+P 5500 7350
+F 0 "H7" H 5550 7450 50  0000 R CNN
+F 1 "Conn_01x02" H 5700 7150 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5950 7100 30  0000 R CNN
+F 3 "~" H 5500 7350 50  0001 C CNN
+	1    5500 7350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 7450 5750 7850
+Wire Wire Line
+	5700 7450 5750 7450
+Wire Wire Line
+	5850 7350 5850 7250
+Wire Wire Line
+	5700 7350 5850 7350
+Connection ~ 5750 7850
+Wire Wire Line
+	3050 7850 3500 7850
 $EndSCHEMATC
