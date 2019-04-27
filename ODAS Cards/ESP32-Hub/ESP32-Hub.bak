@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "ESP32-Hub BOARD"
-Date "Tuesday, February 26, 2019"
-Rev "11"
+Date "2019-04-27"
+Rev "2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -976,29 +976,29 @@ Wire Wire Line
 	13950 5100 15200 5100
 Text Label 5350 8050 0    50   ~ 0
 GP13
-Text Label 14750 2800 0    50   ~ 0
+Text Label 14750 3000 0    50   ~ 0
 INT0
 Text Label 14750 2900 0    50   ~ 0
 SC0
-Text Label 14750 3000 0    50   ~ 0
+Text Label 14750 2800 0    50   ~ 0
 SD0
-Text Label 14750 3500 0    50   ~ 0
+Text Label 14750 3700 0    50   ~ 0
 INT1
 Text Label 14750 3600 0    50   ~ 0
 SC1
-Text Label 14750 3700 0    50   ~ 0
+Text Label 14750 3500 0    50   ~ 0
 SD1
-Text Label 14750 4200 0    50   ~ 0
+Text Label 14750 4400 0    50   ~ 0
 INT2
 Text Label 14750 4300 0    50   ~ 0
 SC2
-Text Label 14750 4400 0    50   ~ 0
+Text Label 14750 4200 0    50   ~ 0
 SD2
-Text Label 14750 4900 0    50   ~ 0
+Text Label 14700 5100 0    50   ~ 0
 INT3
 Text Label 14750 5000 0    50   ~ 0
 SC3
-Text Label 14750 5100 0    50   ~ 0
+Text Label 14750 4900 0    50   ~ 0
 SD3
 Text Label 10600 4000 0    60   ~ 0
 A2
@@ -1687,7 +1687,7 @@ L ESP32-Hub-rescue:TCA9544A-Interface_Expansion U3
 U 1 1 5CDF4B18
 P 11150 3500
 F 0 "U3" H 11200 4578 50  0000 C CNN
-F 1 "TCA9544A" H 11200 4487 50  0000 C CNN
+F 1 "TCA9544A" H 11500 2500 50  0000 C CNN
 F 2 "Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm" H 12150 2600 50  0000 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tca9544a.pdf" H 11200 3750 50  0001 C CNN
 	1    11150 3500
