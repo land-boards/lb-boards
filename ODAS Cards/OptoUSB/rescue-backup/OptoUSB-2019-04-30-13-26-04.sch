@@ -1,6 +1,12 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:OptoUSB-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:74xx
+LIBS:conn
 LIBS:OptoUSB-cache
-EELAYER 29 0
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -14,7 +20,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 9850 6150 0    68   ~ 0
+Text Notes 9850 6100 0    68   ~ 0
 GND\nCTS(I)\nVCC\nTX(O)\nRX(I)\nRTS(O)
 Text Label 2650 5800 0    60   ~ 0
 UVCC
@@ -42,7 +48,7 @@ UTX
 NoConn ~ 5750 7850
 NoConn ~ 5750 7750
 $Comp
-L OptoUSB-rescue:CONN_1 MTG2
+L CONN_1 MTG2
 U 1 1 4FF369AF
 P 5900 7850
 F 0 "MTG2" H 5980 7850 40  0000 L CNN
@@ -53,7 +59,7 @@ F 3 "" H 5900 7850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:CONN_1 MTG1
+L CONN_1 MTG1
 U 1 1 4FF369A7
 P 5900 7750
 F 0 "MTG1" H 5980 7750 40  0000 L CNN
@@ -68,7 +74,7 @@ F 7 "N/A" H 5900 7750 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L R R1
 U 1 1 4FF314D2
 P 4800 7000
 F 0 "R1" V 4880 7000 50  0000 C CNN
@@ -79,7 +85,7 @@ F 3 "" H 4800 7000 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R2
+L R R2
 U 1 1 4FF314CB
 P 4800 6800
 F 0 "R2" V 4880 6800 50  0000 C CNN
@@ -98,7 +104,7 @@ UGND
 Text Label 2650 5700 0    60   ~ 0
 +3.3V
 $Comp
-L Device:C C2
+L C C2
 U 1 1 4FF31376
 P 2450 7300
 F 0 "C2" H 2500 7400 50  0000 L CNN
@@ -113,7 +119,7 @@ F 7 "81-GRM155F51E104ZA1J " H 2450 7300 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1 C1
+L CP1 C1
 U 1 1 4FF312AD
 P 2100 7300
 F 0 "C1" H 2150 7400 50  0000 L CNN
@@ -128,7 +134,7 @@ F 7 "603-CC121ZKY5V8BB106" H 2100 7300 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:USB-B J1
+L USB-B J1
 U 1 1 4FF311FD
 P 1300 7050
 F 0 "J1" H 1400 7800 60  0000 C CNN
@@ -143,7 +149,7 @@ F 7 "798-UX60SC-MB-5ST80 " H 1300 7050 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:FT230XS U1
+L FT230XS U1
 U 1 1 525C3657
 P 3500 6750
 F 0 "U1" H 3100 7400 50  0000 L BNN
@@ -159,7 +165,7 @@ NoConn ~ 4150 7150
 NoConn ~ 1250 7100
 NoConn ~ 1150 7100
 $Comp
-L OptoUSB-rescue:4N25 U2
+L 4N25 U2
 U 1 1 58BFAB36
 P 3350 1500
 F 0 "U2" H 3150 1700 50  0000 L CNN
@@ -170,7 +176,7 @@ F 3 "" H 3350 1500 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:CONN_4 J2
+L CONN_4 J2
 U 1 1 58BFC2CA
 P 5750 6950
 F 0 "J2" V 5700 6950 50  0000 C CNN
@@ -181,7 +187,7 @@ F 3 "" H 5750 6950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 3 1 58BFE6B2
 P 8050 4400
 F 0 "U6" H 8200 4500 40  0000 C CNN
@@ -192,7 +198,7 @@ F 3 "" H 8050 4400 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
+L R R3
 U 1 1 58BFF5C0
 P 2850 1400
 F 0 "R3" V 2930 1400 50  0000 C CNN
@@ -205,7 +211,7 @@ $EndComp
 Text Label 1950 1850 0    60   ~ 0
 UTX
 $Comp
-L Device:R R9
+L R R9
 U 1 1 58C025C5
 P 3900 1400
 F 0 "R9" V 3980 1400 50  0000 C CNN
@@ -216,7 +222,7 @@ F 3 "" H 3900 1400 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 4 1 58C03F24
 P 7800 5450
 F 0 "U6" H 7950 5550 40  0000 C CNN
@@ -227,7 +233,7 @@ F 3 "" H 7800 5450 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 2 1 58C04EEA
 P 8050 4750
 F 0 "U6" H 8200 4850 40  0000 C CNN
@@ -238,7 +244,7 @@ F 3 "" H 8050 4750 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 1 1 58C04F4C
 P 7800 6100
 F 0 "U6" H 7950 6200 40  0000 C CNN
@@ -255,7 +261,7 @@ UVCC
 Text Label 2400 2100 0    60   ~ 0
 UGND
 $Comp
-L Device:R R10
+L R R10
 U 1 1 58C0B73D
 P 3900 1200
 F 0 "R10" V 3980 1200 50  0000 C CNN
@@ -270,7 +276,7 @@ LTX
 Text Label 6900 5800 0    60   ~ 0
 LTX
 $Comp
-L OptoUSB-rescue:4N25 U3
+L 4N25 U3
 U 1 1 58C0EC13
 P 3400 3400
 F 0 "U3" H 3200 3600 50  0000 L CNN
@@ -281,7 +287,7 @@ F 3 "" H 3400 3400 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R4
+L R R4
 U 1 1 58C0EC20
 P 2900 3300
 F 0 "R4" V 2980 3300 50  0000 C CNN
@@ -292,7 +298,7 @@ F 3 "" H 2900 3300 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R11
+L R R11
 U 1 1 58C0EC2D
 P 3950 3300
 F 0 "R11" V 4030 3300 50  0000 C CNN
@@ -307,7 +313,7 @@ UVCC
 Text Label 2450 4000 0    60   ~ 0
 UGND
 $Comp
-L Device:R R12
+L R R12
 U 1 1 58C0EC3A
 P 3950 3100
 F 0 "R12" V 4030 3100 50  0000 C CNN
@@ -322,7 +328,7 @@ URTS
 Text Label 4350 3400 0    60   ~ 0
 LRTS
 $Comp
-L OptoUSB-rescue:4N25 U4
+L 4N25 U4
 U 1 1 58C1498E
 P 7650 1850
 F 0 "U4" H 7450 2050 50  0000 L CNN
@@ -333,7 +339,7 @@ F 3 "" H 7650 1850 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R13
+L R R13
 U 1 1 58C1499A
 P 7150 1750
 F 0 "R13" V 7230 1750 50  0000 C CNN
@@ -346,7 +352,7 @@ $EndComp
 Text Label 8600 1850 0    60   ~ 0
 URX
 $Comp
-L Device:R R6
+L R R6
 U 1 1 58C149A7
 P 8200 1750
 F 0 "R6" V 8280 1750 50  0000 C CNN
@@ -361,7 +367,7 @@ UVCC
 Text Label 8600 1950 0    60   ~ 0
 UGND
 $Comp
-L Device:R R5
+L R R5
 U 1 1 58C149B4
 P 8200 1550
 F 0 "R5" V 8280 1550 50  0000 C CNN
@@ -374,7 +380,7 @@ $EndComp
 Text Label 6700 1750 0    60   ~ 0
 LRX
 $Comp
-L OptoUSB-rescue:4N25 U5
+L 4N25 U5
 U 1 1 58C149C3
 P 7700 3750
 F 0 "U5" H 7500 3950 50  0000 L CNN
@@ -385,7 +391,7 @@ F 3 "" H 7700 3750 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R8
+L R R8
 U 1 1 58C149DB
 P 8250 3650
 F 0 "R8" V 8330 3650 50  0000 C CNN
@@ -400,7 +406,7 @@ UVCC
 Text Label 8650 3850 0    60   ~ 0
 UGND
 $Comp
-L Device:R R7
+L R R7
 U 1 1 58C149E8
 P 8250 3450
 F 0 "R7" V 8330 3450 50  0000 C CNN
@@ -419,7 +425,7 @@ LCTS
 Text Label 6900 6100 0    60   ~ 0
 LRTS
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 6 1 58C1815F
 P 7800 5150
 F 0 "U6" H 7950 5250 40  0000 C CNN
@@ -432,7 +438,7 @@ $EndComp
 NoConn ~ 5750 7650
 NoConn ~ 5750 7550
 $Comp
-L OptoUSB-rescue:CONN_1 MTG4
+L CONN_1 MTG4
 U 1 1 58C19CE0
 P 5900 7650
 F 0 "MTG4" H 5980 7650 40  0000 L CNN
@@ -443,7 +449,7 @@ F 3 "" H 5900 7650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:CONN_1 MTG3
+L CONN_1 MTG3
 U 1 1 58C19CEA
 P 5900 7550
 F 0 "MTG3" H 5980 7550 40  0000 L CNN
@@ -460,7 +466,7 @@ $EndComp
 Text Label 7000 5450 0    60   ~ 0
 LRX
 $Comp
-L Device:R R14
+L R R14
 U 1 1 58C149CF
 P 7200 3650
 F 0 "R14" V 7280 3650 50  0000 C CNN
@@ -471,7 +477,7 @@ F 3 "" H 7200 3650 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L OptoUSB-rescue:74HC14 U6
+L 74HC14 U6
 U 5 1 58C180F5
 P 7800 5800
 F 0 "U6" H 7950 5900 40  0000 C CNN
@@ -482,7 +488,7 @@ F 3 "" H 7800 5800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR4
+L GND #PWR4
 U 1 1 58C3A221
 P 4850 3650
 F 0 "#PWR4" H 4850 3400 50  0001 C CNN
@@ -493,7 +499,7 @@ F 3 "" H 4850 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:FTDI-Slave J3
+L FTDI-Slave J3
 U 1 1 58C06A62
 P 9600 6200
 F 0 "J3" H 9700 6950 60  0000 C CNN
@@ -512,7 +518,7 @@ FRX
 Text Label 8800 6100 0    60   ~ 0
 FRTS
 $Comp
-L power:VCC #PWR3
+L VCC #PWR3
 U 1 1 58C0B215
 P 4850 3050
 F 0 "#PWR3" H 4850 2900 50  0001 C CNN
@@ -523,7 +529,7 @@ F 3 "" H 4850 3050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:Q_NPN_BEC-RESCUE-OptoUSB Q1
+L Q_NPN_BEC-RESCUE-OptoUSB Q1
 U 1 1 58C0EE35
 P 2900 1850
 F 0 "Q1" H 3200 1900 50  0000 R CNN
@@ -534,7 +540,7 @@ F 3 "" H 2900 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:Q_NPN_BEC-RESCUE-OptoUSB Q2
+L Q_NPN_BEC-RESCUE-OptoUSB Q2
 U 1 1 58C0F066
 P 2950 3750
 F 0 "Q2" H 3250 3800 50  0000 R CNN
@@ -545,7 +551,7 @@ F 3 "" H 2950 3750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C3
+L C C3
 U 1 1 58C03B0E
 P 4850 3300
 F 0 "C3" H 4875 3400 50  0000 L CNN
@@ -556,7 +562,7 @@ F 3 "" H 4850 3300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR2
+L VCC #PWR2
 U 1 1 58C05F70
 P 4600 1050
 F 0 "#PWR2" H 4600 900 50  0001 C CNN
@@ -567,7 +573,7 @@ F 3 "" H 4600 1050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR1
+L GND #PWR1
 U 1 1 58C07696
 P 4100 1800
 F 0 "#PWR1" H 4100 1550 50  0001 C CNN
@@ -578,7 +584,7 @@ F 3 "" H 4100 1800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR6
+L GND #PWR6
 U 1 1 58C0934F
 P 7350 3950
 F 0 "#PWR6" H 7350 3700 50  0001 C CNN
@@ -589,7 +595,7 @@ F 3 "" H 7350 3950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR5
+L GND #PWR5
 U 1 1 58C09A60
 P 7300 2050
 F 0 "#PWR5" H 7300 1800 50  0001 C CNN
@@ -600,7 +606,7 @@ F 3 "" H 7300 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR8
+L GND #PWR8
 U 1 1 58C0A5A2
 P 8750 6400
 F 0 "#PWR8" H 8750 6150 50  0001 C CNN
@@ -611,7 +617,7 @@ F 3 "" H 8750 6400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR7
+L VCC #PWR7
 U 1 1 58C0ADC5
 P 8400 5700
 F 0 "#PWR7" H 8400 5550 50  0001 C CNN
@@ -622,7 +628,7 @@ F 3 "" H 8400 5700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R15
+L R R15
 U 1 1 59209EB8
 P 2350 1850
 F 0 "R15" V 2430 1850 50  0000 C CNN
@@ -633,7 +639,7 @@ F 3 "" H 2350 1850 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R16
+L R R16
 U 1 1 5920C8BB
 P 2400 3750
 F 0 "R16" V 2480 3750 50  0000 C CNN
@@ -644,7 +650,7 @@ F 3 "" H 2400 3750 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L OptoUSB-rescue:CONN_01X02 H1
+L CONN_01X02 H1
 U 1 1 59211AA3
 P 1450 5850
 F 0 "H1" H 1450 6000 50  0000 C CNN
@@ -655,7 +661,7 @@ F 3 "" H 1450 5850 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:CONN_01X02 H2
+L CONN_01X02 H2
 U 1 1 59212996
 P 9450 5050
 F 0 "H2" H 9450 5200 50  0000 C CNN
@@ -678,13 +684,13 @@ Wire Wire Line
 	4900 6450 4150 6450
 Connection ~ 3600 5800
 Wire Wire Line
-	1650 5800 2100 5800
+	1650 5800 4550 5800
 Wire Wire Line
 	2450 7150 2450 5700
 Wire Wire Line
 	2450 5700 4300 5700
 Wire Wire Line
-	2100 5800 2100 6500
+	2100 5800 2100 7150
 Wire Wire Line
 	1850 6800 1750 6800
 Wire Wire Line
@@ -727,11 +733,11 @@ Wire Wire Line
 Wire Wire Line
 	4300 7050 4150 7050
 Wire Wire Line
-	1850 7600 2100 7600
+	1850 7600 3600 7600
 Wire Wire Line
-	1850 5900 1850 6800
+	1850 5900 1850 7600
 Wire Wire Line
-	4550 5800 4550 6800
+	4550 5800 4550 7000
 Wire Wire Line
 	1750 6500 2100 6500
 Connection ~ 2100 6500
@@ -782,17 +788,17 @@ Wire Wire Line
 Wire Wire Line
 	8750 5600 9100 5600
 Wire Wire Line
-	9100 5800 9050 5800
+	9100 5800 8400 5800
 Wire Wire Line
 	3650 1600 4100 1600
 Wire Wire Line
-	4100 1400 4100 1600
+	4100 1400 4100 1800
 Wire Wire Line
 	4100 1400 4050 1400
 Wire Wire Line
 	2700 1400 2050 1400
 Wire Wire Line
-	3650 1500 3700 1500
+	3650 1500 4600 1500
 Wire Wire Line
 	3700 1500 3700 1200
 Wire Wire Line
@@ -810,7 +816,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 3300 3800 3300
 Wire Wire Line
-	3700 3500 4150 3500
+	3700 3500 4850 3500
 Wire Wire Line
 	4150 3500 4150 3300
 Wire Wire Line
@@ -818,7 +824,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 3300 2100 3300
 Wire Wire Line
-	3700 3400 3750 3400
+	3700 3400 4650 3400
 Wire Wire Line
 	3750 3400 3750 3100
 Wire Wire Line
@@ -834,13 +840,13 @@ Wire Wire Line
 Wire Wire Line
 	7950 1750 8050 1750
 Wire Wire Line
-	7950 1950 8400 1950
+	7950 1950 8900 1950
 Wire Wire Line
 	8400 1950 8400 1750
 Wire Wire Line
 	8400 1750 8350 1750
 Wire Wire Line
-	7950 1850 8000 1850
+	7950 1850 8900 1850
 Wire Wire Line
 	8000 1850 8000 1550
 Wire Wire Line
@@ -856,13 +862,13 @@ Wire Wire Line
 Wire Wire Line
 	8000 3650 8100 3650
 Wire Wire Line
-	8000 3850 8450 3850
+	8000 3850 9000 3850
 Wire Wire Line
 	8450 3850 8450 3650
 Wire Wire Line
 	8450 3650 8400 3650
 Wire Wire Line
-	8000 3750 8050 3750
+	8000 3750 9000 3750
 Wire Wire Line
 	8050 3750 8050 3450
 Wire Wire Line
@@ -876,17 +882,17 @@ Wire Wire Line
 Wire Wire Line
 	6800 5450 7350 5450
 Wire Wire Line
-	4850 3450 4850 3500
+	4850 3450 4850 3650
 Wire Wire Line
 	4600 1200 4600 1050
 Wire Wire Line
 	8400 5800 8400 5700
 Wire Wire Line
-	4850 3050 4850 3100
+	4850 3050 4850 3150
 Connection ~ 4850 3100
 Connection ~ 4850 3500
 Wire Wire Line
-	8750 4400 8750 4750
+	8750 4400 8750 6400
 Wire Wire Line
 	7400 3850 7350 3850
 Wire Wire Line
@@ -932,50 +938,4 @@ Wire Wire Line
 Wire Wire Line
 	9050 5000 9050 5800
 Connection ~ 9050 5800
-Wire Wire Line
-	2100 7600 2450 7600
-Wire Wire Line
-	3600 5800 4550 5800
-Wire Wire Line
-	4550 6800 4550 7000
-Wire Wire Line
-	3400 7600 3600 7600
-Wire Wire Line
-	2450 7600 3400 7600
-Wire Wire Line
-	2100 6500 2100 7150
-Wire Wire Line
-	3700 1500 4600 1500
-Wire Wire Line
-	4100 1600 4100 1800
-Wire Wire Line
-	3750 3400 4650 3400
-Wire Wire Line
-	4150 3500 4850 3500
-Wire Wire Line
-	8000 1850 8900 1850
-Wire Wire Line
-	8400 1950 8900 1950
-Wire Wire Line
-	8050 3750 9000 3750
-Wire Wire Line
-	8450 3850 9000 3850
-Wire Wire Line
-	4850 3100 4850 3150
-Wire Wire Line
-	4850 3500 4850 3650
-Wire Wire Line
-	8750 5600 8750 6400
-Wire Wire Line
-	8750 4750 8750 5100
-Wire Wire Line
-	3400 5800 3600 5800
-Wire Wire Line
-	2100 5800 3400 5800
-Wire Wire Line
-	1850 6800 1850 7600
-Wire Wire Line
-	8750 5100 8750 5600
-Wire Wire Line
-	9050 5800 8400 5800
 $EndSCHEMATC
