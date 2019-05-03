@@ -1,0 +1,305 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	SIMULATION_TIME = 10000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 100.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clkin")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("da_data_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("resetin")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sclk_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("sync_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("clkin")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 100;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
+		}
+	}
+}
+
+TRANSITION_LIST("da_data_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1663.614;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 200.0;
+			LEVEL 0 FOR 2000.0;
+			LEVEL 1 FOR 600.0;
+			LEVEL 0 FOR 800.0;
+		}
+		LEVEL 1 FOR 200.0;
+		LEVEL 0 FOR 936.386;
+	}
+}
+
+TRANSITION_LIST("resetin")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 600.0;
+		LEVEL 1 FOR 9400.0;
+	}
+}
+
+TRANSITION_LIST("sclk_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 658.333;
+		NODE
+		{
+			REPEAT = 46;
+			LEVEL 1 FOR 100.0;
+			LEVEL 0 FOR 100.0;
+		}
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 41.667;
+	}
+}
+
+TRANSITION_LIST("sync_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 863.637;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3200.0;
+			LEVEL 1 FOR 400.0;
+		}
+		LEVEL 0 FOR 1936.363;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clkin";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "resetin";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sclk_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sync_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "da_data_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 20025;
+	MASTER = TRUE;
+}
+
+TIME_BAR
+{
+	TIME = 1000000;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 1125827;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 1335540;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 1567328;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 1800000;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 1931567;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 2108167;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 2339955;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 2549668;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 2726269;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 2947019;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 3156732;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 3366445;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 3554083;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 3730683;
+	MASTER = FALSE;
+}
+
+TIME_BAR
+{
+	TIME = 3951434;
+	MASTER = FALSE;
+}
+;

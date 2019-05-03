@@ -1,0 +1,81 @@
+Quartus II
+Version 11.0 Build 157 04/27/2011 SJ Full Version
+15
+1228
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+key_3x3
+# storage
+db|key_3x3.(0).cnf
+db|key_3x3.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+key_3x3.v
+b74835fd4239a11c9d083472c28a2e6
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+NO_KEY_PRESSED
+000001
+PARAMETER_UNSIGNED_BIN
+DEF
+SCAN_COL0
+000010
+PARAMETER_UNSIGNED_BIN
+DEF
+SCAN_COL1
+000100
+PARAMETER_UNSIGNED_BIN
+DEF
+SCAN_COL2
+001000
+PARAMETER_UNSIGNED_BIN
+DEF
+KEY_PRESSED
+010000
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

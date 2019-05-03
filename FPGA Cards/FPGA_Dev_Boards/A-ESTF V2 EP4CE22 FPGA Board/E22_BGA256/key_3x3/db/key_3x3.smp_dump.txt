@@ -1,0 +1,8 @@
+
+State Machine - |key_3x3|current_state
+Name current_state.KEY_PRESSED current_state.SCAN_COL2 current_state.SCAN_COL1 current_state.SCAN_COL0 current_state.NO_KEY_PRESSED 
+current_state.NO_KEY_PRESSED 0 0 0 0 0 
+current_state.SCAN_COL0 0 0 0 1 1 
+current_state.SCAN_COL1 0 0 1 0 1 
+current_state.SCAN_COL2 0 1 0 0 1 
+current_state.KEY_PRESSED 1 0 0 0 1 

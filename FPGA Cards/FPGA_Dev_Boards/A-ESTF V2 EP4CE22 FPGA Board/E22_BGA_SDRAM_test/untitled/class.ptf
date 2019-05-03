@@ -1,0 +1,59 @@
+CLASS untitled
+{
+   BOARD_DEFAULTS 
+   {
+      class = "untitled";
+      class_version = "1.0";
+      device_family = "CYCLONEII";
+      altera_avalon_epcs_flash_controller 
+      {
+         reference_designators = "";
+      }
+      altera_avalon_cfi_flash 
+      {
+         reference_designators = "SST39VF320170-4C-EK";
+      }
+      reference_designators = "SST39VF320170-4C-EK";
+      initial_system_file = "system/SDRAM_NIOS.ptf";
+   }
+   USER_INTERFACE 
+   {
+      USER_LABELS 
+      {
+         name = "untitled";
+      }
+      WIZARD_UI bind
+      {
+         PINASSIGNER 
+         {
+            java = "com.altera.pinassigner.ui.SopcPinAssigner";
+         }
+      }
+   }
+   SOPC_Builder_Version = "6.00";
+   NETLIST 
+   {
+      NETLIST_INFO 
+      {
+         IGNORE 
+         {
+            net = "(VCC|GND).*";
+            device = "C[0-9]+";
+         }
+         PIN_CONNECTION_TYPE Rnnn
+         {
+            ids = "R[0-9]+";
+            CONNECT 
+            {
+               pin1 = "1";
+               pin2 = "2";
+            }
+         }
+      }
+   }
+   ASSOCIATED_FILES 
+   {
+      Bind_Program = "bind";
+   }
+   type = "board";
+}

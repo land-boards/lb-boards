@@ -1,0 +1,103 @@
+//深圳市21EDA电子.www.21eda.com
+//本实验学习点阵模块的使用
+//其实原理和使用动态数码管的原理一样的
+//在点阵上面显示一个汉字 '正'
+//视频教程适合我们21EDA电子的所有学习板
+
+
+module led_0_7 (clk,rst,dataout,en);
+
+input clk,rst;         //系统时钟50M输入 从12脚输入。
+output[7:0] dataout;   //数码管的段码输出
+output[7:0] en;        //数码管的位选使能输出
+
+reg[7:0] dataout;     
+reg[7:0] en;
+
+reg[15:0] cnt_scan;//扫描频率计数器
+reg[4:0] dataout_buf;
+
+always@(posedge clk or negedge  rst)
+begin
+	if(!rst) begin
+		cnt_scan<=0;
+		
+	 end
+	else begin
+		cnt_scan<=cnt_scan+1;
+		end
+end
+
+always @(cnt_scan)
+begin
+   case(cnt_scan[15:13])
+       3'b000 :
+          en = 8'b1111_1110;
+       3'b001 :
+          en = 8'b1111_1101;
+       3'b010 :
+          en = 8'b1111_1011;
+       3'b011 :
+          en = 8'b1111_0111;
+       3'b100 :
+          en = 8'b1110_1111;
+       3'b101 :
+          en = 8'b1101_1111;
+       3'b110 :
+          en = 8'b1011_1111;
+       3'b111 :
+          en = 8'b0111_1111;
+       default :
+          en = 8'b1111_1110;
+    endcase
+end
+
+always@(en) //对应COM信号给出各段数据
+begin
+	case(en)
+		8'b1111_1110:
+			dataout_buf=0;
+		8'b1111_1101:
+			dataout_buf=1;
+		8'b1111_1011:
+			dataout_buf=2;
+		8'b1111_0111:
+			dataout_buf=3;	
+		8'b1110_1111:
+			dataout_buf=4;
+		8'b1101_1111:
+			dataout_buf=5;
+		8'b1011_1111:
+			dataout_buf=6;
+		8'b0111_1111:
+			dataout_buf=7;
+		default: 
+			dataout_buf=8;
+	 endcase
+end
+
+always@(dataout_buf)
+begin
+//显示一个爱心需要的点阵代码
+	case(dataout_buf)
+		4'b0000:
+			dataout=8'b11101111;
+		4'b0001:
+			dataout=8'b11110111;
+		4'b0010:
+			dataout=8'b10010001;
+		4'b0011:
+			dataout=8'b01100110;
+		4'b0100:
+			dataout=8'b01111110;
+		4'b0101:
+			dataout=8'b10111101;
+		4'b0110:
+			dataout=8'b11011011;
+		4'b0111:
+			dataout=8'b11100111;
+		
+	 endcase
+end
+
+endmodule 

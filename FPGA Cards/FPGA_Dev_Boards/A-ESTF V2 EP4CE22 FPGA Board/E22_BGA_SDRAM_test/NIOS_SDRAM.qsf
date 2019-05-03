@@ -1,0 +1,109 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		NIOS_SDRAM_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE22F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY NIOS_SDRAM
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:40:16  OCTOBER 25, 2009"
+set_global_assignment -name LAST_QUARTUS_VERSION 11.0
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name VHDL_FILE altera_europa_support.vhd
+set_global_assignment -name BDF_FILE NIOS_SDRAM.bdf
+set_global_assignment -name CDF_FILE Chain1.cdf
+set_global_assignment -name QIP_FILE SDRAM_NIOS.qip
+set_global_assignment -name MISC_FILE "G:/111111/8.0/FLASH/FLASH/NIOS_SDRAM.dpf"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name MISC_FILE "G:/111111/8.0/TIMER/NIOS_SDRAM.dpf"
+set_global_assignment -name MISC_FILE "G:/111111/8.0/nios_256/NIOS_SDRAM.dpf"
+set_global_assignment -name MISC_FILE "G:/111111/8.0/A-C8V4/SDRAM/nios_256/NIOS_SDRAM.dpf"
+set_global_assignment -name MISC_FILE "M:/NIOS_SOPC/M_SDRAM_50M_PLL/NIOS_SDRAM.dpf"
+set_global_assignment -name MISC_FILE "M:/NIOS_SOPC/N_SDRAM_100M_HZ/NIOS_SDRAM.dpf"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E1 -to CLK_50M
+set_location_assignment PIN_M8 -to LED_D8
+set_location_assignment PIN_C6 -to SDR_AD[12]
+set_location_assignment PIN_C8 -to SDR_AD[11]
+set_location_assignment PIN_A10 -to SDR_AD[10]
+set_location_assignment PIN_C9 -to SDR_AD[9]
+set_location_assignment PIN_C11 -to SDR_AD[8]
+set_location_assignment PIN_C14 -to SDR_AD[7]
+set_location_assignment PIN_D11 -to SDR_AD[6]
+set_location_assignment PIN_D12 -to SDR_AD[5]
+set_location_assignment PIN_D14 -to SDR_AD[4]
+set_location_assignment PIN_A12 -to SDR_AD[3]
+set_location_assignment PIN_B11 -to SDR_AD[2]
+set_location_assignment PIN_A11 -to SDR_AD[1]
+set_location_assignment PIN_B10 -to SDR_AD[0]
+set_location_assignment PIN_D9 -to SDR_BA[1]
+set_location_assignment PIN_E9 -to SDR_BA[0]
+set_location_assignment PIN_A7 -to SDR_CAS
+set_location_assignment PIN_A15 -to SDR_CKE
+set_location_assignment PIN_B14 -to SDR_CLK
+set_location_assignment PIN_E8 -to SDR_CS
+set_location_assignment PIN_D3 -to SDR_DA[15]
+set_location_assignment PIN_C3 -to SDR_DA[14]
+set_location_assignment PIN_D5 -to SDR_DA[13]
+set_location_assignment PIN_D6 -to SDR_DA[12]
+set_location_assignment PIN_B12 -to SDR_DA[11]
+set_location_assignment PIN_A13 -to SDR_DA[10]
+set_location_assignment PIN_B13 -to SDR_DA[9]
+set_location_assignment PIN_A14 -to SDR_DA[8]
+set_location_assignment PIN_B6 -to SDR_DA[7]
+set_location_assignment PIN_A5 -to SDR_DA[6]
+set_location_assignment PIN_B5 -to SDR_DA[5]
+set_location_assignment PIN_A4 -to SDR_DA[4]
+set_location_assignment PIN_B4 -to SDR_DA[3]
+set_location_assignment PIN_A3 -to SDR_DA[2]
+set_location_assignment PIN_B3 -to SDR_DA[1]
+set_location_assignment PIN_A2 -to SDR_DA[0]
+set_location_assignment PIN_E11 -to SDR_DQM[1]
+set_location_assignment PIN_A6 -to SDR_DQM[0]
+set_location_assignment PIN_D8 -to SDR_RAS
+set_location_assignment PIN_B7 -to SDR_WE
+set_location_assignment PIN_D2 -to EPCS_CS
+set_location_assignment PIN_H2 -to EPCS_DATA0
+set_location_assignment PIN_H1 -to EPCS_DCLK
+set_location_assignment PIN_C1 -to EPCS_SDO
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
