@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# RF-Amp-rescue_BNC
+# BNC
 #
-DEF RF-Amp-rescue_BNC P 0 40 Y N 1 F N
+DEF BNC P 0 40 Y N 1 F N
 F0 "P" 10 120 60 H V C CNN
-F1 "RF-Amp-rescue_BNC" 110 -60 40 V V C CNN
+F1 "BNC" 110 -60 40 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -16,11 +16,11 @@ X Ext 2 0 -200 130 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_C
+# C
 #
-DEF RF-Amp-rescue_C C 0 10 N Y 1 F N
+DEF C C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
-F1 "RF-Amp-rescue_C" 6 -85 40 H V L CNN
+F1 "C" 6 -85 40 H V L CNN
 F2 "" 38 -150 30 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -36,11 +36,11 @@ X ~ 2 0 -200 170 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_CONN_1
+# CONN_1
 #
-DEF ~RF-Amp-rescue_CONN_1 P 0 30 N N 1 F N
+DEF ~CONN_1 P 0 30 N N 1 F N
 F0 "P" 80 0 40 H V L CNN
-F1 "RF-Amp-rescue_CONN_1" 0 55 30 H I C CNN
+F1 "CONN_1" 0 55 30 H I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -50,11 +50,11 @@ X 1 1 -150 0 100 R 60 60 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_CONN_2
+# CONN_2
 #
-DEF RF-Amp-rescue_CONN_2 P 0 40 Y N 1 F N
+DEF CONN_2 P 0 40 Y N 1 F N
 F0 "P" -50 0 40 V V C CNN
-F1 "RF-Amp-rescue_CONN_2" 50 0 40 V V C CNN
+F1 "CONN_2" 50 0 40 V V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -64,11 +64,11 @@ X PM 2 -350 -100 250 R 60 60 1 1 P I
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_NPN
+# NPN
 #
-DEF RF-Amp-rescue_NPN Q 0 0 Y Y 1 F N
+DEF NPN Q 0 0 Y Y 1 F N
 F0 "Q" 0 -150 50 H V R CNN
-F1 "RF-Amp-rescue_NPN" 0 150 50 H V R CNN
+F1 "NPN" 0 150 50 H V R CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -84,11 +84,11 @@ X C 3 100 200 100 D 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_R
+# R
 #
-DEF RF-Amp-rescue_R R 0 0 N Y 1 F N
+DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
-F1 "RF-Amp-rescue_R" 7 1 40 V V C CNN
+F1 "R" 7 1 40 V V C CNN
 F2 "" -70 0 30 V V C CNN
 F3 "" 0 0 30 H V C CNN
 $FPLIST
@@ -105,11 +105,11 @@ X ~ 2 0 -250 100 U 60 60 1 1 P
 ENDDRAW
 ENDDEF
 #
-# RF-Amp-rescue_TRANSFO
+# TRANSFO
 #
-DEF RF-Amp-rescue_TRANSFO T 0 40 Y N 1 F N
+DEF TRANSFO T 0 40 Y N 1 F N
 F0 "T" 0 250 70 H V C CNN
-F1 "RF-Amp-rescue_TRANSFO" 0 -300 70 H V C CNN
+F1 "TRANSFO" 0 -300 70 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW

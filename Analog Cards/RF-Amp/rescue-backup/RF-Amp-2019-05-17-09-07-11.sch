@@ -1,6 +1,35 @@
-EESchema Schematic File Version 4
-LIBS:RF-Amp-cache
-EELAYER 26 0
+EESchema Schematic File Version 2  date 04/06/2013 14:11:54
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -15,7 +44,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RF-Amp-rescue:CONN_2 P3
+L CONN_2 P3
 U 1 1 51AC8CBC
 P 950 1350
 F 0 "P3" V 900 1350 40  0000 C CNN
@@ -26,7 +55,7 @@ F 3 "" H 950 1350 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:BNC P1
+L BNC P1
 U 1 1 51AC8CD2
 P 1850 2150
 F 0 "P1" H 1860 2270 60  0000 C CNN
@@ -37,7 +66,7 @@ F 3 "~" H 1850 2150 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:R R4
+L R R4
 U 1 1 51AC8CE1
 P 2500 1250
 F 0 "R4" V 2580 1250 40  0000 C CNN
@@ -48,7 +77,7 @@ F 3 "~" H 2500 1250 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RF-Amp-rescue:C C1
+L C C1
 U 1 1 51AC8CF0
 P 3000 1550
 F 0 "C1" H 3000 1650 40  0000 L CNN
@@ -59,7 +88,7 @@ F 3 "~" H 3000 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:R R1
+L R R1
 U 1 1 51AC8CFF
 P 3650 1600
 F 0 "R1" V 3730 1600 40  0000 C CNN
@@ -70,7 +99,7 @@ F 3 "~" H 3650 1600 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:R R2
+L R R2
 U 1 1 51AC8D0E
 P 3750 2700
 F 0 "R2" V 3830 2700 40  0000 C CNN
@@ -81,7 +110,7 @@ F 3 "~" H 3750 2700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:NPN Q1
+L NPN Q1
 U 1 1 51AC8D1D
 P 4250 2150
 F 0 "Q1" H 4150 2300 50  0000 R CNN
@@ -92,7 +121,7 @@ F 3 "~" H 4250 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:R R3
+L R R3
 U 1 1 51AC8D2C
 P 4350 2700
 F 0 "R3" V 4430 2700 40  0000 C CNN
@@ -103,7 +132,7 @@ F 3 "~" H 4350 2700 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:TRANSFO T1
+L TRANSFO T1
 U 1 1 51AC8D45
 P 5050 1450
 F 0 "T1" H 5050 1700 70  0000 C CNN
@@ -114,7 +143,7 @@ F 3 "~" H 5050 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:BNC P2
+L BNC P2
 U 1 1 51AC8D54
 P 6700 1250
 F 0 "P2" H 6710 1370 60  0000 C CNN
@@ -125,7 +154,7 @@ F 3 "~" H 6700 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:C C2
+L C C2
 U 1 1 51AC8D77
 P 2500 2150
 F 0 "C2" H 2500 2250 40  0000 L CNN
@@ -136,7 +165,7 @@ F 3 "~" H 2500 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L RF-Amp-rescue:R R5
+L R R5
 U 1 1 51AC8F1C
 P 5950 2150
 F 0 "R5" V 6030 2150 40  0000 C CNN
@@ -147,7 +176,7 @@ F 3 "~" H 5950 2150 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:CONN_1 MTG1
+L CONN_1 MTG1
 U 1 1 51ADF1DC
 P 10200 6800
 F 0 "MTG1" H 10280 6800 40  0000 L CNN
@@ -159,7 +188,7 @@ F 3 "" H 10200 6800 60  0000 C CNN
 $EndComp
 NoConn ~ 10050 6800
 $Comp
-L RF-Amp-rescue:CONN_1 MTG2
+L CONN_1 MTG2
 U 1 1 51ADF21A
 P 10200 6900
 F 0 "MTG2" H 10280 6900 40  0000 L CNN
@@ -171,7 +200,7 @@ F 3 "" H 10200 6900 60  0000 C CNN
 $EndComp
 NoConn ~ 10050 6900
 $Comp
-L RF-Amp-rescue:CONN_1 MTG3
+L CONN_1 MTG3
 U 1 1 51ADF221
 P 10200 7000
 F 0 "MTG3" H 10280 7000 40  0000 L CNN
@@ -183,7 +212,7 @@ F 3 "" H 10200 7000 60  0000 C CNN
 $EndComp
 NoConn ~ 10050 7000
 $Comp
-L RF-Amp-rescue:CONN_1 MTG4
+L CONN_1 MTG4
 U 1 1 51ADF228
 P 10200 7100
 F 0 "MTG4" H 10280 7100 40  0000 L CNN
@@ -209,7 +238,7 @@ VB
 Text Label 4450 1650 0    60   ~ 0
 VC
 $Comp
-L RF-Amp-rescue:R R6
+L R R6
 U 1 1 51ADF8BA
 P 6250 2150
 F 0 "R6" V 6330 2150 40  0000 C CNN
@@ -220,7 +249,7 @@ F 3 "~" H 6250 2150 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:CONN_2 PB1
+L CONN_2 PB1
 U 1 1 51ADFE1D
 P 1600 1800
 F 0 "PB1" V 1550 1800 40  0000 C CNN
@@ -231,7 +260,7 @@ F 3 "" H 1600 1800 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L RF-Amp-rescue:CONN_2 PB2
+L CONN_2 PB2
 U 1 1 51ADFE2C
 P 6950 950
 F 0 "PB2" V 6900 950 40  0000 C CNN
@@ -244,15 +273,15 @@ $EndComp
 Wire Wire Line
 	1300 1250 2250 1250
 Wire Wire Line
-	2750 1250 3000 1250
+	2750 1250 4650 1250
 Wire Wire Line
-	5450 1250 5950 1250
+	5450 1250 6550 1250
 Wire Wire Line
-	6700 3200 6700 1600
+	6700 3200 6700 1450
 Wire Wire Line
-	2000 2150 2250 2150
+	2000 2150 2300 2150
 Wire Wire Line
-	2700 2150 3650 2150
+	2700 2150 4050 2150
 Wire Wire Line
 	3650 1850 3650 2150
 Connection ~ 3650 2150
@@ -263,7 +292,7 @@ Wire Wire Line
 	3650 1350 3650 1250
 Connection ~ 3650 1250
 Wire Wire Line
-	1350 3200 1850 3200
+	1350 3200 6700 3200
 Wire Wire Line
 	4350 2950 4350 3200
 Connection ~ 4350 3200
@@ -283,7 +312,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 2450 4350 2350
 Wire Wire Line
-	1850 2350 1850 2500
+	1850 2350 1850 3200
 Connection ~ 1850 3200
 Wire Wire Line
 	5450 1650 5600 1650
@@ -332,38 +361,4 @@ Wire Wire Line
 Connection ~ 2250 2150
 Text Notes 5000 1100 0    60   ~ 0
 4:1
-Wire Wire Line
-	3650 2150 3750 2150
-Wire Wire Line
-	3750 2150 4050 2150
-Wire Wire Line
-	3650 1250 4650 1250
-Wire Wire Line
-	4350 3200 5600 3200
-Wire Wire Line
-	3750 3200 4350 3200
-Wire Wire Line
-	3000 3200 3750 3200
-Wire Wire Line
-	3000 1250 3650 1250
-Wire Wire Line
-	1850 3200 3000 3200
-Wire Wire Line
-	5600 3200 5950 3200
-Wire Wire Line
-	5950 3200 6250 3200
-Wire Wire Line
-	5950 1250 6250 1250
-Wire Wire Line
-	6250 3200 6700 3200
-Wire Wire Line
-	6250 1250 6300 1250
-Wire Wire Line
-	6300 1250 6550 1250
-Wire Wire Line
-	6700 1600 6700 1450
-Wire Wire Line
-	1850 2500 1850 3200
-Wire Wire Line
-	2250 2150 2300 2150
 $EndSCHEMATC
