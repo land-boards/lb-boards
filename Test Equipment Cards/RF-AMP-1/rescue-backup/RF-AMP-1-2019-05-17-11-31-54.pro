@@ -1,4 +1,4 @@
-update=5/17/2019 11:32:00 AM
+update=1/14/2019 9:39:58 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -44,3 +44,12 @@ LibName12=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/pi
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=transistors
+LibName4=conn
+LibName5=regul
+LibName6=linear
+LibName7=C:/HWTeam/Kicad/library/LandBoards_Conns
+LibName8=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards
