@@ -1,9 +1,6 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.5)
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.0)-1")
 
   (general
-    (links 68)
-    (no_connects 0)
-    (area -5.561286 -2.5532 53.920572 49.190501)
     (thickness 1.6002)
     (drawings 25)
     (tracks 156)
@@ -14,9 +11,9 @@
 
   (page A4)
   (layers
-    (0 Front signal)
-    (31 Back signal)
-    (36 B.SilkS user)
+    (0 Front signal hide)
+    (31 Back signal hide)
+    (36 B.SilkS user hide)
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
@@ -32,8 +29,6 @@
     (zone_clearance 0.254)
     (zone_45_only no)
     (trace_min 0.2032)
-    (segment_width 0.381)
-    (edge_width 0.381)
     (via_size 0.889)
     (via_drill 0.635)
     (via_min_size 0.889)
@@ -43,6 +38,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.508)
     (uvia_min_drill 0.127)
+    (edge_width 0.381)
+    (segment_width 0.381)
     (pcb_text_width 0.3048)
     (pcb_text_size 1.524 2.032)
     (mod_edge_width 0.381)
@@ -52,10 +49,13 @@
     (pad_drill 0.8128)
     (pad_to_mask_clearance 0.254)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFF3F)
+    (visible_elements 7FFFEF3F)
     (pcbplotparams
       (layerselection 0x010f0_80000001)
       (usegerberextensions false)
+      (usegerberattributes false)
+      (usegerberadvancedattributes false)
+      (creategerberjobfile false)
       (excludeedgelayer true)
       (linewidth 0.150000)
       (plotframeref false)
@@ -64,8 +64,7 @@
       (useauxorigin false)
       (hpglpennumber 1)
       (hpglpenspeed 20)
-      (hpglpendiameter 15)
-      (hpglpenoverlay 0)
+      (hpglpendiameter 15.000000)
       (psnegative false)
       (psa4output false)
       (plotreference true)
@@ -77,7 +76,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory plots/))
+      (outputdirectory "plots/"))
   )
 
   (net 0 "")
@@ -571,7 +570,7 @@
     (tags SOT-23)
     (path /557B9C27/557F6DD0)
     (attr smd)
-    (fp_text reference Q1 (at 0.635 3.81 360) (layer F.SilkS)
+    (fp_text reference Q1 (at 0.635 3.81) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 2N3904 (at 0 3.81 270) (layer F.SilkS) hide
@@ -600,7 +599,7 @@
     (tags SOT-23)
     (path /557BCF63/557F6DD0)
     (attr smd)
-    (fp_text reference Q2 (at 0 3.81 360) (layer F.SilkS)
+    (fp_text reference Q2 (at 0 3.81) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 2N3904 (at 0 3.81 270) (layer F.SilkS) hide
@@ -629,7 +628,7 @@
     (tags SOT-23)
     (path /557BD8A1/557F6DD0)
     (attr smd)
-    (fp_text reference Q3 (at 0 3.81 360) (layer F.SilkS)
+    (fp_text reference Q3 (at 0 3.81) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 2N3904 (at 0 3.81 270) (layer F.SilkS) hide
@@ -658,7 +657,7 @@
     (tags SOT-23)
     (path /557BD8A9/557F6DD0)
     (attr smd)
-    (fp_text reference Q4 (at 0 4.445 360) (layer F.SilkS)
+    (fp_text reference Q4 (at 0 4.445) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 2N3904 (at 0 3.81 270) (layer F.SilkS) hide
@@ -720,7 +719,7 @@
     (pad 8 thru_hole oval (at 0 17.78) (size 2.032 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 4 /OptoBlk1/GND1))
     (model Pin_Headers.3dshapes/Pin_Header_Straight_1x08.wrl
-      (at (xyz 0 -0.35 0))
+      (offset (xyz 0 -8.889999866485596 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -765,7 +764,7 @@
     (pad 8 thru_hole oval (at 0 17.78) (size 2.032 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 12 /OptoBlk1/GND2))
     (model Pin_Headers.3dshapes/Pin_Header_Straight_1x08.wrl
-      (at (xyz 0 -0.35 0))
+      (offset (xyz 0 -8.889999866485596 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -779,7 +778,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
+      (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
@@ -792,7 +791,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
+      (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
@@ -805,7 +804,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
+      (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
@@ -818,7 +817,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value MTG_HOLE (at 0 -5.08) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
+      (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (pad 1 thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
@@ -829,7 +828,7 @@
     (tags "resistor 0805")
     (path /557B9C27/5857EB60)
     (attr smd)
-    (fp_text reference R13 (at -3.556 0.635 360) (layer F.SilkS)
+    (fp_text reference R13 (at -3.556 0.635) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 20K (at 0 2.1 270) (layer F.SilkS) hide
@@ -862,7 +861,7 @@
     (tags "resistor 0805")
     (path /557BCF63/5857EB60)
     (attr smd)
-    (fp_text reference R14 (at -3.048 0.254 360) (layer F.SilkS) hide
+    (fp_text reference R14 (at -3.048 0.254) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 20K (at 0 2.1 270) (layer F.SilkS) hide
@@ -895,7 +894,7 @@
     (tags "resistor 0805")
     (path /557BD8A1/5857EB60)
     (attr smd)
-    (fp_text reference R15 (at -3.048 0.254 360) (layer F.SilkS) hide
+    (fp_text reference R15 (at -3.048 0.254) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 20K (at 0 2.1 270) (layer F.SilkS) hide
@@ -928,7 +927,7 @@
     (tags "resistor 0805")
     (path /557BD8A9/5857EB60)
     (attr smd)
-    (fp_text reference R16 (at 4.191 0.254 360) (layer F.SilkS)
+    (fp_text reference R16 (at 4.191 0.254) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value 20K (at 0 2.1 270) (layer F.SilkS) hide
@@ -1092,7 +1091,7 @@
     (descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x02 2.54mm single row")
     (path /557B9C27/59386961)
-    (fp_text reference H1 (at -2.032 0 360) (layer F.SilkS)
+    (fp_text reference H1 (at -2.032 0) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value DNP (at 0 4.87 270) (layer F.SilkS) hide
@@ -1120,7 +1119,7 @@
     (pad 2 thru_hole oval (at 0 2.54 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 4 /OptoBlk1/GND1))
     (model ${KISYS3DMOD}/Pin_Headers.3dshapes/Pin_Header_Straight_1x02_Pitch2.54mm.wrl
-      (at (xyz 0 -0.05 0))
+      (offset (xyz 0 -1.269999980926514 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -1131,7 +1130,7 @@
     (descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x02 2.54mm single row")
     (path /557BCF63/59386961)
-    (fp_text reference H2 (at -2.032 0 360) (layer F.SilkS)
+    (fp_text reference H2 (at -2.032 0) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value DNP (at 0 4.87 270) (layer F.SilkS) hide
@@ -1159,7 +1158,7 @@
     (pad 2 thru_hole oval (at 0 2.54 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 4 /OptoBlk1/GND1))
     (model ${KISYS3DMOD}/Pin_Headers.3dshapes/Pin_Header_Straight_1x02_Pitch2.54mm.wrl
-      (at (xyz 0 -0.05 0))
+      (offset (xyz 0 -1.269999980926514 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -1170,7 +1169,7 @@
     (descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x02 2.54mm single row")
     (path /557BD8A1/59386961)
-    (fp_text reference H3 (at -2.032 0 360) (layer F.SilkS)
+    (fp_text reference H3 (at -2.032 0) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value DNP (at 0 4.87 270) (layer F.SilkS) hide
@@ -1198,7 +1197,7 @@
     (pad 2 thru_hole oval (at 0 2.54 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 4 /OptoBlk1/GND1))
     (model ${KISYS3DMOD}/Pin_Headers.3dshapes/Pin_Header_Straight_1x02_Pitch2.54mm.wrl
-      (at (xyz 0 -0.05 0))
+      (offset (xyz 0 -1.269999980926514 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -1209,7 +1208,7 @@
     (descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x02 2.54mm single row")
     (path /557BD8A9/59386961)
-    (fp_text reference H4 (at -2.032 0 360) (layer F.SilkS)
+    (fp_text reference H4 (at -2.032 0) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value DNP (at 0 4.87 270) (layer F.SilkS) hide
@@ -1237,7 +1236,7 @@
     (pad 2 thru_hole oval (at 0 2.54 270) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 4 /OptoBlk1/GND1))
     (model ${KISYS3DMOD}/Pin_Headers.3dshapes/Pin_Header_Straight_1x02_Pitch2.54mm.wrl
-      (at (xyz 0 -0.05 0))
+      (offset (xyz 0 -1.269999980926514 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -1394,7 +1393,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)) (justify mirror))
     )
     (fp_text value COUPON (at 0 4) (layer F.SilkS) hide
-      (effects (font (thickness 0.3048)))
+      (effects (font (size 1.524 1.524) (thickness 0.3048)))
     )
     (fp_line (start -2 -2) (end 2 -2) (layer B.SilkS) (width 0.65))
     (fp_line (start 2 -2) (end 2 2) (layer B.SilkS) (width 0.65))
@@ -1441,10 +1440,10 @@
     (effects (font (size 2.032 1.524) (thickness 0.3048)))
   )
   (gr_text OUT (at 45.152 36.078) (layer F.SilkS)
-    (effects (font (thickness 0.3048)))
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
   )
   (gr_text IN (at 4.004 34.554) (layer F.SilkS)
-    (effects (font (thickness 0.3048)))
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
   )
   (gr_text "V\nV\n1\n2\n3\n4\nG\nG" (at 43.12 24.14) (layer F.SilkS)
     (effects (font (size 1.6002 1.524) (thickness 0.3048)))
@@ -1456,7 +1455,7 @@
     (effects (font (size 1.397 1.27) (thickness 0.3048)))
   )
   (gr_text "REV X1" (at 37.211 47.244) (layer F.SilkS)
-    (effects (font (thickness 0.3048)))
+    (effects (font (size 1.524 1.524) (thickness 0.3048)))
   )
   (gr_line (start 49 45) (end 49 4) (angle 90) (layer Edge.Cuts) (width 0.381))
   (gr_line (start 4 49) (end 45 49) (angle 90) (layer Edge.Cuts) (width 0.381))
