@@ -1,6 +1,12 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:DougsSch
+LIBS:opto
 LIBS:OptoFastBi-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -15,7 +21,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L OptoFastBi-rescue:MTG_HOLE MTG1
+L MTG_HOLE MTG1
 U 1 1 537A5CA4
 P 5200 7350
 F 0 "MTG1" H 5200 7450 60  0000 C CNN
@@ -26,7 +32,7 @@ F 3 "~" H 5200 7350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:ADAFRUIT_FIDUCIAL FID2
+L ADAFRUIT_FIDUCIAL FID2
 U 1 1 537A5ED2
 P 4350 7700
 F 0 "FID2" H 4350 7850 60  0000 C CNN
@@ -37,7 +43,7 @@ F 3 "~" H 4350 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:ADAFRUIT_FIDUCIAL FID1
+L ADAFRUIT_FIDUCIAL FID1
 U 1 1 537A5EE1
 P 4350 7300
 F 0 "FID1" H 4350 7400 60  0000 C CNN
@@ -48,7 +54,7 @@ F 3 "~" H 4350 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:MTG_HOLE MTG2
+L MTG_HOLE MTG2
 U 1 1 538F757A
 P 5200 7700
 F 0 "MTG2" H 5200 7800 60  0000 C CNN
@@ -59,7 +65,7 @@ F 3 "~" H 5200 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:MTG_HOLE MTG3
+L MTG_HOLE MTG3
 U 1 1 538F7580
 P 5800 7350
 F 0 "MTG3" H 5800 7450 60  0000 C CNN
@@ -70,7 +76,7 @@ F 3 "~" H 5800 7350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:MTG_HOLE MTG4
+L MTG_HOLE MTG4
 U 1 1 538F7586
 P 5800 7700
 F 0 "MTG4" H 5800 7800 60  0000 C CNN
@@ -129,7 +135,7 @@ F6 "OUT" O L 5150 4900 79
 F7 "GND2" O L 5150 5050 79 
 $EndSheet
 $Comp
-L OptoFastBi-rescue:CONN_01X08 P1
+L CONN_01X08 P1
 U 1 1 557EBB19
 P 2900 1350
 F 0 "P1" H 2900 1800 50  0000 C CNN
@@ -140,7 +146,7 @@ F 3 "" H 2900 1350 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L OptoFastBi-rescue:CONN_01X08 P2
+L CONN_01X08 P2
 U 1 1 557EC371
 P 7950 1350
 F 0 "P2" H 7950 1800 50  0000 C CNN
@@ -153,7 +159,7 @@ $EndComp
 Wire Wire Line
 	6250 4750 6100 4750
 Wire Wire Line
-	6250 1000 6250 2500
+	6250 1000 6250 4750
 Wire Wire Line
 	6250 4000 6000 4000
 Wire Wire Line
@@ -165,7 +171,7 @@ Connection ~ 6250 3250
 Wire Wire Line
 	4600 4750 5150 4750
 Wire Wire Line
-	4600 1000 4600 2500
+	4600 1000 4600 4750
 Wire Wire Line
 	4600 2500 4850 2500
 Wire Wire Line
@@ -177,7 +183,7 @@ Connection ~ 4600 4000
 Wire Wire Line
 	4850 2800 4450 2800
 Wire Wire Line
-	4450 1600 4450 2800
+	4450 1600 4450 5050
 Wire Wire Line
 	4450 5050 5150 5050
 Wire Wire Line
@@ -189,7 +195,7 @@ Connection ~ 4450 3550
 Wire Wire Line
 	6400 5050 6100 5050
 Wire Wire Line
-	6400 1600 6400 2800
+	6400 1600 6400 5050
 Wire Wire Line
 	6400 2800 5800 2800
 Wire Wire Line
@@ -199,7 +205,7 @@ Wire Wire Line
 	6000 4300 6400 4300
 Connection ~ 6400 4300
 Wire Wire Line
-	3100 1000 3200 1000
+	3100 1000 4600 1000
 Connection ~ 4600 2500
 Wire Wire Line
 	3100 1100 3200 1100
@@ -207,7 +213,7 @@ Wire Wire Line
 	3200 1100 3200 1000
 Connection ~ 3200 1000
 Wire Wire Line
-	3100 1600 3200 1600
+	3100 1600 4450 1600
 Connection ~ 4450 2800
 Wire Wire Line
 	3100 1700 3200 1700
@@ -239,7 +245,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 4900 5150 4900
 Wire Wire Line
-	6250 1000 7650 1000
+	6250 1000 7750 1000
 Connection ~ 6250 2500
 Wire Wire Line
 	7750 1100 7650 1100
@@ -275,14 +281,14 @@ Wire Wire Line
 Wire Wire Line
 	7650 1700 7650 1600
 Wire Wire Line
-	6400 1600 7650 1600
+	6400 1600 7750 1600
 Connection ~ 6400 2800
 Connection ~ 7650 1600
 $Comp
-L OptoFastBi-rescue:COUPON TEST1
+L COUPON TEST
 U 1 1 5857FEAF
 P 3100 7750
-F 0 "TEST1" H 3100 7750 60  0000 C CNN
+F 0 "TEST" H 3100 7750 60  0000 C CNN
 F 1 "COUPON" H 3100 7750 60  0000 C CNN
 F 2 "LandBoards_Marking:TEST_BLK-REAR" H 3100 7850 60  0000 C CNN
 F 3 "" H 3100 7750 60  0000 C CNN
@@ -313,36 +319,4 @@ Text Label 3350 1400 0    60   ~ 0
 OUT3
 Text Label 3350 1500 0    60   ~ 0
 OUT4
-Wire Wire Line
-	6250 4000 6250 4750
-Wire Wire Line
-	6250 3250 6250 4000
-Wire Wire Line
-	4600 3250 4600 4000
-Wire Wire Line
-	4600 4000 4600 4750
-Wire Wire Line
-	4450 4300 4450 5050
-Wire Wire Line
-	4450 3550 4450 4300
-Wire Wire Line
-	6400 3550 6400 4300
-Wire Wire Line
-	6400 4300 6400 5050
-Wire Wire Line
-	4600 2500 4600 3250
-Wire Wire Line
-	3200 1000 4600 1000
-Wire Wire Line
-	4450 2800 4450 3550
-Wire Wire Line
-	3200 1600 4450 1600
-Wire Wire Line
-	6250 2500 6250 3250
-Wire Wire Line
-	7650 1000 7750 1000
-Wire Wire Line
-	6400 2800 6400 3550
-Wire Wire Line
-	7650 1600 7750 1600
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=6/18/2019 5:42:19 PM
+update=6/9/2017 12:25:07 PM
 version=1
 last_client=kicad
 [general]
@@ -52,3 +52,11 @@ LabSize=60
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=OptoFast-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName7=opto
