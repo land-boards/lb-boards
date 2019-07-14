@@ -1,4 +1,4 @@
-update=10/21/2015 6:25:51 PM
+update=7/1/2019 2:17:42 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,16 +6,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/arduino
-LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/esp8266-esp-01
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -51,3 +41,6 @@ RptLab=1
 LabSize=60
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
