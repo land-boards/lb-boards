@@ -195,11 +195,29 @@ S 50 50 50 -50 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x02
+# RETRO-EP4CE6-rescue_CONN_6-conn
 #
-DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+DEF RETRO-EP4CE6-rescue_CONN_6-conn P 0 30 Y N 1 F N
+F0 "P" -50 0 60 V V C CNN
+F1 "RETRO-EP4CE6-rescue_CONN_6-conn" 50 0 60 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -100 300 100 -300 0 1 0 N
+X 1 1 -350 250 250 R 60 60 1 1 P I
+X 2 2 -350 150 250 R 60 60 1 1 P I
+X 3 3 -350 50 250 R 60 60 1 1 P I
+X 4 4 -350 -50 250 R 60 60 1 1 P I
+X 5 5 -350 -150 250 R 60 60 1 1 P I
+X 6 6 -350 -250 250 R 60 60 1 1 P I
+ENDDRAW
+ENDDEF
+#
+# RETRO-EP4CE6-rescue_Conn_01x02-Connector_Generic
+#
+DEF RETRO-EP4CE6-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
+F1 "RETRO-EP4CE6-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -214,11 +232,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_01x04
+# RETRO-EP4CE6-rescue_Conn_01x04-Connector_Generic
 #
-DEF Connector_Generic_Conn_01x04 J 0 40 Y N 1 F N
+DEF RETRO-EP4CE6-rescue_Conn_01x04-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x04" 0 -300 50 H V C CNN
+F1 "RETRO-EP4CE6-rescue_Conn_01x04-Connector_Generic" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -237,11 +255,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x12_Odd_Even
+# RETRO-EP4CE6-rescue_Conn_02x12_Odd_Even-Connector_Generic
 #
-DEF Connector_Generic_Conn_02x12_Odd_Even J 0 40 Y N 1 F N
+DEF RETRO-EP4CE6-rescue_Conn_02x12_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 600 50 H V C CNN
-F1 "Connector_Generic_Conn_02x12_Odd_Even" 50 -700 50 H V C CNN
+F1 "RETRO-EP4CE6-rescue_Conn_02x12_Odd_Even-Connector_Generic" 50 -700 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -300,11 +318,11 @@ X Pin_9 9 -200 100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x13_Odd_Even
+# RETRO-EP4CE6-rescue_Conn_02x13_Odd_Even-Connector_Generic
 #
-DEF Connector_Generic_Conn_02x13_Odd_Even J 0 40 Y N 1 F N
+DEF RETRO-EP4CE6-rescue_Conn_02x13_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 700 50 H V C CNN
-F1 "Connector_Generic_Conn_02x13_Odd_Even" 50 -700 50 H V C CNN
+F1 "RETRO-EP4CE6-rescue_Conn_02x13_Odd_Even-Connector_Generic" 50 -700 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -364,24 +382,6 @@ X Pin_6 6 300 400 150 L 50 50 1 1 P
 X Pin_7 7 -200 300 150 R 50 50 1 1 P
 X Pin_8 8 300 300 150 L 50 50 1 1 P
 X Pin_9 9 -200 200 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# RETRO-EP4CE6-rescue_CONN_6-conn
-#
-DEF RETRO-EP4CE6-rescue_CONN_6-conn P 0 30 Y N 1 F N
-F0 "P" -50 0 60 V V C CNN
-F1 "RETRO-EP4CE6-rescue_CONN_6-conn" 50 0 60 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -100 300 100 -300 0 1 0 N
-X 1 1 -350 250 250 R 60 60 1 1 P I
-X 2 2 -350 150 250 R 60 60 1 1 P I
-X 3 3 -350 50 250 R 60 60 1 1 P I
-X 4 4 -350 -50 250 R 60 60 1 1 P I
-X 5 5 -350 -150 250 R 60 60 1 1 P I
-X 6 6 -350 -250 250 R 60 60 1 1 P I
 ENDDRAW
 ENDDEF
 #

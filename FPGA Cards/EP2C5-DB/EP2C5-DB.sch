@@ -952,7 +952,7 @@ F 3 "" H 9050 6050 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	8150 6350 7550 6350
-Text Label 7650 6350 0    60   ~ 0
+Text Label 7600 6350 0    60   ~ 0
 P92
 Wire Wire Line
 	8150 5950 8050 5950
@@ -989,11 +989,11 @@ Wire Wire Line
 	7950 6050 7950 5550
 Wire Wire Line
 	8150 6150 7550 6150
-Text Label 7650 6150 0    60   ~ 0
+Text Label 7600 6150 0    60   ~ 0
 P94
 Wire Wire Line
 	8150 5750 7550 5750
-Text Label 7650 5750 0    60   ~ 0
+Text Label 7600 5750 0    60   ~ 0
 P97
 Text Notes 5850 6900 0    63   ~ 0
 DATA\nCLK\nVCC\nGND\n
@@ -1375,7 +1375,7 @@ Wire Wire Line
 	4850 2200 4850 2150
 Wire Wire Line
 	8150 5850 7550 5850
-Text Label 7650 5850 0    60   ~ 0
+Text Label 7600 5850 0    60   ~ 0
 P93
 Wire Wire Line
 	9950 6150 10100 6150
@@ -1723,7 +1723,7 @@ Text Notes 4800 5100 0    60   ~ 0
 Text Notes 4800 4900 0    60   ~ 0
 (VID)
 $Comp
-L Device:LED_ALT DS1
+L EP2C5-DB-rescue:LED_ALT-Device DS1
 U 1 1 5CAA4486
 P 7100 5850
 F 0 "DS1" V 7138 5732 50  0000 R CNN
@@ -1733,4 +1733,12 @@ F 3 "~" H 7100 5850 50  0001 C CNN
 	1    7100 5850
 	0    -1   -1   0   
 $EndComp
+Text Notes 7800 6350 0    50   ~ 0
+MISO
+Text Notes 7800 6150 0    50   ~ 0
+SCLK
+Text Notes 7800 5750 0    50   ~ 0
+SDCS
+Text Notes 7800 5850 0    50   ~ 0
+MOSI
 $EndSCHEMATC

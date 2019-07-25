@@ -1401,7 +1401,7 @@ Wire Wire Line
 Wire Wire Line
 	13650 5750 14750 5750
 $Comp
-L Connector_Generic:Conn_01x02 H1
+L RETRO-EP4CE6-rescue:Conn_01x02-Connector_Generic H1
 U 1 1 5CF16ADC
 P 13300 4550
 F 0 "H1" H 13220 4225 50  0000 C CNN
@@ -1455,7 +1455,7 @@ Wire Wire Line
 Wire Wire Line
 	13200 7700 13200 8200
 $Comp
-L Connector_Generic:Conn_01x04 J2
+L RETRO-EP4CE6-rescue:Conn_01x04-Connector_Generic J2
 U 1 1 5CA89AE4
 P 12150 7250
 F 0 "J2" V 12250 7400 50  0000 R CNN
@@ -1518,7 +1518,7 @@ Wire Wire Line
 Wire Wire Line
 	13200 8200 13650 8200
 $Comp
-L Connector_Generic:Conn_02x12_Odd_Even P4
+L RETRO-EP4CE6-rescue:Conn_02x12_Odd_Even-Connector_Generic P4
 U 1 1 5CDFF210
 P 8550 3950
 F 0 "P4" H 8600 4757 50  0000 C CNN
@@ -1589,7 +1589,7 @@ F 3 "" H 8100 1350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x13_Odd_Even P3
+L RETRO-EP4CE6-rescue:Conn_02x13_Odd_Even-Connector_Generic P3
 U 1 1 5CFCD9D8
 P 8550 2200
 F 0 "P3" H 8600 3107 50  0000 C CNN
@@ -1629,4 +1629,12 @@ Wire Wire Line
 Connection ~ 8100 2600
 Wire Wire Line
 	8100 2600 8100 1350
+Text Notes 2500 7550 0    50   ~ 0
+SDCS
+Text Notes 2500 7650 0    50   ~ 0
+MOSI
+Text Notes 2500 7950 0    50   ~ 0
+SCLK
+Text Notes 2500 8150 0    50   ~ 0
+MISO
 $EndSCHEMATC
