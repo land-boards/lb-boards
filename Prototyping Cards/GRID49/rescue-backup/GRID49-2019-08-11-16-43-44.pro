@@ -1,6 +1,6 @@
-update=8/11/2019 4:43:47 PM
+update=10/1/2016 8:57:18 PM
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -40,3 +40,8 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=GRID49-rescue
+LibName2=power
+LibName3=device
+LibName4=conn
