@@ -105,12 +105,12 @@ $EndComp
 $Comp
 L ESP32-Hub-rescue:+3V3-power #PWR08
 U 1 1 5C7574C1
-P 3950 2150
-F 0 "#PWR08" H 3950 2000 50  0001 C CNN
-F 1 "+3V3" H 3950 2290 50  0000 C CNN
-F 2 "" H 3950 2150 50  0001 C CNN
-F 3 "" H 3950 2150 50  0001 C CNN
-	1    3950 2150
+P 3950 1800
+F 0 "#PWR08" H 3950 1650 50  0001 C CNN
+F 1 "+3V3" H 3950 1940 50  0000 C CNN
+F 2 "" H 3950 1800 50  0001 C CNN
+F 3 "" H 3950 1800 50  0001 C CNN
+	1    3950 1800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -223,7 +223,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 900  2500 900 
 Wire Wire Line
-	3950 2250 3950 2150
+	3950 2250 3950 2100
 Wire Wire Line
 	2200 3500 2050 3500
 Wire Wire Line
@@ -1280,23 +1280,6 @@ Wire Wire Line
 Connection ~ 5700 3600
 Wire Wire Line
 	5700 3600 5700 3500
-Wire Wire Line
-	1700 3350 1700 3400
-Wire Wire Line
-	1700 3400 1450 3400
-Wire Wire Line
-	1450 3400 1450 3200
-$Comp
-L ESP32-Hub-rescue:+3V3-power #PWR0111
-U 1 1 5CF0CBA6
-P 1450 3200
-F 0 "#PWR0111" H 1450 3050 50  0001 C CNN
-F 1 "+3V3" H 1450 3340 50  0000 C CNN
-F 2 "" H 1450 3200 50  0001 C CNN
-F 3 "" H 1450 3200 50  0001 C CNN
-	1    1450 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L ESP32-Hub-rescue:Conn_02x03_Odd_Even-Connector_Generic P8
 U 1 1 5CF3D6BD
@@ -1690,17 +1673,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tca9544a.pdf" H 11200 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ESP32-Hub-rescue:Conn_01x03-Connector_Generic J16
-U 1 1 5C8756E6
-P 1800 3150
-F 0 "J16" V 1766 2962 50  0000 R CNN
-F 1 "Conn_01x03" V 1675 2962 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" V 1950 3100 30  0000 C CNN
-F 3 "~" H 1800 3150 50  0001 C CNN
-	1    1800 3150
-	0    -1   -1   0   
-$EndComp
-$Comp
 L ESP32-Hub-rescue:GND-power #PWR0115
 U 1 1 5C876212
 P 2050 4300
@@ -2011,4 +1983,28 @@ Wire Wire Line
 	14600 2600 15200 2600
 Wire Wire Line
 	14600 2600 14600 3300
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 5D5AF7EE
+P 3950 2000
+F 0 "F1" H 4018 2046 50  0000 L CNN
+F 1 "Polyfuse_Small" H 4018 1955 50  0000 L CNN
+F 2 "" H 4000 1800 50  0001 L CNN
+F 3 "~" H 3950 2000 50  0001 C CNN
+	1    3950 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1800 3950 1900
+$Comp
+L ESP32-Hub-rescue:Conn_01x02-Connector_Generic J16
+U 1 1 5D606844
+P 1900 3150
+F 0 "J16" V 2100 3150 50  0000 C CNN
+F 1 "Conn_01x02" V 2050 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" V 2000 3100 30  0000 C CNN
+F 3 "~" H 1900 3150 50  0001 C CNN
+	1    1900 3150
+	0    1    -1   0   
+$EndComp
 $EndSCHEMATC

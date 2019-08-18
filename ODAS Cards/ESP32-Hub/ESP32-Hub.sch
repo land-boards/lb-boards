@@ -1008,12 +1008,12 @@ $EndComp
 $Comp
 L ESP32-Hub-rescue:C-Device C6
 U 1 1 5CAFC0BA
-P 11650 9100
-F 0 "C6" H 11765 9191 50  0000 L CNN
-F 1 "0.1uF" H 11765 9100 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 11300 8850 30  0000 L CNN
-F 3 "~" H 11650 9100 50  0001 C CNN
-	1    11650 9100
+P 2450 3750
+F 0 "C6" H 2565 3841 50  0000 L CNN
+F 1 "0.1uF" H 2565 3750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2100 3500 30  0000 L CNN
+F 3 "~" H 2450 3750 50  0001 C CNN
+	1    2450 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1273,10 +1273,10 @@ F 3 "~" H 9900 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ESP32-Hub-rescue:R-Device R2
+L ESP32-Hub-rescue:R-Device R1
 U 1 1 5C87661F
 P 9700 2450
-F 0 "R2" H 9700 2600 50  0000 L CNN
+F 0 "R1" H 9700 2600 50  0000 L CNN
 F 1 "2.2K" V 9700 2350 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9630 2450 50  0001 C CNN
 F 3 "~" H 9700 2450 50  0001 C CNN
@@ -1284,10 +1284,10 @@ F 3 "~" H 9700 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ESP32-Hub-rescue:R-Device R1
+L ESP32-Hub-rescue:R-Device R2
 U 1 1 5C8766BF
 P 9500 2450
-F 0 "R1" H 9500 2600 50  0000 L CNN
+F 0 "R2" H 9500 2600 50  0000 L CNN
 F 1 "10K" V 9500 2350 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9430 2450 50  0001 C CNN
 F 3 "~" H 9500 2450 50  0001 C CNN
@@ -1761,8 +1761,6 @@ F 3 "~" H 6750 8650 50  0001 C CNN
 	1    6750 8650
 	1    0    0    -1  
 $EndComp
-Text Label 7500 3300 0    60   ~ 0
-GP23
 Wire Wire Line
 	7400 3300 8250 3300
 $Comp
@@ -1776,8 +1774,6 @@ F 3 "~" H 8450 3500 50  0001 C CNN
 	1    8450 3500
 	1    0    0    -1  
 $EndComp
-Text Label 10150 3000 0    60   ~ 0
-GP23
 Wire Wire Line
 	5200 9050 5900 9050
 Wire Wire Line
@@ -1826,11 +1822,11 @@ Wire Wire Line
 	2850 9150 3500 9150
 Wire Wire Line
 	2850 9250 3500 9250
-Text Label 3100 5700 0    50   ~ 0
+Text Label 2950 5700 0    50   ~ 0
 GP19
-Text Label 3100 5800 0    50   ~ 0
+Text Label 2950 5800 0    50   ~ 0
 GP18
-Text Label 4400 5800 0    50   ~ 0
+Text Label 4550 5800 0    50   ~ 0
 GP23
 Wire Wire Line
 	3050 7850 3500 7850
@@ -1948,4 +1944,34 @@ Wire Wire Line
 	15200 5000 12950 5000
 Wire Wire Line
 	12950 5000 12950 4000
+Text Notes 3250 5700 0    50   ~ 0
+MISO
+Text Notes 3250 5800 0    50   ~ 0
+SCK
+Text Notes 4250 5800 0    50   ~ 0
+MOSI
+Text Label 7500 3300 0    60   ~ 0
+GP5
+Text Label 10150 3000 0    60   ~ 0
+GP5
+$Comp
+L ESP32-Hub-rescue:GND-power #PWR0107
+U 1 1 5D61DAE9
+P 2450 3950
+F 0 "#PWR0107" H 2450 3700 50  0001 C CNN
+F 1 "GND" H 2450 3800 50  0000 C CNN
+F 2 "" H 2450 3950 60  0000 C CNN
+F 3 "" H 2450 3950 60  0000 C CNN
+	1    2450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3500 2450 3500
+Wire Wire Line
+	2450 3500 2450 3600
+Connection ~ 2100 3500
+Wire Wire Line
+	2450 3900 2450 3950
+Text Notes 8350 4200 0    100  ~ 20
+I2C BUS
 $EndSCHEMATC

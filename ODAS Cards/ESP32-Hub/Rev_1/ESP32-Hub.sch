@@ -1600,7 +1600,7 @@ U 1 1 5CD8F618
 P 15400 3000
 F 0 "J9" H 15480 3042 50  0000 L CNN
 F 1 "Conn_01x05" H 15480 2951 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 15400 3000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 15400 2700 30  0000 C CNN
 F 3 "~" H 15400 3000 50  0001 C CNN
 	1    15400 3000
 	1    0    0    -1  
