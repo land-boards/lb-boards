@@ -1,0 +1,23 @@
+(module DCJ-NEW-Slotted (layer F.Cu) (tedit 5D588C00)
+  (descr "DC Pwr, 2.1mm Jack")
+  (tags "DC Power jack, 2.1mm")
+  (fp_text reference J1 (at -0.0508 -6.05028) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.3175)))
+  )
+  (fp_text value DCJ0202 (at -6 0 90) (layer F.SilkS) hide
+    (effects (font (size 1.016 1.016) (thickness 0.254)))
+  )
+  (fp_line (start -4.2 4.5) (end -4.2 -4.5) (layer F.SilkS) (width 0.65))
+  (fp_line (start -7.5 -4.5) (end -7.5 4.5) (layer F.SilkS) (width 0.65))
+  (fp_line (start -7.5 -4.5) (end 6 -4.5) (layer F.SilkS) (width 0.65))
+  (fp_line (start 6 -4.5) (end 6 4.5) (layer F.SilkS) (width 0.65))
+  (fp_line (start -7.5 4.5) (end 6 4.5) (layer F.SilkS) (width 0.65))
+  (pad 2 thru_hole oval (at 0 0) (size 2 4.6) (drill oval 1 2.54) (layers *.Cu *.Mask F.SilkS))
+  (pad 1 thru_hole oval (at 6.1 0) (size 2 4.6) (drill oval 1 2.54) (layers *.Cu *.Mask F.SilkS))
+  (pad 3 thru_hole oval (at 3.2 4.6) (size 4.6 2) (drill oval 2.54 1) (layers *.Cu *.Mask F.SilkS))
+  (model connectors/POWER_21.wrl
+    (at (xyz 0 0 0))
+    (scale (xyz 0.8 0.8 0.8))
+    (rotate (xyz 0 0 0))
+  )
+)

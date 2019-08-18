@@ -1,31 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device_Polyfuse_Small
+# +3V3-power
 #
-DEF Device_Polyfuse_Small F 0 0 N Y 1 F N
-F0 "F" -75 0 50 V V C CNN
-F1 "Device_Polyfuse_Small" 75 0 50 V V C CNN
-F2 "" 50 -200 50 H I L CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *polyfuse*
- *PTC*
-$ENDFPLIST
-DRAW
-S -20 50 20 -50 0 1 0 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 -40 50 -40 30 40 -30 40 -50 N
-X ~ 1 0 100 25 D 50 50 1 1 P
-X ~ 2 0 -100 25 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# ESP32-Hub-rescue_+3V3-power
-#
-DEF ESP32-Hub-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+DEF +3V3-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "ESP32-Hub-rescue_+3V3-power" 0 140 50 H V C CNN
+F1 "+3V3-power" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -36,11 +16,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_+5V-power
+# +5V-power
 #
-DEF ESP32-Hub-rescue_+5V-power #PWR 0 0 Y Y 1 F P
+DEF +5V-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "ESP32-Hub-rescue_+5V-power" 0 140 50 H V C CNN
+F1 "+5V-power" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -51,11 +31,11 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_AP1117-LandBoards_Semis
+# AP1117-LandBoards_Semis
 #
-DEF ESP32-Hub-rescue_AP1117-LandBoards_Semis U 0 40 Y Y 1 F N
+DEF AP1117-LandBoards_Semis U 0 40 Y Y 1 F N
 F0 "U" 100 150 60 H V C CNN
-F1 "ESP32-Hub-rescue_AP1117-LandBoards_Semis" 250 -250 60 H V C CNN
+F1 "AP1117-LandBoards_Semis" 250 -250 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -67,11 +47,11 @@ X VO 4 500 0 300 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_C-Device
+# C-Device
 #
-DEF ESP32-Hub-rescue_C-Device C 0 10 N Y 1 F N
+DEF C-Device C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "ESP32-Hub-rescue_C-Device" 25 -100 50 H V L CNN
+F1 "C-Device" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -85,11 +65,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_COUPON-LandBoards
+# COUPON-LandBoards
 #
-DEF ESP32-Hub-rescue_COUPON-LandBoards COUP? 0 40 Y Y 1 F N
+DEF COUPON-LandBoards COUP? 0 40 Y Y 1 F N
 F0 "COUP?" 0 0 60 H V C CNN
-F1 "ESP32-Hub-rescue_COUPON-LandBoards" 0 0 60 H V C CNN
+F1 "COUPON-LandBoards" 0 0 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -97,11 +77,11 @@ S -200 0 200 250 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_01x02-Connector_Generic
+# Conn_01x02-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
+F1 "Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -116,11 +96,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_01x03-Connector_Generic
+# Conn_01x03-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_01x03-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_01x03-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_01x03-Connector_Generic" 0 -200 50 H V C CNN
+F1 "Conn_01x03-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -137,11 +117,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_01x05-Connector_Generic
+# Conn_01x05-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_01x05-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_01x05-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_01x05-Connector_Generic" 0 -300 50 H V C CNN
+F1 "Conn_01x05-Connector_Generic" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -162,11 +142,11 @@ X Pin_5 5 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_01x14-Connector_Generic
+# Conn_01x14-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_01x14-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_01x14-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 700 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_01x14-Connector_Generic" 0 -800 50 H V C CNN
+F1 "Conn_01x14-Connector_Generic" 0 -800 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -205,11 +185,11 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_02x03_Odd_Even-Connector_Generic
+# Conn_02x03_Odd_Even-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_02x03_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_02x03_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 200 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_02x03_Odd_Even-Connector_Generic" 50 -200 50 H V C CNN
+F1 "Conn_02x03_Odd_Even-Connector_Generic" 50 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -232,11 +212,11 @@ X Pin_6 6 300 -100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_02x08_Odd_Even-Connector_Generic
+# Conn_02x08_Odd_Even-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_02x08_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_02x08_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 400 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_02x08_Odd_Even-Connector_Generic" 50 -500 50 H V C CNN
+F1 "Conn_02x08_Odd_Even-Connector_Generic" 50 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -279,11 +259,11 @@ X Pin_9 9 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_Conn_02x14_Odd_Even-Connector_Generic
+# Conn_02x14_Odd_Even-Connector_Generic
 #
-DEF ESP32-Hub-rescue_Conn_02x14_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
+DEF Conn_02x14_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 700 50 H V C CNN
-F1 "ESP32-Hub-rescue_Conn_02x14_Odd_Even-Connector_Generic" 50 -800 50 H V C CNN
+F1 "Conn_02x14_Odd_Even-Connector_Generic" 50 -800 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -350,11 +330,11 @@ X Pin_9 9 -200 200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_DCJ0202-LandBoards_Conns
+# DCJ0202-LandBoards_Conns
 #
-DEF ESP32-Hub-rescue_DCJ0202-LandBoards_Conns J 0 40 Y Y 1 F N
+DEF DCJ0202-LandBoards_Conns J 0 40 Y Y 1 F N
 F0 "J" -100 150 50 H V L BNN
-F1 "ESP32-Hub-rescue_DCJ0202-LandBoards_Conns" -100 -250 50 H V L BNN
+F1 "DCJ0202-LandBoards_Conns" -100 -250 50 H V L BNN
 F2 "con-jack-DCJ0202" 0 150 50 H I C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -374,11 +354,11 @@ X 3 3 300 -100 100 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_ESP32-ESP32
+# ESP32-ESP32
 #
-DEF ESP32-Hub-rescue_ESP32-ESP32 U 0 40 Y Y 1 F N
+DEF ESP32-ESP32 U 0 40 Y Y 1 F N
 F0 "U" 0 950 50 H V C CNN
-F1 "ESP32-Hub-rescue_ESP32-ESP32" 300 -950 50 H V C CNN
+F1 "ESP32-ESP32" 300 -950 50 H V C CNN
 F2 "MODULE" 50 -850 50 H I C CNN
 F3 "DOCUMENTATION" 150 -900 50 H I C CNN
 DRAW
@@ -416,11 +396,11 @@ X GP18/SCK 9 850 -100 300 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_FTDI-LandBoards_Cards
+# FTDI-LandBoards_Cards
 #
-DEF ESP32-Hub-rescue_FTDI-LandBoards_Cards BRD 0 40 Y Y 1 F N
+DEF FTDI-LandBoards_Cards BRD 0 40 Y Y 1 F N
 F0 "BRD" 100 750 60 H V C CNN
-F1 "ESP32-Hub-rescue_FTDI-LandBoards_Cards" 100 -50 60 H V C CNN
+F1 "FTDI-LandBoards_Cards" 100 -50 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -436,11 +416,11 @@ X RTS 6 500 100 300 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_GND-power
+# GND-power
 #
-DEF ESP32-Hub-rescue_GND-power #PWR 0 0 Y Y 1 F P
+DEF GND-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "ESP32-Hub-rescue_GND-power" 0 -150 50 H V C CNN
+F1 "GND-power" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -449,11 +429,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_MTG_HOLE-LandBoards
+# MTG_HOLE-LandBoards
 #
-DEF ESP32-Hub-rescue_MTG_HOLE-LandBoards MTG? 0 40 Y Y 1 F N
+DEF MTG_HOLE-LandBoards MTG? 0 40 Y Y 1 F N
 F0 "MTG?" 0 100 60 H V C CNN
-F1 "ESP32-Hub-rescue_MTG_HOLE-LandBoards" 0 -100 60 H V C CNN
+F1 "MTG_HOLE-LandBoards" 0 -100 60 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -464,11 +444,11 @@ S 50 50 50 -50 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_R-Device
+# R-Device
 #
-DEF ESP32-Hub-rescue_R-Device R 0 0 N Y 1 F N
+DEF R-Device R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "ESP32-Hub-rescue_R-Device" 0 0 50 V V C CNN
+F1 "R-Device" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -481,11 +461,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# ESP32-Hub-rescue_TCA9544A-Interface_Expansion
+# TCA9544A-Interface_Expansion
 #
-DEF ESP32-Hub-rescue_TCA9544A-Interface_Expansion U 0 40 Y Y 1 F N
+DEF TCA9544A-Interface_Expansion U 0 40 Y Y 1 F N
 F0 "U" -200 800 50 H V L CNN
-F1 "ESP32-Hub-rescue_TCA9544A-Interface_Expansion" 100 800 50 H V L CNN
+F1 "TCA9544A-Interface_Expansion" 100 800 50 H V L CNN
 F2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" 1000 -900 50 H I C CNN
 F3 "" 50 250 50 H I C CNN
 $FPLIST
