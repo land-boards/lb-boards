@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "C:\\Users\\HPz420\\Documents\\GitHub\\lb-boards\\ODAS Cards\\ESP32-Hub\\ESP32-Hub.sch")
-    (date "8/18/2019 11:09:29 AM")
+    (source "C:\\Users\\dgilliland\\Documents\\GitHub\\lb-boards\\ODAS Cards\\ESP32-I2C-HUB\\ESP32-Hub.sch")
+    (date "8/19/2019 11:26:33 AM")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -108,14 +108,14 @@
       (libsource (lib ESP32-Hub-rescue) (part R-Device) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C87652B))
-    (comp (ref R2)
+    (comp (ref R1)
       (value 2.2K)
       (footprint Resistors_SMD:R_0805_HandSoldering)
       (datasheet ~)
       (libsource (lib ESP32-Hub-rescue) (part R-Device) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C87661F))
-    (comp (ref R1)
+    (comp (ref R2)
       (value 10K)
       (footprint Resistors_SMD:R_0805_HandSoldering)
       (datasheet ~)
@@ -306,7 +306,7 @@
       (tstamp 5C905C47))
     (comp (ref J1)
       (value DCJ0202)
-      (footprint LandBoards_Conns:DCJ-NEW)
+      (footprint LandBoards_Conns:DCJ-NEW-Slotted)
       (libsource (lib ESP32-Hub-rescue) (part DCJ0202-LandBoards_Conns) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5C9064A0))
@@ -368,7 +368,7 @@
       (value Polyfuse_Small)
       (footprint Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder)
       (datasheet ~)
-      (libsource (lib Device) (part Polyfuse_Small) (description "Resettable fuse, polymeric positive temperature coefficient, small symbol"))
+      (libsource (lib ESP32-Hub-rescue) (part Polyfuse_Small-Device) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5D5AF7EE))
     (comp (ref H2)
@@ -379,18 +379,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5D65D83A)))
   (libparts
-    (libpart (lib Device) (part Polyfuse_Small)
-      (description "Resettable fuse, polymeric positive temperature coefficient, small symbol")
-      (docs ~)
-      (footprints
-        (fp *polyfuse*)
-        (fp *PTC*))
-      (fields
-        (field (name Reference) F)
-        (field (name Value) Polyfuse_Small))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
     (libpart (lib ESP32-Hub-rescue) (part AP1117-LandBoards_Semis)
       (fields
         (field (name Reference) U)
@@ -597,6 +585,16 @@
       (fields
         (field (name Reference) MTG?)
         (field (name Value) MTG_HOLE-LandBoards)))
+    (libpart (lib ESP32-Hub-rescue) (part Polyfuse_Small-Device)
+      (footprints
+        (fp *polyfuse*)
+        (fp *PTC*))
+      (fields
+        (field (name Reference) F)
+        (field (name Value) Polyfuse_Small-Device))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
     (libpart (lib ESP32-Hub-rescue) (part R-Device)
       (footprints
         (fp R_*))
@@ -635,10 +633,8 @@
         (pin (num 19) (name SDA) (type BiDi))
         (pin (num 20) (name VCC) (type power_in)))))
   (libraries
-    (library (logical Device)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
     (library (logical ESP32-Hub-rescue)
-      (uri "C:\\Users\\HPz420\\Documents\\GitHub\\lb-boards\\ODAS Cards\\ESP32-Hub/ESP32-Hub-rescue.lib")))
+      (uri "C:\\Users\\dgilliland\\Documents\\GitHub\\lb-boards\\ODAS Cards\\ESP32-I2C-HUB/ESP32-Hub-rescue.lib")))
   (nets
     (net (code 1) (name "Net-(R16-Pad2)")
       (node (ref R16) (pin 2)))
@@ -716,9 +712,9 @@
       (node (ref P8) (pin 2))
       (node (ref U3) (pin 20))
       (node (ref R4) (pin 1))
-      (node (ref R1) (pin 1))
-      (node (ref R5) (pin 1))
       (node (ref R2) (pin 1))
+      (node (ref R5) (pin 1))
+      (node (ref R1) (pin 1))
       (node (ref R6) (pin 1))
       (node (ref R3) (pin 1))
       (node (ref F1) (pin 1))
@@ -832,7 +828,7 @@
       (node (ref U3) (pin 18))
       (node (ref P12) (pin 13))
       (node (ref J7) (pin 2))
-      (node (ref R1) (pin 2)))
+      (node (ref R2) (pin 2)))
     (net (code 38) (name /GP25)
       (node (ref P13) (pin 7))
       (node (ref U1) (pin 23)))
@@ -854,7 +850,7 @@
       (node (ref U1) (pin 11))
       (node (ref U3) (pin 19))
       (node (ref P12) (pin 10))
-      (node (ref R2) (pin 2)))
+      (node (ref R1) (pin 2)))
     (net (code 45) (name /INT1)
       (node (ref J10) (pin 5))
       (node (ref U3) (pin 7))
