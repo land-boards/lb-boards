@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:EPXX-GVS-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -1010,4 +1011,38 @@ F 3 "~" H 8700 1950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8700 1800 8700 1750
+Text Notes 1250 1550 2    63   ~ 0
+INT\nSCL\nSDA\nVCC\nGND
+Text Notes 1250 2600 2    63   ~ 0
+MISO\nVCC\nSCK\nMOSI\nSS\nGND
+Text Notes 3050 1400 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 3050 2300 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 3050 3200 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 3050 4100 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 3050 5100 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 1250 3850 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 4900 1500 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 4900 2400 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 4900 3350 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 4900 4250 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 4900 5150 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 3050 6000 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 1250 4750 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 1250 5650 2    63   ~ 0
+SIG\nVCC\nGND
+Text Notes 1250 6550 2    63   ~ 0
+SIG\nVCC\nGND
 $EndSCHEMATC
