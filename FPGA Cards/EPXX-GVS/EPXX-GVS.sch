@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_02x16_Odd_Even J18
+L EPXX-GVS-rescue:Conn_02x16_Odd_Even-Connector_Generic J18
 U 1 1 5D584ACE
 P 8050 3150
 F 0 "J18" H 8100 4067 50  0000 C CNN
@@ -42,7 +42,7 @@ Wire Wire Line
 Wire Wire Line
 	8450 3850 8450 4100
 $Comp
-L power:GND #PWR0101
+L EPXX-GVS-rescue:GND-power #PWR0101
 U 1 1 5D584C92
 P 7750 4100
 F 0 "#PWR0101" H 7750 3850 50  0001 C CNN
@@ -53,7 +53,7 @@ F 3 "" H 7750 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L EPXX-GVS-rescue:GND-power #PWR0102
 U 1 1 5D584CBE
 P 8450 4100
 F 0 "#PWR0102" H 8450 3850 50  0001 C CNN
@@ -64,7 +64,7 @@ F 3 "" H 8450 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0104
+L EPXX-GVS-rescue:+3.3V-power #PWR0104
 U 1 1 5D584D32
 P 8700 1750
 F 0 "#PWR0104" H 8700 1600 50  0001 C CNN
@@ -240,7 +240,7 @@ IO55
 Text Label 5550 4900 0    50   ~ 0
 IO88
 $Comp
-L Connector_Generic:Conn_01x05 I2C1
+L EPXX-GVS-rescue:Conn_01x05-Connector_Generic I2C1
 U 1 1 5D58C499
 P 1350 1300
 F 0 "I2C1" H 1270 823 50  0000 C CNN
@@ -255,7 +255,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 1400 1800 900 
 $Comp
-L power:+3.3V #PWR0105
+L EPXX-GVS-rescue:+3.3V-power #PWR0105
 U 1 1 5D5958FE
 P 1800 900
 F 0 "#PWR0105" H 1800 750 50  0001 C CNN
@@ -266,7 +266,7 @@ F 3 "" H 1800 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0106
+L EPXX-GVS-rescue:GND-power #PWR0106
 U 1 1 5D5959A5
 P 1700 1600
 F 0 "#PWR0106" H 1700 1350 50  0001 C CNN
@@ -283,7 +283,7 @@ Wire Wire Line
 Text Notes 1200 1750 0    125  ~ 25
 I2C
 $Comp
-L Connector_Generic:Conn_01x06 SPI1
+L EPXX-GVS-rescue:Conn_01x06-Connector_Generic SPI1
 U 1 1 5D59898D
 P 1350 2350
 F 0 "SPI1" H 1350 1850 50  0000 C CNN
@@ -296,7 +296,7 @@ $EndComp
 Text Notes 1200 2950 0    125  ~ 25
 SPI
 $Comp
-L power:GND #PWR0107
+L EPXX-GVS-rescue:GND-power #PWR0107
 U 1 1 5D598A82
 P 1700 2650
 F 0 "#PWR0107" H 1700 2400 50  0001 C CNN
@@ -316,7 +316,7 @@ Wire Wire Line
 	1800 2150 1550 2150
 Connection ~ 1800 1400
 $Comp
-L Connector_Generic:Conn_01x03 P39
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P39
 U 1 1 5D5A6465
 P 1350 3700
 F 0 "P39" H 1270 3323 50  0000 C CNN
@@ -329,7 +329,7 @@ $EndComp
 Text Notes 850  4100 0    125  ~ 25
 GVS-01
 $Comp
-L power:GND #PWR0108
+L EPXX-GVS-rescue:GND-power #PWR0108
 U 1 1 5D5AA207
 P 1700 3900
 F 0 "#PWR0108" H 1700 3650 50  0001 C CNN
@@ -348,7 +348,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 3700 1750 3450
 $Comp
-L power:+3.3V #PWR0109
+L EPXX-GVS-rescue:+3.3V-power #PWR0109
 U 1 1 5D5AE35B
 P 1750 3450
 F 0 "#PWR0109" H 1750 3300 50  0001 C CNN
@@ -363,7 +363,7 @@ Wire Wire Line
 Text Notes 850  5000 0    125  ~ 25
 GVS-02
 $Comp
-L power:GND #PWR0110
+L EPXX-GVS-rescue:GND-power #PWR0110
 U 1 1 5D5B267B
 P 1700 4800
 F 0 "#PWR0110" H 1700 4550 50  0001 C CNN
@@ -382,7 +382,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 4600 1750 4350
 $Comp
-L power:+3.3V #PWR0111
+L EPXX-GVS-rescue:+3.3V-power #PWR0111
 U 1 1 5D5B2685
 P 1750 4350
 F 0 "#PWR0111" H 1750 4200 50  0001 C CNN
@@ -397,7 +397,7 @@ Wire Wire Line
 Text Notes 850  5900 0    125  ~ 25
 GVS-03
 $Comp
-L power:GND #PWR0112
+L EPXX-GVS-rescue:GND-power #PWR0112
 U 1 1 5D5B4C6B
 P 1700 5700
 F 0 "#PWR0112" H 1700 5450 50  0001 C CNN
@@ -416,7 +416,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 5500 1750 5250
 $Comp
-L power:+3.3V #PWR0113
+L EPXX-GVS-rescue:+3.3V-power #PWR0113
 U 1 1 5D5B4C75
 P 1750 5250
 F 0 "#PWR0113" H 1750 5100 50  0001 C CNN
@@ -431,7 +431,7 @@ Wire Wire Line
 Text Notes 850  6800 0    125  ~ 25
 GVS-04
 $Comp
-L power:GND #PWR0114
+L EPXX-GVS-rescue:GND-power #PWR0114
 U 1 1 5D5B4C83
 P 1700 6600
 F 0 "#PWR0114" H 1700 6350 50  0001 C CNN
@@ -450,7 +450,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 6400 1750 6150
 $Comp
-L power:+3.3V #PWR0115
+L EPXX-GVS-rescue:+3.3V-power #PWR0115
 U 1 1 5D5B4C8D
 P 1750 6150
 F 0 "#PWR0115" H 1750 6000 50  0001 C CNN
@@ -465,7 +465,7 @@ Wire Wire Line
 Text Notes 2650 1650 0    125  ~ 25
 GVS-05
 $Comp
-L power:GND #PWR0116
+L EPXX-GVS-rescue:GND-power #PWR0116
 U 1 1 5D5B7B8D
 P 3500 1450
 F 0 "#PWR0116" H 3500 1200 50  0001 C CNN
@@ -484,7 +484,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 1250 3550 1000
 $Comp
-L power:+3.3V #PWR0117
+L EPXX-GVS-rescue:+3.3V-power #PWR0117
 U 1 1 5D5B7B97
 P 3550 1000
 F 0 "#PWR0117" H 3550 850 50  0001 C CNN
@@ -499,7 +499,7 @@ Wire Wire Line
 Text Notes 2650 2550 0    125  ~ 25
 GVS-06
 $Comp
-L power:GND #PWR0118
+L EPXX-GVS-rescue:GND-power #PWR0118
 U 1 1 5D5B7BA5
 P 3500 2350
 F 0 "#PWR0118" H 3500 2100 50  0001 C CNN
@@ -518,7 +518,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 2150 3550 1900
 $Comp
-L power:+3.3V #PWR0119
+L EPXX-GVS-rescue:+3.3V-power #PWR0119
 U 1 1 5D5B7BAF
 P 3550 1900
 F 0 "#PWR0119" H 3550 1750 50  0001 C CNN
@@ -533,7 +533,7 @@ Wire Wire Line
 Text Notes 2650 3450 0    125  ~ 25
 GVS-07
 $Comp
-L power:GND #PWR0120
+L EPXX-GVS-rescue:GND-power #PWR0120
 U 1 1 5D5B7BBD
 P 3500 3250
 F 0 "#PWR0120" H 3500 3000 50  0001 C CNN
@@ -552,7 +552,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 3050 3550 2800
 $Comp
-L power:+3.3V #PWR0121
+L EPXX-GVS-rescue:+3.3V-power #PWR0121
 U 1 1 5D5B7BC7
 P 3550 2800
 F 0 "#PWR0121" H 3550 2650 50  0001 C CNN
@@ -567,7 +567,7 @@ Wire Wire Line
 Text Notes 2650 4350 0    125  ~ 25
 GVS-08
 $Comp
-L power:GND #PWR0122
+L EPXX-GVS-rescue:GND-power #PWR0122
 U 1 1 5D5B7BD5
 P 3500 4150
 F 0 "#PWR0122" H 3500 3900 50  0001 C CNN
@@ -586,7 +586,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 3950 3550 3700
 $Comp
-L power:+3.3V #PWR0123
+L EPXX-GVS-rescue:+3.3V-power #PWR0123
 U 1 1 5D5B7BDF
 P 3550 3700
 F 0 "#PWR0123" H 3550 3550 50  0001 C CNN
@@ -601,7 +601,7 @@ Wire Wire Line
 Text Notes 2650 5350 0    125  ~ 25
 GVS-09
 $Comp
-L power:GND #PWR0124
+L EPXX-GVS-rescue:GND-power #PWR0124
 U 1 1 5D5C40BF
 P 3500 5150
 F 0 "#PWR0124" H 3500 4900 50  0001 C CNN
@@ -620,7 +620,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 4950 3550 4700
 $Comp
-L power:+3.3V #PWR0125
+L EPXX-GVS-rescue:+3.3V-power #PWR0125
 U 1 1 5D5C40C9
 P 3550 4700
 F 0 "#PWR0125" H 3550 4550 50  0001 C CNN
@@ -635,7 +635,7 @@ Wire Wire Line
 Text Notes 2650 6250 0    125  ~ 25
 GVS-10
 $Comp
-L power:GND #PWR0126
+L EPXX-GVS-rescue:GND-power #PWR0126
 U 1 1 5D5C40D7
 P 3500 6050
 F 0 "#PWR0126" H 3500 5800 50  0001 C CNN
@@ -654,7 +654,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 5850 3550 5600
 $Comp
-L power:+3.3V #PWR0127
+L EPXX-GVS-rescue:+3.3V-power #PWR0127
 U 1 1 5D5C40E1
 P 3550 5600
 F 0 "#PWR0127" H 3550 5450 50  0001 C CNN
@@ -669,7 +669,7 @@ Wire Wire Line
 Text Notes 4500 1750 0    125  ~ 25
 GVS-11
 $Comp
-L power:GND #PWR0128
+L EPXX-GVS-rescue:GND-power #PWR0128
 U 1 1 5D5C40EF
 P 5350 1550
 F 0 "#PWR0128" H 5350 1300 50  0001 C CNN
@@ -688,7 +688,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 1350 5400 1100
 $Comp
-L power:+3.3V #PWR0129
+L EPXX-GVS-rescue:+3.3V-power #PWR0129
 U 1 1 5D5C40F9
 P 5400 1100
 F 0 "#PWR0129" H 5400 950 50  0001 C CNN
@@ -703,7 +703,7 @@ Wire Wire Line
 Text Notes 4500 2650 0    125  ~ 25
 GVS-12
 $Comp
-L power:GND #PWR0130
+L EPXX-GVS-rescue:GND-power #PWR0130
 U 1 1 5D5C4107
 P 5350 2450
 F 0 "#PWR0130" H 5350 2200 50  0001 C CNN
@@ -722,7 +722,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 2250 5400 2000
 $Comp
-L power:+3.3V #PWR0131
+L EPXX-GVS-rescue:+3.3V-power #PWR0131
 U 1 1 5D5C4111
 P 5400 2000
 F 0 "#PWR0131" H 5400 1850 50  0001 C CNN
@@ -737,7 +737,7 @@ Wire Wire Line
 Text Notes 4500 3600 0    125  ~ 25
 GVS-13
 $Comp
-L power:GND #PWR0132
+L EPXX-GVS-rescue:GND-power #PWR0132
 U 1 1 5D5C411F
 P 5350 3400
 F 0 "#PWR0132" H 5350 3150 50  0001 C CNN
@@ -756,7 +756,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 3200 5400 2950
 $Comp
-L power:+3.3V #PWR0133
+L EPXX-GVS-rescue:+3.3V-power #PWR0133
 U 1 1 5D5C4129
 P 5400 2950
 F 0 "#PWR0133" H 5400 2800 50  0001 C CNN
@@ -771,7 +771,7 @@ Wire Wire Line
 Text Notes 4500 4500 0    125  ~ 25
 CLK-1
 $Comp
-L power:GND #PWR0134
+L EPXX-GVS-rescue:GND-power #PWR0134
 U 1 1 5D5C4137
 P 5350 4300
 F 0 "#PWR0134" H 5350 4050 50  0001 C CNN
@@ -790,7 +790,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 4100 5400 3850
 $Comp
-L power:+3.3V #PWR0135
+L EPXX-GVS-rescue:+3.3V-power #PWR0135
 U 1 1 5D5C4141
 P 5400 3850
 F 0 "#PWR0135" H 5400 3700 50  0001 C CNN
@@ -805,7 +805,7 @@ Wire Wire Line
 Text Notes 4500 5400 0    125  ~ 25
 CLK-2
 $Comp
-L power:GND #PWR0136
+L EPXX-GVS-rescue:GND-power #PWR0136
 U 1 1 5D5C414F
 P 5350 5200
 F 0 "#PWR0136" H 5350 4950 50  0001 C CNN
@@ -824,7 +824,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 5000 5400 4750
 $Comp
-L power:+3.3V #PWR0137
+L EPXX-GVS-rescue:+3.3V-power #PWR0137
 U 1 1 5D5C4159
 P 5400 4750
 F 0 "#PWR0137" H 5400 4600 50  0001 C CNN
@@ -835,7 +835,7 @@ F 3 "" H 5400 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P42
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P42
 U 1 1 5D5FE6F9
 P 1350 4600
 F 0 "P42" H 1270 4223 50  0000 C CNN
@@ -846,7 +846,7 @@ F 3 "~" H 1350 4600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P43
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P43
 U 1 1 5D5FE735
 P 1350 5500
 F 0 "P43" H 1270 5123 50  0000 C CNN
@@ -857,7 +857,7 @@ F 3 "~" H 1350 5500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P54
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P54
 U 1 1 5D5FE761
 P 3150 5850
 F 0 "P54" H 3070 5473 50  0000 C CNN
@@ -868,7 +868,7 @@ F 3 "~" H 3150 5850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P51
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P51
 U 1 1 5D5FE791
 P 3150 4950
 F 0 "P51" H 3070 4573 50  0000 C CNN
@@ -879,7 +879,7 @@ F 3 "~" H 3150 4950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P52
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P52
 U 1 1 5D5FE7BF
 P 3150 3950
 F 0 "P52" H 3070 3573 50  0000 C CNN
@@ -890,7 +890,7 @@ F 3 "~" H 3150 3950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P55
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P55
 U 1 1 5D5FE7ED
 P 5000 3200
 F 0 "P55" H 4920 2823 50  0000 C CNN
@@ -901,7 +901,7 @@ F 3 "~" H 5000 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P58
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P58
 U 1 1 5D5FE837
 P 5000 2250
 F 0 "P58" H 4920 1873 50  0000 C CNN
@@ -912,7 +912,7 @@ F 3 "~" H 5000 2250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P50
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P50
 U 1 1 5D5FE86F
 P 3150 3050
 F 0 "P50" H 3070 2673 50  0000 C CNN
@@ -923,7 +923,7 @@ F 3 "~" H 3150 3050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P89
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P89
 U 1 1 5D5FE8AF
 P 5000 4100
 F 0 "P89" H 4920 3723 50  0000 C CNN
@@ -934,7 +934,7 @@ F 3 "~" H 5000 4100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P88
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P88
 U 1 1 5D5FE8F1
 P 5000 5000
 F 0 "P88" H 4920 4623 50  0000 C CNN
@@ -945,7 +945,7 @@ F 3 "~" H 5000 5000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P53
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P53
 U 1 1 5D5FE92F
 P 5000 1350
 F 0 "P53" H 4920 973 50  0000 C CNN
@@ -956,7 +956,7 @@ F 3 "~" H 5000 1350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P44
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P44
 U 1 1 5D5FE9C0
 P 1350 6400
 F 0 "P44" H 1270 6023 50  0000 C CNN
@@ -967,7 +967,7 @@ F 3 "~" H 1350 6400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P49
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P49
 U 1 1 5D5FEA7C
 P 3150 2150
 F 0 "P49" H 3070 1773 50  0000 C CNN
@@ -978,7 +978,7 @@ F 3 "~" H 3150 2150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 P46
+L EPXX-GVS-rescue:Conn_01x03-Connector_Generic P46
 U 1 1 5D5FEABE
 P 3150 1250
 F 0 "P46" H 3070 873 50  0000 C CNN
@@ -999,7 +999,7 @@ Wire Wire Line
 	8700 2150 8700 2100
 Connection ~ 8700 2150
 $Comp
-L Device:Polyfuse F1
+L EPXX-GVS-rescue:Polyfuse-Device F1
 U 1 1 5D63BCA5
 P 8700 1950
 F 0 "F1" H 8788 1996 50  0000 L CNN

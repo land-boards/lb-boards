@@ -1,26 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# EPXX-GVS-rescue_+3.3V-power
+# Connector_Generic_Conn_01x03
 #
-DEF EPXX-GVS-rescue_+3.3V-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "EPXX-GVS-rescue_+3.3V-power" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# EPXX-GVS-rescue_Conn_01x03-Connector_Generic
-#
-DEF EPXX-GVS-rescue_Conn_01x03-Connector_Generic J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "EPXX-GVS-rescue_Conn_01x03-Connector_Generic" 0 -200 50 H V C CNN
+F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -37,11 +22,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# EPXX-GVS-rescue_Conn_01x05-Connector_Generic
+# Connector_Generic_Conn_01x05
 #
-DEF EPXX-GVS-rescue_Conn_01x05-Connector_Generic J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x05 J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "EPXX-GVS-rescue_Conn_01x05-Connector_Generic" 0 -300 50 H V C CNN
+F1 "Connector_Generic_Conn_01x05" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -62,11 +47,11 @@ X Pin_5 5 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# EPXX-GVS-rescue_Conn_01x06-Connector_Generic
+# Connector_Generic_Conn_01x06
 #
-DEF EPXX-GVS-rescue_Conn_01x06-Connector_Generic J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_01x06 J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "EPXX-GVS-rescue_Conn_01x06-Connector_Generic" 0 -400 50 H V C CNN
+F1 "Connector_Generic_Conn_01x06" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -89,11 +74,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# EPXX-GVS-rescue_Conn_02x16_Odd_Even-Connector_Generic
+# Connector_Generic_Conn_02x16_Odd_Even
 #
-DEF EPXX-GVS-rescue_Conn_02x16_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
+DEF Connector_Generic_Conn_02x16_Odd_Even J 0 40 Y N 1 F N
 F0 "J" 50 800 50 H V C CNN
-F1 "EPXX-GVS-rescue_Conn_02x16_Odd_Even-Connector_Generic" 50 -900 50 H V C CNN
+F1 "Connector_Generic_Conn_02x16_Odd_Even" 50 -900 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -168,24 +153,11 @@ X Pin_9 9 -200 300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# EPXX-GVS-rescue_GND-power
+# Device_Polyfuse
 #
-DEF EPXX-GVS-rescue_GND-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "EPXX-GVS-rescue_GND-power" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# EPXX-GVS-rescue_Polyfuse-Device
-#
-DEF EPXX-GVS-rescue_Polyfuse-Device F 0 0 N Y 1 F N
+DEF Device_Polyfuse F 0 0 N Y 1 F N
 F0 "F" -100 0 50 V V C CNN
-F1 "EPXX-GVS-rescue_Polyfuse-Device" 100 0 50 V V C CNN
+F1 "Device_Polyfuse" 100 0 50 V V C CNN
 F2 "" 50 -200 50 H I L CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -198,6 +170,35 @@ P 2 0 1 0 0 100 0 -100 N
 P 4 0 1 0 -60 100 -60 60 60 -60 60 -100 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_+3.3V
+#
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS +3.3V
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
