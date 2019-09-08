@@ -1,4 +1,4 @@
-update=9/7/2019 1:57:06 PM
+update=6/26/2017 3:08:37 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -29,13 +29,12 @@ ModuleOutlineThickness=0.15
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
+[eeschema/libraries]
+LibName1=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis
+LibName2=ODAS-PSOC5-rescue
+LibName3=power
+LibName4=device
+LibName5=transistors
+LibName6=conn
+LibName7=linear
+LibName8=74xx
