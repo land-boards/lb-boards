@@ -26,17 +26,6 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/icl3/icl3221-22-23-3
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x06 J1
-U 1 1 5D728689
-P 2050 3850
-F 0 "J1" H 1970 4267 50  0000 C CNN
-F 1 "Conn_01x06" H 1970 4176 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 2050 3200 50  0000 C CNN
-F 3 "~" H 2050 3850 50  0001 C CNN
-	1    2050 3850
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C1
 U 1 1 5D728776
 P 3500 2800
@@ -119,30 +108,6 @@ Wire Wire Line
 	4650 2350 4650 2100
 Wire Wire Line
 	4650 2100 2500 2100
-Wire Wire Line
-	2500 2100 2500 3650
-Wire Wire Line
-	2500 3650 2250 3650
-Wire Wire Line
-	2250 3750 3050 3750
-Wire Wire Line
-	3050 3750 3050 3650
-Wire Wire Line
-	3050 3650 3850 3650
-Wire Wire Line
-	2250 3850 3850 3850
-Wire Wire Line
-	2250 3950 3550 3950
-Wire Wire Line
-	3550 3950 3550 4050
-Wire Wire Line
-	3550 4050 3850 4050
-Wire Wire Line
-	2250 4050 3450 4050
-Wire Wire Line
-	3450 4050 3450 4250
-Wire Wire Line
-	3450 4250 3850 4250
 $Comp
 L Device:C_Small C2
 U 1 1 5D728CCE
@@ -177,10 +142,10 @@ F 3 "~" H 5700 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:DB9_Male_MountingHoles J2
+L Connector:DB9_Male_MountingHoles J1
 U 1 1 5D729312
 P 7550 4000
-F 0 "J2" H 7730 4033 50  0000 L CNN
+F 0 "J1" H 7730 4033 50  0000 L CNN
 F 1 "DB9_Male_MountingHoles" H 7730 3942 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 7730 3866 30  0000 L CNN
 F 3 " ~" H 7550 4000 50  0001 C CNN
@@ -228,4 +193,35 @@ Wire Wire Line
 	6800 3900 7250 3900
 Text Label 3400 2100 0    50   ~ 0
 VCC
+$Comp
+L LandBoards_Cards:FTDI-Slave H1
+U 1 1 5D75A367
+P 1800 3900
+F 0 "H1" H 1644 3207 60  0000 C CNN
+F 1 "FTDI-Slave" H 1644 3313 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 1644 3419 60  0000 C CNN
+F 3 "" H 1850 3550 60  0000 C CNN
+	1    1800 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 2100 2500 3950
+Wire Wire Line
+	2500 3950 2250 3950
+Wire Wire Line
+	3850 4050 2650 4050
+Wire Wire Line
+	2650 4050 2650 3750
+Wire Wire Line
+	2650 3750 2250 3750
+Wire Wire Line
+	3850 4250 2500 4250
+Wire Wire Line
+	2500 4250 2500 4050
+Wire Wire Line
+	2500 4050 2250 4050
+Wire Wire Line
+	3850 3850 2250 3850
+Wire Wire Line
+	2250 3650 3850 3650
 $EndSCHEMATC

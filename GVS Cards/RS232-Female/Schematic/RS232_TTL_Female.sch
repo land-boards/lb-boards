@@ -26,21 +26,10 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/icl3/icl3221-22-23-3
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x06 J1
-U 1 1 5D728689
-P 3000 3450
-F 0 "J1" H 2920 3867 50  0000 C CNN
-F 1 "Conn_01x06" H 2920 3776 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 3000 3450 50  0001 C CNN
-F 3 "~" H 3000 3450 50  0001 C CNN
-	1    3000 3450
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:DB9_Female_MountingHoles J2
+L Connector:DB9_Female_MountingHoles J1
 U 1 1 5D72871A
 P 8650 3450
-F 0 "J2" H 8830 3453 50  0000 L CNN
+F 0 "J1" H 8830 3453 50  0000 L CNN
 F 1 "DB9_Female_MountingHoles" H 8830 3362 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 8650 3450 50  0001 C CNN
 F 3 " ~" H 8650 3450 50  0001 C CNN
@@ -75,15 +64,15 @@ Wire Wire Line
 Wire Wire Line
 	6600 2250 6600 2300
 Wire Wire Line
-	6400 2750 6550 2750
+	6400 2750 6450 2750
 Wire Wire Line
-	6400 3050 6550 3050
+	6400 3050 6450 3050
 Wire Wire Line
-	6750 2750 6900 2750
+	6650 2750 6900 2750
 Wire Wire Line
 	6900 2750 6900 3050
 Wire Wire Line
-	6750 3050 6900 3050
+	6650 3050 6900 3050
 Connection ~ 6900 3050
 Wire Wire Line
 	6900 3050 6900 3950
@@ -111,49 +100,21 @@ F 3 "" H 5600 4400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5600 4350 5600 4400
-Wire Wire Line
-	3200 3750 3300 3750
-Wire Wire Line
-	3300 3750 3300 3850
 $Comp
 L power:GND #PWR01
 U 1 1 5D728DF8
-P 3300 3850
-F 0 "#PWR01" H 3300 3600 50  0001 C CNN
-F 1 "GND" H 3305 3677 50  0000 C CNN
-F 2 "" H 3300 3850 50  0001 C CNN
-F 3 "" H 3300 3850 50  0001 C CNN
-	1    3300 3850
+P 3000 3950
+F 0 "#PWR01" H 3000 3700 50  0001 C CNN
+F 1 "GND" H 3005 3777 50  0000 C CNN
+F 2 "" H 3000 3950 50  0001 C CNN
+F 3 "" H 3000 3950 50  0001 C CNN
+	1    3000 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5600 1950 5600 1700
 Wire Wire Line
 	5600 1700 3450 1700
-Wire Wire Line
-	3450 1700 3450 3250
-Wire Wire Line
-	3450 3250 3200 3250
-Wire Wire Line
-	3200 3350 4000 3350
-Wire Wire Line
-	4000 3350 4000 3250
-Wire Wire Line
-	4000 3250 4800 3250
-Wire Wire Line
-	3200 3450 4800 3450
-Wire Wire Line
-	3200 3550 4500 3550
-Wire Wire Line
-	4500 3550 4500 3650
-Wire Wire Line
-	4500 3650 4800 3650
-Wire Wire Line
-	3200 3650 4400 3650
-Wire Wire Line
-	4400 3650 4400 3850
-Wire Wire Line
-	4400 3850 4800 3850
 $Comp
 L Device:C_Small C2
 U 1 1 5D728CCE
@@ -168,23 +129,23 @@ $EndComp
 $Comp
 L Device:C_Small C3
 U 1 1 5D728CF8
-P 6650 2750
-F 0 "C3" H 6742 2796 50  0000 L CNN
-F 1 "0.1uF" H 6742 2705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6650 2500 30  0000 C CNN
-F 3 "~" H 6650 2750 50  0001 C CNN
-	1    6650 2750
+P 6550 2750
+F 0 "C3" V 6500 2800 50  0000 L CNN
+F 1 "0.1uF" V 6600 2800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 2500 30  0000 C CNN
+F 3 "~" H 6550 2750 50  0001 C CNN
+	1    6550 2750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C4
 U 1 1 5D728D2A
-P 6650 3050
-F 0 "C4" H 6742 3096 50  0000 L CNN
-F 1 "0.1uF" H 6742 3005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6650 2800 30  0000 C CNN
-F 3 "~" H 6650 3050 50  0001 C CNN
-	1    6650 3050
+P 6550 3050
+F 0 "C4" V 6500 3100 50  0000 L CNN
+F 1 "0.1uF" V 6600 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 2800 30  0000 C CNN
+F 3 "~" H 6550 3050 50  0001 C CNN
+	1    6550 3050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -233,4 +194,47 @@ Wire Wire Line
 	8350 3350 7950 3350
 Wire Wire Line
 	7950 3350 7950 3850
+$Comp
+L LandBoards_Cards:FTDI-Slave H1
+U 1 1 5D75AD29
+P 2450 3600
+F 0 "H1" H 2294 3013 60  0000 C CNN
+F 1 "FTDI-Slave" H 2294 3119 60  0000 C CNN
+F 2 "" H 2500 3250 60  0000 C CNN
+F 3 "" H 2500 3250 60  0000 C CNN
+	1    2450 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 3850 3000 3850
+Wire Wire Line
+	3000 3850 3000 3950
+Wire Wire Line
+	3450 1700 3450 3650
+Wire Wire Line
+	3450 3650 2900 3650
+Wire Wire Line
+	2900 3750 3450 3750
+Wire Wire Line
+	3450 3750 3450 3850
+Wire Wire Line
+	3450 3850 4800 3850
+Wire Wire Line
+	2900 3450 3650 3450
+Wire Wire Line
+	3650 3450 3650 3650
+Wire Wire Line
+	3650 3650 4800 3650
+Wire Wire Line
+	2900 3550 3550 3550
+Wire Wire Line
+	3550 3550 3550 3250
+Wire Wire Line
+	3550 3250 4800 3250
+Wire Wire Line
+	3750 3350 3750 3450
+Wire Wire Line
+	3750 3450 4800 3450
+Wire Wire Line
+	2900 3350 3750 3350
 $EndSCHEMATC
