@@ -1591,4 +1591,6 @@ $EndComp
 Connection ~ 9200 1850
 Wire Wire Line
 	9200 1850 9650 1850
+Text Notes 1050 2450 0    60   ~ 0
+MISSING IO_22 on PSoC
 $EndSCHEMATC
