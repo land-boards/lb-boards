@@ -458,7 +458,6 @@ Text Label 2900 6400 0    60   ~ 0
 P82
 Text Label 4400 6400 0    60   ~ 0
 P83
-NoConn ~ 9100 4650
 NoConn ~ 9100 3050
 NoConn ~ 11650 4750
 NoConn ~ 11650 4850
@@ -1637,4 +1636,8 @@ Text Notes 12650 5450 0    60   ~ 0
 IO_0
 Text Notes 12650 5550 0    60   ~ 0
 IO_1
+Text Label 8350 4650 0    60   ~ 0
+IO_22
+Wire Wire Line
+	9100 4650 8150 4650
 $EndSCHEMATC
