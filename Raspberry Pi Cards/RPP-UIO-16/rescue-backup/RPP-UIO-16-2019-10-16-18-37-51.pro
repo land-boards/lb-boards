@@ -1,4 +1,4 @@
-update=10/16/2019 6:37:56 PM
+update=5/26/2015 7:58:28 PM
 version=1
 last_client=kicad
 [general]
@@ -39,6 +39,15 @@ LibName7=smd_transistors
 LibName8=libcms
 LibName9=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 LibName10=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -52,6 +61,3 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[eeschema]
-version=1
-LibDir=
