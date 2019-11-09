@@ -1,4 +1,4 @@
-update=11/7/2016 11:55:44 AM
+update=11/8/2019 5:45:00 PM
 version=1
 last_client=kicad
 [general]
@@ -42,12 +42,3 @@ EquName1=devcms
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=linear
-LibName6=regul
-LibName7=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName8=74xx
