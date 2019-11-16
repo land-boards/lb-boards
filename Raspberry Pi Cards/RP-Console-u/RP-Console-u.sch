@@ -1,11 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:RP-Console-u-rescue
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:atmel
+EESchema Schematic File Version 4
 LIBS:RP-Console-u-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -22,7 +17,7 @@ $EndDescr
 Text Label 2250 3200 0    60   ~ 0
 GND
 $Comp
-L COUPON COUP?2
+L RP-Console-u-rescue:COUPON COUP?2
 U 1 1 53B1CE77
 P 900 7250
 F 0 "COUP?2" H 900 7250 60  0000 C CNN
@@ -33,7 +28,7 @@ F 3 "~" H 900 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L COUPON COUP?1
+L RP-Console-u-rescue:COUPON COUP?1
 U 1 1 53B1CE86
 P 900 7700
 F 0 "COUP?1" H 900 7700 60  0000 C CNN
@@ -52,13 +47,13 @@ Wire Wire Line
 Wire Wire Line
 	1700 2000 1500 2000
 Wire Wire Line
-	1500 2000 1500 3200
+	1500 2000 1500 2800
 Wire Wire Line
 	1500 2800 1700 2800
 Wire Wire Line
 	1500 3200 3200 3200
 Wire Wire Line
-	3200 3200 3200 1800
+	3200 3200 3200 2500
 Wire Wire Line
 	3200 1800 3100 1800
 Connection ~ 1500 2800
@@ -73,10 +68,10 @@ Wire Wire Line
 Wire Wire Line
 	3200 1700 3200 1600
 Wire Wire Line
-	3100 1600 4550 1600
+	3100 1600 3200 1600
 Connection ~ 3200 1600
 $Comp
-L CONN_1 FID1
+L RP-Console-u-rescue:CONN_1 FID1
 U 1 1 53F2073B
 P 900 6650
 F 0 "FID1" H 980 6650 40  0000 L CNN
@@ -87,7 +82,7 @@ F 3 "" H 900 6650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 FID2
+L RP-Console-u-rescue:CONN_1 FID2
 U 1 1 53F2074A
 P 900 6750
 F 0 "FID2" H 980 6750 40  0000 L CNN
@@ -129,7 +124,7 @@ Wire Wire Line
 	9000 2200 8000 2200
 Connection ~ 7450 1550
 Wire Wire Line
-	4750 1550 8300 1550
+	4750 1550 5600 1550
 Wire Wire Line
 	6300 2800 6300 1450
 Connection ~ 5950 1550
@@ -183,7 +178,7 @@ PI2USB
 Text Label 8600 2100 0    60   ~ 0
 USB2PI
 $Comp
-L R R2
+L RP-Console-u-rescue:R R2
 U 1 1 54848958
 P 8650 2800
 F 0 "R2" V 8730 2800 50  0000 C CNN
@@ -194,7 +189,7 @@ F 3 "" H 8650 2800 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R1
+L RP-Console-u-rescue:R R1
 U 1 1 54848962
 P 8650 2550
 F 0 "R1" V 8730 2550 50  0000 C CNN
@@ -215,7 +210,7 @@ Text Label 6500 1550 0    60   ~ 0
 Text Label 6500 1450 0    60   ~ 0
 +3.3V-USB
 $Comp
-L C C2
+L RP-Console-u-rescue:C C2
 U 1 1 5484896F
 P 6300 2950
 F 0 "C2" H 6350 3050 50  0000 L CNN
@@ -230,7 +225,7 @@ F 7 "81-GRM155F51E104ZA1J " H 6300 2950 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1 C1
+L RP-Console-u-rescue:CP1 C1
 U 1 1 54848979
 P 5950 2950
 F 0 "C1" H 6000 3050 50  0000 L CNN
@@ -265,11 +260,11 @@ Wire Wire Line
 Wire Wire Line
 	10000 2550 10000 3250
 Wire Wire Line
-	5200 3500 7450 3500
+	5200 3500 5400 3500
 Wire Wire Line
 	5200 3500 5200 2650
 $Comp
-L FT230XS U?
+L RP-Console-u-rescue:FT230XS U?
 U 1 1 54848999
 P 7350 2500
 AR Path="/54848509/54848999" Ref="U?"  Part="1" 
@@ -285,11 +280,11 @@ NoConn ~ 8000 2600
 NoConn ~ 6750 2700
 NoConn ~ 8000 2900
 Wire Wire Line
-	8300 1550 8300 2800
+	8300 1550 8300 2550
 Wire Wire Line
-	8100 1450 6300 1450
+	8100 1450 7250 1450
 $Comp
-L LED-RESCUE-RP-Console-u D1
+L RP-Console-u-rescue:LED-RESCUE-RP-Console-u D1
 U 1 1 548489AA
 P 9600 2550
 F 0 "D1" H 9600 2650 50  0000 C CNN
@@ -300,7 +295,7 @@ F 3 "~" H 9600 2550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED-RESCUE-RP-Console-u D2
+L RP-Console-u-rescue:LED-RESCUE-RP-Console-u D2
 U 1 1 548489B0
 P 9600 2800
 F 0 "D2" H 9600 2900 50  0000 C CNN
@@ -318,7 +313,7 @@ PI2USB
 Text Label 3550 2000 0    60   ~ 0
 USB2PI
 $Comp
-L RASPIO J2
+L RP-Console-u-rescue:RASPIO J2
 U 1 1 54848B62
 P 2400 2200
 F 0 "J2" H 2050 3000 60  0000 C CNN
@@ -329,7 +324,7 @@ F 3 "~" H 2400 2200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P1
+L RP-Console-u-rescue:CONN_2 P1
 U 1 1 5484B32D
 P 4650 950
 F 0 "P1" V 4600 950 40  0000 C CNN
@@ -349,7 +344,7 @@ NoConn ~ 8000 2400
 NoConn ~ 1700 2400
 NoConn ~ 1700 1600
 $Comp
-L USB-MICRO-B J1
+L RP-Console-u-rescue:USB-MICRO-B J1
 U 1 1 562660F8
 P 4550 2450
 F 0 "J1" H 4250 2800 50  0000 C CNN
@@ -360,7 +355,7 @@ F 3 "" H 4550 2350 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L R R3
+L RP-Console-u-rescue:R R3
 U 1 1 562667AB
 P 5400 3000
 F 0 "R3" V 5480 3000 50  0000 C CNN
@@ -385,4 +380,30 @@ NoConn ~ 4050 2250
 NoConn ~ 4050 2350
 NoConn ~ 4050 2550
 NoConn ~ 4050 2650
+Wire Wire Line
+	1500 2800 1500 3200
+Wire Wire Line
+	3200 2200 3200 1800
+Wire Wire Line
+	3200 2500 3200 2200
+Wire Wire Line
+	3200 1600 4550 1600
+Wire Wire Line
+	5950 3500 6300 3500
+Wire Wire Line
+	7450 1550 8300 1550
+Wire Wire Line
+	5950 1550 7450 1550
+Wire Wire Line
+	8300 2550 8300 2800
+Wire Wire Line
+	7250 3500 7450 3500
+Wire Wire Line
+	6300 3500 7250 3500
+Wire Wire Line
+	7250 1450 6300 1450
+Wire Wire Line
+	5600 1550 5950 1550
+Wire Wire Line
+	5400 3500 5950 3500
 $EndSCHEMATC
