@@ -1,0 +1,702 @@
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"USBUART_Dm_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.bss
+  20              		.align	2
+  21              	USBUART_Dm_backup:
+  22 0000 00000000 		.space	12
+  22      00000000 
+  22      00000000 
+  23              		.section	.text.USBUART_Dm_Sleep,"ax",%progbits
+  24              		.align	2
+  25              		.global	USBUART_Dm_Sleep
+  26              		.code	16
+  27              		.thumb_func
+  28              		.type	USBUART_Dm_Sleep, %function
+  29              	USBUART_Dm_Sleep:
+  30              	.LFB0:
+  31              		.file 1 "Generated_Source\\PSoC4\\USBUART_Dm_PM.c"
+   1:Generated_Source\PSoC4/USBUART_Dm_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * File Name: USBUART_Dm.c  
+   3:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Version 2.20
+   4:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+   5:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Description:
+   6:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  This file contains APIs to set up the Pins component for low power modes.
+   7:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+   8:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Note:
+   9:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  10:Generated_Source\PSoC4/USBUART_Dm_PM.c **** ********************************************************************************
+  11:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Copyright 2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *******************************************************************************/
+  16:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  17:Generated_Source\PSoC4/USBUART_Dm_PM.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC4/USBUART_Dm_PM.c **** #include "USBUART_Dm.h"
+  19:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  20:Generated_Source\PSoC4/USBUART_Dm_PM.c **** static USBUART_Dm_BACKUP_STRUCT  USBUART_Dm_backup = {0u, 0u, 0u};
+  21:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  22:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  23:Generated_Source\PSoC4/USBUART_Dm_PM.c **** /*******************************************************************************
+  24:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Function Name: USBUART_Dm_Sleep
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 2
+
+
+  25:Generated_Source\PSoC4/USBUART_Dm_PM.c **** ****************************************************************************//**
+  26:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  27:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \brief Stores the pin configuration and prepares the pin for entering chip 
+  28:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  deep-sleep/hibernate modes. This function applies only to SIO and USBIO pins.
+  29:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  It should not be called for GPIO or GPIO_OVT pins.
+  30:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  31:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * <b>Note</b> This function is available in PSoC 4 only.
+  32:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  33:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \return 
+  34:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  None 
+  35:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  
+  36:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \sideeffect
+  37:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  For SIO pins, this function configures the pin input threshold to CMOS and
+  38:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  drive level to Vddio. This is needed for SIO pins when in device 
+  39:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  deep-sleep/hibernate modes.
+  40:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  41:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \funcusage
+  42:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  \snippet USBUART_Dm_SUT.c usage_USBUART_Dm_Sleep_Wakeup
+  43:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *******************************************************************************/
+  44:Generated_Source\PSoC4/USBUART_Dm_PM.c **** void USBUART_Dm_Sleep(void)
+  45:Generated_Source\PSoC4/USBUART_Dm_PM.c **** {
+  32              		.loc 1 45 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 00AF     		add	r7, sp, #0
+  41              		.cfi_def_cfa_register 7
+  46:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #if defined(USBUART_Dm__PC)
+  47:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         USBUART_Dm_backup.pcState = USBUART_Dm_PC;
+  48:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #else
+  49:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         #if (CY_PSOC4_4200L)
+  50:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             /* Save the regulator state and put the PHY into suspend mode */
+  51:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_backup.usbState = USBUART_Dm_CR1_REG;
+  42              		.loc 1 51 0
+  43 0004 094B     		ldr	r3, .L2
+  44 0006 1A68     		ldr	r2, [r3]
+  45 0008 094B     		ldr	r3, .L2+4
+  46 000a 9A60     		str	r2, [r3, #8]
+  52:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_USB_POWER_REG |= USBUART_Dm_USBIO_ENTER_SLEEP;
+  47              		.loc 1 52 0
+  48 000c 094B     		ldr	r3, .L2+8
+  49 000e 094A     		ldr	r2, .L2+8
+  50 0010 1268     		ldr	r2, [r2]
+  51 0012 0C21     		movs	r1, #12
+  52 0014 0A43     		orrs	r2, r1
+  53 0016 1A60     		str	r2, [r3]
+  53:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_CR1_REG &= USBUART_Dm_USBIO_CR1_OFF;
+  54              		.loc 1 53 0
+  55 0018 044B     		ldr	r3, .L2
+  56 001a 044A     		ldr	r2, .L2
+  57 001c 1268     		ldr	r2, [r2]
+  58 001e 0121     		movs	r1, #1
+  59 0020 8A43     		bics	r2, r1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 3
+
+
+  60 0022 1A60     		str	r2, [r3]
+  54:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         #endif
+  55:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #endif
+  56:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(USBUART_Dm__SIO)
+  57:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         USBUART_Dm_backup.sioState = USBUART_Dm_SIO_REG;
+  58:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         /* SIO requires unregulated output buffer and single ended input buffer */
+  59:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         USBUART_Dm_SIO_REG &= (uint32)(~USBUART_Dm_SIO_LPM_MASK);
+  60:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #endif  
+  61:Generated_Source\PSoC4/USBUART_Dm_PM.c **** }
+  61              		.loc 1 61 0
+  62 0024 C046     		nop
+  63 0026 BD46     		mov	sp, r7
+  64              		@ sp needed
+  65 0028 80BD     		pop	{r7, pc}
+  66              	.L3:
+  67 002a C046     		.align	2
+  68              	.L2:
+  69 002c 24002C40 		.word	1076625444
+  70 0030 00000000 		.word	USBUART_Dm_backup
+  71 0034 00202C40 		.word	1076633600
+  72              		.cfi_endproc
+  73              	.LFE0:
+  74              		.size	USBUART_Dm_Sleep, .-USBUART_Dm_Sleep
+  75              		.section	.text.USBUART_Dm_Wakeup,"ax",%progbits
+  76              		.align	2
+  77              		.global	USBUART_Dm_Wakeup
+  78              		.code	16
+  79              		.thumb_func
+  80              		.type	USBUART_Dm_Wakeup, %function
+  81              	USBUART_Dm_Wakeup:
+  82              	.LFB1:
+  62:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  63:Generated_Source\PSoC4/USBUART_Dm_PM.c **** 
+  64:Generated_Source\PSoC4/USBUART_Dm_PM.c **** /*******************************************************************************
+  65:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * Function Name: USBUART_Dm_Wakeup
+  66:Generated_Source\PSoC4/USBUART_Dm_PM.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  68:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \brief Restores the pin configuration that was saved during Pin_Sleep(). This 
+  69:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * function applies only to SIO and USBIO pins. It should not be called for
+  70:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * GPIO or GPIO_OVT pins.
+  71:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  72:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * For USBIO pins, the wakeup is only triggered for falling edge interrupts.
+  73:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  74:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * <b>Note</b> This function is available in PSoC 4 only.
+  75:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *
+  76:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \return 
+  77:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  None
+  78:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  
+  79:Generated_Source\PSoC4/USBUART_Dm_PM.c **** * \funcusage
+  80:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *  Refer to USBUART_Dm_Sleep() for an example usage.
+  81:Generated_Source\PSoC4/USBUART_Dm_PM.c **** *******************************************************************************/
+  82:Generated_Source\PSoC4/USBUART_Dm_PM.c **** void USBUART_Dm_Wakeup(void)
+  83:Generated_Source\PSoC4/USBUART_Dm_PM.c **** {
+  83              		.loc 1 83 0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 4
+
+
+  87 0000 80B5     		push	{r7, lr}
+  88              		.cfi_def_cfa_offset 8
+  89              		.cfi_offset 7, -8
+  90              		.cfi_offset 14, -4
+  91 0002 00AF     		add	r7, sp, #0
+  92              		.cfi_def_cfa_register 7
+  84:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #if defined(USBUART_Dm__PC)
+  85:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         USBUART_Dm_PC = USBUART_Dm_backup.pcState;
+  86:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #else
+  87:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         #if (CY_PSOC4_4200L)
+  88:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             /* Restore the regulator state and come out of suspend mode */
+  89:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_USB_POWER_REG &= USBUART_Dm_USBIO_EXIT_SLEEP_PH1;
+  93              		.loc 1 89 0
+  94 0004 094B     		ldr	r3, .L5
+  95 0006 094A     		ldr	r2, .L5
+  96 0008 1268     		ldr	r2, [r2]
+  97 000a 0421     		movs	r1, #4
+  98 000c 8A43     		bics	r2, r1
+  99 000e 1A60     		str	r2, [r3]
+  90:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_CR1_REG = USBUART_Dm_backup.usbState;
+ 100              		.loc 1 90 0
+ 101 0010 074A     		ldr	r2, .L5+4
+ 102 0012 084B     		ldr	r3, .L5+8
+ 103 0014 9B68     		ldr	r3, [r3, #8]
+ 104 0016 1360     		str	r3, [r2]
+  91:Generated_Source\PSoC4/USBUART_Dm_PM.c ****             USBUART_Dm_USB_POWER_REG &= USBUART_Dm_USBIO_EXIT_SLEEP_PH2;
+ 105              		.loc 1 91 0
+ 106 0018 044B     		ldr	r3, .L5
+ 107 001a 044A     		ldr	r2, .L5
+ 108 001c 1268     		ldr	r2, [r2]
+ 109 001e 0821     		movs	r1, #8
+ 110 0020 8A43     		bics	r2, r1
+ 111 0022 1A60     		str	r2, [r3]
+  92:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         #endif
+  93:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #endif
+  94:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(USBUART_Dm__SIO)
+  95:Generated_Source\PSoC4/USBUART_Dm_PM.c ****         USBUART_Dm_SIO_REG = USBUART_Dm_backup.sioState;
+  96:Generated_Source\PSoC4/USBUART_Dm_PM.c ****     #endif
+  97:Generated_Source\PSoC4/USBUART_Dm_PM.c **** }
+ 112              		.loc 1 97 0
+ 113 0024 C046     		nop
+ 114 0026 BD46     		mov	sp, r7
+ 115              		@ sp needed
+ 116 0028 80BD     		pop	{r7, pc}
+ 117              	.L6:
+ 118 002a C046     		.align	2
+ 119              	.L5:
+ 120 002c 00202C40 		.word	1076633600
+ 121 0030 24002C40 		.word	1076625444
+ 122 0034 00000000 		.word	USBUART_Dm_backup
+ 123              		.cfi_endproc
+ 124              	.LFE1:
+ 125              		.size	USBUART_Dm_Wakeup, .-USBUART_Dm_Wakeup
+ 126              		.text
+ 127              	.Letext0:
+ 128              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 129              		.file 3 "Generated_Source\\PSoC4\\USBUART_Dm.h"
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 5
+
+
+ 130              		.section	.debug_info,"",%progbits
+ 131              	.Ldebug_info0:
+ 132 0000 05010000 		.4byte	0x105
+ 133 0004 0400     		.2byte	0x4
+ 134 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 135 000a 04       		.byte	0x4
+ 136 000b 01       		.uleb128 0x1
+ 137 000c 72000000 		.4byte	.LASF20
+ 138 0010 0C       		.byte	0xc
+ 139 0011 7C010000 		.4byte	.LASF21
+ 140 0015 07010000 		.4byte	.LASF22
+ 141 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 142 001d 00000000 		.4byte	0
+ 143 0021 00000000 		.4byte	.Ldebug_line0
+ 144 0025 02       		.uleb128 0x2
+ 145 0026 01       		.byte	0x1
+ 146 0027 06       		.byte	0x6
+ 147 0028 17020000 		.4byte	.LASF0
+ 148 002c 02       		.uleb128 0x2
+ 149 002d 01       		.byte	0x1
+ 150 002e 08       		.byte	0x8
+ 151 002f 26000000 		.4byte	.LASF1
+ 152 0033 02       		.uleb128 0x2
+ 153 0034 02       		.byte	0x2
+ 154 0035 05       		.byte	0x5
+ 155 0036 FC010000 		.4byte	.LASF2
+ 156 003a 02       		.uleb128 0x2
+ 157 003b 02       		.byte	0x2
+ 158 003c 07       		.byte	0x7
+ 159 003d 46000000 		.4byte	.LASF3
+ 160 0041 02       		.uleb128 0x2
+ 161 0042 04       		.byte	0x4
+ 162 0043 05       		.byte	0x5
+ 163 0044 0E020000 		.4byte	.LASF4
+ 164 0048 02       		.uleb128 0x2
+ 165 0049 04       		.byte	0x4
+ 166 004a 07       		.byte	0x7
+ 167 004b 34000000 		.4byte	.LASF5
+ 168 004f 02       		.uleb128 0x2
+ 169 0050 08       		.byte	0x8
+ 170 0051 05       		.byte	0x5
+ 171 0052 E9010000 		.4byte	.LASF6
+ 172 0056 02       		.uleb128 0x2
+ 173 0057 08       		.byte	0x8
+ 174 0058 07       		.byte	0x7
+ 175 0059 B7010000 		.4byte	.LASF7
+ 176 005d 03       		.uleb128 0x3
+ 177 005e 04       		.byte	0x4
+ 178 005f 05       		.byte	0x5
+ 179 0060 696E7400 		.ascii	"int\000"
+ 180 0064 02       		.uleb128 0x2
+ 181 0065 04       		.byte	0x4
+ 182 0066 07       		.byte	0x7
+ 183 0067 AA010000 		.4byte	.LASF8
+ 184 006b 04       		.uleb128 0x4
+ 185 006c A3010000 		.4byte	.LASF12
+ 186 0070 02       		.byte	0x2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 6
+
+
+ 187 0071 D401     		.2byte	0x1d4
+ 188 0073 48000000 		.4byte	0x48
+ 189 0077 02       		.uleb128 0x2
+ 190 0078 04       		.byte	0x4
+ 191 0079 04       		.byte	0x4
+ 192 007a 20000000 		.4byte	.LASF9
+ 193 007e 02       		.uleb128 0x2
+ 194 007f 08       		.byte	0x8
+ 195 0080 04       		.byte	0x4
+ 196 0081 00010000 		.4byte	.LASF10
+ 197 0085 02       		.uleb128 0x2
+ 198 0086 01       		.byte	0x1
+ 199 0087 08       		.byte	0x8
+ 200 0088 F7010000 		.4byte	.LASF11
+ 201 008c 04       		.uleb128 0x4
+ 202 008d 00000000 		.4byte	.LASF13
+ 203 0091 02       		.byte	0x2
+ 204 0092 7E02     		.2byte	0x27e
+ 205 0094 98000000 		.4byte	0x98
+ 206 0098 05       		.uleb128 0x5
+ 207 0099 6B000000 		.4byte	0x6b
+ 208 009d 06       		.uleb128 0x6
+ 209 009e 0C       		.byte	0xc
+ 210 009f 03       		.byte	0x3
+ 211 00a0 21       		.byte	0x21
+ 212 00a1 CA000000 		.4byte	0xca
+ 213 00a5 07       		.uleb128 0x7
+ 214 00a6 06020000 		.4byte	.LASF14
+ 215 00aa 03       		.byte	0x3
+ 216 00ab 23       		.byte	0x23
+ 217 00ac 6B000000 		.4byte	0x6b
+ 218 00b0 00       		.byte	0
+ 219 00b1 07       		.uleb128 0x7
+ 220 00b2 E0010000 		.4byte	.LASF15
+ 221 00b6 03       		.byte	0x3
+ 222 00b7 24       		.byte	0x24
+ 223 00b8 6B000000 		.4byte	0x6b
+ 224 00bc 04       		.byte	0x4
+ 225 00bd 07       		.uleb128 0x7
+ 226 00be 06000000 		.4byte	.LASF16
+ 227 00c2 03       		.byte	0x3
+ 228 00c3 25       		.byte	0x25
+ 229 00c4 6B000000 		.4byte	0x6b
+ 230 00c8 08       		.byte	0x8
+ 231 00c9 00       		.byte	0
+ 232 00ca 08       		.uleb128 0x8
+ 233 00cb 59000000 		.4byte	.LASF17
+ 234 00cf 03       		.byte	0x3
+ 235 00d0 26       		.byte	0x26
+ 236 00d1 9D000000 		.4byte	0x9d
+ 237 00d5 09       		.uleb128 0x9
+ 238 00d6 0F000000 		.4byte	.LASF18
+ 239 00da 01       		.byte	0x1
+ 240 00db 2C       		.byte	0x2c
+ 241 00dc 00000000 		.4byte	.LFB0
+ 242 00e0 38000000 		.4byte	.LFE0-.LFB0
+ 243 00e4 01       		.uleb128 0x1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 7
+
+
+ 244 00e5 9C       		.byte	0x9c
+ 245 00e6 09       		.uleb128 0x9
+ 246 00e7 23020000 		.4byte	.LASF19
+ 247 00eb 01       		.byte	0x1
+ 248 00ec 52       		.byte	0x52
+ 249 00ed 00000000 		.4byte	.LFB1
+ 250 00f1 38000000 		.4byte	.LFE1-.LFB1
+ 251 00f5 01       		.uleb128 0x1
+ 252 00f6 9C       		.byte	0x9c
+ 253 00f7 0A       		.uleb128 0xa
+ 254 00f8 CE010000 		.4byte	.LASF23
+ 255 00fc 01       		.byte	0x1
+ 256 00fd 14       		.byte	0x14
+ 257 00fe CA000000 		.4byte	0xca
+ 258 0102 05       		.uleb128 0x5
+ 259 0103 03       		.byte	0x3
+ 260 0104 00000000 		.4byte	USBUART_Dm_backup
+ 261 0108 00       		.byte	0
+ 262              		.section	.debug_abbrev,"",%progbits
+ 263              	.Ldebug_abbrev0:
+ 264 0000 01       		.uleb128 0x1
+ 265 0001 11       		.uleb128 0x11
+ 266 0002 01       		.byte	0x1
+ 267 0003 25       		.uleb128 0x25
+ 268 0004 0E       		.uleb128 0xe
+ 269 0005 13       		.uleb128 0x13
+ 270 0006 0B       		.uleb128 0xb
+ 271 0007 03       		.uleb128 0x3
+ 272 0008 0E       		.uleb128 0xe
+ 273 0009 1B       		.uleb128 0x1b
+ 274 000a 0E       		.uleb128 0xe
+ 275 000b 55       		.uleb128 0x55
+ 276 000c 17       		.uleb128 0x17
+ 277 000d 11       		.uleb128 0x11
+ 278 000e 01       		.uleb128 0x1
+ 279 000f 10       		.uleb128 0x10
+ 280 0010 17       		.uleb128 0x17
+ 281 0011 00       		.byte	0
+ 282 0012 00       		.byte	0
+ 283 0013 02       		.uleb128 0x2
+ 284 0014 24       		.uleb128 0x24
+ 285 0015 00       		.byte	0
+ 286 0016 0B       		.uleb128 0xb
+ 287 0017 0B       		.uleb128 0xb
+ 288 0018 3E       		.uleb128 0x3e
+ 289 0019 0B       		.uleb128 0xb
+ 290 001a 03       		.uleb128 0x3
+ 291 001b 0E       		.uleb128 0xe
+ 292 001c 00       		.byte	0
+ 293 001d 00       		.byte	0
+ 294 001e 03       		.uleb128 0x3
+ 295 001f 24       		.uleb128 0x24
+ 296 0020 00       		.byte	0
+ 297 0021 0B       		.uleb128 0xb
+ 298 0022 0B       		.uleb128 0xb
+ 299 0023 3E       		.uleb128 0x3e
+ 300 0024 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 8
+
+
+ 301 0025 03       		.uleb128 0x3
+ 302 0026 08       		.uleb128 0x8
+ 303 0027 00       		.byte	0
+ 304 0028 00       		.byte	0
+ 305 0029 04       		.uleb128 0x4
+ 306 002a 16       		.uleb128 0x16
+ 307 002b 00       		.byte	0
+ 308 002c 03       		.uleb128 0x3
+ 309 002d 0E       		.uleb128 0xe
+ 310 002e 3A       		.uleb128 0x3a
+ 311 002f 0B       		.uleb128 0xb
+ 312 0030 3B       		.uleb128 0x3b
+ 313 0031 05       		.uleb128 0x5
+ 314 0032 49       		.uleb128 0x49
+ 315 0033 13       		.uleb128 0x13
+ 316 0034 00       		.byte	0
+ 317 0035 00       		.byte	0
+ 318 0036 05       		.uleb128 0x5
+ 319 0037 35       		.uleb128 0x35
+ 320 0038 00       		.byte	0
+ 321 0039 49       		.uleb128 0x49
+ 322 003a 13       		.uleb128 0x13
+ 323 003b 00       		.byte	0
+ 324 003c 00       		.byte	0
+ 325 003d 06       		.uleb128 0x6
+ 326 003e 13       		.uleb128 0x13
+ 327 003f 01       		.byte	0x1
+ 328 0040 0B       		.uleb128 0xb
+ 329 0041 0B       		.uleb128 0xb
+ 330 0042 3A       		.uleb128 0x3a
+ 331 0043 0B       		.uleb128 0xb
+ 332 0044 3B       		.uleb128 0x3b
+ 333 0045 0B       		.uleb128 0xb
+ 334 0046 01       		.uleb128 0x1
+ 335 0047 13       		.uleb128 0x13
+ 336 0048 00       		.byte	0
+ 337 0049 00       		.byte	0
+ 338 004a 07       		.uleb128 0x7
+ 339 004b 0D       		.uleb128 0xd
+ 340 004c 00       		.byte	0
+ 341 004d 03       		.uleb128 0x3
+ 342 004e 0E       		.uleb128 0xe
+ 343 004f 3A       		.uleb128 0x3a
+ 344 0050 0B       		.uleb128 0xb
+ 345 0051 3B       		.uleb128 0x3b
+ 346 0052 0B       		.uleb128 0xb
+ 347 0053 49       		.uleb128 0x49
+ 348 0054 13       		.uleb128 0x13
+ 349 0055 38       		.uleb128 0x38
+ 350 0056 0B       		.uleb128 0xb
+ 351 0057 00       		.byte	0
+ 352 0058 00       		.byte	0
+ 353 0059 08       		.uleb128 0x8
+ 354 005a 16       		.uleb128 0x16
+ 355 005b 00       		.byte	0
+ 356 005c 03       		.uleb128 0x3
+ 357 005d 0E       		.uleb128 0xe
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 9
+
+
+ 358 005e 3A       		.uleb128 0x3a
+ 359 005f 0B       		.uleb128 0xb
+ 360 0060 3B       		.uleb128 0x3b
+ 361 0061 0B       		.uleb128 0xb
+ 362 0062 49       		.uleb128 0x49
+ 363 0063 13       		.uleb128 0x13
+ 364 0064 00       		.byte	0
+ 365 0065 00       		.byte	0
+ 366 0066 09       		.uleb128 0x9
+ 367 0067 2E       		.uleb128 0x2e
+ 368 0068 00       		.byte	0
+ 369 0069 3F       		.uleb128 0x3f
+ 370 006a 19       		.uleb128 0x19
+ 371 006b 03       		.uleb128 0x3
+ 372 006c 0E       		.uleb128 0xe
+ 373 006d 3A       		.uleb128 0x3a
+ 374 006e 0B       		.uleb128 0xb
+ 375 006f 3B       		.uleb128 0x3b
+ 376 0070 0B       		.uleb128 0xb
+ 377 0071 27       		.uleb128 0x27
+ 378 0072 19       		.uleb128 0x19
+ 379 0073 11       		.uleb128 0x11
+ 380 0074 01       		.uleb128 0x1
+ 381 0075 12       		.uleb128 0x12
+ 382 0076 06       		.uleb128 0x6
+ 383 0077 40       		.uleb128 0x40
+ 384 0078 18       		.uleb128 0x18
+ 385 0079 9742     		.uleb128 0x2117
+ 386 007b 19       		.uleb128 0x19
+ 387 007c 00       		.byte	0
+ 388 007d 00       		.byte	0
+ 389 007e 0A       		.uleb128 0xa
+ 390 007f 34       		.uleb128 0x34
+ 391 0080 00       		.byte	0
+ 392 0081 03       		.uleb128 0x3
+ 393 0082 0E       		.uleb128 0xe
+ 394 0083 3A       		.uleb128 0x3a
+ 395 0084 0B       		.uleb128 0xb
+ 396 0085 3B       		.uleb128 0x3b
+ 397 0086 0B       		.uleb128 0xb
+ 398 0087 49       		.uleb128 0x49
+ 399 0088 13       		.uleb128 0x13
+ 400 0089 02       		.uleb128 0x2
+ 401 008a 18       		.uleb128 0x18
+ 402 008b 00       		.byte	0
+ 403 008c 00       		.byte	0
+ 404 008d 00       		.byte	0
+ 405              		.section	.debug_aranges,"",%progbits
+ 406 0000 24000000 		.4byte	0x24
+ 407 0004 0200     		.2byte	0x2
+ 408 0006 00000000 		.4byte	.Ldebug_info0
+ 409 000a 04       		.byte	0x4
+ 410 000b 00       		.byte	0
+ 411 000c 0000     		.2byte	0
+ 412 000e 0000     		.2byte	0
+ 413 0010 00000000 		.4byte	.LFB0
+ 414 0014 38000000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 10
+
+
+ 415 0018 00000000 		.4byte	.LFB1
+ 416 001c 38000000 		.4byte	.LFE1-.LFB1
+ 417 0020 00000000 		.4byte	0
+ 418 0024 00000000 		.4byte	0
+ 419              		.section	.debug_ranges,"",%progbits
+ 420              	.Ldebug_ranges0:
+ 421 0000 00000000 		.4byte	.LFB0
+ 422 0004 38000000 		.4byte	.LFE0
+ 423 0008 00000000 		.4byte	.LFB1
+ 424 000c 38000000 		.4byte	.LFE1
+ 425 0010 00000000 		.4byte	0
+ 426 0014 00000000 		.4byte	0
+ 427              		.section	.debug_line,"",%progbits
+ 428              	.Ldebug_line0:
+ 429 0000 87000000 		.section	.debug_str,"MS",%progbits,1
+ 429      02005A00 
+ 429      00000201 
+ 429      FB0E0D00 
+ 429      01010101 
+ 430              	.LASF13:
+ 431 0000 72656733 		.ascii	"reg32\000"
+ 431      3200
+ 432              	.LASF16:
+ 433 0006 75736253 		.ascii	"usbState\000"
+ 433      74617465 
+ 433      00
+ 434              	.LASF18:
+ 435 000f 55534255 		.ascii	"USBUART_Dm_Sleep\000"
+ 435      4152545F 
+ 435      446D5F53 
+ 435      6C656570 
+ 435      00
+ 436              	.LASF9:
+ 437 0020 666C6F61 		.ascii	"float\000"
+ 437      7400
+ 438              	.LASF1:
+ 439 0026 756E7369 		.ascii	"unsigned char\000"
+ 439      676E6564 
+ 439      20636861 
+ 439      7200
+ 440              	.LASF5:
+ 441 0034 6C6F6E67 		.ascii	"long unsigned int\000"
+ 441      20756E73 
+ 441      69676E65 
+ 441      6420696E 
+ 441      7400
+ 442              	.LASF3:
+ 443 0046 73686F72 		.ascii	"short unsigned int\000"
+ 443      7420756E 
+ 443      7369676E 
+ 443      65642069 
+ 443      6E7400
+ 444              	.LASF17:
+ 445 0059 55534255 		.ascii	"USBUART_Dm_BACKUP_STRUCT\000"
+ 445      4152545F 
+ 445      446D5F42 
+ 445      41434B55 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 11
+
+
+ 445      505F5354 
+ 446              	.LASF20:
+ 447 0072 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 447      43313120 
+ 447      352E342E 
+ 447      31203230 
+ 447      31363036 
+ 448 00a5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 448      20726576 
+ 448      6973696F 
+ 448      6E203233 
+ 448      37373135 
+ 449 00d8 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 449      66756E63 
+ 449      74696F6E 
+ 449      2D736563 
+ 449      74696F6E 
+ 450              	.LASF10:
+ 451 0100 646F7562 		.ascii	"double\000"
+ 451      6C6500
+ 452              	.LASF22:
+ 453 0107 433A5C55 		.ascii	"C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\"
+ 453      73657273 
+ 453      5C48507A 
+ 453      3432305C 
+ 453      446F6375 
+ 454 0134 6C622D62 		.ascii	"lb-boards\\FPGA Cards\\RETRO-EP4CE15\\PSOC\\USBFS_U"
+ 454      6F617264 
+ 454      735C4650 
+ 454      47412043 
+ 454      61726473 
+ 455 0163 41525430 		.ascii	"ART01\\USBFS_UART01.cydsn\000"
+ 455      315C5553 
+ 455      4246535F 
+ 455      55415254 
+ 455      30312E63 
+ 456              	.LASF21:
+ 457 017c 47656E65 		.ascii	"Generated_Source\\PSoC4\\USBUART_Dm_PM.c\000"
+ 457      72617465 
+ 457      645F536F 
+ 457      75726365 
+ 457      5C50536F 
+ 458              	.LASF12:
+ 459 01a3 75696E74 		.ascii	"uint32\000"
+ 459      333200
+ 460              	.LASF8:
+ 461 01aa 756E7369 		.ascii	"unsigned int\000"
+ 461      676E6564 
+ 461      20696E74 
+ 461      00
+ 462              	.LASF7:
+ 463 01b7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 463      206C6F6E 
+ 463      6720756E 
+ 463      7369676E 
+ 463      65642069 
+ 464              	.LASF23:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccgNMTzi.s 			page 12
+
+
+ 465 01ce 55534255 		.ascii	"USBUART_Dm_backup\000"
+ 465      4152545F 
+ 465      446D5F62 
+ 465      61636B75 
+ 465      7000
+ 466              	.LASF15:
+ 467 01e0 73696F53 		.ascii	"sioState\000"
+ 467      74617465 
+ 467      00
+ 468              	.LASF6:
+ 469 01e9 6C6F6E67 		.ascii	"long long int\000"
+ 469      206C6F6E 
+ 469      6720696E 
+ 469      7400
+ 470              	.LASF11:
+ 471 01f7 63686172 		.ascii	"char\000"
+ 471      00
+ 472              	.LASF2:
+ 473 01fc 73686F72 		.ascii	"short int\000"
+ 473      7420696E 
+ 473      7400
+ 474              	.LASF14:
+ 475 0206 70635374 		.ascii	"pcState\000"
+ 475      61746500 
+ 476              	.LASF4:
+ 477 020e 6C6F6E67 		.ascii	"long int\000"
+ 477      20696E74 
+ 477      00
+ 478              	.LASF0:
+ 479 0217 7369676E 		.ascii	"signed char\000"
+ 479      65642063 
+ 479      68617200 
+ 480              	.LASF19:
+ 481 0223 55534255 		.ascii	"USBUART_Dm_Wakeup\000"
+ 481      4152545F 
+ 481      446D5F57 
+ 481      616B6575 
+ 481      7000
+ 482              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
