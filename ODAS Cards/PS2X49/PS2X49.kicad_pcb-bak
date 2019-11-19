@@ -57,7 +57,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFF7F)
     (pcbplotparams
-      (layerselection 0x010f0_ffffffff)
+      (layerselection 0x010f0_80000001)
       (usegerberextensions true)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
@@ -614,7 +614,7 @@
   (segment (start 33.448001 35.988001) (end 37.084 39.624) (width 0.2032) (layer Front) (net 10))
   (segment (start 30.019001 35.988001) (end 33.448001 35.988001) (width 0.2032) (layer Front) (net 10))
 
-  (zone (net 2) (net_name VCC) (layer Front) (tstamp 5DD41ECB) (hatch edge 0.508)
+  (zone (net 2) (net_name VCC) (layer Front) (tstamp 57F077A8) (hatch edge 0.508)
     (connect_pads (clearance 0.3048))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -805,7 +805,7 @@
       )
     )
   )
-  (zone (net 1) (net_name GND) (layer Back) (tstamp 5DD41EC8) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer Back) (tstamp 57F077AA) (hatch edge 0.508)
     (connect_pads (clearance 0.3048))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))

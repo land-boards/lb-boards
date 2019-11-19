@@ -1,0 +1,422 @@
+EESchema Schematic File Version 4
+LIBS:SD_CARD_X49-cache
+EELAYER 26 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "TINYGRID85"
+Date "2016-10-01"
+Rev "X2"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 11000 9850
+NoConn ~ 11000 9750
+NoConn ~ 11000 9650
+NoConn ~ 11000 9550
+$Comp
+L SD_CARD_X49-rescue:CONN_1-GRID49-rescue-PS2X49-rescue MTG3
+U 1 1 5030F2C2
+P 11150 9750
+F 0 "MTG3" H 11230 9750 40  0000 L CNN
+F 1 "CONN_1" H 11150 9805 30  0001 C CNN
+F 2 "MTG-4-40" H 11150 9750 60  0001 C CNN
+F 3 "" H 11150 9750 60  0001 C CNN
+	1    11150 9750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:CONN_1-GRID49-rescue-PS2X49-rescue MTG4
+U 1 1 5030F2C1
+P 11150 9850
+F 0 "MTG4" H 11230 9850 40  0000 L CNN
+F 1 "CONN_1" H 11150 9905 30  0001 C CNN
+F 2 "MTG-4-40" H 11150 9850 60  0001 C CNN
+F 3 "" H 11150 9850 60  0001 C CNN
+	1    11150 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:CONN_1-GRID49-rescue-PS2X49-rescue MTG2
+U 1 1 5030F2BD
+P 11150 9650
+F 0 "MTG2" H 11230 9650 40  0000 L CNN
+F 1 "CONN_1" H 11150 9705 30  0001 C CNN
+F 2 "MTG-4-40" H 11150 9650 60  0001 C CNN
+F 3 "" H 11150 9650 60  0001 C CNN
+	1    11150 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:CONN_1-GRID49-rescue-PS2X49-rescue MTG1
+U 1 1 5030F2A7
+P 11150 9550
+F 0 "MTG1" H 11230 9550 40  0000 L CNN
+F 1 "CONN_1" H 11150 9605 30  0001 C CNN
+F 2 "MTG-4-40" H 11150 9550 60  0001 C CNN
+F 3 "" H 11150 9550 60  0001 C CNN
+	1    11150 9550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5030E832
+P 2350 750
+F 0 "#PWR01" H 2350 850 30  0001 C CNN
+F 1 "VCC" H 2350 850 30  0000 C CNN
+F 2 "" H 2350 750 60  0001 C CNN
+F 3 "" H 2350 750 60  0001 C CNN
+	1    2350 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:GND-RESCUE-GRID49-GRID49-rescue-PS2X49-rescue #PWR02
+U 1 1 5030E822
+P 2350 1600
+F 0 "#PWR02" H 2350 1600 30  0001 C CNN
+F 1 "GND" H 2350 1530 30  0001 C CNN
+F 2 "" H 2350 1600 60  0001 C CNN
+F 3 "" H 2350 1600 60  0001 C CNN
+	1    2350 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:C-RESCUE-GRID49-GRID49-rescue-PS2X49-rescue C2
+U 1 1 51CCA2BF
+P 2000 1150
+F 0 "C2" H 2000 1250 40  0000 L CNN
+F 1 "0.1uF" H 2006 1065 40  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2000 750 30  0000 C CNN
+F 3 "~" H 2000 1150 60  0000 C CNN
+	1    2000 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_CARD_X49-rescue:C-RESCUE-GRID49-GRID49-rescue-PS2X49-rescue C4
+U 1 1 51CCA2CE
+P 2350 1150
+F 0 "C4" H 2350 1250 40  0000 L CNN
+F 1 "0.1uF" H 2356 1065 40  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2350 600 30  0000 C CNN
+F 3 "~" H 2350 1150 60  0000 C CNN
+	1    2350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1350 2350 1450
+Wire Wire Line
+	2350 750  2350 850 
+Wire Wire Line
+	2000 1350 2000 1450
+Connection ~ 2000 1450
+Wire Wire Line
+	2000 950  2000 850 
+Connection ~ 2000 850 
+Connection ~ 2350 850 
+Connection ~ 2350 1450
+$Comp
+L SD_CARD_X49-rescue:C-RESCUE-GRID49-GRID49-rescue-PS2X49-rescue C1
+U 1 1 57F0F90C
+P 1600 1150
+F 0 "C1" H 1600 1250 40  0000 L CNN
+F 1 "0.1uF" H 1606 1065 40  0000 L CNN
+F 2 "Resistors_SMD:R_1210_HandSoldering" H 1600 800 30  0000 C CNN
+F 3 "~" H 1600 1150 60  0000 C CNN
+	1    1600 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 950  1600 850 
+Wire Wire Line
+	1600 1350 1600 1450
+Wire Wire Line
+	2000 1450 2350 1450
+Wire Wire Line
+	2000 850  2350 850 
+Wire Wire Line
+	2350 850  2350 950 
+Wire Wire Line
+	2350 1450 2350 1600
+Wire Wire Line
+	1600 850  2000 850 
+Wire Wire Line
+	1600 1450 2000 1450
+$Comp
+L Connector:SD_Card J2
+U 1 1 5DD34C75
+P 10150 4950
+F 0 "J2" H 10150 5615 50  0000 C CNN
+F 1 "SD_Card" H 10150 5524 50  0000 C CNN
+F 2 "LandBoards_Conns:SD_CARD" H 10150 4950 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 10150 4950 50  0001 C CNN
+	1    10150 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J1
+U 1 1 5DD34E61
+P 6350 4750
+F 0 "J1" H 6270 5267 50  0000 C CNN
+F 1 "Conn_01x08" H 6270 5176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6350 4750 50  0001 C CNN
+F 3 "~" H 6350 4750 50  0001 C CNN
+	1    6350 4750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 5150 9100 5150
+Wire Wire Line
+	9100 5150 9100 4850
+Wire Wire Line
+	9100 4850 9250 4850
+Wire Wire Line
+	9100 5150 9000 5150
+Connection ~ 9100 5150
+$Comp
+L 4xxx:4050 U1
+U 1 1 5DD352BB
+P 7950 4950
+F 0 "U1" H 7950 5267 50  0000 C CNN
+F 1 "4050" H 7950 5176 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7950 4950 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7950 4950 50  0001 C CNN
+	1    7950 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4050 U1
+U 2 1 5DD3532B
+P 7950 4450
+F 0 "U1" H 7950 4767 50  0000 C CNN
+F 1 "4050" H 7950 4676 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7950 4450 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7950 4450 50  0001 C CNN
+	2    7950 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4050 U1
+U 3 1 5DD35382
+P 7950 3950
+F 0 "U1" H 7950 4267 50  0000 C CNN
+F 1 "4050" H 7950 4176 50  0000 C CNN
+F 2 "" H 7950 3950 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7950 3950 50  0001 C CNN
+	3    7950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4050 U1
+U 4 1 5DD35431
+P 7900 3450
+F 0 "U1" H 7900 3767 50  0000 C CNN
+F 1 "4050" H 7900 3676 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7900 3450 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7900 3450 50  0001 C CNN
+	4    7900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT D1
+U 1 1 5DD354A1
+P 8450 3450
+F 0 "D1" H 8442 3195 50  0000 C CNN
+F 1 "LED_ALT" H 8442 3286 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm_IRBlack" H 8450 3450 50  0001 C CNN
+F 3 "~" H 8450 3450 50  0001 C CNN
+	1    8450 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5DD35555
+P 8700 3650
+F 0 "R1" H 8759 3696 50  0000 L CNN
+F 1 "1K" H 8759 3605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8700 3650 50  0001 C CNN
+F 3 "~" H 8700 3650 50  0001 C CNN
+	1    8700 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 3450 8300 3450
+Wire Wire Line
+	9250 5250 7300 5250
+Wire Wire Line
+	7300 5250 7300 5050
+Wire Wire Line
+	7300 5050 6550 5050
+Text Label 6900 5050 0    50   ~ 0
+MISO
+Wire Wire Line
+	9250 5050 8600 5050
+Wire Wire Line
+	8600 5050 8600 4950
+Wire Wire Line
+	8600 4950 8250 4950
+Wire Wire Line
+	7650 4950 7300 4950
+Text Label 6900 4950 0    50   ~ 0
+SCLK
+Wire Wire Line
+	9250 4750 8800 4750
+Wire Wire Line
+	8800 4750 8800 4450
+Wire Wire Line
+	8800 4450 8250 4450
+Wire Wire Line
+	6550 4850 7500 4850
+Wire Wire Line
+	7500 4850 7500 4450
+Wire Wire Line
+	7500 4450 7650 4450
+Text Label 6900 4850 0    50   ~ 0
+MOSI
+Wire Wire Line
+	9250 4650 8900 4650
+Wire Wire Line
+	8900 4650 8900 3950
+Wire Wire Line
+	8900 3950 8250 3950
+Wire Wire Line
+	6550 4750 7400 4750
+Wire Wire Line
+	7400 4750 7400 3950
+Wire Wire Line
+	7400 3950 7650 3950
+Text Label 6900 4750 0    50   ~ 0
+SDCS
+Wire Wire Line
+	9000 5150 9000 5600
+Wire Wire Line
+	9000 5600 11150 5600
+Wire Wire Line
+	11150 5600 11150 5150
+Wire Wire Line
+	11150 5050 11050 5050
+Connection ~ 9000 5150
+Wire Wire Line
+	9000 5150 7200 5150
+Wire Wire Line
+	11050 5150 11150 5150
+Connection ~ 11150 5150
+Wire Wire Line
+	11150 5150 11150 5050
+$Comp
+L 4xxx:4050 U1
+U 5 1 5DD38235
+P 7950 5750
+F 0 "U1" H 7950 6067 50  0000 C CNN
+F 1 "4050" H 7950 5976 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7950 5750 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7950 5750 50  0001 C CNN
+	5    7950 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4050 U1
+U 6 1 5DD3827B
+P 7950 6300
+F 0 "U1" H 7950 6617 50  0000 C CNN
+F 1 "4050" H 7950 6526 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7950 6300 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 7950 6300 50  0001 C CNN
+	6    7950 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LP2985-3.3 U2
+U 1 1 5DD383BB
+P 7950 2450
+F 0 "U2" H 7950 2792 50  0000 C CNN
+F 1 "LP2985-3.3" H 7950 2701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7950 2775 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp2985.pdf" H 7950 2450 50  0001 C CNN
+	1    7950 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4450 7100 4450
+Wire Wire Line
+	7100 4450 7100 2350
+Wire Wire Line
+	7100 2350 7550 2350
+Text Label 6900 4450 0    50   ~ 0
+5V
+Wire Wire Line
+	8350 2350 8450 2350
+Wire Wire Line
+	8450 2350 8450 3050
+Wire Wire Line
+	8450 3050 7200 3050
+Wire Wire Line
+	7200 3050 7200 4550
+Wire Wire Line
+	7200 4550 6550 4550
+Text Label 6900 4550 0    50   ~ 0
+3P3V
+Wire Wire Line
+	9250 4950 9000 4950
+Wire Wire Line
+	9000 4950 9000 2350
+Wire Wire Line
+	9000 2350 8450 2350
+Connection ~ 8450 2350
+Wire Wire Line
+	7200 5150 7200 5750
+Wire Wire Line
+	7200 5750 7650 5750
+Connection ~ 7200 5150
+Wire Wire Line
+	7200 5150 6750 5150
+Wire Wire Line
+	7200 5750 7200 6300
+Wire Wire Line
+	7200 6300 7650 6300
+Connection ~ 7200 5750
+Text Label 6900 5150 0    50   ~ 0
+GND
+Wire Wire Line
+	11050 4750 11300 4750
+Wire Wire Line
+	11300 4750 11300 5700
+Wire Wire Line
+	11300 5700 8350 5700
+Wire Wire Line
+	8350 5700 8350 5300
+Wire Wire Line
+	8350 5300 6650 5300
+Wire Wire Line
+	6650 5300 6650 4650
+Wire Wire Line
+	6650 4650 6550 4650
+Wire Wire Line
+	8600 3450 8700 3450
+Wire Wire Line
+	8700 3450 8700 3550
+Wire Wire Line
+	7400 4750 8700 4750
+Connection ~ 7400 4750
+Wire Wire Line
+	7300 4950 7300 3450
+Wire Wire Line
+	7300 3450 7600 3450
+Connection ~ 7300 4950
+Wire Wire Line
+	7300 4950 6550 4950
+Wire Wire Line
+	8700 3750 8700 4750
+Wire Wire Line
+	6750 5150 6750 2850
+Wire Wire Line
+	6750 2850 7950 2850
+Wire Wire Line
+	7950 2850 7950 2750
+Connection ~ 6750 5150
+Wire Wire Line
+	6750 5150 6550 5150
+$EndSCHEMATC
