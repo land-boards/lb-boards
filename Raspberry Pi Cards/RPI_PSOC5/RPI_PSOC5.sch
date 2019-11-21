@@ -1619,7 +1619,7 @@ IO_22
 Wire Wire Line
 	9100 4650 8150 4650
 $Comp
-L Connector:USB_B_Micro J1
+L RPI_PSOC5-rescue:USB_B_Micro-Connector J1
 U 1 1 5DA7114A
 P 14700 7050
 F 0 "J1" H 14470 7069 50  0000 R CNN

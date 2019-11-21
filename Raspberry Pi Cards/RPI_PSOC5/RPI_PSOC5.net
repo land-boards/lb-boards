@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "C:\\Users\\HPz420\\Documents\\GitHub\\lb-boards\\Raspberry Pi Cards\\RPI_PSOC5\\RPI_PSOC5.sch")
-    (date "10/19/2019 9:19:36 AM")
+    (source "C:\\Users\\dgilliland\\Documents\\GitHub\\lb-boards\\Raspberry Pi Cards\\RPI_PSOC5\\RPI_PSOC5.sch")
+    (date "11/20/2019 12:02:33 PM")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -228,27 +228,10 @@
       (value USB_B_Micro)
       (footprint Connector_USB:USB_Micro-B_Wuerth_629105150521)
       (datasheet ~)
-      (libsource (lib Connector) (part USB_B_Micro) (description "USB Micro Type B connector"))
+      (libsource (lib RPI_PSOC5-rescue) (part USB_B_Micro-Connector) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 5DA7114A)))
   (libparts
-    (libpart (lib Connector) (part USB_B_Micro)
-      (aliases
-        (alias USB_B_Mini))
-      (description "USB Micro Type B connector")
-      (docs ~)
-      (footprints
-        (fp USB*))
-      (fields
-        (field (name Reference) J)
-        (field (name Value) USB_B_Micro))
-      (pins
-        (pin (num 1) (name VBUS) (type power_out))
-        (pin (num 2) (name D-) (type passive))
-        (pin (num 3) (name D+) (type passive))
-        (pin (num 4) (name ID) (type passive))
-        (pin (num 5) (name GND) (type power_out))
-        (pin (num 6) (name Shield) (type passive))))
     (libpart (lib Connector_Generic) (part Conn_01x03)
       (description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
       (docs ~)
@@ -542,16 +525,27 @@
         (pin (num 37) (name GPIO_26) (type power_out))
         (pin (num 38) (name GPIO_20) (type BiDi))
         (pin (num 39) (name GND) (type power_out))
-        (pin (num 40) (name GPIO_21) (type BiDi)))))
+        (pin (num 40) (name GPIO_21) (type BiDi))))
+    (libpart (lib RPI_PSOC5-rescue) (part USB_B_Micro-Connector)
+      (footprints
+        (fp USB*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) USB_B_Micro-Connector))
+      (pins
+        (pin (num 1) (name VBUS) (type power_out))
+        (pin (num 2) (name D-) (type passive))
+        (pin (num 3) (name D+) (type passive))
+        (pin (num 4) (name ID) (type passive))
+        (pin (num 5) (name GND) (type power_out))
+        (pin (num 6) (name Shield) (type passive)))))
   (libraries
-    (library (logical Connector)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Connector.lib"))
     (library (logical Connector_Generic)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Connector_Generic.lib"))
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
     (library (logical RPI_PSOC5-rescue)
-      (uri "C:\\Users\\HPz420\\Documents\\GitHub\\lb-boards\\Raspberry Pi Cards\\RPI_PSOC5/RPI_PSOC5-rescue.lib")))
+      (uri "C:\\Users\\dgilliland\\Documents\\GitHub\\lb-boards\\Raspberry Pi Cards\\RPI_PSOC5/RPI_PSOC5-rescue.lib")))
   (nets
     (net (code 1) (name /USBM)
       (node (ref R8) (pin 1))

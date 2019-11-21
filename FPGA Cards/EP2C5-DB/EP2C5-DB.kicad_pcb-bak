@@ -56,7 +56,7 @@
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.15)
     (mod_text_size 1.905 1.524)
-    (mod_text_width 0.25)
+    (mod_text_width 0.381)
     (pad_size 9.525 9.525)
     (pad_drill 3.8354)
     (pad_to_mask_clearance 0)
@@ -278,7 +278,7 @@
     (tags "LED diameter 5.0mm 2 pins")
     (path /5CAA4486)
     (fp_text reference DS1 (at -4.572 0.127) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value LED_ALT (at 1.27 3.96) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -311,7 +311,7 @@
     (tags "mini din 6pin connector socket")
     (path /5DD04515)
     (fp_text reference J7 (at 8.128 6.223 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value Conn_01x06 (at -0.03 10.15) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -350,7 +350,7 @@
     (at 84.455 96.52 180)
     (path /58359A44)
     (fp_text reference J2 (at -6.858 -4.826 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value RCA-JACK (at -10.033 -2.286 270) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -375,10 +375,10 @@
   )
 
   (module LandBoards_Marking:TEST_BLK-REAR (layer F.Cu) (tedit 58BD9AAD) (tstamp 58BD942F)
-    (at 97.155 83.185)
+    (at 84.582 61.341)
     (path /580F6225)
     (fp_text reference TESTED (at 0 -3.5) (layer B.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)) (justify mirror))
+      (effects (font (size 1.524 1.905) (thickness 0.381)) (justify mirror))
     )
     (fp_text value TESTED_COUPON (at 0 4) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -408,7 +408,7 @@
     (at 99 16 180)
     (path /537A5C86)
     (fp_text reference MTG3 (at 0 -5.588 180) (layer F.SilkS) hide
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value MTG_HOLE (at 0.254 5.842 180) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -421,7 +421,7 @@
     (at 99 99 180)
     (path /537A5CA4)
     (fp_text reference MTG1 (at 0 -5.588 180) (layer F.SilkS) hide
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value MTG_HOLE (at 0.254 5.842 180) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -436,7 +436,7 @@
     (tags "pin header")
     (path /583255A5)
     (fp_text reference P1 (at 0 -2.54 90) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X14 (at 0 -3.1 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -520,7 +520,7 @@
     (tags "pin header")
     (path /5832567C)
     (fp_text reference P2 (at 2.032 -2.667 180) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X14 (at 0 -3.1 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -598,7 +598,7 @@
     (tags "pin header")
     (path /5832581F)
     (fp_text reference P3 (at 0 -3.048 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X14 (at 0 -3.1 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -683,7 +683,7 @@
     (tags "pin header")
     (path /58325825)
     (fp_text reference P4 (at 0 -2.54) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X14 (at 0 -3.1) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -758,7 +758,7 @@
     (tags "pin header")
     (path /5835D791)
     (fp_text reference J6 (at 0 -2.54) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X06 (at 0 -3.1) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -813,7 +813,7 @@
     (path /5834DE8A)
     (attr smd)
     (fp_text reference R15 (at -11.43 0 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 470 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -846,7 +846,7 @@
     (path /5834DFC5)
     (attr smd)
     (fp_text reference R16 (at 0 -2.159 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 680 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -879,7 +879,7 @@
     (path /5834DFEF)
     (attr smd)
     (fp_text reference R13 (at -11.43 0.0635 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 470 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -912,7 +912,7 @@
     (path /5834E01F)
     (attr smd)
     (fp_text reference R14 (at -11.43 0 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 680 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -945,7 +945,7 @@
     (path /5834E081)
     (attr smd)
     (fp_text reference R12 (at -11.43 -0.0635 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 680 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -978,7 +978,7 @@
     (path /5835A1E3)
     (attr smd)
     (fp_text reference R9 (at 4.191 -0.127) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 470 (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1011,7 +1011,7 @@
     (path /58359DA5)
     (attr smd)
     (fp_text reference R10 (at 4.826 -0.254) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 1K (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1044,7 +1044,7 @@
     (path /58535E20)
     (attr smd)
     (fp_text reference R8 (at 0.127 -2.159 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 10K (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1077,7 +1077,7 @@
     (path /585361AA)
     (attr smd)
     (fp_text reference R7 (at 0 2.032 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 10K (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1110,7 +1110,7 @@
     (path /5855F6F4)
     (attr smd)
     (fp_text reference R1 (at -0.0635 -2.4765) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1143,7 +1143,7 @@
     (path /5855F7BF)
     (attr smd)
     (fp_text reference R3 (at -3.81 0) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1176,7 +1176,7 @@
     (path /5855F824)
     (attr smd)
     (fp_text reference R2 (at -3.81 0) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1209,7 +1209,7 @@
     (path /5855F888)
     (attr smd)
     (fp_text reference R6 (at 0.0635 -2.2225 180) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1242,7 +1242,7 @@
     (path /5855F8FB)
     (attr smd)
     (fp_text reference R5 (at 3.81 0 180) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1275,7 +1275,7 @@
     (path /5855F969)
     (attr smd)
     (fp_text reference R4 (at 3.81 0 180) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 2.7K (at 0 2.1 180) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1307,7 +1307,7 @@
     (tags "pin header")
     (path /585CAC70)
     (fp_text reference J5 (at -3.175 -2.54) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X04 (at 0 -3.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1395,7 +1395,7 @@
     (at 16 99)
     (path /585D800C)
     (fp_text reference MTG2 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -1411,7 +1411,7 @@
     (path /5834E04D)
     (attr smd)
     (fp_text reference R11 (at 0 2.032 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 470 (at 0 2.1 270) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1443,7 +1443,7 @@
     (tags "pin header")
     (path /585DEEAD)
     (fp_text reference J8 (at 0 -2.667 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_02X06 (at 0 -3.1 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1496,7 +1496,7 @@
     (descr "D-SUB 15 pin VGA socket, Tyco P/N 440467-1")
     (path /5834BA78)
     (fp_text reference J1 (at 11.938 -10.287) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value VGA (at -12.5095 -10.287) (layer F.SilkS)
       (effects (font (size 1.905 1.905) (thickness 0.47625)))
@@ -1559,7 +1559,7 @@
     (at 16 16)
     (path /58821E0F)
     (fp_text reference MTG4 (at 0 -5.588) (layer F.SilkS) hide
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value MTG_HOLE (at 0.254 5.842) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3048)))
@@ -1575,7 +1575,7 @@
     (path /583493AE)
     (attr smd)
     (fp_text reference U1 (at 0 -11.176 90) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value AS6C1008 (at 0 11.176 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1665,7 +1665,7 @@
     (at 78.232 65.532 90)
     (path /5835B2C4)
     (fp_text reference J4 (at 12.573 -4.953 90) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value SD_Card (at 5.461 16.129 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1714,7 +1714,7 @@
     (path /5884F709)
     (attr smd)
     (fp_text reference R17 (at 5.207 -0.0635 180) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value 220 (at 0 2.1 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1746,7 +1746,7 @@
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /585C8B98)
     (fp_text reference J3 (at 0 -2.33 270) (layer F.SilkS)
-      (effects (font (size 1.524 1.905) (thickness 0.25)))
+      (effects (font (size 1.524 1.905) (thickness 0.381)))
     )
     (fp_text value CONN_01X04 (at 0 9.95 270) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2342,7 +2342,7 @@
   (segment (start 27.2885 86.7575) (end 27.2885 84.201) (width 0.254) (layer F.Cu) (net 80))
   (segment (start 25.273 88.773) (end 27.2885 86.7575) (width 0.254) (layer F.Cu) (net 80))
 
-  (zone (net 2) (net_name VCC) (layer F.Cu) (tstamp 5CA8DFA2) (hatch edge 0.508)
+  (zone (net 2) (net_name VCC) (layer F.Cu) (tstamp 5DCFB6EA) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -3380,7 +3380,7 @@
       )
     )
   )
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5CA8DF9F) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5DCFB6E7) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
