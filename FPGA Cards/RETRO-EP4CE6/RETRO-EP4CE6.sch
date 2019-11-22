@@ -5,9 +5,9 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "FPGA Carrier"
-Date "2017-03-12"
-Rev "X1"
+Title "RETRO-EP4 Card"
+Date "2019-11-22"
+Rev "X2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
