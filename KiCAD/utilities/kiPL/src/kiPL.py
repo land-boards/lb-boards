@@ -26,8 +26,7 @@ import sys
 
 sys.path.append('C:\\Users\\Douglas\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
-sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
-
+sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules')
 defaultPath = '.'
 
 from dgProgDefaults import *
