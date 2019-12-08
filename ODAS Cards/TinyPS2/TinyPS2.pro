@@ -1,4 +1,4 @@
-update=11/21/2019 10:44:00 AM
+update=12/8/2019 10:46:39 AM
 version=1
 last_client=kicad
 [general]
@@ -40,3 +40,13 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
