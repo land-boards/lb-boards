@@ -1,4 +1,4 @@
-update=12/21/2019 1:09:29 PM
+update=8/9/2015 10:29:49 AM
 version=1
 last_client=kicad
 [general]
@@ -36,6 +36,15 @@ LibName4=divers
 LibName5=dip_sockets
 LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
 LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/DigIO16-I2C/DigIO16-I2C
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -49,6 +58,3 @@ RptD_X=0
 RptD_Y=100
 RptLab=1
 LabSize=60
-[eeschema]
-version=1
-LibDir=
