@@ -9,15 +9,7 @@ The names must match exactly.
 
 """
 
-import pygtk
-pygtk.require('2.0')
-
-import gtk
-
-# Check for new pygtk: this is new class in PyGtk 2.4
-if gtk.pygtk_version < (2,3,90):
-	 print "PyGtk 2.3.90 or later required"
-	 raise SystemExit
+from tkinter import *
 
 import csv
 import string
@@ -80,7 +72,7 @@ class FindaNetFile:
 			defaultPath = self.extractPathFromPathfilename(retFileName)
 			return retFileName
 		elif response == gtk.RESPONSE_CANCEL:
-			print 'Closed, no files selected'
+			print('Closed, no files selected')
 			dialog.destroy()
 			exit()
 		dialog.destroy()
