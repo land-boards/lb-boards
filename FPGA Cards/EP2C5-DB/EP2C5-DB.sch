@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:EP2C5-DB-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Multi-Computer on FPGA"
-Date "Monday, March 06, 2017"
-Rev "X4"
+Date "2019-12-29"
+Rev "X6"
 Comp "land-boards.com"
 Comment1 "Power is 3.3V from EP2C5 FPGA card"
 Comment2 ""
