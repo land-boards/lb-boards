@@ -78,7 +78,7 @@ class FindaNetFile:
 		dialog.destroy()
 
 class ControlClass:
-	def readInParts(self, inFile):
+	def readNetFileIntoPartsList(self, inFile):
 		"""
 		(design
 		(components
@@ -175,9 +175,9 @@ class ControlClass:
 			elif progState == GOT_LIBPARTS:
 				return outCSVList
 
-	def sortParts(self, outCSVList):
+	def sortPartsList(self, outCSVList):
 		# The sorting is kinda weird but it results in something that makes sense
-#		print 'In sortParts, outCSVList is', outCSVList
+#		print 'In sortPartsList, outCSVList is', outCSVList
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[0])		# sort by Ref Des to get them in order
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[1])		# sort by Sort by part value
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[0][0])	# sort by Sort by part number
@@ -185,51 +185,54 @@ class ControlClass:
 
 	def combineRefDes(self,outCSVList):
 		""" RefDes,Value,Footprint,Manufacturer,ManufacturerPN,Vendor,VendorPN
+		OutList = ['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN']
 		"""
-		lastPart	= []
+		previousPart	= []
 		gotFirstPart = False
-		newComboPart = ''
+		combinedRefDesString = ''
 		inComboPart = False
 		outPL = []
-		qty = 1
-#		print 'outCSVList', outCSVList
+		qty = 0
+		# for row in outCSVList:
+			# print row[0:3]
 		for row in outCSVList:
 			if gotFirstPart == False:		# the first part gets handled here
 				gotFirstPart = True
-				newComboPart += row[0]
+				qty += 1
+				combinedRefDesString += row[0]
 			else:
-				if row[1:] == lastPart[1:]:	# if this part matches the last part
-					newComboPart += ',' + row[0]
+				if row[1:3] == previousPart[1:3]:	# if this part matches the last part
+					combinedRefDesString += ',' + row[0]
 					inComboPart = True
-#					print 'got a match, new combo part ref des', newComboPart
+#					print 'got a match, new combo part ref des', combinedRefDesString
 					qty += 1
 #					print 'qty', qty
 				elif inComboPart == False:	# part didn't match and last part wasn't a combo part
-#						outCSVFile.writerow(lastPart)
+#						outCSVFile.writerow(previousPart)
 					outRow = []
 					outRow.append(qty)
-					outRow += lastPart
+					outRow += previousPart
 					outPL.append(outRow)
-					newComboPart = row[0]
+					combinedRefDesString = row[0]
 #					print 'not match'
 					qty = 1
 				elif inComboPart:	# part mismatch but last part was combo
 					inComboPart = False
 					outRow = []
 					outRow.append(qty)
-					outRow.append(newComboPart)
-					outRow += lastPart[1:]
+					outRow.append(combinedRefDesString)
+					outRow += previousPart[1:]
 					outPL.append(outRow)
-#					print 'changeup, writing new ref des', newComboPart
-					newComboPart = row[0]
+#					print 'changeup, writing new ref des', combinedRefDesString
+					combinedRefDesString = row[0]
 					qty = 1
-			lastPart = row
+			previousPart = row
 		# handle the last part
 		if inComboPart:
 #			qty += 1
 			outRow = []
 			outRow.append(qty)
-			outRow.append(newComboPart)
+			outRow.append(combinedRefDesString)
 			outRow += row[1:]
 			outPL.append(outRow)
 #			outCSVFile.writerow(outRow)
@@ -240,14 +243,53 @@ class ControlClass:
 			outPL.append(outRow)
 		newOutPL = []
 		for row in outPL:
+			if row[1].find(',') != -1:
+				row[1] = self.sortedRefDes(row[1])
+		for row in outPL:
 			newOutPLRow = []
-			newOutPLRow.append(row[0])
-			newOutPLRow.append(row[2])
-			newOutPLRow.append(row[1])
-			newOutPLRow += row[3:]
+			newOutPLRow.append(row[0])	# Qty
+			newOutPLRow.append(row[2])	# Value
+			newOutPLRow.append(row[1])	# Ref Des
+			#newOutPLRow += row[3:]		# Rest of original line
 			newOutPL.append(newOutPLRow)
+		# print "Out"
+		# for line in newOutPL:
+			# print line
 		return newOutPL
 
+	def sortedRefDes(self,refString):
+		""" Reference designators are pre-sorted but not in an ideal way
+		This function sorts reference designators like this one:
+		['C1', 'C10', 'C2', 'C3', 'C5', 'C6']
+		Into a list like this one:
+		['C1', 'C2', 'C3', 'C5', 'C6', 'C10']
+		"""
+		#print "sortedRefDes: stuff to sort",refString
+		refDesList = refString.split(',')
+		#print refDesList
+		shortestRefDes = 10
+		longestRefDes = 0
+		newRefDesList = []
+		for refDes in refDesList:
+			if len(refDes) < shortestRefDes:
+				shortestRefDes = len(refDes)
+			if len(refDes) > longestRefDes:
+				longestRefDes = len(refDes)
+		if shortestRefDes == longestRefDes:
+			return refString
+		else:
+			#print "Some sorting to do"	# Example: ['C1', 'C10', 'C2', 'C3', 'C5', 'C6']
+			for leng in range(shortestRefDes,longestRefDes+1):
+				for refDes in refDesList:
+					if len(refDes) == leng:
+						newRefDesList.append(refDes)
+			#print "newRefDesList",newRefDesList
+		newRefDesString = ''
+		for item in newRefDesList:
+			newRefDesString += item
+			newRefDesString += ','
+		return newRefDesString[:-1]
+	
 	def writeOutMWTable(self, outFilePtr, theList):
 		"""
 		:param outFilePtr: Points to the output file.
@@ -322,12 +364,12 @@ class ControlClass:
 				errorDialog('ERROR - Tried again,  - Is the file already open in EXCEL?')
 				exit()
 
-		partsList = self.readInParts(inFile)
+		partsList = self.readNetFileIntoPartsList(inFile)
 #		print 'partsList', partsList
-		sortedPL = self.sortParts(partsList)
+		sortedPL = self.sortPartsList(partsList)
 #		print 'sortedPL', sortedPL
 		reduxPL = self.combineRefDes(sortedPL)
-		outCSVFile.writerow(['Qty','Value','RefDes','Footprint','Manufacturer','ManufacturerPN','Vendor','VendorPN'])
+		outCSVFile.writerow(['Qty','Value','RefDes'])
 		outCSVFile.writerows(reduxPL)
 		
 		self.writeOutMWTable(outMWFile, reduxPL)

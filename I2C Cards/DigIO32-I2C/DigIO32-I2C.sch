@@ -125,7 +125,7 @@ F 3 "~" H 6250 1400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:CONN_02X02 J6
+L DigIO32-I2C-rescue:CONN_02X02-conn J6
 U 1 1 553AD92A
 P 2600 3750
 F 0 "J6" H 2600 3900 50  0000 C CNN
@@ -213,7 +213,7 @@ F 3 "" H 2800 8800 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:CONN_01X02 J5
+L DigIO32-I2C-rescue:CONN_01X02-conn J5
 U 1 1 553C4058
 P 2800 9400
 F 0 "J5" H 2800 9550 50  0000 C CNN
@@ -264,7 +264,7 @@ F 3 "~" H 4900 6450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:DB37 P1
+L DigIO32-I2C-rescue:DB37-conn P1
 U 1 1 580E63D0
 P 10000 4800
 F 0 "P1" H 10100 6700 70  0000 C CNN
@@ -733,7 +733,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 7600 8000 5000
 $Comp
-L conn:CONN_02X02 J3
+L DigIO32-I2C-rescue:CONN_02X02-conn J3
 U 1 1 580EF093
 P 3850 9750
 F 0 "J3" H 3850 9900 50  0000 C CNN
@@ -755,7 +755,7 @@ F 3 "" H 5800 1750 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conn:CONN_01X04 J4
+L DigIO32-I2C-rescue:CONN_01X04-conn J4
 U 1 1 580F09F7
 P 3600 900
 F 0 "J4" H 3600 1150 50  0000 C CNN
@@ -784,7 +784,7 @@ Connection ~ 4900 1400
 Connection ~ 5800 1400
 Connection ~ 5800 2150
 $Comp
-L conn:CONN_02X04 J2
+L DigIO32-I2C-rescue:CONN_02X04-conn J2
 U 1 1 580F39C0
 P 2500 3000
 F 0 "J2" H 2500 3250 50  0000 C CNN
@@ -811,7 +811,7 @@ Wire Wire Line
 Wire Wire Line
 	2150 2850 2250 2850
 $Comp
-L conn:CONN_01X05 J1
+L DigIO32-I2C-rescue:CONN_01X05-conn J1
 U 1 1 580F4DF3
 P 2500 1750
 F 0 "J1" H 2500 2050 50  0000 C CNN

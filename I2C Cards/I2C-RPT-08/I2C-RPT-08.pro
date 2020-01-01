@@ -1,4 +1,4 @@
-update=1/16/2017 4:08:18 PM
+update=1/1/2020 9:43:12 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -34,15 +34,18 @@ LibName4=pin_array
 LibName5=divers
 LibName6=dip_sockets
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=transistors
-LibName4=conn
-LibName5=regul
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-[general]
+[schematic_editor]
 version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

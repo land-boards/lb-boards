@@ -5,10 +5,10 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "OPTO-ISOLATED CARD"
-Date "Friday, June 12, 2015"
-Rev "X1"
-Comp "land-boards.com"
+Title "I2C Multiplexer"
+Date "2020-01-01"
+Rev "X3"
+Comp "Land Boards LLC"
 Comment1 ""
 Comment2 ""
 Comment3 ""

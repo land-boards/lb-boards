@@ -1,4 +1,4 @@
-update=3/15/2019 4:33:10 PM
+update=1/1/2020 12:35:50 PM
 version=1
 last_client=kicad
 [general]
@@ -39,3 +39,13 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dou
 [eeschema]
 version=1
 LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
