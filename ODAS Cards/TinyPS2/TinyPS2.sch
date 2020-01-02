@@ -92,7 +92,7 @@ U 1 1 5030EFB9
 P 1950 4150
 F 0 "C1" H 2000 4250 50  0000 L CNN
 F 1 "0.1uF" H 2000 4050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 4150 60  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 3750 30  0000 C CNN
 F 3 "" H 1950 4150 60  0001 C CNN
 	1    1950 4150
 	1    0    0    -1  
@@ -103,7 +103,7 @@ U 1 1 5030EFB3
 P 1950 3550
 F 0 "R1" V 2030 3550 50  0000 C CNN
 F 1 "10K" V 1950 3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 3550 60  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 4150 30  0000 C CNN
 F 3 "" H 1950 3550 60  0001 C CNN
 	1    1950 3550
 	1    0    0    -1  
@@ -153,17 +153,17 @@ F 3 "~" H 3750 7350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C4
+L Device:C C3
 U 1 1 51CCA2CE
 P 4100 7350
-F 0 "C4" H 4100 7450 40  0000 L CNN
+F 0 "C3" H 4100 7450 40  0000 L CNN
 F 1 "0.1uF" H 4106 7265 40  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4100 7000 30  0000 C CNN
 F 3 "~" H 4100 7350 60  0000 C CNN
 	1    4100 7350
 	1    0    0    -1  
 $EndComp
-Text Notes 2900 4650 0    60   ~ 0
+Text Notes 2900 4650 0    60   ~ 12
 MICROPROCESSOR
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even H2
@@ -380,23 +380,23 @@ SERTX
 Text Label 1950 1850 0    50   ~ 0
 SERTX
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5DD9D6DB
 P 7700 3600
-F 0 "R?" V 7780 3600 50  0000 C CNN
+F 0 "R3" V 7780 3600 50  0000 C CNN
 F 1 "10K" V 7700 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 3600 60  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 4100 30  0000 C CNN
 F 3 "" H 7700 3600 60  0001 C CNN
 	1    7700 3600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5DD9E658
 P 7450 3600
-F 0 "R?" V 7530 3600 50  0000 C CNN
+F 0 "R2" V 7530 3600 50  0000 C CNN
 F 1 "10K" V 7450 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7450 3600 60  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7450 4050 30  0000 C CNN
 F 3 "" H 7450 3600 60  0001 C CNN
 	1    7450 3600
 	1    0    0    -1  
@@ -423,4 +423,10 @@ Wire Wire Line
 Connection ~ 7700 3400
 Wire Wire Line
 	7700 3400 8000 3400
+Text Notes 2350 2450 0    60   ~ 12
+ISP Connector
+Text Notes 7950 4900 0    60   ~ 12
+PS/2 Connector
+Text Notes 7800 2700 0    60   ~ 12
+Serial Port Connector
 $EndSCHEMATC
