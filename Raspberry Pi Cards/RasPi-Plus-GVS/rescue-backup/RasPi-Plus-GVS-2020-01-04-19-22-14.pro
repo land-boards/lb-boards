@@ -1,6 +1,6 @@
-update=1/4/2020 7:23:45 PM
+update=02/09/2014 13:01:05
 version=1
-last_client=kicad
+last_client=eeschema
 [general]
 version=1
 [cvpcb]
@@ -42,13 +42,14 @@ LibName10=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/modules/dougsLib
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
+NetFmtName=PcbnewAdvanced
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=RasPi-Plus-GVS
