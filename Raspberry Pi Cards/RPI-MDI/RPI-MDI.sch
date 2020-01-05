@@ -1,18 +1,13 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:atmel
-LIBS:PCA9685plus
+EESchema Schematic File Version 4
 LIBS:RPI-MDI-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Raspberry Pi Media Directional Interface"
-Date "27 nov 2014"
-Rev "X1"
+Date "2020-01-05"
+Rev "X3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -20,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RASPIO P1
+L RPI-MDI-rescue:RASPIO P1
 U 1 1 53B16746
 P 2500 2050
 F 0 "P1" H 2150 2850 60  0000 C CNN
@@ -75,7 +70,7 @@ SCLK1
 Text Label 3500 950  0    60   ~ 0
 R5
 $Comp
-L CONN_3 J1
+L RPI-MDI-rescue:CONN_3 J1
 U 1 1 54281420
 P 9900 1600
 F 0 "J1" V 9850 1600 50  0000 C CNN
@@ -86,7 +81,7 @@ F 3 "" H 9900 1600 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L CONN_3 J2
+L RPI-MDI-rescue:CONN_3 J2
 U 1 1 5428144D
 P 9900 2050
 F 0 "J2" V 9850 2050 50  0000 C CNN
@@ -97,7 +92,7 @@ F 3 "" H 9900 2050 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L CONN_3 J3
+L RPI-MDI-rescue:CONN_3 J3
 U 1 1 54281453
 P 9900 2500
 F 0 "J3" V 9850 2500 50  0000 C CNN
@@ -108,7 +103,7 @@ F 3 "" H 9900 2500 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L PCA9685 U1
+L RPI-MDI-rescue:PCA9685 U1
 U 1 1 54281542
 P 6500 2350
 F 0 "U1" H 6500 2350 60  0000 C CNN
@@ -119,7 +114,7 @@ F 3 "" H 6500 2350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 54281FF2
 P 6500 3750
 F 0 "#PWR01" H 6500 3750 30  0001 C CNN
@@ -130,7 +125,7 @@ F 3 "" H 6500 3750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 54282001
 P 1600 3100
 F 0 "#PWR02" H 1600 3100 30  0001 C CNN
@@ -141,7 +136,7 @@ F 3 "" H 1600 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 J4
+L RPI-MDI-rescue:CONN_2 J4
 U 1 1 5428223E
 P 2650 6000
 F 0 "J4" V 2600 6000 40  0000 C CNN
@@ -152,7 +147,7 @@ F 3 "" H 2650 6000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 J5
+L RPI-MDI-rescue:CONN_2 J5
 U 1 1 54282250
 P 2650 6500
 F 0 "J5" V 2600 6500 40  0000 C CNN
@@ -163,7 +158,7 @@ F 3 "" H 2650 6500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 J6
+L RPI-MDI-rescue:CONN_2 J6
 U 1 1 54282256
 P 2650 6950
 F 0 "J6" V 2600 6950 40  0000 C CNN
@@ -174,7 +169,7 @@ F 3 "" H 2650 6950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 5428225E
 P 2050 5600
 F 0 "R3" V 2130 5600 40  0000 C CNN
@@ -185,7 +180,7 @@ F 3 "~" H 2050 5600 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5428227F
 P 1850 5600
 F 0 "R2" V 1930 5600 40  0000 C CNN
@@ -196,7 +191,7 @@ F 3 "~" H 1850 5600 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 54282285
 P 1650 5600
 F 0 "R1" V 1730 5600 40  0000 C CNN
@@ -209,7 +204,7 @@ $EndComp
 Text Label 2200 5400 0    60   ~ 0
 +3.3V
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 54282611
 P 2150 7300
 F 0 "#PWR03" H 2150 7300 30  0001 C CNN
@@ -222,7 +217,7 @@ $EndComp
 Text Label 1000 6850 0    60   ~ 0
 IO_22
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5428274E
 P 7800 3200
 F 0 "R4" V 7880 3200 40  0000 C CNN
@@ -233,7 +228,7 @@ F 3 "~" H 7800 3200 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5428275D
 P 7800 3000
 F 0 "R5" V 7880 3000 40  0000 C CNN
@@ -244,7 +239,7 @@ F 3 "~" H 7800 3000 30  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED D1
+L RPI-MDI-rescue:LED D1
 U 1 1 5428282F
 P 8350 3200
 F 0 "D1" H 8350 3100 50  0000 C CNN
@@ -255,7 +250,7 @@ F 3 "~" H 8350 3200 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED D2
+L RPI-MDI-rescue:LED D2
 U 1 1 5428283E
 P 8350 3000
 F 0 "D2" H 8350 2900 50  0000 C CNN
@@ -270,7 +265,7 @@ IO_25
 Text Label 1000 6400 0    60   ~ 0
 IO_4
 $Comp
-L C C1
+L Device:C C1
 U 1 1 542838CA
 P 9950 6300
 F 0 "C1" H 9950 6400 40  0000 L CNN
@@ -283,7 +278,7 @@ $EndComp
 Text Label 9150 6050 0    60   ~ 0
 R5
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 54283C05
 P 9950 6550
 F 0 "#PWR04" H 9950 6550 30  0001 C CNN
@@ -298,7 +293,7 @@ Text Label 5700 1200 0    60   ~ 0
 Text Label 9050 1400 0    60   ~ 0
 R5
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 542841F7
 P 9450 2700
 F 0 "#PWR05" H 9450 2700 30  0001 C CNN
@@ -309,7 +304,7 @@ F 3 "" H 9450 2700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 5453924F
 P 5650 1450
 F 0 "C2" H 5650 1550 40  0000 L CNN
@@ -320,7 +315,7 @@ F 3 "~" H 5650 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 545393A5
 P 9650 6300
 F 0 "C4" H 9650 6400 40  0000 L CNN
@@ -331,7 +326,7 @@ F 3 "~" H 9650 6300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 545393AB
 P 9650 6550
 F 0 "#PWR06" H 9650 6550 30  0001 C CNN
@@ -342,7 +337,7 @@ F 3 "" H 9650 6550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L Device:C C3
 U 1 1 545393B3
 P 9350 6300
 F 0 "C3" H 9350 6400 40  0000 L CNN
@@ -353,7 +348,7 @@ F 3 "~" H 9350 6300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 545393B9
 P 9350 6550
 F 0 "#PWR07" H 9350 6550 30  0001 C CNN
@@ -364,7 +359,7 @@ F 3 "" H 9350 6550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_3 J8
+L RPI-MDI-rescue:CONN_3 J8
 U 1 1 547747CA
 P 2850 950
 F 0 "J8" V 2800 950 50  0000 C CNN
@@ -385,7 +380,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 1050 3300 1050
 Wire Wire Line
-	9350 3000 9350 1400
+	9350 3000 9350 2500
 Wire Wire Line
 	9350 2500 9550 2500
 Connection ~ 9350 1600
@@ -417,7 +412,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1200 6500 1300
 Wire Wire Line
-	9050 6050 9950 6050
+	9050 6050 9350 6050
 Wire Wire Line
 	9950 6450 9950 6550
 Wire Wire Line
@@ -455,7 +450,7 @@ Connection ~ 6500 3650
 Wire Wire Line
 	5650 1700 5750 1700
 Wire Wire Line
-	5650 1600 5650 3650
+	5650 1600 5650 1700
 Wire Wire Line
 	5650 3650 6500 3650
 Wire Wire Line
@@ -486,21 +481,21 @@ Connection ~ 2150 7050
 Wire Wire Line
 	2150 7050 2300 7050
 Wire Wire Line
-	2150 6100 2150 7300
+	2150 6100 2150 6600
 Wire Wire Line
 	2300 6100 2150 6100
 Wire Wire Line
 	1650 6850 1650 5750
 Wire Wire Line
-	850  6850 2300 6850
+	850  6850 1650 6850
 Wire Wire Line
 	1850 6400 1850 5750
 Wire Wire Line
-	850  6400 2300 6400
+	850  6400 1850 6400
 Wire Wire Line
 	2050 5900 2050 5750
 Wire Wire Line
-	850  5900 2300 5900
+	850  5900 2050 5900
 Connection ~ 2050 5400
 Wire Wire Line
 	2050 5400 2050 5450
@@ -510,10 +505,10 @@ Wire Wire Line
 Wire Wire Line
 	1650 5400 1650 5450
 Wire Wire Line
-	1650 5400 2550 5400
+	1650 5400 1850 5400
 Connection ~ 1600 2950
 Wire Wire Line
-	6500 3600 6500 3750
+	6500 3600 6500 3650
 Connection ~ 9350 2050
 Wire Wire Line
 	9350 2050 9550 2050
@@ -524,7 +519,7 @@ Connection ~ 9450 2600
 Wire Wire Line
 	9450 2600 9550 2600
 Wire Wire Line
-	9450 1700 9450 2700
+	9450 1700 9450 2150
 Wire Wire Line
 	9550 1700 9450 1700
 Wire Wire Line
@@ -541,13 +536,13 @@ Connection ~ 1600 2650
 Wire Wire Line
 	3300 1650 3200 1650
 Wire Wire Line
-	3300 1650 3300 2950
+	3300 1650 3300 2050
 Wire Wire Line
 	3300 2950 1600 2950
 Wire Wire Line
 	1600 2650 1800 2650
 Wire Wire Line
-	1600 1850 1600 3100
+	1600 1850 1600 2650
 Wire Wire Line
 	1800 1850 1600 1850
 Wire Wire Line
@@ -558,7 +553,7 @@ Connection ~ 3300 1450
 Wire Wire Line
 	3300 1550 3200 1550
 Wire Wire Line
-	3300 1050 3300 1550
+	3300 1050 3300 1450
 Wire Wire Line
 	3200 1450 3300 1450
 Wire Wire Line
@@ -597,9 +592,9 @@ Wire Wire Line
 	1800 1650 950  1650
 Connection ~ 1700 1450
 Wire Wire Line
-	950  1450 1800 1450
+	950  1450 1700 1450
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 54774874
 P 3650 700
 F 0 "#PWR08" H 3650 700 30  0001 C CNN
@@ -612,7 +607,7 @@ $EndComp
 Wire Wire Line
 	3850 950  3200 950 
 Wire Wire Line
-	8550 3000 9350 3000
+	8550 3000 8650 3000
 NoConn ~ 7300 3100
 NoConn ~ 7300 3000
 NoConn ~ 7300 2900
@@ -624,4 +619,64 @@ NoConn ~ 7300 2100
 NoConn ~ 7300 2000
 NoConn ~ 7300 1900
 NoConn ~ 7300 1800
+Wire Wire Line
+	9350 1600 9350 1400
+Wire Wire Line
+	8650 3000 9350 3000
+Wire Wire Line
+	9350 2500 9350 2050
+Wire Wire Line
+	9350 6050 9650 6050
+Wire Wire Line
+	9650 6050 9950 6050
+Wire Wire Line
+	5650 1700 5650 1800
+Wire Wire Line
+	5650 2900 5650 3650
+Wire Wire Line
+	5650 2400 5650 2900
+Wire Wire Line
+	5650 2200 5650 2400
+Wire Wire Line
+	5650 2100 5650 2200
+Wire Wire Line
+	5650 2000 5650 2100
+Wire Wire Line
+	5650 1900 5650 2000
+Wire Wire Line
+	5650 1800 5650 1900
+Wire Wire Line
+	6500 3650 6500 3750
+Wire Wire Line
+	1650 6850 2300 6850
+Wire Wire Line
+	1850 6400 2300 6400
+Wire Wire Line
+	2050 5900 2300 5900
+Wire Wire Line
+	2150 6600 2150 7050
+Wire Wire Line
+	2150 7050 2150 7300
+Wire Wire Line
+	2050 5400 2550 5400
+Wire Wire Line
+	1850 5400 2050 5400
+Wire Wire Line
+	1600 2950 1600 3100
+Wire Wire Line
+	9350 2050 9350 1600
+Wire Wire Line
+	9450 2150 9450 2600
+Wire Wire Line
+	9450 2600 9450 2700
+Wire Wire Line
+	3300 2350 3300 2950
+Wire Wire Line
+	3300 2050 3300 2350
+Wire Wire Line
+	1600 2650 1600 2950
+Wire Wire Line
+	3300 1450 3300 1550
+Wire Wire Line
+	1700 1450 1800 1450
 $EndSCHEMATC

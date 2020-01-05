@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -52,13 +49,13 @@ Wire Wire Line
 Wire Wire Line
 	1100 4050 1100 4650
 Wire Wire Line
-	1100 4650 8800 4650
+	1100 4650 2500 4650
 Wire Wire Line
 	4100 4650 4100 4050
 Wire Wire Line
 	4100 4050 4300 4050
 Wire Wire Line
-	5200 3500 6900 3500
+	5200 3500 5350 3500
 Wire Wire Line
 	6550 4650 6550 4050
 Wire Wire Line
@@ -100,7 +97,7 @@ Wire Wire Line
 	5850 2950 5850 3500
 Connection ~ 5850 3500
 $Comp
-L CONN_1 MTG1
+L OneWireLogger-rescue:CONN_1 MTG1
 U 1 1 51830500
 P 9350 6700
 F 0 "MTG1" H 9430 6700 40  0000 L CNN
@@ -111,7 +108,7 @@ F 3 "~" H 9350 6700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG2
+L OneWireLogger-rescue:CONN_1 MTG2
 U 1 1 5183050F
 P 9350 6800
 F 0 "MTG2" H 9430 6800 40  0000 L CNN
@@ -122,7 +119,7 @@ F 3 "~" H 9350 6800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG3
+L OneWireLogger-rescue:CONN_1 MTG3
 U 1 1 5183051E
 P 9350 6900
 F 0 "MTG3" H 9430 6900 40  0000 L CNN
@@ -133,7 +130,7 @@ F 3 "~" H 9350 6900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG4
+L OneWireLogger-rescue:CONN_1 MTG4
 U 1 1 5183052D
 P 9350 7000
 F 0 "MTG4" H 9430 7000 40  0000 L CNN
@@ -148,7 +145,7 @@ NoConn ~ 9200 6800
 NoConn ~ 9200 6900
 NoConn ~ 9200 7000
 $Comp
-L CONN_1 MTG6
+L OneWireLogger-rescue:CONN_1 MTG6
 U 1 1 518324C9
 P 9350 7200
 F 0 "MTG6" H 9430 7200 40  0000 L CNN
@@ -159,7 +156,7 @@ F 3 "~" H 9350 7200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG5
+L OneWireLogger-rescue:CONN_1 MTG5
 U 1 1 518324D8
 P 9350 7100
 F 0 "MTG5" H 9430 7100 40  0000 L CNN
@@ -172,7 +169,7 @@ $EndComp
 NoConn ~ 9200 7200
 NoConn ~ 9200 7100
 $Comp
-L CONN_1 FID1
+L OneWireLogger-rescue:CONN_1 FID1
 U 1 1 518D20E3
 P 9350 6500
 F 0 "FID1" H 9430 6500 40  0000 L CNN
@@ -184,7 +181,7 @@ F 3 "~" H 9350 6500 60  0000 C CNN
 $EndComp
 NoConn ~ 9200 6500
 $Comp
-L CONN_1 FID2
+L OneWireLogger-rescue:CONN_1 FID2
 U 1 1 518D21B8
 P 9350 6400
 F 0 "FID2" H 9430 6400 40  0000 L CNN
@@ -246,7 +243,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 3800 2900 3800
 $Comp
-L COUPON REV_BLOCK1
+L OneWireLogger-rescue:COUPON REV_BLOCK1
 U 1 1 51DDC45B
 P 9400 6100
 F 0 "REV_BLOCK1" H 9400 6050 60  0000 C CNN
@@ -256,4 +253,16 @@ F 3 "~" H 9400 6100 60  0000 C CNN
 	1    9400 6100
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4100 4650 5350 4650
+Wire Wire Line
+	6550 4650 8800 4650
+Wire Wire Line
+	5850 3500 6900 3500
+Wire Wire Line
+	5350 3500 5850 3500
+Wire Wire Line
+	5350 4650 6550 4650
+Wire Wire Line
+	2500 4650 4100 4650
 $EndSCHEMATC

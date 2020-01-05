@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SWITCH_INV SW1
+L OneWireLogger-rescue:SWITCH_INV SW1
 U 1 1 51B9F08E
 P 6900 1850
 F 0 "SW1" H 6700 2000 50  0000 C CNN
@@ -29,7 +26,7 @@ F 3 "~" H 6900 1850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOS_P Q1
+L OneWireLogger-rescue:MOS_P Q1
 U 1 1 51B9F09D
 P 6950 2550
 F 0 "Q1" V 6950 2350 60  0000 R CNN
@@ -44,17 +41,17 @@ Wire Wire Line
 Wire Wire Line
 	6250 2450 6250 1850
 Wire Wire Line
-	3050 1850 6400 1850
+	3050 1850 4150 1850
 Wire Wire Line
 	7150 2450 7650 2450
 Wire Wire Line
 	7650 2450 7650 1750
 Wire Wire Line
-	7400 1750 8750 1750
+	7400 1750 7650 1750
 Connection ~ 7650 1750
 Connection ~ 6250 1850
 $Comp
-L 4093 U6
+L OneWireLogger-rescue:4093 U6
 U 1 1 51B9F256
 P 4150 3600
 F 0 "U6" H 4300 3850 60  0000 C CNN
@@ -65,7 +62,7 @@ F 3 "" H 4150 3600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4093 U6
+L OneWireLogger-rescue:4093 U6
 U 2 1 51B9F265
 P 5650 3700
 F 0 "U6" H 5800 3950 60  0000 C CNN
@@ -76,7 +73,7 @@ F 3 "" H 5650 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4093 U6
+L OneWireLogger-rescue:4093 U6
 U 4 1 51B9F274
 P 10150 6600
 F 0 "U6" H 10300 6850 60  0000 C CNN
@@ -87,7 +84,7 @@ F 3 "" H 10150 6600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4093 U6
+L OneWireLogger-rescue:4093 U6
 U 3 1 51B9F283
 P 10150 5950
 F 0 "U6" H 10300 6200 60  0000 C CNN
@@ -98,15 +95,15 @@ F 3 "" H 10150 5950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 3600 5150 3600
+	4650 3600 4750 3600
 Wire Wire Line
-	4750 3800 5150 3800
+	4750 3800 5000 3800
 Wire Wire Line
-	4750 3600 4750 4100
+	4750 3600 4750 3800
 Connection ~ 4750 3600
 Connection ~ 4750 3800
 $Comp
-L R R22
+L OneWireLogger-rescue:R R22
 U 1 1 51B9F2B2
 P 4750 4350
 F 0 "R22" V 4830 4350 40  0000 C CNN
@@ -121,7 +118,7 @@ F 7 "71-CRCW0805J-100K-E3" H 4750 4350 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L OneWireLogger-rescue:C C9
 U 1 1 51B9F2C1
 P 4750 5000
 F 0 "C9" H 4750 5100 40  0000 L CNN
@@ -136,14 +133,14 @@ F 7 "581-08055C104M" H 4750 5000 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4750 4600 4750 4800
+	4750 4600 4750 4700
 Wire Wire Line
 	3500 4700 4750 4700
 Wire Wire Line
-	3500 4500 3500 4700
+	3500 4500 3500 4600
 Connection ~ 4750 4700
 Wire Wire Line
-	3500 2950 3500 3900
+	3500 2950 3500 3500
 Wire Wire Line
 	3500 3700 3650 3700
 Wire Wire Line
@@ -152,7 +149,7 @@ Connection ~ 3500 3700
 Wire Wire Line
 	9650 5850 9550 5850
 Wire Wire Line
-	9550 5850 9550 6950
+	9550 5850 9550 6050
 Wire Wire Line
 	9650 6700 9550 6700
 Connection ~ 9550 6700
@@ -163,7 +160,7 @@ Wire Wire Line
 	9650 6050 9550 6050
 Connection ~ 9550 6050
 $Comp
-L GND #PWR023
+L OneWireLogger-rescue:GND #PWR023
 U 1 1 51B9F3D0
 P 9550 6950
 F 0 "#PWR023" H 9550 6950 30  0001 C CNN
@@ -176,11 +173,11 @@ $EndComp
 Wire Wire Line
 	6950 3700 6150 3700
 Wire Wire Line
-	6950 2750 6950 3700
+	6950 2750 6950 2950
 Wire Wire Line
 	6950 2950 5450 2950
 $Comp
-L R R23
+L OneWireLogger-rescue:R R23
 U 1 1 51B9F5D7
 P 5200 2950
 F 0 "R23" V 5280 2950 40  0000 C CNN
@@ -212,7 +209,7 @@ NoConn ~ 10650 6600
 NoConn ~ 10650 5950
 NoConn ~ 7400 1950
 $Comp
-L NPN Q2
+L OneWireLogger-rescue:NPN Q2
 U 1 1 51BA1397
 P 5100 4600
 F 0 "Q2" H 5100 4450 50  0000 R CNN
@@ -234,7 +231,7 @@ Connection ~ 5000 3800
 Text HLabel 6450 4600 2    60   Input ~ 0
 PWROFF
 $Comp
-L R R20
+L OneWireLogger-rescue:R R20
 U 1 1 51BA26C3
 P 6000 4600
 F 0 "R20" V 6080 4600 40  0000 C CNN
@@ -251,9 +248,9 @@ $EndComp
 Wire Wire Line
 	5300 4600 5750 4600
 Wire Wire Line
-	6250 4600 6450 4600
+	6250 4600 6350 4600
 $Comp
-L SW_PUSH_OMRON SW3
+L OneWireLogger-rescue:SW_PUSH_OMRON SW3
 U 1 1 51BA410C
 P 3400 4200
 F 0 "SW3" H 3550 4310 50  0000 C CNN
@@ -274,12 +271,12 @@ Wire Wire Line
 	3400 4600 3500 4600
 Connection ~ 3500 4600
 Wire Wire Line
-	2900 5350 5700 5350
+	2900 5350 4150 5350
 Wire Wire Line
 	4150 3800 4150 5350
 Connection ~ 4150 5350
 $Comp
-L R R21
+L OneWireLogger-rescue:R R21
 U 1 1 51DAF20E
 P 5950 5350
 F 0 "R21" V 6030 5350 40  0000 C CNN
@@ -302,7 +299,7 @@ Connection ~ 6350 4600
 Text Label 6550 3700 0    60   ~ 0
 GATE
 $Comp
-L TST TP4
+L OneWireLogger-rescue:TST TP4
 U 1 1 51DDB50F
 P 8400 1550
 F 0 "TP4" H 8400 1850 40  0000 C CNN
@@ -315,4 +312,44 @@ $EndComp
 Wire Wire Line
 	8400 1550 8400 1750
 Connection ~ 8400 1750
+Wire Wire Line
+	7650 1750 8400 1750
+Wire Wire Line
+	6250 1850 6400 1850
+Wire Wire Line
+	4750 3600 5150 3600
+Wire Wire Line
+	4750 3800 4750 4100
+Wire Wire Line
+	4750 4700 4750 4800
+Wire Wire Line
+	3500 3700 3500 3800
+Wire Wire Line
+	9550 6700 9550 6950
+Wire Wire Line
+	9550 6500 9550 6700
+Wire Wire Line
+	9550 6050 9550 6500
+Wire Wire Line
+	3500 3500 3500 3700
+Wire Wire Line
+	6950 2950 6950 3700
+Wire Wire Line
+	4150 1850 6250 1850
+Wire Wire Line
+	4750 5350 5000 5350
+Wire Wire Line
+	5000 3800 5150 3800
+Wire Wire Line
+	3500 3800 3500 3900
+Wire Wire Line
+	3500 4600 3500 4700
+Wire Wire Line
+	4150 5350 4750 5350
+Wire Wire Line
+	5000 5350 5700 5350
+Wire Wire Line
+	6350 4600 6450 4600
+Wire Wire Line
+	8400 1750 8750 1750
 $EndSCHEMATC

@@ -1,6 +1,6 @@
-update=10/07/2014 11:26:56
+update=1/5/2020 3:34:10 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,20 +8,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/power
-LibName3=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/device
-LibName4=C:/Users/Doug/Documents/GitHub/DougsPCBDesigns/KiCAD/library/CNT-RJ45
-LibName5=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=OneWireLogger.net
@@ -50,3 +36,6 @@ LibName4=divers
 LibName5=libcms
 LibName6=led
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=

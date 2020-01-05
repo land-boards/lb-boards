@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LED2C_CA DS1
+L OneWireLogger-rescue:LED2C_CA DS1
 U 1 1 517C600B
 P 4800 2900
 F 0 "DS1" H 4550 2800 50  0000 C CNN
@@ -33,7 +30,7 @@ F 7 "696-SML-LX15IGC-TR" H 4800 2900 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L OneWireLogger-rescue:R R5
 U 1 1 517C601A
 P 5350 2900
 F 0 "R5" V 5430 2900 50  0000 C CNN
@@ -48,7 +45,7 @@ F 7 "652-CR0805JW-471ELF" H 5350 2900 60  0001 C CNN "VendorPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R4
+L OneWireLogger-rescue:R R4
 U 1 1 517C6029
 P 5350 3050
 F 0 "R4" V 5430 3050 50  0000 C CNN
@@ -63,7 +60,7 @@ F 7 "652-CR0805JW-471ELF" H 5350 3050 60  0001 C CNN "VendorPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L MCP73822 U3
+L OneWireLogger-rescue:MCP73822 U3
 U 1 1 517C604F
 P 6300 3200
 F 0 "U3" H 6200 3850 60  0000 C CNN
@@ -78,7 +75,7 @@ F 7 "579-MCP73833-AMI/UN " H 6300 3200 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 J1
+L OneWireLogger-rescue:CONN_2 J1
 U 1 1 517C6133
 P 7800 2800
 F 0 "J1" V 7750 2800 40  0000 C CNN
@@ -93,7 +90,7 @@ F 7 "455-1749-1-ND" H 7800 2800 60  0001 C CNN "VendorPN"
 	1    0    0    1   
 $EndComp
 $Comp
-L R R7
+L OneWireLogger-rescue:R R7
 U 1 1 517C6174
 P 6900 3400
 F 0 "R7" V 6980 3400 50  0000 C CNN
@@ -125,19 +122,19 @@ Wire Wire Line
 	5900 2800 4500 2800
 Connection ~ 4500 2800
 Wire Wire Line
-	4250 2700 5900 2700
+	4250 2700 4500 2700
 Connection ~ 4500 2700
 Wire Wire Line
 	6700 2800 6800 2800
 Wire Wire Line
-	6700 2700 7450 2700
+	6700 2700 6800 2700
 Wire Wire Line
 	6800 2800 6800 2700
 Connection ~ 6800 2700
 Wire Wire Line
 	6700 3100 7300 3100
 Wire Wire Line
-	7300 3700 7300 2900
+	7300 3700 7300 3100
 Wire Wire Line
 	7300 2900 7450 2900
 Wire Wire Line
@@ -145,12 +142,12 @@ Wire Wire Line
 Wire Wire Line
 	6900 3000 6900 3150
 Wire Wire Line
-	4250 3700 7300 3700
+	4250 3700 6900 3700
 Wire Wire Line
 	6900 3700 6900 3650
 Connection ~ 7300 3100
 $Comp
-L R R8
+L OneWireLogger-rescue:R R8
 U 1 1 517C61DF
 P 7100 3400
 F 0 "R8" V 7180 3400 50  0000 C CNN
@@ -172,13 +169,13 @@ Wire Wire Line
 Wire Wire Line
 	7100 2900 7100 3150
 Wire Wire Line
-	4500 2700 4500 2900
+	4500 2700 4500 2800
 Text HLabel 4250 2700 0    60   Input ~ 0
 VUSB
 Wire Wire Line
 	7300 2700 7300 2400
 Wire Wire Line
-	7300 2400 8100 2400
+	7300 2400 7750 2400
 Connection ~ 7300 2700
 Text HLabel 8100 2400 2    60   Output Italic 0
 VB-3.7
@@ -187,7 +184,7 @@ Text HLabel 4250 3700 0    60   Input Italic 0
 GND
 NoConn ~ 5900 3100
 $Comp
-L TST TP1
+L OneWireLogger-rescue:TST TP1
 U 1 1 51C9DF8A
 P 7750 2300
 F 0 "TP1" H 7750 2600 40  0000 C CNN
@@ -206,4 +203,20 @@ Text Notes 4600 3450 0    60   ~ 0
 Status LEDs
 Text Notes 7550 3150 0    60   ~ 0
 LiPo Battery
+Wire Wire Line
+	4500 2800 4500 2900
+Wire Wire Line
+	4500 2700 5900 2700
+Wire Wire Line
+	6800 2700 7300 2700
+Wire Wire Line
+	7300 3100 7300 2900
+Wire Wire Line
+	7100 3700 7300 3700
+Wire Wire Line
+	7300 2700 7450 2700
+Wire Wire Line
+	6900 3700 7100 3700
+Wire Wire Line
+	7750 2400 8100 2400
 $EndSCHEMATC

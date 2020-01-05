@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "Raspberry Pi I2C Repeater"
-Date "Wednesday, August 05, 2015"
-Rev "X1"
+Date "2020-01-05"
+Rev "X3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""

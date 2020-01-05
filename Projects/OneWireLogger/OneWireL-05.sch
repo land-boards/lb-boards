@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L R R19
+L OneWireLogger-rescue:R R19
 U 1 1 4FFDE4D8
 P 3000 3950
 F 0 "R19" V 3080 3950 50  0000 C CNN
@@ -33,7 +30,7 @@ F 7 "271-1K-RC" V 3000 3950 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R16
+L OneWireLogger-rescue:R R16
 U 1 1 4FFDE4D7
 P 3000 1850
 F 0 "R16" V 3080 1850 50  0000 C CNN
@@ -48,7 +45,7 @@ F 7 "271-3.3K-RC" V 3000 1850 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R18
+L OneWireLogger-rescue:R R18
 U 1 1 4FFDE4D6
 P 3000 3250
 F 0 "R18" V 3080 3250 50  0000 C CNN
@@ -63,7 +60,7 @@ F 7 "71-CCF07560RJKE36" V 3000 3250 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R17
+L OneWireLogger-rescue:R R17
 U 1 1 4FFDE4D5
 P 3000 2550
 F 0 "R17" V 3080 2550 50  0000 C CNN
@@ -78,7 +75,7 @@ F 7 "71-CCF07330RJKE36" V 3000 2550 60  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R15
+L OneWireLogger-rescue:R R15
 U 1 1 4FFDE4D4
 P 3000 1150
 F 0 "R15" V 3080 1150 50  0000 C CNN
@@ -93,7 +90,7 @@ F 7 "71-CCF071K80JNE36" V 3000 1150 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH_OMRON SW2
+L OneWireLogger-rescue:SW_PUSH_OMRON SW2
 U 1 1 53BDD5B6
 P 2600 1450
 F 0 "SW2" H 2750 1560 50  0000 C CNN
@@ -104,7 +101,7 @@ F 3 "~" H 2600 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH_OMRON SW4
+L OneWireLogger-rescue:SW_PUSH_OMRON SW4
 U 1 1 53BDD5C5
 P 2600 2150
 F 0 "SW4" H 2750 2260 50  0000 C CNN
@@ -115,7 +112,7 @@ F 3 "~" H 2600 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH_OMRON SW5
+L OneWireLogger-rescue:SW_PUSH_OMRON SW5
 U 1 1 53BDD5D4
 P 2600 2850
 F 0 "SW5" H 2750 2960 50  0000 C CNN
@@ -126,7 +123,7 @@ F 3 "~" H 2600 2850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH_OMRON SW6
+L OneWireLogger-rescue:SW_PUSH_OMRON SW6
 U 1 1 53BDD5E3
 P 2600 3550
 F 0 "SW6" H 2750 3660 50  0000 C CNN
@@ -137,7 +134,7 @@ F 3 "~" H 2600 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH_OMRON SW7
+L OneWireLogger-rescue:SW_PUSH_OMRON SW7
 U 1 1 53BDD5F2
 P 2600 4250
 F 0 "SW7" H 2750 4360 50  0000 C CNN
@@ -150,13 +147,13 @@ $EndComp
 Wire Wire Line
 	2900 1450 3000 1450
 Wire Wire Line
-	3000 1400 3000 1600
+	3000 1400 3000 1450
 Wire Wire Line
 	3000 1550 2900 1550
 Wire Wire Line
 	2300 1450 2200 1450
 Wire Wire Line
-	2200 1450 2200 4600
+	2200 1450 2200 1550
 Wire Wire Line
 	2200 3450 2200 3550
 Wire Wire Line
@@ -189,25 +186,25 @@ Connection ~ 2200 4350
 Wire Wire Line
 	2900 2150 3000 2150
 Wire Wire Line
-	3000 2100 3000 2300
+	3000 2100 3000 2150
 Wire Wire Line
 	3000 2250 2900 2250
 Wire Wire Line
 	2900 2850 3000 2850
 Wire Wire Line
-	3000 2800 3000 3000
+	3000 2800 3000 2850
 Wire Wire Line
 	3000 2950 2900 2950
 Wire Wire Line
 	2900 3550 3000 3550
 Wire Wire Line
-	3000 3500 3000 3700
+	3000 3500 3000 3550
 Wire Wire Line
 	3000 3650 2900 3650
 Wire Wire Line
 	2900 4250 3000 4250
 Wire Wire Line
-	3000 4200 3000 4350
+	3000 4200 3000 4250
 Wire Wire Line
 	3000 4350 2900 4350
 Wire Wire Line
@@ -248,4 +245,42 @@ Text HLabel 3650 850  2    60   UnSpc ~ 0
 VCC
 Text HLabel 3650 1500 2    60   Output ~ 0
 SW5WAY
+Wire Wire Line
+	2200 1550 2200 2150
+Wire Wire Line
+	2200 2150 2200 2250
+Wire Wire Line
+	2200 2250 2200 2850
+Wire Wire Line
+	2200 2850 2200 2950
+Wire Wire Line
+	2200 2950 2200 3550
+Wire Wire Line
+	2200 3550 2200 3650
+Wire Wire Line
+	2200 3650 2200 4250
+Wire Wire Line
+	2200 4250 2200 4350
+Wire Wire Line
+	2200 4350 2200 4600
+Wire Wire Line
+	3000 1450 3000 1500
+Wire Wire Line
+	3000 1550 3000 1600
+Wire Wire Line
+	3000 2150 3000 2250
+Wire Wire Line
+	3000 2250 3000 2300
+Wire Wire Line
+	3000 2850 3000 2950
+Wire Wire Line
+	3000 2950 3000 3000
+Wire Wire Line
+	3000 3550 3000 3650
+Wire Wire Line
+	3000 3650 3000 3700
+Wire Wire Line
+	3000 4250 3000 4350
+Wire Wire Line
+	3000 1500 3000 1550
 $EndSCHEMATC

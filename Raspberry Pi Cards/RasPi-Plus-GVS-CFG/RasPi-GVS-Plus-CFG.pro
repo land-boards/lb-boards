@@ -1,6 +1,6 @@
-update=8/17/2014 10:11:01 PM
+update=1/5/2020 1:16:16 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [general]
 version=1
 [cvpcb]
@@ -8,20 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
 [pcbnew]
 version=1
 LastNetListRead=RasPi-GVS-Plus-CFG.net
@@ -53,3 +39,16 @@ LibName7=smd_dil
 LibName8=smd_transistors
 LibName9=libcms
 LibName10=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

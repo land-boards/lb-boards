@@ -5,10 +5,10 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "4 jun 2013"
-Rev ""
-Comp ""
+Title "RF Amplifier"
+Date "2020-01-05"
+Rev "X1"
+Comp "Land Boards LLc"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -129,7 +129,7 @@ L RF-Amp-rescue:C C2
 U 1 1 51AC8D77
 P 2500 2150
 F 0 "C2" H 2500 2250 40  0000 L CNN
-F 1 "C" H 2506 2065 40  0000 L CNN
+F 1 "0.1uF" H 2506 2065 40  0000 L CNN
 F 2 "SM0805" H 2500 2150 30  0000 C CNN
 F 3 "~" H 2500 2150 60  0000 C CNN
 	1    2500 2150

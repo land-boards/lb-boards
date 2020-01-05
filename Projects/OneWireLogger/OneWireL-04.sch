@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CNT-RJ45-8 P1
+L OneWireLogger-rescue:CNT-RJ45-8 P1
 U 1 1 517C8557
 P 7550 2650
 F 0 "P1" V 7500 2950 60  0000 C CNN
@@ -46,7 +43,7 @@ Wire Wire Line
 	6400 2200 7200 2200
 Connection ~ 6400 2400
 $Comp
-L R R6
+L OneWireLogger-rescue:R R6
 U 1 1 517EAA3D
 P 5450 1350
 F 0 "R6" V 5530 1350 40  0000 C CNN
@@ -61,7 +58,7 @@ F 7 "652-CR0805-JW-472ELF" H 5450 1350 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DS18S20+ U2
+L OneWireLogger-rescue:DS18S20+ U2
 U 1 1 517EABC6
 P 6350 1500
 F 0 "U2" H 6400 1800 60  0000 C CNN
@@ -106,7 +103,7 @@ Connection ~ 5100 1350
 Wire Wire Line
 	4850 850  7050 850 
 $Comp
-L CONN_3 P4
+L OneWireLogger-rescue:CONN_3 P4
 U 1 1 52E6AACA
 P 5750 2700
 F 0 "P4" V 5700 2700 50  0000 C CNN

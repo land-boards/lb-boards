@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2  date 10/07/2014 16:13:29
-LIBS:power
-LIBS:device
-LIBS:DougsSch
+EESchema Schematic File Version 4
 LIBS:OneWireLogger-cache
-EELAYER 27 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LMR62014 U1
+L OneWireLogger-rescue:LMR62014 U1
 U 1 1 517C7898
 P 6050 2800
 F 0 "U1" H 6250 3200 60  0000 C CNN
@@ -33,7 +30,7 @@ F 7 "926-LMR62014XMFENOPB " H 6050 2800 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L OneWireLogger-rescue:R R3
 U 1 1 517C78A7
 P 4900 2950
 F 0 "R3" V 4980 2950 50  0000 C CNN
@@ -50,16 +47,16 @@ $EndComp
 Wire Wire Line
 	5150 2950 5250 2950
 Wire Wire Line
-	4200 2650 5250 2650
+	4200 2650 4500 2650
 Wire Wire Line
 	4650 2950 4500 2950
 Wire Wire Line
-	4500 2650 4500 3100
+	4500 2650 4500 2950
 Connection ~ 4500 2650
 Text HLabel 4200 2650 0    60   Input Italic 0
 3.7V
 $Comp
-L C C3
+L OneWireLogger-rescue:C C3
 U 1 1 517C78BC
 P 4500 3300
 F 0 "C3" H 4550 3400 50  0000 L CNN
@@ -75,7 +72,7 @@ F 7 "77-VJ1206V475MXJTBC" H 4500 3300 60  0001 C CNN "VendorPN"
 $EndComp
 Connection ~ 4500 2950
 Wire Wire Line
-	4200 3600 8200 3600
+	4200 3600 4500 3600
 Wire Wire Line
 	6050 3600 6050 3500
 Wire Wire Line
@@ -84,7 +81,7 @@ Connection ~ 4500 3600
 Text HLabel 4200 3600 0    60   Input Italic 0
 GND
 $Comp
-L INDUCTOR L1
+L OneWireLogger-rescue:INDUCTOR L1
 U 1 1 517C78F4
 P 6100 2150
 F 0 "L1" V 6050 2150 40  0000 C CNN
@@ -104,7 +101,7 @@ Wire Wire Line
 	5050 2150 5050 2650
 Connection ~ 5050 2650
 $Comp
-L DIODE D1
+L OneWireLogger-rescue:DIODE D1
 U 1 1 517C7D22
 P 7300 2650
 F 0 "D1" H 7300 2750 40  0000 C CNN
@@ -119,18 +116,18 @@ F 7 "863-MBR0520LT1G" H 7300 2650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2650 7100 2650
+	6900 2650 7000 2650
 Wire Wire Line
 	6400 2150 7000 2150
 Wire Wire Line
 	7000 2150 7000 2650
 Connection ~ 7000 2650
 Wire Wire Line
-	7500 2650 8450 2650
+	7500 2650 7900 2650
 Text HLabel 8450 2650 2    60   Output Italic 0
 +5V
 $Comp
-L C C2
+L OneWireLogger-rescue:C C2
 U 1 1 517C7D72
 P 8200 3100
 F 0 "C2" H 8250 3200 50  0000 L CNN
@@ -150,7 +147,7 @@ Connection ~ 8200 2650
 Wire Wire Line
 	8200 3600 8200 3300
 $Comp
-L R R1
+L OneWireLogger-rescue:R R1
 U 1 1 517C7E37
 P 7600 2950
 F 0 "R1" V 7680 2950 50  0000 C CNN
@@ -165,7 +162,7 @@ F 7 "660-RK73H2ATTE3091F" H 7600 2950 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L OneWireLogger-rescue:R R2
 U 1 1 517C7E46
 P 7100 3250
 F 0 "R2" V 7180 3250 50  0000 C CNN
@@ -180,7 +177,7 @@ F 7 "71-CRCW0805J-1K-E3" H 7100 3250 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2950 7350 2950
+	6900 2950 7100 2950
 Wire Wire Line
 	7100 3000 7100 2950
 Connection ~ 7100 2950
@@ -189,11 +186,11 @@ Wire Wire Line
 Connection ~ 7100 3600
 Connection ~ 7900 2650
 Wire Wire Line
-	7900 2650 7900 3200
+	7900 2650 7900 2950
 Wire Wire Line
 	7900 2950 7850 2950
 $Comp
-L C C1
+L OneWireLogger-rescue:C C1
 U 1 1 517C7F11
 P 7550 3200
 F 0 "C1" V 7600 3050 50  0000 L CNN
@@ -217,7 +214,7 @@ Wire Wire Line
 Connection ~ 7250 2950
 Connection ~ 6050 3600
 $Comp
-L TST TP3
+L OneWireLogger-rescue:TST TP3
 U 1 1 51DDB84F
 P 8050 2550
 F 0 "TP3" H 8050 2850 40  0000 C CNN
@@ -230,4 +227,30 @@ $EndComp
 Wire Wire Line
 	8050 2550 8050 2650
 Connection ~ 8050 2650
+Wire Wire Line
+	4500 2650 5050 2650
+Wire Wire Line
+	4500 2950 4500 3100
+Wire Wire Line
+	4500 3600 6050 3600
+Wire Wire Line
+	5050 2650 5250 2650
+Wire Wire Line
+	7000 2650 7100 2650
+Wire Wire Line
+	8200 2650 8450 2650
+Wire Wire Line
+	7100 2950 7250 2950
+Wire Wire Line
+	7100 3600 8200 3600
+Wire Wire Line
+	7900 2650 8050 2650
+Wire Wire Line
+	7900 2950 7900 3200
+Wire Wire Line
+	7250 2950 7350 2950
+Wire Wire Line
+	6050 3600 7100 3600
+Wire Wire Line
+	8050 2650 8200 2650
 $EndSCHEMATC

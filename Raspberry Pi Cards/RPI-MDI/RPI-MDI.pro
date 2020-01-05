@@ -1,4 +1,4 @@
-update=1/3/2016 4:24:22 PM
+update=1/5/2020 12:05:17 PM
 version=1
 last_client=kicad
 [general]
@@ -8,20 +8,6 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[eeschema]
-version=1
-LibDir=
-NetFmtName=PcbnewAdvanced
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=atmel
-LibName5=parts/PCA9685plus
 [pcbnew]
 version=1
 LastNetListRead=RPI-MDI.net
@@ -53,6 +39,9 @@ LibName7=smd_resistors
 LibName8=smd_dil
 LibName9=smd_transistors
 LibName10=libcms
+[eeschema]
+version=1
+LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -60,9 +49,6 @@ PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
+SpiceAjustPassiveValues=0
 LabSize=60
+ERC_TestSimilarLabels=1
