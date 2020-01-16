@@ -1021,12 +1021,7 @@ Wire Wire Line
 Wire Wire Line
 	10750 9300 11200 9300
 Wire Wire Line
-	11650 9300 11650 9250
-Wire Wire Line
 	11200 9250 11200 9300
-Connection ~ 11200 9300
-Wire Wire Line
-	11200 9300 11650 9300
 Wire Wire Line
 	10750 9300 10750 9400
 Connection ~ 10750 9300
@@ -1056,16 +1051,11 @@ Wire Wire Line
 	10750 8850 10750 8900
 Wire Wire Line
 	10750 8900 11200 8900
-Wire Wire Line
-	11650 8900 11650 8950
 Connection ~ 10750 8900
 Wire Wire Line
 	10750 8900 10750 8950
 Wire Wire Line
 	11200 8950 11200 8900
-Connection ~ 11200 8900
-Wire Wire Line
-	11200 8900 11650 8900
 $Comp
 L ESP32-Hub-rescue:Conn_02x08_Odd_Even-Connector_Generic P1
 U 1 1 5CC29DFE
