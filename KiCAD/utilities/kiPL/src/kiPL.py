@@ -8,17 +8,17 @@ This is a setup thing for Kicad and only needs to be done once.
 The names must match exactly.
 
 """
-
+from tkinter import filedialog
 from tkinter import *
+from tkinter import messagebox
 
 import csv
-import string
+#import string
 import os
 import sys
 
-sys.path.append('C:\\Users\\Douglas\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
-sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
-sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules')
+sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules\\TKDGCommon')
+sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules\\TKDGCommon')
 defaultPath = '.'
 
 from dgProgDefaultsTK import *
@@ -29,20 +29,64 @@ from sys import argv
 #print 'kiPL.py'
 
 def errorDialog(errorString):
-	"""
-	Prints an error message as a dialog box
-	"""
-	message = gtk.MessageDialog(type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK)
-	message.set_markup(errorString)
-	message.run()		# Display the dialog box and hang around waiting for the "OK" button
-	message.destroy()	# Takes down the dialog box
-	return
+	messagebox.showerror("Error", errorString)
+
+def infoBox(msgString):
+	messagebox.showinfo("kiPL",msgString)
 
 class FindaNetFile:
+	def openFile(self):
+		global defaultPath
+		#Load the default path
+		defaultParmsClass = HandleDefault()
+		defaultParmsClass.setVerboseMode(False)
+		defaultParmsClass.initDefaults()
+		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
+		#print('openFile: defaultPath was :', defaultPath)
+		
+		fileToRead = self.findNetFile(defaultPath)
+		if fileToRead == '':
+			return
+		if fileToRead.upper()[-3:] != 'NET':
+			errorDialog('openFile: ERROR - Expected a net file type')
+			exit()
+		defaultParmsClass.setVerboseMode(False)
+		defaultParmsClass.storeKeyValuePair('DEFAULT_PATH',defaultPath)
+		#print('openFile: defaultPath now is :', defaultPath)
+
+		fileToWriteCSV = fileToRead[:-4] + "_PL.csv"
+		with open(fileToRead) as file_in:
+			inContents = []
+			for line in file_in:
+				inContents.append(line.strip())
+		#print("\nFindaNetFile: inContents",inContents)
+		partsList = control.readNetFileIntoPartsList(inContents)
+		#print("openFile: partsList",partsList)
+#		print 'partsList', partsList
+		sortedPL = control.sortPartsList(partsList)
+#		print 'sortedPL', sortedPL
+		reduxPL = control.combineRefDes(sortedPL)
+		try:
+			outCSVFile = csv.writer(open(fileToWriteCSV, 'w', newline=''), delimiter=',', quotechar='\"')
+		except IOError:
+			errorDialog('ERROR - Cannot open the output file.\nIs the file already open in EXCEL?\nClose the file and return.')
+			try:
+				outCSVFile = csv.writer(open(fileToWriteCSV, 'w', newline=''), delimiter=',', quotechar='\"')
+			except IOError:
+				errorDialog('ERROR - Tried again,  - Is the file already open in EXCEL?')
+				exit()
+		outCSVFile.writerow(['Qty','Value','RefDes'])
+		outCSVFile.writerows(reduxPL)
+		#print 'complete'
+		infoBox("PL created")
+	
 	def	extractPathFromPathfilename(self,fullPathFilename):
 		"""Extract Path from fullPathFilename
 		"""
-		return(fullPathFilename[0:fullPathFilename.rfind('\\')+1])
+		#print("extractPathFromPathfilename: fullPathFilename",fullPathFilename)
+		retVal = fullPathFilename[0:fullPathFilename.rfind('/')+1]
+		#print("extractPathFromPathfilename: retVal",retVal)
+		return(retVal)
 		
 	def findNetFile(self, startingPath):
 		"""findNetFile() - This is the dialog which locates the csv files
@@ -50,35 +94,15 @@ class FindaNetFile:
 		:returns: path/name of the file that was selected
 		"""
 		global defaultPath
-		csvFileString = "Select file"
-		dialog = gtk.FileChooserDialog(csvFileString,
-			None,
-			gtk.FILE_CHOOSER_ACTION_OPEN,
-			(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-			gtk.STOCK_OPEN, gtk.RESPONSE_OK))
-		dialog.set_default_response(gtk.RESPONSE_OK)
-
-		if startingPath != '':
-			dialog.set_current_folder(startingPath)
-		filter = gtk.FileFilter()
-		filter.set_name("NET files")
-		filter.add_pattern("*.net")
-		dialog.add_filter(filter)
-
-		response = dialog.run()
-		if response == gtk.RESPONSE_OK:
-			retFileName = dialog.get_filename()
-			dialog.destroy()
-			defaultPath = self.extractPathFromPathfilename(retFileName)
-			return retFileName
-		elif response == gtk.RESPONSE_CANCEL:
-			print('Closed, no files selected')
-			dialog.destroy()
-			exit()
-		dialog.destroy()
-
+		
+		filename =  filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("net files","*.net"),("all files","*.*")))
+		#print("findNetFile: filename",filename)
+		defaultPath = self.extractPathFromPathfilename(filename)
+		#print("findNetFile: defaultPath",defaultPath)
+		return (filename)
+		
 class ControlClass:
-	def readNetFileIntoPartsList(self, inFile):
+	def readNetFileIntoPartsList(self, inList):
 		"""
 		(design
 		(components
@@ -97,27 +121,26 @@ class ControlClass:
 		(footprint C14R)
 		"""
 
-		LOOKING_FOR_DESIGN = 1
-		LOOKING_FOR_COMPONENTS = 2
-		LOOKING_FOR_COMP = 3
-		IN_COMP = 4
-		GOT_COMP = 5
-		GOT_LIBPARTS = 6
+		# LOOKING_FOR_DESIGN = 1
+		# LOOKING_FOR_COMPONENTS = 2
+		# LOOKING_FOR_COMP = 3
+		# IN_COMP = 4
+		# GOT_COMP = 5
+		# GOT_LIBPARTS = 6
 
 		outRow = []
 
-		progState = LOOKING_FOR_DESIGN
+		progState = 'LOOKING_FOR_DESIGN'
 		outCSVList = []
-		for inLine in inFile:
-		#	print progState
-			inLine = inLine.strip('\n\r')
-			if progState == LOOKING_FOR_DESIGN:
-				if (string.find(inLine,"(design",0) != -1):
-					progState = LOOKING_FOR_COMPONENTS
-			elif progState == LOOKING_FOR_COMPONENTS:
-				if (string.find(inLine,"(components",0) != -1):
-					progState = LOOKING_FOR_COMP
-			elif progState == LOOKING_FOR_COMP:
+		#print("readNetFileIntoPartsList: inList",inList)
+		for inLine in inList:
+			if progState == 'LOOKING_FOR_DESIGN':
+				if (inLine.find("(design",0) != -1):
+					progState = 'LOOKING_FOR_COMPONENTS'
+			elif progState == 'LOOKING_FOR_COMPONENTS':
+				if (inLine.find("(components",0) != -1):
+					progState = 'LOOKING_FOR_COMP'
+			elif progState == 'LOOKING_FOR_COMP':
 				refDes = 'N/A'
 				value = 'N/A'
 				footprint = 'N/A'
@@ -125,43 +148,47 @@ class ControlClass:
 				mfgPN = 'N/A'
 				vendor = 'N/A'
 				vendorPN = 'N/A'
-				if (string.find(inLine,"(comp (",0) != -1):
-					refDes = inLine[15:-1]
-					progState = IN_COMP
-				elif (string.find(inLine,"(libparts",0) != -1):
-					progState = GOT_LIBPARTS
-			elif progState == IN_COMP:
-				if (string.find(inLine,"(value",0) != -1):
-					value = inLine[13:-1]
-				if (string.find(inLine,"(footprint",0) != -1):
-					footprint = inLine[17:-1]
-				if (string.find(inLine,"(field (name",0) != -1):
+				if (inLine.find("(comp (",0) != -1):
+					#print("inLine",inLine)
+					refDes = inLine[11:-1]
+					#print("refDes",refDes)
+					progState = 'IN_COMP'
+				elif (inLine.find("(libparts",0) != -1):
+					progState = 'GOT_LIBPARTS'
+			elif progState == 'IN_COMP':
+				if (inLine.find("(value",0) != -1):
+					value = inLine[7:-1]
+				if (inLine.find("(footprint",0) != -1):
+				#	print("inLine",inLine)
+					footprint = inLine[11:-1]
+				#	print("footprint",footprint)
+				if (inLine.find("(field (name",0) != -1):
 					field = inLine[21:-1]
 					if field[len(field) -1] == ')':
 						field = field[0:-1]
 						if field[len(field) -1] == ')':
 							field = field[0:-1]
-					if (string.find(field,"MfgPN",0) != -1):
+					if (field.find("MfgPN",0) != -1):
 						mfgPN = field[9:]
 						if mfgPN[0] == '"' and mfgPN[-1:] == '"':
 							mfgPN = mfgPN[1:-1]
-					elif (string.find(field,"Mfg PN",0) != -1):
+					elif (field.find("Mfg PN",0) != -1):
 						mfgPN = field[10:]
 						if mfgPN[0] == '"' and mfgPN[-1:] == '"':
 							mfgPN = mfgPN[1:-1]
-					elif (string.find(field,"Mfg",0) != -1):
+					elif (field.find("Mfg",0) != -1):
 						mfg = field[5:]
 						if mfg[0] == '"' and mfg[len(mfg)-1] == '"':
 							mfg = mfg[1:-1]
-					elif (string.find(field,"VendorPN",0) != -1):
+					elif (field.find("VendorPN",0) != -1):
 						vendorPN = field[10:]
 						if vendorPN[0] == '"' and vendorPN[len(vendorPN)-1] == '"':
 							vendorPN = vendorPN[1:-1]
-					elif (string.find(field,"Vendor",0) != -1):
+					elif (field.find("Vendor",0) != -1):
 						vendor = field[8:]
 						if vendor[0] == '"' and vendor[len(vendor)-1] == '"':
 							vendor = vendor[1:-1]
-				if (string.find(inLine,"))",0) != -1):
+				if (inLine.find("))",0) != -1):
 					outRow = []
 					outRow.append(refDes)
 					outRow.append(value)
@@ -171,8 +198,8 @@ class ControlClass:
 					outRow.append(vendor)
 					outRow.append(vendorPN)
 					outCSVList.append(outRow)
-					progState = LOOKING_FOR_COMP
-			elif progState == GOT_LIBPARTS:
+					progState = 'LOOKING_FOR_COMP'
+			elif progState == 'GOT_LIBPARTS':
 				return outCSVList
 
 	def sortPartsList(self, outCSVList):
@@ -375,88 +402,34 @@ class ControlClass:
 		self.writeOutMWTable(outMWFile, reduxPL)
 		#print 'complete'
 
-class UIManager:
-	"""The UI manager
-	"""
-	interface = """
-	<ui>
-		<menubar name="MenuBar">
-			<menu action="File">
-				<menuitem action="Open"/>
-				<menuitem action="Quit"/>
-			</menu>
-			<menu action="Help">
-				<menuitem action="About"/>
-			</menu>
-		</menubar>
-	</ui>
-	"""
-
+class Dashboard:
 	def __init__(self):
-		"""Initialize the class
-		"""
-		# Create the top level window
-		window = gtk.Window()
-		window.connect('destroy', lambda w: gtk.main_quit())
-		window.set_default_size(200, 200)
-		
-		vbox = gtk.VBox()
-		
-		# Create a UIManager instance
-		uimanager = gtk.UIManager()
+		self.win = Tk()
+		self.win.geometry("320x240")
+		self.win.title("kiPL - Create PL from netlist")
 
-		# Add the accelerator group to the toplevel window
-		accelgroup = uimanager.get_accel_group()
-		window.add_accel_group(accelgroup)
-		window.set_title('kiPL - Kicad Parts List creation program')
+	def add_menu(self):
+		self.mainmenu = Menu(self.win)
+		self.win.config(menu=self.mainmenu)
 
-		# Create an ActionGroup
-		actiongroup =	gtk.ActionGroup("kiPL")
-		self.actiongroup = actiongroup
+		self.filemenu = Menu(self.mainmenu)
+		self.mainmenu.add_cascade(label="File",menu=self.filemenu)
 
-		# Create actions
-		self.actiongroup.add_actions([
-									("Open", gtk.STOCK_OPEN, "_Open", None, "Open an Existing Document", self.openIF),
-									("Quit", gtk.STOCK_QUIT, "_Quit", None, "Quit the Application", self.quit_application),
-									("File", None, "_File"),
-									("Help", None, "_Help"),
-									("About", None, "_About", None, "About kiPL", self.about_kiPL),
-									])
-		uimanager.insert_action_group(self.actiongroup, 0)
-		uimanager.add_ui_from_string(self.interface)
-		
-		menubar = uimanager.get_widget("/MenuBar")
-		vbox.pack_start(menubar, False)
-		
-		window.connect("destroy", lambda w: gtk.main_quit())
-		
-		window.add(vbox)
-		window.show_all()
+		self.filemenu.add_command(label="Open Net file",command=netFile.openFile)
+		self.filemenu.add_separator()
+		self.filemenu.add_command(label="Exit",command=self.win.quit)
 
-	def openIF(self, b):
-		"""Open the interface by calling the control class
-		"""
-		myControl = ControlClass()
-		myControl.theExecutive()
+		# self.editmenu = Menu(self.mainmenu)
+		# self.mainmenu.add_cascade(label="Edit",menu=self.editmenu)
 
-		message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-		message.set_markup("Conversion Complete")
-		message.run()		# Display the dialog box and hang around waiting for the "OK" button
-		message.destroy()	# Takes down the dialog box
-		return
+		# self.editmenu.add_command(label="Find")
+		# self.editmenu.add_command(label="Replace")
 
-	def about_kiPL(self, b):
-		"""The about dialog
-		"""
-		message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-		message.set_markup("About kiPL\nAuthor: Doug Gilliland\n(c) 2014 - AAC - All rights reserved\nkiPL Create a Parts List from a KiCad Netlist")
-		message.run()
-		message.destroy()
-		return
+		self.win.mainloop()
 
-	def quit_application(self, widget):
-		gtk.main_quit()
-
-if __name__ == '__main__':
-	ba = UIManager()
-	gtk.main()
+if __name__ == "__main__":
+	netFile = FindaNetFile()
+	control = ControlClass()
+	x = Dashboard()
+	x.add_menu()
+	
