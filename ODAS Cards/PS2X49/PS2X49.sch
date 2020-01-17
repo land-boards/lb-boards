@@ -6,8 +6,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "PS2X49 Card"
-Date "2019-12-08"
-Rev "1"
+Date "2020-01-16"
+Rev "3"
 Comp "land-boards.com"
 Comment1 "Dual PS/2 connectors"
 Comment2 ""
@@ -199,8 +199,6 @@ F 3 "" H 7600 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7700 3500 7050 3500
-Wire Wire Line
 	6600 2650 7700 2650
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J3
@@ -345,100 +343,170 @@ Wire Wire Line
 Wire Wire Line
 	6350 3200 7700 3200
 Wire Wire Line
-	5050 4200 5400 4200
+	6050 5050 6400 5050
 Wire Wire Line
-	5050 4500 5400 4500
-Text Label 5100 4500 0    50   ~ 0
+	6050 5350 6400 5350
+Text Label 6100 5350 0    50   ~ 0
 DAT1
-Text Label 5100 4200 0    50   ~ 0
+Text Label 6100 5050 0    50   ~ 0
 CLK1
 Wire Wire Line
-	5050 4800 5400 4800
+	6050 5650 6400 5650
 Wire Wire Line
-	5050 5100 5400 5100
-Text Label 5100 5100 0    50   ~ 0
+	6050 5950 6400 5950
+Text Label 6100 5950 0    50   ~ 0
 DAT2
-Text Label 5100 4800 0    50   ~ 0
+Text Label 6100 5650 0    50   ~ 0
 CLK2
 $Comp
 L Device:R_Small R1
 U 1 1 5DD5FB13
-P 5500 4200
-F 0 "R1" V 5304 4200 50  0000 C CNN
-F 1 "R_Small" V 5395 4200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 4200 50  0001 C CNN
-F 3 "~" H 5500 4200 50  0001 C CNN
-	1    5500 4200
+P 6500 5050
+F 0 "R1" V 6304 5050 50  0000 C CNN
+F 1 "DNP" V 6395 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6500 5050 50  0001 C CNN
+F 3 "~" H 6500 5050 50  0001 C CNN
+	1    6500 5050
 	0    1    1    0   
 $EndComp
-Text Label 5700 4500 0    50   ~ 0
+Text Label 6700 5350 0    50   ~ 0
 KDAT1
-Text Label 5700 5100 0    50   ~ 0
+Text Label 6700 5950 0    50   ~ 0
 KDAT2
-Text Label 5700 4800 0    50   ~ 0
+Text Label 6700 5650 0    50   ~ 0
 KCLK2
-Text Label 5700 4200 0    50   ~ 0
+Text Label 6700 5050 0    50   ~ 0
 KCLK1
 Wire Wire Line
-	5600 4500 6050 4500
+	6600 5350 7050 5350
 Wire Wire Line
-	5600 4200 6050 4200
+	6600 5050 7050 5050
 Wire Wire Line
-	5600 5100 6050 5100
+	6600 5950 7050 5950
 Wire Wire Line
-	5600 4800 6050 4800
+	6600 5650 7050 5650
 $Comp
 L Device:R_Small R2
 U 1 1 5DD6E8F6
-P 5500 4500
-F 0 "R2" V 5304 4500 50  0000 C CNN
-F 1 "R_Small" V 5395 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 4500 50  0001 C CNN
-F 3 "~" H 5500 4500 50  0001 C CNN
-	1    5500 4500
+P 6500 5350
+F 0 "R2" V 6304 5350 50  0000 C CNN
+F 1 "DNP" V 6395 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6500 5350 50  0001 C CNN
+F 3 "~" H 6500 5350 50  0001 C CNN
+	1    6500 5350
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R3
 U 1 1 5DD6E928
-P 5500 4800
-F 0 "R3" V 5304 4800 50  0000 C CNN
-F 1 "R_Small" V 5395 4800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 4800 50  0001 C CNN
-F 3 "~" H 5500 4800 50  0001 C CNN
-	1    5500 4800
+P 6500 5650
+F 0 "R3" V 6304 5650 50  0000 C CNN
+F 1 "DNP" V 6395 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6500 5650 50  0001 C CNN
+F 3 "~" H 6500 5650 50  0001 C CNN
+	1    6500 5650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R4
 U 1 1 5DD6E95C
-P 5500 5100
-F 0 "R4" V 5304 5100 50  0000 C CNN
-F 1 "R_Small" V 5395 5100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 5100 50  0001 C CNN
-F 3 "~" H 5500 5100 50  0001 C CNN
-	1    5500 5100
+P 6500 5950
+F 0 "R4" V 6304 5950 50  0000 C CNN
+F 1 "DNP" V 6395 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6600 5950 30  0000 C CNN
+F 3 "~" H 6500 5950 50  0001 C CNN
+	1    6500 5950
 	0    1    1    0   
 $EndComp
-$Comp
-L PS2X49-rescue:C-RESCUE-GRID49-GRID49-rescue C2
-U 1 1 5DD72516
-P 4800 7300
-F 0 "C2" H 4800 7400 40  0000 L CNN
-F 1 "10uF" H 4806 7215 40  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 4800 6900 30  0000 C CNN
-F 3 "~" H 4800 7300 60  0000 C CNN
-	1    4800 7300
-	1    0    0    -1  
-$EndComp
 Text Label 1700 2800 0    50   ~ 0
-PWR2
+PWR1
 Text Label 2700 2800 0    50   ~ 0
 PWR1
 Text Label 7150 2650 0    50   ~ 0
 PWR1
 Wire Wire Line
 	6600 2650 6600 2700
-Text Label 7150 3500 0    50   ~ 0
-PWR2
+Wire Wire Line
+	6600 2700 6600 3500
+Connection ~ 6600 2700
+Wire Wire Line
+	6600 3500 7700 3500
+$Comp
+L Device:R_Small R8
+U 1 1 5E20A2E5
+P 7150 5950
+F 0 "R8" V 6954 5950 50  0000 C CNN
+F 1 "10K" V 7045 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7250 5950 30  0000 C CNN
+F 3 "~" H 7150 5950 50  0001 C CNN
+	1    7150 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5E20A365
+P 7150 5650
+F 0 "R7" V 6954 5650 50  0000 C CNN
+F 1 "10K" V 7045 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7250 5650 30  0000 C CNN
+F 3 "~" H 7150 5650 50  0001 C CNN
+	1    7150 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5E20A397
+P 7150 5350
+F 0 "R6" V 6954 5350 50  0000 C CNN
+F 1 "10K" V 7045 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7250 5350 30  0000 C CNN
+F 3 "~" H 7150 5350 50  0001 C CNN
+	1    7150 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5E20A3CB
+P 7150 5050
+F 0 "R5" V 6954 5050 50  0000 C CNN
+F 1 "10K" V 7045 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7250 5050 30  0000 C CNN
+F 3 "~" H 7150 5050 50  0001 C CNN
+	1    7150 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 5950 7350 5950
+Wire Wire Line
+	7350 5950 7350 5650
+Wire Wire Line
+	7250 5050 7350 5050
+Connection ~ 7350 5050
+Wire Wire Line
+	7350 5050 7350 4800
+Wire Wire Line
+	7250 5350 7350 5350
+Connection ~ 7350 5350
+Wire Wire Line
+	7350 5350 7350 5050
+Wire Wire Line
+	7250 5650 7350 5650
+Connection ~ 7350 5650
+Wire Wire Line
+	7350 5650 7350 5350
+Text Label 7400 4800 0    50   ~ 0
+PWR1
+Wire Wire Line
+	7350 4800 7700 4800
+$Comp
+L PS2X49-rescue:C-RESCUE-GRID49-GRID49-rescue C2
+U 1 1 5DD72516
+P 4800 7300
+F 0 "C2" H 4800 7400 40  0000 L CNN
+F 1 "0.1uF" H 4806 7215 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4800 6900 30  0000 C CNN
+F 3 "~" H 4800 7300 60  0000 C CNN
+	1    4800 7300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -21,8 +21,8 @@ sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
 sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules')
 defaultPath = '.'
 
-from dgProgDefaults import *
-from dgWriteListtoCSV import *
+from dgProgDefaultsTK import *
+from dgWriteListtoCSVTK import *
 
 from sys import argv
 
