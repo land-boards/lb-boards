@@ -7,6 +7,8 @@ The fields of the parts need to be named with particular names for this program 
 This is a setup thing for Kicad and only needs to be done once.
 The names must match exactly.
 
+Ported to Python 3 and Tkinter
+
 """
 from tkinter import filedialog
 from tkinter import *
@@ -26,7 +28,7 @@ from dgWriteListtoCSVTK import *
 
 from sys import argv
 
-#print 'kiPL.py'
+#print('kiPL.py')
 
 def errorDialog(errorString):
 	messagebox.showerror("Error", errorString)
@@ -62,9 +64,9 @@ class FindaNetFile:
 		#print("\nFindaNetFile: inContents",inContents)
 		partsList = control.readNetFileIntoPartsList(inContents)
 		#print("openFile: partsList",partsList)
-#		print 'partsList', partsList
+#		print('partsList', partsList)
 		sortedPL = control.sortPartsList(partsList)
-#		print 'sortedPL', sortedPL
+#		print('sortedPL', sortedPL)
 		reduxPL = control.combineRefDes(sortedPL)
 		try:
 			outCSVFile = csv.writer(open(fileToWriteCSV, 'w', newline=''), delimiter=',', quotechar='\"')
@@ -77,7 +79,7 @@ class FindaNetFile:
 				exit()
 		outCSVFile.writerow(['Qty','Value','RefDes'])
 		outCSVFile.writerows(reduxPL)
-		#print 'complete'
+		#print('complete')
 		infoBox("PL created")
 	
 	def	extractPathFromPathfilename(self,fullPathFilename):
@@ -204,7 +206,7 @@ class ControlClass:
 
 	def sortPartsList(self, outCSVList):
 		# The sorting is kinda weird but it results in something that makes sense
-#		print 'In sortPartsList, outCSVList is', outCSVList
+#		print('In sortPartsList, outCSVList is', outCSVList)
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[0])		# sort by Ref Des to get them in order
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[1])		# sort by Sort by part value
 		outCSVList = sorted(outCSVList, key = lambda errs: errs[0][0])	# sort by Sort by part number
@@ -221,7 +223,7 @@ class ControlClass:
 		outPL = []
 		qty = 0
 		# for row in outCSVList:
-			# print row[0:3]
+			# print(row[0:3])
 		for row in outCSVList:
 			if gotFirstPart == False:		# the first part gets handled here
 				gotFirstPart = True
@@ -231,9 +233,9 @@ class ControlClass:
 				if row[1:3] == previousPart[1:3]:	# if this part matches the last part
 					combinedRefDesString += ',' + row[0]
 					inComboPart = True
-#					print 'got a match, new combo part ref des', combinedRefDesString
+#					print('got a match, new combo part ref des', combinedRefDesString)
 					qty += 1
-#					print 'qty', qty
+#					print('qty', qty)
 				elif inComboPart == False:	# part didn't match and last part wasn't a combo part
 #						outCSVFile.writerow(previousPart)
 					outRow = []
@@ -241,7 +243,7 @@ class ControlClass:
 					outRow += previousPart
 					outPL.append(outRow)
 					combinedRefDesString = row[0]
-#					print 'not match'
+#					print('not match')
 					qty = 1
 				elif inComboPart:	# part mismatch but last part was combo
 					inComboPart = False
@@ -250,7 +252,7 @@ class ControlClass:
 					outRow.append(combinedRefDesString)
 					outRow += previousPart[1:]
 					outPL.append(outRow)
-#					print 'changeup, writing new ref des', combinedRefDesString
+#					print('changeup, writing new ref des', combinedRefDesString)
 					combinedRefDesString = row[0]
 					qty = 1
 			previousPart = row
@@ -279,9 +281,9 @@ class ControlClass:
 			newOutPLRow.append(row[1])	# Ref Des
 			#newOutPLRow += row[3:]		# Rest of original line
 			newOutPL.append(newOutPLRow)
-		# print "Out"
+		# print("Out")
 		# for line in newOutPL:
-			# print line
+			# print(line)
 		return newOutPL
 
 	def sortedRefDes(self,refString):
@@ -291,9 +293,9 @@ class ControlClass:
 		Into a list like this one:
 		['C1', 'C2', 'C3', 'C5', 'C6', 'C10']
 		"""
-		#print "sortedRefDes: stuff to sort",refString
+		#print("sortedRefDes: stuff to sort",refString)
 		refDesList = refString.split(',')
-		#print refDesList
+		#print(refDesList)
 		shortestRefDes = 10
 		longestRefDes = 0
 		newRefDesList = []
@@ -305,12 +307,12 @@ class ControlClass:
 		if shortestRefDes == longestRefDes:
 			return refString
 		else:
-			#print "Some sorting to do"	# Example: ['C1', 'C10', 'C2', 'C3', 'C5', 'C6']
+			#print("Some sorting to do"	# Example: ['C1', 'C10', 'C2', 'C3', 'C5', 'C6'])
 			for leng in range(shortestRefDes,longestRefDes+1):
 				for refDes in refDesList:
 					if len(refDes) == leng:
 						newRefDesList.append(refDes)
-			#print "newRefDesList",newRefDesList
+			#print("newRefDesList",newRefDesList)
 		newRefDesString = ''
 		for item in newRefDesList:
 			newRefDesString += item
@@ -326,14 +328,14 @@ class ControlClass:
 		outFilePtr.write('{| class="wikitable"\n')
 		firstRow = True
 		for row in theList:
-#			print row
+#			print(row)
 			for cell in row:
 				newCell = ''
 				if isinstance(cell, int):
 					newCell = str(cell)
 				else:
 					newCell = cell
-#				print newCell
+#				print(newCell)
 				if firstRow:
 					outFilePtr.write('! ' + newCell + '\n')					
 				else:
@@ -351,7 +353,7 @@ class ControlClass:
 		#defaultParmsClass.setVerboseMode(False)
 		defaultParmsClass.initDefaults()
 		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
-		#print 'defaultPath was :', defaultPath
+		#print('defaultPath was :', defaultPath)
 		
 		myCSV = FindaNetFile()
 		fileToRead = myCSV.findNetFile(defaultPath)
@@ -360,7 +362,7 @@ class ControlClass:
 			errorDialog('ERROR - Expected a net file type')
 			exit()
 		defaultParmsClass.storeKeyValuePair('DEFAULT_PATH',defaultPath)
-		#print 'defaultPath now is :', defaultPath
+		#print('defaultPath now is :', defaultPath)
 
 		fileToWriteCSV = fileToRead[:-4] + "_PL.csv"
 		fileToWriteMW = fileToRead[:-4] + ".MW"
@@ -392,15 +394,15 @@ class ControlClass:
 				exit()
 
 		partsList = self.readNetFileIntoPartsList(inFile)
-#		print 'partsList', partsList
+#		print('partsList', partsList)
 		sortedPL = self.sortPartsList(partsList)
-#		print 'sortedPL', sortedPL
+#		print('sortedPL', sortedPL)
 		reduxPL = self.combineRefDes(sortedPL)
 		outCSVFile.writerow(['Qty','Value','RefDes'])
 		outCSVFile.writerows(reduxPL)
 		
 		self.writeOutMWTable(outMWFile, reduxPL)
-		#print 'complete'
+		#print('complete')
 
 class Dashboard:
 	def __init__(self):
