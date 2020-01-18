@@ -96,11 +96,8 @@ class FindaNetFile:
 		:returns: path/name of the file that was selected
 		"""
 		global defaultPath
-		
 		filename =  filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("net files","*.net"),("all files","*.*")))
-		#print("findNetFile: filename",filename)
 		defaultPath = self.extractPathFromPathfilename(filename)
-		#print("findNetFile: defaultPath",defaultPath)
 		return (filename)
 		
 class ControlClass:
