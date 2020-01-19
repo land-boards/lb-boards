@@ -81,38 +81,32 @@ API
 
 """
 
+from __future__ import print_function
+from builtins import object
+
+from tkinter import filedialog
+from tkinter import *
+from tkinter import messagebox
+
 import csv
 import os
 import sys
 import string
-sys.path.append('C:\\Users\\Doug\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
-sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
+
+sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules\\TKDGCommon')
+sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules\\TKDGCommon')
 
 defaultPath = '.'
 
-from dgProgDefaults import *
+from dgProgDefaultsTK import *
 
 backAnnotate = True
 
-import pygtk
-pygtk.require('2.0')
-
-import gtk
-
-# Check for new pygtk: this is new class in PyGtk 2.4
-if gtk.pygtk_version < (2,3,90):
-   print "PyGtk 2.3.90 or later required for this example"
-   raise SystemExit
-
 def errorDialog(errorString):
-	"""
-	Prints an error message as a dialog box
-	"""
-	message = gtk.MessageDialog(type=gtk.MESSAGE_ERROR, buttons=gtk.BUTTONS_OK)
-	message.set_markup(errorString)
-	message.run()		# Display the dialog box and hang around waiting for the "OK" button
-	message.destroy()	# Takes down the dialog box
-	return
+	messagebox.showerror("Error", errorString)
+
+def infoBox(msgString):
+	messagebox.showinfo("kiPL",msgString)
 
 class ProcessKicadSchematic:
 	"""Methods related to reading KiCad schematic, netlist and pcb files
@@ -133,23 +127,10 @@ class ProcessKicadSchematic:
 		This is the dialog which locates the Kicad Schematic files
 		"""
 		global defaultPath
-		dialog = gtk.FileChooserDialog("Select sch file",None,gtk.FILE_CHOOSER_ACTION_OPEN,(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,gtk.STOCK_OPEN, gtk.RESPONSE_OK))
-		dialog.set_default_response(gtk.RESPONSE_OK)
-
-		filter = gtk.FileFilter()
-		filter.set_name("Kicad Schematic files")
-		filter.add_pattern("*.sch")
-		dialog.add_filter(filter)
-
-		response = dialog.run()
-		if response == gtk.RESPONSE_OK:
-			retFileName = dialog.get_filename()
-			dialog.destroy()
-			defaultPath = self.extractPathFromPathfilename(retFileName)
-			return retFileName
-		elif response == gtk.RESPONSE_CANCEL:
-			dialog.destroy()
-			return ''
+		filename =  filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.sch"),("all files","*.*")))
+		defaultPath = self.extractPathFromPathfilename(filename)
+		print("selectKicadSchematic: filename",filename)
+		return (filename)
 	
 	def readInFile(self, inFileName):
 		"""
@@ -158,11 +139,13 @@ class ProcessKicadSchematic:
 		
 		Read the text file into a list for  processing.
 		"""
+		print("readInFile: inFileName",inFileName)
 		schFilePtr = open(inFileName,'r')
-		schList = []
-		for line in schFilePtr:
-			schList.append(line)
-		schFilePtr.close()
+		schList = [line for line in schFilePtr]
+		# schList = []
+		# for line in schFilePtr:
+			# schList.append(line)
+		# schFilePtr.close()
 		return schList
 
 	def backupSchematic(self, schFileName):
@@ -172,16 +155,15 @@ class ProcessKicadSchematic:
 		
 		Back up the schematic file by renaming the file as _sch.bak.
 		"""
-		cmdString = 'copy '
-		cmdString += schFileName
-		cmdString += ' '
-		cmdString += schFileName[0:-4]
-		cmdString += '_sch.bak'
+		cmdString = 'copy ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
+		cmdString = cmdString.replace('/','\\')
+		print("backupSchematic: cmdString",cmdString)
 		try:
 			os.system(cmdString)
 		except:
-			print "Couldn't backup the schematic"
-			raise SystemExit
+			errorDialog("Couldn't backup the schematic")
+			return False
+		print("backupSchematic: backed up schematic")
 		return True
 	
 	def replaceRefDesInSch(self,row,refDesSchVsPc):
@@ -194,18 +176,18 @@ class ProcessKicadSchematic:
 		"""
 		rowPrefix = row[0:row.rfind(' ')]
 		oldRefDes = row[row.rfind(' ') + 1:-1]
-		# print 'replaceRefDesInSch: old ref des',oldRefDes
+		# print('replaceRefDesInSch: old ref des',oldRefDes)
 		newRefDes = ''
 		for refDesPair in refDesSchVsPc:
 			if refDesPair[0] == oldRefDes:
 				newRefDes = refDesPair[1]
 		if newRefDes == '':
-			# print 'replaceRefDesInSch: could not match ref des', oldRefDes
+			# print('replaceRefDesInSch: could not match ref des', oldRefDes)
 			newRow = row
 		elif newRefDes == oldRefDes:
 			newRow = row
 		else:
-			# print 'substituting ref des',newRefDes,'for ref des',oldRefDes
+			# print('substituting ref des',newRefDes,'for ref des',oldRefDes)
 			newRow = rowPrefix + ' ' + newRefDes + '\n'
 		return newRow
 	
@@ -224,19 +206,19 @@ class ProcessKicadSchematic:
 		vect.append(rowPrefix)
 		vect.append(rowSuffix)
 		vect.append(oldRefDes)
-		# print 'vect',vect
-		# print 'replaceRefDesInSchSilkscreen: old ref des',oldRefDes
+		# print('vect',vect)
+		# print('replaceRefDesInSchSilkscreen: old ref des',oldRefDes)
 		newRefDes = ''
 		for refDesPair in refDesSchVsPc:
 			if refDesPair[0] == oldRefDes:
 				newRefDes = refDesPair[1]
 		if newRefDes == '':
-			# print 'replaceRefDesInSchSilkscreen: could not match ref des', oldRefDes
+			# print('replaceRefDesInSchSilkscreen: could not match ref des', oldRefDes)
 			newRow = row
 		elif newRefDes == oldRefDes:
 			newRow = row
 		else:
-			# print 'substituting ref des',newRefDes,'for ref des',oldRefDes
+			# print('substituting ref des',newRefDes,'for ref des',oldRefDes)
 			newRow = rowPrefix + newRefDes + rowSuffix + '\n'
 		return newRow
 	
@@ -258,7 +240,7 @@ class ProcessKicadSchematic:
 		1   0    0    -1  
 		$EndComp
 		"""
-		# print 'backAnnotateSch'
+		# print('backAnnotateSch')
 		newSchList = []
 		state = 'waitForComp'
 		for row in schList:
@@ -266,15 +248,15 @@ class ProcessKicadSchematic:
 				newSchList.append(row)
 				state = 'gotComp'
 			elif state == 'gotComp':
-				# print 'ref des was', row,
+				# print('ref des was', row,)
 				newRefDesRow = self.replaceRefDesInSch(row,refDesSchVsPc)
-				# print 'ref des new',newRefDesRow
+				# print('ref des new',newRefDesRow)
 				newSchList.append(newRefDesRow)
 				state = 'waitingForF0'
 			elif state == 'waitingForF0' and 'F 0 "' in row:
-				# print 'waitingForF0 ref des was', row,
+				# print('waitingForF0 ref des was', row,)
 				newRefDesRow = self.replaceRefDesInSchSilkscreen(row,refDesSchVsPc)
-				# print 'waitingForF0 ref des new',newRefDesRow
+				# print('waitingForF0 ref des new',newRefDesRow)
 				newSchList.append(newRefDesRow)
 				state = 'waitingForEndComp'
 			elif '$EndComp' in row and state == 'waitingForEndComp':
@@ -283,7 +265,7 @@ class ProcessKicadSchematic:
 			else:
 				newSchList.append(row)
 			# if state != 'waitForComp':
-				# print 'state',state
+				# print('state',state)
 		return newSchList
 		
 	def writeOutSchematic(self, outList, outFileName):
@@ -294,10 +276,10 @@ class ProcessKicadSchematic:
 		
 		"""
 #		outFileName = outFileName[0:-4] + '_test.sch'
-		outSchFilePtr = open(outFileName,'wb')
+		outSchFilePtr = open(outFileName,'w')
 		for line in outList:
 			outSchFilePtr.write(line)
-#			print line.strip('\n\r')
+#			print(line.strip('\n\r'))
 		return True
 
 	def checkSchematicvsNetlist(self, schList, netList):
@@ -314,14 +296,14 @@ class ProcessKicadSchematic:
 			schTimestampList.append(rdtsPair[1])
 		for rdtsPair in netList:
 			if rdtsPair[1] not in schTimestampList:
-				print 'checkSchematicvsNetlist: could not find ref des in schematic',rdtsPair[0]
+				print('checkSchematicvsNetlist: could not find ref des in schematic',rdtsPair[0])
 				errorsFound = True
 		netTimestampList = []
 		for rdtsPair in netList:
 			netTimestampList.append(rdtsPair[1])
 		for rdtsPair in schList:
 			if rdtsPair[1] not in netTimestampList:
-				print 'checkSchematicvsNetlist: could not find ref des in netlist',rdtsPair[0]
+				print('checkSchematicvsNetlist: could not find ref des in netlist',rdtsPair[0])
 				errorsFound = True
 		return not errorsFound
 	
@@ -343,8 +325,8 @@ class ProcessKicadSchematic:
 					newRefDes.append(refDesLine)
 		for row in newRefDes:
 			if row[0] != row[1]:
-				print 'makeSchVsPcbRefDesList: Difference (sch,pcb):',row[0], row[1]
-		# print 'makeSchVsPcbRefDesList',newRefDes
+				print('makeSchVsPcbRefDesList: Difference (sch,pcb):',row[0], row[1])
+		# print('makeSchVsPcbRefDesList',newRefDes)
 		return(newRefDes)
 	
 	def checkSchematicvsPcb(self, schList, pcbList):
@@ -361,14 +343,14 @@ class ProcessKicadSchematic:
 			schTimestampList.append(rdtsPair[1])
 		for rdtsPair in pcbList:
 			if rdtsPair[1] not in schTimestampList:
-				print 'checkSchematicvsPcb: could not find ref des in schematic',rdtsPair[0]
+				print('checkSchematicvsPcb: could not find ref des in schematic',rdtsPair[0])
 				errorsFound = True
 		netTimestampList = []
 		for rdtsPair in pcbList:
 			netTimestampList.append(rdtsPair[1])
 		for rdtsPair in schList:
 			if rdtsPair[1] not in netTimestampList:
-				print 'checkSchematicvsPcb: could not find ref des in pcb',rdtsPair[0]
+				print('checkSchematicvsPcb: could not find ref des in pcb',rdtsPair[0])
 				errorsFound = True
 
 		return not errorsFound
@@ -407,7 +389,7 @@ class ProcessKicadSchematic:
 				newLine = []
 			elif '$EndComp' in line and state == 'gotTimeStamp':
 				state = 'waiting'
-		#print 'sch - ref des vs time stamps',schRefDesList
+		#print('sch - ref des vs time stamps',schRefDesList)
 		return schRefDesList
 	
 	def getNetListRefDesTimestamp(self, netList):
@@ -435,7 +417,7 @@ class ProcessKicadSchematic:
 				state = 'waiting'
 				netRefDesList.append(newLine)
 				newLine = []
-		#print 'net - ref des vs time stamps',netRefDesList
+		#print('net - ref des vs time stamps',netRefDesList)
 		return netRefDesList
 	
 	def getPcbRefDesTimestamp(self, pcbList):
@@ -444,27 +426,27 @@ class ProcessKicadSchematic:
 		(fp_text reference D12 (at 1.27 5.08 180) (layer F.SilkS)
 		"""
 		pcbRefDesList = []
-		#print 'getPcbRefDesTimestamp',pcbList
+		#print('getPcbRefDesTimestamp',pcbList)
 		state = 'waiting'
 		newLine = []
-		# print 'state',state
+		# print('state',state)
 		timeStamp = ''
 		for line in pcbList:
 			if '(path /' in line and state == 'waiting':
 				timeStamp = line[line.rfind('/')+1:-2]
-				# print 'timeStamp:',timeStamp
+				# print('timeStamp:',timeStamp)
 				state = 'gotTimeStamp'
 			elif '(fp_text reference ' in line and state == 'gotTimeStamp':
 				refDes = line[23:line.find('(',24)-1]
-				# print 'refDes',refDes
+				# print('refDes',refDes)
 				newLine.append(refDes)
 				newLine.append(timeStamp)
 				pcbRefDesList.append(newLine)
 				newLine = []
 				state = 'waiting'
 			# if state != 'waiting':
-				# print 'state',state
-		# print 'pcb - ref des vs time stamps',pcbRefDesList
+				# print('state',state)
+		# print('pcb - ref des vs time stamps',pcbRefDesList)
 		# sys.exit()
 		return pcbRefDesList
 	
@@ -478,7 +460,7 @@ class ProcessKicadSchematic:
 		#defaultParmsClass.setVerboseMode(False)
 		defaultParmsClass.initDefaults()
 		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
-		#print 'defaultPath was :', defaultPath
+		#print('defaultPath was :', defaultPath)
 		
 		schFileName = self.selectKicadSchematic()
 		if schFileName == '':
@@ -503,25 +485,25 @@ class ProcessKicadSchematic:
 			failString = "Failed to read in the net file\n" + netFileName + "\nFile not found."
 			errorDialog(failString)
 			return False
-		print 'schematic file has lines:', len(schematicAsList)
-		print 'net file has lines:', len(netFileAsList)
-		print 'pcb file has lines:', len(pcbFileAsList)
+		print('schematic file has lines:', len(schematicAsList))
+		print('net file has lines:', len(netFileAsList))
+		print('pcb file has lines:', len(pcbFileAsList))
 		schGetRefDesTimestamp = self.getSchematicRefDesTimestamp(schematicAsList)
 		netGetRefDesTimestamp = self.getNetListRefDesTimestamp(netFileAsList)
 		pcbGetRefDesTimestamp = self.getPcbRefDesTimestamp(pcbFileAsList)
 		
 		if self.checkSchematicvsNetlist(schGetRefDesTimestamp, netGetRefDesTimestamp):
-			print 'checkSchematicvsNetlist: OK'
+			print('checkSchematicvsNetlist: OK')
 		else:
 			errorDialog('Schematic vs netlist - error')
 		refDesSchVsPc = self.makeSchVsPcbRefDesList(schGetRefDesTimestamp, pcbGetRefDesTimestamp)
 
 		if self.checkSchematicvsPcb(schGetRefDesTimestamp, pcbGetRefDesTimestamp):
-			print 'checkSchematicvsPcb: OK'
+			print('checkSchematicvsPcb: OK')
 		else:
 			errorDialog('Schematic vs pcb - error')
 		
-		# print 'refDesSchVsPc list:',refDesSchVsPc
+		# print('refDesSchVsPc list:',refDesSchVsPc)
 		outList = self.backAnnotateSch(schematicAsList,refDesSchVsPc)
 		outFileName = schFileName
 		self.writeOutSchematic(outList,outFileName)
@@ -531,7 +513,7 @@ class ProcessKicadSchematic:
 		"""Check option.
 		The executive which calls all of the other functions.
 		"""
-		print 'called doKiSchChk'
+		print('called doKiSchChk')
 		schFileName = self.selectKicadSchematic()
 		if schFileName == '':
 			errorDialog("Failed to open schematic file")
@@ -555,135 +537,160 @@ class ProcessKicadSchematic:
 			failString = "Failed to read in the net file\n" + netFileName + "\nFile not found."
 			errorDialog(failString)
 			return False
-		print 'schematic file has lines:', len(schematicAsList)
-		print 'net file has lines:', len(netFileAsList)
-		print 'pcb file has lines:', len(pcbFileAsList)
+		print('schematic file has lines:', len(schematicAsList))
+		print('net file has lines:', len(netFileAsList))
+		print('pcb file has lines:', len(pcbFileAsList))
 		schGetRefDesTimestamp = self.getSchematicRefDesTimestamp(schematicAsList)
 		netGetRefDesTimestamp = self.getNetListRefDesTimestamp(netFileAsList)
 		pcbGetRefDesTimestamp = self.getPcbRefDesTimestamp(pcbFileAsList)
 		
 		if self.checkSchematicvsNetlist(schGetRefDesTimestamp, netGetRefDesTimestamp):
-			print 'OK'
+			print('OK')
 		else:
 			errorDialog('Schematic vs netlist - error')
 		self.makeSchVsPcbRefDesList(schGetRefDesTimestamp, pcbGetRefDesTimestamp)
 
 		if self.checkSchematicvsPcb(schGetRefDesTimestamp, pcbGetRefDesTimestamp):
-			print 'OK'
+			print('OK')
 		else:
 			errorDialog('Schematic vs pcb - error')
 			
 		
 		return True
 	
-class UIManager:
-	"""User Interface
-	"""
-	interface = """
-	<ui>
-		<menubar name="MenuBar">
-			<menu action="File">
-				<menuitem action="Open"/>
-				<menuitem action="Quit"/>
-			</menu>
-			<menu action="Options">
-				<menuitem action="BackAnn"/>
-				<menuitem action="Analyze"/>
-			</menu>
-			<menu action="Help">
-				<menuitem action="About"/>
-			</menu>
-		</menubar>
-	</ui>
-	"""
-
+class Dashboard:
 	def __init__(self):
-		"""
-		Create the top level window
-		"""
-		window = gtk.Window()
-		window.connect('destroy', lambda w: gtk.main_quit())
-		window.set_default_size(200, 200)
+		self.win = Tk()
+		self.win.geometry("320x240")
+		self.win.title("pyKiBackannSchem - Backannotate schematic from netlist")
+
+	def add_menu(self):
+		self.mainmenu = Menu(self.win)
+		self.win.config(menu=self.mainmenu)
+
+		self.filemenu = Menu(self.mainmenu)
+		self.mainmenu.add_cascade(label="File",menu=self.filemenu)
+
+		self.filemenu.add_command(label="Open Sch file",command=control.doKiPcb2Sch)
+		self.filemenu.add_separator()
+		self.filemenu.add_command(label="Exit",command=self.win.quit)
+
+		self.win.mainloop()
+
+if __name__ == "__main__":
+	control = ProcessKicadSchematic()
+	x = Dashboard()
+	x.add_menu()
+	
+
+# class UIManager:
+	# """User Interface
+	# """
+	# interface = """
+	# <ui>
+		# <menubar name="MenuBar">
+			# <menu action="File">
+				# <menuitem action="Open"/>
+				# <menuitem action="Quit"/>
+			# </menu>
+			# <menu action="Options">
+				# <menuitem action="BackAnn"/>
+				# <menuitem action="Analyze"/>
+			# </menu>
+			# <menu action="Help">
+				# <menuitem action="About"/>
+			# </menu>
+		# </menubar>
+	# </ui>
+	# """
+
+	# def __init__(self):
+		# """
+		# Create the top level window
+		# """
+		# window = gtk.Window()
+		# window.connect('destroy', lambda w: gtk.main_quit())
+		# window.set_default_size(200, 200)
 		
-		vbox = gtk.VBox()
+		# vbox = gtk.VBox()
 		
-		# Create a UIManager instance
-		uimanager = gtk.UIManager()
+		# # Create a UIManager instance
+		# uimanager = gtk.UIManager()
 
-		# Add the accelerator group to the toplevel window
-		accelgroup = uimanager.get_accel_group()
-		window.add_accel_group(accelgroup)
+		# # Add the accelerator group to the toplevel window
+		# accelgroup = uimanager.get_accel_group()
+		# window.add_accel_group(accelgroup)
 
-		# Create an ActionGroup
-		actiongroup =  gtk.ActionGroup("pyKiBackannSchem")
-		self.actiongroup = actiongroup
+		# # Create an ActionGroup
+		# actiongroup =  gtk.ActionGroup("pyKiBackannSchem")
+		# self.actiongroup = actiongroup
 
-		# Create actions
-		self.actiongroup.add_actions([
-			("Open", gtk.STOCK_OPEN, "_Open", None, "Open an Existing Document", self.openIF),
-			("Quit", gtk.STOCK_QUIT, "_Quit", None, "Quit the Application", self.quit_application),
-			("File", None, "_File"),
-			("Options", None, "_Options"),
-			("Help", None, "_Help"),
-			("About", None, "_About", None, "About pyKiBackannSchem", self.about_pykifoot),
-			])
-		self.actiongroup.add_radio_actions([
-			("BackAnn", gtk.STOCK_PREFERENCES, "_Back Annotate", '<Control>B', "Back annotate schematic from cmp file", 0),
-			("Analyze", gtk.STOCK_PREFERENCES, "_Analyze", '<Control>A', "Analyze impact of backannotation", 1),
-			], 2, self.setSelProcess)
-		uimanager.insert_action_group(self.actiongroup, 0)
-		uimanager.add_ui_from_string(self.interface)
+		# # Create actions
+		# self.actiongroup.add_actions([
+			# ("Open", gtk.STOCK_OPEN, "_Open", None, "Open an Existing Document", self.openIF),
+			# ("Quit", gtk.STOCK_QUIT, "_Quit", None, "Quit the Application", self.quit_application),
+			# ("File", None, "_File"),
+			# ("Options", None, "_Options"),
+			# ("Help", None, "_Help"),
+			# ("About", None, "_About", None, "About pyKiBackannSchem", self.about_pykifoot),
+			# ])
+		# self.actiongroup.add_radio_actions([
+			# ("BackAnn", gtk.STOCK_PREFERENCES, "_Back Annotate", '<Control>B', "Back annotate schematic from cmp file", 0),
+			# ("Analyze", gtk.STOCK_PREFERENCES, "_Analyze", '<Control>A', "Analyze impact of backannotation", 1),
+			# ], 2, self.setSelProcess)
+		# uimanager.insert_action_group(self.actiongroup, 0)
+		# uimanager.add_ui_from_string(self.interface)
 		
-		menubar = uimanager.get_widget("/MenuBar")
-		vbox.pack_start(menubar, False)
+		# menubar = uimanager.get_widget("/MenuBar")
+		# vbox.pack_start(menubar, False)
 		
-		window.connect("destroy", lambda w: gtk.main_quit())
+		# window.connect("destroy", lambda w: gtk.main_quit())
 		
-		window.add(vbox)
-		window.show_all()
+		# window.add(vbox)
+		# window.show_all()
 
-	def openIF(self, b):
-		"""
-		"""
-		SchClass = ProcessKicadSchematic()
-		if backAnnotate == True:
-			if SchClass.doKiPcb2Sch() != False:
-				message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-				message.set_markup("Backannotation Completed")
-				message.run()
-				message.destroy()
-		else:
-			if SchClass.doKiSchChk() != False:
-				message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-				message.set_markup("Analysis Completed")
-				message.run()
-				message.destroy()
-		return
+	# def openIF(self, b):
+		# """
+		# """
+		# SchClass = ProcessKicadSchematic()
+		# if backAnnotate == True:
+			# if SchClass.doKiPcb2Sch() != False:
+				# message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
+				# message.set_markup("Backannotation Completed")
+				# message.run()
+				# message.destroy()
+		# else:
+			# if SchClass.doKiSchChk() != False:
+				# message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
+				# message.set_markup("Analysis Completed")
+				# message.run()
+				# message.destroy()
+		# return
 
-	def about_pykifoot(self, b):
-		"""
-		"""
-		message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
-		message.set_markup("About pyKiBackannSchem\nAuthor: Doug Gilliland\n(c) 2014 - All rights reserved\nProgram backannotates a Kicad sch file from a cmp file")
-		message.run()
-		message.destroy()
+	# def about_pykifoot(self, b):
+		# """
+		# """
+		# message = gtk.MessageDialog(type=gtk.MESSAGE_INFO, buttons=gtk.BUTTONS_OK)
+		# message.set_markup("About pyKiBackannSchem\nAuthor: Doug Gilliland\n(c) 2014 - All rights reserved\nProgram backannotates a Kicad sch file from a cmp file")
+		# message.run()
+		# message.destroy()
 		
-	def setSelProcess(self, action, current):
-		"""
-		"""
-		global backAnnotate
-		text = current.get_name()
-		if (text == "BackAnn"):
-			backAnnotate = True
-			print 'Back annotate flag set'
-		elif (text == "Analyze"):
-			backAnnotate = False
-			print 'Analyze flag set'
-		return
+	# def setSelProcess(self, action, current):
+		# """
+		# """
+		# global backAnnotate
+		# text = current.get_name()
+		# if (text == "BackAnn"):
+			# backAnnotate = True
+			# print 'Back annotate flag set'
+		# elif (text == "Analyze"):
+			# backAnnotate = False
+			# print 'Analyze flag set'
+		# return
 
-	def quit_application(self, widget):
-		gtk.main_quit()
+	# def quit_application(self, widget):
+		# gtk.main_quit()
 
-if __name__ == '__main__':
-	ba = UIManager()
-	gtk.main()
+# if __name__ == '__main__':
+	# ba = UIManager()
+	# gtk.main()
