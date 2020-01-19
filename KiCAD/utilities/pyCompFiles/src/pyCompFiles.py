@@ -99,10 +99,6 @@ class ControlClass:
 		"""
 		"""
 		outList = [inLine.strip('\n\r ') for inLine in inFile]
-		# outList = []
-		# for inLine in inFile:
-			# inLine = inLine.strip('\n\r ')
-			# outList.append(inLine)
 		return outList
 
 	def compareLists(self, file1, file2):
