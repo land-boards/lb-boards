@@ -1,83 +1,83 @@
 """
-Back-annotate footprints on a Kicad schematic from the PCB.
+	Back-annotate footprints on a Kicad schematic from the PCB.
 
-========
-Workflow
-========
+	========
+	Workflow
+	========
 
-* Run this program
-* Select the .sch file
-* The netlist file and pcb file are automatically loaded
-* Only works for single file schematics
+	* Run this program
+	* Select the .sch file
+	* The netlist file and pcb file are automatically loaded
+	* Only works for single file schematics
 
-=====
-Usage
-=====
+	=====
+	Usage
+	=====
 
-Program is run by either typing python pyKiBackannSchem.py or double clicking pyKiBackannSchem.py.
+	Program is run by either typing python pyKiBackannSchem.py or double clicking pyKiBackannSchem.py.
 
-=======
-Formats
-=======
+	=======
+	Formats
+	=======
 
-NetList format
-==============
+	NetList format
+	==============
 
-* (comp (ref D99)
-* (net (code 26) (name "Net-(D99-Pad1)")
-* (node (ref RP4) (pin 8))
-* (node (ref D99) (pin 1)))
+	* (comp (ref D99)
+	* (net (code 26) (name "Net-(D99-Pad1)")
+	* (node (ref RP4) (pin 8))
+	* (node (ref D99) (pin 1)))
 
-PCB format
-==========
+	PCB format
+	==========
 
-* (L130) (net 47 "Net-(D99-Pad1)")
-* (L131) (net 48 "Net-(D99-Pad2)")
-* (L170) (add_net "Net-(D99-Pad1)")
-* (L171) (add_net "Net-(D99-Pad2)")
-* (L580) (fp_text reference D99 (at 1.905 5.08 180) (layer F.SilkS)
-* (L851) (pad 1 thru_hole circle (at -1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L596) (net 47 "Net-(D99-Pad1)"))
-* (L597) (pad 2 thru_hole circle (at 1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L598) (net 48 "Net-(D99-Pad2)"))
-* (L792) (pad 1 thru_hole rect (at -1.27 0 180) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
-* (L793) (net 48 "Net-(D99-Pad2)"))
-* (L1298) (pad 8 thru_hole circle (at 8.89 0 90) (size 1.397 1.397) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
-* (L1299) (net 47 "Net-(D99-Pad1)"))
+	* (L130) (net 47 "Net-(D99-Pad1)")
+	* (L131) (net 48 "Net-(D99-Pad2)")
+	* (L170) (add_net "Net-(D99-Pad1)")
+	* (L171) (add_net "Net-(D99-Pad2)")
+	* (L580) (fp_text reference D99 (at 1.905 5.08 180) (layer F.SilkS)
+	* (L851) (pad 1 thru_hole circle (at -1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+	* (L596) (net 47 "Net-(D99-Pad1)"))
+	* (L597) (pad 2 thru_hole circle (at 1.27 0 90) (size 1.6764 1.6764) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+	* (L598) (net 48 "Net-(D99-Pad2)"))
+	* (L792) (pad 1 thru_hole rect (at -1.27 0 180) (size 1.524 1.524) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
+	* (L793) (net 48 "Net-(D99-Pad2)"))
+	* (L1298) (pad 8 thru_hole circle (at 8.89 0 90) (size 1.397 1.397) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
+	* (L1299) (net 47 "Net-(D99-Pad1)"))
 
-Schematic format
-================
+	Schematic format
+	================
 
-* $Comp
-* L LED-RESCUE-LED-TEST-2 D99
-* U 1 1 544A66CA
-* P 6850 4650
-* F 0 "D99" H 6850 4750 50  0000 C CNN
-* F 1 "LED" H 6850 4550 50  0000 C CNN
-* F 2 "LEDs:LED-5MM" H 6850 4650 60  0000 C CNN
-* F 3 "" H 6850 4650 60  0001 C CNN
-* 	1    6850 4650
-* 	-1   0    0    -1  
-* $EndComp
+	* $Comp
+	* L LED-RESCUE-LED-TEST-2 D99
+	* U 1 1 544A66CA
+	* P 6850 4650
+	* F 0 "D99" H 6850 4750 50  0000 C CNN
+	* F 1 "LED" H 6850 4550 50  0000 C CNN
+	* F 2 "LEDs:LED-5MM" H 6850 4650 60  0000 C CNN
+	* F 3 "" H 6850 4650 60  0001 C CNN
+	* 	1    6850 4650
+	* 	-1   0    0    -1  
+	* $EndComp
 
 
-===============
-Output Messages
-===============
+	===============
+	Output Messages
+	===============
 
-* Error message are sent to the stdout.
-* When the program is done it has a dialog box which gives time to look at the error log.
+	* Error message are sent to the stdout.
+	* When the program is done it has a dialog box which gives time to look at the error log.
 
-=======
-Options
-=======
+	=======
+	Options
+	=======
 
-* Check only
-* Back annotate (default choice)
+	* Check only
+	* Back annotate (default choice)
 
-===
-API
-===
+	===
+	API
+	===
 
 """
 
@@ -129,7 +129,7 @@ class ProcessKicadSchematic:
 		global defaultPath
 		filename =  filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.sch"),("all files","*.*")))
 		defaultPath = self.extractPathFromPathfilename(filename)
-		print("selectKicadSchematic: filename",filename)
+		#print("selectKicadSchematic: filename",filename)
 		return (filename)
 	
 	def readInFile(self, inFileName):
@@ -139,13 +139,9 @@ class ProcessKicadSchematic:
 		
 		Read the text file into a list for  processing.
 		"""
-		print("readInFile: inFileName",inFileName)
+		#print("readInFile: inFileName",inFileName)
 		schFilePtr = open(inFileName,'r')
 		schList = [line for line in schFilePtr]
-		# schList = []
-		# for line in schFilePtr:
-			# schList.append(line)
-		# schFilePtr.close()
 		return schList
 
 	def backupSchematic(self, schFileName):
@@ -155,15 +151,15 @@ class ProcessKicadSchematic:
 		
 		Back up the schematic file by renaming the file as _sch.bak.
 		"""
-		cmdString = 'copy ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
+		cmdString = 'copy /A ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
 		cmdString = cmdString.replace('/','\\')
-		print("backupSchematic: cmdString",cmdString)
+		#print("backupSchematic: cmdString",cmdString)
 		try:
 			os.system(cmdString)
 		except:
 			errorDialog("Couldn't backup the schematic")
 			return False
-		print("backupSchematic: backed up schematic")
+		#print("backupSchematic: backed up schematic")
 		return True
 	
 	def replaceRefDesInSch(self,row,refDesSchVsPc):
