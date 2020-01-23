@@ -127,7 +127,7 @@ class ProcessKicadSchematic:
 		This is the dialog which locates the Kicad Schematic files
 		"""
 		global defaultPath
-		filename =  filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.sch"),("all files","*.*")))
+		filename =  os.path.normpath(filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.sch"),("all files","*.*"))))
 		defaultPath = self.extractPathFromPathfilename(filename)
 		#print("selectKicadSchematic: filename",filename)
 		return (filename)
@@ -153,7 +153,6 @@ class ProcessKicadSchematic:
 		"""
 		schFileName = schFileName.replace('/','\\')
 		cmdString = 'copy /A ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
-#		cmdString = cmdString.replace('/','\\')
 		print("backupSchematic: cmdString",cmdString)
 		try:
 			os.system(cmdString)
