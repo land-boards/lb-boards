@@ -151,9 +151,10 @@ class ProcessKicadSchematic:
 		
 		Back up the schematic file by renaming the file as _sch.bak.
 		"""
+		schFileName = schFileName.replace('/','\\')
 		cmdString = 'copy /A ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
-		cmdString = cmdString.replace('/','\\')
-		#print("backupSchematic: cmdString",cmdString)
+#		cmdString = cmdString.replace('/','\\')
+		print("backupSchematic: cmdString",cmdString)
 		try:
 			os.system(cmdString)
 		except:
