@@ -453,7 +453,7 @@ class ProcessKicadSchematic:
 		global defaultPath
 		#Load the default path
 		defaultParmsClass = HandleDefault()
-		#defaultParmsClass.setVerboseMode(False)
+		defaultParmsClass.setVerboseMode(True)
 		defaultParmsClass.initDefaults()
 		defaultPath = defaultParmsClass.getKeyVal('DEFAULT_PATH')
 		#print('defaultPath was :', defaultPath)
@@ -462,6 +462,7 @@ class ProcessKicadSchematic:
 		if schFileName == '':
 			errorDialog("Failed to open schematic file")
 			return False
+		
 		if self.backupSchematic(schFileName) != True:
 			errorDialog("Failed to back up the schematic file")
 			return False
@@ -560,16 +561,39 @@ class Dashboard:
 		self.win.geometry("320x240")
 		self.win.title("pyKiBackannSchem - Backannotate schematic from netlist")
 
+	def runOption(self):
+		if backAnnotate:
+			control.doKiPcb2Sch()
+		else:
+			control.doKiSchChk()
+	
+	def backAnn(self):
+		global backAnnotate
+		print("Backannotate")
+		backAnnotate = True
+		return
+	
+	def analy(self):
+		global backAnnotate
+		print("Analyze only")
+		backAnnotate = False
+		return
+		
 	def add_menu(self):
 		self.mainmenu = Menu(self.win)
 		self.win.config(menu=self.mainmenu)
 
 		self.filemenu = Menu(self.mainmenu)
+		self.options = Menu(self.mainmenu)
 		self.mainmenu.add_cascade(label="File",menu=self.filemenu)
+		self.mainmenu.add_cascade(label="Options",menu=self.options)
 
-		self.filemenu.add_command(label="Open Sch file",command=control.doKiPcb2Sch)
+		self.filemenu.add_command(label="Open Sch file",command=self.runOption)
 		self.filemenu.add_separator()
 		self.filemenu.add_command(label="Exit",command=self.win.quit)
+
+		self.options.add_command(label="Back",command=self.backAnn)
+		self.options.add_command(label="Analyze",command=self.analy)
 
 		self.win.mainloop()
 
