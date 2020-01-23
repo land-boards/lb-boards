@@ -106,7 +106,7 @@ def errorDialog(errorString):
 	messagebox.showerror("Error", errorString)
 
 def infoBox(msgString):
-	messagebox.showinfo("kiPL",msgString)
+	messagebox.showinfo("kiBackannSch",msgString)
 
 class ProcessKicadSchematic:
 	"""Methods related to reading KiCad schematic, netlist and pcb files
@@ -151,9 +151,9 @@ class ProcessKicadSchematic:
 		
 		Back up the schematic file by renaming the file as _sch.bak.
 		"""
-		schFileName = schFileName.replace('/','\\')
+		#schFileName = schFileName.replace('/','\\')
 		cmdString = 'copy /A ' + schFileName + ' ' + schFileName[0:-4] + '_sch.bak'
-		print("backupSchematic: cmdString",cmdString)
+		#print("backupSchematic: cmdString",cmdString)
 		try:
 			os.system(cmdString)
 		except:
