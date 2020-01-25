@@ -15,7 +15,6 @@ from tkinter import *
 from tkinter import messagebox
 
 import csv
-#import string
 import os
 import sys
 
