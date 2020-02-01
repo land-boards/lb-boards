@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:RETRO-EP4CE15-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LandBoards:MTG_HOLE MTG?1
+L RETRO-EP4CE15-rescue:MTG_HOLE-LandBoards MTG?1
 U 1 1 586AD5E2
 P 11250 10050
 F 0 "MTG?1" H 11250 10150 60  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 11250 10050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG2
+L RETRO-EP4CE15-rescue:MTG_HOLE-LandBoards MTG2
 U 1 1 586AD65D
 P 11250 9750
 F 0 "MTG2" H 11250 9850 60  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 11250 9750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG3
+L RETRO-EP4CE15-rescue:MTG_HOLE-LandBoards MTG3
 U 1 1 586AD691
 P 11250 10350
 F 0 "MTG3" H 11250 10450 60  0000 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 11250 10350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards:MTG_HOLE MTG1
+L RETRO-EP4CE15-rescue:MTG_HOLE-LandBoards MTG1
 U 1 1 586AD6D2
 P 11250 9450
 F 0 "MTG1" H 11250 9550 60  0000 C CNN
@@ -166,7 +166,7 @@ F 3 "" H 4350 9800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards_Semis:AP1117 U1
+L RETRO-EP4CE15-rescue:AP1117-LandBoards_Semis U1
 U 1 1 58C5EBB9
 P 3600 9500
 F 0 "U1" H 3700 9650 60  0000 C CNN
@@ -1106,7 +1106,7 @@ Wire Wire Line
 Wire Wire Line
 	11650 6900 10950 6900
 $Comp
-L LandBoards_Semis:FT230XS U2
+L RETRO-EP4CE15-rescue:FT230XS-LandBoards_Semis U2
 U 1 1 5E156BE7
 P 12300 7000
 F 0 "U2" H 12000 7700 50  0000 C CNN
@@ -1141,7 +1141,7 @@ F 3 "~" H 11200 7300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LandBoards_Semis:LED-fixed D1
+L RETRO-EP4CE15-rescue:LED-fixed-LandBoards_Semis D1
 U 1 1 5E2438C1
 P 10750 7600
 F 0 "D1" H 10550 7650 50  0000 C CNN
@@ -1154,7 +1154,7 @@ $EndComp
 Wire Wire Line
 	10950 7600 11100 7600
 $Comp
-L LandBoards_Semis:LED-fixed D2
+L RETRO-EP4CE15-rescue:LED-fixed-LandBoards_Semis D2
 U 1 1 5E259C7A
 P 10750 7300
 F 0 "D2" H 10550 7350 50  0000 C CNN
@@ -1182,7 +1182,7 @@ F 3 "" H 15500 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LandBoards_Conns:VGA P1
+L RETRO-EP4CE15-rescue:VGA-LandBoards_Conns P1
 U 1 1 5E310CD7
 P 15100 2650
 F 0 "P1" H 15150 3450 50  0000 L CNN
@@ -1940,7 +1940,7 @@ Text Notes 8550 3800 0    50   ~ 0
 Wire Wire Line
 	4800 9350 4800 9500
 $Comp
-L LandBoards_Semis:IS62WV10248EBLL-45TLI U3
+L RETRO-EP4CE15-rescue:IS62WV10248EBLL-45TLI-LandBoards_Semis U3
 U 1 1 5E275B6B
 P 10900 2500
 F 0 "U3" H 11150 3750 60  0000 C CNN
