@@ -10,7 +10,7 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=ESP32-Hub.net
+LastNetListRead=ESP32-VGA.net
 UseCmpFile=0
 PadDrill=0.600000000000
 PadDrillOvalY=0.600000000000

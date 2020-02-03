@@ -1,12 +1,13 @@
-Qty,Value,RefDes,,Qty,Value,RefDes
-5,0.1uF,"C1,C2,C4,C5,C6",,1,"Conn, 1x3",H1
-1,10uF,C3,,1,"Conn, 2x4",H2
-1,CP1,C7,,1,"Conn, 1x2",J15
-1,Polyfuse_Small,F1,,1,"DC Power jack, 5.5mmx2.1mm",J1
-1,150,R12,,2,"Conn, Right Ang, 1x6 ","J2,J6"
-6,180,"R1,R2,R3,R4,R5,R6",,1,PS2_DIN6 (Purple),J3
-1,270,R11,,1,PS2_DIN6 (Green),J4
-6,82,"R7,R8,R9,R10,R13,R14",,1,RCA-JACK,J5
-1,AP1117,U2,,1,Conn_01x08,P4
-1,ESP32,U1,,1,Conn_02x08_Odd_Even,P2
-1,TXS0104,U3,,1,VGA,P3
+Qty,Value,Ref Des,,Qty,Value,Ref Des
+5,0.1uF (0805),"C1,C2,C4,C5,C6",,1,"Header, Rt Ang, 1x3",H1
+2,10uF (1206),"C3,C7",,1,"Header, Vert, 2x4",H2
+1,Polyfuse (1206),F1,,1,"Conn, SD Card",J7
+1,150 (0805),R12,,1,"DC Pwr Jack, 5.5mmx2.1mm",J1
+4,270 (0805),"R1,R3,R5,R11",,2,"Header, 1x6, Rt Ang, (FTDI)","J2,J6"
+3,560 (0805),"R2,R4,R6",,1,"JACK,, RT ANG, RCA",J5
+1,AP1117-3.3 (SOT-223-3),U2,,1,"MINI-DIN6, PS2 (GRN)",J4
+1,TXS0104EDR,U3,,1,"MINI-DIN6, PS2 (PURP)",J3
+2,"Header, Fem, 1x15 (ESP32)",U1,,1,"Term Blk, 5mm, 1x2",J15
+1,ESP32 MODULE,U1,,1,"CONN, DB15HD, BLUE (VGA)",P3
+,,,,1,"Header, Vert, 1x4",P4
+,,,,1,"Header, Vert, 2x4",P2

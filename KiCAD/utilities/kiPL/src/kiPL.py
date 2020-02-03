@@ -189,13 +189,14 @@ class ControlClass:
 				if (inLine.find("))",0) != -1):
 					outRow = []
 					outRow.append(refDes)
-					outRow.append(value)
+					outRow.append(value.strip('"'))
 					outRow.append(footprint)
 					outRow.append(mfg)
 					outRow.append(mfgPN)
 					outRow.append(vendor)
 					outRow.append(vendorPN)
-					outCSVList.append(outRow)
+					if value.strip('"') != 'MTG_HOLE' and value.strip('"') != 'COUPON':
+						outCSVList.append(outRow)
 					progState = 'LOOKING_FOR_COMP'
 			elif progState == 'GOT_LIBPARTS':
 				return outCSVList
@@ -410,7 +411,7 @@ class Dashboard:
 		self.mainmenu = Menu(self.win)
 		self.win.config(menu=self.mainmenu)
 
-		self.filemenu = Menu(self.mainmenu)
+		self.filemenu = Menu(self.mainmenu, tearoff=0)
 		self.mainmenu.add_cascade(label="File",menu=self.filemenu)
 
 		self.filemenu.add_command(label="Open Net file",command=netFile.openFile)
