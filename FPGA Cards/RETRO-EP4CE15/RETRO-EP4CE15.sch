@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:RETRO-EP4CE15-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "RETRO-EP4CE15"
 Date "2020-01-02"
-Rev "1"
+Rev "2"
 Comp "land-boards.com"
 Comment1 "FPGA CARD"
 Comment2 ""
@@ -578,7 +577,7 @@ Text Notes 12850 8300 0    100  ~ 20
 FTDI USB SERIAL
 Text Notes 14850 3850 0    100  ~ 20
 VGA
-Text Notes 5700 5600 0    100  ~ 20
+Text Notes 5750 4950 0    100  ~ 20
 FPGA CARD
 Wire Wire Line
 	5750 7050 6750 7050
@@ -1187,7 +1186,7 @@ U 1 1 5E310CD7
 P 15100 2650
 F 0 "P1" H 15150 3450 50  0000 L CNN
 F 1 "DB-15HD" H 15100 1850 50  0000 L CNN
-F 2 "Connector_Dsub:DSUB-15-HD_Female_Horizontal_P2.29x1.98mm_EdgePinOffset3.03mm_Housed_MountingHolesOffset4.94mm" H 14750 1750 20  0000 L CNN
+F 2 "LandBoards_Conns:DB_15F-VGA-fixed" H 14750 1750 20  0000 L CNN
 F 3 "" H 14850 2650 60  0000 C CNN
 	1    15100 2650
 	1    0    0    -1  
@@ -2377,7 +2376,7 @@ U 1 1 5E391C35
 P 15500 7200
 F 0 "J4" H 15450 8193 60  0000 C CNN
 F 1 "USB-B" H 15450 8087 60  0000 C CNN
-F 2 "LandBoards_Conns:USB_Micro-B-Hirose-ZX62D-B-5PA9(30)" H 15450 7981 60  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 15450 7981 30  0000 C CNN
 F 3 "" H 15500 7200 60  0000 C CNN
 	1    15500 7200
 	-1   0    0    -1  
@@ -2396,4 +2395,67 @@ Wire Wire Line
 Connection ~ 15550 7300
 Wire Wire Line
 	15550 7300 15650 7300
+$Comp
+L power:+5V #PWR02
+U 1 1 5E4182D8
+P 4000 5450
+F 0 "#PWR02" H 4000 5300 50  0001 C CNN
+F 1 "+5V" H 4000 5590 50  0000 C CNN
+F 2 "" H 4000 5450 60  0000 C CNN
+F 3 "" H 4000 5450 60  0000 C CNN
+	1    4000 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J5
+U 1 1 5E41994B
+P 4300 5700
+F 0 "J5" H 4350 5900 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4200 5500 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Horizontal" H 3900 5450 30  0000 C CNN
+F 3 "~" H 4300 5700 50  0001 C CNN
+	1    4300 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5450 4000 5600
+Wire Wire Line
+	4000 5800 4100 5800
+Wire Wire Line
+	4100 5700 4000 5700
+Connection ~ 4000 5700
+Wire Wire Line
+	4000 5700 4000 5800
+Wire Wire Line
+	4100 5600 4000 5600
+Connection ~ 4000 5600
+Wire Wire Line
+	4000 5600 4000 5700
+Wire Wire Line
+	4600 5600 4700 5600
+Wire Wire Line
+	4700 5600 4700 5700
+Wire Wire Line
+	4600 5700 4700 5700
+Connection ~ 4700 5700
+Wire Wire Line
+	4700 5700 4700 5800
+Wire Wire Line
+	4600 5800 4700 5800
+Connection ~ 4700 5800
+Wire Wire Line
+	4700 5800 4700 6000
+$Comp
+L power:GND #PWR04
+U 1 1 5E5852B5
+P 4700 6000
+F 0 "#PWR04" H 4700 5750 50  0001 C CNN
+F 1 "GND" H 4700 5850 50  0000 C CNN
+F 2 "" H 4700 6000 60  0000 C CNN
+F 3 "" H 4700 6000 60  0000 C CNN
+	1    4700 6000
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 6350 0    100  ~ 20
+5V POWER
 $EndSCHEMATC

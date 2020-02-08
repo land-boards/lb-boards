@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:RP-Console-u-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -318,7 +317,7 @@ U 1 1 54848B62
 P 2400 2200
 F 0 "J2" H 2050 3000 60  0000 C CNN
 F 1 "RASPIO" H 2150 1450 60  0000 C CNN
-F 2 "pin_array_13x2" H 2800 1450 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical" H 2800 1450 60  0000 C CNN
 F 3 "~" H 2400 2200 60  0000 C CNN
 	1    2400 2200
 	1    0    0    -1  
@@ -349,7 +348,7 @@ U 1 1 562660F8
 P 4550 2450
 F 0 "J1" H 4250 2800 50  0000 C CNN
 F 1 "USB-MICRO-B" H 4400 2100 50  0000 C CNN
-F 2 "LandBoards_Conns:USB_Micro-B-Hirose-ZX62D-B-5PA9(30)" H 4500 2000 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 4500 2000 30  0000 C CNN
 F 3 "" H 4550 2350 50  0000 C CNN
 	1    4550 2450
 	-1   0    0    -1  
@@ -376,7 +375,6 @@ Wire Wire Line
 Wire Wire Line
 	5400 3150 5400 3500
 Connection ~ 5400 3500
-NoConn ~ 4050 2250
 NoConn ~ 4050 2350
 NoConn ~ 4050 2550
 NoConn ~ 4050 2650
@@ -385,7 +383,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 2200 3200 1800
 Wire Wire Line
-	3200 2500 3200 2200
+	3200 2500 3200 2250
 Wire Wire Line
 	3200 1600 4550 1600
 Wire Wire Line
@@ -406,4 +404,9 @@ Wire Wire Line
 	5600 1550 5950 1550
 Wire Wire Line
 	5400 3500 5950 3500
+Wire Wire Line
+	4050 2250 3200 2250
+Connection ~ 3200 2250
+Wire Wire Line
+	3200 2250 3200 2200
 $EndSCHEMATC
