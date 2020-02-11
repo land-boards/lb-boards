@@ -7,81 +7,73 @@
 ! Value
 ! Ref Des
 |-
-| 5
-| 0.1uF (0805)
-| C1,C2,C4,C5,C6
+| 4
+| 0.1uF
+| C1,C2,C4,C5
 | 
 | 1
-| Header, Rt Ang, 1x3
+| Header, Vert, 1x2
 | H1
 |-
 | 2
-| 10uF (1206)
-| C3,C7
+| 10uF
+| C3,C6
 | 
 | 1
 | Header, Vert, 2x4
 | H2
 |-
 | 1
-| Polyfuse (1206)
-| F1
+| 150
+| R8
 | 
 | 1
-| Conn, SD Card
-| J7
-|-
-| 1
-| 150 (0805)
-| R12
-| 
-| 1
-| DC Pwr Jack, 5.5mmx2.1mm
-| J1
+| Header, Vert, 1x4
+| H3
 |-
 | 4
-| 270 (0805)
-| R1,R3,R5,R11
+| 270
+| R1,R3,R5,R7
+| 
+| 1
+| DCJ0202
+| J1
+|-
+| 3
+| 560
+| R2,R4,R6
 | 
 | 2
 | Header, 1x6, Rt Ang, (FTDI)
-| J2,J6
-|-
-| 3
-| 560 (0805)
-| R2,R4,R6
-| 
-| 1
-| JACK,, RT ANG, RCA
-| J5
-|-
-| 1
-| AP1117-3.3 (SOT-223-3)
-| U2
-| 
-| 1
-| MINI-DIN6, PS2 (GRN)
-| J4
-|-
-| 1
-| TXS0104EDR
-| U3
-| 
-| 1
-| MINI-DIN6, PS2 (PURP)
-| J3
-|-
-| 2
-| Header, Fem, 1x15 (ESP32)
-| U1
-| 
-| 1
-| Term Blk, 5mm, 1x2
-| J15
+| J2,J3
 |-
 | 1
 | ESP32 MODULE
 | U1
+| 
+| 1
+| Conn, SD Card
+| J4
+|-
+| 1
+| TXS0104EDR
+| U2
+| 
+| 1
+| MINI-DIN6, PS2 (GRN)
+| P1
+|-
+| 
+| 
+| 
+| 
+| 1
+| MINI-DIN6, PS2 (PURP)
+| P2
+|-
+| 
+| 
+| 
 | 
 | 1
 | CONN, DB15HD, BLUE (VGA)
@@ -92,15 +84,7 @@
 | 
 | 
 | 1
-| Header, Vert, 1x4
+| JACK,, RT ANG, RCA
 | P4
-|-
-| 
-| 
-| 
-| 
-| 1
-| Header, Vert, 2x4
-| P2
 |-
 |}
