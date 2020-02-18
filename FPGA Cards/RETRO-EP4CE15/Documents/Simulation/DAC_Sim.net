@@ -1,0 +1,10 @@
+* C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\FPGA Cards\RETRO-EP4CE15\Documents\Simulation\DAC_Sim.asc
+R3 VOUT N002 845
+R4 VOUT N001 422
+V1 N002 0 PULSE(0 3.3 .25 1ns 1ns .25 .5 4)
+V2 N001 0 PULSE(0 3.3 .5 1ns 1ns 1)
+R5 VOUT 0 75
+C1 VOUT 0 75pF
+.tran 1
+.backanno
+.end
