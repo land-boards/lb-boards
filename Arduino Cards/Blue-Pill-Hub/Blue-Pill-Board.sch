@@ -70,17 +70,6 @@ F 3 "" H 3750 1650 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR01
-U 1 1 586AF77F
-P 2950 1050
-F 0 "#PWR01" H 2950 1140 20  0001 C CNN
-F 1 "+5V" H 2950 1140 30  0000 C CNN
-F 2 "" H 2950 1050 60  0000 C CNN
-F 3 "" H 2950 1050 60  0000 C CNN
-	1    2950 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Blue-Pill-Board-rescue:GND-RESCUE-Carrier95to49-Blue-Pill-Board-rescue #PWR02
 U 1 1 586AFC7C
 P 2600 1950
@@ -193,12 +182,12 @@ $EndComp
 $Comp
 L power:+5V #PWR010
 U 1 1 5C7581DE
-P 2100 2850
-F 0 "#PWR010" H 2100 2940 20  0001 C CNN
-F 1 "+5V" H 2100 2940 30  0000 C CNN
-F 2 "" H 2100 2850 60  0000 C CNN
-F 3 "" H 2100 2850 60  0000 C CNN
-	1    2100 2850
+P 1950 2500
+F 0 "#PWR010" H 1950 2590 20  0001 C CNN
+F 1 "+5V" H 1950 2590 30  0000 C CNN
+F 2 "" H 1950 2500 60  0000 C CNN
+F 3 "" H 1950 2500 60  0000 C CNN
+	1    1950 2500
 	1    0    0    -1  
 $EndComp
 Text Label 4950 8100 0    60   ~ 0
@@ -214,7 +203,7 @@ FTDI MODULE
 Text Label 2650 5050 0    60   ~ 0
 VO3
 Text Label 3150 1550 0    60   ~ 0
-DCIN
+DCJ5V
 $Comp
 L LandBoards_Semis:PCA9544A U3
 U 1 1 5C75BBCC
@@ -481,8 +470,6 @@ F 3 "" H 14150 3200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 1050 2950 1150
-Wire Wire Line
 	2500 1650 2600 1650
 Wire Wire Line
 	2600 1650 2600 1750
@@ -505,23 +492,15 @@ Wire Wire Line
 Wire Wire Line
 	2650 5150 2650 5050
 Wire Wire Line
-	2950 1150 3350 1150
-Wire Wire Line
-	3450 1550 3100 1550
-Wire Wire Line
-	3100 1550 3100 1250
-Wire Wire Line
-	3100 1250 3350 1250
-Wire Wire Line
 	4100 5150 4100 4850
 Wire Wire Line
 	2400 3350 2400 3600
 Wire Wire Line
-	2550 3050 1300 3050
+	2550 3050 1450 3050
 Wire Wire Line
-	1300 2950 2100 2950
+	1750 2600 1950 2600
 Wire Wire Line
-	2100 2950 2100 2850
+	1950 2600 1950 2500
 Wire Wire Line
 	9350 4050 9750 4050
 Wire Wire Line
@@ -2020,23 +1999,9 @@ Wire Wire Line
 Text Label 4450 6750 0    50   ~ 0
 USB5V
 Wire Wire Line
-	1300 2850 1950 2850
-Text Label 1500 2850 0    50   ~ 0
+	700  2600 1150 2600
+Text Label 800  2200 0    50   ~ 0
 USB5V
-$Comp
-L Connector_Generic:Conn_01x03 H8
-U 1 1 5EC6AEBC
-P 1100 2950
-F 0 "H8" H 1017 3325 50  0000 C CNN
-F 1 "CONN_01X03-conn" H 1017 3234 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1017 3158 30  0000 C CNN
-F 3 "" H 1100 2950 50  0000 C CNN
-	1    1100 2950
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2500 1550 3100 1550
-Connection ~ 3100 1550
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even P1
 U 1 1 5ECFEE0C
@@ -2050,17 +2015,6 @@ F 3 "~" H 7050 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 3400 6750 3500
-$Comp
-L Connector_Generic:Conn_01x02 H2
-U 1 1 5E5C76C2
-P 3550 1150
-F 0 "H2" H 3550 1250 50  0000 C CNN
-F 1 "CONN_01X02" H 3550 950 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3850 900 30  0000 C CNN
-F 3 "" H 3550 1150 50  0000 C CNN
-	1    3550 1150
-	1    0    0    -1  
-$EndComp
 NoConn ~ 2550 3250
 NoConn ~ 2550 3150
 NoConn ~ 2550 2950
@@ -2078,4 +2032,27 @@ NoConn ~ 4050 8950
 NoConn ~ 3950 8950
 NoConn ~ 5500 7000
 NoConn ~ 2650 7000
+$Comp
+L LandBoards_Conns:HEADER_T H2
+U 1 1 5E5A748D
+P 1450 2600
+F 0 "H2" H 1550 2800 50  0000 L CNN
+F 1 "HEADER_T" H 1550 2400 40  0000 L CNN
+F 2 "" H 1450 2600 60  0000 C CNN
+F 3 "" H 1450 2600 60  0000 C CNN
+	1    1450 2600
+	1    0    0    -1  
+$EndComp
+Text Label 800  2600 0    60   ~ 0
+DCJ5V
+Wire Wire Line
+	1450 2900 1450 3050
+Wire Wire Line
+	1450 2300 1450 2200
+Wire Wire Line
+	1450 2200 700  2200
+Text Label 1850 3050 0    50   ~ 0
+FTDI5V
+Wire Wire Line
+	2500 1550 3450 1550
 $EndSCHEMATC
