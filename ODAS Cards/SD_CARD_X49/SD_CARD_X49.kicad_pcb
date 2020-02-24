@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.2)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.5)-3")
 
   (general
     (thickness 1.6002)
@@ -11,8 +11,10 @@
 
   (page A)
   (title_block
-    (date "28 mar 2015")
-    (rev X1)
+    (title SD_CARD_X49)
+    (date 2020-02-21)
+    (rev 1)
+    (company "Land Boards LLC")
   )
 
   (layers
@@ -39,15 +41,13 @@
   )
 
   (setup
-    (last_trace_width 0.635)
+    (last_trace_width 0.2032)
     (user_trace_width 0.254)
     (user_trace_width 0.635)
     (trace_clearance 0.254)
     (zone_clearance 0.3048)
     (zone_45_only no)
     (trace_min 0.2032)
-    (segment_width 0.381)
-    (edge_width 0.381)
     (via_size 0.889)
     (via_drill 0.635)
     (via_min_size 0.889)
@@ -57,6 +57,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.508)
     (uvia_min_drill 0.127)
+    (edge_width 0.381)
+    (segment_width 0.381)
     (pcb_text_width 0.3048)
     (pcb_text_size 1.524 2.032)
     (mod_edge_width 0.381)
@@ -858,7 +860,6 @@
   (via (at 22.86 20.066) (size 0.889) (drill 0.635) (layers Front Back) (net 1))
   (segment (start 22.968 18.592) (end 22.968 19.958) (width 0.254) (layer Front) (net 1))
   (segment (start 22.968 19.958) (end 22.86 20.066) (width 0.254) (layer Front) (net 1))
-  (segment (start 46.237 50.8) (end 51.308 50.8) (width 0.2032) (layer Front) (net 3) (status 30))
   (segment (start 22.6 25.72) (end 23.81 25.72) (width 0.635) (layer Front) (net 2) (status 10))
   (segment (start 24.704999 24.825001) (end 26.325001 24.825001) (width 0.635) (layer Front) (net 2) (status 20))
   (segment (start 23.81 25.72) (end 24.704999 24.825001) (width 0.635) (layer Front) (net 2))
@@ -885,14 +886,7 @@
   (segment (start 24.566 15.892) (end 25.184 16.51) (width 0.635) (layer Front) (net 2))
   (segment (start 22.968 15.892) (end 24.566 15.892) (width 0.635) (layer Front) (net 2))
   (segment (start 25.184 17.272) (end 25.184 16.51) (width 0.635) (layer Front) (net 2))
-  (segment (start 25.84 33.34) (end 22.6 33.34) (width 0.2032) (layer Front) (net 13) (status 20))
-  (segment (start 28.3 34.23) (end 26.73 34.23) (width 0.2032) (layer Front) (net 13) (status 10))
-  (segment (start 26.73 34.23) (end 25.84 33.34) (width 0.2032) (layer Front) (net 13))
-  (segment (start 33.782 50.8) (end 44.187 50.8) (width 0.254) (layer Front) (net 13))
-  (segment (start 31.75 48.768) (end 33.782 50.8) (width 0.254) (layer Front) (net 13))
-  (segment (start 31.75 35.052) (end 31.75 48.768) (width 0.254) (layer Front) (net 13))
-  (segment (start 30.928 34.23) (end 31.75 35.052) (width 0.254) (layer Front) (net 13))
-  (segment (start 28.3 34.23) (end 30.928 34.23) (width 0.254) (layer Front) (net 13))
+  (segment (start 46.237 50.8) (end 51.308 50.8) (width 0.2032) (layer Front) (net 3) (status 30))
   (segment (start 22.98 35.5) (end 22.6 35.88) (width 0.2032) (layer Front) (net 4) (status 30))
   (segment (start 28.3 35.5) (end 22.98 35.5) (width 0.2032) (layer Front) (net 4) (status 30))
   (segment (start 24.25 36.77) (end 22.6 38.42) (width 0.2032) (layer Front) (net 5) (status 20))
@@ -936,6 +930,14 @@
   (segment (start 39.116 43.942) (end 39.37 43.942) (width 0.254) (layer Front) (net 12))
   (segment (start 39.625 43.687) (end 40.888 43.687) (width 0.254) (layer Front) (net 12))
   (segment (start 39.37 43.942) (end 39.625 43.687) (width 0.254) (layer Front) (net 12))
+  (segment (start 25.84 33.34) (end 22.6 33.34) (width 0.2032) (layer Front) (net 13) (status 20))
+  (segment (start 28.3 34.23) (end 26.73 34.23) (width 0.2032) (layer Front) (net 13) (status 10))
+  (segment (start 26.73 34.23) (end 25.84 33.34) (width 0.2032) (layer Front) (net 13))
+  (segment (start 33.782 50.8) (end 44.187 50.8) (width 0.254) (layer Front) (net 13))
+  (segment (start 31.75 48.768) (end 33.782 50.8) (width 0.254) (layer Front) (net 13))
+  (segment (start 31.75 35.052) (end 31.75 48.768) (width 0.254) (layer Front) (net 13))
+  (segment (start 30.928 34.23) (end 31.75 35.052) (width 0.254) (layer Front) (net 13))
+  (segment (start 28.3 34.23) (end 30.928 34.23) (width 0.254) (layer Front) (net 13))
 
   (zone (net 10) (net_name +3V3) (layer Front) (tstamp 5DD53661) (hatch edge 0.508)
     (connect_pads (clearance 0.3048))

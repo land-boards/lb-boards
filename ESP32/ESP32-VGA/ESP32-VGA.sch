@@ -1,12 +1,11 @@
 EESchema Schematic File Version 4
-LIBS:ESP32-VGA-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "ESP32-VGA"
-Date "2020-02-19"
+Date "2020-02-22"
 Rev "2"
 Comp "land-boards.com"
 Comment1 ""
@@ -83,13 +82,11 @@ $EndComp
 Text Notes 2800 4250 0    60   ~ 12
 FTDI #1 CONNECTOR
 Wire Wire Line
-	2900 3050 2750 3050
+	3950 3050 3950 3850
 Wire Wire Line
-	2750 3050 2750 3850
+	4550 3350 3800 3350
 Wire Wire Line
-	2900 3350 2150 3350
-Wire Wire Line
-	2900 3450 2150 3450
+	4550 3450 3800 3450
 Wire Wire Line
 	10150 4600 9450 4600
 Wire Wire Line
@@ -243,12 +240,12 @@ $EndComp
 $Comp
 L power:GND #PWR0115
 U 1 1 5C876212
-P 2750 3850
-F 0 "#PWR0115" H 2750 3600 50  0001 C CNN
-F 1 "GND" H 2755 3677 50  0000 C CNN
-F 2 "" H 2750 3850 50  0001 C CNN
-F 3 "" H 2750 3850 50  0001 C CNN
-	1    2750 3850
+P 3950 3850
+F 0 "#PWR0115" H 3950 3600 50  0001 C CNN
+F 1 "GND" H 3955 3677 50  0000 C CNN
+F 2 "" H 3950 3850 50  0001 C CNN
+F 3 "" H 3950 3850 50  0001 C CNN
+	1    3950 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -278,9 +275,9 @@ Text Label 9600 3800 0    50   ~ 0
 GP12
 Text Label 9600 4600 0    50   ~ 0
 RX2
-Text Label 2200 3350 0    50   ~ 0
+Text Label 4300 3350 0    50   ~ 0
 RX0
-Text Label 2200 3450 0    50   ~ 0
+Text Label 4300 3450 0    50   ~ 0
 TX0
 $Comp
 L LandBoards_Cards:FTDI-Slave J2
@@ -291,7 +288,7 @@ F 1 "Header, 1x6, Rt Ang, (FTDI)" H 4050 2850 60  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 3950 2750 30  0000 R CNN
 F 3 "" H 3350 3300 60  0000 C CNN
 	1    3350 3300
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	9450 4700 10150 4700
@@ -601,27 +598,25 @@ TX0
 Text Notes 2750 2600 0    60   ~ 12
 FTDI #2 CONNECTOR
 Wire Wire Line
-	2900 1450 2750 1450
+	3900 1450 3900 2250
 Wire Wire Line
-	2750 1450 2750 2250
+	4550 1750 3800 1750
 Wire Wire Line
-	2900 1750 2150 1750
-Wire Wire Line
-	2900 1850 2150 1850
+	4550 1850 3800 1850
 $Comp
 L power:GND #PWR0102
 U 1 1 5DEE1862
-P 2750 2250
-F 0 "#PWR0102" H 2750 2000 50  0001 C CNN
-F 1 "GND" H 2755 2077 50  0000 C CNN
-F 2 "" H 2750 2250 50  0001 C CNN
-F 3 "" H 2750 2250 50  0001 C CNN
-	1    2750 2250
+P 3900 2250
+F 0 "#PWR0102" H 3900 2000 50  0001 C CNN
+F 1 "GND" H 3905 2077 50  0000 C CNN
+F 2 "" H 3900 2250 50  0001 C CNN
+F 3 "" H 3900 2250 50  0001 C CNN
+	1    3900 2250
 	1    0    0    -1  
 $EndComp
-Text Label 2200 1750 0    50   ~ 0
+Text Label 4300 1750 0    50   ~ 0
 RX2
-Text Label 2200 1850 0    50   ~ 0
+Text Label 4300 1850 0    50   ~ 0
 TX2
 $Comp
 L LandBoards_Cards:FTDI-Slave J3
@@ -632,7 +627,7 @@ F 1 "Header, 1x6, Rt Ang, (FTDI)" H 4050 1250 60  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 3950 1150 30  0000 R CNN
 F 3 "" H 3350 1700 60  0000 C CNN
 	1    3350 1700
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 $Comp
 L LandBoards_Semis:TXS0104 U2
@@ -877,12 +872,12 @@ I/O CONNS
 Wire Wire Line
 	12300 6600 12300 6250
 Connection ~ 12300 6600
-NoConn ~ 2900 1650
-NoConn ~ 2900 1550
-NoConn ~ 2900 1950
-NoConn ~ 2900 3150
-NoConn ~ 2900 3250
-NoConn ~ 2900 3550
+NoConn ~ 3800 1650
+NoConn ~ 3800 1550
+NoConn ~ 3800 1950
+NoConn ~ 3800 3150
+NoConn ~ 3800 3250
+NoConn ~ 3800 3550
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5E47DD07
@@ -1099,4 +1094,8 @@ Wire Wire Line
 	13600 1900 12600 1900
 Wire Wire Line
 	13600 2150 12600 2150
+Wire Wire Line
+	3800 1450 3900 1450
+Wire Wire Line
+	3800 3050 3950 3050
 $EndSCHEMATC

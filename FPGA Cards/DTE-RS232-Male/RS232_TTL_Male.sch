@@ -1,0 +1,256 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "RS-232 DTE"
+Date "2020-02-22"
+Rev "2"
+Comp "Land Boards LLC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_UART:ICL3232 U1
+U 1 1 5D7285AB
+P 4650 3550
+F 0 "U1" H 5050 4600 50  0000 C CNN
+F 1 "ICL3232" H 5050 2500 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4800 2400 50  0000 L CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/icl3/icl3221-22-23-32-41-43.pdf" H 4650 3650 50  0001 C CNN
+	1    4650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5D728776
+P 3500 2800
+F 0 "C1" H 3592 2846 50  0000 L CNN
+F 1 "0.1uF" H 3592 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3500 2550 30  0000 C CNN
+F 3 "~" H 3500 2800 50  0001 C CNN
+	1    3500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2650 3500 2650
+Wire Wire Line
+	3500 2650 3500 2700
+Wire Wire Line
+	3850 2950 3500 2950
+Wire Wire Line
+	3500 2950 3500 2900
+Wire Wire Line
+	5450 2950 5650 2950
+Wire Wire Line
+	5650 2950 5650 2900
+Wire Wire Line
+	5450 2650 5650 2650
+Wire Wire Line
+	5650 2650 5650 2700
+Wire Wire Line
+	5450 3150 5600 3150
+Wire Wire Line
+	5450 3450 5600 3450
+Wire Wire Line
+	5800 3150 6500 3150
+Wire Wire Line
+	5800 3450 5950 3450
+Wire Wire Line
+	5950 3450 5950 4350
+$Comp
+L power:GND #PWR03
+U 1 1 5D728B0E
+P 5950 4350
+F 0 "#PWR03" H 5950 4100 50  0001 C CNN
+F 1 "GND" H 5955 4177 50  0000 C CNN
+F 2 "" H 5950 4350 50  0001 C CNN
+F 3 "" H 5950 4350 50  0001 C CNN
+	1    5950 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D728BD1
+P 4650 4800
+F 0 "#PWR02" H 4650 4550 50  0001 C CNN
+F 1 "GND" H 4655 4627 50  0000 C CNN
+F 2 "" H 4650 4800 50  0001 C CNN
+F 3 "" H 4650 4800 50  0001 C CNN
+	1    4650 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4750 4650 4800
+Wire Wire Line
+	2250 4150 2350 4150
+Wire Wire Line
+	2350 4150 2350 4250
+$Comp
+L power:GND #PWR01
+U 1 1 5D728DF8
+P 2350 4250
+F 0 "#PWR01" H 2350 4000 50  0001 C CNN
+F 1 "GND" H 2355 4077 50  0000 C CNN
+F 2 "" H 2350 4250 50  0001 C CNN
+F 3 "" H 2350 4250 50  0001 C CNN
+	1    2350 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2350 4650 2100
+Wire Wire Line
+	4650 2100 2600 2100
+$Comp
+L Device:C_Small C2
+U 1 1 5D728CCE
+P 5650 2800
+F 0 "C2" H 5742 2846 50  0000 L CNN
+F 1 "0.1uF" H 5742 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6000 2600 30  0000 C CNN
+F 3 "~" H 5650 2800 50  0001 C CNN
+	1    5650 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5D728CF8
+P 5700 3150
+F 0 "C3" V 5650 3200 50  0000 L CNN
+F 1 "0.1uF" V 5750 3200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5850 3450 30  0000 C CNN
+F 3 "~" H 5700 3150 50  0001 C CNN
+	1    5700 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5D728D2A
+P 5700 3450
+F 0 "C4" V 5650 3500 50  0000 L CNN
+F 1 "0.1uF" V 5750 3500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5800 3750 30  0000 C CNN
+F 3 "~" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles J1
+U 1 1 5D729312
+P 7550 4000
+F 0 "J1" H 7730 4033 50  0000 L CNN
+F 1 "DB9_Male_MountingHoles" H 7730 3942 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 7730 3866 30  0000 L CNN
+F 3 " ~" H 7550 4000 50  0001 C CNN
+	1    7550 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4200 6500 4200
+Wire Wire Line
+	6500 4200 6500 4050
+Wire Wire Line
+	6500 4050 5450 4050
+Wire Wire Line
+	5450 3650 6700 3650
+Wire Wire Line
+	6700 3650 6700 4000
+Wire Wire Line
+	6700 4000 7250 4000
+Wire Wire Line
+	7250 3600 7050 3600
+Wire Wire Line
+	7050 3600 7050 4700
+$Comp
+L power:GND #PWR04
+U 1 1 5D72AB1E
+P 7050 4700
+F 0 "#PWR04" H 7050 4450 50  0001 C CNN
+F 1 "GND" H 7055 4527 50  0000 C CNN
+F 2 "" H 7050 4700 50  0001 C CNN
+F 3 "" H 7050 4700 50  0001 C CNN
+	1    7050 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3850 6600 3850
+Wire Wire Line
+	6600 3850 6600 4100
+Wire Wire Line
+	6600 4100 7250 4100
+Wire Wire Line
+	5450 4250 6800 4250
+Wire Wire Line
+	6800 4250 6800 3900
+Wire Wire Line
+	6800 3900 7250 3900
+Text Label 3400 2100 0    50   ~ 0
+VCC
+$Comp
+L LandBoards_Cards:FTDI-Slave H1
+U 1 1 5D75A367
+P 1800 3900
+F 0 "H1" H 1644 3207 60  0000 C CNN
+F 1 "FTDI-Slave" H 1644 3313 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 1644 3419 60  0000 C CNN
+F 3 "" H 1850 3550 60  0000 C CNN
+	1    1800 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2600 2100 2600 3950
+Wire Wire Line
+	2600 3950 2250 3950
+Wire Wire Line
+	3850 4050 2700 4050
+Wire Wire Line
+	2700 4050 2700 3750
+Wire Wire Line
+	2700 3750 2250 3750
+Wire Wire Line
+	3850 4250 2600 4250
+Wire Wire Line
+	2600 4250 2600 4050
+Wire Wire Line
+	2600 4050 2250 4050
+Wire Wire Line
+	4650 2100 6500 2100
+Wire Wire Line
+	6500 2100 6500 3150
+Connection ~ 4650 2100
+Text Label 6050 4050 0    50   ~ 0
+RX_232
+Text Label 6050 3850 0    50   ~ 0
+RTS_232
+Text Label 6050 4250 0    50   ~ 0
+CTS_232
+Text Label 6050 3650 0    50   ~ 0
+TX_232
+Text Label 3000 4250 0    50   ~ 0
+CTS_TTL
+Text Label 3000 4050 0    50   ~ 0
+RX_TTL
+Text Label 3000 3850 0    50   ~ 0
+RTS_TTL
+Text Label 3000 3650 0    50   ~ 0
+TX_TTL
+Wire Wire Line
+	3850 3650 2650 3650
+Wire Wire Line
+	2650 3650 2650 3850
+Wire Wire Line
+	2650 3850 2250 3850
+Wire Wire Line
+	3850 3850 2750 3850
+Wire Wire Line
+	2750 3850 2750 3550
+Wire Wire Line
+	2750 3550 2550 3550
+Wire Wire Line
+	2550 3550 2550 3650
+Wire Wire Line
+	2550 3650 2250 3650
+$EndSCHEMATC
