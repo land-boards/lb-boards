@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.461 ns
+From           : led[2]~reg0
+To             : led[0]
+From Clock     : sys_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'sys_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 184.06 MHz ( period = 5.433 ns )
+From           : count[4]
+To             : led[2]~reg0
+From Clock     : sys_clk
+To Clock       : sys_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
