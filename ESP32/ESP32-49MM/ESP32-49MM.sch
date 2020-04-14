@@ -55,33 +55,6 @@ Wire Wire Line
 	10150 3800 9450 3800
 Wire Wire Line
 	10150 3700 9450 3700
-Wire Wire Line
-	7200 1550 7300 1550
-Wire Wire Line
-	7200 1350 7200 1450
-Wire Wire Line
-	7300 1650 7200 1650
-$Comp
-L power:GND #PWR023
-U 1 1 5C77586C
-P 7200 1700
-F 0 "#PWR023" H 7200 1450 50  0001 C CNN
-F 1 "GND" H 7200 1550 50  0000 C CNN
-F 2 "" H 7200 1700 60  0000 C CNN
-F 3 "" H 7200 1700 60  0000 C CNN
-	1    7200 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 1350 7300 1350
-Connection ~ 7200 1550
-Wire Wire Line
-	7300 1450 7200 1450
-Connection ~ 7200 1450
-Wire Wire Line
-	7200 1550 7200 1650
-Wire Wire Line
-	7200 1450 7200 1550
 $Comp
 L Device:C C4
 U 1 1 5CAFBAEC
@@ -434,40 +407,25 @@ Text Label 6450 4600 0    50   ~ 0
 RX0
 Text Label 6450 4700 0    50   ~ 0
 TX0
-Text Notes 2750 2600 0    60   ~ 12
-FTDI #2 CONNECTOR
 Wire Wire Line
-	3900 1450 3900 2250
+	1850 1150 1450 1150
 Wire Wire Line
-	4550 1750 3800 1750
-Wire Wire Line
-	4550 1850 3800 1850
+	1850 1250 1450 1250
 $Comp
 L power:GND #PWR0102
 U 1 1 5DEE1862
-P 3900 2250
-F 0 "#PWR0102" H 3900 2000 50  0001 C CNN
-F 1 "GND" H 3905 2077 50  0000 C CNN
-F 2 "" H 3900 2250 50  0001 C CNN
-F 3 "" H 3900 2250 50  0001 C CNN
-	1    3900 2250
+P 1750 1750
+F 0 "#PWR0102" H 1750 1500 50  0001 C CNN
+F 1 "GND" H 1755 1577 50  0000 C CNN
+F 2 "" H 1750 1750 50  0001 C CNN
+F 3 "" H 1750 1750 50  0001 C CNN
+	1    1750 1750
 	1    0    0    -1  
 $EndComp
-Text Label 4300 1750 0    50   ~ 0
+Text Label 1500 1150 0    50   ~ 0
 RX2
-Text Label 4300 1850 0    50   ~ 0
+Text Label 1500 1250 0    50   ~ 0
 TX2
-$Comp
-L LandBoards_Cards:FTDI-Slave J3
-U 1 1 5DEE186A
-P 3350 1700
-F 0 "J3" H 3300 2100 60  0000 R CNN
-F 1 "Header, 1x6, Rt Ang, (FTDI)" H 4050 1250 60  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 3950 1150 30  0000 R CNN
-F 3 "" H 3350 1700 60  0000 C CNN
-	1    3350 1700
-	-1   0    0    -1  
-$EndComp
 $Comp
 L LandBoards_Semis:TXS0104 U2
 U 1 1 5DF7EC0F
@@ -507,22 +465,6 @@ Wire Wire Line
 Connection ~ 14600 6600
 Wire Wire Line
 	14600 6600 14600 6500
-Text Label 8000 1350 0    50   ~ 0
-GP35
-Text Label 8000 1450 0    50   ~ 0
-GP12
-Text Label 8000 1550 0    50   ~ 0
-VN
-Text Label 8000 1650 0    50   ~ 0
-VP
-Wire Wire Line
-	7800 1350 8500 1350
-Wire Wire Line
-	7800 1450 8500 1450
-Wire Wire Line
-	7800 1550 8500 1550
-Wire Wire Line
-	7800 1650 8500 1650
 $Comp
 L power:GND #PWR0104
 U 1 1 5E1C2FAA
@@ -599,32 +541,13 @@ Text Label 9600 3900 0    50   ~ 0
 SCLK
 Text Label 9600 3700 0    50   ~ 0
 SDCS
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even H2
-U 1 1 5E40635F
-P 7500 1450
-F 0 "H2" H 7550 1650 50  0000 C CNN
-F 1 "Header, Vert, 2x4" H 7650 1150 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 7550 1100 30  0000 C CNN
-F 3 "~" H 7500 1450 50  0001 C CNN
-	1    7500 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 1650 7200 1700
-Connection ~ 7200 1650
 Text Notes 8200 8250 0    60   ~ 12
 AUDIO
 Text Notes 12750 7950 0    60   ~ 12
 VOLTAGE TRANSLATOR
-Text Notes 7300 2050 0    60   ~ 12
-I/O CONNS
 Wire Wire Line
 	12300 6600 12300 6250
 Connection ~ 12300 6600
-NoConn ~ 3800 1650
-NoConn ~ 3800 1550
-NoConn ~ 3800 1950
 $Comp
 L power:+3.3V #PWR07
 U 1 1 5E47DD07
@@ -825,8 +748,6 @@ Wire Wire Line
 Wire Wire Line
 	12300 1350 11300 1350
 Wire Wire Line
-	3800 1450 3900 1450
-Wire Wire Line
 	14500 1200 13450 1200
 Wire Wire Line
 	13450 1200 13450 1600
@@ -887,5 +808,35 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Horizontal" H 14700 1300 
 F 3 "~" H 14700 1300 50  0001 C CNN
 	1    14700 1300
 	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J3
+U 1 1 5E94EA8A
+P 2050 1350
+F 0 "J3" H 2100 1550 50  0000 C CNN
+F 1 "Header, Vert, 2x4" H 2200 1050 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Horizontal" H 2100 1000 30  0000 C CNN
+F 3 "~" H 2050 1350 50  0001 C CNN
+	1    2050 1350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1850 1450 1750 1450
+Wire Wire Line
+	1750 1450 1750 1750
+Wire Wire Line
+	1850 1350 1750 1350
+Wire Wire Line
+	1750 1350 1750 950 
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5E98ED94
+P 1750 950
+F 0 "#PWR0105" H 1750 800 50  0001 C CNN
+F 1 "+3.3V" H 1750 1090 50  0000 C CNN
+F 2 "" H 1750 950 50  0001 C CNN
+F 3 "" H 1750 950 50  0001 C CNN
+	1    1750 950 
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
