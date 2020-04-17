@@ -1,0 +1,806 @@
+
+<!-- saved from url=(0052)http://searle.x10host.com/MonitorKeyboard/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-gb">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<meta name="Author" content="Grant Searle">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+
+<title>Grant's video and keyboard interface</title>
+<script charset="utf-8" src="./button.93a0c25c2d2f3081c705c98c2d9dec0e.js.download"></script></head>
+
+<body bgcolor="#FFFFFF">
+
+<p><b><font face="Arial" size="7">Monitor and keyboard controllers<br>
+</font><font face="Arial"><i><font size="5">Controlled by low-cost ATMEL "Mega" 
+processors<br>
+</font><font size="4">- Project 1: PAL or NTSC multi-mode text and graphics 
+display with I<sup>2</sup>C, 4 or 8 bit interface<br>
+- Project 2: PC keyboard--&gt;serial and serial--&gt;display interface<br>
+- Use both together to allow any project that uses serial I/O to have a screen 
+and keyboard</font></i></font></b></p>
+
+<p><b><font face="Arial"><i>
+<img border="0" src="./MixedDisplay.jpg" width="700" height="375"><br>
+(actual picture of screen)</i></font></b></p>
+
+<p><b><font face="Arial"><i>
+Work on here, unless credited otherwise, is copyright Grant Searle. You are not 
+allowed to publish this elsewhere without my permission. You may use any of this 
+for your personal use, but commercial use is prohibited.</i></font></b></p>
+
+<p><font face="Arial"><img border="0" src="./Verified.jpg" width="250" height="56"></font></p>
+
+<p><font face="Arial">by Grant Searle</font></p>
+
+<font face="Arial"><font color="#0000FF">For news and updates, follow me on 
+Twitter:</font><br>
+</font>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 79px; height: 28px;" title="Twitter Follow Button" src="./follow_button.6787510241df65d128e2b60207ad4c25.en.html" data-screen-name="zx80nut"></iframe>
+<script id="twitter-wjs" src="./widgets.js.download"></script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<p><font face="Arial"><i>Last update: 2nd January 2017</i></font></p>
+
+<div style="border-style: solid; border-width: 1; padding-left: 4; padding-right: 4; padding-top: 1; padding-bottom: 1">
+  <font face="Arial" size="2">
+  <i><font color="#800000">Major changes log:<br>
+  </font></i></font>
+  <i><font face="Arial" size="2" color="#800000">* </font></i>
+  <font face="Arial" size="2">
+  <i><font color="#800000">21st July 2013 - Original (ATmega32) keyboard/display interface taken 
+  offline temporarily (sorry) while I get the redesigned interface tested. 
+  ...update - back online!<br>
+  * 22nd July 2013 - Version 2 (ATmega328) released.<br>
+  * 20th August 2013 - Correction to the "set row" display processor code. New 
+  source and HEX in the zip file.<br>
+  * 21st August 2013 - the ATmega32 version is now back online and can be seen
+  <a href="http://searle.x10host.com/MonitorKeyboard/mega32.html">here</a>.<br>
+  * 7th September 2013 - Version 2.1 - 4 bit data bus implemented to free up pins on the host 
+  if required. 8 bit bus still available.<br>
+  * 18th September 2013 - Version 2.2 - I<sup>2</sup>C / two wire interface added as an option. 
+  There is an I<sup>2</sup>C issue if data stream not left open - to be 
+  resolved.<br>
+  * 27th September 2013 - Version 3.0 - MAJOR rewrite/update - now supports
+  <a href="http://searle.x10host.com/MonitorKeyboard/index.html#FontAttributes">multi font types</a> plus <a href="http://searle.x10host.com/MonitorKeyboard/index.html#Graphics">medium 
+  resolution graphics</a></font></i></font><br>
+  <font face="Arial" size="2">
+  <i><font color="#800000">* 2nd January 2017 - Keyboard/serial interface can 
+  now use either the ATmega88 or ATmega328. Sourcecode updated to comile without 
+  warning on AtmelStudio 7</font></i></font></div>
+<p><b><font face="Arial" size="5">INDEX</font></b></p>
+<p><font face="Arial"><a href="http://searle.x10host.com/MonitorKeyboard/index.html#Introduction">Introduction</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#Performance">Performance</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#InterfaceCoding">Interface coding</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#Schematic">Schematics</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#Prototype">Prototype</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#ProcessingAndCircuitDescription">Processing and circuit description</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#InterfaceDetails">Interface hardware details</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#SourceCode">Source code</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#SpecialCharacters">Special characters / control codes</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#FontAttributes">Font attributes</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#Graphics">Graphics</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#CharacterSet">Character set</a><br>
+<a href="http://searle.x10host.com/MonitorKeyboard/index.html#MyOtherPages">My other pages</a></font></p>
+<hr>
+
+<p><b><font face="Arial" size="5"><a name="Introduction"></a>INTRODUCTION</font></b></p>
+
+<p><font face="Arial">This page shows construction details for two cheap and 
+simple interfaces that can be used individually or together:<br>
+1. A complete very fast video controller<br>
+2. An interface that allows a PC keyboard and the video controller to be 
+connected to a computer system via a serial port. The interface runs at 115200 
+baud (can be altered within the software) giving a very fast display update.</font></p>
+<p><b><font face="Arial">Video controller specification:</font></b></p>
+<p><font face="Arial">Very easy to interface to, fast and requires no 
+host/external memory.<br>
+<b>Character set:</b> Full "CGA" (8x8) character definitions as 
+used on the IBM PC (DOS).<br>
+<b>Screen size:</b> Text - 80x25, 40x25, 80x12, 40x12, Graphics 160x100 or ANY 
+mix (defined per 1 of 25 rows)<br>
+<b>Resolution:</b> 640x200 for 80 char text, 160x100 for graphics<br>
+Font sizes are defined for each line. All chars on the same line have the same 
+font size and style.<br>
+<b>Graphics:</b> Any part of the active screen, up to 160x100 pixels. Each pixel 
+individually addressable. Defined on any of the 25 screen lines.<br>
+<b>Video output:</b> Standard composite monochrome video, PAL or NTSC timing, 
+non-interlaced so no flicker.<br>
+<b>Display memory:</b> 2000 chars internal + 25 line attributes - no host memory needed.<br>
+Very fast update and scrolling whichever interface is used.<br>
+<b>Interface:</b>
+8 bit data bus (requires 10 I/O pins), 4 bit data bus (requires 6 I/O pins) or 
+two-wire (I2C) that uses only 2 pins.<br>
+I<sup>2</sup>C (</font><i><font face="Arial">thanks to
+<a href="http://blog.tynemouthsoftware.co.uk/">Dave Curran</a> for his guidance 
+and code on this) </font></i><font face="Arial">supports low (100KHz) and high (400KHz) speed clocks or higher 
+(1MHz or more easily achievable).<br>
+<b>Hardware:</b> Very low cost - two chips - ATmega328 and 74HCT166</font></p>
+<p><b><font face="Arial">Keyboard and serial controller specification:</font></b></p>
+<p><font face="Arial"><b>Serial interface:</b> Fully buffered 115200 baud, handshake on receive, TTL levels.<br>
+<b>Keyboard interface:</b> PC PS/2 standard keyboard connector, accepts standard 
+keyboards made for PCs. Keyboard LED illumination implemented, and allows for 
+caps lock and num lock.<br>
+<b>Hardware:</b> Very low cost - one chip - ATmega88/168/328</font></p>
+<p><i><font face="Arial">Using a separate processor with it's own memory allows the 
+host processor to have 
+as much memory available as possible. I have written a minimal-ANSI interpreter 
+within the interface processor to handle escape sequences so that software can 
+be set to use an ANSI terminal setting.<br>
+So, in effect, using the ATmega processors, I have created a small minimum-ANSI 
+compatible terminal.</font></i></p>
+<p><i><font face="Arial">The  video controller was created using an ATmega328 processor 
+(or an ATmega32 processor, <a href="http://searle.x10host.com/MonitorKeyboard/mega32.html">here</a>). This was based 
+on a design and code produced by <a href="http://sbc.rictor.org/">Daryl Rictor</a> (he produced a 40x25 display using 
+an ATmega8 and three other ICs). I adapted the code to use the larger memory of the ATmega328 
+(originally on an ATmega32) and 
+modified it significantly to make an 80 char display and also to support 
+graphics. I modified control code 
+processing and handshaking that avoided two additional ICs. The 2-wire handshaking between the display processor 
+and the IO processor allows correct synchronisation between the processors when 
+transferring serial data to the display processor.</font></i></p>
+<p><font face="Arial">An Arduino shield and library for the video controller part is also 
+being developed by Dave. Check out his blog
+<a href="http://blog.tynemouthsoftware.co.uk/2013/09/arduino-80x25-tv-video-output-library_16.html">
+here</a>.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="Performance"></a>PERFORMANCE</font></b></p>
+<p><font face="Arial">Real-timed performance figures are shown here (80 char x 
+25 line screen - very similar speeds for all modes)</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="1000" id="AutoNumber4">
+  <tbody><tr>
+    <td width="27%"><b><font face="Arial">Test case</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">PAL<br>
+    8 bit interface</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">PAL<br>
+    4 bit interface</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">PAL<br>
+    2 wire</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">NTSC<br>
+    8 bit interface</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">NTSC<br>
+    4 bit interface</font></b></td>
+    <td width="120" align="center"><b><font face="Arial" size="2">NTSC<br>
+    2 wire</font></b></td>
+  </tr>
+  <tr>
+    <td width="27%"><font face="Arial">150,000 characters sent to the display<br>
+    + 1000 "cursor homes" (to prevent scrolling)</font></td>
+    <td width="120" align="center"><font face="Arial" size="2">4.7 seconds<br>
+    <b>31915 char/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">6.3 seconds<br>
+    <b>23809 char/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">8.3 seconds<br>
+    <b>18072 char/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">6.7 seconds<br>
+    <b>22388 char/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">8.9 seconds<br>
+    <b>16853 char/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">11.0 seconds<br>
+    <b>13636 char/sec</b></font></td>
+  </tr>
+  <tr>
+    <td width="27%"><font face="Arial">Scroll screen 1000 lines<br>
+    (graphics and/or text)</font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 lines/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 lines/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 lines/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 lines/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 lines/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 lines/sec</b></font></td>
+  </tr>
+  <tr>
+    <td width="27%"><font face="Arial">Clear screen 1000 times</font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 clears/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 clears/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">2.5 seconds<br>
+    <b>400 clears/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 clears/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 clears/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">3.6 seconds<br>
+    <b>277 clears/sec</b></font></td>
+  </tr>
+  <tr>
+    <td width="27%"><font face="Arial"><b>Graphics</b><br>
+    Using supplied control codes to set 160000 pixels and reset 160000 pixels 
+    covering the complete screen (ie. 320,000 pixel operations)</font></td>
+    <td width="120" align="center"><font face="Arial" size="2">26.5 seconds<br>
+    <b>12075 pixels/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">37.1 seconds<br>
+    <b>8625 pixels/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">51.6 seconds<br>
+    <b>6201 pixels/sec</b></font><p><font face="Arial" size="2">727KHz 2 wire:<br>
+    35.7 seconds<br>
+    <b>8956 pixels/sec</b></font></p></td>
+    <td width="120" align="center"><font face="Arial" size="2">37.6 seconds<br>
+    <b>8510 pixels/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">52.4 seconds<br>
+    <b>6102 pixels/sec</b></font></td>
+    <td width="120" align="center"><font face="Arial" size="2">68.6 seconds<br>
+    <b>4664 pixels/sec</b></font><p><font face="Arial" size="2">727KHz 2 wire:<br>
+    49.3 seconds<br>
+    <b>6488 pixels/sec</b></font></p></td>
+  </tr>
+</tbody></table>
+<p><font face="Arial"><b>Notes:<br>
+</b>2 wire performance is for 400KHz clock unless stated. This can be improved 
+significantly by increasing the 2 wire clock speed.<br>
+PAL performance is higher than NTSC because a larger proportion of the time is 
+free for PAL than NTSC, due to screen refresh rates.<br>
+Each graphics pixel set/reset requires 3 bytes to be sent, which is why 8 bit 
+transfer noticeably faster than 2 wire.</font></p>
+<p><font face="Arial"><b>Test conditions:</b><br>
+Host controller: ATmega88 running at 16MHz (identical performance to Arduino Uno 
+or Nano etc.)<br>
+2 wire interface: Standard 400KHz clock speed unless specified<br>
+Timing: Externally electronically timed using a Black*Star Apollo 100 Universal 
+counter-timer.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="InterfaceCoding"></a>INTERFACE CODING 
+TO USE THE DISPLAY PROCESSOR</font></b></p>
+<p><i><font face="Arial">For further details, see the processing and circuit 
+description later on in this page. There are THREE options to interface to the 
+display controller:</font></i></p>
+<p><u><b><font face="Arial">4 Bit interface</font></b></u></p>
+<p><b><font face="Arial">Hardware requirements</font></b></p>
+<p><font face="Arial">The controller requires 6 pins available:<br>
+D0 - D3 - Outputs<br>
+AVAIL - Output<br>
+ACK - Input</font></p>
+<p><font face="Arial">Ensure R6 is connected on the display controller to enable 
+4-bit transfers.</font></p>
+<p><b><font face="Arial">Controller initialisation</font></b></p>
+<p><font face="Arial">Set D0, D1, D2, D3 and AVAIL to be outputs.<br>
+Set ACK to be an input.<br>
+Set <b>AVAIL</b> pin to <b>low</b> (0).</font></p>
+<p><b><font face="Arial">Sending a character to the display</font></b></p>
+<p><font face="Arial">Ensure <b>AVAIL</b> is <b>low</b>. <i><font size="2">
+Should already be low, but if not, set it low.</font></i><br>
+Wait until <b>ACK</b> pin input is <b>low</b>. <i><font size="2">Once it is, the 
+display processor is ready.</font></i><br>
+Place high 4 bits of the character onto D0..D3 output pins.<br>
+Set <b>AVAIL</b> to <b>high</b>, to indicate to the display that the high bits 
+are ready to be read.<br>
+Wait until <b>ACK</b> pin input is <b>high</b>. <i><font size="2">Once it is, 
+the display processor has read the high bits and is ready.</font></i><br>
+Place low 4 bits of the character onto D0..D3 output pins.<br>
+Set <b>AVAIL</b> to <b>low</b>, to indicate to the display that the low bits are 
+ready to be read.</font></p>
+<p><u><b><font face="Arial">8 Bit interface</font></b></u></p>
+<p><b><font face="Arial">Hardware requirements</font></b></p>
+<p><font face="Arial">The controller requires 10 pins available:<br>
+D0 - D7 - Outputs<br>
+AVAIL - Output<br>
+ACK - Input</font></p>
+<p><font face="Arial">Ensure R6 is NOT connected on the display controller to 
+enable 8-bit transfers.</font></p>
+<p><b><font face="Arial">Controller initialisation</font></b></p>
+<p><font face="Arial">Set D0, D1, D2, D3, D4, D5, D6, D7 and AVAIL to be 
+outputs.<br>
+Set ACK to be an input.<br>
+AVAIL can be high or low.</font></p>
+<p><b><font face="Arial">Sending a character to the display</font></b></p>
+<p><font face="Arial">Wait until <b>ACK</b> pin input is the same value as the
+<b>AVAIL</b> pin. <i><font size="2">Once it is, the display processor is ready.</font></i><br>
+Place the character onto D0..D7 output pins.<br>
+Flip the <b>AVAIL</b> pin to indicate to the display that the data is 
+ready to be read and processed.</font></p>
+<p><u><b><font face="Arial">I2C (two wire) interface</font></b></u></p>
+<p><font face="Arial">Only 2 pins needed - SDA and SCL.</font></p>
+<p><font face="Arial">The display is at address 01 (can be changed in code).<br>
+Use as for any other I2C device, and send 8-bit character codes.</font></p>
+<hr>
+<p><font face="Arial"><b><a name="Schematic"></a><font size="5">SCHEMATIC FOR 
+BOTH PROJECTS</font></b></font></p>
+<p><i><font face="Arial"><font size="2">VERSION 2.0 - Now uses an ATmega328 processor instead 
+of the older ATmega32. The ATmega328 is a cheaper, newer and smaller processor 
+(28 pin instead of 40 pin). The ATmega32 design (8 bit interface only - frozen) is still available and can be 
+seen <a href="http://searle.x10host.com/MonitorKeyboard/mega32.html">here</a>.<br>
+VERSION 2.1 - Now allows a 4 bit or 8 bit display interface. NOTE: Display NTSC 
+selection moved from PC5 to PD7.<b><br>
+</b>VERSION 2.2 - Two-wire also supported. NOTE: Display shift/load moved from PC5 
+to PC3, AVAIL moved to PC5, /RTS moved to PC3.</font><b><br>
+VERSION 3.0 - Graphics and multi-font support use the same pinouts as for 2.2 
+but now have additional configuration resistors (if needed, can be omitted) - 
+see note 6 below.<br>
+&nbsp;</b></font></i></p>
+<p><i><font face="Arial">This consists of two modules and when used together 
+produces a generic ANSI terminal (also supporting graphics) using a TTL compatible 
+serial interface running at 115200 baud (can be changed in software) so can be 
+used for any  computer project that has a serial I/O and needs a keyboard 
+and display.</font></i></p>
+<p><font face="Arial">This uses an ATmega88 (or 168 pr 328) for the keyboard and serial buffer 
+and an ATmega328 for the display processor.<br>
+Since the display is independent of the host (eg Z80) processor, the host has no processing 
+overhead so when connected to <a href="http://searle.x10host.com/cpm/index.html">my CP/M system</a> this  system runs <u>much</u> faster than many of the old 
+systems.</font></p>
+<p><b><font face="Arial">The circuit is in two distinct parts, as shown below. 
+If only a display is needed then only the circuit to the left side of the line 
+is needed.</font></b></p>
+<p><b><font face="Arial">(NOT SHOWING DEFAULT FONT CONFIGURATION RESISTORS - SEE 
+BELOW)</font></b></p>
+<p>
+<font face="Arial">
+</font></p>
+<p><img border="0" src="./ATMega328Video 2.2.gif" width="1200" height="533"></p>
+<p><font face="Arial"><b>Note 1:</b> Not all power supply pins are not shown. These must be 
+connected to the appropriate power rail.<br>
+<b>Note 2:</b> Include R3 for NTSC display only, otherwise do not make any 
+connection between PD7 and ground.<br>
+<b>Note 3:</b> Include R6 and also connect PB1 on the interface to ground for 
+4-bit data ONLY. Do not connect any green&nbsp; wires when using the 4-bit interface.<br>
+<b>Note 4:</b> Include R7 and also connect PB2 on the interface to ground for 
+two-wire ONLY. Do not connect any red or green wires.<br>
+<b>Note 5:</b> If a specific display start-up configuration is always used, the 
+code can be altered (see <a href="http://searle.x10host.com/MonitorKeyboard/index.html#SourceCode">below</a>) and all configuration 
+resistors omitted.<br>
+<b>Note 6:</b> Default font will be 80 char, single-height, bold. To change it, 
+pull the following display lines low with 10K resistors:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pin 6 (PD4) - 40 chars per line if 
+pulled low via a 10K resistor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pin 5 (PD3) - Double height if pulled 
+low via a 10K resistor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pin 4 (PD2) - Non-bold if pulled low 
+via a 10K resistor<br>
+&nbsp;</font></p>
+<p><font face="Arial">To illustrate the wiring for the three interfacing options, 
+please see below...</font></p>
+<p><b><font face="Arial">8-bit (suitable for connecting the display to 
+microcontrollers or microprocessors using 10 pins):</font></b></p>
+<p>
+<img border="0" src="./ATMega328Video 2.2 - 8 bit.gif" width="500" height="219"></p>
+<p><b><font face="Arial">4-bit (suitable for connecting the display to 
+microcontrollers or microprocessors using 6 pins):</font></b></p>
+<p>
+<img border="0" src="./ATMega328Video 2.2 - 4 bit.gif" width="500" height="220"></p>
+<p><font face="Arial"><b>Two wire (suitable for connecting the display to 
+microcontrollers supporting I<sup>2</sup>C):<u><br>
+</u></b>
+<img border="0" src="./ATMega328Video 2.2 - TWI.gif" width="500" height="225"></font></p>
+<p><font face="Arial">The code for the serial/keyboard controller is written in C, and the code 
+for the display controller is assembler, significantly modified from Daryl Rictor's original (<b>full 
+credit to <a href="http://sbc.rictor.org/">Daryl</a> for the original!</b>)</font></p>
+<p><font face="Arial">I use the free Atmel AVR studio 7 to compile/assemble 
+the two sets of code.</font></p>
+<p><b><font face="Arial">When using both modules together, ensure the data bus width of the display processor 
+matches the data bus width of the keyboard/serial interface otherwise it will 
+not work.</font></b></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="Prototype"></a>PROTOTYPE</font></b></p>
+<p><font face="Arial">The two parts of the above schematic (8 bit interface, PAL 
+mode) are constructed as 
+shown here. A resistor links each reset to the power because I program the chips 
+in-circuit.</font></p>
+<p><font face="Arial">
+<img border="0" src="./MonitorAndKeyboardPrototype.jpg" width="500" height="404"></font></p>
+<p><i><font face="Arial" size="2">Note: this picture is for the schematic 
+version 2.1. Minor wiring changes for version 2.2</font></i></p>
+<p><font face="Arial">The system that required the interface (my CP/M design) is 
+shown to the right. The TX, RX, /RTS and power connections are made between the 
+interface and the host computer.<br>
+The data bus wiring between the display and the interface parts of the circuit can be 
+seen in blue, handshake between them in orange.</font></p>
+<p><font face="Arial">To interface the display to a microcontroller without the 
+keyboard or serial interface requires only the left hand part. The controller 
+needs 4 or 8 output pins for the data, one output pin for the "data available 
+signal" and one input pin for the "acknowledge" pin.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="ProcessingAndCircuitDescription"></a>PROCESSING AND CIRCUIT DESCRIPTION</font></b></p>
+<p><font face="Arial">The serial/keyboard controller runs at 11.0592MHz (to coincide with the 
+115200 Baud serial interface) and the  display processor runs at 16MHz.</font></p>
+<p><font face="Arial">The serialisation of the video data is done using a 
+74HCT166 parallel to serial converter.</font></p>
+<p><font face="Arial">The sync and video signals are merged using a resistor 
+network which works fine for me and terminates in a standard 75 ohm video input 
+on the monitor.</font></p>
+<p><font face="Arial">The keyboard used is a standard "PC" keyboard with a PS/2 
+connector (NOT USB).
+Caps lock and num lock works and it updates the keyboard LEDs as needed. 
+Non-ASCII keys return codes, but this isn't finalised yet and is easily changed 
+in the code. </font></p>
+<p><font face="Arial">Here is a block diagram  of the display and keyboard 
+interface being used together as a serial-driven I/O for a microcomputer system:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="./ATmega display and kb block.gif" width="600" height="394"></font></p>
+<p><font face="Arial"><b>ATmega88/168/328 processor (Serial and keyboard I/O)<br>
+</b>This buffers the serial input and 
+stores it in a circular buffer 800 chars in size. The RTS is cleared when less 
+than 32 character spaces remain in the buffer and is set when there are less 
+than 32 char spaces used. This is to allow overrun from the sending 
+system without losing characters.<br>
+When a character or command is to be sent to the display processor, the code is 
+placed on the output port pins.<br>
+Some ANSI commands are interpreted and converted to the relevant video processor 
+commands.</font></p>
+<p><font face="Arial"><b>ATmega328 processor (video)<br>
+</b>This has 2K RAM so can accommodate an 80x25 char display with some bytes 
+remaining for workspace. The main processing is transferring data from the 
+memory to the output serial shifter, and producing the HSYNC and VSYNC signals. 
+During the inactive time of the display, the input port/status bits can be read 
+and the incoming data interpreted either as a command or as a character that is 
+inserted into the display. Scrolling and clearing of the screen is handled 
+within this processor (very quickly!)<br>
+It is mainly Daryl's code in there, but I have adapted it for the ATmega328 
+processor which has 2K RAM, added some routines of my own and altered the row/col 
+cursor positioning commands to take a parameter byte instead of using a set of 
+character spaces and changed the method to allow the display of control-code 
+characters. This allowed me to modify it to produce an 80x25 
+display. I also changed the code so that only one timer is needed instead of 
+two. Additionally the handshaking/data read code was changed to allow me to 
+interface to the keyboard/serial controller without needing a latch or the other 
+chips that he used. The dot clock runs at 16MHz to allow an 80 column display to 
+be shown on a standard video monitor/TV.</font></p>
+<p><font face="Arial">An&nbsp; ATmega328 pin (see schematic) determines whether PAL (50Hz) or NTSC 
+(60Hz) display is required. Connect via a resistor to ground for NTSC.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="InterfaceDetails"></a>INTERFACE 
+DETAILS</font></b></p>
+<p><font face="Arial"><b>Data transfer between the host (or interface) and 
+display controllers (applicable 
+to 4 bit or 8 bit mode).<br>
+</b>The two processors must be able to communicate with each other and must wait 
+for the other processor as needed.<br>
+Data transfer is via a 4 bit or 8 bit parallel port.<br>
+Handshaking between the processors is achieved with two lines - the "Data 
+Available" line and the "Acknowledge" line.</font></p>
+<p><font face="Arial">The serial/keyboard processor uses the two handshake lines to see if data <b>can be sent</b> to the 
+display.<br>
+The display processor uses the two handshake lines to see if data <b>has been sent</b>.</font></p>
+<p><font face="Arial">The handshake is the same for 4 or 8 bit transfers, 
+although the meaning is slightly different...</font></p>
+<p><font face="Arial"><b>8 bit transfers</b></font></p>
+<blockquote>
+<p><font face="Arial"><u>Host controller:</u><br>
+The host (serial/keyboard processor) waits until the&nbsp; "Acknowledge" line matches the "Data 
+Available" line. Once it does, the data is placed on the output port and the 
+"Data Available" line is flipped (ie. 0 to 1 or 1 to 0).</font></p>
+<p><font face="Arial"><u>Display processor:</u><br>
+If the 
+"Data Available" does NOT match the "Acknowledge" line then data has been sent 
+so the data input is read and the "Acknowledge" line is flipped ONCE 
+DATA 
+HAS BEEN READ. Therefore once data transfer is complete, the "Acknowledge" and 
+"Data Available" lines will have the same value.<br>
+This data is then processed. </font></p>
+</blockquote>
+<p><font face="Arial"><b>4 bit transfers</b></font></p>
+<blockquote>
+<p><font face="Arial"><u>Host controller:<br>
+</u><i>(The host (</i>serial/keyboard processor<i>) has AVAIL set as low when initialised. 
+This will remain low when idle in 4 bit mode)</i><br>
+It waits until the&nbsp; "Acknowledge" line matches the "Data 
+Available" line (LOW). Once it does, the HIGH 4 BITS of the data is placed 
+on the output port and the "Data Available" line is set HIGH.<br>
+It waits until the&nbsp; "Acknowledge" line matches the "Data 
+Available" line (HIGH). Once it does, the LOW 4 BITS of the data is placed 
+on the output port and the "Data Available" line is set LOW.</font></p>
+<p><font face="Arial"><u>Display processor:<br>
+</u>If the "Data Available" does NOT match the "Acknowledge" 
+line then data has been sent so the data input is read and the "Acknowledge" 
+line is flipped ONCE DATA IS READ. If the AVAIL is high then the 4 bits read are 
+stored in the high 4 bits of a buffer byte but not processed (because data 
+transfer is not yet complete). If the AVAIL is low then the 4 bits read are 
+stored in the low 4 bits of a buffer byte which then completes the byte 
+transfer. This complete 8-bit value is then processed.</font></p>
+</blockquote>
+<p><font face="Arial">To demonstrate this, please refer to the following:</font></p>
+<p>
+<img border="0" src="./Display handshake 1.2.gif" width="1200" height="518"></p>
+<p>
+<font face="Arial"><b>I<sup>2</sup>C (two wire) transfers</b></font></p>
+<p>
+<font face="Arial">Standard I<sup>2</sup>C interfacing at high speeds (more than 
+1MHz if needed). The display processor is set in code to be I<sup>2</sup>C 
+address 01. Change the code if different address is needed.</font></p>
+<p>
+<font face="Arial">Refer to the microcontroller datasheet that the display is 
+connecting to for more information.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="SourceCode"></a>SOURCE CODE AND PROGRAMMING</font></b></p>
+<p><i><b><font face="Arial">Note - 18th September 2013 - Code updated to utilise 
+swapped pins for the AVAIL, Shift/load and /RTS.<br>
+27th September - additional config pins for start-up font.<br>
+If using latest software here, you MUST ensure you are using the connections as 
+shown in the schematic above.</font></b></i></p>
+<p><i><font face="Arial">Coding based on the original code produced by <a href="http://sbc.rictor.org/">Daryl Rictor</a>
+</font></i></p>
+<p><i><font face="Arial">Many thanks to
+<a href="http://blog.tynemouthsoftware.co.uk/">Dave Curran</a> for providing me 
+with the two-wire code for the display processor.</font></i></p>
+<p><font face="Arial">Commented source code and HEX files for the 
+serial/keyboard processor and 
+display processor (or previous version for <a href="http://searle.x10host.com/MonitorKeyboard/mega32.html">ATmega32</a>) processors&nbsp;are 
+<a href="http://searle.x10host.com/MonitorKeyboard/SourceAndHEX.zip">HERE</a>.</font></p>
+<p><b>
+  <font face="Arial">
+  <i><font color="#800000">There is an I<sup>2</sup>C issue if data stream not 
+left open - so, if using I<sup>2</sup>C, don't close the stream otherwise some 
+data may be lost.</font></i></font></b></p>
+<p><font face="Arial">When programming the ATMEL processors, ensure the 
+appropriate fuse bits are set (see documentation/programmer details) as these 
+need to use the following settings:</font></p>
+<blockquote>
+<p><font size="2" face="Arial">A crystal (XT) clock (must be rail to rail for the 
+display controller)<br>
+No watchdog timer<br>
+No clock divider<br>
+JTAG 
+disabled<br>
+OCD disabled<br>
+No boot program</font></p>
+</blockquote>
+<p><font face="Arial">Must use XT rail-to-rail clock  for the video processor because this 
+also clocks the 74HCT166 (as permitted in the ATMEL datasheet).</font></p>
+<p><font face="Arial">Suitable fuse settings for the two controllers are as 
+follows (please refer to datasheets for info)...</font></p>
+<blockquote>
+<p><font face="Arial" size="2">For the 328P interface chip:<br>
+Low: 0xFF<br>
+High: 0xD9<br>
+Extended: 0xFF<br>
+<br>
+The 328P display chip must be set to rail-to-rail crystal operation, so the fuse 
+bytes for that would be:<br>
+Low: 0xF7 (ie. CKSEL3 = 0)<br>
+High: 0xD9<br>
+Extended: 0xFF</font></p>
+</blockquote>
+<p><font face="Arial">The source and HEX files provided are for the flexible-startup 
+option where external pull-downs are used to determine the operating mode. To 
+simplify the circuit, these can be omitted and the code altered (minor change) 
+if a specific configuration is always used at start-up.</font></p>
+<p><font face="Arial">Within SBCVideo.ASM I have already included the lines to 
+change...</font></p>
+<p><font face="Courier New" size="2" color="#008080">; HARD CODED OVERRIDE IF 
+PREFERRED<br>
+; ldi J, 1&lt;&lt;CONFIG_PAL | 0&lt;&lt;CONFIG_8_OR_4_BIT | 1&lt;&lt;CONFIG_N_TWI | 
+1&lt;&lt;CONFIG_80_CHAR_PER_LINE | 1&lt;&lt;CONFIG_SINGLE_HEIGHT | 0&lt;&lt;CONFIG_BOLD<br>
+; mov configByte,J</font></p>
+<p><font face="Arial">Remove the ";" comment characters from the start of the "ldi" 
+and "mov" lines and set the bits as needed. This will completely override the 
+pull-down resistors so none of them are needed.<br>
+<font size="2">CONFIG_PAL = 1 for PAL or 0 for NTSC<br>
+CONFIG_N_TWI = 0 for two-wire, otherwise 4/8 bit will be used<br>
+CONFIG_8_OR_4_BIT = 1 for 8 bit or 0 for 4 bit (if two-wire has not been 
+selected)<br>
+CONFIG_80_CHAR_PER_LINE = 1 for 80 char, 0 for 40 char<br>
+CONFIG_SINGLE_HEIGHT = 1 for normal, 0 for double-height</font></font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="SpecialCharacters"></a>SPECIAL CHARACTERS / CONTROL CODES</font></b></p>
+<p><font face="Arial">Standard ASCII is implemented for the main character set. 
+Extended ASCII codes are implemented the same as for DOS. Control codes are 
+standard ASCII where applicable - other codes added to allow control of the 
+screen. The full implementation is shown below:</font></p>
+<p><font face="Arial"><b>Video display control codes:</b><br>
+Hex (Decimal) and meaning<br>
+<font size="2">01 (01) - Cursor home<i> <font color="#C0C0C0">(Standard ASCII)</font></i><br>
+02 (02) - Define cursor character (2nd byte is the curs character, or 00 to turn 
+off)<font color="#00FF00"><b> &lt;--New for 3.0</b></font><br>
+03 (03) - Cursor blinking<br>
+04 (04) - Cursor solid<br>
+05 (05) - Set graphics pixel (next two bytes = x,y)<font color="#00FF00"><b> 
+&lt;--New for 3.0</b></font><br>
+06 (06) - Reset graphics pixel (next two bytes = x,y)<font color="#00FF00"><b> 
+&lt;--New for 3.0</b></font><br>
+08 (08) - Backspace<font color="#C0C0C0"><i> (Standard ASCII)</i></font><br>
+09 (09) - Tab<i> <font color="#C0C0C0">(Standard ASCII)</font></i><br>
+0A (11) - Linefeed<i> <font color="#C0C0C0">(Standard ASCII)</font></i><br>
+0C (12) - Clear screen<i> <font color="#C0C0C0">(Standard ASCII)</font></i><br>
+0D (13) - Carriage return<i> <font color="#C0C0C0">(Standard ASCII)</font></i><br>
+0E&nbsp;(14) - Set column 0 to 79 (2nd byte is the column number) or 0 to 39 for 
+a 40 char line<br>
+0F (16) - Set row 0 to 24 (2nd byte is the row number)<br>
+10 (16) - Delete start of line<br>
+11 (17) - Delete to end of line<br>
+12 (18) - Delete to start of screen<br>
+13 (19) - Delete to end of screen<br>
+14 (20) - Scroll up<br>
+15 (21) - Scroll down<br>
+16 (22) - Scroll left<br>
+17 (23) - Scroll right<br>
+18 (24) - Set font attribute for the current line (see <a href="http://searle.x10host.com/MonitorKeyboard/index.html#FontAttributes">
+elsewhere on this page</a> for details)<font color="#00FF00"><b> &lt;--New for 3.0</b></font><br>
+1A (26) - Treat next byte as a character (to allow PC DOS char codes 1 to 31 to 
+be displayed on screen)<br>
+1B (27) - ESC - reserved for ANSI sequences<br>
+1C (28) - Cursor right<br>
+1D (29) - Cursor Left<br>
+1E (30) - Cursor up<br>
+1F (31) - Cursor down<br>
+20 (32) to 7E (126) - Standard ASCII codes<br>
+7F (127) - Delete<br>
+80 (128) to FF (255) - PC (DOS) extended characters</font><br>
+&nbsp;</font></p>
+<p><font face="Arial">So, to print "Hello" at column 18, row 10 on the monitor 
+in BASIC would be as follows:<br>
+PRINT CHR$(14) ; CHR$(17) ; CHR$(15) ; CHR$(9) ; "HELLO"</font></p>
+<p><font face="Arial">Some ANSI/VT100 escape sequences have been implemented to 
+allow programs such as Wordstar etc. to run on the CPM machine. The ones 
+implemented are shown below (Esc = character 1B Hex, 27 
+decimal):<br>
+<b><font size="2">Esc[</font></b><font size="2">Line<b>;</b>Column<b>H</b> or <b>
+Esc[</b>Line<b>;</b>Column<b>f</b> moves cursor to that coordinate<br>
+<b>Esc[J</b>=clear from cursor down<br>
+<b>Esc[1J</b>=clear from cursor up<br>
+<b>Esc[2J</b>=clear complete screen<br>
+<b>Esc[K</b> = erase to end of line<b><br>
+Esc[1K</b> = erase to start of line<br>
+<b>Esc[L</b> = scroll down<br>
+<b>Esc[M</b> = scroll up<br>
+<b>Esc-</b> = turn off ANSI interpreter - NEEDED IF USING GRAPHICS otherwise 
+char 1B can't be sent to the display <font color="#00FF00"><b>&nbsp;&lt;--New for 
+3.0</b></font></font></font></p>
+<p><font face="Arial">The above example can also be implemented using escape 
+sequences instead...<br>
+PRINT CHR$(27) ; "[18;10H" ; "HELLO"</font></p>
+<p><font face="Arial">The character font is not the same as supplied by Daryl. I 
+recreated the complete normal and bold fonts from a bitmap of 8x8 characters for a CGA PC 
+display (using a small VB program). Most appear identical, so I assume we used a 
+similar source. However, I have included all characters, including those 
+normally reserved for control codes. </font></p>
+<p><font face="Arial">ASCII codes 00 to 1F (and 7F) are reserved for control. 
+However, the character map also has display characters with these values. These 
+characters can be displayed by sending code 1A (26 decimal) before sending the 
+code for the character. This prefix tells the display processor to store the 
+actual character into the display and not treat it as a control code.<br>
+eg. in BASIC, to display the heart symbol (at 03) you can use the following...<br>
+PRINT CHR$(26) ; CHR$(3)</font></p>
+<hr>
+<p><font face="Arial"><b><font size="5"><a name="FontAttributes"></a>FONT 
+ATTRIBUTES</font></b></font></p>
+<p><font face="Arial">Each <u><b>line</b></u> can have it's own font defined. 
+Cannot have mixed font types on the same line.<br>
+This can be:<br>
+<font size="2">40 Character normal<br>
+80 Character normal<br>
+40 Character bold<br>
+80 Character bold<br>
+40 Character normal double-height<br>
+80 Character normal double-height<br>
+40 Character bold double-height<br>
+80 Character bold double-height</font></font></p>
+<p><font face="Arial">This is illustrated here:</font></p>
+<p><img border="0" src="./TxtDisplay.jpg" width="607" height="164"></p>
+<p><font face="Arial"><i>When "double height" is specified, internally, the 
+current line gets set to "double-height top-half" and the following line gets 
+the same font definition and&nbsp; "double-height bottom-half".<br>
+The screen is always addressed as row 0..24, with double-height covering two 
+rows.</i></font></p>
+<p><font face="Arial">The font attribute byte is defined as follows:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="800" id="AutoNumber1">
+  <tbody><tr>
+    <td width="12%" align="center"><b><font face="Arial" size="2">7</font></b></td>
+    <td width="12%" align="center"><b><font face="Arial" size="2">6</font></b></td>
+    <td width="12%" align="center"><b><font face="Arial" size="2">5</font></b></td>
+    <td width="12%" align="center"><b><font face="Arial" size="2">4</font></b></td>
+    <td width="13%" align="center"><b><font face="Arial" size="2">3</font></b></td>
+    <td width="13%" align="center"><b><font face="Arial" size="2">2</font></b></td>
+    <td width="13%" align="center"><b><font face="Arial" size="2">1</font></b></td>
+    <td width="13%" align="center"><b><font face="Arial" size="2">0</font></b></td>
+  </tr>
+  <tr>
+    <td width="12%" align="center"><font face="Arial" size="2">Graphics</font></td>
+    <td width="12%" align="center"><font face="Arial" size="2" color="#C0C0C0">
+    Spare</font></td>
+    <td width="12%" align="center"><font face="Arial" size="2" color="#C0C0C0">
+    Spare</font></td>
+    <td width="12%" align="center"><font face="Arial" size="2" color="#C0C0C0">
+    Spare</font></td>
+    <td width="13%" align="center"><font face="Arial" size="2" color="#C0C0C0">
+    Spare</font></td>
+    <td width="13%" align="center"><font face="Arial" size="2">Double height</font></td>
+    <td width="13%" align="center"><font face="Arial" size="2">Bold</font></td>
+    <td width="13%" align="center"><font face="Arial" size="2">80 chars</font></td>
+  </tr>
+</tbody></table>
+<p><font face="Arial">So, bold 80 char normal height is 0b0000011, or 0x03, 
+normal 40 char is 0x00000000, or 0x00 etc.</font></p>
+<p><font face="Arial">To set it, send 0x18 (see <a href="http://searle.x10host.com/MonitorKeyboard/index.html#SpecialCharacters">
+above</a>) followed by the attribute number to the display.</font></p>
+<p><font face="Arial">When characters on a line overflow onto the following line 
+OR a linefeed is issued, the following line will also be set to the same font 
+definition - no need to reset at each line.</font></p>
+<p><font face="Arial">When a cursor is put on a line (cursor up/down or set row 
+command) the active font becomes whatever was on that line, so no need to reset 
+the font to match the current line.</font></p>
+<p><font face="Arial">When a font select is sent, the current line will be set 
+to that font (plus the lines that follow if text flows over the end, as 
+described above).</font></p>
+<p><font face="Arial">When a clear screen is issued, the complete screen will 
+take on the current font selection as default.</font></p>
+<p><font face="Arial">For double-height lines, the line position used is that 
+line occupied by the top-half of the text.<br>
+Repositioning the cursor on to the second line of a double-height line will give 
+strange results, because that will be reset to be top of a double-line.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="Graphics"></a>GRAPHICS</font></b></p>
+<p><font face="Arial">Full 160x100 bitmapped graphics are supported. Two 
+functions are included to set and reset pixels.</font></p>
+<p><font face="Arial">Whenever a set pixel or reset pixel command is issued, the 
+X/Y coordinates determine which display line needs to be used for graphics. This 
+is automatic, so no need to set graphics line attributes. If the line is 
+currently set for text then the line is automatically cleared before setting the 
+pixel.</font></p>
+<p><font face="Arial">Pixel coordinates are X = 0..159, Y = 0..100</font></p>
+<p><font face="Arial">Part of a screen is shown here:</font></p>
+<p><img border="0" src="./GraphDisplay.jpg" width="674" height="120"></p>
+<p><font face="Arial">So, Y=0..3 will occupy the space where the top text line 
+would normally appear, 4..7 the next display line etc. The complete horizontal 
+line becomes graphics mode.</font></p>
+<p><font face="Arial">To set a pixel, send 0x05, X, Y as three bytes.<br>
+To reset a pixel, send 0x06, X, Y as three bytes.</font></p>
+<p><font face="Arial">Internally, graphics are held as character blocks with 
+each bit assigned as follows</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="50" id="AutoNumber2" height="80">
+  <tbody><tr>
+    <td width="50%" align="center"><font size="2" face="Arial">0</font></td>
+    <td width="50%" align="center"><font size="2" face="Arial">1</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font size="2" face="Arial">2</font></td>
+    <td width="50%" align="center"><font size="2" face="Arial">3</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font size="2" face="Arial">4</font></td>
+    <td width="50%" align="center"><font size="2" face="Arial">5</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font size="2" face="Arial">6</font></td>
+    <td width="50%" align="center"><font size="2" face="Arial">7</font></td>
+  </tr>
+</tbody></table>
+<p><font face="Arial">So, instead of set/reset pixel, the cursor can be 
+positioned on the line, the attribute then set to 0x80 (graphics) and individual 
+characters sent as would be done for text lines. eg. a block with pixels 0,4,5 
+and 7 set would be 0b10110001, or 0xB1</font></p>
+<p><font face="Arial">Ensure the cursor is either turned off, or not positioned 
+on a graphics line otherwise pixels will flash where the cursor is positioned.</font></p>
+<hr>
+<p><b><font face="Arial" size="5"><a name="CharacterSet"></a>CHARACTER SET</font></b></p>
+<p><font face="Arial">The full character set (showing PC CGA 80 char bold), exactly as displayed, is shown 
+here:</font></p>
+<p><font face="Arial"><img border="0" src="./VideoChars.jpg" width="600" height="475"></font></p>
+<p><font face="Arial">A close-up of an example display (running on my
+<a href="http://searle.x10host.com/cpm/index.html">home-designed CP/M computer</a>) on a green-screen 
+PAL CRT monitor is shown here:</font></p>
+<p><font face="Arial">
+<img border="0" src="./Startup.jpg" width="600" height="144"><br>
+(brightness turned up so that you can see the scanlines - normally black 
+background)</font></p>
+<hr>
+
+<p><b><font face="Arial" size="5"><a name="MyOtherPages"></a>MY OTHER PAGES</font></b></p>
+
+<p><font face="Arial"><a href="http://searle.x10host.com/index.html">CLICK HERE TO GO TO MY MAIN PAGE 
+FOR MY OTHER PROJECTS</a></font></p>
+
+<hr>
+
+<p><font face="Arial"><i>I hope this page has been useful.</i> </font> </p>
+
+<p><font face="Arial"><i>Grant.</i> </font> </p>
+
+<p><font face="Arial">To contact me, my current eMail address can be found
+<a href="http://searle.x10host.com/index.html">here</a>. Please note that 
+this address may change to avoid spam.</font></p>
+
+<p><font face="Arial"><font color="#0000FF" size="2"><i>Note: All information shown
+here is supplied "as is" with no warranty whatsoever, however, please 
+let me know if there are any errors.
+All copyrights recognised.</i></font> </font> </p>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./widget_iframe.6787510241df65d128e2b60207ad4c25.html" title="Twitter settings iframe" style="display: none;"></iframe></body></html>

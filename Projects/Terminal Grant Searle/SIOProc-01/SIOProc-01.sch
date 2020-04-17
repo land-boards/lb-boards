@@ -1,14 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:DougsSch
-LIBS:SIOProc-01-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -27,7 +18,7 @@ NoConn ~ 5650 7450
 NoConn ~ 5650 7300
 NoConn ~ 5650 7150
 $Comp
-L CONN_1 MTG4
+L SIOProc-01-rescue:CONN_1 MTG4
 U 1 1 50D9D700
 P 5800 7600
 F 0 "MTG4" H 5880 7600 40  0000 L CNN
@@ -38,7 +29,7 @@ F 3 "" H 5800 7600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG3
+L SIOProc-01-rescue:CONN_1 MTG3
 U 1 1 50D9D6F9
 P 5800 7450
 F 0 "MTG3" H 5880 7450 40  0000 L CNN
@@ -49,7 +40,7 @@ F 3 "" H 5800 7450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG2
+L SIOProc-01-rescue:CONN_1 MTG2
 U 1 1 50D9D6F4
 P 5800 7300
 F 0 "MTG2" H 5880 7300 40  0000 L CNN
@@ -60,7 +51,7 @@ F 3 "" H 5800 7300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG1
+L SIOProc-01-rescue:CONN_1 MTG1
 U 1 1 50D9D6EF
 P 5800 7150
 F 0 "MTG1" H 5880 7150 40  0000 L CNN
@@ -71,7 +62,7 @@ F 3 "" H 5800 7150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ATMEGA328-PU U1
+L SIOProc-01-rescue:ATMEGA328-PU U1
 U 1 1 5820B4C2
 P 3750 2800
 F 0 "U1" H 4050 3800 50  0000 L BNN
@@ -82,7 +73,7 @@ F 3 "" H 3750 2800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 5820BAF7
 P 2400 2500
 F 0 "C1" V 2250 2500 50  0000 L CNN
@@ -93,7 +84,7 @@ F 3 "" H 2400 2500 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 5820BB51
 P 2400 2700
 F 0 "C2" V 2550 2700 50  0000 L CNN
@@ -104,7 +95,7 @@ F 3 "" H 2400 2700 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5820BBE4
 P 2150 4350
 F 0 "#PWR01" H 2150 4100 50  0001 C CNN
@@ -115,7 +106,7 @@ F 3 "" H 2150 4350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR02
+L power:VCC #PWR02
 U 1 1 5820BC53
 P 2600 1150
 F 0 "#PWR02" H 2600 1000 50  0001 C CNN
@@ -126,7 +117,7 @@ F 3 "" H 2600 1150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5820C889
 P 6050 1600
 F 0 "R4" V 6130 1600 50  0000 C CNN
@@ -137,7 +128,7 @@ F 3 "" H 6050 1600 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_02X08 P1
+L SIOProc-01-rescue:CONN_02X08 P1
 U 1 1 5820CDBE
 P 3800 6050
 F 0 "P1" H 3800 6500 50  0000 C CNN
@@ -184,7 +175,7 @@ ID6
 Text Label 4150 6100 0    60   ~ 0
 ID7
 $Comp
-L VCC #PWR03
+L power:VCC #PWR03
 U 1 1 5820DE87
 P 2450 5350
 F 0 "#PWR03" H 2450 5200 50  0001 C CNN
@@ -195,7 +186,7 @@ F 3 "" H 2450 5350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5820E06A
 P 1900 6550
 F 0 "#PWR04" H 1900 6300 50  0001 C CNN
@@ -212,15 +203,15 @@ AVAILSCL
 NoConn ~ 4050 6200
 NoConn ~ 3550 6200
 Wire Wire Line
-	2550 2700 3000 2700
+	2550 2700 2700 2700
 Wire Wire Line
-	2150 4000 3000 4000
+	2150 4000 2900 4000
 Wire Wire Line
-	2150 2500 2150 4350
+	2150 2500 2150 2700
 Wire Wire Line
-	2600 1300 6300 1300
+	2600 1300 2950 1300
 Wire Wire Line
-	2950 1300 2950 3250
+	2950 1300 2950 2950
 Connection ~ 2700 2500
 Connection ~ 2700 2700
 Wire Wire Line
@@ -274,7 +265,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 5700 3550 5700
 Wire Wire Line
-	2450 5500 5100 5500
+	2450 5500 3450 5500
 Wire Wire Line
 	3450 5500 3450 5700
 Wire Wire Line
@@ -285,7 +276,7 @@ Connection ~ 3450 5500
 Wire Wire Line
 	3450 6400 3550 6400
 Wire Wire Line
-	1900 6500 4150 6500
+	1900 6500 2200 6500
 Wire Wire Line
 	4150 6500 4150 6400
 Wire Wire Line
@@ -298,7 +289,7 @@ Wire Wire Line
 	3000 3800 2150 3800
 Connection ~ 2150 3800
 $Comp
-L Crystal_Small Y1
+L Device:Crystal_Small Y1
 U 1 1 5820BAAA
 P 2700 2600
 F 0 "Y1" H 2700 2700 50  0000 C CNN
@@ -309,9 +300,9 @@ F 3 "" H 2700 2600 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2550 2500 3000 2500
+	2550 2500 2700 2500
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5820C2E4
 P 4600 4300
 F 0 "R5" V 4550 4100 50  0000 C CNN
@@ -322,7 +313,7 @@ F 3 "" H 4600 4300 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 5820C43C
 P 4700 4300
 F 0 "R6" V 4650 4100 50  0000 C CNN
@@ -333,7 +324,7 @@ F 3 "" H 4700 4300 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L COUPON TEST1
+L SIOProc-01-rescue:COUPON TEST1
 U 1 1 5820CDD8
 P 4300 7600
 F 0 "TEST1" H 4300 7600 60  0000 C CNN
@@ -344,7 +335,7 @@ F 3 "" H 4300 7600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 58235DB4
 P 4850 6300
 F 0 "R1" V 4800 6100 50  0000 C CNN
@@ -355,7 +346,7 @@ F 3 "" H 4850 6300 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 58235E49
 P 2850 6300
 F 0 "R2" V 2800 6100 50  0000 C CNN
@@ -368,7 +359,7 @@ $EndComp
 Wire Wire Line
 	2450 6300 2700 6300
 Wire Wire Line
-	2450 5350 2450 6300
+	2450 5350 2450 5500
 Connection ~ 2450 5500
 Wire Wire Line
 	5100 5500 5100 6300
@@ -378,7 +369,7 @@ Connection ~ 4150 5500
 Text Notes 4850 4350 0    60   ~ 0
 R5=TWI\nR6=4-BIT
 $Comp
-L C C4
+L Device:C C4
 U 1 1 5823A248
 P 2200 5900
 F 0 "C4" H 2225 6000 50  0000 L CNN
@@ -389,7 +380,7 @@ F 3 "" H 2200 5900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L Device:C C3
 U 1 1 5823A529
 P 1900 5900
 F 0 "C3" H 1925 6000 50  0000 L CNN
@@ -400,13 +391,13 @@ F 3 "" H 1900 5900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 6050 1900 6550
+	1900 6050 1900 6500
 Connection ~ 1900 6500
 Wire Wire Line
 	2200 6050 2200 6500
 Connection ~ 2200 6500
 Wire Wire Line
-	1900 5600 2450 5600
+	1900 5600 2200 5600
 Wire Wire Line
 	1900 5600 1900 5750
 Connection ~ 2450 5600
@@ -424,7 +415,7 @@ RX
 Text Label 4950 2700 0    60   ~ 0
 TX
 $Comp
-L CONN_01X04 P2
+L SIOProc-01-rescue:CONN_01X04 P2
 U 1 1 58238F2C
 P 6850 1950
 F 0 "P2" H 6850 2200 50  0000 C CNN
@@ -435,15 +426,15 @@ F 3 "" H 6850 1950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 2100 6650 2100
+	4500 2100 6300 2100
 Wire Wire Line
-	4500 2000 6650 2000
+	4500 2000 6050 2000
 Wire Wire Line
 	6650 1800 5550 1800
 Wire Wire Line
-	5550 4500 5550 1800
+	5550 4500 5550 2300
 Wire Wire Line
-	2900 4500 5550 4500
+	2900 4500 4600 4500
 Wire Wire Line
 	2900 4500 2900 4000
 Connection ~ 2900 4000
@@ -451,7 +442,7 @@ Wire Wire Line
 	5750 1900 6650 1900
 Connection ~ 2950 1300
 $Comp
-L R R3
+L Device:R R3
 U 1 1 582399F6
 P 6300 1600
 F 0 "R3" V 6380 1600 50  0000 C CNN
@@ -486,9 +477,9 @@ Connection ~ 4700 4500
 Wire Wire Line
 	4600 4150 4600 3700
 Wire Wire Line
-	4500 3700 5350 3700
+	4500 3700 4600 3700
 Wire Wire Line
-	4500 3600 5350 3600
+	4500 3600 4700 3600
 Wire Wire Line
 	4700 3600 4700 4150
 Connection ~ 4700 3600
@@ -499,7 +490,7 @@ Text Label 4950 3700 0    60   ~ 0
 TWI
 Connection ~ 5750 1900
 Wire Wire Line
-	5750 1300 5750 3250
+	5750 1300 5750 1900
 Wire Wire Line
 	6200 2300 5550 2300
 Connection ~ 5550 2300
@@ -518,7 +509,7 @@ MOSI
 Text Label 4950 3900 0    60   ~ 0
 MISO
 $Comp
-L CONN_02X03 P4
+L SIOProc-01-rescue:CONN_02X03 P4
 U 1 1 58240145
 P 6900 3800
 F 0 "P4" H 6900 4000 50  0000 C CNN
@@ -550,7 +541,7 @@ Wire Wire Line
 Text Label 6000 3700 0    60   ~ 0
 MISO
 $Comp
-L R R7
+L Device:R R7
 U 1 1 58240F33
 P 2600 1600
 F 0 "R7" V 2680 1600 50  0000 C CNN
@@ -561,10 +552,10 @@ F 3 "" H 2600 1600 30  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2600 1150 2600 1450
+	2600 1150 2600 1300
 Connection ~ 2600 1300
 Wire Wire Line
-	1850 1900 3000 1900
+	1850 1900 2600 1900
 Wire Wire Line
 	2600 1900 2600 1750
 Connection ~ 2600 1900
@@ -577,7 +568,7 @@ ID4
 Text Label 7550 3800 0    60   ~ 0
 MOSI
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 58241AF4
 P 7300 4150
 F 0 "#PWR05" H 7300 3900 50  0001 C CNN
@@ -590,7 +581,7 @@ $EndComp
 Wire Wire Line
 	5900 2400 6200 2400
 $Comp
-L FTDI-Slave P3
+L SIOProc-01-rescue:FTDI-Slave P3
 U 1 1 5861F18E
 P 6700 2900
 F 0 "P3" H 6800 3650 60  0000 C CNN
@@ -600,4 +591,64 @@ F 3 "" H 6700 2900 60  0000 C CNN
 	1    6700 2900
 	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	2700 2500 3000 2500
+Wire Wire Line
+	2700 2700 3000 2700
+Wire Wire Line
+	2150 4000 2150 4350
+Wire Wire Line
+	2150 2700 2150 3800
+Wire Wire Line
+	3450 5500 4150 5500
+Wire Wire Line
+	3450 6500 4150 6500
+Wire Wire Line
+	2950 2950 2950 3250
+Wire Wire Line
+	2150 3800 2150 4000
+Wire Wire Line
+	2450 5500 2450 5600
+Wire Wire Line
+	4150 5500 5100 5500
+Wire Wire Line
+	1900 6500 1900 6550
+Wire Wire Line
+	2200 6500 3450 6500
+Wire Wire Line
+	2450 5600 2450 6300
+Wire Wire Line
+	2200 5600 2450 5600
+Wire Wire Line
+	2900 4000 3000 4000
+Wire Wire Line
+	2950 1300 5750 1300
+Wire Wire Line
+	6050 2000 6650 2000
+Wire Wire Line
+	6300 2100 6650 2100
+Wire Wire Line
+	5750 1300 6050 1300
+Wire Wire Line
+	6050 1300 6300 1300
+Wire Wire Line
+	4600 4500 4700 4500
+Wire Wire Line
+	4700 4500 5550 4500
+Wire Wire Line
+	4700 3600 5350 3600
+Wire Wire Line
+	4600 3700 5350 3700
+Wire Wire Line
+	5750 1900 5750 2500
+Wire Wire Line
+	5550 2300 5550 1800
+Wire Wire Line
+	5750 2500 5750 3250
+Wire Wire Line
+	2600 1300 2600 1450
+Wire Wire Line
+	2600 1900 3000 1900
+Text Label 4950 2200 0    60   ~ 0
+RTS*
 $EndSCHEMATC
