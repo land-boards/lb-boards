@@ -1,14 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:RS232_TTL_Female-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "DCE"
-Date "2019-09-06"
-Rev ""
-Comp ""
+Date "2020-04-17"
+Rev "X1"
+Comp "Land Boards LLC"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -100,12 +99,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR01
 U 1 1 5D728DF8
-P 3000 3950
-F 0 "#PWR01" H 3000 3700 50  0001 C CNN
-F 1 "GND" H 3005 3777 50  0000 C CNN
-F 2 "" H 3000 3950 50  0001 C CNN
-F 3 "" H 3000 3950 50  0001 C CNN
-	1    3000 3950
+P 2650 3950
+F 0 "#PWR01" H 2650 3700 50  0001 C CNN
+F 1 "GND" H 2655 3777 50  0000 C CNN
+F 2 "" H 2650 3950 50  0001 C CNN
+F 3 "" H 2650 3950 50  0001 C CNN
+	1    2650 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -194,36 +193,36 @@ Wire Wire Line
 $Comp
 L LandBoards_Cards:FTDI-Slave H1
 U 1 1 5D75AD29
-P 2450 3600
-F 0 "H1" H 2294 3013 60  0000 C CNN
-F 1 "FTDI-Slave" H 2294 3119 60  0000 C CNN
-F 2 "" H 2500 3250 60  0000 C CNN
-F 3 "" H 2500 3250 60  0000 C CNN
-	1    2450 3600
+P 2100 3600
+F 0 "H1" H 1944 3013 60  0000 C CNN
+F 1 "FTDI-Slave" H 1944 3119 60  0000 C CNN
+F 2 "" H 2150 3250 60  0000 C CNN
+F 3 "" H 2150 3250 60  0000 C CNN
+	1    2100 3600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2900 3850 3000 3850
+	2550 3850 2650 3850
 Wire Wire Line
-	3000 3850 3000 3950
+	2650 3850 2650 3950
 Wire Wire Line
 	3450 1700 3450 3650
 Wire Wire Line
-	3450 3650 2900 3650
+	3450 3650 2550 3650
 Wire Wire Line
-	2900 3750 3450 3750
+	2550 3750 3450 3750
 Wire Wire Line
 	3450 3750 3450 3850
 Wire Wire Line
 	3450 3850 4800 3850
 Wire Wire Line
-	2900 3450 3650 3450
+	2550 3450 3650 3450
 Wire Wire Line
 	3650 3450 3650 3650
 Wire Wire Line
 	3650 3650 4800 3650
 Wire Wire Line
-	2900 3550 3550 3550
+	2550 3550 3550 3550
 Wire Wire Line
 	3550 3550 3550 3250
 Wire Wire Line
@@ -233,10 +232,18 @@ Wire Wire Line
 Wire Wire Line
 	3750 3450 4800 3450
 Wire Wire Line
-	2900 3350 3750 3350
+	2550 3350 3750 3350
 Wire Wire Line
 	7250 2750 7250 1700
 Wire Wire Line
 	7250 1700 5600 1700
 Connection ~ 5600 1700
+Text Label 2750 3550 0    50   ~ 0
+F_TXD
+Text Label 2750 3350 0    50   ~ 0
+F_RTS
+Text Label 2750 3450 0    50   ~ 0
+F_RXD
+Text Label 2750 3750 0    50   ~ 0
+F_CTS
 $EndSCHEMATC
