@@ -103,7 +103,7 @@ $EndComp
 Wire Wire Line
 	4650 2350 4650 2100
 Wire Wire Line
-	4650 2100 2600 2100
+	4650 2100 3100 2100
 $Comp
 L Device:C_Small C2
 U 1 1 5D728CCE
@@ -143,7 +143,7 @@ U 1 1 5D729312
 P 7550 4000
 F 0 "J1" H 7730 4033 50  0000 L CNN
 F 1 "DB9_Male_MountingHoles" H 7730 3942 50  0000 L CNN
-F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 7730 3866 30  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 7150 3350 30  0000 L CNN
 F 3 " ~" H 7550 4000 50  0001 C CNN
 	1    7550 4000
 	1    0    0    -1  
@@ -189,17 +189,6 @@ Wire Wire Line
 	6800 3900 7250 3900
 Text Label 3400 2100 0    50   ~ 0
 VCC
-$Comp
-L LandBoards_Cards:FTDI-Slave H1
-U 1 1 5D75A367
-P 1800 3900
-F 0 "H1" H 1644 3207 60  0000 C CNN
-F 1 "FTDI-Slave" H 1644 3313 60  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 1644 3419 60  0000 C CNN
-F 3 "" H 1850 3550 60  0000 C CNN
-	1    1800 3900
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2600 2100 2600 3950
 Wire Wire Line
@@ -253,4 +242,140 @@ Wire Wire Line
 	2550 3550 2550 3650
 Wire Wire Line
 	2550 3650 2250 3650
+$Comp
+L Device:C_Small C5
+U 1 1 5E9B198E
+P 3100 2300
+F 0 "C5" H 3192 2346 50  0000 L CNN
+F 1 "10uF" H 3192 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3900 2200 30  0000 C CNN
+F 3 "~" H 3100 2300 50  0001 C CNN
+	1    3100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E9B2730
+P 3100 2450
+F 0 "#PWR05" H 3100 2200 50  0001 C CNN
+F 1 "GND" H 3105 2277 50  0000 C CNN
+F 2 "" H 3100 2450 50  0001 C CNN
+F 3 "" H 3100 2450 50  0001 C CNN
+	1    3100 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2400 3100 2450
+Wire Wire Line
+	3100 2200 3100 2100
+Connection ~ 3100 2100
+Wire Wire Line
+	3100 2100 2600 2100
+$Comp
+L LandBoards_Cards:FTDI H1
+U 1 1 5E9B4F4F
+P 1750 3550
+F 0 "H1" H 1750 3500 60  0000 C CNN
+F 1 "FTDI" H 1750 4300 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 1750 4500 30  0000 C CNN
+F 3 "" H 1750 3550 60  0000 C CNN
+	1    1750 3550
+	1    0    0    1   
+$EndComp
+$Comp
+L LandBoards:COUPON BRD1
+U 1 1 5E9B6F11
+P 5500 7750
+F 0 "BRD1" H 5728 7981 60  0000 L CNN
+F 1 "COUPON" H 5728 7875 60  0000 L CNN
+F 2 "LandBoards_BoardOutlines:BD-49X49" H 5050 7700 30  0000 L CNN
+F 3 "" H 5500 7750 60  0000 C CNN
+	1    5500 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even H2
+U 1 1 5E9C503D
+P 7400 5700
+F 0 "H2" H 7450 5900 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 7350 5400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Horizontal" H 7000 5350 30  0000 C CNN
+F 3 "~" H 7400 5700 50  0001 C CNN
+	1    7400 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5900 7100 5900
+Wire Wire Line
+	7100 5900 7100 5800
+Wire Wire Line
+	7200 5600 7100 5600
+Connection ~ 7100 5600
+Wire Wire Line
+	7100 5600 7100 5400
+Wire Wire Line
+	7200 5700 7100 5700
+Connection ~ 7100 5700
+Wire Wire Line
+	7100 5700 7100 5600
+Wire Wire Line
+	7200 5800 7100 5800
+Connection ~ 7100 5800
+Wire Wire Line
+	7100 5800 7100 5700
+Wire Wire Line
+	7700 5600 7800 5600
+Wire Wire Line
+	7800 5600 7800 5700
+Wire Wire Line
+	7700 5900 7800 5900
+Connection ~ 7800 5900
+Wire Wire Line
+	7800 5900 7800 6050
+Wire Wire Line
+	7700 5800 7800 5800
+Connection ~ 7800 5800
+Wire Wire Line
+	7800 5800 7800 5900
+Wire Wire Line
+	7700 5700 7800 5700
+Connection ~ 7800 5700
+Wire Wire Line
+	7800 5700 7800 5800
+$Comp
+L power:GND #PWR?
+U 1 1 5E9CFF0E
+P 7800 6050
+F 0 "#PWR?" H 7800 5800 50  0001 C CNN
+F 1 "GND" H 7805 5877 50  0000 C CNN
+F 2 "" H 7800 6050 50  0001 C CNN
+F 3 "" H 7800 6050 50  0001 C CNN
+	1    7800 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5E9D075A
+P 2600 2000
+F 0 "#PWR?" H 2600 1850 50  0001 C CNN
+F 1 "VCC" H 2617 2173 50  0000 C CNN
+F 2 "" H 2600 2000 50  0001 C CNN
+F 3 "" H 2600 2000 50  0001 C CNN
+	1    2600 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2000 2600 2100
+Connection ~ 2600 2100
+$Comp
+L power:VCC #PWR?
+U 1 1 5E9D1ECF
+P 7100 5400
+F 0 "#PWR?" H 7100 5250 50  0001 C CNN
+F 1 "VCC" H 7117 5573 50  0000 C CNN
+F 2 "" H 7100 5400 50  0001 C CNN
+F 3 "" H 7100 5400 50  0001 C CNN
+	1    7100 5400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -12,7 +12,7 @@
   (page A4)
   (layers
     (0 F.Cu signal)
-    (31 B.Cu signal)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user hide)
@@ -721,7 +721,7 @@
     (pad 4 thru_hole circle (at 45 -4) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
   )
 
-  (gr_line (start 154.75 78.6) (end 148.25 78.6) (layer B.SilkS) (width 5) (tstamp 5E9C6D30))
+  (gr_line (start 155.5 78.5) (end 149 78.5) (layer B.SilkS) (width 5) (tstamp 5E9C6D30))
   (gr_line (start 151.1 71.1) (end 144.6 71.1) (layer B.SilkS) (width 5))
   (gr_text "[   ] 5V\n\n[   ] 3.3/5V" (at 144 74.8) (layer B.SilkS) (tstamp 5E9C6CA1)
     (effects (font (size 2.159 2.159) (thickness 0.53975)) (justify mirror))
