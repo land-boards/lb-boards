@@ -161,7 +161,8 @@ class ControlClass:
 					footprint = inLine[11:-1]
 				#	print("footprint",footprint)
 				if (inLine.find("(field (name",0) != -1):
-					field = inLine[21:-1]
+					offset = inLine.find("(field (name",0)
+					field = inLine[offset+13:-1]
 					if field[len(field) -1] == ')':
 						field = field[0:-1]
 						if field[len(field) -1] == ')':
