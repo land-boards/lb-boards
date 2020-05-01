@@ -1,4 +1,4 @@
-update=4/30/2020 6:59:44 PM
+update=4/30/2019 1:26:14 PM
 version=1
 last_client=kicad
 [general]
@@ -36,16 +36,16 @@ LibName4=pin_array
 LibName5=divers
 LibName6=dip_sockets
 LibName7=C:/Users/DGilliland.AACISD/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
-[eeschema]
-version=1
-LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
 LabSize=60
-ERC_TestSimilarLabels=1
+[eeschema]
+version=1
+LibDir=
