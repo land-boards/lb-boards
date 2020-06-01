@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:EP2C5-DB-TH-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Multi-Computer on FPGA"
-Date "2019-12-29"
-Rev "X6"
+Date "2020-05-31"
+Rev "1"
 Comp "land-boards.com"
 Comment1 "Power is 3.3V from EP2C5 FPGA card"
 Comment2 ""
@@ -280,7 +279,7 @@ L EP2C5-DB-TH-rescue:MS628128-RESCUE-EP2C5-DB-EP2C5-DB-rescue U1
 U 1 1 583493AE
 P 8500 1800
 F 0 "U1" H 8500 3000 60  0000 C CNN
-F 1 "AS6C1008" H 8570 600 60  0000 C CNN
+F 1 "AS6C1008-55PCN" H 8570 600 60  0000 C CNN
 F 2 "Package_DIP:DIP-32_W15.24mm_LongPads" H 8500 550 20  0000 C CNN
 F 3 "" H 8500 1800 60  0000 C CNN
 	1    8500 1800

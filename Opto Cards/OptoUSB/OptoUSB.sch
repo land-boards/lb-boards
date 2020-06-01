@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "OptoUSB"
-Date "2017-05-20"
-Rev "X2"
+Date "2020-05-30"
+Rev "4"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -17,7 +17,7 @@ Text Notes 9850 6150 0    68   ~ 0
 GND\nCTS(I)\nVCC\nTX(O)\nRX(I)\nRTS(O)
 Text Label 2650 5800 0    60   ~ 0
 UVCC
-NoConn ~ 750  6550
+NoConn ~ 1350 7100
 Text Label 2600 6700 0    60   ~ 0
 DP
 Text Label 2600 6400 0    60   ~ 0
@@ -127,21 +127,6 @@ F 7 "603-CC121ZKY5V8BB106" H 2100 7300 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L OptoUSB-rescue:USB-B J1
-U 1 1 4FF311FD
-P 1300 7050
-F 0 "J1" H 1400 7800 60  0000 C CNN
-F 1 "USB-B" H 1500 7150 60  0000 C CNN
-F 2 "LandBoards_Conns:USB-B-MINI" H 1300 7050 30  0000 C CNN
-F 3 "" H 1300 7050 60  0001 C CNN
-F 4 "Hirose" H 1300 7050 60  0001 C CNN "Mfg"
-F 5 "UX60SC-MB-5ST(80)" H 1300 7050 60  0001 C CNN "MfgPN"
-F 6 "Mouser" H 1300 7050 60  0001 C CNN "Vendor"
-F 7 "798-UX60SC-MB-5ST80 " H 1300 7050 60  0001 C CNN "VendorPN"
-	1    1300 7050
-	1    0    0    -1  
-$EndComp
-$Comp
 L OptoUSB-rescue:FT230XS U1
 U 1 1 525C3657
 P 3500 6750
@@ -155,8 +140,6 @@ $EndComp
 NoConn ~ 4150 6850
 NoConn ~ 2900 6950
 NoConn ~ 4150 7150
-NoConn ~ 1250 7100
-NoConn ~ 1150 7100
 $Comp
 L OptoUSB-rescue:4N25 U2
 U 1 1 58BFAB36
@@ -641,17 +624,15 @@ Wire Wire Line
 Wire Wire Line
 	2100 5800 2100 6500
 Wire Wire Line
-	1850 6800 1750 6800
-Wire Wire Line
 	1750 6700 2900 6700
 Wire Wire Line
 	3600 5800 3600 5900
 Wire Wire Line
 	2900 6400 2300 6400
 Wire Wire Line
-	2300 6400 2300 6600
+	2300 6400 2300 6800
 Wire Wire Line
-	2300 6600 1750 6600
+	2300 6800 1750 6800
 Wire Wire Line
 	2100 7600 2100 7450
 Wire Wire Line
@@ -683,8 +664,6 @@ Wire Wire Line
 	4300 7050 4150 7050
 Wire Wire Line
 	1850 7600 2100 7600
-Wire Wire Line
-	1850 5900 1850 6800
 Wire Wire Line
 	4550 5800 4550 6800
 Wire Wire Line
@@ -878,7 +857,6 @@ Wire Wire Line
 Connection ~ 2100 5800
 Wire Wire Line
 	1850 5900 1650 5900
-Connection ~ 1850 6800
 Wire Wire Line
 	9250 5100 8750 5100
 Connection ~ 8750 5100
@@ -927,8 +905,6 @@ Wire Wire Line
 	3400 5800 3600 5800
 Wire Wire Line
 	2100 5800 3400 5800
-Wire Wire Line
-	1850 6800 1850 7600
 Wire Wire Line
 	8750 5100 8750 5600
 Wire Wire Line
@@ -979,4 +955,24 @@ F 3 "" H 3900 1200 30  0000 C CNN
 	1    3900 1200
 	0    1    1    0   
 $EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5ED2C92C
+P 1450 6700
+F 0 "J1" H 1507 7227 50  0000 C CNN
+F 1 "USB_B_Micro" H 1507 7136 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 1507 7060 30  0000 C CNN
+F 3 "~" H 1600 6650 50  0001 C CNN
+	1    1450 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5900 1850 7250
+Wire Wire Line
+	1450 7100 1450 7250
+Wire Wire Line
+	1450 7250 1850 7250
+Connection ~ 1850 7250
+Wire Wire Line
+	1850 7250 1850 7600
 $EndSCHEMATC
