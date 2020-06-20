@@ -16,7 +16,7 @@ import gtk
 
 # Check for new pygtk: this is new class in PyGtk 2.4
 if gtk.pygtk_version < (2,3,90):
-	 print "PyGtk 2.3.90 or later required"
+	 print("PyGtk 2.3.90 or later required")
 	 raise SystemExit
 
 import csv
@@ -26,6 +26,7 @@ import sys
 
 sys.path.append('C:\\Users\\Douglas\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules')
+sys.path.append('C:\\Users\\Test\\Documents\\GitHub\\lb-Python-Code\\dgCommonModules')
 sys.path.append('C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-Python-Code\\dgCommonModules')
 defaultPath = '.'
 
@@ -80,7 +81,7 @@ class FindaNetFile:
 			defaultPath = self.extractPathFromPathfilename(retFileName)
 			return retFileName
 		elif response == gtk.RESPONSE_CANCEL:
-			print 'Closed, no files selected'
+			print('Closed, no files selected')
 			dialog.destroy()
 			exit()
 		dialog.destroy()
@@ -209,9 +210,9 @@ class ControlClass:
 				if row[1:] == lastPart[1:]:	# if this part matches the last part
 					newComboPart += ',' + row[0]
 					inComboPart = True
-#					print 'got a match, new combo part ref des', newComboPart
+#					print('got a match, new combo part ref des', newComboPart)
 					qty += 1
-#					print 'qty', qty
+#					print('qty', qty)
 				elif inComboPart == False:	# part didn't match and last part wasn't a combo part
 #						outCSVFile.writerow(lastPart)
 					outRow = []
@@ -219,7 +220,7 @@ class ControlClass:
 					outRow += lastPart
 					outPL.append(outRow)
 					newComboPart = row[0]
-#					print 'not match'
+#					print('not match')
 					qty = 1
 				elif inComboPart:	# part mismatch but last part was combo
 					inComboPart = False
