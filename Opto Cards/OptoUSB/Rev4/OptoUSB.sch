@@ -184,7 +184,7 @@ F 3 "" H 2850 1400 30  0000 C CNN
 	1    2850 1400
 	0    -1   -1   0   
 $EndComp
-Text Label 1900 1850 0    60   ~ 0
+Text Label 1950 1850 0    60   ~ 0
 UTX
 $Comp
 L Device:R R9
@@ -277,7 +277,7 @@ Text Label 2200 3300 0    60   ~ 0
 UVCC
 Text Label 2450 4000 0    60   ~ 0
 UGND
-Text Label 1950 3750 0    60   ~ 0
+Text Label 2000 3750 0    60   ~ 0
 URTS
 Text Label 4350 3400 0    60   ~ 0
 LRTS
@@ -684,7 +684,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 2100 3000 2100
 Wire Wire Line
-	2200 1850 2150 1850
+	2200 1850 1850 1850
 Wire Wire Line
 	3650 1400 3750 1400
 Wire Wire Line
@@ -740,7 +740,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 4000 3050 4000
 Wire Wire Line
-	2250 3750 2200 3750
+	2250 3750 1900 3750
 Wire Wire Line
 	3700 3300 3800 3300
 Wire Wire Line
@@ -762,9 +762,9 @@ Wire Wire Line
 Connection ~ 3750 3400
 Connection ~ 4150 3500
 Wire Wire Line
-	7300 1450 7350 1450
+	7350 1450 7400 1450
 Wire Wire Line
-	7000 1450 6700 1450
+	7050 1450 6700 1450
 Wire Wire Line
 	8000 1450 8100 1450
 Wire Wire Line
@@ -786,7 +786,7 @@ Connection ~ 8450 1650
 Wire Wire Line
 	7400 3350 7450 3350
 Wire Wire Line
-	7100 3350 7050 3350
+	7100 3350 6750 3350
 Wire Wire Line
 	8050 3350 8150 3350
 Wire Wire Line
@@ -878,19 +878,19 @@ Wire Wire Line
 Wire Wire Line
 	2100 6500 2100 7150
 Wire Wire Line
-	3700 1500 4500 1500
+	3700 1500 4600 1500
 Wire Wire Line
 	4100 1600 4100 1800
 Wire Wire Line
-	3750 3400 4600 3400
+	3750 3400 4650 3400
 Wire Wire Line
 	4150 3500 4850 3500
 Wire Wire Line
-	8050 1550 8600 1550
+	8050 1550 8950 1550
 Wire Wire Line
 	8450 1650 8950 1650
 Wire Wire Line
-	8100 3450 8600 3450
+	8100 3450 9050 3450
 Wire Wire Line
 	8500 3550 9050 3550
 Wire Wire Line
@@ -914,12 +914,12 @@ NoConn ~ 7600 4750
 $Comp
 L Device:R R13
 U 1 1 58C1499A
-P 7150 1450
-F 0 "R13" V 7150 1450 50  0000 C CNN
-F 1 "82_150" V 7250 1450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 1450 30  0000 C CNN
-F 3 "" H 7150 1450 30  0000 C CNN
-	1    7150 1450
+P 7200 1450
+F 0 "R13" V 7200 1450 50  0000 C CNN
+F 1 "82_150" V 7300 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 1450 30  0000 C CNN
+F 3 "" H 7200 1450 30  0000 C CNN
+	1    7200 1450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -975,132 +975,4 @@ Wire Wire Line
 Connection ~ 1850 7250
 Wire Wire Line
 	1850 7250 1850 7600
-$Comp
-L Connector_Generic:Conn_01x01 TP1
-U 1 1 5EEEC786
-P 2150 1550
-F 0 "TP1" V 2114 1462 50  0000 R CNN
-F 1 "Conn_01x01" V 2023 1462 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2150 1550 50  0001 C CNN
-F 3 "~" H 2150 1550 50  0001 C CNN
-	1    2150 1550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2150 1750 2150 1850
-Connection ~ 2150 1850
-Wire Wire Line
-	2150 1850 1850 1850
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EEF37DA
-P 2200 3450
-F 0 "TP?" V 2164 3362 50  0000 R CNN
-F 1 "Conn_01x01" V 2073 3362 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 3450 50  0001 C CNN
-F 3 "~" H 2200 3450 50  0001 C CNN
-	1    2200 3450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2200 3650 2200 3750
-Connection ~ 2200 3750
-Wire Wire Line
-	2200 3750 1900 3750
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EEFB042
-P 8600 900
-F 0 "TP?" V 8564 812 50  0000 R CNN
-F 1 "Conn_01x01" V 8473 812 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8600 900 50  0001 C CNN
-F 3 "~" H 8600 900 50  0001 C CNN
-	1    8600 900 
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8600 1100 8600 1550
-Connection ~ 8600 1550
-Wire Wire Line
-	8600 1550 8950 1550
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EF03978
-P 8600 2800
-F 0 "TP?" V 8564 2712 50  0000 R CNN
-F 1 "Conn_01x01" V 8473 2712 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8600 2800 50  0001 C CNN
-F 3 "~" H 8600 2800 50  0001 C CNN
-	1    8600 2800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8600 3000 8600 3450
-Connection ~ 8600 3450
-Wire Wire Line
-	8600 3450 9050 3450
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EF0B24C
-P 4500 1800
-F 0 "TP?" V 4372 1880 50  0000 L CNN
-F 1 "Conn_01x01" V 4463 1880 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4500 1800 50  0001 C CNN
-F 3 "~" H 4500 1800 50  0001 C CNN
-	1    4500 1800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4500 1600 4500 1500
-Connection ~ 4500 1500
-Wire Wire Line
-	4500 1500 4600 1500
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EF13D8B
-P 7050 2950
-F 0 "TP?" V 7014 2862 50  0000 R CNN
-F 1 "Conn_01x01" V 6923 2862 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7050 2950 50  0001 C CNN
-F 3 "~" H 7050 2950 50  0001 C CNN
-	1    7050 2950
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4600 3400 4600 3550
-Connection ~ 4600 3400
-Wire Wire Line
-	4600 3400 4650 3400
-Wire Wire Line
-	7050 3150 7050 3350
-Connection ~ 7050 3350
-Wire Wire Line
-	7050 3350 6750 3350
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EF241DD
-P 7350 1050
-F 0 "TP?" V 7314 962 50  0000 R CNN
-F 1 "Conn_01x01" V 7223 962 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7350 1050 50  0001 C CNN
-F 3 "~" H 7350 1050 50  0001 C CNN
-	1    7350 1050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7350 1250 7350 1450
-Connection ~ 7350 1450
-Wire Wire Line
-	7350 1450 7400 1450
-$Comp
-L Connector_Generic:Conn_01x01 TP?
-U 1 1 5EF33E6B
-P 4600 3750
-F 0 "TP?" V 4472 3830 50  0000 L CNN
-F 1 "Conn_01x01" V 4563 3830 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4600 3750 50  0001 C CNN
-F 3 "~" H 4600 3750 50  0001 C CNN
-	1    4600 3750
-	0    1    1    0   
-$EndComp
 $EndSCHEMATC
