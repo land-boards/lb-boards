@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:Blue-Pill-Board-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "BLUE PILL BOARD"
-Date "2020-02-23"
-Rev "3"
+Date "2020-05-30"
+Rev "4"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -202,7 +201,7 @@ Text Notes 2700 3850 0    60   ~ 12
 FTDI MODULE
 Text Label 2650 5050 0    60   ~ 0
 VO3
-Text Label 3150 1550 0    60   ~ 0
+Text Label 3550 900  0    60   ~ 0
 DCJ5V
 $Comp
 L LandBoards_Semis:PCA9544A U3
@@ -277,7 +276,7 @@ U 1 1 5C760B14
 P 10050 4900
 F 0 "R16" V 10130 4900 50  0000 C CNN
 F 1 "10K" V 10050 4900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 10050 3000 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 9500 5000 30  0000 C CNN
 F 3 "" H 10050 4900 60  0000 C CNN
 	1    10050 4900
 	1    0    0    -1  
@@ -321,7 +320,7 @@ U 1 1 5C762B02
 P 10250 4900
 F 0 "R17" V 10330 4900 50  0000 C CNN
 F 1 "10K" V 10250 4900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 10250 2900 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 9500 4950 30  0000 C CNN
 F 3 "" H 10250 4900 60  0000 C CNN
 	1    10250 4900
 	1    0    0    -1  
@@ -332,7 +331,7 @@ U 1 1 5C762B4E
 P 10450 4900
 F 0 "R18" V 10530 4900 50  0000 C CNN
 F 1 "10K" V 10450 4900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 9500 4700 30  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 9500 4900 30  0000 C CNN
 F 3 "" H 10450 4900 60  0000 C CNN
 	1    10450 4900
 	1    0    0    -1  
@@ -2054,5 +2053,55 @@ Wire Wire Line
 Text Label 1850 3050 0    50   ~ 0
 FTDI5V
 Wire Wire Line
-	2500 1550 3450 1550
+	2500 1550 2750 1550
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 5ED5195D
+P 3100 1000
+F 0 "SW2" H 3100 1375 50  0000 C CNN
+F 1 "SW_SPDT" H 3100 1284 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3100 1193 50  0000 C CNN
+F 3 "~" H 3100 1000 50  0001 C CNN
+	1    3100 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1000 2750 1000
+Wire Wire Line
+	2750 1000 2750 1550
+Connection ~ 2750 1550
+Wire Wire Line
+	2750 1550 3450 1550
+Wire Wire Line
+	3300 900  4000 900 
+Text Notes 2750 9350 0    100  ~ 20
+RESET
+Text Notes 7100 2250 0    60   ~ 12
+I2C I/F
+Text Notes 2900 1400 0    60   ~ 12
+POWER SWITCH\n(REV 4)
+Text Notes 2700 2000 0    60   ~ 12
+5V POWER\nINPUT
+Text Notes 950  3400 0    60   ~ 12
+5V POWER SOURCE\nSELECT JUMPER
+Text Notes 9900 6800 0    100  ~ 20
+I2C MUX \nADDR SELECT
+Text Notes 15700 4300 0    100  ~ 20
+I2C\nCH #0
+Text Notes 15700 5000 0    100  ~ 20
+I2C\nCH #1
+Text Notes 15700 5700 0    100  ~ 20
+I2C\nCH #2
+Text Notes 15700 6400 0    100  ~ 20
+I2C\nCH #3
+Text Notes 14400 2400 0    100  ~ 20
+I2C POWER\nSELECT JUMPERS
+Text Notes 1650 6000 0    60   ~ 12
+3.3V REGULATOR
+Text Notes 4150 5700 0    60   ~ 12
+3.3V POWER\nSELECT JUMPER
+Text Notes 4500 5300 0    60   ~ 12
+REGULATOR\n\nBLUE PILL
+Text Notes 6850 3800 0    60   ~ 12
+5V POWER
 $EndSCHEMATC

@@ -4,8 +4,8 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "BLUE PILL BOARD"
-Date "2020-05-30"
+Title "BLUE PILL HUB BOARD"
+Date "2020-06-20"
 Rev "4"
 Comp "land-boards.com"
 Comment1 ""
