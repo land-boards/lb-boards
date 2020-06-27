@@ -1,4 +1,4 @@
-update=6/27/2020 9:36:26 AM
+update=2/12/2016 9:41:53 PM
 version=1
 last_client=kicad
 [general]
@@ -40,3 +40,11 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/switch-enc
+LibName5=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName6=analog_devices
+LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
