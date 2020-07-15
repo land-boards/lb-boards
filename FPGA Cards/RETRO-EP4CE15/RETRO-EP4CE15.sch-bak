@@ -69,8 +69,6 @@ F 3 "" H 4250 4400 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2350 7450 1200 7450
-Wire Wire Line
 	14000 2350 13150 2350
 Wire Wire Line
 	14000 2150 13150 2150
@@ -78,12 +76,6 @@ Wire Wire Line
 	14650 3150 12950 3150
 Wire Wire Line
 	14650 3250 12950 3250
-Wire Wire Line
-	2350 7950 1200 7950
-Text Label 1350 7950 0    60   ~ 0
-MISO
-Text Label 1350 7450 0    60   ~ 0
-MOSI
 Text Label 13250 1350 0    60   ~ 0
 REDHI
 Text Label 13250 1750 0    60   ~ 0
@@ -94,20 +86,12 @@ Text Label 13100 3250 0    60   ~ 0
 VSYNC
 Text Label 11000 6600 0    60   ~ 0
 UTX
-Text Label 5850 7050 0    60   ~ 0
+Text Label 6100 7050 0    60   ~ 0
 PS2DAT
-Wire Wire Line
-	2350 7350 1200 7350
 Wire Wire Line
 	14000 1350 13150 1350
 Wire Wire Line
 	14000 1750 13150 1750
-Wire Wire Line
-	2350 7750 1200 7750
-Text Label 1350 7750 0    60   ~ 0
-SCLK
-Text Label 1350 7350 0    60   ~ 0
-SDCS
 Text Label 13250 1550 0    60   ~ 0
 REDLO
 Text Label 13250 1950 0    60   ~ 0
@@ -118,7 +102,7 @@ Text Label 13250 2150 0    60   ~ 0
 BLUHI
 Text Label 11000 6800 0    60   ~ 0
 URTS
-Text Label 5850 7450 0    60   ~ 0
+Text Label 6100 7450 0    60   ~ 0
 PS2CLK
 $Comp
 L power:+5V #PWR09
@@ -312,7 +296,7 @@ L Device:R R9
 U 1 1 5CF0DA75
 P 14150 1550
 F 0 "R9" V 14100 1750 40  0000 C CNN
-F 1 "680" V 14150 1550 40  0000 C CNN
+F 1 "845" V 14150 1550 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 1550 30  0000 C CNN
 F 3 "" H 14150 1550 30  0000 C CNN
 	1    14150 1550
@@ -354,7 +338,7 @@ L Device:R R10
 U 1 1 5D00C55A
 P 14150 1350
 F 0 "R10" V 14100 1550 40  0000 C CNN
-F 1 "330" V 14150 1350 40  0000 C CNN
+F 1 "422" V 14150 1350 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 1350 30  0000 C CNN
 F 3 "" H 14150 1350 30  0000 C CNN
 	1    14150 1350
@@ -365,7 +349,7 @@ L Device:R R11
 U 1 1 5D00C5AC
 P 14150 1950
 F 0 "R11" V 14100 2150 40  0000 C CNN
-F 1 "680" V 14150 1950 40  0000 C CNN
+F 1 "845" V 14150 1950 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 1950 30  0000 C CNN
 F 3 "" H 14150 1950 30  0000 C CNN
 	1    14150 1950
@@ -376,7 +360,7 @@ L Device:R R12
 U 1 1 5D00C5FE
 P 14150 1750
 F 0 "R12" V 14100 1950 40  0000 C CNN
-F 1 "330" V 14150 1750 40  0000 C CNN
+F 1 "422" V 14150 1750 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 1750 30  0000 C CNN
 F 3 "" H 14150 1750 30  0000 C CNN
 	1    14150 1750
@@ -387,7 +371,7 @@ L Device:R R13
 U 1 1 5D00C652
 P 14150 2350
 F 0 "R13" V 14100 2550 40  0000 C CNN
-F 1 "680" V 14150 2350 40  0000 C CNN
+F 1 "845" V 14150 2350 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 2350 30  0000 C CNN
 F 3 "" H 14150 2350 30  0000 C CNN
 	1    14150 2350
@@ -398,7 +382,7 @@ L Device:R R14
 U 1 1 5D00C6A8
 P 14150 2150
 F 0 "R14" V 14100 2350 40  0000 C CNN
-F 1 "330" V 14150 2150 40  0000 C CNN
+F 1 "422" V 14150 2150 40  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 14049 2150 30  0000 C CNN
 F 3 "" H 14150 2150 30  0000 C CNN
 	1    14150 2150
@@ -580,9 +564,9 @@ VGA
 Text Notes 5750 4950 0    100  ~ 20
 FPGA CARD
 Wire Wire Line
-	5750 7050 6750 7050
+	6050 7050 6750 7050
 Wire Wire Line
-	5750 7450 6650 7450
+	6050 7450 6650 7450
 Wire Wire Line
 	7550 6950 7550 7050
 Wire Wire Line
@@ -634,13 +618,13 @@ Text Notes 13400 3150 0    50   ~ 0
 (vgaHSync)
 Text Notes 13400 3250 0    50   ~ 0
 (vgaVSync)
-Text Notes 10600 6900 0    50   ~ 0
+Text Notes 10050 6900 0    50   ~ 0
 (fpgaRts)
-Text Notes 10600 6700 0    50   ~ 0
+Text Notes 10050 6700 0    50   ~ 0
 (fpgaTxd)
-Text Notes 10600 6800 0    50   ~ 0
+Text Notes 10050 6800 0    50   ~ 0
 (fpgaCts)
-Text Notes 10600 6600 0    50   ~ 0
+Text Notes 10050 6600 0    50   ~ 0
 (fpgaRxd)
 Text Notes 14800 5900 2    50   ~ 10
 POWER\nFROM\nFTDI
@@ -1273,7 +1257,7 @@ IO_R22
 Text Label 3950 2900 0    50   ~ 0
 IO_P22
 Text Label 3950 3000 0    50   ~ 0
-IO_N11
+IO_N22
 Text Label 3950 3100 0    50   ~ 0
 IO_M22
 Text Label 3950 3200 0    50   ~ 0
@@ -1513,7 +1497,7 @@ IO_R22
 Text Label 2550 2900 0    50   ~ 0
 IO_P22
 Text Label 2550 3000 0    50   ~ 0
-IO_N11
+IO_N22
 Text Label 2550 3100 0    50   ~ 0
 IO_M22
 Text Label 2550 3200 0    50   ~ 0
@@ -1614,10 +1598,6 @@ F 3 "" H 6450 9650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 13950 5800 0    60   ~ 0
-VBUS
-Wire Wire Line
-	12200 5800 11850 5800
-Text Label 11900 5800 0    60   ~ 0
 VBUS
 $Comp
 L Device:C_Small C3
@@ -2237,76 +2217,76 @@ SRAMA9
 $Comp
 L Connector_Generic:Conn_02x06_Odd_Even J3
 U 1 1 5EE55317
-P 1800 5700
-F 0 "J3" H 1850 6000 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 1750 5300 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal" H 1800 5100 30  0000 C CNN
-F 3 "~" H 1800 5700 50  0001 C CNN
-	1    1800 5700
+P 1850 5400
+F 0 "J3" H 1900 5700 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 1800 5000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal" H 1850 4800 30  0000 C CNN
+F 3 "~" H 1850 5400 50  0001 C CNN
+	1    1850 5400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 5500 900  5500
+	1650 5200 950  5200
 Wire Wire Line
-	1600 5600 900  5600
+	1650 5300 950  5300
 Wire Wire Line
-	1600 5700 900  5700
-Text Label 1000 5500 0    50   ~ 0
+	1650 5400 950  5400
+Text Label 1050 5200 0    50   ~ 0
 J8P55
-Text Label 1000 5700 0    50   ~ 0
+Text Label 1050 5400 0    50   ~ 0
 J8P57
-Text Label 1000 5900 0    50   ~ 0
+Text Label 1050 5600 0    50   ~ 0
 J8P59
 Wire Wire Line
-	1600 6000 900  6000
-Text Label 1000 6000 0    50   ~ 0
+	1650 5700 950  5700
+Text Label 1050 5700 0    50   ~ 0
 J8P60
-Text Label 1000 5800 0    50   ~ 0
+Text Label 1050 5500 0    50   ~ 0
 J8P58
-Text Label 1000 5600 0    50   ~ 0
+Text Label 1050 5300 0    50   ~ 0
 J8P56
 Wire Wire Line
-	1600 5900 900  5900
+	1650 5600 950  5600
 Wire Wire Line
-	1600 5800 900  5800
+	1650 5500 950  5500
 Wire Wire Line
-	2100 5500 2200 5500
+	2150 5200 2250 5200
 Wire Wire Line
-	2200 5500 2200 5600
+	2250 5200 2250 5300
 Wire Wire Line
-	2100 6000 2200 6000
-Connection ~ 2200 6000
+	2150 5700 2250 5700
+Connection ~ 2250 5700
 Wire Wire Line
-	2200 6000 2200 6100
+	2250 5700 2250 5800
 Wire Wire Line
-	2100 5900 2200 5900
-Connection ~ 2200 5900
+	2150 5600 2250 5600
+Connection ~ 2250 5600
 Wire Wire Line
-	2200 5900 2200 6000
+	2250 5600 2250 5700
 Wire Wire Line
-	2100 5800 2200 5800
-Connection ~ 2200 5800
+	2150 5500 2250 5500
+Connection ~ 2250 5500
 Wire Wire Line
-	2200 5800 2200 5900
+	2250 5500 2250 5600
 Wire Wire Line
-	2100 5700 2200 5700
-Connection ~ 2200 5700
+	2150 5400 2250 5400
+Connection ~ 2250 5400
 Wire Wire Line
-	2200 5700 2200 5800
+	2250 5400 2250 5500
 Wire Wire Line
-	2100 5600 2200 5600
-Connection ~ 2200 5600
+	2150 5300 2250 5300
+Connection ~ 2250 5300
 Wire Wire Line
-	2200 5600 2200 5700
+	2250 5300 2250 5400
 $Comp
 L power:GND #PWR01
 U 1 1 5F0A91A7
-P 2200 6100
-F 0 "#PWR01" H 2200 5850 50  0001 C CNN
-F 1 "GND" H 2200 5950 50  0000 C CNN
-F 2 "" H 2200 6100 60  0000 C CNN
-F 3 "" H 2200 6100 60  0000 C CNN
-	1    2200 6100
+P 2250 5800
+F 0 "#PWR01" H 2250 5550 50  0001 C CNN
+F 1 "GND" H 2250 5650 50  0000 C CNN
+F 2 "" H 2250 5800 60  0000 C CNN
+F 3 "" H 2250 5800 60  0000 C CNN
+	1    2250 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2344,20 +2324,12 @@ F 3 "" H 4300 6850 50  0001 C CNN
 	1    4300 6850
 	1    0    0    -1  
 $EndComp
-Text Notes 850  7350 0    50   ~ 0
-(IO_B19)
-Text Notes 850  7450 0    50   ~ 0
-(IO_A19)
-Text Notes 850  7750 0    50   ~ 0
-(IO_B20)
-Text Notes 850  7950 0    50   ~ 0
-(IO_A20)
 Text Notes 4850 7450 0    50   ~ 0
 (IO_B14)
-Text Notes 800  6650 0    100  ~ 20
-CONFIGURATION JUMPERS
+Text Notes 850  6450 0    100  ~ 20
+CONFIGURATION JUMPERS\n(USE PULL-UP IN FPGA A/R)
 Text Notes 8150 10350 0    100  ~ 20
-3.3V I/O SELECT
+J1 3.3V I/O SELECT
 Wire Wire Line
 	15100 6800 15100 6850
 $Comp
@@ -2478,4 +2450,45 @@ F 3 "" H 10450 8100 60  0000 C CNN
 	1    10450 8100
 	1    0    0    -1  
 $EndComp
+Text Label 11050 6000 0    50   ~ 0
+VCCIO
+Text Notes 10600 6600 0    50   ~ 0
+(IO_B13)
+Text Notes 10600 6700 0    50   ~ 0
+(IO_B10)
+Text Notes 10600 6800 0    50   ~ 0
+(IO_A13)
+Text Notes 10600 6900 0    50   ~ 0
+(IO_A10)
+Wire Wire Line
+	12200 5800 13900 5800
+Connection ~ 13900 5800
+Text Notes 5750 7450 0    50   ~ 0
+(IO_R1)
+Text Notes 5750 7050 0    50   ~ 0
+(IO_R2)
+Text Notes 1050 7950 0    50   ~ 0
+(IO_A20)
+Text Notes 1050 7750 0    50   ~ 0
+(IO_B20)
+Text Notes 1050 7450 0    50   ~ 0
+(IO_A19)
+Text Notes 1050 7350 0    50   ~ 0
+(IO_B19)
+Text Label 1550 7350 0    60   ~ 0
+SDCS
+Text Label 1550 7750 0    60   ~ 0
+SCLK
+Wire Wire Line
+	2350 7750 1450 7750
+Wire Wire Line
+	2350 7350 1450 7350
+Text Label 1550 7450 0    60   ~ 0
+MOSI
+Text Label 1550 7950 0    60   ~ 0
+MISO
+Wire Wire Line
+	2350 7950 1450 7950
+Wire Wire Line
+	2350 7450 1450 7450
 $EndSCHEMATC

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-boards\\Arduino Cards\\FTDI-USB-TTL-49MM\\FTDI-USB-TTL-49MM.sch")
-    (date "7/12/2020 1:39:51 PM")
+    (date "7/12/2020 1:16:05 PM")
     (tool "Eeschema (5.1.5)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -135,13 +135,7 @@
       (datasheet ~)
       (libsource (lib Device) (part Ferrite_Bead) (description "Ferrite bead"))
       (sheetpath (names /) (tstamps /))
-      (tstamp 5F0B9FA4))
-    (comp (ref COUP1)
-      (value COUPON)
-      (footprint LandBoards_Marking:TEST_BLK-REAR)
-      (libsource (lib LandBoards) (part COUPON) (description ""))
-      (sheetpath (names /) (tstamps /))
-      (tstamp 5F0C5B2B)))
+      (tstamp 5F0B9FA4)))
   (libparts
     (libpart (lib Connector_Generic) (part Conn_01x03)
       (description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
@@ -224,10 +218,6 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
-    (libpart (lib LandBoards) (part COUPON)
-      (fields
-        (field (name Reference) COUP?)
-        (field (name Value) COUPON)))
     (libpart (lib LandBoards_Cards) (part FTDI)
       (fields
         (field (name Reference) BRD)
@@ -282,8 +272,6 @@
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Connector_Generic.lib"))
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
-    (library (logical LandBoards)
-      (uri C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.lib))
     (library (logical LandBoards_Cards)
       (uri C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Cards.lib))
     (library (logical LandBoards_Conns)

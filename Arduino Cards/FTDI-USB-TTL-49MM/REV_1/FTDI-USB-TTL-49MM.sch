@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:FTDI-USB-TTL-49MM-cache
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "FTDI USB-TTL Cable"
-Date "2020-07-12"
-Rev "2"
+Date "16 oct 2013"
+Rev "X2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -360,7 +361,10 @@ Wire Wire Line
 Connection ~ 6800 2500
 Connection ~ 6800 3700
 Wire Wire Line
+	2700 2700 4500 2700
+Wire Wire Line
 	4500 4050 4500 2700
+Connection ~ 4500 2700
 Wire Wire Line
 	4500 2700 5650 2700
 Wire Wire Line
@@ -461,33 +465,6 @@ F 1 "GND" H 3805 6427 50  0000 C CNN
 F 2 "" H 3800 6600 50  0001 C CNN
 F 3 "" H 3800 6600 50  0001 C CNN
 	1    3800 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Ferrite_Bead FB1
-U 1 1 5F0B9FA4
-P 3400 2700
-F 0 "FB1" V 3036 2700 50  0000 C CNN
-F 1 "Ferrite_Bead" V 3127 2700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3218 2700 50  0000 C CNN
-F 3 "~" H 3400 2700 50  0001 C CNN
-	1    3400 2700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4500 2700 3550 2700
-Connection ~ 4500 2700
-Wire Wire Line
-	3250 2700 2700 2700
-$Comp
-L LandBoards:COUPON COUP1
-U 1 1 5F0C5B2B
-P 4150 7450
-F 0 "COUP1" H 4378 7681 60  0000 L CNN
-F 1 "COUPON" H 4378 7575 60  0000 L CNN
-F 2 "LandBoards_Marking:TEST_BLK-REAR" H 4378 7469 60  0000 L CNN
-F 3 "" H 4150 7450 60  0000 C CNN
-	1    4150 7450
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
