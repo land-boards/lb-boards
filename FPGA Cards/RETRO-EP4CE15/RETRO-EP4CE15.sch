@@ -2487,7 +2487,7 @@ P 15100 6400
 F 0 "J4" H 14870 6419 50  0000 R CNN
 F 1 "USB_B" H 14870 6328 50  0000 R CNN
 F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 14870 6252 30  0000 R CNN
-F 3 " ~" H 15250 6350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/670/uj2-bh-th-1779177.pdf" H 15250 6350 50  0001 C CNN
 	1    15100 6400
 	-1   0    0    -1  
 $EndComp

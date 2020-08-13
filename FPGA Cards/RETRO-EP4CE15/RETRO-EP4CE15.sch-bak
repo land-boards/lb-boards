@@ -2226,29 +2226,29 @@ F 3 "~" H 1850 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 5200 950  5200
+	1650 5200 1100 5200
 Wire Wire Line
-	1650 5300 950  5300
+	1650 5300 1100 5300
 Wire Wire Line
-	1650 5400 950  5400
-Text Label 1050 5200 0    50   ~ 0
+	1650 5400 1100 5400
+Text Label 1250 5200 0    50   ~ 0
 J8P55
-Text Label 1050 5400 0    50   ~ 0
+Text Label 1250 5400 0    50   ~ 0
 J8P57
-Text Label 1050 5600 0    50   ~ 0
+Text Label 1250 5600 0    50   ~ 0
 J8P59
 Wire Wire Line
-	1650 5700 950  5700
-Text Label 1050 5700 0    50   ~ 0
+	1650 5700 1100 5700
+Text Label 1250 5700 0    50   ~ 0
 J8P60
-Text Label 1050 5500 0    50   ~ 0
+Text Label 1250 5500 0    50   ~ 0
 J8P58
-Text Label 1050 5300 0    50   ~ 0
+Text Label 1250 5300 0    50   ~ 0
 J8P56
 Wire Wire Line
-	1650 5600 950  5600
+	1650 5600 1100 5600
 Wire Wire Line
-	1650 5500 950  5500
+	1650 5500 1100 5500
 Wire Wire Line
 	2150 5200 2250 5200
 Wire Wire Line
@@ -2395,17 +2395,6 @@ F 3 "" H 4700 6000 60  0000 C CNN
 $EndComp
 Text Notes 3850 6350 0    100  ~ 20
 5V POWER
-$Comp
-L Connector:USB_B_Micro J4
-U 1 1 5E67816E
-P 15100 6400
-F 0 "J4" H 14870 6419 50  0000 R CNN
-F 1 "USB_B_Micro" H 14870 6328 50  0000 R CNN
-F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 14870 6252 30  0000 R CNN
-F 3 "~" H 15250 6350 50  0001 C CNN
-	1    15100 6400
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	14250 6950 14250 6400
 Wire Wire Line
@@ -2491,4 +2480,15 @@ Wire Wire Line
 	2350 7950 1450 7950
 Wire Wire Line
 	2350 7450 1450 7450
+$Comp
+L Connector:USB_B J4
+U 1 1 5F57D027
+P 15100 6400
+F 0 "J4" H 14870 6419 50  0000 R CNN
+F 1 "USB_B" H 14870 6328 50  0000 R CNN
+F 2 "Connector_USB:USB_B_OST_USB-B1HSxx_Horizontal" H 14870 6252 30  0000 R CNN
+F 3 " ~" H 15250 6350 50  0001 C CNN
+	1    15100 6400
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
