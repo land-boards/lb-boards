@@ -1,4 +1,4 @@
-update=9/3/2020 11:31:35 AM
+update=10/16/2015 4:28:32 PM
 version=1
 last_client=kicad
 [general]
@@ -31,3 +31,8 @@ ModuleOutlineThickness=0.381
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
