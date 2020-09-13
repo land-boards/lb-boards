@@ -1,0 +1,301 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "I2C THERMAL SENSOR"
+Date "28 jun 2012"
+Rev "X1"
+Comp "LAND-BOARDS.COM"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR01
+U 1 1 4FECA41E
+P 5950 5700
+F 0 "#PWR01" H 5950 5700 30  0001 C CNN
+F 1 "GND" H 5950 5630 30  0001 C CNN
+F 2 "" H 5950 5700 60  0001 C CNN
+F 3 "" H 5950 5700 60  0001 C CNN
+	1    5950 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 4FECA3D8
+P 5200 4450
+F 0 "R2" V 5280 4450 50  0000 C CNN
+F 1 "2.2K" V 5200 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5250 5200 30  0000 C CNN
+F 3 "" H 5200 4450 60  0001 C CNN
+	1    5200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 4FECA2B1
+P 5000 4450
+F 0 "R1" V 5080 4450 50  0000 C CNN
+F 1 "2.2K" V 5000 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5000 5250 30  0000 C CNN
+F 3 "" H 5000 4450 60  0001 C CNN
+	1    5000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 4FECA29C
+P 3500 5350
+F 0 "#PWR03" H 3500 5350 30  0001 C CNN
+F 1 "GND" H 3500 5280 30  0001 C CNN
+F 2 "" H 3500 5350 60  0001 C CNN
+F 3 "" H 3500 5350 60  0001 C CNN
+	1    3500 5350
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 4050
+Wire Wire Line
+	5200 3950 5200 4050
+Wire Wire Line
+	5000 4050 5000 4300
+Wire Wire Line
+	5950 5600 5950 5700
+Text Label 4500 4850 0    60   ~ 0
+SCL
+Text Label 4500 4950 0    60   ~ 0
+SDA
+$Comp
+L Device:C C1
+U 1 1 561DC674
+P 5650 7400
+F 0 "C1" H 5675 7500 50  0000 L CNN
+F 1 "0.1uF" H 5675 7300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5688 7250 30  0000 C CNN
+F 3 "" H 5650 7400 60  0000 C CNN
+	1    5650 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 561DCF9D
+P 5650 7600
+F 0 "#PWR06" H 5650 7600 30  0001 C CNN
+F 1 "GND" H 5650 7530 30  0001 C CNN
+F 2 "" H 5650 7600 60  0001 C CNN
+F 3 "" H 5650 7600 60  0001 C CNN
+	1    5650 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 7550 5650 7600
+Wire Wire Line
+	5650 7250 5650 7200
+Wire Wire Line
+	5200 4050 5200 4300
+Wire Wire Line
+	5000 4050 5200 4050
+$Comp
+L LandBoards_Semis:Si5351A U1
+U 1 1 5F517767
+P 5950 5100
+F 0 "U1" H 6200 5550 50  0000 C CNN
+F 1 "Si5351A" H 6150 4650 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 5950 4250 30  0000 C CNN
+F 3 "" H 5950 5100 50  0001 C CNN
+	1    5950 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4600 5900 4550
+Wire Wire Line
+	5900 4550 6000 4550
+Wire Wire Line
+	6000 4550 6000 4600
+Connection ~ 5900 4550
+Wire Wire Line
+	5900 4550 5900 4450
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5F52115E
+P 5900 4450
+F 0 "#PWR05" H 5900 4300 50  0001 C CNN
+F 1 "+3.3V" H 5915 4623 50  0000 C CNN
+F 2 "" H 5900 4450 50  0001 C CNN
+F 3 "" H 5900 4450 50  0001 C CNN
+	1    5900 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR04
+U 1 1 5F521190
+P 5200 3950
+F 0 "#PWR04" H 5200 3800 50  0001 C CNN
+F 1 "+3.3V" H 5215 4123 50  0000 C CNN
+F 2 "" H 5200 3950 50  0001 C CNN
+F 3 "" H 5200 3950 50  0001 C CNN
+	1    5200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4600 5000 4850
+Connection ~ 5000 4850
+Wire Wire Line
+	5000 4850 5550 4850
+Wire Wire Line
+	5200 4600 5200 4950
+Connection ~ 5200 4950
+Wire Wire Line
+	5200 4950 5550 4950
+Wire Wire Line
+	4150 4850 5000 4850
+Wire Wire Line
+	4150 4950 5200 4950
+$Comp
+L Device:Crystal Y1
+U 1 1 5F526F77
+P 5050 5250
+F 0 "Y1" V 5004 5381 50  0000 L CNN
+F 1 "27MHz" V 5095 5381 50  0000 L CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" V 5300 5250 30  0000 C CNN
+F 3 "~" H 5050 5250 50  0001 C CNN
+	1    5050 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 5100 5050 5050
+Wire Wire Line
+	5050 5050 5500 5050
+Wire Wire Line
+	5500 5050 5500 5150
+Wire Wire Line
+	5500 5150 5550 5150
+Wire Wire Line
+	5550 5350 5500 5350
+Wire Wire Line
+	5500 5350 5500 5450
+Wire Wire Line
+	5500 5450 5050 5450
+Wire Wire Line
+	5050 5450 5050 5400
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J1
+U 1 1 5F5CDB72
+P 3850 4950
+F 0 "J1" H 3900 5327 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 3900 5236 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3900 5160 30  0000 C CNN
+F 3 "~" H 3850 4950 50  0001 C CNN
+	1    3850 4950
+	1    0    0    -1  
+$EndComp
+Text Label 3150 4850 0    60   ~ 0
+SCL
+Text Label 3150 4950 0    60   ~ 0
+SDA
+Wire Wire Line
+	3050 4850 3650 4850
+Wire Wire Line
+	3050 4950 3650 4950
+Wire Wire Line
+	3650 5150 3500 5150
+Wire Wire Line
+	3500 5150 3500 5300
+Wire Wire Line
+	3500 5300 4250 5300
+Wire Wire Line
+	4250 5300 4250 5150
+Wire Wire Line
+	4250 5150 4150 5150
+Connection ~ 3500 5300
+Wire Wire Line
+	3500 5300 3500 5350
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5F5D2A08
+P 7050 5150
+F 0 "J2" H 7100 5527 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 7100 5436 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 7100 5360 30  0000 C CNN
+F 3 "~" H 7050 5150 50  0001 C CNN
+	1    7050 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5F5D3317
+P 7450 5350
+F 0 "#PWR08" H 7450 5350 30  0001 C CNN
+F 1 "GND" H 7450 5280 30  0001 C CNN
+F 2 "" H 7450 5350 60  0001 C CNN
+F 3 "" H 7450 5350 60  0001 C CNN
+	1    7450 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5150 6850 5150
+Wire Wire Line
+	6850 5050 6550 5050
+Wire Wire Line
+	6550 5050 6550 4950
+Wire Wire Line
+	6550 4950 6350 4950
+Wire Wire Line
+	6850 5250 6550 5250
+Wire Wire Line
+	6550 5250 6550 5350
+Wire Wire Line
+	6550 5350 6350 5350
+Wire Wire Line
+	7350 5050 7450 5050
+Wire Wire Line
+	7450 5050 7450 5150
+Wire Wire Line
+	7350 5250 7450 5250
+Connection ~ 7450 5250
+Wire Wire Line
+	7450 5250 7450 5350
+Wire Wire Line
+	7350 5150 7450 5150
+Connection ~ 7450 5150
+Wire Wire Line
+	7450 5150 7450 5250
+$Comp
+L power:+3.3V #PWR02
+U 1 1 5F5DA135
+P 3500 4350
+F 0 "#PWR02" H 3500 4200 50  0001 C CNN
+F 1 "+3.3V" H 3515 4523 50  0000 C CNN
+F 2 "" H 3500 4350 50  0001 C CNN
+F 3 "" H 3500 4350 50  0001 C CNN
+	1    3500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 5050 3500 5050
+Wire Wire Line
+	3500 5050 3500 4500
+Wire Wire Line
+	4150 5050 4250 5050
+Wire Wire Line
+	4250 5050 4250 4500
+Wire Wire Line
+	4250 4500 3500 4500
+Connection ~ 3500 4500
+Wire Wire Line
+	3500 4500 3500 4350
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F5EB1C3
+P 5650 7200
+F 0 "#PWR?" H 5650 7050 50  0001 C CNN
+F 1 "+3.3V" H 5665 7373 50  0000 C CNN
+F 2 "" H 5650 7200 50  0001 C CNN
+F 3 "" H 5650 7200 50  0001 C CNN
+	1    5650 7200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
