@@ -1,0 +1,14 @@
+* C:\Users\dgilliland\Documents\GitHub\lb-boards\HamRadio\FilterDesign\eliptic-5th order.asc
+V1 N004 0 AC 1
+R1 N001 N004 50
+R2 0 N003 50
+C1 N001 0 481pf
+C2 N002 N001 50pf
+C3 N003 N002 142pf
+C4 0 N002 744pf
+C5 0 N003 408pf
+L1 N001 N002 1.4µH
+L2 N002 N003 1.1µh
+.ac oct 100 1 30000000
+.backanno
+.end
