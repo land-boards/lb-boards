@@ -16,18 +16,18 @@
   )
 
   (layers
-    (0 Front signal hide)
+    (0 Front signal)
     (31 Back signal)
-    (36 B.SilkS user)
+    (36 B.SilkS user hide)
     (37 F.SilkS user)
     (38 B.Mask user)
-    (39 F.Mask user)
-    (40 Dwgs.User user)
+    (39 F.Mask user hide)
+    (40 Dwgs.User user hide)
     (44 Edge.Cuts user)
   )
 
   (setup
-    (last_trace_width 0.254)
+    (last_trace_width 0.2032)
     (user_trace_width 0.254)
     (user_trace_width 0.635)
     (trace_clearance 0.254)
@@ -54,7 +54,7 @@
     (pad_drill 3.175)
     (pad_to_mask_clearance 0.1524)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFFF7F)
+    (visible_elements 7FF7FF7F)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
       (usegerberextensions true)
@@ -273,7 +273,7 @@
     (descr "Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF")
     (tags "rotary encoder")
     (path /56BFD041)
-    (fp_text reference SW1 (at 3.302 2.286) (layer B.SilkS)
+    (fp_text reference SW1 (at 11.43 2.286) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text value ROTARY-ENC (at 7.5 -10.4) (layer B.Fab)
