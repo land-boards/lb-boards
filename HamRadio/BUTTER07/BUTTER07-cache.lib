@@ -1,0 +1,81 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# BUTTER07-rescue_CONN_01X03-CLK-GEN-rescue
+#
+DEF BUTTER07-rescue_CONN_01X03-CLK-GEN-rescue P 0 40 Y N 1 F N
+F0 "P" 0 200 50 H V C CNN
+F1 "BUTTER07-rescue_CONN_01X03-CLK-GEN-rescue" 100 0 50 V V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+$FPLIST
+ Pin_Header_Straight_1X03
+ Pin_Header_Angled_1X03
+ Socket_Strip_Straight_1X03
+ Socket_Strip_Angled_1X03
+$ENDFPLIST
+DRAW
+S -50 -95 10 -105 0 1 0 N
+S -50 5 10 -5 0 1 0 N
+S -50 105 10 95 0 1 0 N
+S -50 150 50 -150 0 1 0 N
+X P1 1 -200 100 150 R 50 50 1 1 P
+X P2 2 -200 0 150 R 50 50 1 1 P
+X P3 3 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# BUTTER07-rescue_COUPON-CLK-GEN-rescue
+#
+DEF BUTTER07-rescue_COUPON-CLK-GEN-rescue COUP? 0 40 Y Y 1 F N
+F0 "COUP?" 0 0 60 H V C CNN
+F1 "BUTTER07-rescue_COUPON-CLK-GEN-rescue" 0 0 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+S -200 0 200 250 0 1 0 N
+ENDDRAW
+ENDDEF
+#
+# Device_C
+#
+DEF Device_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_L
+#
+DEF Device_L L 0 40 N N 1 F N
+F0 "L" -50 0 50 V V C CNN
+F1 "Device_L" 75 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
+A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
+A 0 25 25 -899 899 0 1 0 N 0 0 0 50
+A 0 75 25 -899 899 0 1 0 N 0 50 0 100
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
