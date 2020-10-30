@@ -338,74 +338,6 @@ Wire Wire Line
 	9750 1400 9850 1400
 Text Label 6600 1000 0    60   ~ 0
 STM_SDA
-$Comp
-L Memory_EEPROM:24LC04 U2
-U 1 1 5F99D972
-P 5200 2000
-F 0 "U2" H 5300 2250 50  0000 C CNN
-F 1 "24LC024" H 5400 1750 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5850 1600 30  0000 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21708K.pdf" H 5200 2000 50  0001 C CNN
-	1    5200 2000
-	1    0    0    -1  
-$EndComp
-Text Label 5750 1900 0    60   ~ 0
-STM_SDA
-Text Label 5750 2000 0    60   ~ 0
-STM_SCL
-Wire Wire Line
-	5600 2000 6200 2000
-Wire Wire Line
-	5600 1900 6200 1900
-Wire Wire Line
-	4800 1900 4750 1900
-Wire Wire Line
-	4750 1900 4750 2000
-Wire Wire Line
-	4750 2100 4800 2100
-Connection ~ 4750 2100
-Wire Wire Line
-	4750 2100 4750 2300
-Wire Wire Line
-	4800 2000 4750 2000
-Connection ~ 4750 2000
-Wire Wire Line
-	4750 2000 4750 2100
-$Comp
-L power:GND #PWR0112
-U 1 1 5F9C78F1
-P 4750 2300
-F 0 "#PWR0112" H 4750 2050 50  0001 C CNN
-F 1 "GND" H 4750 2150 50  0000 C CNN
-F 2 "" H 4750 2300 60  0000 C CNN
-F 3 "" H 4750 2300 60  0000 C CNN
-	1    4750 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5200 2300 5200 2350
-$Comp
-L power:GND #PWR0113
-U 1 1 5F9CEBC5
-P 5200 2400
-F 0 "#PWR0113" H 5200 2150 50  0001 C CNN
-F 1 "GND" H 5200 2250 50  0000 C CNN
-F 2 "" H 5200 2400 60  0000 C CNN
-F 3 "" H 5200 2400 60  0000 C CNN
-	1    5200 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5200 2350 5700 2350
-Wire Wire Line
-	5700 2350 5700 2100
-Wire Wire Line
-	5700 2100 5600 2100
-Connection ~ 5200 2350
-Wire Wire Line
-	5200 2350 5200 2400
-Wire Wire Line
-	5200 1700 5200 1650
 Wire Wire Line
 	7450 600  7550 600 
 Text Label 7600 600  0    50   ~ 0
@@ -945,8 +877,6 @@ Text Notes 1050 6350 0    60   ~ 12
 FRONT PANEL BREAKOUT
 Text Notes 7150 3700 0    60   ~ 12
 ENCODER
-Text Notes 5450 2600 0    60   ~ 12
-EEPROM
 Text Notes 7150 2050 0    60   ~ 12
 FREQ SYNTH
 $Comp
@@ -1163,17 +1093,6 @@ F 1 "+3V3" H 6000 890 50  0000 C CNN
 F 2 "" H 6000 750 50  0001 C CNN
 F 3 "" H 6000 750 50  0001 C CNN
 	1    6000 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0123
-U 1 1 6041C71F
-P 5200 1650
-F 0 "#PWR0123" H 5200 1500 50  0001 C CNN
-F 1 "+3V3" H 5200 1790 50  0000 C CNN
-F 2 "" H 5200 1650 50  0001 C CNN
-F 3 "" H 5200 1650 50  0001 C CNN
-	1    5200 1650
 	1    0    0    -1  
 $EndComp
 $Comp
