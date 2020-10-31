@@ -13,9 +13,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 4450 4050 0    60   ~ 0
+Text Label 4200 4050 0    60   ~ 0
 RX
-Text Label 4450 3950 0    60   ~ 0
+Text Label 4200 3950 0    60   ~ 0
 TX
 Wire Wire Line
 	4100 4050 4700 4050
@@ -65,17 +65,6 @@ F 3 "~" H 3900 2950 50  0001 C CNN
 	1    3900 2950
 	-1   0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F712246
-P 4200 3250
-F 0 "#PWR?" H 4200 3000 50  0001 C CNN
-F 1 "GND" H 4200 3100 50  0000 C CNN
-F 2 "" H 4200 3250 60  0000 C CNN
-F 3 "" H 4200 3250 60  0000 C CNN
-	1    4200 3250
-	1    0    0    -1  
-$EndComp
 Text Notes 3800 3200 2    65   ~ 0
 GND\nVCC\nB\nA\nSW
 $Comp
@@ -89,7 +78,7 @@ F 3 "" H 6000 4000 60  0000 C CNN
 	1    5400 3150
 	1    0    0    -1  
 $EndComp
-Text Label 4450 3850 0    60   ~ 0
+Text Label 4200 3850 0    60   ~ 0
 RTS
 Wire Wire Line
 	4100 3850 4700 3850
@@ -121,12 +110,8 @@ Wire Wire Line
 	4600 4350 4700 4350
 Wire Wire Line
 	4100 4150 4700 4150
-Text Label 4450 4150 0    50   ~ 0
+Text Label 4200 4150 0    50   ~ 0
 PWR*
-Wire Wire Line
-	4100 2750 4200 2750
-Wire Wire Line
-	4200 2750 4200 3250
 Text Label 4300 2850 0    50   ~ 0
 3.3V
 Wire Wire Line
@@ -295,5 +280,15 @@ Set to\n3.3V
 Text Notes 3100 3550 0    100  ~ 20
 Land Boards\nBreakout
 Text Notes 5100 4900 0    100  ~ 20
-Aruino\nPro Mini
+Arduino\nPro Mini
+Wire Wire Line
+	4600 2750 4600 2850
+Wire Wire Line
+	4600 2850 4700 2850
+Wire Wire Line
+	4100 2750 4600 2750
+Wire Wire Line
+	4600 2850 4600 4250
+Connection ~ 4600 2850
+Connection ~ 4600 4250
 $EndSCHEMATC
