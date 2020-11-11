@@ -68,9 +68,9 @@ F 3 "" H 2550 7250 60  0000 C CNN
 	1    2550 7250
 	1    0    0    -1  
 $EndComp
-Text Label 4450 4050 0    60   ~ 0
+Text Label 4150 4050 0    60   ~ 0
 RX
-Text Label 4450 3950 0    60   ~ 0
+Text Label 4150 3950 0    60   ~ 0
 TX
 Text Label 6300 3950 0    60   ~ 0
 SDA
@@ -235,7 +235,7 @@ F 3 "" H 6000 4000 60  0000 C CNN
 	1    5400 3150
 	1    0    0    -1  
 $EndComp
-Text Label 4450 3850 0    60   ~ 0
+Text Label 4150 3850 0    60   ~ 0
 RTS
 Wire Wire Line
 	4100 3850 4700 3850
@@ -458,4 +458,9 @@ Text Notes 7300 3450 0    65   ~ 0
 VCC\nDGND\nMOSI\nSCK\nFSY\nAGND\nOUT\n
 Text Notes 7300 4000 0    65   ~ 0
 GND\nVCC\nSCL\nSDA
+Wire Wire Line
+	4600 4250 4600 2850
+Wire Wire Line
+	4600 2850 4700 2850
+Connection ~ 4600 4250
 $EndSCHEMATC
