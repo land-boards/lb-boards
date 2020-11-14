@@ -330,6 +330,11 @@
       (net 5 /STM_SDA))
     (pad 34 thru_hole oval (at 14.859 25.527) (size 2 1.524) (drill 1) (layers *.Cu *.Mask F.SilkS))
     (pad 35 thru_hole oval (at 14.859 28.067) (size 2 1.524) (drill 1) (layers *.Cu *.Mask F.SilkS))
+    (model ${KIPRJMOD}/Documents/Pictures/CAD-3D/ArduinoProMini/YAAJ_Arduino_ProMini_NanHe.step
+      (offset (xyz 2.5146 -6.223 0.9906))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder (layer F.Cu) (tedit 5B36C52B) (tstamp 5F9E06B8)
@@ -2616,7 +2621,7 @@
   (gr_text "Si5351 - 3 OUTPUTS\nSTM32F103\nI2C OLED\nROTARY ENCODER" (at 142.2908 89.9414) (layer B.SilkS) (tstamp 5F8B4C67)
     (effects (font (size 1.5 1.5) (thickness 0.375)) (justify mirror))
   )
-  (gr_text 7-23VDC (at 172.2374 35.4584 90) (layer F.SilkS) (tstamp 5F8ACD4E)
+  (gr_text 5-23VDC (at 172.2374 35.4584 90) (layer F.SilkS) (tstamp 5F8ACD4E)
     (effects (font (size 1.27 1.2) (thickness 0.3)))
   )
   (gr_text CLK2 (at 171.9034 86.1072 90) (layer F.SilkS) (tstamp 5F8ACA9B)
