@@ -8,19 +8,30 @@
 
 == Features ==
 
-* DD1306 OLED Display
+* [[SDD1306 OLED Display]]
 ** I2C Interface
-* [http://land-boards.com/blwiki/index.php?title=RotaryEnc Rotary Encoder Breakout Board]
-* [http://land-boards.com/blwiki/index.php?title=STM32 STM32 (Blue Pill Board) Microprocessor]
+** OLED runs from 3.3V (can run from 5V but this use has 3.3V)
+* [[RotaryEnc|Rotary Encoder Break Out Board]]
+* [[Arduino Pro Mini]]
 ** Arduino compatible
 ** 3.3V
-* Si5351 Oscillator
+** 8 MHz
+** Programmed via Arduino IDE
+*** Download via serial
+* [[Si5351 Oscillator Breakout Board]]
 ** 10 KHz - 40 MHz tuning range
-** 100Hz/1KHz/10KHz/100KHz/1MHz/10MHz steps
+*** 1Hz/10Hz/100Hz/1KHz/10KHz/100KHz/1MHz/10MHz steps
 ** I2C Interface
 ** 3 Outputs
 ** 27 MHz crystal
-* [https://www.adafruit.com/product/2230 Extruded Aluminum Enclosure Box - 94mm x 83mm x 30mm]
+** 3.3V operation works without level shifters for I2C*
+** Si5351 can only run from 3.3V
+** Used right angle headers and Dupont cables for low profile
+* [[Mini360_Buck_Comverter|Mini-360 Buck Regulator]]
+** 5V-23V input
+** 3.3V output
+* [https://www.adafruit.com/product/2230 Extruded Aluminum Enclosure Box - 94mm x 83mm x 30mm] - Out of stock
+
 
 == Design Files ==
 * Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad designs].
