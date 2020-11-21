@@ -5,7 +5,7 @@
 #define paddle_left 2
 #define paddle_right 5
 #define tx_key_line_1 11       // (high = key down/tx on)
-#define tx_key_line_2 12
+#define tx_key_line_2 10
 #define tx_key_line_3 0
 #define tx_key_line_4 0
 #define tx_key_line_5 0
@@ -94,7 +94,7 @@ FEATURE_SIDETONE_SWITCH
 #endif //FEATURE_PTT_INTERLOCK
 
 #ifdef FEATURE_STRAIGHT_KEY
-  #define pin_straight_key 52
+  #define pin_straight_key 3
 #endif //FEATURE_STRAIGHT_KEY
 
 // FEATURE_CW_DECODER & OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
