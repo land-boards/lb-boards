@@ -2,8 +2,8 @@
 
   (general
     (thickness 1.6002)
-    (drawings 7)
-    (tracks 0)
+    (drawings 9)
+    (tracks 6)
     (zones 0)
     (modules 16)
     (nets 14)
@@ -27,7 +27,7 @@
   )
 
   (setup
-    (last_trace_width 0.2032)
+    (last_trace_width 0.635)
     (user_trace_width 0.254)
     (user_trace_width 0.635)
     (trace_clearance 0.254)
@@ -729,6 +729,12 @@
     )
   )
 
+  (gr_text VCC (at 3.81 15.24) (layer F.SilkS) (tstamp 5FB86C51)
+    (effects (font (size 2.032 1.524) (thickness 0.3048)))
+  )
+  (gr_text GND (at 3.81 20.32) (layer F.SilkS)
+    (effects (font (size 2.032 1.524) (thickness 0.3048)))
+  )
   (gr_line (start 0 50.8) (end 0 0) (layer Edge.Cuts) (width 0.381) (tstamp 5FB8620E))
   (gr_line (start 69.85 50.8) (end 0 50.8) (layer Edge.Cuts) (width 0.381))
   (gr_line (start 69.85 0) (end 69.85 50.8) (layer Edge.Cuts) (width 0.381))
@@ -758,5 +764,12 @@
     (arrow2b (pts (xy 19.05 -2.54) (xy 20.176504 -3.126421)))
   )
   (gr_line (start 6.35 5.08) (end 72.39 5.08) (layer Dwgs.User) (width 0.381))
+
+  (segment (start 67.31 20.32) (end 7.62 20.32) (width 0.635) (layer Back) (net 0))
+  (segment (start 7.62 20.32) (end 6.35 20.32) (width 0.635) (layer Back) (net 0))
+  (segment (start 67.31 17.78) (end 25.4 17.78) (width 0.635) (layer Back) (net 0))
+  (segment (start 25.4 17.78) (end 10.16 17.78) (width 0.635) (layer Back) (net 0))
+  (segment (start 10.16 17.78) (end 7.62 15.24) (width 0.635) (layer Back) (net 0))
+  (segment (start 7.62 15.24) (end 6.35 15.24) (width 0.635) (layer Back) (net 0))
 
 )
