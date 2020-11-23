@@ -76,7 +76,7 @@ FEATURE_SIDETONE_SWITCH
 #ifdef FEATURE_ROTARY_ENCODER
   #define OPTION_ENCODER_HALF_STEP_MODE     // Half-step mode?
   #define rotary_pin1 12                      // CW Encoder Pin
-  #define rotary_pin2 13                   // CCW Encoder Pin
+  #define rotary_pin2 9                   // CCW Encoder Pin
   #define OPTION_ENCODER_ENABLE_PULLUPS     // define to enable weak pullups.
 #endif //FEATURE_ROTARY_ENCODER
 
