@@ -1,4 +1,4 @@
-update=11/25/2020 4:23:33 PM
+update=12/25/2015 1:04:24 PM
 version=1
 last_client=kicad
 [general]
@@ -8,6 +8,14 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=device
+LibName2=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName3=conn
+LibName4=power
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -28,6 +36,3 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
-[eeschema]
-version=1
-LibDir=

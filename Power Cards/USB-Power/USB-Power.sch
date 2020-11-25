@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:device
-LIBS:conn
-LIBS:power
+EESchema Schematic File Version 4
 LIBS:USB-Power-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -27,7 +24,7 @@ F3 "GND" I L 7000 3000 60
 F4 "+5VOUT" O R 7900 2450 60 
 $EndSheet
 $Comp
-L CONN_1 MTG1
+L USB-Power-rescue:CONN_1 MTG1
 U 1 1 51830500
 P 5150 7450
 F 0 "MTG1" H 5230 7450 40  0000 L CNN
@@ -38,7 +35,7 @@ F 3 "~" H 5150 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG2
+L USB-Power-rescue:CONN_1 MTG2
 U 1 1 5183050F
 P 5150 7550
 F 0 "MTG2" H 5230 7550 40  0000 L CNN
@@ -49,7 +46,7 @@ F 3 "~" H 5150 7550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG3
+L USB-Power-rescue:CONN_1 MTG3
 U 1 1 5183051E
 P 5150 7650
 F 0 "MTG3" H 5230 7650 40  0000 L CNN
@@ -60,7 +57,7 @@ F 3 "~" H 5150 7650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 MTG4
+L USB-Power-rescue:CONN_1 MTG4
 U 1 1 5183052D
 P 5150 7750
 F 0 "MTG4" H 5230 7750 40  0000 L CNN
@@ -75,7 +72,7 @@ NoConn ~ 5000 7550
 NoConn ~ 5000 7650
 NoConn ~ 5000 7750
 $Comp
-L CONN_1 FID2
+L USB-Power-rescue:CONN_1 FID2
 U 1 1 518D20E3
 P 5150 7250
 F 0 "FID2" H 5230 7250 40  0000 L CNN
@@ -87,7 +84,7 @@ F 3 "~" H 5150 7250 60  0000 C CNN
 $EndComp
 NoConn ~ 5000 7250
 $Comp
-L CONN_1 FID1
+L USB-Power-rescue:CONN_1 FID1
 U 1 1 518D21B8
 P 5150 7150
 F 0 "FID1" H 5230 7150 40  0000 L CNN
@@ -109,11 +106,11 @@ $EndSheet
 Wire Wire Line
 	6700 3600 6700 3000
 Wire Wire Line
-	6400 3000 7000 3000
+	6400 3000 6700 3000
 Wire Wire Line
-	7900 2450 8500 2450
+	7900 2450 8300 2450
 $Comp
-L CONN_3X2 J1
+L USB-Power-rescue:CONN_3X2 J1
 U 1 1 54A94CB7
 P 8450 2950
 F 0 "J1" H 8450 3200 50  0000 C CNN
@@ -124,7 +121,7 @@ F 3 "~" H 8450 2950 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8500 3350 8500 3700
+	8500 3350 8500 3600
 Wire Wire Line
 	8400 3600 8400 3350
 Connection ~ 8400 3600
@@ -143,7 +140,7 @@ Text Label 7050 3600 0    60   ~ 0
 GND
 Connection ~ 8500 3600
 $Comp
-L GND #PWR1
+L power:GND #PWR1
 U 1 1 567D92C4
 P 8500 3700
 F 0 "#PWR1" H 8500 3450 50  0001 C CNN
@@ -156,6 +153,18 @@ $EndComp
 Wire Wire Line
 	6400 2450 7000 2450
 Wire Wire Line
-	6700 3600 8500 3600
+	6700 3600 8300 3600
 Connection ~ 6700 3000
+Wire Wire Line
+	8400 3600 8500 3600
+Wire Wire Line
+	8300 3600 8400 3600
+Wire Wire Line
+	8400 2450 8500 2450
+Wire Wire Line
+	8300 2450 8400 2450
+Wire Wire Line
+	8500 3600 8500 3700
+Wire Wire Line
+	6700 3000 7000 3000
 $EndSCHEMATC
