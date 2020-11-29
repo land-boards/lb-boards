@@ -136,17 +136,6 @@ F 3 "" H 4100 7800 60  0000 C CNN
 	1    4100 7800
 	1    0    0    -1  
 $EndComp
-$Comp
-L LandBoards_Semis:LM317 U1
-U 1 1 5FC3A2B7
-P 6250 3400
-F 0 "U1" H 6250 3943 60  0000 C CNN
-F 1 "LM317T" H 6250 3837 60  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabUp" H 6250 1800 30  0000 C CNN
-F 3 "" H 6250 3400 60  0000 C CNN
-	1    6250 3400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5350 4600 6250 4600
 $Comp
@@ -161,10 +150,7 @@ F 3 "" H 6700 1700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5350 2550 6400 2550
-Connection ~ 5350 2550
-Wire Wire Line
-	6650 3250 6800 3250
+	6550 3250 6800 3250
 $Comp
 L Device:R_POT RV1
 U 1 1 5FC3E3E8
@@ -207,7 +193,7 @@ Wire Wire Line
 	6800 3900 6250 3900
 Connection ~ 6250 3900
 Wire Wire Line
-	6250 3900 6250 3750
+	6250 3900 6250 3550
 Wire Wire Line
 	6800 3450 6800 3250
 Connection ~ 6800 3250
@@ -215,7 +201,7 @@ Wire Wire Line
 	7050 2550 7200 2550
 Connection ~ 7200 2550
 Wire Wire Line
-	5850 3250 5350 3250
+	5950 3250 5350 3250
 Connection ~ 5350 3250
 Wire Wire Line
 	5350 3250 5350 3450
@@ -232,16 +218,14 @@ Connection ~ 4850 4600
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 5FC45EE3
-P 6400 2250
-F 0 "J3" H 6350 2350 50  0000 L CNN
-F 1 "Conn_01x02" H 6350 2050 50  0000 L CNN
-F 2 "LandBoards_Conns:TB2-5MM" H 6400 2400 50  0000 C CNN
-F 3 "~" H 6400 2250 50  0001 C CNN
-	1    6400 2250
-	0    1    -1   0   
+P 6350 1700
+F 0 "J3" H 6300 1800 50  0000 L CNN
+F 1 "Conn_01x02" H 6300 1500 50  0000 L CNN
+F 2 "LandBoards_Conns:TB2-5MM" H 6350 1850 50  0000 C CNN
+F 3 "~" H 6350 1700 50  0001 C CNN
+	1    6350 1700
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	6400 2450 6400 2550
 Wire Wire Line
 	7050 2550 7050 2450
 Wire Wire Line
@@ -250,8 +234,6 @@ Wire Wire Line
 	6950 2750 6800 2750
 Wire Wire Line
 	6800 2750 6800 3250
-Wire Wire Line
-	6400 2200 6400 1600
 Wire Wire Line
 	6400 1600 6500 1600
 Wire Wire Line
@@ -279,4 +261,20 @@ Text Label 6800 3050 1    50   ~ 0
 B
 Text Label 6450 3900 0    50   ~ 0
 ADJ
+$Comp
+L Regulator_Linear:LM317_TO3 U1
+U 1 1 5FC3B221
+P 6250 3250
+F 0 "U1" H 6250 3492 50  0000 C CNN
+F 1 "LM317T_TO220" H 6250 3401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 6250 3450 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 6250 3250 50  0001 C CNN
+	1    6250 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2550 5350 1600
+Wire Wire Line
+	5350 1600 6150 1600
+Connection ~ 5350 2550
 $EndSCHEMATC
