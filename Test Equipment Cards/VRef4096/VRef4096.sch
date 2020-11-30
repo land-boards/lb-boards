@@ -1,18 +1,12 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:analog_devices
-LIBS:DougsSch
-LIBS:VRef4096-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "TINYGRID85"
+Title "VRef4096"
 Date "28 mar 2015"
-Rev "X2"
+Rev "X1"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -20,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DCJ0202 J1
+L VRef4096-rescue:DCJ0202 J1
 U 1 1 56B51094
 P 3100 3650
 F 0 "J1" H 3000 3800 50  0000 L BNN
@@ -31,7 +25,7 @@ F 3 "" H 3100 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AP1117 U1
+L VRef4096-rescue:AP1117 U1
 U 1 1 56B510EF
 P 4700 3500
 F 0 "U1" H 4800 3650 60  0000 C CNN
@@ -42,7 +36,7 @@ F 3 "" H 4700 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 56B51134
 P 3950 3850
 F 0 "C2" H 3975 3950 50  0000 L CNN
@@ -53,7 +47,7 @@ F 3 "" H 3950 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 56B51233
 P 3650 3850
 F 0 "C1" H 3675 3950 50  0000 L CNN
@@ -64,7 +58,7 @@ F 3 "" H 3650 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C3
+L Device:C C3
 U 1 1 56B51414
 P 5500 3900
 F 0 "C3" H 5525 4000 50  0000 L CNN
@@ -75,7 +69,7 @@ F 3 "" H 5500 3900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ADR34XX U2
+L VRef4096-rescue:ADR34XX U2
 U 1 1 56B520B2
 P 6400 3700
 F 0 "U2" H 6500 4050 60  0000 C CNN
@@ -90,7 +84,7 @@ GND
 Text Label 7150 3500 0    60   ~ 0
 VOUT
 $Comp
-L C C4
+L Device:C C4
 U 1 1 56B529B0
 P 7400 3800
 F 0 "C4" H 7425 3900 50  0000 L CNN
@@ -105,7 +99,7 @@ Text Label 5600 3500 0    60   ~ 0
 Text Label 3700 3550 0    60   ~ 0
 +9V
 $Comp
-L CONN_01X01 P1
+L VRef4096-rescue:CONN_01X01 P1
 U 1 1 56B8A2AE
 P 7800 3500
 F 0 "P1" H 7800 3600 50  0000 C CNN
@@ -116,7 +110,7 @@ F 3 "" H 7800 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X01 P2
+L VRef4096-rescue:CONN_01X01 P2
 U 1 1 56B8A2F0
 P 7800 4100
 F 0 "P2" H 7800 4200 50  0000 C CNN
@@ -127,7 +121,7 @@ F 3 "" H 7800 4100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X03 P3
+L VRef4096-rescue:CONN_01X03 P3
 U 1 1 56B8BA20
 P 7800 2900
 F 0 "P3" H 7800 3100 50  0000 C CNN
@@ -138,7 +132,7 @@ F 3 "" H 7800 2900 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3400 3550 4050 3550
+	3400 3550 3650 3550
 Wire Wire Line
 	3950 3700 3950 3550
 Connection ~ 3950 3550
@@ -148,9 +142,9 @@ Connection ~ 3650 3550
 Wire Wire Line
 	3400 3650 3500 3650
 Wire Wire Line
-	3500 3650 3500 4100
+	3500 3650 3500 3750
 Wire Wire Line
-	3500 4100 7600 4100
+	3500 4100 3650 4100
 Wire Wire Line
 	4600 4100 4600 4000
 Wire Wire Line
@@ -166,7 +160,7 @@ Wire Wire Line
 	5500 4100 5500 4050
 Connection ~ 4600 4100
 Wire Wire Line
-	5200 3500 5950 3500
+	5200 3500 5300 3500
 Wire Wire Line
 	5500 3500 5500 3750
 Wire Wire Line
@@ -181,7 +175,7 @@ Wire Wire Line
 	5850 3600 5850 3500
 Connection ~ 5850 3500
 Wire Wire Line
-	7000 3800 7000 4100
+	7000 3800 7000 3900
 Wire Wire Line
 	7000 3800 6900 3800
 Connection ~ 5500 4100
@@ -193,7 +187,7 @@ Wire Wire Line
 Wire Wire Line
 	7000 3600 7000 3500
 Wire Wire Line
-	6900 3500 7600 3500
+	6900 3500 7000 3500
 Connection ~ 7000 3500
 Connection ~ 7000 4100
 Wire Wire Line
@@ -207,7 +201,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 2900 7250 2900
 Wire Wire Line
-	6700 2800 7600 2800
+	6700 2800 6950 2800
 Text Label 6650 2500 0    60   ~ 0
 GND
 Text Label 6650 1750 0    60   ~ 0
@@ -215,7 +209,7 @@ Text Label 6650 1750 0    60   ~ 0
 Text Label 5900 2700 0    60   ~ 0
 VOUT
 $Comp
-L MCP6002 U3
+L VRef4096-rescue:MCP6002 U3
 U 2 1 56B8C54F
 P 6450 2800
 F 0 "U3" H 6550 2650 60  0000 C CNN
@@ -249,7 +243,7 @@ Connection ~ 6950 2800
 Wire Wire Line
 	6200 2700 5850 2700
 $Comp
-L MCP6002 U3
+L VRef4096-rescue:MCP6002 U3
 U 1 1 56B8C873
 P 6450 2050
 F 0 "U3" H 6550 1900 60  0000 C CNN
@@ -272,7 +266,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 1950 6050 1950
 $Comp
-L R R1
+L Device:R R1
 U 1 1 56B8CB36
 P 5900 1950
 F 0 "R1" V 5980 1950 50  0000 C CNN
@@ -287,7 +281,7 @@ Wire Wire Line
 Text Label 5450 1950 0    60   ~ 0
 +5V
 $Comp
-L COUPON COUP?1
+L VRef4096-rescue:COUPON COUP?1
 U 1 1 56B8ED27
 P 3950 7850
 F 0 "COUP?1" H 3950 7850 60  0000 C CNN
@@ -298,7 +292,7 @@ F 3 "" H 3950 7850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG?1
+L VRef4096-rescue:MTG_HOLE MTG?1
 U 1 1 56BE9837
 P 5750 7700
 F 0 "MTG?1" H 5750 7800 60  0000 C CNN
@@ -309,7 +303,7 @@ F 3 "" H 5750 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG?2
+L VRef4096-rescue:MTG_HOLE MTG?2
 U 1 1 56BE9872
 P 5800 7300
 F 0 "MTG?2" H 5800 7400 60  0000 C CNN
@@ -319,4 +313,36 @@ F 3 "" H 5800 7300 60  0000 C CNN
 	1    5800 7300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3950 3550 4050 3550
+Wire Wire Line
+	3650 3550 3950 3550
+Wire Wire Line
+	3950 4100 4600 4100
+Wire Wire Line
+	3650 4100 3950 4100
+Wire Wire Line
+	3500 3750 3500 4100
+Wire Wire Line
+	4600 4100 5500 4100
+Wire Wire Line
+	5300 3500 5500 3500
+Wire Wire Line
+	5500 3500 5850 3500
+Wire Wire Line
+	5850 3500 5950 3500
+Wire Wire Line
+	5500 4100 7000 4100
+Wire Wire Line
+	7000 3900 7000 4100
+Wire Wire Line
+	7000 3500 7400 3500
+Wire Wire Line
+	7000 4100 7400 4100
+Wire Wire Line
+	7400 3500 7600 3500
+Wire Wire Line
+	7400 4100 7600 4100
+Wire Wire Line
+	6950 2800 7600 2800
 $EndSCHEMATC

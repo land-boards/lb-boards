@@ -1,4 +1,4 @@
-update=7/8/2017 4:14:29 PM
+update=9/20/2020 10:08:59 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -39,10 +39,3 @@ LibName7=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=FTDI-USB-TTL-rescue
-LibName2=FTDI-USB-TTLx6-rescue
-LibName3=power
-LibName4=conn
-LibName5=device
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

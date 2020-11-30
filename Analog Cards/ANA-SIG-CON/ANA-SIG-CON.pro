@@ -1,4 +1,4 @@
-update=10/1/2016 8:52:24 PM
+update=9/7/2020 9:41:39 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -57,11 +57,3 @@ LabSize=60
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=ANA-SIG-CON-rescue
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=regul
-LibName7=linear

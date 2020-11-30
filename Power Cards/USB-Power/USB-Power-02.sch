@@ -1,13 +1,10 @@
-EESchema Schematic File Version 2
-LIBS:device
-LIBS:conn
-LIBS:power
+EESchema Schematic File Version 4
 LIBS:USB-Power-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 2 3
 Title "One Wire Logger"
 Date "8 jan 2015"
 Rev "X1"
@@ -18,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LMR62014 U1
+L USB-Power-rescue:LMR62014 U1
 U 1 1 517C7898
 P 6050 2800
 F 0 "U1" H 6250 3200 60  0000 C CNN
@@ -33,7 +30,7 @@ F 7 "926-LMR62014XMFENOPB " H 6050 2800 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 517C78A7
 P 4900 2950
 F 0 "R1" V 4980 2950 50  0000 C CNN
@@ -50,16 +47,16 @@ $EndComp
 Wire Wire Line
 	5050 2950 5250 2950
 Wire Wire Line
-	4200 2650 5250 2650
+	4200 2650 4500 2650
 Wire Wire Line
 	4750 2950 4500 2950
 Wire Wire Line
-	4500 2650 4500 3150
+	4500 2650 4500 2950
 Connection ~ 4500 2650
 Text HLabel 4200 2650 0    60   Input Italic 0
 3.7V
 $Comp
-L C C1
+L Device:C C1
 U 1 1 517C78BC
 P 4500 3300
 F 0 "C1" H 4550 3400 50  0000 L CNN
@@ -75,7 +72,7 @@ F 7 "77-VJ1206V475MXJTBC" H 4500 3300 60  0001 C CNN "VendorPN"
 $EndComp
 Connection ~ 4500 2950
 Wire Wire Line
-	4200 3600 8200 3600
+	4200 3600 4500 3600
 Wire Wire Line
 	6050 3600 6050 3500
 Wire Wire Line
@@ -84,7 +81,7 @@ Connection ~ 4500 3600
 Text HLabel 4200 3600 0    60   Input Italic 0
 GND
 $Comp
-L INDUCTOR L1
+L USB-Power-rescue:INDUCTOR L1
 U 1 1 517C78F4
 P 6100 2150
 F 0 "L1" V 6050 2150 40  0000 C CNN
@@ -104,7 +101,7 @@ Wire Wire Line
 	5050 2150 5050 2650
 Connection ~ 5050 2650
 $Comp
-L DIODE D1
+L USB-Power-rescue:DIODE D1
 U 1 1 517C7D22
 P 7300 2650
 F 0 "D1" H 7300 2750 40  0000 C CNN
@@ -119,18 +116,18 @@ F 7 "863-MBR0520LT1G" H 7300 2650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2650 7100 2650
+	6900 2650 7000 2650
 Wire Wire Line
 	6400 2150 7000 2150
 Wire Wire Line
 	7000 2150 7000 2650
 Connection ~ 7000 2650
 Wire Wire Line
-	7500 2650 8450 2650
+	7500 2650 7900 2650
 Text HLabel 8450 2650 2    60   Output Italic 0
 +5VOUT
 $Comp
-L C C3
+L Device:C C3
 U 1 1 517C7D72
 P 8200 3150
 F 0 "C3" H 8250 3250 50  0000 L CNN
@@ -150,7 +147,7 @@ Connection ~ 8200 2650
 Wire Wire Line
 	8200 3600 8200 3300
 $Comp
-L R R3
+L Device:R R3
 U 1 1 517C7E37
 P 7600 2950
 F 0 "R3" V 7680 2950 50  0000 C CNN
@@ -165,7 +162,7 @@ F 7 "660-RK73H2ATTE3091F" H 7600 2950 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 517C7E46
 P 7100 3300
 F 0 "R2" V 7180 3300 50  0000 C CNN
@@ -180,7 +177,7 @@ F 7 "71-CRCW0805J-1K-E3" H 7100 3300 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 2950 7450 2950
+	6900 2950 7100 2950
 Wire Wire Line
 	7100 3150 7100 2950
 Connection ~ 7100 2950
@@ -189,11 +186,11 @@ Wire Wire Line
 Connection ~ 7100 3600
 Connection ~ 7900 2650
 Wire Wire Line
-	7900 2650 7900 3200
+	7900 2650 7900 2950
 Wire Wire Line
 	7900 2950 7750 2950
 $Comp
-L C C2
+L Device:C C2
 U 1 1 517C7F11
 P 7550 3200
 F 0 "C2" V 7600 3050 50  0000 L CNN
@@ -220,4 +217,28 @@ Text Label 7600 2650 0    60   ~ 0
 5VO
 Text Label 6600 2150 0    60   ~ 0
 VFB
+Wire Wire Line
+	4500 2650 5050 2650
+Wire Wire Line
+	4500 2950 4500 3150
+Wire Wire Line
+	4500 3600 6050 3600
+Wire Wire Line
+	5050 2650 5250 2650
+Wire Wire Line
+	7000 2650 7100 2650
+Wire Wire Line
+	8200 2650 8450 2650
+Wire Wire Line
+	7100 2950 7250 2950
+Wire Wire Line
+	7100 3600 8200 3600
+Wire Wire Line
+	7900 2650 8200 2650
+Wire Wire Line
+	7900 2950 7900 3200
+Wire Wire Line
+	7250 2950 7450 2950
+Wire Wire Line
+	6050 3600 7100 3600
 $EndSCHEMATC

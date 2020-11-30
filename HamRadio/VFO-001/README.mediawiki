@@ -1,0 +1,54 @@
+<a href="https://www.tindie.com/stores/land_boards/" >
+<img src="http://land-boards.com/tindie/tindie-larges-v2.png" alt="Tindie Logo">
+</img></a>
+
+== Land Boards VFO-001 Design ==
+
+<img src="http://land-boards.com/blwiki/images/e/e6/VFO-001_P132-720px.jpg"></img>
+
+== Features ==
+
+* [[SDD1306 OLED Display]]
+** I2C Interface
+** OLED runs from 3.3V (can run from 5V but this use has 3.3V)
+* [[RotaryEnc|Rotary Encoder Break Out Board]]
+* Blue Pill Microprocessor
+** STM32F103 32-but ARM RISC CPU
+** Arduino compatible
+** 3.3V I/O** Programmed via Arduino IDE
+*** Download via serial
+* [[Si5351 Oscillator Breakout Board]]
+** 10 KHz - 40 MHz tuning range
+*** 1Hz/10Hz/100Hz/1KHz/10KHz/100KHz/1MHz/10MHz steps
+** I2C Interface
+** 3 Outputs
+** 27 MHz crystal
+** 3.3V operation works without level shifters for I2C*
+** Si5351 can only run from 3.3V
+** Used right angle headers and Dupont cables for low profile
+* [[Mini360_Buck_Comverter|Mini-360 Buck Regulator]]
+** 5V-23V input
+** 3.3V output
+* [https://www.adafruit.com/product/2230 Extruded Aluminum Enclosure Box - 94mm x 83mm x 30mm] - Out of stock
+
+
+== Design Files ==
+* Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad designs].
+** Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools.
+
+=== Resources ===
+
+* [http://land-boards.com/blwiki/index.php?title=VFO-001 VFO-001 Wiki page]
+* [http://land-boards.com/blwiki/index.php Land Boards circuit cards]
+
+== Ownership ==
+
+* Some of these files (particularly libraries) were created by others.
+** There may be newer versions of these libraries "out there".
+** Some libraries even have the same names but don't work the same.
+* Many of these files were created by us based on the work of others.
+
+=== Warning ===
+
+* Use at your own risk.
+** If you brick your part or it melt to a puddle, it's on you not us.

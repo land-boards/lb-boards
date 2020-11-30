@@ -1,0 +1,466 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "VFO-001"
+Date "2020-09-26"
+Rev "1"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LandBoards_Conns:MTG_HOLE MTG4
+U 1 1 586AD5E2
+P 1200 7550
+F 0 "MTG4" H 1200 7650 60  0000 C CNN
+F 1 "MTG_HOLE" H 1200 7450 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 1200 7250 30  0000 C CNN
+F 3 "" H 1200 7550 60  0000 C CNN
+	1    1200 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:MTG_HOLE MTG2
+U 1 1 586AD65D
+P 1200 6950
+F 0 "MTG2" H 1200 7050 60  0000 C CNN
+F 1 "MTG_HOLE" H 1200 6850 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 1200 6150 30  0000 C CNN
+F 3 "" H 1200 6950 60  0000 C CNN
+	1    1200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:MTG_HOLE MTG3
+U 1 1 586AD691
+P 1200 7250
+F 0 "MTG3" H 1200 7350 60  0000 C CNN
+F 1 "MTG_HOLE" H 1200 7150 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 1200 6700 30  0000 C CNN
+F 3 "" H 1200 7250 60  0000 C CNN
+	1    1200 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:MTG_HOLE MTG1
+U 1 1 586AD6D2
+P 1200 6650
+F 0 "MTG1" H 1200 6750 60  0000 C CNN
+F 1 "MTG_HOLE" H 1200 6550 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-6-32" H 1200 5600 30  0000 C CNN
+F 3 "" H 1200 6650 60  0000 C CNN
+	1    1200 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards:COUPON TEST1
+U 1 1 59399B7A
+P 2550 7250
+F 0 "TEST1" H 2550 7550 60  0000 C CNN
+F 1 "COUPON" H 2550 7200 60  0000 C CNN
+F 2 "LandBoards_Marking:TEST_BLK-REAR" H 2550 7100 60  0000 C CNN
+F 3 "" H 2550 7250 60  0000 C CNN
+	1    2550 7250
+	1    0    0    -1  
+$EndComp
+Text Label 4150 4050 0    60   ~ 0
+RX
+Text Label 4150 3950 0    60   ~ 0
+TX
+Text Label 6300 3950 0    60   ~ 0
+SDA
+Text Label 6300 3850 0    60   ~ 0
+SCL
+Wire Wire Line
+	4100 4050 4700 4050
+Wire Wire Line
+	4100 3950 4700 3950
+$Comp
+L power:+3V3 #PWR0105
+U 1 1 5C9061D2
+P 8300 7600
+F 0 "#PWR0105" H 8300 7450 50  0001 C CNN
+F 1 "+3V3" H 8300 7740 50  0000 C CNN
+F 2 "" H 8300 7600 50  0001 C CNN
+F 3 "" H 8300 7600 50  0001 C CNN
+	1    8300 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3650 6800 3650
+Wire Wire Line
+	4500 7550 4500 7650
+$Comp
+L power:GND #PWR0101
+U 1 1 5CB6817D
+P 4500 7650
+F 0 "#PWR0101" H 4500 7400 50  0001 C CNN
+F 1 "GND" H 4500 7500 50  0000 C CNN
+F 2 "" H 4500 7650 60  0000 C CNN
+F 3 "" H 4500 7650 60  0000 C CNN
+	1    4500 7650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4500 7550
+Connection ~ 4950 7550
+Wire Wire Line
+	4950 7550 5400 7550
+Wire Wire Line
+	4500 7550 4950 7550
+Wire Wire Line
+	4950 7150 5400 7150
+Connection ~ 4950 7150
+Wire Wire Line
+	4950 7200 4950 7150
+Wire Wire Line
+	4500 7150 4500 7200
+Connection ~ 4500 7150
+Wire Wire Line
+	5400 7150 5400 7200
+Wire Wire Line
+	4500 7150 4950 7150
+Wire Wire Line
+	4500 7100 4500 7150
+$Comp
+L power:+3V3 #PWR0109
+U 1 1 5CB685C0
+P 4500 7100
+F 0 "#PWR0109" H 4500 6950 50  0001 C CNN
+F 1 "+3V3" H 4500 7240 50  0000 C CNN
+F 2 "" H 4500 7100 50  0001 C CNN
+F 3 "" H 4500 7100 50  0001 C CNN
+	1    4500 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 7500 4950 7550
+Wire Wire Line
+	5400 7550 5400 7500
+Wire Wire Line
+	4500 7500 4500 7550
+$Comp
+L Device:C C6
+U 1 1 5CAFC0BA
+P 5400 7350
+F 0 "C6" H 5515 7441 50  0000 L CNN
+F 1 "0.1uF" H 5515 7350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5050 7100 30  0000 L CNN
+F 3 "~" H 5400 7350 50  0001 C CNN
+	1    5400 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5CAFC032
+P 4950 7350
+F 0 "C5" H 5065 7441 50  0000 L CNN
+F 1 "0.1uF" H 5065 7350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4600 7100 30  0000 L CNN
+F 3 "~" H 4950 7350 50  0001 C CNN
+	1    4950 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5CAFBAEC
+P 4500 7350
+F 0 "C4" H 4615 7441 50  0000 L CNN
+F 1 "0.1uF" H 4615 7350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4150 7100 30  0000 L CNN
+F 3 "~" H 4500 7350 50  0001 C CNN
+	1    4500 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 FTDI
+U 1 1 5F836EEB
+P 3900 4050
+F 0 "FTDI" H 3800 4350 50  0000 L CNB
+F 1 "Conn_01x06" H 3700 3650 50  0001 L CNN
+F 2 "" H 3900 4050 50  0001 C CNN
+F 3 "~" H 3900 4050 50  0001 C CNN
+	1    3900 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8522F9
+P 4500 4500
+F 0 "#PWR?" H 4500 4250 50  0001 C CNN
+F 1 "GND" H 4500 4350 50  0000 C CNN
+F 2 "" H 4500 4500 60  0000 C CNN
+F 3 "" H 4500 4500 60  0000 C CNN
+	1    4500 4500
+	1    0    0    -1  
+$EndComp
+Text Label 6300 2850 0    50   ~ 0
+3.3V
+$Comp
+L Connector_Generic:Conn_01x05 ROTARY_ENC
+U 1 1 5F71011E
+P 3900 2950
+F 0 "ROTARY_ENC" H 3650 3250 50  0000 L CNB
+F 1 "Conn_01x05" H 3650 2650 50  0001 L CNN
+F 2 "" H 3900 2950 50  0001 C CNN
+F 3 "~" H 3900 2950 50  0001 C CNN
+	1    3900 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F712246
+P 4200 3250
+F 0 "#PWR?" H 4200 3000 50  0001 C CNN
+F 1 "GND" H 4200 3100 50  0000 C CNN
+F 2 "" H 4200 3250 60  0000 C CNN
+F 3 "" H 4200 3250 60  0000 C CNN
+	1    4200 3250
+	1    0    0    -1  
+$EndComp
+Text Notes 3800 3200 2    65   ~ 0
+GND\nVCC\nB\nA\nSW
+$Comp
+L ArduProMiniTKB:ARDUPROMINI uP?
+U 1 1 5F9D831F
+P 5400 3150
+F 0 "uP?" H 5400 4087 60  0001 C CNN
+F 1 "ARDUPROMINI" H 5400 3981 60  0000 C CNB
+F 2 "" H 6000 4000 60  0000 C CNN
+F 3 "" H 6000 4000 60  0000 C CNN
+	1    5400 3150
+	1    0    0    -1  
+$EndComp
+Text Label 4150 3850 0    60   ~ 0
+RTS
+Wire Wire Line
+	4100 3850 4700 3850
+Wire Wire Line
+	4100 2950 4700 2950
+Wire Wire Line
+	4100 3050 4700 3050
+Wire Wire Line
+	4100 3150 4700 3150
+Text Label 4300 2950 0    50   ~ 0
+D2
+Text Label 4300 3050 0    50   ~ 0
+D3
+Text Label 4300 3150 0    50   ~ 0
+D4
+Wire Wire Line
+	6100 2850 6600 2850
+Wire Wire Line
+	4100 4350 4500 4350
+Wire Wire Line
+	4500 4500 4500 4350
+Connection ~ 4500 4350
+Wire Wire Line
+	4500 4350 4600 4350
+Wire Wire Line
+	4700 4250 4600 4250
+Wire Wire Line
+	4600 4250 4600 4350
+Connection ~ 4600 4350
+Wire Wire Line
+	4600 4350 4700 4350
+$Comp
+L Connector_Generic:Conn_01x04 OLED
+U 1 1 5CC28DCE
+P 7200 3750
+F 0 "OLED" H 7100 3950 50  0000 L CNB
+F 1 "Conn_01x04" H 7000 3450 50  0001 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 7650 3400 30  0001 C CNN
+F 3 "~" H 7200 3750 50  0001 C CNN
+	1    7200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2750 4200 2750
+Wire Wire Line
+	4200 2750 4200 3250
+Text Label 4300 2850 0    50   ~ 0
+3.3V
+Wire Wire Line
+	4100 2850 4500 2850
+Wire Wire Line
+	6100 2650 6200 2650
+Wire Wire Line
+	6200 2650 6200 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5FA31F94
+P 6200 4300
+F 0 "#PWR?" H 6200 4050 50  0001 C CNN
+F 1 "GND" H 6200 4150 50  0000 C CNN
+F 2 "" H 6200 4300 60  0000 C CNN
+F 3 "" H 6200 4300 60  0000 C CNN
+	1    6200 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3850 7000 3850
+Wire Wire Line
+	6100 3950 7000 3950
+Wire Wire Line
+	6600 3750 7000 3750
+Wire Wire Line
+	6800 3650 6800 4150
+Wire Wire Line
+	6800 4150 6200 4150
+Connection ~ 6200 4150
+Wire Wire Line
+	6200 4150 6200 4300
+Wire Wire Line
+	6600 2850 6600 3750
+Connection ~ 6600 2850
+$Comp
+L LandBoards_Cards:MINI-360 MINI-360?
+U 1 1 5FA47B3E
+P 5400 1900
+F 0 "MINI-360?" H 5425 2287 60  0001 C CNN
+F 1 "BrdBdPwrSply" H 5425 2181 60  0000 C CNB
+F 2 "" H 5400 1900 60  0000 C CNN
+F 3 "" H 5400 1900 60  0000 C CNN
+	1    5400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA4CB26
+P 4800 2050
+F 0 "#PWR?" H 4800 1800 50  0001 C CNN
+F 1 "GND" H 4800 1900 50  0000 C CNN
+F 2 "" H 4800 2050 60  0000 C CNN
+F 3 "" H 4800 2050 60  0000 C CNN
+	1    4800 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA4CFEE
+P 6000 2050
+F 0 "#PWR?" H 6000 1800 50  0001 C CNN
+F 1 "GND" H 6000 1900 50  0000 C CNN
+F 2 "" H 6000 2050 60  0000 C CNN
+F 3 "" H 6000 2050 60  0000 C CNN
+	1    6000 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2000 6000 2000
+Wire Wire Line
+	6000 2000 6000 2050
+Wire Wire Line
+	4800 2050 4800 2000
+Wire Wire Line
+	4800 2000 4900 2000
+$Comp
+L LandBoards_Conns:DCJ0202 J?
+U 1 1 5FA4F094
+P 4300 1900
+F 0 "J?" H 4393 2214 50  0000 C CNN
+F 1 "DCJ0202" H 4393 2123 50  0000 C CNN
+F 2 "con-jack-DCJ0202" H 4300 2050 50  0001 C CNN
+F 3 "" H 4300 1900 60  0000 C CNN
+	1    4300 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1800 4900 1800
+Wire Wire Line
+	4600 1900 4650 1900
+Wire Wire Line
+	4800 1900 4800 2000
+Connection ~ 4800 2000
+Wire Wire Line
+	4600 2000 4650 2000
+Wire Wire Line
+	4650 2000 4650 1900
+Connection ~ 4650 1900
+Wire Wire Line
+	4650 1900 4800 1900
+Wire Wire Line
+	5950 1800 6350 1800
+Text Label 6100 1800 0    50   ~ 0
+3.3V
+$Comp
+L Connector_Generic:Conn_01x07 AD9833
+U 1 1 5FA1FA52
+P 7200 3100
+F 0 "AD9833" H 7150 3500 50  0000 L CNN
+F 1 "Conn_01x07" H 7280 3051 50  0001 L CNN
+F 2 "" H 7200 3100 50  0001 C CNN
+F 3 "~" H 7200 3100 50  0001 C CNN
+	1    7200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2800 6600 2800
+Wire Wire Line
+	6600 2800 6600 2850
+Wire Wire Line
+	6800 3650 6800 3300
+Wire Wire Line
+	6800 2900 7000 2900
+Connection ~ 6800 3650
+Wire Wire Line
+	6100 3550 6400 3550
+Wire Wire Line
+	6400 3550 6400 3000
+Wire Wire Line
+	6400 3000 7000 3000
+Wire Wire Line
+	6100 3350 6500 3350
+Wire Wire Line
+	6500 3350 6500 3100
+Wire Wire Line
+	6500 3100 7000 3100
+Wire Wire Line
+	6100 3650 6700 3650
+Wire Wire Line
+	6700 3650 6700 3200
+Wire Wire Line
+	6700 3200 7000 3200
+Wire Wire Line
+	7000 3300 6800 3300
+Connection ~ 6800 3300
+Wire Wire Line
+	6800 3300 6800 2900
+Wire Wire Line
+	7000 3400 6900 3400
+Wire Wire Line
+	6900 3400 6900 2300
+Wire Wire Line
+	6900 2300 7050 2300
+$Comp
+L LandBoards_Conns:BNC P?
+U 1 1 5FA2BD93
+P 7200 2300
+F 0 "P?" H 7300 2267 60  0000 L CNN
+F 1 "BNC" H 7300 2176 40  0000 L CNN
+F 2 "" H 7200 2300 60  0000 C CNN
+F 3 "" H 7200 2300 60  0000 C CNN
+	1    7200 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2900 6800 2600
+Wire Wire Line
+	6800 2600 7200 2600
+Wire Wire Line
+	7200 2600 7200 2500
+Connection ~ 6800 2900
+Text Notes 7300 3450 0    65   ~ 0
+VCC\nDGND\nMOSI\nSCK\nFSY\nAGND\nOUT\n
+Text Notes 7300 4000 0    65   ~ 0
+GND\nVCC\nSCL\nSDA
+Wire Wire Line
+	4600 4250 4600 2850
+Wire Wire Line
+	4600 2850 4700 2850
+Connection ~ 4600 4250
+$EndSCHEMATC

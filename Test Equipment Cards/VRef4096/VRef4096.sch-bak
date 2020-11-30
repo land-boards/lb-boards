@@ -1,0 +1,348 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "TINYGRID85"
+Date "28 mar 2015"
+Rev "X2"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L VRef4096-rescue:DCJ0202 J1
+U 1 1 56B51094
+P 3100 3650
+F 0 "J1" H 3000 3800 50  0000 L BNN
+F 1 "DCJ0202" H 3000 3400 50  0000 L BNN
+F 2 "DougsNewMods:DCJ-NEW" H 3100 3350 30  0000 C CNN
+F 3 "" H 3100 3650 60  0000 C CNN
+	1    3100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:AP1117 U1
+U 1 1 56B510EF
+P 4700 3500
+F 0 "U1" H 4800 3650 60  0000 C CNN
+F 1 "AP1117" H 4950 3250 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 4700 2850 30  0000 C CNN
+F 3 "" H 4700 3500 60  0000 C CNN
+	1    4700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 56B51134
+P 3950 3850
+F 0 "C2" H 3975 3950 50  0000 L CNN
+F 1 "10uF" H 3975 3750 50  0000 L CNN
+F 2 "Resistors_SMD:R_1210_HandSoldering" H 3950 3500 30  0000 C CNN
+F 3 "" H 3950 3850 60  0000 C CNN
+	1    3950 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 56B51233
+P 3650 3850
+F 0 "C1" H 3675 3950 50  0000 L CNN
+F 1 "0.1uF" H 3675 3750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3650 3550 30  0000 C CNN
+F 3 "" H 3650 3850 60  0000 C CNN
+	1    3650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 56B51414
+P 5500 3900
+F 0 "C3" H 5525 4000 50  0000 L CNN
+F 1 "10uF" H 5525 3800 50  0000 L CNN
+F 2 "Resistors_SMD:R_1210_HandSoldering" H 5500 3650 30  0000 C CNN
+F 3 "" H 5500 3900 60  0000 C CNN
+	1    5500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:ADR34XX U2
+U 1 1 56B520B2
+P 6400 3700
+F 0 "U2" H 6500 4050 60  0000 C CNN
+F 1 "ADR34XX" H 6650 3350 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 6400 3200 30  0000 C CNN
+F 3 "" H 6400 3700 60  0000 C CNN
+	1    6400 3700
+	1    0    0    -1  
+$EndComp
+Text Label 7150 4100 0    60   ~ 0
+GND
+Text Label 7150 3500 0    60   ~ 0
+VOUT
+$Comp
+L Device:C C4
+U 1 1 56B529B0
+P 7400 3800
+F 0 "C4" H 7425 3900 50  0000 L CNN
+F 1 "0.1uF" H 7425 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7400 3400 30  0000 C CNN
+F 3 "" H 7400 3800 60  0000 C CNN
+	1    7400 3800
+	1    0    0    -1  
+$EndComp
+Text Label 5600 3500 0    60   ~ 0
++5V
+Text Label 3700 3550 0    60   ~ 0
++9V
+$Comp
+L VRef4096-rescue:CONN_01X01 P1
+U 1 1 56B8A2AE
+P 7800 3500
+F 0 "P1" H 7800 3600 50  0000 C CNN
+F 1 "CONN_01X01" V 7900 3500 50  0000 C CNN
+F 2 "Connect:Banana_Jack_1Pin" H 7800 3400 30  0000 C CNN
+F 3 "" H 7800 3500 60  0000 C CNN
+	1    7800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:CONN_01X01 P2
+U 1 1 56B8A2F0
+P 7800 4100
+F 0 "P2" H 7800 4200 50  0000 C CNN
+F 1 "CONN_01X01" V 7900 4100 50  0000 C CNN
+F 2 "Connect:Banana_Jack_1Pin" H 7800 3950 30  0000 C CNN
+F 3 "" H 7800 4100 60  0000 C CNN
+	1    7800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:CONN_01X03 P3
+U 1 1 56B8BA20
+P 7800 2900
+F 0 "P3" H 7800 3100 50  0000 C CNN
+F 1 "CONN_01X03" H 7800 3150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7800 3200 30  0000 C CNN
+F 3 "" H 7800 2900 60  0000 C CNN
+	1    7800 2900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3400 3550 3650 3550
+Wire Wire Line
+	3950 3700 3950 3550
+Connection ~ 3950 3550
+Wire Wire Line
+	3650 3700 3650 3550
+Connection ~ 3650 3550
+Wire Wire Line
+	3400 3650 3500 3650
+Wire Wire Line
+	3500 3650 3500 3750
+Wire Wire Line
+	3500 4100 3650 4100
+Wire Wire Line
+	4600 4100 4600 4000
+Wire Wire Line
+	3950 4000 3950 4100
+Connection ~ 3950 4100
+Wire Wire Line
+	3650 4000 3650 4100
+Connection ~ 3650 4100
+Wire Wire Line
+	3400 3750 3500 3750
+Connection ~ 3500 3750
+Wire Wire Line
+	5500 4100 5500 4050
+Connection ~ 4600 4100
+Wire Wire Line
+	5200 3500 5300 3500
+Wire Wire Line
+	5500 3500 5500 3750
+Wire Wire Line
+	5200 3600 5300 3600
+Wire Wire Line
+	5300 3600 5300 3500
+Connection ~ 5300 3500
+Connection ~ 5500 3500
+Wire Wire Line
+	5950 3600 5850 3600
+Wire Wire Line
+	5850 3600 5850 3500
+Connection ~ 5850 3500
+Wire Wire Line
+	7000 3800 7000 3900
+Wire Wire Line
+	7000 3800 6900 3800
+Connection ~ 5500 4100
+Wire Wire Line
+	6900 3900 7000 3900
+Connection ~ 7000 3900
+Wire Wire Line
+	6900 3600 7000 3600
+Wire Wire Line
+	7000 3600 7000 3500
+Wire Wire Line
+	6900 3500 7000 3500
+Connection ~ 7000 3500
+Connection ~ 7000 4100
+Wire Wire Line
+	7400 3650 7400 3500
+Connection ~ 7400 3500
+Wire Wire Line
+	7400 3950 7400 4100
+Connection ~ 7400 4100
+Wire Wire Line
+	7600 3000 7100 3000
+Wire Wire Line
+	7600 2900 7250 2900
+Wire Wire Line
+	6700 2800 6950 2800
+Text Label 6650 2500 0    60   ~ 0
+GND
+Text Label 6650 1750 0    60   ~ 0
++5V
+Text Label 5900 2700 0    60   ~ 0
+VOUT
+$Comp
+L VRef4096-rescue:MCP6002 U3
+U 2 1 56B8C54F
+P 6450 2800
+F 0 "U3" H 6550 2650 60  0000 C CNN
+F 1 "MCP6002" H 6700 2950 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6500 2800 30  0000 C CNN
+F 3 "" H 6500 2800 60  0000 C CNN
+	2    6450 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2250 6450 2500
+Wire Wire Line
+	6450 2500 7100 2500
+Wire Wire Line
+	7100 2500 7100 3000
+Wire Wire Line
+	7250 2900 7250 1750
+Wire Wire Line
+	7250 1750 6450 1750
+Wire Wire Line
+	6450 1750 6450 1850
+Wire Wire Line
+	6200 2900 6050 2900
+Wire Wire Line
+	6050 2900 6050 3200
+Wire Wire Line
+	6050 3200 6950 3200
+Wire Wire Line
+	6950 3200 6950 2800
+Connection ~ 6950 2800
+Wire Wire Line
+	6200 2700 5850 2700
+$Comp
+L VRef4096-rescue:MCP6002 U3
+U 1 1 56B8C873
+P 6450 2050
+F 0 "U3" H 6550 1900 60  0000 C CNN
+F 1 "MCP6002" H 6700 2200 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6500 2050 30  0000 C CNN
+F 3 "" H 6500 2050 60  0000 C CNN
+	1    6450 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2150 6100 2150
+Wire Wire Line
+	6100 2150 6100 2350
+Wire Wire Line
+	6100 2350 6850 2350
+Wire Wire Line
+	6850 2350 6850 2050
+Wire Wire Line
+	6850 2050 6700 2050
+Wire Wire Line
+	6200 1950 6050 1950
+$Comp
+L Device:R R1
+U 1 1 56B8CB36
+P 5900 1950
+F 0 "R1" V 5980 1950 50  0000 C CNN
+F 1 "10K" V 5900 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5830 1950 30  0000 C CNN
+F 3 "" H 5900 1950 30  0000 C CNN
+	1    5900 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 1950 5400 1950
+Text Label 5450 1950 0    60   ~ 0
++5V
+$Comp
+L VRef4096-rescue:COUPON COUP?1
+U 1 1 56B8ED27
+P 3950 7850
+F 0 "COUP?1" H 3950 7850 60  0000 C CNN
+F 1 "COUPON" H 3950 7850 60  0000 C CNN
+F 2 "DougsNewMods:TEST_BLK-REAR" H 3950 7850 60  0000 C CNN
+F 3 "" H 3950 7850 60  0000 C CNN
+	1    3950 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:MTG_HOLE MTG?1
+U 1 1 56BE9837
+P 5750 7700
+F 0 "MTG?1" H 5750 7800 60  0000 C CNN
+F 1 "MTG_HOLE" H 5750 7600 60  0000 C CNN
+F 2 "dougsLib:MTG-4-40" H 5750 7700 60  0000 C CNN
+F 3 "" H 5750 7700 60  0000 C CNN
+	1    5750 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L VRef4096-rescue:MTG_HOLE MTG?2
+U 1 1 56BE9872
+P 5800 7300
+F 0 "MTG?2" H 5800 7400 60  0000 C CNN
+F 1 "MTG_HOLE" H 5800 7200 60  0000 C CNN
+F 2 "dougsLib:MTG-4-40" H 5800 7300 60  0000 C CNN
+F 3 "" H 5800 7300 60  0000 C CNN
+	1    5800 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3550 4050 3550
+Wire Wire Line
+	3650 3550 3950 3550
+Wire Wire Line
+	3950 4100 4600 4100
+Wire Wire Line
+	3650 4100 3950 4100
+Wire Wire Line
+	3500 3750 3500 4100
+Wire Wire Line
+	4600 4100 5500 4100
+Wire Wire Line
+	5300 3500 5500 3500
+Wire Wire Line
+	5500 3500 5850 3500
+Wire Wire Line
+	5850 3500 5950 3500
+Wire Wire Line
+	5500 4100 7000 4100
+Wire Wire Line
+	7000 3900 7000 4100
+Wire Wire Line
+	7000 3500 7400 3500
+Wire Wire Line
+	7000 4100 7400 4100
+Wire Wire Line
+	7400 3500 7600 3500
+Wire Wire Line
+	7400 4100 7600 4100
+Wire Wire Line
+	6950 2800 7600 2800
+$EndSCHEMATC

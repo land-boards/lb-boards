@@ -1,4 +1,4 @@
-update=2/14/2016 11:08:56 AM
+update=9/13/2020 2:30:05 PM
 version=1
 last_client=kicad
 [general]
@@ -40,9 +40,3 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=conn
-LibName4=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName5=switches

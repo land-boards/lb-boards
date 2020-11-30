@@ -1,4 +1,4 @@
-update=6/14/2017 10:49:13 AM
+update=8/7/2020 3:50:37 PM
 version=1
 last_client=kicad
 [general]
@@ -28,18 +28,6 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=CCLOAD-01-rescue
-LibName2=device
-LibName3=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName4=conn
-LibName5=power
-LibName6=C:/Users/DGilliland/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
-LibName7=linear
-LibName8=analog_devices
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -50,3 +38,6 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[eeschema]
+version=1
+LibDir=

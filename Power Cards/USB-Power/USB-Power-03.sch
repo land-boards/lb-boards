@@ -1,9 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:device
-LIBS:conn
-LIBS:power
+EESchema Schematic File Version 4
 LIBS:USB-Power-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -22,7 +19,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 2500 3250 2500
 $Comp
-L FUSE F1
+L USB-Power-rescue:FUSE F1
 U 1 1 53EF87F2
 P 3500 2500
 F 0 "F1" H 3600 2550 40  0000 C CNN
@@ -43,7 +40,7 @@ Text HLabel 4100 2500 2    60   Output ~ 0
 Text HLabel 4100 2900 2    60   Output ~ 0
 GND
 $Comp
-L GND #PWR2
+L power:GND #PWR2
 U 1 1 567EE5A0
 P 3400 3050
 F 0 "#PWR2" H 3400 2800 50  0001 C CNN
@@ -57,7 +54,7 @@ Wire Wire Line
 	3400 3050 3400 2900
 Connection ~ 3400 2900
 $Comp
-L USB-MICRO-B J2
+L USB-Power-rescue:USB-MICRO-B J2
 U 1 1 567EEACC
 P 2550 2700
 F 0 "J2" H 2250 3050 50  0000 C CNN
