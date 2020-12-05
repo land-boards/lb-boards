@@ -160,7 +160,7 @@ F 1 "5K" H 6180 4150 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical" H 7350 3400 50  0000 R CNN
 F 3 "~" H 6250 4150 50  0001 C CNN
 	1    6250 4150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	6250 4300 6250 4600
@@ -273,8 +273,8 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 6250 3250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 2550 5350 1600
-Wire Wire Line
-	5350 1600 6150 1600
+	5350 2550 5350 1700
 Connection ~ 5350 2550
+Wire Wire Line
+	6150 1700 5350 1700
 $EndSCHEMATC
