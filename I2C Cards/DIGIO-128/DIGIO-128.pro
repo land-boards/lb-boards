@@ -1,4 +1,4 @@
-update=12/21/2019 1:09:29 PM
+update=12/11/2020 9:46:36 PM
 version=1
 last_client=kicad
 [general]
@@ -36,6 +36,9 @@ LibName4=divers
 LibName5=dip_sockets
 LibName6=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/pin_array-combined
 LibName7=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
+[eeschema]
+version=1
+LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -43,12 +46,6 @@ PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
+SpiceAjustPassiveValues=0
 LabSize=60
-[eeschema]
-version=1
-LibDir=
+ERC_TestSimilarLabels=1
