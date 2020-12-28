@@ -126,7 +126,7 @@ Vout
 Text Label 4500 4600 0    50   ~ 0
 GND
 $Comp
-L LandBoards:COUPON B1
+L PS317-rescue:COUPON-LandBoards B1
 U 1 1 5F7B1D56
 P 4100 7800
 F 0 "B1" H 4328 8031 60  0000 L CNN
@@ -139,7 +139,7 @@ $EndComp
 Wire Wire Line
 	5350 4600 6250 4600
 $Comp
-L LandBoards_Semis:NPN Q1
+L PS317-rescue:NPN-LandBoards_Semis Q1
 U 1 1 5FC3C26E
 P 6700 1700
 F 0 "Q1" V 7028 1700 50  0000 C CNN
