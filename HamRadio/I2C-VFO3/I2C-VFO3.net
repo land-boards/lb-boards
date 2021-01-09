@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source C:\Users\dgilliland\Documents\GitHub\lb-boards\HamRadio\I2C-VFO3\I2C-VFO3.sch)
-    (date "12/2/2020 7:49:04 AM")
-    (tool "Eeschema (5.0.2)-1")
+    (source C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\I2C-VFO3\I2C-VFO3.sch)
+    (date "1/9/2021 11:41:12 AM")
+    (tool "Eeschema (5.1.5)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "Si5351 Freq Gen")
@@ -61,7 +61,7 @@
       (tstamp 5FC796BB))
     (comp (ref U2)
       (value ASE-xxxMHz)
-      (footprint Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm)
+      (footprint Oscillator:Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm_HandSoldering)
       (datasheet http://www.abracon.com/Oscillators/ASV.pdf)
       (libsource (lib Oscillator) (part ASE-xxxMHz) (description "3.3V CMOS SMD Crystal Clock Oscillator, Abracon"))
       (sheetpath (names /) (tstamps /))
@@ -156,7 +156,7 @@
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
     (library (logical LandBoards_Semis)
-      (uri C:/Users/dgilliland/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Semis.lib))
+      (uri C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Semis.lib))
     (library (logical Oscillator)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Oscillator.lib")))
   (nets

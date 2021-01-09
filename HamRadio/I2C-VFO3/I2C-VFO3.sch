@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:I2C-VFO3-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -323,7 +322,7 @@ U 1 1 5FC797B9
 P 4550 5850
 F 0 "U2" H 4600 6100 50  0000 L CNN
 F 1 "ASE-xxxMHz" H 4600 5550 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm" H 5250 5500 50  0001 C CNN
+F 2 "Oscillator:Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm_HandSoldering" H 4550 5300 50  0000 C CNN
 F 3 "http://www.abracon.com/Oscillators/ASV.pdf" H 4450 5850 50  0001 C CNN
 	1    4550 5850
 	1    0    0    -1  
