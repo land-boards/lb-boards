@@ -1990,7 +1990,7 @@ REGULATOR\n\nBLUE PILL
 Text Notes 6850 3800 0    60   ~ 12
 5V POWER
 $Comp
-L LandBoards_Semis:Black-Pill U1
+L Black-Pill-Board-rescue:Black-Pill-LandBoards_Semis U1
 U 1 1 5F85E34D
 P 4150 8050
 F 0 "U1" H 4150 6950 60  0000 C CNN
