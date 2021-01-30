@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.635)
+    (last_trace_width 0.254)
     (user_trace_width 0.635)
     (trace_clearance 0.254)
     (zone_clearance 0.254)
@@ -2028,7 +2028,7 @@
     (descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x04 2.54mm single row")
     (path /5CC28DCE)
-    (fp_text reference J7 (at 0 -2.33) (layer F.SilkS)
+    (fp_text reference J7 (at 0.888 -2.33) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.3175)))
     )
     (fp_text value Conn_01x04 (at 0 9.95) (layer F.Fab)
@@ -2196,7 +2196,7 @@
     (tags "capacitor 0805")
     (path /5CAFC032)
     (attr smd)
-    (fp_text reference C5 (at 0 -1.75 180) (layer F.SilkS)
+    (fp_text reference C5 (at -2.456 -1.78 180) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.3175)))
     )
     (fp_text value 0.1uF (at 0 1.75 180) (layer F.Fab)
