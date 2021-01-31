@@ -4,9 +4,9 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
-Title "BLUE PILL HUB BOARD"
-Date "2020-06-20"
-Rev "4"
+Title "BLACK PILL HUB BOARD"
+Date "2021-01-31"
+Rev "2"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -1915,7 +1915,6 @@ NoConn ~ 3450 2850
 NoConn ~ 3450 3050
 NoConn ~ 3450 3150
 NoConn ~ 3450 3250
-NoConn ~ 2800 7500
 $Comp
 L LandBoards_Conns:HEADER_T H2
 U 1 1 5E5A748D
@@ -1963,8 +1962,8 @@ Text Notes 2600 9950 0    100  ~ 20
 RESET
 Text Notes 7100 2250 0    60   ~ 12
 I2C I/F
-Text Notes 2900 1400 0    60   ~ 12
-POWER SWITCH\n(REV 4)
+Text Notes 2900 1300 0    60   ~ 12
+POWER SWITCH
 Text Notes 2700 2000 0    60   ~ 12
 5V POWER\nINPUT
 Text Notes 950  3400 0    60   ~ 12
@@ -2125,4 +2124,7 @@ Wire Wire Line
 	2900 9000 3500 9000
 Text Label 2950 9000 0    50   ~ 0
 BP5V
+Wire Wire Line
+	2800 7500 3400 7500
+Connection ~ 3400 7500
 $EndSCHEMATC
