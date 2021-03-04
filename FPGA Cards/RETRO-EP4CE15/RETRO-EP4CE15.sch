@@ -5,7 +5,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "RETRO-EP4CE15"
-Date "2020-08-22"
+Date "2021-03-02"
 Rev "4"
 Comp "land-boards.com"
 Comment1 "FPGA CARD"
@@ -2323,11 +2323,11 @@ Text Notes 6100 7250 0    50   ~ 0
 (IO_R1)
 Text Notes 6100 6850 0    50   ~ 0
 (IO_R2)
-Text Notes 1150 6450 0    50   ~ 0
+Text Notes 800  6450 0    50   ~ 0
 (IO_A20)
-Text Notes 1150 6250 0    50   ~ 0
+Text Notes 800  6250 0    50   ~ 0
 (IO_B20)
-Text Notes 1150 5950 0    50   ~ 0
+Text Notes 800  5950 0    50   ~ 0
 (IO_A19)
 Text Label 1650 5850 0    60   ~ 0
 SDCS
@@ -2796,19 +2796,19 @@ Text Notes 1400 1700 0    50   ~ 0
 (EP4)
 Text Notes 2700 7450 0    50   ~ 0
 (EP4)
-Text Notes 800  5950 0    50   ~ 0
+Text Notes 1150 5950 0    50   ~ 0
 (IO_C15)
-Text Notes 1150 5750 0    50   ~ 0
-(EP4)
 Text Notes 800  5750 0    50   ~ 0
+(EP4)
+Text Notes 1150 5750 0    50   ~ 0
 (5CEFA)
 Text Notes 800  5850 0    50   ~ 0
 (IO_B19)
 Text Notes 1150 5850 0    50   ~ 0
 (IO_B15)
-Text Notes 800  6450 0    50   ~ 0
+Text Notes 1150 6450 0    50   ~ 0
 (IO_B16)
-Text Notes 800  6250 0    50   ~ 0
+Text Notes 1150 6250 0    50   ~ 0
 (IO_C16)
 Text Notes 5100 5950 0    50   ~ 0
 (IO_B12)
