@@ -5,8 +5,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "ESP32-VGA"
-Date "2020-02-22"
-Rev "2"
+Date "2021-03-10"
+Rev "3"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""
@@ -872,11 +872,9 @@ I/O CONNS
 Wire Wire Line
 	12300 6600 12300 6250
 Connection ~ 12300 6600
-NoConn ~ 3800 1650
 NoConn ~ 3800 1550
 NoConn ~ 3800 1950
 NoConn ~ 3800 3150
-NoConn ~ 3800 3250
 NoConn ~ 3800 3550
 $Comp
 L power:+3.3V #PWR07
@@ -1098,4 +1096,45 @@ Wire Wire Line
 	3800 1450 3900 1450
 Wire Wire Line
 	3800 3050 3950 3050
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J5
+U 1 1 6049BAE4
+P 5350 1750
+F 0 "J5" H 5400 1425 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 5400 1516 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5350 1750 50  0001 C CNN
+F 3 "~" H 5350 1750 50  0001 C CNN
+	1    5350 1750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3800 3250 4950 3250
+Wire Wire Line
+	4950 3250 4950 1750
+Wire Wire Line
+	4950 1750 5150 1750
+Wire Wire Line
+	3800 1650 5150 1650
+Wire Wire Line
+	5650 1750 5900 1750
+Wire Wire Line
+	5900 1750 5900 1650
+Wire Wire Line
+	5650 1650 5900 1650
+Connection ~ 5900 1650
+Wire Wire Line
+	5900 1650 5900 1400
+$Comp
+L power:+3.3V #PWR010
+U 1 1 604D4667
+P 5900 1400
+F 0 "#PWR010" H 5900 1250 50  0001 C CNN
+F 1 "+3.3V" H 5900 1540 50  0000 C CNN
+F 2 "" H 5900 1400 50  0001 C CNN
+F 3 "" H 5900 1400 50  0001 C CNN
+	1    5900 1400
+	1    0    0    -1  
+$EndComp
+Text Notes 5100 2000 0    50   ~ 0
+Power out\n(for ext RS-232)
 $EndSCHEMATC
