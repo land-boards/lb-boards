@@ -1,4 +1,4 @@
-update=4/14/2021 5:57:47 PM
+update=1/8/2017 10:41:22 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -61,3 +61,36 @@ LabSize=60
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=OptoOut8-I2C-rescue
+LibName2=power
+LibName3=device
+LibName4=transistors
+LibName5=conn
+LibName6=linear
+LibName7=regul
+LibName8=74xx
+LibName9=cmos4000
+LibName10=adc-dac
+LibName11=memory
+LibName12=xilinx
+LibName13=special
+LibName14=microcontrollers
+LibName15=dsp
+LibName16=microchip
+LibName17=analog_switches
+LibName18=motorola
+LibName19=texas
+LibName20=intel
+LibName21=audio
+LibName22=interface
+LibName23=digital-audio
+LibName24=philips
+LibName25=display
+LibName26=cypress
+LibName27=siliconi
+LibName28=opto
+LibName29=atmel
+LibName30=contrib
+LibName31=valves
+LibName32=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
