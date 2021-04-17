@@ -299,10 +299,10 @@
       (net 13 "Net-(R5-Pad2)"))
     (pad 1 thru_hole circle (at 0 0 90) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 33 +5V))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_CuK_JS202011CQN_DPDT_Straight.wrl
-      (offset (xyz 1.524 0 0))
-      (scale (xyz 1 0.9 0.7))
-      (rotate (xyz 0 0 90))
+    (model ${KISYS3DMOD}/Resistor_THT.3dshapes/R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
