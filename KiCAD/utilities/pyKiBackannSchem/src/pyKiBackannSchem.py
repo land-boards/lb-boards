@@ -98,7 +98,7 @@ sys.path.append('C:\\HWTeam\\Utilities\\dgCommonModules\\TKDGCommon')
 
 defaultPath = '.'
 
-from dgProgDefaultsTK import *
+from dgProgDefaultsTk import *
 
 backAnnotate = True
 
