@@ -227,7 +227,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 9250 6350 9200
 $Comp
-L LandBoards_Semis:ESP32-ESP32 U1
+L ESP32-VGA-rescue:ESP32-ESP32-LandBoards_Semis U1
 U 1 1 5C875761
 P 8200 4200
 F 0 "U1" H 7400 5050 50  0000 C CNN

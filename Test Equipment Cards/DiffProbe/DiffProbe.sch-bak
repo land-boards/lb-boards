@@ -1,37 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:special
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:DougsSch
-LIBS:DiffProbe-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -46,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MTG_HOLE MTG4
+L DiffProbe-rescue:MTG_HOLE MTG4
 U 1 1 537A5C77
 P 5600 7550
 F 0 "MTG4" H 5600 7650 60  0000 C CNN
@@ -57,7 +25,7 @@ F 3 "~" H 5600 7550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG3
+L DiffProbe-rescue:MTG_HOLE MTG3
 U 1 1 537A5C86
 P 5100 7550
 F 0 "MTG3" H 5100 7650 60  0000 C CNN
@@ -68,7 +36,7 @@ F 3 "~" H 5100 7550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG2
+L DiffProbe-rescue:MTG_HOLE MTG2
 U 1 1 537A5C95
 P 5600 7250
 F 0 "MTG2" H 5600 7350 60  0000 C CNN
@@ -79,7 +47,7 @@ F 3 "~" H 5600 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG1
+L DiffProbe-rescue:MTG_HOLE MTG1
 U 1 1 537A5CA4
 P 5100 7250
 F 0 "MTG1" H 5100 7350 60  0000 C CNN
@@ -90,7 +58,7 @@ F 3 "~" H 5100 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE TESTED1
+L DiffProbe-rescue:MTG_HOLE TESTED1
 U 1 1 580F6225
 P 4550 7250
 F 0 "TESTED1" H 4550 7350 60  0000 C CNN
@@ -101,7 +69,7 @@ F 3 "~" H 4550 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 J1
+L DiffProbe-rescue:CONN_01X02 J1
 U 1 1 58364F49
 P 3000 5000
 F 0 "J1" H 3000 5150 50  0000 C CNN
@@ -112,7 +80,7 @@ F 3 "" H 3000 5000 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 J3
+L DiffProbe-rescue:CONN_01X02 J3
 U 1 1 58364F6E
 P 2400 2200
 F 0 "J3" H 2400 2350 50  0000 C CNN
@@ -123,7 +91,7 @@ F 3 "" H 2400 2200 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SPST SW1
+L DiffProbe-rescue:SPST SW1
 U 1 1 5836504B
 P 4250 4950
 F 0 "SW1" H 4250 5050 50  0000 C CNN
@@ -134,7 +102,7 @@ F 3 "" H 4250 4950 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED D1
+L DiffProbe-rescue:LED D1
 U 1 1 583650FC
 P 5050 4950
 F 0 "D1" H 5050 5050 50  0000 C CNN
@@ -145,7 +113,7 @@ F 3 "" H 5050 4950 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R13
+L Device:R R13
 U 1 1 5836516B
 P 5050 4700
 F 0 "R13" V 4950 4700 50  0000 C CNN
@@ -156,7 +124,7 @@ F 3 "" H 5050 4700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C7
+L Device:C C7
 U 1 1 583651F8
 P 5400 5150
 F 0 "C7" H 5425 5250 50  0000 L CNN
@@ -167,7 +135,7 @@ F 3 "" H 5400 5150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR1
+L power:GND #PWR1
 U 1 1 58365386
 P 3650 5200
 F 0 "#PWR1" H 3650 4950 50  0001 C CNN
@@ -178,7 +146,7 @@ F 3 "" H 3650 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LT1761 U3
+L DiffProbe-rescue:LT1761 U3
 U 1 1 58365696
 P 6500 4750
 F 0 "U3" H 6650 4400 50  0000 C CNN
@@ -189,7 +157,7 @@ F 3 "" H 6500 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L Device:C C9
 U 1 1 583657AF
 P 7250 4750
 F 0 "C9" H 7275 4850 50  0000 L CNN
@@ -200,7 +168,7 @@ F 3 "" H 7250 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR10
+L power:+5V #PWR10
 U 1 1 5836587B
 P 7250 4400
 F 0 "#PWR10" H 7250 4250 50  0001 C CNN
@@ -211,7 +179,7 @@ F 3 "" H 7250 4400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 5836656E
 P 3200 1950
 F 0 "C1" V 3050 1900 50  0000 L CNN
@@ -222,7 +190,7 @@ F 3 "" H 3200 1950 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 583668C4
 P 3200 2400
 F 0 "C2" V 3050 2350 50  0000 L CNN
@@ -233,7 +201,7 @@ F 3 "" H 3200 2400 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 58366D64
 P 3650 1950
 F 0 "R1" V 3550 1950 50  0000 C CNN
@@ -244,7 +212,7 @@ F 3 "" H 3650 1950 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 583670C8
 P 3650 2400
 F 0 "R2" V 3550 2400 50  0000 C CNN
@@ -255,7 +223,7 @@ F 3 "" H 3650 2400 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 58367602
 P 3900 1700
 F 0 "R3" V 3800 1700 50  0000 C CNN
@@ -266,7 +234,7 @@ F 3 "" H 3900 1700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R4
+L Device:R R4
 U 1 1 58367664
 P 4150 1700
 F 0 "R4" V 4050 1700 50  0000 C CNN
@@ -277,7 +245,7 @@ F 3 "" H 4150 1700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 583679FB
 P 3900 2650
 F 0 "R5" H 3800 2650 50  0000 C CNN
@@ -288,7 +256,7 @@ F 3 "" H 3900 2650 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 58367A01
 P 4750 2800
 F 0 "R6" V 4800 2650 50  0000 C CNN
@@ -299,7 +267,7 @@ F 3 "" H 4750 2800 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR2
+L power:GND #PWR2
 U 1 1 5836848B
 P 3700 1600
 F 0 "#PWR2" H 3700 1350 50  0001 C CNN
@@ -310,7 +278,7 @@ F 3 "" H 3700 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR3
+L power:GND #PWR3
 U 1 1 58368886
 P 3900 2850
 F 0 "#PWR3" H 3900 2600 50  0001 C CNN
@@ -321,7 +289,7 @@ F 3 "" H 3900 2850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LTC6268S6 U1
+L DiffProbe-rescue:LTC6268S6 U1
 U 1 1 58369349
 P 4850 2150
 F 0 "U1" H 4850 2350 50  0000 C CNN
@@ -332,7 +300,7 @@ F 3 "" H 4900 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L Device:R R7
 U 1 1 583693C6
 P 4350 1700
 F 0 "R7" V 4250 1700 50  0000 C CNN
@@ -343,7 +311,7 @@ F 3 "" H 4350 1700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR4
+L power:+5V #PWR4
 U 1 1 5836A3A1
 P 4750 1300
 F 0 "#PWR4" H 4750 1150 50  0001 C CNN
@@ -354,7 +322,7 @@ F 3 "" H 4750 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR5
+L power:GND #PWR5
 U 1 1 5836A9BA
 P 4750 2500
 F 0 "#PWR5" H 4750 2250 50  0001 C CNN
@@ -365,7 +333,7 @@ F 3 "" H 4750 2500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 5836BDD6
 P 5000 1650
 F 0 "C4" H 5025 1750 50  0000 L CNN
@@ -376,7 +344,7 @@ F 3 "" H 5000 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR6
+L power:GND #PWR6
 U 1 1 5836C9B7
 P 5000 1850
 F 0 "#PWR6" H 5000 1600 50  0001 C CNN
@@ -387,16 +355,16 @@ F 3 "" H 5000 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3200 4950 3750 4950
+	3200 4950 3500 4950
 Wire Wire Line
-	4750 4950 4850 4950
+	4750 4950 4800 4950
 Wire Wire Line
 	4900 4700 4800 4700
 Wire Wire Line
 	4800 4700 4800 4950
 Connection ~ 4800 4950
 Wire Wire Line
-	5250 4950 5900 4950
+	5250 4950 5300 4950
 Wire Wire Line
 	5400 4950 5400 5000
 Wire Wire Line
@@ -405,13 +373,13 @@ Wire Wire Line
 	5300 4700 5300 4950
 Connection ~ 5300 4950
 Wire Wire Line
-	3200 5050 3950 5050
+	3200 5050 3400 5050
 Wire Wire Line
 	3650 5050 3650 5200
 Wire Wire Line
 	3950 5050 3950 5400
 Wire Wire Line
-	3950 5400 6500 5400
+	3950 5400 5400 5400
 Wire Wire Line
 	5400 5400 5400 5300
 Connection ~ 3650 5050
@@ -427,7 +395,7 @@ Connection ~ 5800 4950
 Wire Wire Line
 	7100 4550 7250 4550
 Wire Wire Line
-	7250 4400 7250 4600
+	7250 4400 7250 4550
 Wire Wire Line
 	7100 4950 7250 4950
 Wire Wire Line
@@ -450,7 +418,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 2400 3500 2400
 Wire Wire Line
-	3800 1950 4350 1950
+	3800 1950 3900 1950
 Wire Wire Line
 	4150 1950 4150 1850
 Wire Wire Line
@@ -459,26 +427,26 @@ Connection ~ 3900 1950
 Wire Wire Line
 	3900 2800 3900 2850
 Wire Wire Line
-	3800 2400 4350 2400
+	3800 2400 3900 2400
 Wire Wire Line
 	3900 2400 3900 2500
 Wire Wire Line
 	3900 1550 3900 1450
 Wire Wire Line
-	3700 1450 4150 1450
+	3700 1450 3900 1450
 Wire Wire Line
 	4150 1450 4150 1550
 Wire Wire Line
 	3700 1450 3700 1600
 Connection ~ 3900 1450
 Wire Wire Line
-	4350 1850 4350 2050
+	4350 1850 4350 1950
 Connection ~ 4150 1950
 Wire Wire Line
 	4350 2050 4550 2050
 Connection ~ 4350 1950
 Wire Wire Line
-	4350 2250 4350 2800
+	4350 2250 4350 2400
 Wire Wire Line
 	4350 2250 4550 2250
 Connection ~ 3900 2400
@@ -486,7 +454,7 @@ Wire Wire Line
 	4350 2800 4600 2800
 Connection ~ 4350 2400
 Wire Wire Line
-	5150 2150 5450 2150
+	5150 2150 5350 2150
 Wire Wire Line
 	5350 2150 5350 2800
 Wire Wire Line
@@ -496,19 +464,19 @@ Wire Wire Line
 Wire Wire Line
 	4350 1350 4750 1350
 Wire Wire Line
-	4750 1300 4750 1850
+	4750 1300 4750 1350
 Connection ~ 4750 1350
 Wire Wire Line
 	4750 2450 4750 2500
 Wire Wire Line
 	5000 1500 5000 1450
 Wire Wire Line
-	4750 1450 7650 1450
+	4750 1450 5000 1450
 Connection ~ 4750 1450
 Wire Wire Line
 	5000 1800 5000 1850
 $Comp
-L C C3
+L Device:C C3
 U 1 1 5836D0EE
 P 5600 2150
 F 0 "C3" V 5450 2150 50  0000 L CNN
@@ -520,7 +488,7 @@ F 3 "" H 5600 2150 50  0000 C CNN
 $EndComp
 Connection ~ 5350 2150
 $Comp
-L LTC6268S6 U2
+L DiffProbe-rescue:LTC6268S6 U2
 U 1 1 5836E257
 P 6850 2250
 F 0 "U2" H 6850 2450 50  0000 C CNN
@@ -531,9 +499,9 @@ F 3 "" H 6900 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5750 2150 6550 2150
+	5750 2150 6000 2150
 $Comp
-L R R8
+L Device:R R8
 U 1 1 5836E8D0
 P 6000 1900
 F 0 "R8" H 5900 1900 50  0000 C CNN
@@ -544,7 +512,7 @@ F 3 "" H 6000 1900 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR7
+L power:GND #PWR7
 U 1 1 5836F159
 P 5800 1800
 F 0 "#PWR7" H 5800 1550 50  0001 C CNN
@@ -564,7 +532,7 @@ Wire Wire Line
 	6000 2050 6000 2150
 Connection ~ 6000 2150
 $Comp
-L R R9
+L Device:R R9
 U 1 1 5836F28E
 P 6350 1800
 F 0 "R9" H 6250 1800 50  0000 C CNN
@@ -581,7 +549,7 @@ Wire Wire Line
 	6350 1950 6350 2150
 Connection ~ 6350 2150
 $Comp
-L R R11
+L Device:R R11
 U 1 1 5836F6C1
 P 6000 2650
 F 0 "R11" H 5850 2650 50  0000 C CNN
@@ -592,7 +560,7 @@ F 3 "" H 6000 2650 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R10
+L Device:R R10
 U 1 1 5836FA6D
 P 6750 2900
 F 0 "R10" V 6850 2700 50  0000 C CNN
@@ -603,7 +571,7 @@ F 3 "" H 6750 2900 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6000 2350 6550 2350
+	6000 2350 6350 2350
 Wire Wire Line
 	6000 2350 6000 2500
 Wire Wire Line
@@ -612,7 +580,7 @@ Connection ~ 6350 2350
 Wire Wire Line
 	6000 2800 6000 2900
 $Comp
-L GND #PWR8
+L power:GND #PWR8
 U 1 1 5836FEF9
 P 6000 2900
 F 0 "#PWR8" H 6000 2650 50  0001 C CNN
@@ -625,13 +593,13 @@ $EndComp
 Wire Wire Line
 	6350 2900 6600 2900
 Wire Wire Line
-	7150 2250 7400 2250
+	7150 2250 7250 2250
 Wire Wire Line
 	7250 2250 7250 2900
 Wire Wire Line
 	7250 2900 6900 2900
 $Comp
-L C C6
+L Device:C C6
 U 1 1 583716E8
 P 8100 2250
 F 0 "C6" V 7950 2250 50  0000 L CNN
@@ -642,7 +610,7 @@ F 3 "" H 8100 2250 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R12
+L Device:R R12
 U 1 1 58371BCF
 P 7550 2250
 F 0 "R12" V 7650 2250 50  0000 C CNN
@@ -656,7 +624,7 @@ Connection ~ 7250 2250
 Wire Wire Line
 	7700 2250 7950 2250
 $Comp
-L BNC J2
+L DiffProbe-rescue:BNC J2
 U 1 1 58371E73
 P 8800 2250
 F 0 "J2" H 8810 2370 50  0000 C CNN
@@ -671,7 +639,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 2450 8800 2650
 $Comp
-L GND #PWR12
+L power:GND #PWR12
 U 1 1 58372013
 P 8800 2650
 F 0 "#PWR12" H 8800 2400 50  0001 C CNN
@@ -687,7 +655,7 @@ Connection ~ 6350 1450
 Wire Wire Line
 	6750 2550 6750 2650
 $Comp
-L GND #PWR9
+L power:GND #PWR9
 U 1 1 5837758A
 P 6750 2650
 F 0 "#PWR9" H 6750 2400 50  0001 C CNN
@@ -698,7 +666,7 @@ F 3 "" H 6750 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C5
+L Device:C C5
 U 1 1 58379FDF
 P 6950 1650
 F 0 "C5" H 6975 1750 50  0000 L CNN
@@ -709,7 +677,7 @@ F 3 "" H 6950 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L Device:C C8
 U 1 1 5837A6FD
 P 7350 1650
 F 0 "C8" H 7375 1750 50  0000 L CNN
@@ -722,9 +690,9 @@ $EndComp
 Wire Wire Line
 	7350 1800 7350 1850
 Wire Wire Line
-	6950 1850 7650 1850
+	6950 1850 7350 1850
 $Comp
-L GND #PWR11
+L power:GND #PWR11
 U 1 1 5837A7F6
 P 7650 1900
 F 0 "#PWR11" H 7650 1650 50  0001 C CNN
@@ -764,12 +732,12 @@ VI+
 Text Label 4400 2050 0    60   ~ 0
 VIP
 $Comp
-L C C10
+L Device:C C10
 U 1 1 5864595E
 P 7650 1650
 F 0 "C10" H 7675 1750 50  0000 L CNN
 F 1 "10uF" H 7675 1550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7700 1450 30  0000 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7650 1400 30  0000 C CNN
 F 3 "" H 7650 1650 50  0000 C CNN
 	1    7650 1650
 	1    0    0    -1  
@@ -778,10 +746,10 @@ Wire Wire Line
 	7650 1450 7650 1500
 Connection ~ 7350 1450
 Wire Wire Line
-	7650 1800 7650 1900
+	7650 1800 7650 1850
 Connection ~ 7650 1850
 $Comp
-L CONN_01X02 J4
+L DiffProbe-rescue:CONN_01X02 J4
 U 1 1 58647C2A
 P 3000 4600
 F 0 "J4" H 3000 4750 50  0000 C CNN
@@ -801,4 +769,62 @@ Wire Wire Line
 Wire Wire Line
 	3500 4550 3500 4950
 Connection ~ 3500 4950
+Wire Wire Line
+	4800 4950 4850 4950
+Wire Wire Line
+	5300 4950 5400 4950
+Wire Wire Line
+	3650 5050 3950 5050
+Wire Wire Line
+	5400 5400 6500 5400
+Wire Wire Line
+	5400 4950 5800 4950
+Wire Wire Line
+	5800 4950 5900 4950
+Wire Wire Line
+	7250 4550 7250 4600
+Wire Wire Line
+	3900 1950 4150 1950
+Wire Wire Line
+	3900 1450 4150 1450
+Wire Wire Line
+	4150 1950 4350 1950
+Wire Wire Line
+	4350 1950 4350 2050
+Wire Wire Line
+	3900 2400 4350 2400
+Wire Wire Line
+	4350 2400 4350 2800
+Wire Wire Line
+	4750 1350 4750 1450
+Wire Wire Line
+	4750 1450 4750 1850
+Wire Wire Line
+	5350 2150 5450 2150
+Wire Wire Line
+	6000 2150 6350 2150
+Wire Wire Line
+	5000 1450 6350 1450
+Wire Wire Line
+	6350 2150 6550 2150
+Wire Wire Line
+	6350 2350 6550 2350
+Wire Wire Line
+	7250 2250 7400 2250
+Wire Wire Line
+	6350 1450 6750 1450
+Wire Wire Line
+	7350 1850 7650 1850
+Wire Wire Line
+	6750 1450 6950 1450
+Wire Wire Line
+	6950 1450 7350 1450
+Wire Wire Line
+	7350 1450 7650 1450
+Wire Wire Line
+	7650 1850 7650 1900
+Wire Wire Line
+	3400 5050 3650 5050
+Wire Wire Line
+	3500 4950 3750 4950
 $EndSCHEMATC
