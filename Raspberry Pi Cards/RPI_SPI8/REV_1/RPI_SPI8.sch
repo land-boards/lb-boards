@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "RASPBERRY PI SPI8"
-Date "2021-06-18"
-Rev "2"
+Date "2021-03-03"
+Rev "1"
 Comp "LAND BOARDS LLC"
 Comment1 ""
 Comment2 ""
@@ -336,8 +336,6 @@ F 3 "" H 2350 6950 60  0000 C CNN
 	1    2350 6950
 	1    0    0    -1  
 $EndComp
-Text Notes 600  1850 0    60   ~ 0
-MISSING IO_22 on PSoC
 Text Notes 1550 1250 0    60   ~ 0
 IO_2
 Text Notes 1550 1350 0    60   ~ 0
@@ -381,7 +379,7 @@ SPICE1
 Text Label 4500 2250 0    60   ~ 0
 SPICE0
 Wire Wire Line
-	2800 5300 2700 5300
+	2800 5300 1950 5300
 Text Label 2050 5300 0    60   ~ 0
 SPICE0
 $Comp
@@ -515,7 +513,7 @@ U 1 1 604893C5
 P 2700 4350
 F 0 "R1" H 2759 4441 50  0000 L CNN
 F 1 "10K" H 2759 4350 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" H 2759 4259 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" H 1400 4800 50  0000 L CNN
 F 3 "~" H 2700 4350 50  0001 C CNN
 	1    2700 4350
 	1    0    0    -1  
@@ -539,6 +537,9 @@ Wire Wire Line
 	2700 5200 2800 5200
 Wire Wire Line
 	2800 5100 2700 5100
+Connection ~ 2700 5100
+Wire Wire Line
+	2700 5100 2700 5200
 Text Label 6950 3750 0    60   ~ 0
 SPIMOSI
 Text Label 6950 3850 0    60   ~ 0
@@ -791,9 +792,6 @@ Wire Wire Line
 	2350 6950 2350 7050
 Wire Wire Line
 	2350 7350 2350 7450
-Wire Wire Line
-	2700 5200 2700 5300
-Connection ~ 2700 5300
-Wire Wire Line
-	2700 5300 1950 5300
+Text Notes 2650 5200 2    60   ~ 0
+REWORK:\nCut pin 5 from pin 6\nWire pin 5 to pin 4
 $EndSCHEMATC
