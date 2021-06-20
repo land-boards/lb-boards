@@ -7,52 +7,44 @@
 ! Value
 ! RefDes
 |-
-| 32
-| LED
-| DS1-DS32
-| 
-| 1
-| Conn_01x02
-| J1
-|-
 | 4
 | 10K
-| R3,R4,R6,R7
+| R3-R7
 | 
-| 1
-| Conn_01x05
-| J2
+| 32
+| LED (NOTE 3)
+| DS1-DS32
 |-
 | 2
-| 2.2K
+| 2.2K (NOTE 1)
 | R1,R2
 | 
 | 1
-| CONN_4
-| J3
+| HEADER, RT ANG, 2X2
+| J6
 |-
 | 32
-| 560
+| 560 (NOTE 2)
 | R5,R8-R38
 | 
 | 1
-| CONN_02X02
-| J6
+| HEADER, RT ANG 1X4
+| J3
+|-
+| 4
+| MCP23017-E/SS
+| U1,U2,U3,U4
+| 
+| 1
+| HEADER, RT ANG, 1x2
+| J1
 |-
 | 32
 | SW_Push
 | SW1-SW32
 | 
-| 
-| 
-| 
-|-
-| 4
-| MCP23017-E/SS
-| U1-U4
-| 
-| 
-| 
-| 
+| 1
+| HEADER, RT ANG, 1x5
+| J2
 |-
 |}
