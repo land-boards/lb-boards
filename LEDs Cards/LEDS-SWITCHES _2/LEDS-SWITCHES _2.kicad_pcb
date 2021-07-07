@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.2)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.5)-3")
 
   (general
     (thickness 1.6)
@@ -42,8 +42,6 @@
     (zone_clearance 0.254)
     (zone_45_only no)
     (trace_min 0.2032)
-    (segment_width 0.2)
-    (edge_width 0.1)
     (via_size 0.889)
     (via_drill 0.635)
     (via_min_size 0.889)
@@ -53,6 +51,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.508)
     (uvia_min_drill 0.127)
+    (edge_width 0.1)
+    (segment_width 0.2)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.15)
@@ -144,8 +144,8 @@
     (via_drill 0.635)
     (uvia_dia 0.508)
     (uvia_drill 0.127)
-    (diff_pair_gap 0.25)
     (diff_pair_width 0.254)
+    (diff_pair_gap 0.25)
     (add_net /LED1)
     (add_net /LED2)
     (add_net /LED3)
@@ -197,8 +197,8 @@
     (via_drill 0.635)
     (uvia_dia 0.508)
     (uvia_drill 0.127)
-    (diff_pair_gap 0.25)
     (diff_pair_width 0.254)
+    (diff_pair_gap 0.25)
   )
 
   (module Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal (layer B.Cu) (tedit 5AE5139B) (tstamp 60D40950)
@@ -1889,10 +1889,10 @@
       (net 25 /SS8))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 9 "Net-(R1-Pad2)"))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 1.0922 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -1931,10 +1931,10 @@
       (net 24 /SS7))
     (pad 3 thru_hole oval (at 0 5.08) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -1973,10 +1973,10 @@
       (net 23 /SS6))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 11 "Net-(R3-Pad2)"))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2015,10 +2015,10 @@
       (net 22 /SS5))
     (pad 3 thru_hole oval (at 0 5.08) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2057,10 +2057,10 @@
       (net 21 /SS4))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 13 "Net-(R5-Pad2)"))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2099,10 +2099,10 @@
       (net 20 /SS3))
     (pad 3 thru_hole oval (at 0 5.08) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2141,10 +2141,10 @@
       (net 19 /SS2))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 15 "Net-(R7-Pad2)"))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2183,10 +2183,10 @@
       (net 18 /SS1))
     (pad 3 thru_hole oval (at 0 5.08) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile.wrl
+      (offset (xyz 0 0.8636 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2234,7 +2234,7 @@
       (net 33 /PB8))
     (pad 1 thru_hole circle (at 6.5 0) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2285,7 +2285,7 @@
       (net 41 GND))
     (pad 2 thru_hole circle (at 0 4.5) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 32 /PB7))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2336,7 +2336,7 @@
       (net 31 /PB6))
     (pad 1 thru_hole circle (at 6.5 0) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2387,7 +2387,7 @@
       (net 41 GND))
     (pad 2 thru_hole circle (at 0 4.5) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 30 /PB5))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2438,7 +2438,7 @@
       (net 29 /PB4))
     (pad 1 thru_hole circle (at 6.5 0) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2489,7 +2489,7 @@
       (net 41 GND))
     (pad 2 thru_hole circle (at 0 4.5) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 28 /PB3))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2540,7 +2540,7 @@
       (net 27 /PB2))
     (pad 1 thru_hole circle (at 6.5 0) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 41 GND))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2591,7 +2591,7 @@
       (net 41 GND))
     (pad 2 thru_hole circle (at 0 4.5) (size 2 2) (drill 1.1) (layers *.Cu *.Mask)
       (net 26 /PB1))
-    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H8.5mm.wrl
+    (model ${KISYS3DMOD}/Button_Switch_THT.3dshapes/SW_PUSH_6mm_H5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2843,16 +2843,6 @@
   (segment (start 47.536999 23.837001) (end 47.918001 23.455999) (width 0.254) (layer F.Cu) (net 25))
   (segment (start 47.536999 29.034763) (end 47.536999 23.837001) (width 0.254) (layer F.Cu) (net 25))
   (segment (start 40.952881 35.618881) (end 47.536999 29.034763) (width 0.254) (layer F.Cu) (net 25))
-  (segment (start 25.599 87.78) (end 25.599 81.28) (width 0.254) (layer F.Cu) (net 33) (status 30))
-  (segment (start 33.981 81.28) (end 33.981 87.78) (width 0.254) (layer F.Cu) (net 32) (status 30))
-  (segment (start 42.109 81.28) (end 42.109 87.78) (width 0.254) (layer F.Cu) (net 31) (status 30))
-  (segment (start 50.491 87.78) (end 50.491 81.28) (width 0.254) (layer F.Cu) (net 30) (status 30))
-  (segment (start 50.546 81.225) (end 50.491 81.28) (width 0.254) (layer F.Cu) (net 30) (status 30))
-  (segment (start 59.127 87.78) (end 59.127 81.28) (width 0.254) (layer F.Cu) (net 29) (status 30))
-  (segment (start 67.255 81.28) (end 67.255 87.78) (width 0.254) (layer F.Cu) (net 28) (status 30))
-  (segment (start 67.31 81.225) (end 67.255 81.28) (width 0.254) (layer F.Cu) (net 28) (status 30))
-  (segment (start 75.637 81.28) (end 75.637 87.78) (width 0.254) (layer F.Cu) (net 27) (status 30))
-  (segment (start 75.692 81.225) (end 75.637 81.28) (width 0.254) (layer F.Cu) (net 27) (status 30))
   (segment (start 84.019 81.28) (end 84.019 87.78) (width 0.254) (layer F.Cu) (net 26) (status 30))
   (segment (start 84.074 81.225) (end 84.019 81.28) (width 0.254) (layer F.Cu) (net 26) (status 30))
   (segment (start 71.628 26.348081) (end 71.628 25.146) (width 0.254) (layer F.Cu) (net 26))
@@ -2869,6 +2859,8 @@
   (segment (start 83.566 39.624) (end 83.566 35.306) (width 0.254) (layer F.Cu) (net 26))
   (segment (start 84.019 78.541) (end 84.074 78.486) (width 0.254) (layer F.Cu) (net 26))
   (segment (start 84.019 81.28) (end 84.019 78.541) (width 0.254) (layer F.Cu) (net 26))
+  (segment (start 75.637 81.28) (end 75.637 87.78) (width 0.254) (layer F.Cu) (net 27) (status 30))
+  (segment (start 75.692 81.225) (end 75.637 81.28) (width 0.254) (layer F.Cu) (net 27) (status 30))
   (segment (start 75.637 78.541) (end 75.692 78.486) (width 0.254) (layer F.Cu) (net 27))
   (segment (start 75.637 81.28) (end 75.637 78.541) (width 0.254) (layer F.Cu) (net 27))
   (segment (start 79.248 68.58) (end 79.248 74.93) (width 0.254) (layer B.Cu) (net 27))
@@ -2890,6 +2882,8 @@
   (segment (start 74.460001 54.551119) (end 74.460001 62.445999) (width 0.254) (layer B.Cu) (net 27))
   (segment (start 73.406 29.718) (end 73.914 29.718) (width 0.254) (layer B.Cu) (net 27))
   (segment (start 74.460001 62.445999) (end 75.946 63.931998) (width 0.254) (layer B.Cu) (net 27))
+  (segment (start 67.255 81.28) (end 67.255 87.78) (width 0.254) (layer F.Cu) (net 28) (status 30))
+  (segment (start 67.31 81.225) (end 67.255 81.28) (width 0.254) (layer F.Cu) (net 28) (status 30))
   (segment (start 67.255 78.541) (end 67.31 78.486) (width 0.254) (layer F.Cu) (net 28))
   (segment (start 67.255 81.28) (end 67.255 78.541) (width 0.254) (layer F.Cu) (net 28))
   (segment (start 64.008 28.194) (end 64.008 25.146) (width 0.254) (layer F.Cu) (net 28))
@@ -2905,6 +2899,7 @@
   (segment (start 67.31 78.486) (end 70.358 75.438) (width 0.254) (layer F.Cu) (net 28))
   (segment (start 70.358 75.438) (end 70.358 67.564) (width 0.254) (layer F.Cu) (net 28))
   (segment (start 68.326 49.784) (end 68.326 41.148) (width 0.254) (layer F.Cu) (net 28))
+  (segment (start 59.127 87.78) (end 59.127 81.28) (width 0.254) (layer F.Cu) (net 29) (status 30))
   (segment (start 59.127 78.541) (end 59.182 78.486) (width 0.254) (layer F.Cu) (net 29))
   (segment (start 59.127 81.28) (end 59.127 78.541) (width 0.254) (layer F.Cu) (net 29))
   (segment (start 61.468 76.2) (end 59.182 78.486) (width 0.254) (layer F.Cu) (net 29))
@@ -2918,6 +2913,8 @@
   (segment (start 59.182 40.64) (end 59.182 64.516) (width 0.254) (layer F.Cu) (net 29))
   (segment (start 61.468 22.606) (end 62.738 23.876) (width 0.254) (layer F.Cu) (net 29))
   (segment (start 58.166 35.306) (end 58.166 39.624) (width 0.254) (layer F.Cu) (net 29))
+  (segment (start 50.491 87.78) (end 50.491 81.28) (width 0.254) (layer F.Cu) (net 30) (status 30))
+  (segment (start 50.546 81.225) (end 50.491 81.28) (width 0.254) (layer F.Cu) (net 30) (status 30))
   (segment (start 50.491 78.541) (end 50.546 78.486) (width 0.254) (layer F.Cu) (net 30))
   (segment (start 50.491 81.28) (end 50.491 78.541) (width 0.254) (layer F.Cu) (net 30))
   (segment (start 55.538001 25.995999) (end 55.538001 30.059999) (width 0.254) (layer F.Cu) (net 30))
@@ -2931,6 +2928,7 @@
   (segment (start 50.546 64.77) (end 53.086 67.31) (width 0.254) (layer F.Cu) (net 30))
   (segment (start 53.086 75.946) (end 50.546 78.486) (width 0.254) (layer F.Cu) (net 30))
   (segment (start 53.086 67.31) (end 53.086 75.946) (width 0.254) (layer F.Cu) (net 30))
+  (segment (start 42.109 81.28) (end 42.109 87.78) (width 0.254) (layer F.Cu) (net 31) (status 30))
   (segment (start 42.109 78.541) (end 42.164 78.486) (width 0.254) (layer F.Cu) (net 31))
   (segment (start 42.109 81.28) (end 42.109 78.541) (width 0.254) (layer F.Cu) (net 31))
   (segment (start 43.345001 77.304999) (end 42.164 78.486) (width 0.254) (layer B.Cu) (net 31))
@@ -2944,6 +2942,7 @@
   (segment (start 49.276 38.862) (end 43.345001 44.792999) (width 0.254) (layer B.Cu) (net 31))
   (segment (start 43.345001 49.618999) (end 41.91 51.054) (width 0.254) (layer B.Cu) (net 31))
   (segment (start 43.345001 44.792999) (end 43.345001 49.618999) (width 0.254) (layer B.Cu) (net 31))
+  (segment (start 33.981 81.28) (end 33.981 87.78) (width 0.254) (layer F.Cu) (net 32) (status 30))
   (segment (start 33.981 78.541) (end 34.036 78.486) (width 0.254) (layer F.Cu) (net 32))
   (segment (start 33.981 81.28) (end 33.981 78.541) (width 0.254) (layer F.Cu) (net 32))
   (segment (start 41.402 30.48) (end 45.72 30.48) (width 0.254) (layer B.Cu) (net 32))
@@ -2961,6 +2960,7 @@
   (segment (start 40.386 36.83) (end 38.619001 35.063001) (width 0.254) (layer B.Cu) (net 32))
   (segment (start 34.036 78.486) (end 36.322 76.2) (width 0.254) (layer B.Cu) (net 32))
   (segment (start 35.814 51.308) (end 35.814 44.958) (width 0.254) (layer B.Cu) (net 32))
+  (segment (start 25.599 87.78) (end 25.599 81.28) (width 0.254) (layer F.Cu) (net 33) (status 30))
   (segment (start 25.599 78.541) (end 25.654 78.486) (width 0.254) (layer F.Cu) (net 33))
   (segment (start 25.599 81.28) (end 25.599 78.541) (width 0.254) (layer F.Cu) (net 33))
   (segment (start 23.622 54.102) (end 23.622 76.454) (width 0.254) (layer B.Cu) (net 33))
