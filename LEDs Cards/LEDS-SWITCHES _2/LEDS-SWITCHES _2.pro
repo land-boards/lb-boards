@@ -1,4 +1,4 @@
-update=6/10/2020 3:23:57 PM
+update=7/6/2021 1:18:22 PM
 version=1
 last_client=kicad
 [general]
@@ -11,16 +11,6 @@ EquName1=devcms
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -258,3 +248,13 @@ uViaDrill=0.127
 dPairWidth=0.254
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
