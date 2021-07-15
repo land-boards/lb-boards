@@ -1,10 +1,19 @@
-update=7/14/2021 3:44:40 PM
+update=8/29/2015 6:29:36 PM
 last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[eeschema]
+version=1
+LibDir=../../KiCAD/library
+[eeschema/libraries]
+LibName1=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
+LibName2=screwduinov2/screwduinov2p1-schlib
+LibName3=power
+LibName4=device
+LibName5=conn
 [general]
 version=1
 [pcbnew]
@@ -27,16 +36,3 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.381
 BoardOutlineThickness=0.381
 ModuleOutlineThickness=0.381
-[eeschema]
-version=1
-LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
