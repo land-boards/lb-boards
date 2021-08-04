@@ -1,4 +1,4 @@
-update=8/2/2021 7:22:48 PM
+update=5/28/2017 11:43:21 AM
 version=1
 last_client=kicad
 [general]
@@ -40,13 +40,8 @@ LibName8=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/DougsSch

@@ -1,5 +1,10 @@
-EESchema Schematic File Version 4
-EELAYER 30 0
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:DougsSch
+LIBS:SWLEDX8-cache
+EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -14,7 +19,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW8
+L Switch_SPDT_x2 SW8
 U 1 1 5908DD61
 P 4050 4900
 F 0 "SW8" H 3850 5050 50  0000 C CNN
@@ -27,7 +32,7 @@ $EndComp
 Wire Wire Line
 	3750 1850 3600 1850
 Wire Wire Line
-	3600 1850 3600 2300
+	3600 1850 3600 5250
 Wire Wire Line
 	3600 5000 3750 5000
 Connection ~ 3600 5000
@@ -50,7 +55,7 @@ Wire Wire Line
 	3750 2300 3600 2300
 Connection ~ 3600 2300
 $Comp
-L Device:R R8
+L R R8
 U 1 1 5908E66A
 P 3300 4800
 F 0 "R8" V 3380 4800 50  0000 C CNN
@@ -63,7 +68,7 @@ $EndComp
 Wire Wire Line
 	3450 4800 3750 4800
 $Comp
-L Device:R R7
+L R R7
 U 1 1 5908E939
 P 3300 4350
 F 0 "R7" V 3380 4350 50  0000 C CNN
@@ -76,7 +81,7 @@ $EndComp
 Wire Wire Line
 	3450 4350 3750 4350
 $Comp
-L Device:R R6
+L R R6
 U 1 1 5908EB84
 P 3300 3900
 F 0 "R6" V 3380 3900 50  0000 C CNN
@@ -89,7 +94,7 @@ $EndComp
 Wire Wire Line
 	3450 3900 3750 3900
 $Comp
-L Device:R R5
+L R R5
 U 1 1 5908EB8B
 P 3300 3450
 F 0 "R5" V 3380 3450 50  0000 C CNN
@@ -102,7 +107,7 @@ $EndComp
 Wire Wire Line
 	3450 3450 3750 3450
 $Comp
-L Device:R R4
+L R R4
 U 1 1 5908EE92
 P 3300 3000
 F 0 "R4" V 3380 3000 50  0000 C CNN
@@ -115,7 +120,7 @@ $EndComp
 Wire Wire Line
 	3450 3000 3750 3000
 $Comp
-L Device:R R3
+L R R3
 U 1 1 5908EE99
 P 3300 2550
 F 0 "R3" V 3380 2550 50  0000 C CNN
@@ -128,7 +133,7 @@ $EndComp
 Wire Wire Line
 	3450 2550 3750 2550
 $Comp
-L Device:R R2
+L R R2
 U 1 1 5908EEA0
 P 3300 2100
 F 0 "R2" V 3380 2100 50  0000 C CNN
@@ -141,7 +146,7 @@ $EndComp
 Wire Wire Line
 	3450 2100 3750 2100
 $Comp
-L Device:R R1
+L R R1
 U 1 1 5908EEA7
 P 3300 1650
 F 0 "R1" V 3380 1650 50  0000 C CNN
@@ -156,7 +161,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 4800 3150 4800
 Wire Wire Line
-	2950 1450 2950 1650
+	2950 1450 2950 4800
 Wire Wire Line
 	2950 1650 3150 1650
 Connection ~ 2950 1650
@@ -179,7 +184,7 @@ Wire Wire Line
 	3150 4350 2950 4350
 Connection ~ 2950 4350
 $Comp
-L power:VCC #PWR01
+L VCC #PWR01
 U 1 1 5908FBB1
 P 2950 1450
 F 0 "#PWR01" H 2950 1300 50  0001 C CNN
@@ -190,7 +195,7 @@ F 3 "" H 2950 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 5908FE95
 P 3600 5250
 F 0 "#PWR02" H 3600 5000 50  0001 C CNN
@@ -249,7 +254,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 3650 5400 3650
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW7
+L Switch_SPDT_x2 SW7
 U 1 1 590911F0
 P 4050 4450
 F 0 "SW7" H 3850 4600 50  0000 C CNN
@@ -260,7 +265,7 @@ F 3 "" H 4050 4450 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW6
+L Switch_SPDT_x2 SW6
 U 1 1 59091471
 P 4050 4000
 F 0 "SW6" H 3850 4150 50  0000 C CNN
@@ -271,7 +276,7 @@ F 3 "" H 4050 4000 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW5
+L Switch_SPDT_x2 SW5
 U 1 1 59091477
 P 4050 3550
 F 0 "SW5" H 3850 3700 50  0000 C CNN
@@ -282,7 +287,7 @@ F 3 "" H 4050 3550 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW4
+L Switch_SPDT_x2 SW4
 U 1 1 5909160B
 P 4050 3100
 F 0 "SW4" H 3850 3250 50  0000 C CNN
@@ -293,7 +298,7 @@ F 3 "" H 4050 3100 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW3
+L Switch_SPDT_x2 SW3
 U 1 1 59091611
 P 4050 2650
 F 0 "SW3" H 3850 2800 50  0000 C CNN
@@ -304,7 +309,7 @@ F 3 "" H 4050 2650 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW2
+L Switch_SPDT_x2 SW2
 U 1 1 59091617
 P 4050 2200
 F 0 "SW2" H 3850 2350 50  0000 C CNN
@@ -315,7 +320,7 @@ F 3 "" H 4050 2200 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SWLEDX8-rescue:Switch_SPDT_x2 SW1
+L Switch_SPDT_x2 SW1
 U 1 1 5909161D
 P 4050 1750
 F 0 "SW1" H 3850 1900 50  0000 C CNN
@@ -330,7 +335,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 2850 5250 2650
 $Comp
-L power:VCC #PWR03
+L VCC #PWR03
 U 1 1 59092180
 P 5250 2650
 F 0 "#PWR03" H 5250 2500 50  0001 C CNN
@@ -341,7 +346,7 @@ F 3 "" H 5250 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 59092E63
 P 5300 4000
 F 0 "#PWR04" H 5300 3750 50  0001 C CNN
@@ -352,11 +357,11 @@ F 3 "" H 5300 4000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 3750 5300 3900
+	5300 3750 5300 4000
 Wire Wire Line
 	5300 3750 5400 3750
 $Comp
-L SWLEDX8-rescue:CONN_02X10 P1
+L CONN_02X10 P1
 U 1 1 5909495C
 P 5650 3300
 F 0 "P1" H 5650 3850 50  0000 C CNN
@@ -367,7 +372,7 @@ F 3 "" H 5650 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R16
+L R R16
 U 1 1 59094CE7
 P 7550 5150
 F 0 "R16" V 7630 5150 50  0000 C CNN
@@ -380,7 +385,7 @@ $EndComp
 Wire Wire Line
 	8000 5150 7700 5150
 $Comp
-L Device:R R15
+L R R15
 U 1 1 59094CEE
 P 7550 4700
 F 0 "R15" V 7630 4700 50  0000 C CNN
@@ -393,7 +398,7 @@ $EndComp
 Wire Wire Line
 	8000 4700 7700 4700
 $Comp
-L Device:R R14
+L R R14
 U 1 1 59094CF5
 P 7550 4250
 F 0 "R14" V 7630 4250 50  0000 C CNN
@@ -406,7 +411,7 @@ $EndComp
 Wire Wire Line
 	8000 4250 7700 4250
 $Comp
-L Device:R R13
+L R R13
 U 1 1 59094CFC
 P 7550 3800
 F 0 "R13" V 7630 3800 50  0000 C CNN
@@ -419,7 +424,7 @@ $EndComp
 Wire Wire Line
 	8000 3800 7700 3800
 $Comp
-L Device:R R12
+L R R12
 U 1 1 59094D03
 P 7550 3350
 F 0 "R12" V 7630 3350 50  0000 C CNN
@@ -432,7 +437,7 @@ $EndComp
 Wire Wire Line
 	8000 3350 7700 3350
 $Comp
-L Device:R R11
+L R R11
 U 1 1 59094D0A
 P 7550 2900
 F 0 "R11" V 7630 2900 50  0000 C CNN
@@ -445,7 +450,7 @@ $EndComp
 Wire Wire Line
 	8000 2900 7700 2900
 $Comp
-L Device:R R10
+L R R10
 U 1 1 59094D11
 P 7550 2450
 F 0 "R10" V 7630 2450 50  0000 C CNN
@@ -458,7 +463,7 @@ $EndComp
 Wire Wire Line
 	7700 2450 8000 2450
 $Comp
-L Device:R R9
+L R R9
 U 1 1 59094D18
 P 7550 2000
 F 0 "R9" V 7630 2000 50  0000 C CNN
@@ -487,7 +492,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 4700 7200 4700
 Wire Wire Line
-	8000 2000 8000 2450
+	8000 2000 8000 5200
 Connection ~ 8000 4700
 Connection ~ 8000 4250
 Connection ~ 8000 3800
@@ -543,7 +548,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 5150 6800 5150
 $Comp
-L power:GND #PWR05
+L GND #PWR05
 U 1 1 590A03E2
 P 8000 5200
 F 0 "#PWR05" H 8000 4950 50  0001 C CNN
@@ -555,7 +560,7 @@ F 3 "" H 8000 5200 60  0000 C CNN
 $EndComp
 Connection ~ 8000 5150
 $Comp
-L SWLEDX8-rescue:LED-fixed D1
+L LED-fixed D1
 U 1 1 590A178E
 P 7000 2000
 F 0 "D1" H 7000 2100 50  0000 C CNN
@@ -566,7 +571,7 @@ F 3 "" H 7000 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D2
+L LED-fixed D2
 U 1 1 590A2225
 P 7000 2450
 F 0 "D2" H 7000 2550 50  0000 C CNN
@@ -577,7 +582,7 @@ F 3 "" H 7000 2450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D3
+L LED-fixed D3
 U 1 1 590A2450
 P 7000 2900
 F 0 "D3" H 7000 3000 50  0000 C CNN
@@ -588,7 +593,7 @@ F 3 "" H 7000 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D4
+L LED-fixed D4
 U 1 1 590A24B0
 P 7000 3350
 F 0 "D4" H 7000 3450 50  0000 C CNN
@@ -599,7 +604,7 @@ F 3 "" H 7000 3350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D5
+L LED-fixed D5
 U 1 1 590A271E
 P 7000 3800
 F 0 "D5" H 7000 3900 50  0000 C CNN
@@ -610,7 +615,7 @@ F 3 "" H 7000 3800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D6
+L LED-fixed D6
 U 1 1 590A2782
 P 7000 4250
 F 0 "D6" H 7000 4350 50  0000 C CNN
@@ -621,7 +626,7 @@ F 3 "" H 7000 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D7
+L LED-fixed D7
 U 1 1 590A298C
 P 7000 4700
 F 0 "D7" H 7000 4800 50  0000 C CNN
@@ -632,7 +637,7 @@ F 3 "" H 7000 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:LED-fixed D8
+L LED-fixed D8
 U 1 1 590A29F8
 P 7000 5150
 F 0 "D8" H 7000 5250 50  0000 C CNN
@@ -650,7 +655,7 @@ Wire Wire Line
 	6000 3750 5900 3750
 Connection ~ 5300 3900
 $Comp
-L SWLEDX8-rescue:MTG_HOLE MTG?1
+L MTG_HOLE MTG?1
 U 1 1 590A3C67
 P 5550 7250
 F 0 "MTG?1" H 5550 7350 60  0000 C CNN
@@ -661,7 +666,7 @@ F 3 "" H 5550 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:MTG_HOLE MTG3
+L MTG_HOLE MTG3
 U 1 1 590A3EAE
 P 5550 7600
 F 0 "MTG3" H 5550 7700 60  0000 C CNN
@@ -672,7 +677,7 @@ F 3 "" H 5550 7600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:MTG_HOLE MTG2
+L MTG_HOLE MTG2
 U 1 1 590A3F10
 P 4700 7600
 F 0 "MTG2" H 4700 7700 60  0000 C CNN
@@ -683,7 +688,7 @@ F 3 "" H 4700 7600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWLEDX8-rescue:MTG_HOLE MTG1
+L MTG_HOLE MTG1
 U 1 1 590A3FE0
 P 4700 7250
 F 0 "MTG1" H 4700 7350 60  0000 C CNN
@@ -726,7 +731,7 @@ L6
 Text Label 6100 3650 0    60   ~ 0
 L7
 $Comp
-L SWLEDX8-rescue:COUPON TEST1
+L COUPON TEST1
 U 1 1 592AF46D
 P 3600 7700
 F 0 "TEST1" H 3600 8000 60  0000 C CNN
@@ -736,48 +741,4 @@ F 3 "" H 3600 7700 60  0000 C CNN
 	1    3600 7700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3600 5000 3600 5250
-Wire Wire Line
-	3600 4550 3600 5000
-Wire Wire Line
-	3600 4100 3600 4550
-Wire Wire Line
-	3600 3650 3600 4100
-Wire Wire Line
-	3600 3200 3600 3650
-Wire Wire Line
-	3600 2750 3600 3200
-Wire Wire Line
-	3600 2300 3600 2750
-Wire Wire Line
-	2950 1650 2950 2100
-Wire Wire Line
-	2950 2100 2950 2550
-Wire Wire Line
-	2950 2550 2950 3000
-Wire Wire Line
-	2950 3000 2950 3450
-Wire Wire Line
-	2950 3450 2950 3900
-Wire Wire Line
-	2950 3900 2950 4350
-Wire Wire Line
-	2950 4350 2950 4800
-Wire Wire Line
-	8000 4700 8000 5150
-Wire Wire Line
-	8000 4250 8000 4700
-Wire Wire Line
-	8000 3800 8000 4250
-Wire Wire Line
-	8000 3350 8000 3800
-Wire Wire Line
-	8000 2900 8000 3350
-Wire Wire Line
-	8000 2450 8000 2900
-Wire Wire Line
-	8000 5150 8000 5200
-Wire Wire Line
-	5300 3900 5300 4000
 $EndSCHEMATC
