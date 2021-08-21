@@ -1,0 +1,368 @@
+EESchema Schematic File Version 2
+LIBS:AudioAmp386-rescue
+LIBS:device
+LIBS:power
+LIBS:conn
+LIBS:linear
+LIBS:LandBoards_Conns
+LIBS:AudioAmp386-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "AUDIO AMPLIFIER - 700 mW"
+Date "Wednesday, April 19, 2017"
+Rev "X5"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 5150 3800 0    60   ~ 0
+AO
+Text Label 3750 3600 0    60   ~ 0
+RESWI
+Text Label 3600 3250 0    60   ~ 0
+RESHI
+Wire Wire Line
+	3800 3400 3800 3250
+Wire Wire Line
+	3800 3250 3350 3250
+Wire Wire Line
+	6500 3800 5850 3800
+Connection ~ 2500 4150
+Wire Wire Line
+	2500 4150 2500 3600
+Wire Wire Line
+	2300 3600 2300 4150
+Connection ~ 6850 4250
+Wire Wire Line
+	6850 4250 6850 4150
+Connection ~ 6350 4250
+Wire Wire Line
+	6350 4250 6950 4250
+Wire Wire Line
+	6950 4250 6950 4150
+Wire Wire Line
+	3050 3250 2750 3250
+Connection ~ 5250 5000
+Wire Wire Line
+	6350 2750 6350 5000
+Wire Wire Line
+	6350 5000 5250 5000
+Connection ~ 5250 3800
+Wire Wire Line
+	5250 4000 5250 3800
+Connection ~ 4500 5050
+Wire Wire Line
+	4100 5050 5250 5050
+Wire Wire Line
+	5250 4800 5250 5100
+Wire Wire Line
+	4500 4200 4500 5050
+Connection ~ 5250 5050
+Wire Wire Line
+	3750 4150 3750 3800
+Connection ~ 4100 4150
+Wire Wire Line
+	4100 3700 4050 3700
+Wire Wire Line
+	5100 3800 5650 3800
+Wire Wire Line
+	5250 4300 5250 4500
+Wire Wire Line
+	6350 2850 6600 2850
+Wire Wire Line
+	4500 2650 4500 3400
+Wire Wire Line
+	2300 4150 4100 4150
+Connection ~ 3750 4150
+Wire Wire Line
+	6750 4250 6750 4150
+Connection ~ 6750 4250
+Wire Wire Line
+	2400 4150 2400 3600
+Connection ~ 2400 4150
+Wire Wire Line
+	4100 3900 4100 5050
+Wire Wire Line
+	3650 3600 4050 3600
+Wire Wire Line
+	4050 3600 4050 3700
+Text Label 5250 4400 0    60   ~ 0
+COMP
+Text Label 6100 3800 0    60   ~ 0
+OUT
+Text Label 2850 3250 0    60   ~ 0
+IN
+Text Label 6300 2650 0    60   ~ 0
++12V
+$Comp
+L RCA-JACK J1
+U 1 1 4FDCEF9D
+P 2350 3300
+F 0 "J1" H 2350 3550 60  0000 C CNN
+F 1 "RCA-JACK" V 2150 3300 60  0000 C CNN
+F 2 "LandBoards_Conns:RCA" H 2350 3650 30  0000 C CNN
+F 3 "" H 2350 3300 60  0001 C CNN
+F 4 "Neutrik" H 2350 3300 60  0001 C CNN "Mfg"
+F 5 "NYS354" H 2350 3300 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 2350 3300 60  0001 C CNN "Vendor"
+F 7 "568-NYS354" H 2350 3300 60  0001 C CNN "VendorPN"
+	1    2350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L RCA-JACK J2
+U 1 1 4FDCEF97
+P 6900 3850
+F 0 "J2" H 6900 4100 60  0000 C CNN
+F 1 "RCA-JACK" H 6500 3750 60  0000 C CNN
+F 2 "LandBoards_Conns:RCA" H 6900 3400 20  0000 C CNN
+F 3 "" H 6900 3850 60  0001 C CNN
+F 4 "Neutrik" H 6900 3850 60  0001 C CNN "Mfg"
+F 5 "NYS354" H 6900 3850 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 6900 3850 60  0001 C CNN "Vendor"
+F 7 "568-NYS354" H 6900 3850 60  0001 C CNN "VendorPN"
+	1    6900 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 4FDCB12E
+P 3200 3250
+F 0 "C7" V 3300 3100 50  0000 L CNN
+F 1 "0.1uF" V 3050 3150 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" V 3350 3250 30  0000 C CNN
+F 3 "" H 3200 3250 60  0001 C CNN
+F 4 "Vishay" V 3200 3250 60  0001 C CNN "Mfg"
+F 5 "1C10Z5U104M050B" V 3200 3250 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 3200 3250 60  0001 C CNN "Vendor"
+F 7 "75-1C10Z5U104M050B" V 3200 3250 60  0001 C CNN "VendorPN"
+	1    3200 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND-RESCUE-AudioAmp386 #PWR01
+U 1 1 4FDCB11B
+P 5250 5100
+F 0 "#PWR01" H 5250 5100 30  0001 C CNN
+F 1 "GND" H 5250 5030 30  0001 C CNN
+F 2 "" H 5250 5100 60  0001 C CNN
+F 3 "" H 5250 5100 60  0001 C CNN
+	1    5250 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 4FDCB0F6
+P 5250 4650
+F 0 "R2" V 5330 4650 50  0000 C CNN
+F 1 "10" V 5250 4650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 5250 4650 60  0001 C CNN
+F 3 "" H 5250 4650 60  0001 C CNN
+F 4 "Vishay" V 5250 4650 60  0001 C CNN "Mfg"
+F 5 "CCF0710R0GKE36" V 5250 4650 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 5250 4650 60  0001 C CNN "Vendor"
+F 7 "71-CCF0710R0GKE36" V 5250 4650 60  0001 C CNN "VendorPN"
+	1    5250 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 4FDCB0F0
+P 5250 4150
+F 0 "C6" H 5300 4250 50  0000 L CNN
+F 1 ".047uF" H 5300 4050 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5850 3900 20  0000 C CNN
+F 3 "" H 5250 4150 60  0001 C CNN
+	1    5250 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM386-RESCUE-AudioAmp386 U1
+U 1 1 4FDCAFD4
+P 4600 3800
+F 0 "U1" H 4750 4000 60  0000 C CNN
+F 1 "LM386" H 4850 3650 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 4600 3800 30  0000 C CNN
+F 3 "" H 4600 3800 60  0001 C CNN
+F 4 "National Semi" H 4600 3800 60  0001 C CNN "Mfg"
+F 5 "LM386N-3/NOPB" H 4600 3800 60  0001 C CNN "MfgPN"
+F 6 "Mouser" H 4600 3800 60  0001 C CNN "Vendor"
+F 7 "926-LM386N-3/NOPB" H 4600 3800 60  0001 C CNN "VendorPN"
+	1    4600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3400 3800 3400
+Wire Wire Line
+	3750 3800 3650 3800
+$Comp
+L COUPON TESTED1
+U 1 1 58F7BF02
+P 4250 7900
+F 0 "TESTED1" H 4250 8200 60  0000 C CNN
+F 1 "COUPON" H 4250 7900 60  0000 C CNN
+F 2 "LandBoards_Marking:TEST_BLK-REAR" H 4250 7850 20  0000 C CNN
+F 3 "" H 4250 7900 60  0000 C CNN
+	1    4250 7900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MTG_HOLE MTG4
+U 1 1 58F7C073
+P 5400 7850
+F 0 "MTG4" H 5400 7950 60  0000 C CNN
+F 1 "MTG_HOLE" H 5400 7750 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 5400 7850 60  0000 C CNN
+F 3 "" H 5400 7850 60  0000 C CNN
+	1    5400 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1_Small C3
+U 1 1 58F7C718
+P 5800 3000
+F 0 "C3" H 5810 3070 50  0000 L CNN
+F 1 "100uF" H 5810 2920 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D8.0mm_P3.50mm" H 5850 2850 20  0000 C CNN
+F 3 "" H 5800 3000 60  0000 C CNN
+	1    5800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1_Small C2
+U 1 1 58F7C960
+P 5000 3000
+F 0 "C2" H 5010 3070 50  0000 L CNN
+F 1 "470uF" H 5010 2920 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm" H 4950 2850 20  0000 C CNN
+F 3 "" H 5000 3000 60  0000 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2650 6600 2650
+Wire Wire Line
+	5800 2650 5800 2900
+Wire Wire Line
+	4500 2650 5250 2650
+Wire Wire Line
+	5000 2650 5000 2900
+$Comp
+L R R1
+U 1 1 58F7CA42
+P 5400 2650
+F 0 "R1" V 5480 2650 50  0000 C CNN
+F 1 "10" V 5400 2650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5330 2650 20  0000 C CNN
+F 3 "" H 5400 2650 30  0000 C CNN
+	1    5400 2650
+	0    -1   -1   0   
+$EndComp
+Connection ~ 5000 2650
+Connection ~ 5800 2650
+Wire Wire Line
+	5000 3100 5000 3250
+Wire Wire Line
+	5000 3250 6350 3250
+Wire Wire Line
+	5800 3250 5800 3100
+Connection ~ 6350 3250
+Connection ~ 5800 3250
+$Comp
+L CP1_Small C4
+U 1 1 58F7D510
+P 4600 4450
+F 0 "C4" H 4610 4520 50  0000 L CNN
+F 1 "10uF" H 4610 4370 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.00mm" H 4600 4200 20  0000 C CNN
+F 3 "" H 4600 4450 60  0000 C CNN
+	1    4600 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4200 4600 4350
+Wire Wire Line
+	4600 4550 4600 4650
+Wire Wire Line
+	4600 4650 4900 4650
+Wire Wire Line
+	4900 4650 4900 4300
+Wire Wire Line
+	4900 4300 4700 4300
+Wire Wire Line
+	4700 4300 4700 4200
+$Comp
+L CP1_Small C5
+U 1 1 58F7EA40
+P 5750 3800
+F 0 "C5" V 5850 3800 50  0000 L CNN
+F 1 "470uF" V 5650 3700 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm" V 5600 3800 20  0000 C CNN
+F 3 "" H 5750 3800 60  0000 C CNN
+	1    5750 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X05 RV1
+U 1 1 58F7ABCF
+P 3450 3600
+F 0 "RV1" H 3450 3900 50  0000 C CNN
+F 1 "CONN_01X05" V 3550 3600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x05_Pitch2.54mm" H 3450 3600 20  0000 C CNN
+F 3 "" H 3450 3600 60  0000 C CNN
+	1    3450 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4200 4350 4350
+Wire Wire Line
+	4350 4550 4350 5050
+Connection ~ 4350 5050
+$Comp
+L CP1_Small C1
+U 1 1 58F7C880
+P 4350 4450
+F 0 "C1" H 4360 4520 50  0000 L CNN
+F 1 "10uF" H 4360 4370 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.00mm" H 4350 4200 20  0000 C CNN
+F 3 "" H 4350 4450 60  0000 C CNN
+	1    4350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 58F7BFCF
+P 3850 3900
+F 0 "C8" H 3900 4000 50  0000 L CNN
+F 1 ".001uF" H 3900 3800 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3850 3550 20  0000 C CNN
+F 3 "" H 3850 3900 60  0001 C CNN
+	1    3850 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4050 3850 4150
+Connection ~ 3850 4150
+Wire Wire Line
+	3850 3750 3850 3600
+Connection ~ 3850 3600
+$Comp
+L DCJ0202 J3
+U 1 1 590E26EA
+P 6900 2750
+F 0 "J3" H 6800 2900 50  0000 L BNN
+F 1 "DCJ0202" H 6800 2500 50  0000 L BNN
+F 2 "LandBoards_Conns:DCJ-NEW" H 6900 2900 50  0001 C CNN
+F 3 "" H 6900 2750 60  0000 C CNN
+	1    6900 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2750 6350 2750
+Connection ~ 6350 2850
+$EndSCHEMATC

@@ -1,12 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:AudioAmp386-rescue
-LIBS:device
-LIBS:power
-LIBS:conn
-LIBS:linear
-LIBS:LandBoards_Conns
-LIBS:AudioAmp386-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -32,24 +25,24 @@ Wire Wire Line
 	3800 3250 3350 3250
 Wire Wire Line
 	6500 3800 5850 3800
-Connection ~ 2500 4150
+Connection ~ 2500 5050
 Wire Wire Line
-	2500 4150 2500 3600
+	2500 5050 2500 3600
 Wire Wire Line
-	2300 3600 2300 4150
+	2300 3600 2300 5050
 Connection ~ 6850 4250
 Wire Wire Line
 	6850 4250 6850 4150
 Connection ~ 6350 4250
 Wire Wire Line
-	6350 4250 6950 4250
+	6350 4250 6750 4250
 Wire Wire Line
 	6950 4250 6950 4150
 Wire Wire Line
 	3050 3250 2750 3250
 Connection ~ 5250 5000
 Wire Wire Line
-	6350 2750 6350 5000
+	6350 2750 6350 2850
 Wire Wire Line
 	6350 5000 5250 5000
 Connection ~ 5250 3800
@@ -57,19 +50,16 @@ Wire Wire Line
 	5250 4000 5250 3800
 Connection ~ 4500 5050
 Wire Wire Line
-	4100 5050 5250 5050
-Wire Wire Line
-	5250 4800 5250 5100
+	5250 4800 5250 5000
 Wire Wire Line
 	4500 4200 4500 5050
 Connection ~ 5250 5050
 Wire Wire Line
-	3750 4150 3750 3800
-Connection ~ 4100 4150
+	3750 5050 3750 3800
 Wire Wire Line
 	4100 3700 4050 3700
 Wire Wire Line
-	5100 3800 5650 3800
+	5100 3800 5250 3800
 Wire Wire Line
 	5250 4300 5250 4500
 Wire Wire Line
@@ -77,18 +67,16 @@ Wire Wire Line
 Wire Wire Line
 	4500 2650 4500 3400
 Wire Wire Line
-	2300 4150 4100 4150
-Connection ~ 3750 4150
+	2300 5050 2400 5050
+Connection ~ 3750 5050
 Wire Wire Line
 	6750 4250 6750 4150
 Connection ~ 6750 4250
 Wire Wire Line
-	2400 4150 2400 3600
-Connection ~ 2400 4150
+	2400 5050 2400 3600
+Connection ~ 2400 5050
 Wire Wire Line
-	4100 3900 4100 5050
-Wire Wire Line
-	3650 3600 4050 3600
+	3650 3600 3850 3600
 Wire Wire Line
 	4050 3600 4050 3700
 Text Label 5250 4400 0    60   ~ 0
@@ -100,7 +88,7 @@ IN
 Text Label 6300 2650 0    60   ~ 0
 +12V
 $Comp
-L RCA-JACK J1
+L AudioAmp386-rescue:RCA-JACK J1
 U 1 1 4FDCEF9D
 P 2350 3300
 F 0 "J1" H 2350 3550 60  0000 C CNN
@@ -115,7 +103,7 @@ F 7 "568-NYS354" H 2350 3300 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L RCA-JACK J2
+L AudioAmp386-rescue:RCA-JACK J2
 U 1 1 4FDCEF97
 P 6900 3850
 F 0 "J2" H 6900 4100 60  0000 C CNN
@@ -130,7 +118,7 @@ F 7 "568-NYS354" H 6900 3850 60  0001 C CNN "VendorPN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L C C7
+L Device:C C7
 U 1 1 4FDCB12E
 P 3200 3250
 F 0 "C7" V 3300 3100 50  0000 L CNN
@@ -145,7 +133,7 @@ F 7 "75-1C10Z5U104M050B" V 3200 3250 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND-RESCUE-AudioAmp386 #PWR01
+L AudioAmp386-rescue:GND-RESCUE-AudioAmp386 #PWR01
 U 1 1 4FDCB11B
 P 5250 5100
 F 0 "#PWR01" H 5250 5100 30  0001 C CNN
@@ -156,7 +144,7 @@ F 3 "" H 5250 5100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 4FDCB0F6
 P 5250 4650
 F 0 "R2" V 5330 4650 50  0000 C CNN
@@ -171,18 +159,18 @@ F 7 "71-CCF0710R0GKE36" V 5250 4650 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L Device:C C6
 U 1 1 4FDCB0F0
 P 5250 4150
 F 0 "C6" H 5300 4250 50  0000 L CNN
-F 1 ".047uF" H 5300 4050 50  0000 L CNN
-F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5850 3900 20  0000 C CNN
+F 1 "0.1uF" H 5300 4050 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 5850 3900 20  0000 C CNN
 F 3 "" H 5250 4150 60  0001 C CNN
 	1    5250 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM386-RESCUE-AudioAmp386 U1
+L AudioAmp386-rescue:LM386-RESCUE-AudioAmp386 U1
 U 1 1 4FDCAFD4
 P 4600 3800
 F 0 "U1" H 4750 4000 60  0000 C CNN
@@ -201,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 3800 3650 3800
 $Comp
-L COUPON TESTED1
+L AudioAmp386-rescue:COUPON TESTED1
 U 1 1 58F7BF02
 P 4250 7900
 F 0 "TESTED1" H 4250 8200 60  0000 C CNN
@@ -212,7 +200,7 @@ F 3 "" H 4250 7900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MTG_HOLE MTG4
+L AudioAmp386-rescue:MTG_HOLE MTG4
 U 1 1 58F7C073
 P 5400 7850
 F 0 "MTG4" H 5400 7950 60  0000 C CNN
@@ -223,7 +211,7 @@ F 3 "" H 5400 7850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C3
+L Device:CP1_Small C3
 U 1 1 58F7C718
 P 5800 3000
 F 0 "C3" H 5810 3070 50  0000 L CNN
@@ -234,26 +222,26 @@ F 3 "" H 5800 3000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C2
+L Device:CP1_Small C2
 U 1 1 58F7C960
 P 5000 3000
 F 0 "C2" H 5010 3070 50  0000 L CNN
 F 1 "470uF" H 5010 2920 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm" H 4950 2850 20  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 4950 2850 20  0000 C CNN
 F 3 "" H 5000 3000 60  0000 C CNN
 	1    5000 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 2650 6600 2650
+	5550 2650 5800 2650
 Wire Wire Line
 	5800 2650 5800 2900
 Wire Wire Line
-	4500 2650 5250 2650
+	4500 2650 4650 2650
 Wire Wire Line
 	5000 2650 5000 2900
 $Comp
-L R R1
+L Device:R R1
 U 1 1 58F7CA42
 P 5400 2650
 F 0 "R1" V 5480 2650 50  0000 C CNN
@@ -268,13 +256,13 @@ Connection ~ 5800 2650
 Wire Wire Line
 	5000 3100 5000 3250
 Wire Wire Line
-	5000 3250 6350 3250
+	5000 3250 5800 3250
 Wire Wire Line
 	5800 3250 5800 3100
 Connection ~ 6350 3250
 Connection ~ 5800 3250
 $Comp
-L CP1_Small C4
+L Device:CP1_Small C4
 U 1 1 58F7D510
 P 4600 4450
 F 0 "C4" H 4610 4520 50  0000 L CNN
@@ -297,7 +285,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 4300 4700 4200
 $Comp
-L CP1_Small C5
+L Device:CP1_Small C5
 U 1 1 58F7EA40
 P 5750 3800
 F 0 "C5" V 5850 3800 50  0000 L CNN
@@ -308,7 +296,7 @@ F 3 "" H 5750 3800 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X05 RV1
+L AudioAmp386-rescue:CONN_01X05 RV1
 U 1 1 58F7ABCF
 P 3450 3600
 F 0 "RV1" H 3450 3900 50  0000 C CNN
@@ -324,35 +312,34 @@ Wire Wire Line
 	4350 4550 4350 5050
 Connection ~ 4350 5050
 $Comp
-L CP1_Small C1
+L Device:CP1_Small C1
 U 1 1 58F7C880
 P 4350 4450
 F 0 "C1" H 4360 4520 50  0000 L CNN
 F 1 "10uF" H 4360 4370 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.00mm" H 4350 4200 20  0000 C CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D5.0mm_P2.00mm" H 4350 4150 20  0000 C CNN
 F 3 "" H 4350 4450 60  0000 C CNN
 	1    4350 4450
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L Device:C C8
 U 1 1 58F7BFCF
 P 3850 3900
 F 0 "C8" H 3900 4000 50  0000 L CNN
-F 1 ".001uF" H 3900 3800 50  0000 L CNN
-F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3850 3550 20  0000 C CNN
+F 1 "47pF" H 3900 3800 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3850 3550 20  0000 C CNN
 F 3 "" H 3850 3900 60  0001 C CNN
 	1    3850 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 4050 3850 4150
-Connection ~ 3850 4150
+	3850 4050 3850 5050
 Wire Wire Line
 	3850 3750 3850 3600
 Connection ~ 3850 3600
 $Comp
-L DCJ0202 J3
+L AudioAmp386-rescue:DCJ0202 J3
 U 1 1 590E26EA
 P 6900 2750
 F 0 "J3" H 6800 2900 50  0000 L BNN
@@ -365,4 +352,84 @@ $EndComp
 Wire Wire Line
 	6600 2750 6350 2750
 Connection ~ 6350 2850
+Wire Wire Line
+	2500 5050 3750 5050
+Wire Wire Line
+	6850 4250 6950 4250
+Wire Wire Line
+	6350 4250 6350 5000
+Wire Wire Line
+	5250 5000 5250 5050
+Wire Wire Line
+	5250 3800 5650 3800
+Wire Wire Line
+	4500 5050 5250 5050
+Wire Wire Line
+	5250 5050 5250 5100
+Wire Wire Line
+	3750 5050 3850 5050
+Wire Wire Line
+	6750 4250 6850 4250
+Wire Wire Line
+	2400 5050 2500 5050
+Wire Wire Line
+	5000 2650 5250 2650
+Wire Wire Line
+	5800 2650 6600 2650
+Wire Wire Line
+	6350 3250 6350 4250
+Wire Wire Line
+	5800 3250 6350 3250
+Wire Wire Line
+	4350 5050 4500 5050
+Wire Wire Line
+	3850 3600 4050 3600
+Wire Wire Line
+	6350 2850 6350 3250
+$Comp
+L Device:C C10
+U 1 1 61204004
+P 4650 3000
+F 0 "C10" H 4700 3100 50  0000 L CNN
+F 1 "0.1uF" H 4700 2900 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 4650 2800 20  0000 C CNN
+F 3 "" H 4650 3000 60  0001 C CNN
+	1    4650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3250 4650 3250
+Wire Wire Line
+	4650 3250 4650 3150
+Connection ~ 5000 3250
+Wire Wire Line
+	4650 2850 4650 2650
+Connection ~ 4650 2650
+Wire Wire Line
+	4650 2650 5000 2650
+Connection ~ 3850 5050
+Wire Wire Line
+	3850 5050 4050 5050
+$Comp
+L Device:C C9
+U 1 1 6120D13A
+P 4050 4450
+F 0 "C9" H 4100 4550 50  0000 L CNN
+F 1 "0.1uF" H 4100 4350 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 4050 4100 20  0000 C CNN
+F 3 "" H 4050 4450 60  0001 C CNN
+	1    4050 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4300 4050 3900
+Wire Wire Line
+	4050 3900 4100 3900
+Wire Wire Line
+	4050 4600 4050 5050
+Connection ~ 4050 5050
+Wire Wire Line
+	4050 5050 4350 5050
+Text Label 4700 2650 0    60   ~ 0
+VFILT
 $EndSCHEMATC

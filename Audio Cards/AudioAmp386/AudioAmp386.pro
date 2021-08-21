@@ -1,4 +1,4 @@
-update=5/6/2017 3:35:20 PM
+update=8/20/2021 6:17:32 PM
 last_client=kicad
 [cvpcb]
 version=1
@@ -27,26 +27,16 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.381
 BoardOutlineThickness=0.381
 ModuleOutlineThickness=0.381
+[eeschema]
+version=1
+LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
 LabSize=60
-[eeschema]
-version=1
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
-[eeschema/libraries]
-LibName1=AudioAmp386-rescue
-LibName2=device
-LibName3=power
-LibName4=conn
-LibName5=linear
-LibName6=C:/Users/Douglas/Documents/GitHub/lb-boards/KiCAD/library/LandBoards_Conns
+ERC_TestSimilarLabels=1
