@@ -69,17 +69,6 @@ F 3 "~" H 4050 3800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LandBoards_Conns:DCJ0202 J3
-U 1 1 6121F8A4
-P 8000 2900
-F 0 "J3" H 7842 3003 50  0000 R CNN
-F 1 "DCJ0202" H 7842 2912 50  0000 R CNN
-F 2 "LandBoards_Conns:DCJ-NEW-Slotted" H 8700 750 50  0000 R CNN
-F 3 "" H 8000 2900 60  0000 C CNN
-	1    8000 2900
-	-1   0    0    -1  
-$EndComp
-$Comp
 L LandBoards_Semis:ZENER DZ1
 U 1 1 6120EEAD
 P 3450 3950
@@ -276,7 +265,7 @@ Wire Wire Line
 	5550 3150 5550 3200
 Text Label 3200 3550 0    60   ~ 0
 N1
-Text Label 7250 2800 0    60   ~ 0
+Text Label 6400 2800 0    60   ~ 0
 +12V
 $Comp
 L power:GND #PWR0102
@@ -311,30 +300,6 @@ Wire Wire Line
 	5350 3150 5550 3150
 Connection ~ 5550 3150
 Connection ~ 4050 2800
-$Comp
-L LandBoards_Conns:BNC P1
-U 1 1 61264FF9
-P 6900 3700
-F 0 "P1" H 7001 3720 60  0000 L CNN
-F 1 "BNC" H 7001 3629 40  0000 L CNN
-F 2 "LandBoards_Conns:BNC-RT" H 6300 2450 60  0000 L CNN
-F 3 "" H 6900 3700 60  0000 C CNN
-	1    6900 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 61265739
-P 6900 4050
-F 0 "#PWR0104" H 6900 3800 50  0001 C CNN
-F 1 "GND" H 6905 3877 50  0000 C CNN
-F 2 "" H 6900 4050 50  0001 C CNN
-F 3 "" H 6900 4050 50  0001 C CNN
-	1    6900 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6900 3900 6900 4050
 Connection ~ 5550 3700
 Wire Wire Line
 	5550 3700 5550 3800
@@ -402,28 +367,6 @@ Text Label 5650 3700 0    60   ~ 0
 N5
 Text Label 5000 3150 0    60   ~ 0
 N6
-$Comp
-L power:GND #PWR0106
-U 1 1 6128189C
-P 7600 3100
-F 0 "#PWR0106" H 7600 2850 50  0001 C CNN
-F 1 "GND" H 7605 2927 50  0000 C CNN
-F 2 "" H 7600 3100 50  0001 C CNN
-F 3 "" H 7600 3100 50  0001 C CNN
-	1    7600 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7600 2900 7600 3000
-Wire Wire Line
-	7600 2900 7700 2900
-Wire Wire Line
-	7600 3000 7700 3000
-Connection ~ 7600 3000
-Wire Wire Line
-	7600 3000 7600 3100
-Wire Wire Line
-	7700 2800 6950 2800
 Connection ~ 5550 2800
 $Comp
 L Device:C C5
@@ -442,7 +385,6 @@ F 7 "75-1C10Z5U104M050B" V 6950 3000 60  0001 C CNN "VendorPN"
 $EndComp
 Wire Wire Line
 	6950 2800 6950 2850
-Connection ~ 6950 2800
 Wire Wire Line
 	6950 2800 5550 2800
 $Comp
@@ -457,5 +399,64 @@ F 3 "" H 6950 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 3150 6950 3300
+	6950 3150 6950 3200
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6120FAAA
+P 6750 3700
+F 0 "TP1" H 6808 3863 50  0000 L CNN
+F 1 "TestPoint" H 6808 3772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 6808 3681 50  0000 L CNN
+F 3 "~" H 6950 3700 50  0001 C CNN
+	1    6750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6120FEFA
+P 6950 2700
+F 0 "TP2" H 7008 2863 50  0000 L CNN
+F 1 "TestPoint" H 7008 2772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 7000 2150 50  0000 L CNN
+F 3 "~" H 7150 2700 50  0001 C CNN
+	1    6950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2700 6950 2800
+Connection ~ 6950 2800
+$Comp
+L Connector:TestPoint TP3
+U 1 1 612121CD
+P 7600 2700
+F 0 "TP3" H 7658 2863 50  0000 L CNN
+F 1 "TestPoint" H 7658 2772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 7650 2050 50  0000 L CNN
+F 3 "~" H 7800 2700 50  0001 C CNN
+	1    7600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 612138D7
+P 8200 2700
+F 0 "TP4" H 8258 2863 50  0000 L CNN
+F 1 "TestPoint" H 8258 2772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 8250 1950 50  0000 L CNN
+F 3 "~" H 8400 2700 50  0001 C CNN
+	1    8200 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3200 7600 3200
+Wire Wire Line
+	8200 3200 8200 2700
+Connection ~ 6950 3200
+Wire Wire Line
+	6950 3200 6950 3300
+Wire Wire Line
+	7600 2700 7600 3200
+Connection ~ 7600 3200
+Wire Wire Line
+	7600 3200 8200 3200
 $EndSCHEMATC
