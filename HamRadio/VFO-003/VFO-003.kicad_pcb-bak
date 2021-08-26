@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 114)
+    (drawings 115)
     (tracks 404)
     (zones 0)
     (modules 53)
@@ -20,7 +20,7 @@
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
-    (36 B.SilkS user hide)
+    (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user hide)
     (39 F.Mask user)
@@ -2216,6 +2216,9 @@
     )
   )
 
+  (gr_text "REV 3" (at 134.62 35.052) (layer B.SilkS) (tstamp 6103161C)
+    (effects (font (size 1.5 1.5) (thickness 0.375)) (justify mirror))
+  )
   (gr_text "DTR\nTX\nRX\nVCC\nGND\nGND" (at 135.3312 42.9514 90) (layer F.SilkS) (tstamp 5F9C10CF)
     (effects (font (size 1.5 1.6) (thickness 0.375)) (justify left))
   )
@@ -3099,7 +3102,7 @@
   (segment (start 152.899 65.606) (end 152.316 66.189) (width 0.254) (layer F.Cu) (net 48) (status 30))
   (segment (start 152.899 63.754) (end 152.899 65.606) (width 0.254) (layer F.Cu) (net 48) (status 30))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5FAFF666) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 61031616) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -3353,7 +3356,7 @@
       )
     )
   )
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5FAFF663) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 61031613) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -4251,7 +4254,7 @@
       )
     )
   )
-  (zone (net 4) (net_name +3V3) (layer F.Cu) (tstamp 5FAFF660) (hatch edge 0.508)
+  (zone (net 4) (net_name +3V3) (layer F.Cu) (tstamp 61031610) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -4482,7 +4485,7 @@
       )
     )
   )
-  (zone (net 4) (net_name +3V3) (layer F.Cu) (tstamp 5FAFF65D) (hatch edge 0.508)
+  (zone (net 4) (net_name +3V3) (layer F.Cu) (tstamp 6103160D) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
