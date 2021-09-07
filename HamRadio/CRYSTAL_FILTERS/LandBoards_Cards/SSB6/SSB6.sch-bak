@@ -138,16 +138,16 @@ Connection ~ 2750 3650
 $Comp
 L Device:C C2
 U 1 1 611E04E4
-P 3100 2800
-F 0 "C2" V 2950 2750 50  0000 L CNN
-F 1 "330" V 3250 2750 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" V 4050 2750 30  0000 C CNN
-F 3 "" H 3100 2800 60  0001 C CNN
-F 4 "Vishay" V 3100 2800 60  0001 C CNN "Mfg"
-F 5 "1C10Z5U104M050B" V 3100 2800 60  0001 C CNN "MfgPN"
-F 6 "Mouser" V 3100 2800 60  0001 C CNN "Vendor"
-F 7 "75-1C10Z5U104M050B" V 3100 2800 60  0001 C CNN "VendorPN"
-	1    3100 2800
+P 3000 2800
+F 0 "C2" V 2850 2750 50  0000 L CNN
+F 1 "330" V 3150 2750 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm" V 3950 2750 30  0000 C CNN
+F 3 "" H 3000 2800 60  0001 C CNN
+F 4 "Vishay" V 3000 2800 60  0001 C CNN "Mfg"
+F 5 "1C10Z5U104M050B" V 3000 2800 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 3000 2800 60  0001 C CNN "Vendor"
+F 7 "75-1C10Z5U104M050B" V 3000 2800 60  0001 C CNN "VendorPN"
+	1    3000 2800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -409,10 +409,10 @@ F 7 "75-1C10Z5U104M050B" V 3650 3150 60  0001 C CNN "VendorPN"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2750 2800 2950 2800
+	2750 2800 2850 2800
 Connection ~ 2750 2800
 Wire Wire Line
-	3250 2800 3350 2800
+	3150 2800 3350 2800
 Wire Wire Line
 	4000 2800 4100 2800
 Wire Wire Line
@@ -506,4 +506,30 @@ Wire Wire Line
 Connection ~ 7350 3650
 Wire Wire Line
 	7350 3650 8700 3650
+Text Label 2550 2800 0    60   ~ 0
+IN
+Text Label 7500 2800 0    60   ~ 0
+OUT
+Text Label 1550 2800 0    60   ~ 0
+TIN
+Text Label 8650 2800 0    60   ~ 0
+TOUT
+Text Label 3200 2800 0    30   ~ 0
+C2Y1
+Text Label 3700 2750 0    30   ~ 0
+Y1Y2
+Text Label 4050 2800 0    30   ~ 0
+Y2Y3
+Text Label 4450 2800 0    30   ~ 0
+Y3C5
+Text Label 5000 2800 0    30   ~ 0
+C5Y4
+Text Label 5400 2800 0    30   ~ 0
+Y4C7
+Text Label 5800 2800 0    30   ~ 0
+C7Y5
+Text Label 6350 2800 0    30   ~ 0
+Y5C10
+Text Label 6800 2800 0    30   ~ 0
+C10Y6
 $EndSCHEMATC
