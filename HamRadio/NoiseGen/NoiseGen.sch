@@ -4,7 +4,7 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "CW FILTER"
+Title "RF NOISE GENERATOR"
 Date "2021-08-17"
 Rev "1"
 Comp "land-boards.com"
@@ -459,4 +459,14 @@ Wire Wire Line
 Connection ~ 7600 3200
 Wire Wire Line
 	7600 3200 8200 3200
+Text Label 6300 3700 0    60   ~ 0
+RF-OUT
+Text Notes 7500 2500 0    60   ~ 0
+GND
+Text Notes 8100 2500 0    60   ~ 0
+GND
+Text Notes 6700 3500 0    60   ~ 0
+RF
+Text Notes 6850 2500 0    60   ~ 0
++12V
 $EndSCHEMATC

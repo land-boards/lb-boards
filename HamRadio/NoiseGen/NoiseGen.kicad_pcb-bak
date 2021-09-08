@@ -901,7 +901,7 @@
     (arrow2a (pts (xy 56.662 33.2864) (xy 57.788504 33.872821)))
     (arrow2b (pts (xy 56.662 33.2864) (xy 57.788504 32.699979)))
   )
-  (gr_text GND (at 63.774 36.8424) (layer B.SilkS) (tstamp 6120EDEC)
+  (gr_text GND (at 64.028 37.0964) (layer B.SilkS) (tstamp 6120EDEC)
     (effects (font (size 1.524 1.524) (thickness 0.3048)) (justify mirror))
   )
   (gr_text GND (at 65.806 70.6244) (layer B.SilkS) (tstamp 6120EDE9)
@@ -967,7 +967,7 @@
   (segment (start 66.314 52.0824) (end 64.282 50.0504) (width 0.635) (layer Front) (net 10))
   (segment (start 66.314 54.3684) (end 66.314 52.0824) (width 0.635) (layer Front) (net 10))
 
-  (zone (net 1) (net_name GND) (layer Back) (tstamp 0) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer Back) (tstamp 6120EE8F) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))

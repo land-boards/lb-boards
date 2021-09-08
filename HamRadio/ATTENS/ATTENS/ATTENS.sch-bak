@@ -1,0 +1,459 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "ATTENS"
+Date "2021-09-08"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LandBoards_Conns:BNC P6
+U 1 1 6138EE5C
+P 4650 800
+F 0 "P6" H 4751 820 60  0000 L CNN
+F 1 "SMA" H 4751 729 40  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 -150 60  0000 L CNN
+F 3 "" H 4650 800 60  0000 C CNN
+	1    4650 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:BNC P1
+U 1 1 6138F9CC
+P 3950 800
+F 0 "P1" H 4150 850 60  0000 C CNN
+F 1 "SMA" H 4150 750 40  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 -250 60  0000 C CNN
+F 3 "" H 3950 800 60  0000 C CNN
+	1    3950 800 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 6139004A
+P 4150 950
+F 0 "R1" H 4209 1041 50  0000 L CNN
+F 1 "R_Small" H 4209 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 450 50  0000 L CNN
+F 3 "~" H 4150 950 50  0001 C CNN
+	1    4150 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 6139064F
+P 4300 800
+F 0 "R6" V 4014 800 50  0000 C CNN
+F 1 "R_Small" V 4105 800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 800 50  0000 C CNN
+F 3 "~" H 4300 800 50  0001 C CNN
+	1    4300 800 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 61390EE9
+P 4450 950
+F 0 "R11" H 4509 1041 50  0000 L CNN
+F 1 "R_Small" H 4509 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 250 50  0000 L CNN
+F 3 "~" H 4450 950 50  0001 C CNN
+	1    4450 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 800  4150 800 
+Wire Wire Line
+	4150 850  4150 800 
+Connection ~ 4150 800 
+Wire Wire Line
+	4150 800  4200 800 
+Wire Wire Line
+	4400 800  4450 800 
+Wire Wire Line
+	4450 850  4450 800 
+Connection ~ 4450 800 
+Wire Wire Line
+	4450 800  4500 800 
+Wire Wire Line
+	3950 1000 3950 1100
+Wire Wire Line
+	3950 1100 4150 1100
+Wire Wire Line
+	4650 1100 4650 1000
+Wire Wire Line
+	4450 1050 4450 1100
+Connection ~ 4450 1100
+Wire Wire Line
+	4450 1100 4650 1100
+Wire Wire Line
+	4150 1050 4150 1100
+Connection ~ 4150 1100
+Wire Wire Line
+	4150 1100 4450 1100
+Text Notes 4200 1350 0    100  ~ 20
+3 dB
+$Comp
+L LandBoards_Conns:BNC P7
+U 1 1 61397733
+P 4650 2300
+F 0 "P7" H 4751 2320 60  0000 L CNN
+F 1 "SMA" H 4751 2229 40  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 1350 60  0000 L CNN
+F 3 "" H 4650 2300 60  0000 C CNN
+	1    4650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:BNC P2
+U 1 1 613977AB
+P 3950 2300
+F 0 "P2" H 4150 2350 60  0000 C CNN
+F 1 "SMA" H 4150 2250 40  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 1250 60  0000 C CNN
+F 3 "" H 3950 2300 60  0000 C CNN
+	1    3950 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 613977B5
+P 4150 2450
+F 0 "R2" H 4209 2541 50  0000 L CNN
+F 1 "R_Small" H 4209 2450 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 1950 50  0000 L CNN
+F 3 "~" H 4150 2450 50  0001 C CNN
+	1    4150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 613977BF
+P 4300 2300
+F 0 "R7" V 4014 2300 50  0000 C CNN
+F 1 "R_Small" V 4105 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 2300 50  0000 C CNN
+F 3 "~" H 4300 2300 50  0001 C CNN
+	1    4300 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 613977C9
+P 4450 2450
+F 0 "R12" H 4509 2541 50  0000 L CNN
+F 1 "R_Small" H 4509 2450 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 1750 50  0000 L CNN
+F 3 "~" H 4450 2450 50  0001 C CNN
+	1    4450 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2300 4150 2300
+Wire Wire Line
+	4150 2350 4150 2300
+Connection ~ 4150 2300
+Wire Wire Line
+	4150 2300 4200 2300
+Wire Wire Line
+	4400 2300 4450 2300
+Wire Wire Line
+	4450 2350 4450 2300
+Connection ~ 4450 2300
+Wire Wire Line
+	4450 2300 4500 2300
+Wire Wire Line
+	3950 2500 3950 2600
+Wire Wire Line
+	3950 2600 4150 2600
+Wire Wire Line
+	4650 2600 4650 2500
+Wire Wire Line
+	4450 2550 4450 2600
+Connection ~ 4450 2600
+Wire Wire Line
+	4450 2600 4650 2600
+Wire Wire Line
+	4150 2550 4150 2600
+Connection ~ 4150 2600
+Wire Wire Line
+	4150 2600 4450 2600
+Text Notes 4200 2850 0    100  ~ 20
+10 dB
+$Comp
+L LandBoards_Conns:BNC P8
+U 1 1 6139A919
+P 4650 3850
+F 0 "P8" H 4751 3870 60  0000 L CNN
+F 1 "SMA" H 4751 3779 40  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 2900 60  0000 L CNN
+F 3 "" H 4650 3850 60  0000 C CNN
+	1    4650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:BNC P3
+U 1 1 6139A9F1
+P 3950 3850
+F 0 "P3" H 4150 3900 60  0000 C CNN
+F 1 "SMA" H 4150 3800 40  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 2800 60  0000 C CNN
+F 3 "" H 3950 3850 60  0000 C CNN
+	1    3950 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 6139A9FB
+P 4150 4000
+F 0 "R3" H 4209 4091 50  0000 L CNN
+F 1 "R_Small" H 4209 4000 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 3500 50  0000 L CNN
+F 3 "~" H 4150 4000 50  0001 C CNN
+	1    4150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 6139AA05
+P 4300 3850
+F 0 "R8" V 4014 3850 50  0000 C CNN
+F 1 "R_Small" V 4105 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 3850 50  0000 C CNN
+F 3 "~" H 4300 3850 50  0001 C CNN
+	1    4300 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 6139AA0F
+P 4450 4000
+F 0 "R13" H 4509 4091 50  0000 L CNN
+F 1 "R_Small" H 4509 4000 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 3300 50  0000 L CNN
+F 3 "~" H 4450 4000 50  0001 C CNN
+	1    4450 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3850 4150 3850
+Wire Wire Line
+	4150 3900 4150 3850
+Connection ~ 4150 3850
+Wire Wire Line
+	4150 3850 4200 3850
+Wire Wire Line
+	4400 3850 4450 3850
+Wire Wire Line
+	4450 3900 4450 3850
+Connection ~ 4450 3850
+Wire Wire Line
+	4450 3850 4500 3850
+Wire Wire Line
+	3950 4050 3950 4150
+Wire Wire Line
+	3950 4150 4150 4150
+Wire Wire Line
+	4650 4150 4650 4050
+Wire Wire Line
+	4450 4100 4450 4150
+Connection ~ 4450 4150
+Wire Wire Line
+	4450 4150 4650 4150
+Wire Wire Line
+	4150 4100 4150 4150
+Connection ~ 4150 4150
+Wire Wire Line
+	4150 4150 4450 4150
+Text Notes 4200 4400 0    100  ~ 20
+20 dB
+$Comp
+L LandBoards_Conns:BNC P9
+U 1 1 6139AA37
+P 4650 5350
+F 0 "P9" H 4751 5370 60  0000 L CNN
+F 1 "SMA" H 4751 5279 40  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 4400 60  0000 L CNN
+F 3 "" H 4650 5350 60  0000 C CNN
+	1    4650 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:BNC P4
+U 1 1 6139AA41
+P 3950 5350
+F 0 "P4" H 4150 5400 60  0000 C CNN
+F 1 "SMA" H 4150 5300 40  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 4300 60  0000 C CNN
+F 3 "" H 3950 5350 60  0000 C CNN
+	1    3950 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 6139AA4B
+P 4150 5500
+F 0 "R4" H 4209 5591 50  0000 L CNN
+F 1 "R_Small" H 4209 5500 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 5000 50  0000 L CNN
+F 3 "~" H 4150 5500 50  0001 C CNN
+	1    4150 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 6139AA55
+P 4300 5350
+F 0 "R9" V 4014 5350 50  0000 C CNN
+F 1 "R_Small" V 4105 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 5350 50  0000 C CNN
+F 3 "~" H 4300 5350 50  0001 C CNN
+	1    4300 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 6139AA5F
+P 4450 5500
+F 0 "R14" H 4509 5591 50  0000 L CNN
+F 1 "R_Small" H 4509 5500 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 4800 50  0000 L CNN
+F 3 "~" H 4450 5500 50  0001 C CNN
+	1    4450 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5350 4150 5350
+Wire Wire Line
+	4150 5400 4150 5350
+Connection ~ 4150 5350
+Wire Wire Line
+	4150 5350 4200 5350
+Wire Wire Line
+	4400 5350 4450 5350
+Wire Wire Line
+	4450 5400 4450 5350
+Connection ~ 4450 5350
+Wire Wire Line
+	4450 5350 4500 5350
+Wire Wire Line
+	3950 5550 3950 5650
+Wire Wire Line
+	3950 5650 4150 5650
+Wire Wire Line
+	4650 5650 4650 5550
+Wire Wire Line
+	4450 5600 4450 5650
+Connection ~ 4450 5650
+Wire Wire Line
+	4450 5650 4650 5650
+Wire Wire Line
+	4150 5600 4150 5650
+Connection ~ 4150 5650
+Wire Wire Line
+	4150 5650 4450 5650
+Text Notes 4200 5900 0    100  ~ 20
+40 dB
+$Comp
+L LandBoards_Conns:BNC P10
+U 1 1 613A174B
+P 4650 6800
+F 0 "P10" H 4751 6820 60  0000 L CNN
+F 1 "SMA" H 4751 6729 40  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 5850 60  0000 L CNN
+F 3 "" H 4650 6800 60  0000 C CNN
+	1    4650 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:BNC P5
+U 1 1 613A18E3
+P 3950 6800
+F 0 "P5" H 4150 6850 60  0000 C CNN
+F 1 "SMA" H 4150 6750 40  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 5750 60  0000 C CNN
+F 3 "" H 3950 6800 60  0000 C CNN
+	1    3950 6800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 613A18ED
+P 4150 6950
+F 0 "R5" H 4209 7041 50  0000 L CNN
+F 1 "R_Small" H 4209 6950 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2950 6450 50  0000 L CNN
+F 3 "~" H 4150 6950 50  0001 C CNN
+	1    4150 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 613A18F7
+P 4300 6800
+F 0 "R10" V 4014 6800 50  0000 C CNN
+F 1 "R_Small" V 4105 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 6800 50  0000 C CNN
+F 3 "~" H 4300 6800 50  0001 C CNN
+	1    4300 6800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 613A1901
+P 4450 6950
+F 0 "R15" H 4509 7041 50  0000 L CNN
+F 1 "R_Small" H 4509 6950 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 6250 50  0000 L CNN
+F 3 "~" H 4450 6950 50  0001 C CNN
+	1    4450 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6800 4150 6800
+Wire Wire Line
+	4150 6850 4150 6800
+Connection ~ 4150 6800
+Wire Wire Line
+	4150 6800 4200 6800
+Wire Wire Line
+	4400 6800 4450 6800
+Wire Wire Line
+	4450 6850 4450 6800
+Connection ~ 4450 6800
+Wire Wire Line
+	4450 6800 4500 6800
+Wire Wire Line
+	3950 7000 3950 7100
+Wire Wire Line
+	3950 7100 4150 7100
+Wire Wire Line
+	4650 7100 4650 7000
+Wire Wire Line
+	4450 7050 4450 7100
+Connection ~ 4450 7100
+Wire Wire Line
+	4450 7100 4650 7100
+Wire Wire Line
+	4150 7050 4150 7100
+Connection ~ 4150 7100
+Wire Wire Line
+	4150 7100 4450 7100
+Text Notes 4200 7350 0    100  ~ 20
+40 dB
+Text Label 4250 1100 0    50   ~ 0
+G03
+Text Label 4250 2600 0    50   ~ 0
+G10
+Text Label 4250 4150 0    50   ~ 0
+G20
+Text Label 4250 5650 0    50   ~ 0
+G40
+$EndSCHEMATC
