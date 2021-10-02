@@ -1,0 +1,340 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "RF NOISE GENERATOR"
+Date "2021-08-17"
+Rev "1"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CW5-rescue:COUPON-AudioAmp380-rescue TESTED1
+U 1 1 58F7BF02
+P 4250 7900
+F 0 "TESTED1" H 4250 8200 60  0000 C CNN
+F 1 "COUPON" H 4250 7900 60  0000 C CNN
+F 2 "LandBoards_Marking:TEST_BLK-REAR" H 4250 7850 20  0000 C CNN
+F 3 "" H 4250 7900 60  0000 C CNN
+	1    4250 7900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CW5-rescue:MTG_HOLE-AudioAmp380-rescue MTG4
+U 1 1 58F7C073
+P 5400 7850
+F 0 "MTG4" H 5400 7950 60  0000 C CNN
+F 1 "MTG_HOLE" H 5400 7750 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 5400 7850 60  0000 C CNN
+F 3 "" H 5400 7850 60  0000 C CNN
+	1    5400 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Semis:NPN Q1
+U 1 1 611EC0AC
+P 3650 4450
+F 0 "Q1" H 3841 4530 50  0000 L CNN
+F 1 "2N3904" H 3841 4439 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 3100 3800 35  0000 L CNN
+F 3 "" H 3650 4450 60  0000 C CNN
+	1    3650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Semis:NPN Q2
+U 1 1 611ECF68
+P 3650 3900
+F 0 "Q2" H 3841 3980 50  0000 L CNN
+F 1 "2N3904" H 3841 3889 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 3100 2550 35  0000 L CNN
+F 3 "" H 3650 3900 60  0000 C CNN
+	1    3650 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6120F78B
+P 1900 4350
+F 0 "C1" H 1950 4450 50  0000 L CNN
+F 1 "0.1uF" H 1950 4250 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 1900 2900 30  0000 C CNN
+F 3 "" H 1900 4350 60  0001 C CNN
+F 4 "Vishay" V 1900 4350 60  0001 C CNN "Mfg"
+F 5 "1C10Z5U104M050B" V 1900 4350 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 1900 4350 60  0001 C CNN "Vendor"
+F 7 "75-1C10Z5U104M050B" V 1900 4350 60  0001 C CNN "VendorPN"
+	1    1900 4350
+	1    0    0    -1  
+$EndComp
+Text Label 3300 3150 0    60   ~ 0
++12V
+$Comp
+L Connector:TestPoint TP2
+U 1 1 6120FEFA
+P 2500 3100
+F 0 "TP2" H 2558 3263 50  0000 L CNN
+F 1 "TestPoint" H 2558 3172 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 1500 800 50  0000 L CNN
+F 3 "~" H 2700 3100 50  0001 C CNN
+	1    2500 3100
+	1    0    0    -1  
+$EndComp
+Text Notes 2400 2900 0    60   ~ 0
++12V
+$Comp
+L LandBoards_Semis:NPN Q3
+U 1 1 613BDFD7
+P 2600 4450
+F 0 "Q3" H 2800 4450 50  0000 L CNN
+F 1 "2N3904" H 2800 4550 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 2100 5250 35  0000 L CNN
+F 3 "" H 2600 4450 60  0000 C CNN
+	1    2600 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 613C037F
+P 2500 3500
+F 0 "R1" H 2400 3450 50  0000 C CNN
+F 1 "470K" H 2350 3550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 2500 5350 35  0000 C CNN
+F 3 "~" H 2500 3500 50  0001 C CNN
+	1    2500 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 613D96B0
+P 3750 3350
+F 0 "R4" H 3650 3300 50  0000 C CNN
+F 1 "560" H 3600 3400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3750 5150 35  0000 C CNN
+F 3 "~" H 3750 3350 50  0001 C CNN
+	1    3750 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 3700 3750 3600
+Wire Wire Line
+	3750 3250 3750 3150
+Wire Wire Line
+	3750 3150 3000 3150
+Wire Wire Line
+	2500 3400 2500 3150
+Wire Wire Line
+	2800 4450 3450 4450
+Wire Wire Line
+	3750 4100 3750 4250
+$Comp
+L Device:R_Small R3
+U 1 1 613E3D87
+P 3000 4150
+F 0 "R3" H 2900 4100 50  0000 C CNN
+F 1 "150K" H 2850 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3000 5200 35  0000 C CNN
+F 3 "~" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 613E57D0
+P 3000 3500
+F 0 "R2" H 2900 3450 50  0000 C CNN
+F 1 "100K" H 2850 3550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3000 5450 35  0000 C CNN
+F 3 "~" H 3000 3500 50  0001 C CNN
+	1    3000 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 3400 3000 3150
+Connection ~ 3000 3150
+Wire Wire Line
+	3450 3900 3350 3900
+Wire Wire Line
+	2500 3150 3000 3150
+Wire Wire Line
+	3000 3900 3000 4050
+Connection ~ 3000 3900
+Wire Wire Line
+	3000 4250 3000 4750
+Wire Wire Line
+	3000 4750 3350 4750
+Wire Wire Line
+	3750 4750 3750 4650
+$Comp
+L Device:R_Small R5
+U 1 1 613F8141
+P 4400 4300
+F 0 "R5" H 4300 4250 50  0000 C CNN
+F 1 "100K" H 4250 4350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4400 5400 35  0000 C CNN
+F 3 "~" H 4400 4300 50  0001 C CNN
+	1    4400 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4650 3600 4400 3600
+Wire Wire Line
+	4400 3600 4400 4200
+Connection ~ 4400 3600
+Wire Wire Line
+	4400 4400 4400 4750
+$Comp
+L Device:C C3
+U 1 1 613F9B61
+P 4100 3600
+F 0 "C3" V 3950 3600 50  0000 L CNN
+F 1 "0.1uF" V 4250 3600 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" V 5850 3600 30  0000 C CNN
+F 3 "" H 4100 3600 60  0001 C CNN
+F 4 "Vishay" V 4100 3600 60  0001 C CNN "Mfg"
+F 5 "1C10Z5U104M050B" V 4100 3600 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 4100 3600 60  0001 C CNN "Vendor"
+F 7 "75-1C10Z5U104M050B" V 4100 3600 60  0001 C CNN "VendorPN"
+	1    4100 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3600 3950 3600
+Connection ~ 3750 3600
+Wire Wire Line
+	3750 3600 3750 3450
+Wire Wire Line
+	4250 3600 4400 3600
+Wire Wire Line
+	2500 3150 2500 3100
+Wire Wire Line
+	3750 4750 4400 4750
+Connection ~ 3750 4750
+Connection ~ 4400 4750
+NoConn ~ 2500 4650
+$Comp
+L Device:C C2
+U 1 1 61401D57
+P 3350 4150
+F 0 "C2" H 3400 4250 50  0000 L CNN
+F 1 "0.1uF" H 3400 4050 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3350 3000 30  0000 C CNN
+F 3 "" H 3350 4150 60  0001 C CNN
+F 4 "Vishay" V 3350 4150 60  0001 C CNN "Mfg"
+F 5 "1C10Z5U104M050B" V 3350 4150 60  0001 C CNN "MfgPN"
+F 6 "Mouser" V 3350 4150 60  0001 C CNN "Vendor"
+F 7 "75-1C10Z5U104M050B" V 3350 4150 60  0001 C CNN "VendorPN"
+	1    3350 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3600 3000 3900
+Wire Wire Line
+	3350 4000 3350 3900
+Connection ~ 3350 3900
+Wire Wire Line
+	3350 3900 3000 3900
+Wire Wire Line
+	3350 4300 3350 4750
+Connection ~ 3350 4750
+Wire Wire Line
+	3350 4750 3750 4750
+Text Notes 1350 4500 0    60   ~ 0
+GND
+Text Notes 4600 4500 0    60   ~ 0
+GND
+Connection ~ 4700 4750
+Wire Wire Line
+	4700 4700 4700 4750
+Wire Wire Line
+	1450 4750 1450 4700
+$Comp
+L Connector:TestPoint TP4
+U 1 1 612138D7
+P 1450 4700
+F 0 "TP4" H 1508 4863 50  0000 L CNN
+F 1 "TestPoint" H 1508 4772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 500 4200 50  0000 L CNN
+F 3 "~" H 1650 4700 50  0001 C CNN
+	1    1450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 612121CD
+P 4700 4700
+F 0 "TP3" H 4758 4863 50  0000 L CNN
+F 1 "TestPoint" H 4758 4772 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 3750 4300 50  0000 L CNN
+F 3 "~" H 4900 4700 50  0001 C CNN
+	1    4700 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3600 2500 3950
+Wire Wire Line
+	2500 3950 1900 3950
+Wire Wire Line
+	1900 3950 1900 4200
+Connection ~ 2500 3950
+Wire Wire Line
+	2500 3950 2500 4250
+Wire Wire Line
+	3000 4750 1900 4750
+Wire Wire Line
+	1900 4750 1900 4500
+Connection ~ 3000 4750
+Text Label 2100 3950 0    60   ~ 0
+N1
+Text Label 3100 4450 0    60   ~ 0
+N2
+Text Label 3150 3900 0    60   ~ 0
+N3
+Text Label 3850 3600 0    60   ~ 0
+N4
+Text Label 3750 4200 0    60   ~ 0
+N5
+Text Label 4000 4750 0    60   ~ 0
+GND
+$Comp
+L power:GND #PWR0101
+U 1 1 6142CDAD
+P 4700 4850
+F 0 "#PWR0101" H 4700 4600 50  0001 C CNN
+F 1 "GND" H 4705 4677 50  0000 C CNN
+F 2 "" H 4700 4850 50  0001 C CNN
+F 3 "" H 4700 4850 50  0001 C CNN
+	1    4700 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4850 4700 4750
+Wire Wire Line
+	4400 4750 4700 4750
+Text Label 4500 3600 0    60   ~ 0
+N6
+Connection ~ 2500 3150
+Wire Wire Line
+	1450 4750 1900 4750
+Connection ~ 1900 4750
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6157BDF0
+P 4650 3450
+F 0 "TP1" H 4708 3613 50  0000 L CNN
+F 1 "TestPoint" H 4708 3522 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 3650 1150 50  0000 L CNN
+F 3 "~" H 4850 3450 50  0001 C CNN
+	1    4650 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3450 4650 3600
+Text Notes 4700 3250 0    60   ~ 0
+RF
+$EndSCHEMATC
