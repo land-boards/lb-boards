@@ -19,7 +19,7 @@ U 1 1 6138EE5C
 P 4650 800
 F 0 "P6" H 4751 820 60  0000 L CNN
 F 1 "SMA" H 4751 729 40  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount" H 4000 -150 60  0000 L CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 4000 -150 60  0000 L CNN
 F 3 "" H 4650 800 60  0000 C CNN
 	1    4650 800 
 	1    0    0    -1  
@@ -30,7 +30,7 @@ U 1 1 6138F9CC
 P 3950 800
 F 0 "P1" H 4150 850 60  0000 C CNN
 F 1 "SMA" H 4150 750 40  0000 C CNN
-F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount" H 3900 -250 60  0000 C CNN
+F 2 "LandBoards_Conns:SMA_EDGE" H 3900 -250 60  0000 C CNN
 F 3 "" H 3950 800 60  0000 C CNN
 	1    3950 800 
 	-1   0    0    -1  
@@ -47,10 +47,10 @@ F 3 "~" H 4150 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R2
+L Device:R_Small R6
 U 1 1 6139064F
 P 4300 800
-F 0 "R2" V 4014 800 50  0000 C CNN
+F 0 "R6" V 4014 800 50  0000 C CNN
 F 1 "R_Small" V 4105 800 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5050 800 50  0000 C CNN
 F 3 "~" H 4300 800 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "~" H 4300 800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R3
+L Device:R_Small R11
 U 1 1 61390EE9
 P 4450 950
-F 0 "R3" H 4509 1041 50  0000 L CNN
+F 0 "R11" H 4509 1041 50  0000 L CNN
 F 1 "R_Small" H 4509 950 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3200 250 50  0000 L CNN
 F 3 "~" H 4450 950 50  0001 C CNN
