@@ -1,0 +1,20 @@
+********************** ON 2SC5706 SPICE PARAMETER *************************
+*.LIB 2SC5706                                                                 * DATE : 2016/04/06                                                           
+* Temp = 27 deg                                                               *                                                                             
+.MODEL 2SC5706 npn (       IS       = 400.0f         BF       = 300           
++NF       = 1              VAF      = 5              IKF      =1.1            
++ISE      = 50.00p         NE       = 2              BR       = 80            
++NR       = 1              VAR      = 20             IKR      =1.1            
++ISC      = 100.0p         NC       = 2              RB       =  800.0m       
++IRB      = 100.0m         RBM      = 35.00m         RE       = 35.00m        
++RC       = 30.00m         XTB      = 1              EG       = 1.11          
++XTI      = 3              CJE      = 270.0p         VJE      = 700.0m        
++MJE      = 350.0m         TF       = 340p           XTF      = 25            
++VTF      = 30             ITF      = 5              PTF      = 0             
++CJC      = 50.00p         VJC      = 330.0m         MJC      = 320.0m        
++XCJC     = 1              TR       =  1.000n        FC       = 500.0m        
++KF       = 0              AF       = 1              )                        
+*                                                                             
+*.ENDL 2SC5706                                                                *  Information herein is for example only;                                    
+*  it is not guaranteed for volume production.                                
+* ON Semiconductor                       

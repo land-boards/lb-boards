@@ -1,0 +1,8 @@
+********************** ON 2SC5706 SPICE PARAMETER *************************
+*.LIB ZENER_12V                                                                 * DATE : 2016/04/06                                                           
+* Temp = 27 deg                                                               *                                                                             
+.MODEL ZENER_12V D (  IS=1.13E-14 N=1.103 BV=12 IBV=0.005 RS=0.4798 CJO=4.928E-11 VJ=0.575 M=0.3292 FC=0.5 mfg=Philips type=zener )                        
+*                                                                             
+*.ENDL ZENER_12V                                                             *  Information herein is for example only;                                    
+*  it is not guaranteed for volume production.                                
+* ON Semiconductor                       
