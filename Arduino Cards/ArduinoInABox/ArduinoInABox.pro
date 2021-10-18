@@ -1,4 +1,4 @@
-update=10/27/2020 8:33:01 AM
+update=10/17/2021 10:37:46 AM
 version=1
 last_client=kicad
 [general]
@@ -24,7 +24,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=VFO-003.net
+LastNetListRead=ArduinoInABox.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -40,7 +40,8 @@ MinHoleToHole=0.25
 TrackWidth1=0.254
 TrackWidth2=0.1524
 TrackWidth3=0.635
-TrackWidth4=2.54
+TrackWidth4=1.27
+TrackWidth5=2.54
 ViaDiameter1=0.889
 ViaDrill1=0.635
 dPairWidth1=0.254
@@ -67,9 +68,9 @@ OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
 SolderMaskClearance=0
-SolderMaskMinWidth=0.25
+SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0

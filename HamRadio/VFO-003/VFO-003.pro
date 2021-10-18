@@ -1,4 +1,4 @@
-update=10/10/2021 4:32:11 PM
+update=10/13/2021 2:50:50 PM
 version=1
 last_client=kicad
 [general]
@@ -250,7 +250,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=W25
-Clearance=0.381
+Clearance=1
 TrackWidth=0.635
 ViaDiameter=0.889
 ViaDrill=0.635

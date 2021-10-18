@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\CRYSTAL_FILTERS\LandBoards_Cards\SSB6\SSB6.sch)
-    (date "8/30/2021 3:30:23 PM")
+    (source C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\CRYSTAL_FILTERS\SSB6\SSB6.sch)
+    (date "10/15/2021 6:44:22 AM")
     (tool "Eeschema (5.1.10)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -28,7 +28,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 58F7C073))
     (comp (ref C1)
-      (value 100pF)
+      (value 10pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -65,7 +65,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611D4C4B))
     (comp (ref C2)
-      (value 330)
+      (value 120pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -83,7 +83,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611E04EE))
     (comp (ref C4)
-      (value 680)
+      (value 100pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -108,7 +108,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611E6BBB))
     (comp (ref C6)
-      (value 680)
+      (value 100pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -119,7 +119,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611E88BB))
     (comp (ref C8)
-      (value 330)
+      (value 100pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -130,7 +130,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611FB007))
     (comp (ref C7)
-      (value 270)
+      (value 470pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -148,7 +148,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611FB022))
     (comp (ref C9)
-      (value 100pF)
+      (value 82pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -178,7 +178,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611D0E72))
     (comp (ref C3)
-      (value 270)
+      (value 82pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -189,7 +189,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 612C672E))
     (comp (ref C5)
-      (value 200)
+      (value 470pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -200,7 +200,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 611E6BB1))
     (comp (ref C10)
-      (value 270)
+      (value 120pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -218,7 +218,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 612E3B42))
     (comp (ref C11)
-      (value 100pF)
+      (value 10pF)
       (footprint Capacitor_THT:C_Disc_D7.5mm_W4.4mm_P5.00mm)
       (fields
         (field (name Mfg) Vishay)
@@ -283,7 +283,7 @@
     (library (logical LandBoards_Conns)
       (uri C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Conns.lib))
     (library (logical SSB6-rescue)
-      (uri C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\CRYSTAL_FILTERS\LandBoards_Cards\SSB6/SSB6-rescue.lib)))
+      (uri C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\CRYSTAL_FILTERS\SSB6/SSB6-rescue.lib)))
   (nets
     (net (code 1) (name /TOUT)
       (node (ref J2) (pin 1))

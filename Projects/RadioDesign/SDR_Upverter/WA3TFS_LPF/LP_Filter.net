@@ -1,0 +1,11 @@
+* C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Projects\RadioDesign\SDR_Upverter\WA3TFS_LPF\LP_Filter.asc
+L1 N001 N002 .32µ
+L2 N002 N003 .32µ
+C1 N001 0 68p
+C2 N002 0 150p
+C3 N003 0 68p
+V1 N001 0 AC 1 Rser=0
+R1 N003 0 50
+.ac dec 10 1MEG 1000MEG
+.backanno
+.end
