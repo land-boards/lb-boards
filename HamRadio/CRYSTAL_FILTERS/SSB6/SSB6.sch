@@ -92,7 +92,7 @@ F 1 "Transformer_1P_1S" H 2050 3380 50  0000 C CNN
 F 2 "Transformer_THT:Transformer_Toroid_Tapped_Horizontal_D10.5mm_Amidon-T37" H 2050 2200 30  0000 C CNN
 F 3 "~" H 2050 3000 50  0001 C CNN
 	1    2050 3000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	1350 2800 1450 2800
@@ -532,4 +532,46 @@ Text Label 6350 2800 0    30   ~ 0
 Y5C10
 Text Label 6800 2800 0    30   ~ 0
 C10Y6
+$Comp
+L Connector:Conn_01x01_Female J3
+U 1 1 617332DF
+P 2200 4150
+F 0 "J3" H 2228 4176 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 2228 4085 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 4150 50  0001 C CNN
+F 3 "~" H 2200 4150 50  0001 C CNN
+	1    2200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J4
+U 1 1 617337BC
+P 2200 4400
+F 0 "J4" H 2228 4426 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 2228 4335 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 4400 50  0001 C CNN
+F 3 "~" H 2200 4400 50  0001 C CNN
+	1    2200 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4150 1900 4150
+Wire Wire Line
+	1900 4150 1900 4400
+Wire Wire Line
+	2000 4400 1900 4400
+Connection ~ 1900 4400
+Wire Wire Line
+	1900 4400 1900 4550
+$Comp
+L power:GND #PWR0102
+U 1 1 61736E85
+P 1900 4550
+F 0 "#PWR0102" H 1900 4300 50  0001 C CNN
+F 1 "GND" H 1905 4377 50  0000 C CNN
+F 2 "" H 1900 4550 50  0001 C CNN
+F 3 "" H 1900 4550 50  0001 C CNN
+	1    1900 4550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

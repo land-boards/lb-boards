@@ -1,0 +1,145 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Generic_Conn_01x03
+#
+DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -150 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# W7ZOI_TIA-rescue_BNC-RF-Amp-rescue
+#
+DEF W7ZOI_TIA-rescue_BNC-RF-Amp-rescue P 0 40 Y N 1 F N
+F0 "P" 10 120 60 H V C CNN
+F1 "W7ZOI_TIA-rescue_BNC-RF-Amp-rescue" 110 -60 40 V V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C 0 0 20 0 1 8 N
+C 0 0 70 0 1 12 N
+X In 1 -150 0 130 R 40 40 1 1 P
+X Ext 2 0 -200 130 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# W7ZOI_TIA-rescue_C-RF-Amp-rescue
+#
+DEF W7ZOI_TIA-rescue_C-RF-Amp-rescue C 0 10 N Y 1 F N
+F0 "C" 0 100 40 H V L CNN
+F1 "W7ZOI_TIA-rescue_C-RF-Amp-rescue" 6 -85 40 H V L CNN
+F2 "" 38 -150 30 H V C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ SM*
+ C?
+ C1-1
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 200 170 D 40 40 1 1 P
+X ~ 2 0 -200 170 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# W7ZOI_TIA-rescue_CONN_1-RF-Amp-rescue
+#
+DEF W7ZOI_TIA-rescue_CONN_1-RF-Amp-rescue P 0 30 N N 1 F N
+F0 "P" 80 0 40 H V L CNN
+F1 "W7ZOI_TIA-rescue_CONN_1-RF-Amp-rescue" 0 55 30 H I C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C 0 0 31 0 1 0 N
+P 2 0 1 0 -30 0 -50 0 N
+X 1 1 -150 0 100 R 60 60 1 1 P
+ENDDRAW
+ENDDEF
+#
+# W7ZOI_TIA-rescue_NPN-RF-Amp-rescue
+#
+DEF W7ZOI_TIA-rescue_NPN-RF-Amp-rescue Q 0 0 Y Y 1 F N
+F0 "Q" 0 -150 50 H V R CNN
+F1 "W7ZOI_TIA-rescue_NPN-RF-Amp-rescue" 0 150 50 H V R CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 0 0 100 100 N
+P 3 0 1 10 0 75 0 -75 0 -75 N
+P 3 0 1 0 50 -50 0 0 0 0 N
+P 3 0 1 0 90 -90 100 -100 100 -100 N
+P 5 0 1 0 90 -90 70 -30 30 -70 90 -90 90 -90 F
+X E 1 100 -200 100 U 40 40 1 1 P
+X B 2 -200 0 200 R 40 40 1 1 I
+X C 3 100 200 100 D 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# W7ZOI_TIA-rescue_R-RF-Amp-rescue
+#
+DEF W7ZOI_TIA-rescue_R-RF-Amp-rescue R 0 0 N Y 1 F N
+F0 "R" 80 0 40 V V C CNN
+F1 "W7ZOI_TIA-rescue_R-RF-Amp-rescue" 7 1 40 V V C CNN
+F2 "" -70 0 30 V V C CNN
+F3 "" 0 0 30 H V C CNN
+$FPLIST
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$ENDFPLIST
+DRAW
+S -40 150 40 -150 0 1 12 N
+X ~ 1 0 250 100 D 60 60 1 1 P
+X ~ 2 0 -250 100 U 60 60 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# pspice_VSOURCE
+#
+DEF pspice_VSOURCE V 0 40 Y Y 1 F N
+F0 "V" -250 300 50 H V C CNN
+F1 "pspice_VSOURCE" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 0 0 200 0 1 0 N
+T 0 -320 -10 50 0 0 1 V Normal 0 C C
+P 2 0 1 0 -250 -250 -250 150 F
+P 3 0 1 0 -300 150 -250 250 -200 150 F
+X E1 1 0 300 100 D 50 50 1 1 I
+X E2 2 0 -300 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

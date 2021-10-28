@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source "C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-boards\\Audio Cards\\AudioAmp380\\AudioAmp380.sch")
-    (date "8/20/2021 6:06:12 PM")
-    (tool "Eeschema (5.1.5)-3")
+    (source "C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-boards\\Audio Cards\\AudioAmp380\\Rev 1\\AudioAmp380.sch")
+    (date "10/23/2021 2:20:55 PM")
+    (tool "Eeschema (5.1.10)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "AUDIO AMPLIFIER - 5W")
@@ -169,7 +169,7 @@
       (tstamp 611E06D5))
     (comp (ref RV2)
       (value 500)
-      (footprint Potentiometer_THT:Potentiometer_Bourns_3296Y_Vertical)
+      (footprint Potentiometer_THT:Potentiometer_Bourns_3266Y_Vertical)
       (datasheet ~)
       (libsource (lib Device) (part R_POT_Small) (description Potentiometer))
       (sheetpath (names /) (tstamps /))
@@ -351,7 +351,7 @@
     (library (logical Amplifier_Operational)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Amplifier_Operational.lib"))
     (library (logical AudioAmp380-rescue)
-      (uri "C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-boards\\Audio Cards\\AudioAmp380/AudioAmp380-rescue.lib"))
+      (uri "C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\lb-boards\\Audio Cards\\AudioAmp380\\Rev 1/AudioAmp380-rescue.lib"))
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib")))
   (nets
