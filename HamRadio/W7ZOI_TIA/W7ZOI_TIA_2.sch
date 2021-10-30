@@ -4,11 +4,11 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "TIA Amplifier"
-Date "2020-01-05"
-Rev "X1"
-Comp "Land Boards LLC"
-Comment1 ""
+Title "W7ZIO TERMINATION INSENSITIVE AMPLIFIER (TIA)"
+Date "2021-10-29"
+Rev "1"
+Comp "Land Boards LLc"
+Comment1 "http://w7zoi.net/bidirectional_matched_amplifier.pdf"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -521,7 +521,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 950  3000 950 
 Text Notes 1400 2900 0    50   ~ 0
-.ac dec 100 1Meg 50Meg
+.ac dec 100 1Meg 100Meg
 $Comp
 L pspice:VSOURCE V2
 U 1 1 617AC1A3
@@ -604,6 +604,432 @@ Text Notes 5750 2600 0    50   ~ 0
 RD
 Text Notes 5250 1250 0    50   ~ 0
 R1(COLL)
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R12
+U 1 1 617A561F
+P 3600 4050
+F 0 "R12" V 3680 4050 40  0000 C CNN
+F 1 "10" V 3607 4051 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1200 4050 30  0000 C CNN
+F 3 "~" H 3600 4050 30  0000 C CNN
+	1    3600 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:NPN-RF-Amp-rescue Q5
+U 1 1 617A5860
+P 6100 4900
+F 0 "Q5" H 6050 5050 50  0000 R CNN
+F 1 "2N3904" H 6550 5000 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 6100 3350 30  0000 C CNN
+F 3 "~" H 6100 4900 60  0000 C CNN
+F 4 "Q" H 6100 4900 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 6100 4900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6100 4900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 6100 4900 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 1" H 6100 4900 50  0001 C CNN "Spice_Node_Sequence"
+	1    6100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C7
+U 1 1 617A5881
+P 3900 4300
+F 0 "C7" H 3900 4400 40  0000 L CNN
+F 1 "0.1u" H 3906 4215 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3900 2200 30  0000 C CNN
+F 3 "~" H 3900 4300 60  0000 C CNN
+	1    3900 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:NPN-RF-Amp-rescue Q6
+U 1 1 617A5890
+P 6700 5200
+F 0 "Q6" H 6650 5350 50  0000 R CNN
+F 1 "2N3904" H 7150 5300 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 6700 4050 30  0000 C CNN
+F 3 "~" H 6700 5200 60  0000 C CNN
+F 4 "Q" H 6700 5200 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 6700 5200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6700 5200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 6700 5200 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 1" H 6700 5200 50  0001 C CNN "Spice_Node_Sequence"
+	1    6700 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5000 6800 4050
+Wire Wire Line
+	6200 4700 6200 4050
+Wire Wire Line
+	6200 4050 6800 4050
+$Comp
+L W7ZOI_TIA-rescue:NPN-RF-Amp-rescue Q4
+U 1 1 617A58A2
+P 5050 5250
+F 0 "Q4" H 5000 5400 50  0000 R CNN
+F 1 "2N3904" H 5500 5350 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 5050 4050 30  0000 C CNN
+F 3 "~" H 5050 5250 60  0000 C CNN
+F 4 "Q" H 5050 5250 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 5050 5250 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5050 5250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 5050 5250 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 1 " H 5050 5250 50  0001 C CNN "Spice_Node_Sequence"
+	1    5050 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R16
+U 1 1 617A58AC
+P 5150 4450
+F 0 "R16" H 5250 4500 40  0000 C CNN
+F 1 "330" H 5250 4400 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5150 2350 30  0000 C CNN
+F 3 "~" H 5150 4450 30  0000 C CNN
+	1    5150 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4050 5150 4050
+Wire Wire Line
+	5150 4050 5150 4200
+Connection ~ 6200 4050
+Wire Wire Line
+	5150 4700 5150 4750
+Wire Wire Line
+	5900 4900 5150 4900
+Connection ~ 5150 4900
+Wire Wire Line
+	5150 4900 5150 5050
+Wire Wire Line
+	6200 5100 6200 5200
+Wire Wire Line
+	6200 5200 6500 5200
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R19
+U 1 1 617A58BF
+P 6200 5800
+F 0 "R19" H 6300 5850 40  0000 C CNN
+F 1 "2.2K" H 6350 5700 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 6200 5100 30  0000 C CNN
+F 3 "~" H 6200 5800 30  0000 C CNN
+	1    6200 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 5200 6200 5550
+Connection ~ 6200 5200
+Wire Wire Line
+	6800 5550 6800 5450
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R17
+U 1 1 617A58CC
+P 5150 5800
+F 0 "R17" H 5250 5850 40  0000 C CNN
+F 1 "180" H 5300 5700 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5150 4900 30  0000 C CNN
+F 3 "~" H 5150 5800 30  0000 C CNN
+	1    5150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C9
+U 1 1 617A58D6
+P 5400 5500
+F 0 "C9" V 5250 5500 40  0000 L CNN
+F 1 "0.1u" V 5550 5450 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" V 6300 5500 30  0000 C CNN
+F 3 "~" H 5400 5500 60  0000 C CNN
+	1    5400 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 5450 5150 5500
+Wire Wire Line
+	5150 5500 5200 5500
+Connection ~ 5150 5500
+Wire Wire Line
+	5150 5500 5150 5550
+Wire Wire Line
+	5150 6050 5150 6100
+Wire Wire Line
+	6200 6050 6200 6100
+Connection ~ 6200 6100
+Wire Wire Line
+	6200 6100 6800 6100
+Wire Wire Line
+	6800 6050 6800 6100
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C8
+U 1 1 617A58E9
+P 4550 5000
+F 0 "C8" H 4550 5100 40  0000 L CNN
+F 1 "0.1u" H 4556 4915 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 4550 3500 30  0000 C CNN
+F 3 "~" H 4550 5000 60  0000 C CNN
+	1    4550 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R15
+U 1 1 617A58F3
+P 4850 4750
+F 0 "R15" V 4750 4750 40  0000 C CNN
+F 1 "1800" V 4950 4750 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6450 4750 30  0000 C CNN
+F 3 "~" H 4850 4750 30  0000 C CNN
+	1    4850 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R13
+U 1 1 617A58FD
+P 4200 4450
+F 0 "R13" H 4300 4500 40  0000 C CNN
+F 1 "10K" H 4300 4400 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 4200 2300 30  0000 C CNN
+F 3 "~" H 4200 4450 30  0000 C CNN
+	1    4200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R14
+U 1 1 617A5907
+P 4200 5800
+F 0 "R14" H 4300 5850 40  0000 C CNN
+F 1 "2.2K" H 4350 5700 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 4200 4950 30  0000 C CNN
+F 3 "~" H 4200 5800 30  0000 C CNN
+	1    4200 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6100 4200 6100
+Wire Wire Line
+	4200 6100 4200 6050
+Connection ~ 5150 6100
+Wire Wire Line
+	4200 5550 4200 5250
+Wire Wire Line
+	4850 5250 4550 5250
+Connection ~ 4200 5250
+Wire Wire Line
+	4200 5250 4200 5050
+Wire Wire Line
+	4550 5200 4550 5250
+Connection ~ 4550 5250
+Wire Wire Line
+	4550 5250 4200 5250
+Wire Wire Line
+	4600 4750 4550 4750
+Wire Wire Line
+	4550 4750 4550 4800
+Wire Wire Line
+	5100 4750 5150 4750
+Connection ~ 5150 4750
+Wire Wire Line
+	5150 4750 5150 4900
+Wire Wire Line
+	5150 4050 4200 4050
+Wire Wire Line
+	4200 4050 4200 4200
+Connection ~ 5150 4050
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C6
+U 1 1 617A5923
+P 3850 5050
+F 0 "C6" V 3700 5000 40  0000 L CNN
+F 1 "0.1u" V 4000 5000 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" V 5350 4950 30  0000 C CNN
+F 3 "~" H 3850 5050 60  0000 C CNN
+	1    3850 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4050 5050 4200 5050
+Connection ~ 4200 5050
+Wire Wire Line
+	4200 5050 4200 4700
+Wire Wire Line
+	5150 6100 5650 6100
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R18
+U 1 1 617A5942
+P 5650 5800
+F 0 "R18" H 5750 5850 40  0000 C CNN
+F 1 "4.7" H 5750 5700 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5650 4850 30  0000 C CNN
+F 3 "~" H 5650 5800 30  0000 C CNN
+	1    5650 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6050 5650 6100
+Connection ~ 5650 6100
+Wire Wire Line
+	5650 6100 6200 6100
+Wire Wire Line
+	5600 5500 5650 5500
+Wire Wire Line
+	5650 5500 5650 5550
+$Comp
+L power:GND #PWR0104
+U 1 1 617A5951
+P 3900 4600
+F 0 "#PWR0104" H 3900 4350 50  0001 C CNN
+F 1 "GND" H 3905 4427 50  0000 C CNN
+F 2 "" H 3900 4600 50  0001 C CNN
+F 3 "" H 3900 4600 50  0001 C CNN
+	1    3900 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4500 3900 4550
+Wire Wire Line
+	3850 4050 3900 4050
+Connection ~ 4200 4050
+Wire Wire Line
+	3900 4100 3900 4050
+Connection ~ 3900 4050
+Wire Wire Line
+	3900 4050 4200 4050
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 617A5964
+P 2550 4050
+F 0 "J2" H 2550 4250 50  0000 C CNN
+F 1 "Conn_01x03" H 2550 3800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2550 4050 50  0001 C CNN
+F 3 "~" H 2550 4050 50  0001 C CNN
+F 4 "J" H 2550 4050 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x03" H 2550 4050 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2550 4050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2550 4050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4550 2850 4150
+Wire Wire Line
+	2850 3950 2750 3950
+Connection ~ 3900 4550
+Wire Wire Line
+	3900 4550 3900 4600
+Wire Wire Line
+	2750 4150 2850 4150
+Connection ~ 2850 4150
+Wire Wire Line
+	2850 4150 2850 3950
+Connection ~ 6800 5450
+Wire Wire Line
+	6800 5450 6800 5400
+Text Notes 1350 6000 0    50   ~ 0
+.ac dec 100 1Meg 100Meg
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R20
+U 1 1 617A59C4
+P 6800 5800
+F 0 "R20" H 6900 5850 40  0000 C CNN
+F 1 "470" H 6950 5700 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 6800 5050 30  0000 C CNN
+F 3 "~" H 6800 5800 30  0000 C CNN
+	1    6800 5800
+	1    0    0    -1  
+$EndComp
+Text Label 4300 5250 0    50   ~ 0
+V1
+Text Label 5200 5500 0    50   ~ 0
+V2
+Text Label 5350 4900 0    50   ~ 0
+V3
+Text Label 6350 5200 0    50   ~ 0
+V4
+Text Notes 4800 4600 0    50   ~ 0
+RF
+Text Notes 5700 5700 0    50   ~ 0
+RD
+Text Notes 5200 4350 0    50   ~ 0
+R1(COLL)
+Wire Wire Line
+	3300 5050 3650 5050
+Text Label 3400 5050 0    50   ~ 0
+S2
 Text Label 3500 1950 0    50   ~ 0
 VIN
+Wire Wire Line
+	2850 4550 3900 4550
+Wire Wire Line
+	2750 4050 3150 4050
+Wire Wire Line
+	1750 4700 1750 4800
+$Comp
+L power:GND #PWR0105
+U 1 1 617E32F0
+P 1750 4800
+F 0 "#PWR0105" H 1750 4550 50  0001 C CNN
+F 1 "GND" H 1755 4627 50  0000 C CNN
+F 2 "" H 1750 4800 50  0001 C CNN
+F 3 "" H 1750 4800 50  0001 C CNN
+	1    1750 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1850 4000 2    50   Input ~ 0
+V2
+Wire Wire Line
+	1750 4100 1750 4000
+Wire Wire Line
+	1750 4000 1850 4000
+Text GLabel 3250 3800 2    50   Input ~ 0
+V2
+Wire Wire Line
+	3150 4050 3150 3800
+Wire Wire Line
+	3150 3800 3250 3800
+Connection ~ 3150 4050
+Wire Wire Line
+	3150 4050 3350 4050
+$Comp
+L pspice:VSOURCE V3
+U 1 1 617E2F3D
+P 1750 4400
+F 0 "V3" H 1978 4446 50  0000 L CNN
+F 1 "dc 0" H 1978 4355 50  0000 L CNN
+F 2 "" H 1750 4400 50  0001 C CNN
+F 3 "~" H 1750 4400 50  0001 C CNN
+	1    1750 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5450 6850 5450
+Text Label 7950 5450 0    50   ~ 0
+VIN
+Wire Wire Line
+	7850 5450 8250 5450
+Text Label 7400 5450 0    50   ~ 0
+V5
+Wire Wire Line
+	7350 5450 7450 5450
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R21
+U 1 1 617A5981
+P 7100 5450
+F 0 "R21" V 7000 5450 40  0000 C CNN
+F 1 "47" V 7200 5450 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8050 5450 30  0000 C CNN
+F 3 "~" H 7100 5450 30  0000 C CNN
+	1    7100 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C10
+U 1 1 617A5977
+P 7650 5450
+F 0 "C10" V 7500 5400 40  0000 L CNN
+F 1 "0.1u" V 7800 5400 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7650 3850 30  0000 C CNN
+F 3 "~" H 7650 5450 60  0000 C CNN
+	1    7650 5450
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

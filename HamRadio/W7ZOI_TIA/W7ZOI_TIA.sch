@@ -4,11 +4,11 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "RF Amplifier"
-Date "2020-01-05"
-Rev "X1"
+Title "W7ZIO TERMINATION INSENSITIVE AMPLIFIER (TIA)"
+Date "2021-10-29"
+Rev "1"
 Comp "Land Boards LLc"
-Comment1 ""
+Comment1 "http://w7zoi.net/bidirectional_matched_amplifier.pdf"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -57,63 +57,63 @@ $EndComp
 $Comp
 L W7ZOI_TIA-rescue:CONN_1-RF-Amp-rescue MTG1
 U 1 1 51ADF1DC
-P 10100 6350
-F 0 "MTG1" H 10180 6350 40  0000 L CNN
-F 1 "CONN_1" H 10100 6405 30  0001 C CNN
-F 2 "MTG-4-40" H 9650 6350 60  0000 C CNN
-F 3 "" H 10100 6350 60  0000 C CNN
-F 4 "M" H 10100 6350 50  0001 C CNN "Spice_Primitive"
-F 5 "CONN_1" H 10100 6350 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10100 6350 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10100 6350
+P 5750 7500
+F 0 "MTG1" H 5830 7500 40  0000 L CNN
+F 1 "CONN_1" H 5750 7555 30  0001 C CNN
+F 2 "MTG-4-40" H 5300 7500 60  0000 C CNN
+F 3 "" H 5750 7500 60  0000 C CNN
+F 4 "M" H 5750 7500 50  0001 C CNN "Spice_Primitive"
+F 5 "CONN_1" H 5750 7500 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5750 7500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5750 7500
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9950 6350
+NoConn ~ 5600 7500
 $Comp
 L W7ZOI_TIA-rescue:CONN_1-RF-Amp-rescue MTG2
 U 1 1 51ADF21A
-P 10100 6450
-F 0 "MTG2" H 10180 6450 40  0000 L CNN
-F 1 "CONN_1" H 10100 6505 30  0001 C CNN
-F 2 "MTG-4-40" H 9650 6450 60  0000 C CNN
-F 3 "" H 10100 6450 60  0000 C CNN
-F 4 "M" H 10100 6450 50  0001 C CNN "Spice_Primitive"
-F 5 "CONN_1" H 10100 6450 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10100 6450 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10100 6450
+P 5750 7600
+F 0 "MTG2" H 5830 7600 40  0000 L CNN
+F 1 "CONN_1" H 5750 7655 30  0001 C CNN
+F 2 "MTG-4-40" H 5300 7600 60  0000 C CNN
+F 3 "" H 5750 7600 60  0000 C CNN
+F 4 "M" H 5750 7600 50  0001 C CNN "Spice_Primitive"
+F 5 "CONN_1" H 5750 7600 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5750 7600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5750 7600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9950 6450
+NoConn ~ 5600 7600
 $Comp
 L W7ZOI_TIA-rescue:CONN_1-RF-Amp-rescue MTG3
 U 1 1 51ADF221
-P 10100 6550
-F 0 "MTG3" H 10180 6550 40  0000 L CNN
-F 1 "CONN_1" H 10100 6605 30  0001 C CNN
-F 2 "MTG-4-40" H 9650 6550 60  0000 C CNN
-F 3 "" H 10100 6550 60  0000 C CNN
-F 4 "M" H 10100 6550 50  0001 C CNN "Spice_Primitive"
-F 5 "CONN_1" H 10100 6550 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10100 6550 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10100 6550
+P 5750 7700
+F 0 "MTG3" H 5830 7700 40  0000 L CNN
+F 1 "CONN_1" H 5750 7755 30  0001 C CNN
+F 2 "MTG-4-40" H 5300 7700 60  0000 C CNN
+F 3 "" H 5750 7700 60  0000 C CNN
+F 4 "M" H 5750 7700 50  0001 C CNN "Spice_Primitive"
+F 5 "CONN_1" H 5750 7700 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5750 7700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5750 7700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9950 6550
+NoConn ~ 5600 7700
 $Comp
 L W7ZOI_TIA-rescue:CONN_1-RF-Amp-rescue MTG4
 U 1 1 51ADF228
-P 10100 6650
-F 0 "MTG4" H 10180 6650 40  0000 L CNN
-F 1 "CONN_1" H 10100 6705 30  0001 C CNN
-F 2 "MTG-4-40" H 9650 6650 60  0000 C CNN
-F 3 "" H 10100 6650 60  0000 C CNN
-F 4 "M" H 10100 6650 50  0001 C CNN "Spice_Primitive"
-F 5 "CONN_1" H 10100 6650 50  0001 C CNN "Spice_Model"
-F 6 "N" H 10100 6650 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    10100 6650
+P 5750 7800
+F 0 "MTG4" H 5830 7800 40  0000 L CNN
+F 1 "CONN_1" H 5750 7855 30  0001 C CNN
+F 2 "MTG-4-40" H 5300 7800 60  0000 C CNN
+F 3 "" H 5750 7800 60  0000 C CNN
+F 4 "M" H 5750 7800 50  0001 C CNN "Spice_Primitive"
+F 5 "CONN_1" H 5750 7800 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5750 7800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5750 7800
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9950 6650
+NoConn ~ 5600 7800
 $Comp
 L power:GND #PWR0101
 U 1 1 6146BEF3
@@ -271,7 +271,7 @@ L W7ZOI_TIA-rescue:R-RF-Amp-rescue R3
 U 1 1 617D4471
 P 4900 1650
 F 0 "R3" V 4800 1650 40  0000 C CNN
-F 1 "1800" V 5000 1650 40  0000 C CNN
+F 1 "1.8K" V 5000 1650 40  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6500 1650 30  0000 C CNN
 F 3 "~" H 4900 1650 30  0000 C CNN
 	1    4900 1650
@@ -363,9 +363,9 @@ $EndComp
 Wire Wire Line
 	3350 1950 3450 1950
 Wire Wire Line
-	4250 3000 3200 3000
+	4250 3000 3650 3000
 Wire Wire Line
-	3200 3000 3200 2150
+	3200 3000 3200 2200
 Connection ~ 4250 3000
 Wire Wire Line
 	5200 3000 5700 3000
@@ -470,21 +470,21 @@ Wire Wire Line
 Wire Wire Line
 	7400 2350 7500 2350
 Wire Wire Line
-	7900 2350 8300 2350
+	7900 2350 7950 2350
 Wire Wire Line
 	6850 3000 8300 3000
 Wire Wire Line
-	8500 3000 8500 2550
+	8500 3000 8500 2650
 Connection ~ 6850 3000
 Connection ~ 8500 3000
-Text Label 8050 2350 0    50   ~ 0
-S2
+Text Label 8000 2350 0    50   ~ 0
+VOUTLR
 $Comp
 L pspice:VSOURCE V1
 U 1 1 61799F8A
 P 1650 1350
 F 0 "V1" H 1878 1396 50  0000 L CNN
-F 1 "12" H 1878 1305 50  0000 L CNN
+F 1 "13.8" H 1878 1305 50  0000 L CNN
 F 2 "" H 1650 1350 50  0001 C CNN
 F 3 "~" H 1650 1350 50  0001 C CNN
 	1    1650 1350
@@ -504,13 +504,13 @@ F 3 "" H 1650 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1750 950  2    50   Input ~ 0
-VCC
+VCCLR
 Wire Wire Line
 	1650 1050 1650 950 
 Wire Wire Line
 	1650 950  1750 950 
 Text GLabel 3100 700  2    50   Input ~ 0
-VCC
+VCCLR
 Wire Wire Line
 	3000 950  3000 700 
 Wire Wire Line
@@ -520,42 +520,38 @@ Wire Wire Line
 	3000 950  3400 950 
 Wire Wire Line
 	2800 950  3000 950 
-Text Notes 1400 2900 0    50   ~ 0
+Text Notes 1100 3200 0    50   ~ 0
 .ac dec 100 1Meg 100Meg
 $Comp
 L pspice:VSOURCE V2
 U 1 1 617AC1A3
-P 2500 2400
-F 0 "V2" H 2728 2446 50  0000 L CNN
-F 1 "dc 0 ac 1" H 2728 2355 50  0000 L CNN
-F 2 "" H 2500 2400 50  0001 C CNN
-F 3 "~" H 2500 2400 50  0001 C CNN
-F 4 "V" H 2500 2400 50  0001 C CNN "Spice_Primitive"
-F 5 "Y" H 2500 2400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 6 "SPICE\\Q2N3904.lib" H 2500 2400 50  0001 C CNN "Spice_Lib_File"
-	1    2500 2400
+P 1850 2450
+F 0 "V2" H 2078 2496 50  0000 L CNN
+F 1 "dc 0 ac 1" H 2078 2405 50  0000 L CNN
+F 2 "" H 1850 2450 50  0001 C CNN
+F 3 "~" H 1850 2450 50  0001 C CNN
+F 4 "V" H 1850 2450 50  0001 C CNN "Spice_Primitive"
+F 5 "Y" H 1850 2450 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "SPICE\\Q2N3904.lib" H 1850 2450 50  0001 C CNN "Spice_Lib_File"
+F 7 "dc 0 ac 1" H 1850 2450 50  0001 C CNN "Spice_Model"
+	1    1850 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2500 2700 2500 3000
+	1850 2150 1850 2050
 Wire Wire Line
-	2500 3000 3200 3000
-Connection ~ 3200 3000
-Wire Wire Line
-	2500 2100 2500 1700
-Wire Wire Line
-	2500 1700 3000 1700
-Text GLabel 3000 1700 2    50   Input ~ 0
-VIN
+	1850 2050 2050 2050
+Text GLabel 2050 2050 2    50   Input ~ 0
+VINLR
 Text GLabel 3550 1700 2    50   Input ~ 0
-VIN
+VINLR
 Wire Wire Line
 	3550 1700 3450 1700
 Wire Wire Line
 	3450 1700 3450 1950
 Connection ~ 3450 1950
 Wire Wire Line
-	3450 1950 3700 1950
+	3450 1950 3650 1950
 $Comp
 L W7ZOI_TIA-rescue:R-RF-Amp-rescue R11
 U 1 1 617B2CE5
@@ -777,7 +773,7 @@ L W7ZOI_TIA-rescue:R-RF-Amp-rescue R15
 U 1 1 617A58F3
 P 4850 4750
 F 0 "R15" V 4750 4750 40  0000 C CNN
-F 1 "1800" V 4950 4750 40  0000 C CNN
+F 1 "1.8K" V 4950 4750 40  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6450 4750 30  0000 C CNN
 F 3 "~" H 4850 4750 30  0000 C CNN
 	1    4850 4750
@@ -921,41 +917,9 @@ Wire Wire Line
 Connection ~ 2850 4150
 Wire Wire Line
 	2850 4150 2850 3950
-$Comp
-L W7ZOI_TIA-rescue:C-RF-Amp-rescue C10
-U 1 1 617A5977
-P 7650 5450
-F 0 "C10" V 7500 5400 40  0000 L CNN
-F 1 "0.1u" V 7800 5400 40  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7650 3850 30  0000 C CNN
-F 3 "~" H 7650 5450 60  0000 C CNN
-	1    7650 5450
-	0    1    1    0   
-$EndComp
-$Comp
-L W7ZOI_TIA-rescue:R-RF-Amp-rescue R21
-U 1 1 617A5981
-P 7100 5450
-F 0 "R21" V 7000 5450 40  0000 C CNN
-F 1 "47" V 7200 5450 40  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8050 5450 30  0000 C CNN
-F 3 "~" H 7100 5450 30  0000 C CNN
-	1    7100 5450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6800 5450 6850 5450
 Connection ~ 6800 5450
 Wire Wire Line
 	6800 5450 6800 5400
-Wire Wire Line
-	7350 5450 7450 5450
-Wire Wire Line
-	7850 5450 8250 5450
-Wire Wire Line
-	6800 6100 8250 6100
-Text Notes 1350 6000 0    50   ~ 0
-.ac dec 100 1Meg 100Meg
 $Comp
 L W7ZOI_TIA-rescue:R-RF-Amp-rescue R20
 U 1 1 617A59C4
@@ -968,15 +932,13 @@ F 3 "~" H 6800 5800 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4300 5250 0    50   ~ 0
-V1
+V6
 Text Label 5200 5500 0    50   ~ 0
-V2
+V7
 Text Label 5350 4900 0    50   ~ 0
-V3
+V8
 Text Label 6350 5200 0    50   ~ 0
-V4
-Text Label 7400 5450 0    50   ~ 0
-V5
+V9
 Text Notes 4800 4600 0    50   ~ 0
 RF
 Text Notes 5700 5700 0    50   ~ 0
@@ -984,29 +946,13 @@ RD
 Text Notes 5200 4350 0    50   ~ 0
 R1(COLL)
 Wire Wire Line
-	3300 5050 3650 5050
+	3300 5050 3350 5050
 Text Label 3400 5050 0    50   ~ 0
-S2
-Text Label 3500 1950 0    50   ~ 0
-VIN
-Text Label 7950 5450 0    50   ~ 0
-VIN
-Connection ~ 6800 6100
+VOUTLR
 Wire Wire Line
 	2850 4550 3900 4550
 Wire Wire Line
 	2750 4050 3150 4050
-$Comp
-L pspice:VSOURCE V3
-U 1 1 617E2F3D
-P 1750 4400
-F 0 "V3" H 1978 4446 50  0000 L CNN
-F 1 "dc 0" H 1978 4355 50  0000 L CNN
-F 2 "" H 1750 4400 50  0001 C CNN
-F 3 "~" H 1750 4400 50  0001 C CNN
-	1    1750 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1750 4700 1750 4800
 $Comp
@@ -1021,13 +967,13 @@ F 3 "" H 1750 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1850 4000 2    50   Input ~ 0
-V2
+VCCRL
 Wire Wire Line
 	1750 4100 1750 4000
 Wire Wire Line
 	1750 4000 1850 4000
 Text GLabel 3250 3800 2    50   Input ~ 0
-V2
+VCCRL
 Wire Wire Line
 	3150 4050 3150 3800
 Wire Wire Line
@@ -1035,4 +981,216 @@ Wire Wire Line
 Connection ~ 3150 4050
 Wire Wire Line
 	3150 4050 3350 4050
+$Comp
+L pspice:VSOURCE V3
+U 1 1 617E2F3D
+P 1750 4400
+F 0 "V3" H 1978 4446 50  0000 L CNN
+F 1 "0" H 1978 4355 50  0000 L CNN
+F 2 "" H 1750 4400 50  0001 C CNN
+F 3 "~" H 1750 4400 50  0001 C CNN
+	1    1750 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5450 6850 5450
+Text Label 7950 5450 0    50   ~ 0
+VINLR
+Wire Wire Line
+	7850 5450 7900 5450
+Text Label 7400 5450 0    50   ~ 0
+V10
+Wire Wire Line
+	7350 5450 7450 5450
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R21
+U 1 1 617A5981
+P 7100 5450
+F 0 "R21" V 7000 5450 40  0000 C CNN
+F 1 "47" V 7200 5450 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8050 5450 30  0000 C CNN
+F 3 "~" H 7100 5450 30  0000 C CNN
+	1    7100 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C10
+U 1 1 617A5977
+P 7650 5450
+F 0 "C10" V 7500 5400 40  0000 L CNN
+F 1 "0.1u" V 7800 5400 40  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7650 3850 30  0000 C CNN
+F 3 "~" H 7650 5450 60  0000 C CNN
+	1    7650 5450
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R22
+U 1 1 617E255F
+P 3650 2450
+F 0 "R22" H 3750 2500 40  0000 C CNN
+F 1 "50" H 3750 2350 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3650 1700 30  0000 C CNN
+F 3 "~" H 3650 2450 30  0000 C CNN
+	1    3650 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2200 3650 1950
+Connection ~ 3650 1950
+Wire Wire Line
+	3650 1950 3700 1950
+Wire Wire Line
+	3650 2700 3650 3000
+Connection ~ 3650 3000
+Wire Wire Line
+	3650 3000 3200 3000
+Text Label 4500 950  0    50   ~ 0
+VCCLRF
+Wire Wire Line
+	1850 2750 1850 2800
+$Comp
+L power:GND #PWR0106
+U 1 1 618175CF
+P 1850 2800
+F 0 "#PWR0106" H 1850 2550 50  0001 C CNN
+F 1 "GND" H 1855 2627 50  0000 C CNN
+F 2 "" H 1850 2800 50  0001 C CNN
+F 3 "" H 1850 2800 50  0001 C CNN
+	1    1850 2800
+	1    0    0    -1  
+$EndComp
+Text Label 3450 1850 0    50   ~ 0
+VINLR
+$Comp
+L pspice:VSOURCE V4
+U 1 1 61830305
+P 2350 5350
+F 0 "V4" H 2578 5396 50  0000 L CNN
+F 1 "dc 0 ac 1" H 2578 5305 50  0000 L CNN
+F 2 "" H 2350 5350 50  0001 C CNN
+F 3 "~" H 2350 5350 50  0001 C CNN
+F 4 "V" H 2350 5350 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 2350 5350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "SPICE\\Q2N3904.lib" H 2350 5350 50  0001 C CNN "Spice_Lib_File"
+F 7 "dc 0 ac 1" H 2350 5350 50  0001 C CNN "Spice_Model"
+	1    2350 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 5050 2350 4950
+Wire Wire Line
+	2350 4950 2550 4950
+Text GLabel 2550 4950 2    50   Input ~ 0
+VOUTLR
+Wire Wire Line
+	2350 5650 2350 5700
+$Comp
+L power:GND #PWR0107
+U 1 1 618306F7
+P 2350 5700
+F 0 "#PWR0107" H 2350 5450 50  0001 C CNN
+F 1 "GND" H 2355 5527 50  0000 C CNN
+F 2 "" H 2350 5700 50  0001 C CNN
+F 3 "" H 2350 5700 50  0001 C CNN
+	1    2350 5700
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 5100 2    50   Input ~ 0
+VINLR
+Wire Wire Line
+	7900 5450 7900 5100
+Wire Wire Line
+	7900 5100 8000 5100
+Connection ~ 7900 5450
+Wire Wire Line
+	7900 5450 8250 5450
+Wire Wire Line
+	3350 5050 3350 5350
+Wire Wire Line
+	3350 5350 3550 5350
+Text GLabel 3550 5350 2    50   Input ~ 0
+VOUTLR
+Connection ~ 3350 5050
+Wire Wire Line
+	3350 5050 3650 5050
+Text GLabel 8200 2000 2    50   Input ~ 0
+VOUTLR
+Wire Wire Line
+	7950 2350 7950 2150
+Wire Wire Line
+	7950 2000 8200 2000
+Connection ~ 7950 2350
+Wire Wire Line
+	7950 2350 8300 2350
+Text Label 5650 5500 0    50   ~ 0
+V7A
+Text Label 5700 2400 0    50   ~ 0
+V2A
+Text Label 4400 4050 0    50   ~ 0
+VCCRLF
+Wire Wire Line
+	6800 6100 6800 6150
+$Comp
+L power:GND #PWR0108
+U 1 1 61891E60
+P 6800 6150
+F 0 "#PWR0108" H 6800 5900 50  0001 C CNN
+F 1 "GND" H 6805 5977 50  0000 C CNN
+F 2 "" H 6800 6150 50  0001 C CNN
+F 3 "" H 6800 6150 50  0001 C CNN
+	1    6800 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6800 6100
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P3
+U 1 1 6195E841
+P 2800 1700
+F 0 "P3" H 2810 1820 60  0000 C CNN
+F 1 "BNC" V 2910 1640 40  0000 C CNN
+F 2 "LandBoards_Conns:BNC-RT-OVAL_MTG" H 2800 400 30  0000 C CNN
+F 3 "~" H 2800 1700 60  0000 C CNN
+F 4 "R" H 2800 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 2800 1700 50  0001 C CNN "Spice_Model"
+F 6 "N" H 2800 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2800 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P4
+U 1 1 619601D9
+P 8950 2150
+F 0 "P4" H 8960 2270 60  0000 C CNN
+F 1 "BNC" V 9060 2090 40  0000 C CNN
+F 2 "LandBoards_Conns:BNC-RT-OVAL_MTG" H 8950 1150 30  0000 C CNN
+F 3 "~" H 8950 2150 60  0000 C CNN
+F 4 "R" H 8950 2150 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 8950 2150 50  0001 C CNN "Spice_Model"
+F 6 "N" H 8950 2150 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8950 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2650 8950 2650
+Wire Wire Line
+	8950 2650 8950 2350
+Connection ~ 8500 2650
+Wire Wire Line
+	8500 2650 8500 2550
+Wire Wire Line
+	8800 2150 7950 2150
+Connection ~ 7950 2150
+Wire Wire Line
+	7950 2150 7950 2000
+Wire Wire Line
+	3450 1700 2950 1700
+Connection ~ 3450 1700
+Wire Wire Line
+	2800 1900 2800 2200
+Wire Wire Line
+	2800 2200 3200 2200
+Connection ~ 3200 2200
+Wire Wire Line
+	3200 2200 3200 2150
 $EndSCHEMATC

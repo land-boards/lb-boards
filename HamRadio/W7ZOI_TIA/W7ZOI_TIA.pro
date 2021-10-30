@@ -1,4 +1,4 @@
-update=10/27/2021 5:42:55 PM
+update=10/29/2021 11:30:06 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -38,7 +38,8 @@ MinMicroViaDiameter=0.508
 MinMicroViaDrill=0.127
 MinHoleToHole=0.25
 TrackWidth1=0.254
-TrackWidth2=1.27
+TrackWidth2=0.635
+TrackWidth3=1.27
 ViaDiameter1=0.889
 ViaDrill1=0.635
 dPairWidth1=0.254
@@ -67,7 +68,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0

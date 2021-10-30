@@ -1,0 +1,1159 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "W7ZIO TERMINATION INSENSITIVE AMPLIFIER (TIA)"
+Date "2021-10-29"
+Rev "1"
+Comp "Land Boards LLc"
+Comment1 "http://w7zoi.net/bidirectional_matched_amplifier.pdf"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R4
+U 1 1 51AC8CE1
+P 4600 900
+F 0 "R4" V 4680 900 40  0000 C CNN
+F 1 "10" V 4607 901 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2200 900 30  0000 C CNN
+F 3 "~" H 4600 900 30  0000 C CNN
+	1    4600 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P2
+U 1 1 51AC8D54
+P 9450 2300
+F 0 "P2" H 9460 2420 60  0000 C CNN
+F 1 "BNC" V 9560 2240 40  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 9450 1300 30  0000 C CNN
+F 3 "~" H 9450 2300 60  0000 C CNN
+F 4 "R" H 9450 2300 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 9450 2300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9450 2300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 6146BEF3
+P 9450 3050
+F 0 "#PWR0101" H 9450 2800 50  0001 C CNN
+F 1 "GND" H 9455 2877 50  0000 C CNN
+F 2 "" H 9450 3050 50  0001 C CNN
+F 3 "" H 9450 3050 50  0001 C CNN
+	1    9450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C1
+U 1 1 51AC8CF0
+P 4900 1150
+F 0 "C1" H 4900 1250 40  0000 L CNN
+F 1 "0.1u" H 4906 1065 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4900 -950 30  0000 C CNN
+F 3 "~" H 4900 1150 60  0000 C CNN
+	1    4900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1850 7800 900 
+Wire Wire Line
+	7200 1550 7200 900 
+Wire Wire Line
+	7200 900  7800 900 
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R5
+U 1 1 617AD4F0
+P 6150 1300
+F 0 "R5" H 6250 1350 40  0000 C CNN
+F 1 "330" H 6250 1250 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6150 -800 30  0000 C CNN
+F 3 "~" H 6150 1300 30  0000 C CNN
+	1    6150 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 900  6150 900 
+Wire Wire Line
+	6150 900  6150 1050
+Connection ~ 7200 900 
+Wire Wire Line
+	6150 1550 6150 1600
+Wire Wire Line
+	6900 1750 6150 1750
+Connection ~ 6150 1750
+Wire Wire Line
+	6150 1750 6150 1900
+Wire Wire Line
+	7200 1950 7200 2050
+Wire Wire Line
+	7200 2050 7500 2050
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R8
+U 1 1 617B931E
+P 7200 2650
+F 0 "R8" H 7300 2700 40  0000 C CNN
+F 1 "2.2K" H 7350 2550 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7200 1950 30  0000 C CNN
+F 3 "~" H 7200 2650 30  0000 C CNN
+	1    7200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2050 7200 2400
+Connection ~ 7200 2050
+Wire Wire Line
+	7800 2400 7800 2300
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R6
+U 1 1 617BF990
+P 6150 2650
+F 0 "R6" H 6250 2700 40  0000 C CNN
+F 1 "180" H 6300 2550 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6150 1750 30  0000 C CNN
+F 3 "~" H 6150 2650 30  0000 C CNN
+	1    6150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C4
+U 1 1 617C0079
+P 6400 2350
+F 0 "C4" V 6250 2350 40  0000 L CNN
+F 1 "0.1u" V 6550 2300 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 7300 2350 30  0000 C CNN
+F 3 "~" H 6400 2350 60  0000 C CNN
+	1    6400 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 2300 6150 2350
+Wire Wire Line
+	6150 2350 6200 2350
+Connection ~ 6150 2350
+Wire Wire Line
+	6150 2350 6150 2400
+Wire Wire Line
+	6150 2900 6150 2950
+Wire Wire Line
+	7200 2900 7200 2950
+Connection ~ 7200 2950
+Wire Wire Line
+	7200 2950 7800 2950
+Wire Wire Line
+	7800 2900 7800 2950
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C3
+U 1 1 617D3AC0
+P 5550 1850
+F 0 "C3" H 5550 1950 40  0000 L CNN
+F 1 "0.1u" H 5556 1765 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5550 350 30  0000 C CNN
+F 3 "~" H 5550 1850 60  0000 C CNN
+	1    5550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R3
+U 1 1 617D4471
+P 5850 1600
+F 0 "R3" V 5750 1600 40  0000 C CNN
+F 1 "1.8K" V 5950 1600 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7450 1600 30  0000 C CNN
+F 3 "~" H 5850 1600 30  0000 C CNN
+	1    5850 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R1
+U 1 1 617E4C06
+P 5200 1300
+F 0 "R1" H 5300 1350 40  0000 C CNN
+F 1 "10K" H 5300 1250 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5200 -850 30  0000 C CNN
+F 3 "~" H 5200 1300 30  0000 C CNN
+	1    5200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R2
+U 1 1 617E5502
+P 5200 2650
+F 0 "R2" H 5300 2700 40  0000 C CNN
+F 1 "2.2K" H 5350 2550 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5200 1800 30  0000 C CNN
+F 3 "~" H 5200 2650 30  0000 C CNN
+	1    5200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2950 5200 2950
+Wire Wire Line
+	5200 2950 5200 2900
+Connection ~ 6150 2950
+Wire Wire Line
+	5200 2400 5200 2100
+Wire Wire Line
+	5850 2100 5550 2100
+Connection ~ 5200 2100
+Wire Wire Line
+	5200 2100 5200 1900
+Wire Wire Line
+	5550 2050 5550 2100
+Connection ~ 5550 2100
+Wire Wire Line
+	5550 2100 5200 2100
+Wire Wire Line
+	5600 1600 5550 1600
+Wire Wire Line
+	5550 1600 5550 1650
+Wire Wire Line
+	6100 1600 6150 1600
+Connection ~ 6150 1600
+Wire Wire Line
+	6150 1600 6150 1750
+Wire Wire Line
+	6150 900  5200 900 
+Wire Wire Line
+	5200 900  5200 1050
+Connection ~ 6150 900 
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C2
+U 1 1 617F986A
+P 4850 1900
+F 0 "C2" V 4700 1850 40  0000 L CNN
+F 1 "0.1u" V 5000 1850 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 6350 1800 30  0000 C CNN
+F 3 "~" H 4850 1900 60  0000 C CNN
+	1    4850 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 1900 5200 1900
+Connection ~ 5200 1900
+Wire Wire Line
+	5200 1900 5200 1550
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P1
+U 1 1 6180367F
+P 4150 1900
+F 0 "P1" H 4160 2020 60  0000 C CNN
+F 1 "BNC" V 4260 1840 40  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount" H 4150 600 30  0000 C CNN
+F 3 "~" H 4150 1900 60  0000 C CNN
+F 4 "R" H 4150 1900 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 4150 1900 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4150 1900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4150 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1900 4400 1900
+Wire Wire Line
+	5200 2950 4600 2950
+Wire Wire Line
+	4150 2950 4150 2150
+Connection ~ 5200 2950
+Wire Wire Line
+	6150 2950 6650 2950
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R7
+U 1 1 6180C55B
+P 6650 2650
+F 0 "R7" H 6750 2700 40  0000 C CNN
+F 1 "4.7" H 6750 2550 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6650 2000 30  0000 C CNN
+F 3 "~" H 6650 2650 30  0000 C CNN
+	1    6650 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2900 6650 2950
+Connection ~ 6650 2950
+Wire Wire Line
+	6650 2950 7200 2950
+Wire Wire Line
+	6600 2350 6650 2350
+Wire Wire Line
+	6650 2350 6650 2400
+$Comp
+L power:GND #PWR0102
+U 1 1 6181F83A
+P 4900 1450
+F 0 "#PWR0102" H 4900 1200 50  0001 C CNN
+F 1 "GND" H 4905 1277 50  0000 C CNN
+F 2 "" H 4900 1450 50  0001 C CNN
+F 3 "" H 4900 1450 50  0001 C CNN
+	1    4900 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 1350 4900 1400
+Wire Wire Line
+	4850 900  4900 900 
+Connection ~ 5200 900 
+Wire Wire Line
+	4900 950  4900 900 
+Connection ~ 4900 900 
+Wire Wire Line
+	4900 900  5200 900 
+Wire Wire Line
+	4900 1400 3850 1400
+Wire Wire Line
+	3850 1400 3850 1100
+Connection ~ 4900 1400
+Wire Wire Line
+	4900 1400 4900 1450
+Wire Wire Line
+	3750 1000 3850 1000
+Wire Wire Line
+	9450 2950 9450 3050
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C5
+U 1 1 6185A2C3
+P 8650 2300
+F 0 "C5" V 8500 2250 40  0000 L CNN
+F 1 "0.1u" V 8800 2250 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 9800 2300 30  0000 C CNN
+F 3 "~" H 8650 2300 60  0000 C CNN
+	1    8650 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R10
+U 1 1 61863C03
+P 8100 2300
+F 0 "R10" V 8000 2300 40  0000 C CNN
+F 1 "47" V 8200 2300 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9300 2300 30  0000 C CNN
+F 3 "~" H 8100 2300 30  0000 C CNN
+	1    8100 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 2300 7850 2300
+Connection ~ 7800 2300
+Wire Wire Line
+	7800 2300 7800 2250
+Wire Wire Line
+	8350 2300 8450 2300
+Wire Wire Line
+	8850 2300 8900 2300
+Wire Wire Line
+	7800 2950 9250 2950
+Wire Wire Line
+	9450 2950 9450 2600
+Connection ~ 7800 2950
+Connection ~ 9450 2950
+Text Label 8950 2300 0    50   ~ 0
+VOUTLR
+$Comp
+L pspice:VSOURCE V1
+U 1 1 61799F8A
+P 1200 1350
+F 0 "V1" H 1428 1396 50  0000 L CNN
+F 1 "0" H 1428 1305 50  0000 L CNN
+F 2 "" H 1200 1350 50  0001 C CNN
+F 3 "~" H 1200 1350 50  0001 C CNN
+	1    1200 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1650 1200 1750
+$Comp
+L power:GND #PWR0103
+U 1 1 6179C721
+P 1200 1750
+F 0 "#PWR0103" H 1200 1500 50  0001 C CNN
+F 1 "GND" H 1205 1577 50  0000 C CNN
+F 2 "" H 1200 1750 50  0001 C CNN
+F 3 "" H 1200 1750 50  0001 C CNN
+	1    1200 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 950  2    50   Input ~ 0
+VCCLR
+Wire Wire Line
+	1200 1050 1200 950 
+Wire Wire Line
+	1200 950  1300 950 
+Text GLabel 4050 650  2    50   Input ~ 0
+VCCLR
+Wire Wire Line
+	3950 900  3950 650 
+Wire Wire Line
+	3950 650  4050 650 
+Connection ~ 3950 900 
+Wire Wire Line
+	3950 900  4350 900 
+Wire Wire Line
+	3750 900  3950 900 
+Text Notes 650  6150 0    50   ~ 0
+.ac dec 100 1Meg 100Meg
+$Comp
+L pspice:VSOURCE V2
+U 1 1 617AC1A3
+P 1200 2550
+F 0 "V2" H 1428 2596 50  0000 L CNN
+F 1 "dc 0 ac 1" H 1428 2505 50  0000 L CNN
+F 2 "" H 1200 2550 50  0001 C CNN
+F 3 "~" H 1200 2550 50  0001 C CNN
+F 4 "V" H 1200 2550 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 1200 2550 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "SPICE\\Q2N3904.lib" H 1200 2550 50  0001 C CNN "Spice_Lib_File"
+F 7 "dc 0 ac 1" H 1200 2550 50  0001 C CNN "Spice_Model"
+F 8 "3 1 2" H 1200 2550 50  0001 C CNN "Spice_Node_Sequence"
+	1    1200 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2250 1200 2150
+Wire Wire Line
+	1200 2150 1400 2150
+Text GLabel 1400 2150 2    50   Input ~ 0
+VINLR
+Text GLabel 4500 1650 2    50   Input ~ 0
+VINLR
+Wire Wire Line
+	4500 1650 4400 1650
+Wire Wire Line
+	4400 1650 4400 1900
+Connection ~ 4400 1900
+Wire Wire Line
+	4400 1900 4600 1900
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R11
+U 1 1 617B2CE5
+P 9250 2600
+F 0 "R11" H 9350 2650 40  0000 C CNN
+F 1 "50" H 9350 2500 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 9250 1850 30  0000 C CNN
+F 3 "~" H 9250 2600 30  0000 C CNN
+	1    9250 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 2350 9250 2300
+Connection ~ 9250 2300
+Wire Wire Line
+	9250 2300 9300 2300
+Wire Wire Line
+	9250 2850 9250 2950
+Connection ~ 9250 2950
+Wire Wire Line
+	9250 2950 9450 2950
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R9
+U 1 1 617BB8BA
+P 7800 2650
+F 0 "R9" H 7900 2700 40  0000 C CNN
+F 1 "470" H 7950 2550 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7800 1900 30  0000 C CNN
+F 3 "~" H 7800 2650 30  0000 C CNN
+	1    7800 2650
+	1    0    0    -1  
+$EndComp
+Text Label 5300 2100 0    50   ~ 0
+V1
+Text Label 6200 2350 0    50   ~ 0
+V2
+Text Label 6350 1750 0    50   ~ 0
+V3
+Text Label 7350 2050 0    50   ~ 0
+V4
+Text Label 8400 2300 0    50   ~ 0
+V5
+Text Notes 5800 1450 0    50   ~ 0
+RF
+Text Notes 6700 2550 0    50   ~ 0
+RD
+Text Notes 6200 1200 0    50   ~ 0
+R1(COLL)
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R12
+U 1 1 617A561F
+P 4550 4000
+F 0 "R12" V 4630 4000 40  0000 C CNN
+F 1 "10" V 4557 4001 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2150 4000 30  0000 C CNN
+F 3 "~" H 4550 4000 30  0000 C CNN
+	1    4550 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C7
+U 1 1 617A5881
+P 4850 4250
+F 0 "C7" H 4850 4350 40  0000 L CNN
+F 1 "0.1u" H 4856 4165 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4850 2150 30  0000 C CNN
+F 3 "~" H 4850 4250 60  0000 C CNN
+	1    4850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4950 7750 4000
+Wire Wire Line
+	7150 4650 7150 4000
+Wire Wire Line
+	7150 4000 7750 4000
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R16
+U 1 1 617A58AC
+P 6100 4400
+F 0 "R16" H 6200 4450 40  0000 C CNN
+F 1 "330" H 6200 4350 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6100 2300 30  0000 C CNN
+F 3 "~" H 6100 4400 30  0000 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4000 6100 4000
+Wire Wire Line
+	6100 4000 6100 4150
+Connection ~ 7150 4000
+Wire Wire Line
+	6100 4650 6100 4700
+Wire Wire Line
+	6850 4850 6100 4850
+Connection ~ 6100 4850
+Wire Wire Line
+	6100 4850 6100 5000
+Wire Wire Line
+	7150 5050 7150 5150
+Wire Wire Line
+	7150 5150 7450 5150
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R19
+U 1 1 617A58BF
+P 7150 5750
+F 0 "R19" H 7250 5800 40  0000 C CNN
+F 1 "2.2K" H 7300 5650 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7150 5050 30  0000 C CNN
+F 3 "~" H 7150 5750 30  0000 C CNN
+	1    7150 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5150 7150 5500
+Connection ~ 7150 5150
+Wire Wire Line
+	7750 5500 7750 5400
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R17
+U 1 1 617A58CC
+P 6100 5750
+F 0 "R17" H 6200 5800 40  0000 C CNN
+F 1 "180" H 6250 5650 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6100 5100 30  0000 C CNN
+F 3 "~" H 6100 5750 30  0000 C CNN
+	1    6100 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C9
+U 1 1 617A58D6
+P 6350 5450
+F 0 "C9" V 6200 5450 40  0000 L CNN
+F 1 "0.1u" V 6500 5400 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 7250 5450 30  0000 C CNN
+F 3 "~" H 6350 5450 60  0000 C CNN
+	1    6350 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 5400 6100 5450
+Wire Wire Line
+	6100 5450 6150 5450
+Connection ~ 6100 5450
+Wire Wire Line
+	6100 5450 6100 5500
+Wire Wire Line
+	6100 6000 6100 6050
+Wire Wire Line
+	7150 6000 7150 6050
+Connection ~ 7150 6050
+Wire Wire Line
+	7150 6050 7750 6050
+Wire Wire Line
+	7750 6000 7750 6050
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C8
+U 1 1 617A58E9
+P 5500 4950
+F 0 "C8" H 5500 5050 40  0000 L CNN
+F 1 "0.1u" H 5506 4865 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5500 3450 30  0000 C CNN
+F 3 "~" H 5500 4950 60  0000 C CNN
+	1    5500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R15
+U 1 1 617A58F3
+P 5800 4700
+F 0 "R15" V 5700 4700 40  0000 C CNN
+F 1 "1.8K" V 5900 4700 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7400 4700 30  0000 C CNN
+F 3 "~" H 5800 4700 30  0000 C CNN
+	1    5800 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R13
+U 1 1 617A58FD
+P 5150 4400
+F 0 "R13" H 5250 4450 40  0000 C CNN
+F 1 "10K" H 5250 4350 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5150 2250 30  0000 C CNN
+F 3 "~" H 5150 4400 30  0000 C CNN
+	1    5150 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R14
+U 1 1 617A5907
+P 5150 5750
+F 0 "R14" H 5250 5800 40  0000 C CNN
+F 1 "2.2K" H 5300 5650 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 5150 4900 30  0000 C CNN
+F 3 "~" H 5150 5750 30  0000 C CNN
+	1    5150 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 6050 5150 6050
+Wire Wire Line
+	5150 6050 5150 6000
+Connection ~ 6100 6050
+Wire Wire Line
+	5150 5500 5150 5200
+Wire Wire Line
+	5800 5200 5500 5200
+Connection ~ 5150 5200
+Wire Wire Line
+	5150 5200 5150 5000
+Wire Wire Line
+	5500 5150 5500 5200
+Connection ~ 5500 5200
+Wire Wire Line
+	5500 5200 5150 5200
+Wire Wire Line
+	5550 4700 5500 4700
+Wire Wire Line
+	5500 4700 5500 4750
+Wire Wire Line
+	6050 4700 6100 4700
+Connection ~ 6100 4700
+Wire Wire Line
+	6100 4700 6100 4850
+Wire Wire Line
+	6100 4000 5150 4000
+Wire Wire Line
+	5150 4000 5150 4150
+Connection ~ 6100 4000
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C6
+U 1 1 617A5923
+P 4800 5000
+F 0 "C6" V 4650 4950 40  0000 L CNN
+F 1 "0.1u" V 4950 4950 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 6300 4900 30  0000 C CNN
+F 3 "~" H 4800 5000 60  0000 C CNN
+	1    4800 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 5000 5150 5000
+Connection ~ 5150 5000
+Wire Wire Line
+	5150 5000 5150 4650
+Wire Wire Line
+	6100 6050 6600 6050
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R18
+U 1 1 617A5942
+P 6600 5750
+F 0 "R18" H 6700 5800 40  0000 C CNN
+F 1 "4.7" H 6700 5650 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 6600 4950 30  0000 C CNN
+F 3 "~" H 6600 5750 30  0000 C CNN
+	1    6600 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 6000 6600 6050
+Connection ~ 6600 6050
+Wire Wire Line
+	6600 6050 7150 6050
+Wire Wire Line
+	6550 5450 6600 5450
+Wire Wire Line
+	6600 5450 6600 5500
+$Comp
+L power:GND #PWR0104
+U 1 1 617A5951
+P 4850 4550
+F 0 "#PWR0104" H 4850 4300 50  0001 C CNN
+F 1 "GND" H 4855 4377 50  0000 C CNN
+F 2 "" H 4850 4550 50  0001 C CNN
+F 3 "" H 4850 4550 50  0001 C CNN
+	1    4850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4450 4850 4500
+Wire Wire Line
+	4800 4000 4850 4000
+Connection ~ 5150 4000
+Wire Wire Line
+	4850 4050 4850 4000
+Connection ~ 4850 4000
+Wire Wire Line
+	4850 4000 5150 4000
+Wire Wire Line
+	3800 4500 3800 4200
+Connection ~ 4850 4500
+Wire Wire Line
+	4850 4500 4850 4550
+Wire Wire Line
+	3700 4100 3800 4100
+Connection ~ 7750 5400
+Wire Wire Line
+	7750 5400 7750 5350
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R20
+U 1 1 617A59C4
+P 7750 5750
+F 0 "R20" H 7850 5800 40  0000 C CNN
+F 1 "470" H 7900 5650 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 7750 5000 30  0000 C CNN
+F 3 "~" H 7750 5750 30  0000 C CNN
+	1    7750 5750
+	1    0    0    -1  
+$EndComp
+Text Label 5250 5200 0    50   ~ 0
+V6
+Text Label 6150 5450 0    50   ~ 0
+V7
+Text Label 6300 4850 0    50   ~ 0
+V8
+Text Label 7300 5150 0    50   ~ 0
+V9
+Text Notes 5750 4550 0    50   ~ 0
+RF
+Text Notes 6650 5650 0    50   ~ 0
+RD
+Text Notes 6150 4300 0    50   ~ 0
+R1(COLL)
+Wire Wire Line
+	4250 5000 4300 5000
+Text Label 4350 5000 0    50   ~ 0
+VOUTLR
+Wire Wire Line
+	3800 4500 4850 4500
+Wire Wire Line
+	3700 4000 4100 4000
+Wire Wire Line
+	1200 4500 1200 4600
+$Comp
+L power:GND #PWR0105
+U 1 1 617E32F0
+P 1200 4600
+F 0 "#PWR0105" H 1200 4350 50  0001 C CNN
+F 1 "GND" H 1205 4427 50  0000 C CNN
+F 2 "" H 1200 4600 50  0001 C CNN
+F 3 "" H 1200 4600 50  0001 C CNN
+	1    1200 4600
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 3800 2    50   Input ~ 0
+VCCRL
+Wire Wire Line
+	1200 3900 1200 3800
+Wire Wire Line
+	1200 3800 1300 3800
+Text GLabel 4200 3750 2    50   Input ~ 0
+VCCRL
+Wire Wire Line
+	4100 4000 4100 3750
+Wire Wire Line
+	4100 3750 4200 3750
+Connection ~ 4100 4000
+Wire Wire Line
+	4100 4000 4300 4000
+$Comp
+L pspice:VSOURCE V3
+U 1 1 617E2F3D
+P 1200 4200
+F 0 "V3" H 1428 4246 50  0000 L CNN
+F 1 "13.8" H 1428 4155 50  0000 L CNN
+F 2 "" H 1200 4200 50  0001 C CNN
+F 3 "~" H 1200 4200 50  0001 C CNN
+	1    1200 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 5400 7800 5400
+Text Label 8900 5400 0    50   ~ 0
+VINLR
+Wire Wire Line
+	8800 5400 8850 5400
+Text Label 8350 5400 0    50   ~ 0
+V10
+Wire Wire Line
+	8300 5400 8400 5400
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R21
+U 1 1 617A5981
+P 8050 5400
+F 0 "R21" V 7950 5400 40  0000 C CNN
+F 1 "47" V 8150 5400 40  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9200 5400 30  0000 C CNN
+F 3 "~" H 8050 5400 30  0000 C CNN
+	1    8050 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:C-RF-Amp-rescue C10
+U 1 1 617A5977
+P 8600 5400
+F 0 "C10" V 8450 5350 40  0000 L CNN
+F 1 "0.1u" V 8750 5350 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" V 9650 5450 30  0000 C CNN
+F 3 "~" H 8600 5400 60  0000 C CNN
+	1    8600 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:R-RF-Amp-rescue R22
+U 1 1 617E255F
+P 4600 2400
+F 0 "R22" H 4700 2450 40  0000 C CNN
+F 1 "50" H 4700 2300 40  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4600 1250 30  0000 C CNN
+F 3 "~" H 4600 2400 30  0000 C CNN
+	1    4600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2150 4600 1900
+Connection ~ 4600 1900
+Wire Wire Line
+	4600 1900 4650 1900
+Wire Wire Line
+	4600 2650 4600 2950
+Connection ~ 4600 2950
+Wire Wire Line
+	4600 2950 4150 2950
+Text Label 5450 900  0    50   ~ 0
+VCCLRF
+Wire Wire Line
+	1200 2850 1200 2900
+$Comp
+L power:GND #PWR0106
+U 1 1 618175CF
+P 1200 2900
+F 0 "#PWR0106" H 1200 2650 50  0001 C CNN
+F 1 "GND" H 1205 2727 50  0000 C CNN
+F 2 "" H 1200 2900 50  0001 C CNN
+F 3 "" H 1200 2900 50  0001 C CNN
+	1    1200 2900
+	1    0    0    -1  
+$EndComp
+Text Label 4400 1800 0    50   ~ 0
+VINLR
+$Comp
+L pspice:VSOURCE V4
+U 1 1 61830305
+P 1200 5400
+F 0 "V4" H 1428 5446 50  0000 L CNN
+F 1 "dc 0 ac 1" H 1428 5355 50  0000 L CNN
+F 2 "" H 1200 5400 50  0001 C CNN
+F 3 "~" H 1200 5400 50  0001 C CNN
+F 4 "V" H 1200 5400 50  0001 C CNN "Spice_Primitive"
+F 5 "Y" H 1200 5400 50  0001 C CNN "Spice_Netlist_Enabled"
+F 6 "SPICE\\Q2N3904.lib" H 1200 5400 50  0001 C CNN "Spice_Lib_File"
+F 7 "dc 0 ac 1" H 1200 5400 50  0001 C CNN "Spice_Model"
+	1    1200 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 5100 1200 5000
+Wire Wire Line
+	1200 5000 1400 5000
+Text GLabel 1400 5000 2    50   Input ~ 0
+VOUTLR
+Wire Wire Line
+	1200 5700 1200 5750
+$Comp
+L power:GND #PWR0107
+U 1 1 618306F7
+P 1200 5750
+F 0 "#PWR0107" H 1200 5500 50  0001 C CNN
+F 1 "GND" H 1205 5577 50  0000 C CNN
+F 2 "" H 1200 5750 50  0001 C CNN
+F 3 "" H 1200 5750 50  0001 C CNN
+	1    1200 5750
+	1    0    0    -1  
+$EndComp
+Text GLabel 8950 5050 2    50   Input ~ 0
+VINLR
+Wire Wire Line
+	8850 5400 8850 5050
+Wire Wire Line
+	8850 5050 8950 5050
+Connection ~ 8850 5400
+Wire Wire Line
+	8850 5400 9200 5400
+Wire Wire Line
+	4300 5000 4300 5300
+Wire Wire Line
+	4300 5300 4500 5300
+Text GLabel 4500 5300 2    50   Input ~ 0
+VOUTLR
+Connection ~ 4300 5000
+Wire Wire Line
+	4300 5000 4600 5000
+Text GLabel 9150 1950 2    50   Input ~ 0
+VOUTLR
+Wire Wire Line
+	8900 2300 8900 2100
+Wire Wire Line
+	8900 1950 9150 1950
+Connection ~ 8900 2300
+Wire Wire Line
+	8900 2300 9250 2300
+Text Label 6600 5450 0    50   ~ 0
+V7A
+Text Label 6650 2350 0    50   ~ 0
+V2A
+Text Label 5350 4000 0    50   ~ 0
+VCCRLF
+Wire Wire Line
+	7750 6050 7750 6100
+$Comp
+L power:GND #PWR0108
+U 1 1 61891E60
+P 7750 6100
+F 0 "#PWR0108" H 7750 5850 50  0001 C CNN
+F 1 "GND" H 7755 5927 50  0000 C CNN
+F 2 "" H 7750 6100 50  0001 C CNN
+F 3 "" H 7750 6100 50  0001 C CNN
+	1    7750 6100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7750 6050
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P3
+U 1 1 6195E841
+P 3750 1650
+F 0 "P3" H 3760 1770 60  0000 C CNN
+F 1 "BNC" V 3860 1590 40  0000 C CNN
+F 2 "LandBoards_Conns:BNC-RT-OVAL_MTG" H 3850 50  30  0000 C CNN
+F 3 "~" H 3750 1650 60  0000 C CNN
+F 4 "R" H 3750 1650 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 3750 1650 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3750 1650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3750 1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L W7ZOI_TIA-rescue:BNC-RF-Amp-rescue P4
+U 1 1 619601D9
+P 9900 2100
+F 0 "P4" H 9910 2220 60  0000 C CNN
+F 1 "BNC" V 10010 2040 40  0000 C CNN
+F 2 "LandBoards_Conns:BNC-RT-OVAL_MTG" H 9900 800 30  0000 C CNN
+F 3 "~" H 9900 2100 60  0000 C CNN
+F 4 "R" H 9900 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "100MEG" H 9900 2100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9900 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9900 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2600 9900 2600
+Wire Wire Line
+	9900 2600 9900 2300
+Connection ~ 9450 2600
+Wire Wire Line
+	9450 2600 9450 2500
+Wire Wire Line
+	9750 2100 8900 2100
+Connection ~ 8900 2100
+Wire Wire Line
+	8900 2100 8900 1950
+Wire Wire Line
+	4400 1650 3900 1650
+Connection ~ 4400 1650
+Wire Wire Line
+	3750 1850 3750 2150
+Wire Wire Line
+	3750 2150 4150 2150
+Connection ~ 4150 2150
+Wire Wire Line
+	4150 2150 4150 2100
+$Comp
+L Transistor_BJT:MMBT3904 Q1
+U 1 1 617E5D32
+P 6050 2100
+F 0 "Q1" H 6241 2146 50  0000 L CNN
+F 1 "MMBT3904" H 6241 2055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6250 2025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6050 2100 50  0001 L CNN
+F 4 "Q" H 6050 2100 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 6050 2100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6050 2100 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 6050 2100 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 6050 2100 50  0001 C CNN "Spice_Node_Sequence"
+	1    6050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q2
+U 1 1 617EEAE8
+P 7100 1750
+F 0 "Q2" H 7291 1796 50  0000 L CNN
+F 1 "MMBT3904" H 7291 1705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7300 1675 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7100 1750 50  0001 L CNN
+F 4 "Q" H 7100 1750 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 7100 1750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7100 1750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 7100 1750 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 7100 1750 50  0001 C CNN "Spice_Node_Sequence"
+	1    7100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q3
+U 1 1 617EF9E8
+P 7700 2050
+F 0 "Q3" H 7891 2096 50  0000 L CNN
+F 1 "MMBT3904" H 7891 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7900 1975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7700 2050 50  0001 L CNN
+F 4 "Q" H 7700 2050 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 7700 2050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7700 2050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 7700 2050 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 7700 2050 50  0001 C CNN "Spice_Node_Sequence"
+	1    7700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q4
+U 1 1 61800F75
+P 6000 5200
+F 0 "Q4" H 6191 5246 50  0000 L CNN
+F 1 "MMBT3904" H 6191 5155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6200 5125 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6000 5200 50  0001 L CNN
+F 4 "Q" H 6000 5200 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 6000 5200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6000 5200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 6000 5200 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 6000 5200 50  0001 C CNN "Spice_Node_Sequence"
+	1    6000 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q5
+U 1 1 6181289E
+P 7050 4850
+F 0 "Q5" H 7241 4896 50  0000 L CNN
+F 1 "MMBT3904" H 7241 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7250 4775 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7050 4850 50  0001 L CNN
+F 4 "Q" H 7050 4850 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 7050 4850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7050 4850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 7050 4850 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 7050 4850 50  0001 C CNN "Spice_Node_Sequence"
+	1    7050 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q6
+U 1 1 6181BCDB
+P 7650 5150
+F 0 "Q6" H 7841 5196 50  0000 L CNN
+F 1 "MMBT3904" H 7841 5105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7850 5075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 7650 5150 50  0001 L CNN
+F 4 "Q" H 7650 5150 50  0001 C CNN "Spice_Primitive"
+F 5 "2N3904" H 7650 5150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7650 5150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "SPICE\\Q2N3904.lib" H 7650 5150 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 1 2" H 7650 5150 50  0001 C CNN "Spice_Node_Sequence"
+	1    7650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards_Conns:DCJ0202 J1
+U 1 1 618A7657
+P 3450 1000
+F 0 "J1" H 3543 1314 50  0000 C CNN
+F 1 "DCJ0202" H 3543 1223 50  0000 C CNN
+F 2 "LandBoards_Conns:DCJ-NEW-Slotted" H 3450 1150 50  0001 C CNN
+F 3 "" H 3450 1000 60  0000 C CNN
+F 4 "J" H 3450 1000 50  0001 C CNN "Spice_Primitive"
+F 5 "DCJ0202" H 3450 1000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3450 1000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3450 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1100 3850 1100
+Connection ~ 3850 1100
+Wire Wire Line
+	3850 1100 3850 1000
+$Comp
+L LandBoards_Conns:DCJ0202 J2
+U 1 1 618B880C
+P 3400 4100
+F 0 "J2" H 3493 4414 50  0000 C CNN
+F 1 "DCJ0202" H 3493 4323 50  0000 C CNN
+F 2 "LandBoards_Conns:DCJ-NEW-Slotted" H 3400 4250 50  0001 C CNN
+F 3 "" H 3400 4100 60  0000 C CNN
+F 4 "J" H 3400 4100 50  0001 C CNN "Spice_Primitive"
+F 5 "DCJ0202" H 3400 4100 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3400 4100 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4200 3800 4200
+Connection ~ 3800 4200
+Wire Wire Line
+	3800 4200 3800 4100
+Text Notes 1400 1600 0    50   ~ 0
+12V FR L-R\n0V FOR R-L
+Text Notes 1400 4450 0    50   ~ 0
+0V FR L-R\n12V FOR R-L
+Text Notes 1400 2800 0    50   ~ 0
+ENABLE SYMBOL FOR L-R SIMULATION\nDISABLE SYMBOL FOR L-R SIMULATION
+Text Notes 1400 5650 0    50   ~ 0
+ENABLE SYMBOL FOR R-L SIMULATION\nDISABLE SYMBOL FOR R-L SIMULATION
+Wire Notes Line
+	3050 7000 3050 700 
+Wire Notes Line
+	3050 700  600  700 
+Wire Notes Line
+	600  700  600  7000
+Text Notes 850  6850 0    126  ~ 25
+SPICE SIMULATION\nCONTROL
+Text Notes 8750 2850 0    50   ~ 0
+OPTIONAL\nTERMINATOR
+Text Notes 4650 2700 0    50   ~ 0
+OPTIONAL\nTERMINATOR
+Wire Notes Line
+	600  7000 3050 7000
+$EndSCHEMATC
