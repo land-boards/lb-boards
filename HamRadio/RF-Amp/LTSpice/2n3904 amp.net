@@ -1,0 +1,20 @@
+* C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\RF-Amp\LTSpice\2n3904 amp.asc
+V1 N004 0 AC 1 Rser=50
+R1 N001 N005 10k
+R2 N005 0 2k
+R3 N006 0 120
+Q1 N003 N005 N006 0 2N3904
+C3 N005 N004 100nF
+L1 N003 N001 1.6µH
+L2 0 N002 1.6µH
+C4 N001 0 .1µF
+R5 N002 0 50
+V2 N001 0 12 Rser=10
+C1 N006 0 0.1µ
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\HPz420\Documents\LTspiceXVII\lib\cmp\standard.bjt
+K3 L1 L2 1
+.ac dec 100 3.5MEG 14MEG
+.backanno
+.end

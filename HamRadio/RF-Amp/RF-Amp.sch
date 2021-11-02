@@ -300,8 +300,6 @@ Wire Wire Line
 	4500 3100 4700 3100
 Wire Wire Line
 	4700 3100 4700 3550
-Text Notes 7600 2500 0    60   ~ 0
-4:1
 Wire Wire Line
 	6400 3550 6500 3550
 Wire Wire Line
