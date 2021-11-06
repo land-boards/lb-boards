@@ -1,0 +1,12 @@
+* C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\ADE1-MIXER\LP_Audio\LP_Audio.asc
+L1 N003 N004 1.5m
+V1 N001 0 AC 1
+R1 N002 N001 50
+R2 N004 0 50
+C3 N005 0 0.1µ
+R7 N002 N005 51
+C1 N004 0 1p
+C2 N003 N002 100µ
+.ac dec 100 10 1000K
+.backanno
+.end
