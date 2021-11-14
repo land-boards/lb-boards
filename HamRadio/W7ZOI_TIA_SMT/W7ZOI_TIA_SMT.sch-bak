@@ -5,7 +5,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "W7ZIO TERMINATION INSENSITIVE AMPLIFIER (TIA)"
-Date "2021-10-29"
+Date "2021-10-30"
 Rev "1"
 Comp "Land Boards LLc"
 Comment1 "http://w7zoi.net/bidirectional_matched_amplifier.pdf"
@@ -1156,4 +1156,48 @@ Text Notes 4650 2700 0    50   ~ 0
 OPTIONAL\nTERMINATOR
 Wire Notes Line
 	600  7000 3050 7000
+$Comp
+L LandBoards:MTG_HOLE MTG??
+U 1 1 6190ADB2
+P 4450 7400
+F 0 "MTG??" H 4528 7506 60  0000 L CNN
+F 1 "MTG_HOLE" H 4528 7400 60  0000 L CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 4528 7294 60  0000 L CNN
+F 3 "" H 4450 7400 60  0000 C CNN
+	1    4450 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards:MTG_HOLE MTG?
+U 1 1 6190B5C1
+P 4450 7700
+F 0 "MTG?" H 4528 7806 60  0000 L CNN
+F 1 "MTG_HOLE" H 4528 7700 60  0000 L CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 4528 7594 60  0000 L CNN
+F 3 "" H 4450 7700 60  0000 C CNN
+	1    4450 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards:MTG_HOLE MTG?
+U 1 1 61914272
+P 2600 7400
+F 0 "MTG?" H 2678 7506 60  0000 L CNN
+F 1 "MTG_HOLE" H 2678 7400 60  0000 L CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 2678 7294 60  0000 L CNN
+F 3 "" H 2600 7400 60  0000 C CNN
+	1    2600 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LandBoards:MTG_HOLE MTG?
+U 1 1 6191470A
+P 2600 7700
+F 0 "MTG?" H 2678 7806 60  0000 L CNN
+F 1 "MTG_HOLE" H 2678 7700 60  0000 L CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 2678 7594 60  0000 L CNN
+F 3 "" H 2600 7700 60  0000 C CNN
+	1    2600 7700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
