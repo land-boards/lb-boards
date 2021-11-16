@@ -7,13 +7,37 @@
 <img src="https://raw.githubusercontent.com/land-boards/lb-boards/master/HamRadio/RF-Amp/Pics/CCA/RF-Amp_P1943-720px.jpg"></img>
 
 * [http://land-boards.com/blwiki/index.php?title=RF-Amp Wiki page]
-* LTspice model - 2N3904 amp
-* From [https://zl2ctm.blogspot.com/2020/11/go-qrp-portable-ssb-rig.html Charlie Morris' (ZL2CTM) Go QRP Portable SSB Rig]
-** Solid State Design for the Radio Amateur (pp 19-20)
-* +24 dB gain @9MHz
-* Input connectors: SMA or BNC
+
+== RF Amplifier Features ==
+
+* Class A (Common Emitter) Amplifier
+** Emitter resistor bypassed with capacitor for higher AC gain
+** Transformer coupled input/output for impedance matching to 50Ω
+** Capacitively coupled input
+* Single 2N3904 NPN transistor
+* Useful as an gain block in various applications
+** Radio Transmitter/Receiver IF Amplifier
+** Radio Transmitter/Receiver Antenna Amplifier
+** Radio Transmitter Microphone amplifier (with minor modifications)
+* As RF Amplifier
+** Measured Gain Bandwidth (GBW) of 150
+** Measured Gain @7 MHz, +25.2 dB at 12V
+** Measured Gain @9 MHz, +24.7 dB at 12V
+** Measured Gain @30 MHz, +13.8 dB at 12V
+* As a microphone amplifier
+** Approximately 20 dB at 1 KHz
+* Input connectors: SMA, BNC, or direct solder coax to SMA etches
+* +12V nominal power
+** 12-14 VDC
+** 5 mm terminal block for power
 * 49x49mm card
 * 4x 4-40 mounting holes
+
+=== Source Materials ===
+
+* From [https://zl2ctm.blogspot.com/2020/11/go-qrp-portable-ssb-rig.html Charlie Morris' (ZL2CTM) Go QRP Portable SSB Rig]
+** Charlie references [https://www.amazon.com/Solid-State-Design-Radio-Amateur/dp/0872590402 Solid State Design for the Radio Amateur] (pp 19-20)
+
 * Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad designs].
 ** Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools.
 
