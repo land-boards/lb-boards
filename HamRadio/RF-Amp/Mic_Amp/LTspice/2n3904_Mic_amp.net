@@ -1,0 +1,19 @@
+* C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\HamRadio\RF-Amp\Mic_Amp\2n3904_Mic_amp.asc
+V1 N004 0 AC 1 Rser=50
+R1 N001 N005 15K
+R2 N005 0 3K
+R3 N006 0 120
+Q1 N002 N005 N006 0 2N3904
+C3 N005 N004 10µF
+C4 N001 0 100nF
+R5 N003 0 50
+V2 N001 0 12 Rser=10
+C1 N006 0 47µF
+R6 N001 N002 560
+C2 N003 N002 10µF
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\HPz420\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.ac dec 100 300 5K
+.backanno
+.end
