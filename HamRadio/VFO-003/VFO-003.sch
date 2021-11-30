@@ -1997,4 +1997,47 @@ Wire Wire Line
 NoConn ~ 1700 2450
 NoConn ~ 1700 2350
 NoConn ~ 1700 2250
+Connection ~ 2650 6550
+Wire Wire Line
+	2650 6550 3100 6550
+Wire Wire Line
+	1800 6550 2650 6550
+Wire Wire Line
+	2650 6150 3100 6150
+Connection ~ 2650 6150
+Wire Wire Line
+	2650 6200 2650 6150
+Wire Wire Line
+	3100 6150 3100 6200
+Wire Wire Line
+	2300 6150 2650 6150
+Wire Wire Line
+	2650 6500 2650 6550
+Wire Wire Line
+	3100 6550 3100 6500
+$Comp
+L Device:C C11
+U 1 1 61A712EA
+P 3100 6350
+F 0 "C11" H 3215 6441 50  0000 L CNN
+F 1 "0.1uF" H 3215 6350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2650 6000 30  0000 L CNN
+F 3 "~" H 3100 6350 50  0001 C CNN
+	1    3100 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 61A712F4
+P 2650 6350
+F 0 "C10" H 2765 6441 50  0000 L CNN
+F 1 "0.1uF" H 2765 6350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2300 6100 30  0000 L CNN
+F 3 "~" H 2650 6350 50  0001 C CNN
+	1    2650 6350
+	1    0    0    -1  
+$EndComp
+Connection ~ 1800 6550
+Text Label 2350 6150 0    50   ~ 0
+FPPWR
 $EndSCHEMATC

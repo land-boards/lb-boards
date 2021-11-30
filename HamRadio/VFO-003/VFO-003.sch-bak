@@ -1887,7 +1887,7 @@ U 1 1 619813B6
 P 9600 1050
 F 0 "J13" V 9609 862 50  0000 R CNN
 F 1 "Conn_01x02" V 9518 862 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 862 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 862 30  0000 R CNN
 F 3 "~" H 9600 1050 50  0001 C CNN
 	1    9600 1050
 	0    -1   -1   0   
@@ -1898,7 +1898,7 @@ U 1 1 61982AAE
 P 9600 2600
 F 0 "J14" V 9609 2412 50  0000 R CNN
 F 1 "Conn_01x02" V 9518 2412 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 2412 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 2412 30  0000 R CNN
 F 3 "~" H 9600 2600 50  0001 C CNN
 	1    9600 2600
 	0    -1   -1   0   
@@ -1909,7 +1909,7 @@ U 1 1 61983E18
 P 9600 4150
 F 0 "J15" V 9609 3962 50  0000 R CNN
 F 1 "Conn_01x02" V 9518 3962 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 3962 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 9427 3962 30  0000 R CNN
 F 3 "~" H 9600 4150 50  0001 C CNN
 	1    9600 4150
 	0    -1   -1   0   
@@ -1997,4 +1997,46 @@ Wire Wire Line
 NoConn ~ 1700 2450
 NoConn ~ 1700 2350
 NoConn ~ 1700 2250
+Connection ~ 2250 6550
+Wire Wire Line
+	2250 6550 2700 6550
+Wire Wire Line
+	1800 6550 2250 6550
+Wire Wire Line
+	2250 6150 2700 6150
+Connection ~ 2250 6150
+Wire Wire Line
+	2250 6200 2250 6150
+Wire Wire Line
+	2700 6150 2700 6200
+Wire Wire Line
+	1800 6150 2250 6150
+Wire Wire Line
+	2250 6500 2250 6550
+Wire Wire Line
+	2700 6550 2700 6500
+$Comp
+L Device:C C11
+U 1 1 61A712EA
+P 2700 6350
+F 0 "C11" H 2815 6441 50  0000 L CNN
+F 1 "0.1uF" H 2815 6350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2250 6000 30  0000 L CNN
+F 3 "~" H 2700 6350 50  0001 C CNN
+	1    2700 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 61A712F4
+P 2250 6350
+F 0 "C10" H 2365 6441 50  0000 L CNN
+F 1 "0.1uF" H 2365 6350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1900 6100 30  0000 L CNN
+F 3 "~" H 2250 6350 50  0001 C CNN
+	1    2250 6350
+	1    0    0    -1  
+$EndComp
+Connection ~ 1800 6150
+Connection ~ 1800 6550
 $EndSCHEMATC
