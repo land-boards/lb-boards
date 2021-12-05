@@ -185,10 +185,6 @@ Wire Wire Line
 	5800 900  6300 900 
 Wire Wire Line
 	5800 1000 6300 1000
-Text Label 5550 3350 0    50   ~ 0
-P2
-Text Label 5550 4600 0    50   ~ 0
-P4
 Text Label 5850 900  0    60   ~ 0
 SCL
 $Comp
@@ -328,17 +324,6 @@ F 1 "GND" H 6700 1550 50  0000 C CNN
 F 2 "" H 6700 1700 60  0000 C CNN
 F 3 "" H 6700 1700 60  0000 C CNN
 	1    6700 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U4
-U 1 1 5F8EC5C2
-P 5150 3350
-F 0 "U4" H 5150 3727 50  0000 C CNN
-F 1 "74AC14" H 5150 3636 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5150 3560 30  0000 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5150 3350 50  0001 C CNN
-	1    5150 3350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -495,17 +480,6 @@ Wire Wire Line
 	10250 4650 10250 4700
 Wire Wire Line
 	8350 4450 8050 4450
-$Comp
-L 74xx:74LS14 U4
-U 2 1 5FB243E8
-P 5150 4000
-F 0 "U4" H 5150 4317 50  0000 C CNN
-F 1 "74AC14" H 5150 4226 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5150 4000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5150 4000 50  0001 C CNN
-	2    5150 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8950 2900 9000 2900
 $Comp
@@ -721,11 +695,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 8650 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5450 4600 5750 4600
-Wire Wire Line
 	6050 3600 6450 3600
-Wire Wire Line
-	5750 3350 5450 3350
 Text Label 6100 3050 0    50   ~ 0
 ENCA
 Text Label 6100 3600 0    50   ~ 0
@@ -733,14 +703,6 @@ ENCB
 Text Label 7600 3050 0    50   ~ 0
 ENCSW
 Connection ~ 6550 3050
-Wire Wire Line
-	4400 3350 4600 3350
-Text Label 3800 3350 0    50   ~ 0
-ENCA
-Wire Wire Line
-	4400 4000 4600 4000
-Text Label 3800 4000 0    50   ~ 0
-ENCB
 Text Notes 2250 4650 0    60   ~ 12
 FRONT PANEL BREAKOUT
 Text Notes 6800 3700 0    60   ~ 12
@@ -1080,147 +1042,8 @@ F 3 "~" H 9100 2900 50  0001 C CNN
 	1    9100 2900
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 5F8D4384
-P 4300 3350
-F 0 "R4" V 4200 3300 50  0000 L CNN
-F 1 "1K" V 4400 3300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4300 3350 50  0001 C CNN
-F 3 "~" H 4300 3350 50  0001 C CNN
-	1    4300 3350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3750 3350 4200 3350
-Wire Wire Line
-	3750 4000 4200 4000
-$Comp
-L Device:R_Small R5
-U 1 1 5F8E8BF0
-P 4300 4000
-F 0 "R5" V 4200 3950 50  0000 L CNN
-F 1 "1K" V 4400 3950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4300 4000 50  0001 C CNN
-F 3 "~" H 4300 4000 50  0001 C CNN
-	1    4300 4000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 5F8EBA5A
-P 4600 4200
-F 0 "C4" H 4715 4291 50  0000 L CNN
-F 1 "0.1uF" H 4715 4200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 3850 30  0000 L CNN
-F 3 "~" H 4600 4200 50  0001 C CNN
-	1    4600 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5F8EC8E6
-P 4600 3550
-F 0 "C3" H 4715 3641 50  0000 L CNN
-F 1 "0.1uF" H 4715 3550 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 3200 30  0000 L CNN
-F 3 "~" H 4600 3550 50  0001 C CNN
-	1    4600 3550
-	1    0    0    -1  
-$EndComp
 Text Notes 4500 1400 0    60   ~ 12
 I2C TERMINATORS
-$Comp
-L power:GND #PWR0132
-U 1 1 5F9A272C
-P 4600 3700
-F 0 "#PWR0132" H 4600 3450 50  0001 C CNN
-F 1 "GND" H 4600 3550 50  0000 C CNN
-F 2 "" H 4600 3700 60  0000 C CNN
-F 3 "" H 4600 3700 60  0000 C CNN
-	1    4600 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C5
-U 1 1 5F8EA9BA
-P 4600 4800
-F 0 "C5" H 4715 4891 50  0000 L CNN
-F 1 "0.1uF" H 4715 4800 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 4450 30  0000 L CNN
-F 3 "~" H 4600 4800 50  0001 C CNN
-	1    4600 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 5F8E9A9D
-P 4300 4600
-F 0 "R6" V 4200 4550 50  0000 L CNN
-F 1 "1K" V 4400 4550 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4300 4600 50  0001 C CNN
-F 3 "~" H 4300 4600 50  0001 C CNN
-	1    4300 4600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3750 4600 4200 4600
-Text Label 3800 4600 0    50   ~ 0
-ENCSW
-Wire Wire Line
-	4400 4600 4600 4600
-Wire Wire Line
-	5750 4000 5450 4000
-$Comp
-L 74xx:74LS14 U4
-U 3 1 5FB27ABD
-P 5150 4600
-F 0 "U4" H 5150 4917 50  0000 C CNN
-F 1 "74AC14" H 5150 4826 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5150 4600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5150 4600 50  0001 C CNN
-	3    5150 4600
-	1    0    0    -1  
-$EndComp
-Text Label 5550 4000 0    50   ~ 0
-P3
-$Comp
-L power:GND #PWR0133
-U 1 1 5FA2527C
-P 4600 4350
-F 0 "#PWR0133" H 4600 4100 50  0001 C CNN
-F 1 "GND" H 4600 4200 50  0000 C CNN
-F 2 "" H 4600 4350 60  0000 C CNN
-F 3 "" H 4600 4350 60  0000 C CNN
-	1    4600 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0134
-U 1 1 5FA26095
-P 4600 4950
-F 0 "#PWR0134" H 4600 4700 50  0001 C CNN
-F 1 "GND" H 4600 4800 50  0000 C CNN
-F 2 "" H 4600 4950 60  0000 C CNN
-F 3 "" H 4600 4950 60  0000 C CNN
-	1    4600 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 4050 4600 4000
-Connection ~ 4600 4000
-Wire Wire Line
-	4600 4000 4850 4000
-Wire Wire Line
-	4600 4650 4600 4600
-Connection ~ 4600 4600
-Wire Wire Line
-	4600 4600 4850 4600
-Wire Wire Line
-	4600 3400 4600 3350
-Connection ~ 4600 3350
-Wire Wire Line
-	4600 3350 4850 3350
 $Comp
 L Device:R_Small R8
 U 1 1 5FA37963
@@ -1296,14 +1119,8 @@ Wire Wire Line
 Connection ~ 1050 7450
 Wire Wire Line
 	1050 7450 1100 7450
-Text Label 1350 1350 0    50   ~ 0
-P2
 Wire Wire Line
 	1700 1450 1300 1450
-Text Label 1350 1450 0    50   ~ 0
-P3
-Text Label 1350 1550 0    50   ~ 0
-P4
 Wire Wire Line
 	1700 2650 1600 2650
 Wire Wire Line
@@ -1967,16 +1784,10 @@ F 3 "~" H 650 1100 50  0001 C CNN
 	1    650  1100
 	-1   0    0    -1  
 $EndComp
-Text Label 1050 800  0    50   ~ 0
-P4
 Wire Wire Line
 	850  800  1200 800 
-Text Label 1050 600  0    50   ~ 0
-P2
 Wire Wire Line
 	1200 700  850  700 
-Text Label 1050 700  0    50   ~ 0
-P3
 Wire Wire Line
 	850  600  1200 600 
 $Comp
@@ -2040,4 +1851,163 @@ $EndComp
 Connection ~ 1800 6550
 Text Label 2350 6150 0    50   ~ 0
 FPPWR
+Text Label 1300 1350 0    50   ~ 0
+ENCA
+Text Label 1300 1450 0    50   ~ 0
+ENCB
+Text Label 1300 1550 0    50   ~ 0
+ENCSW
+$Comp
+L 74xx:74LS14 U4
+U 1 1 61A9E88A
+P 5650 3700
+F 0 "U4" H 5650 4017 50  0000 C CNN
+F 1 "74AC14" H 5650 3926 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5650 3700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5650 3700 50  0001 C CNN
+	1    5650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U4
+U 2 1 61AA0EB7
+P 5650 4200
+F 0 "U4" H 5650 4517 50  0000 C CNN
+F 1 "74AC14" H 5650 4426 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5650 4200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5650 4200 50  0001 C CNN
+	2    5650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U4
+U 3 1 61AA2E17
+P 5650 4700
+F 0 "U4" H 5650 5017 50  0000 C CNN
+F 1 "74AC14" H 5650 4926 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5650 4700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5650 4700 50  0001 C CNN
+	3    5650 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 61AA45F2
+P 5150 3350
+F 0 "R4" H 5209 3396 50  0000 L CNN
+F 1 "2.2K" H 5209 3305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5150 3350 50  0001 C CNN
+F 3 "~" H 5150 3350 50  0001 C CNN
+	1    5150 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4700 5350 4700
+Wire Wire Line
+	5350 4200 5150 4200
+Connection ~ 5150 4200
+Wire Wire Line
+	5150 4200 5150 4700
+Wire Wire Line
+	5350 3700 5150 3700
+Wire Wire Line
+	5150 3450 5150 3700
+Connection ~ 5150 3700
+Wire Wire Line
+	5150 3700 5150 4200
+$Comp
+L power:+3V3 #PWR0113
+U 1 1 61AEB8F5
+P 5150 3150
+F 0 "#PWR0113" H 5150 3000 50  0001 C CNN
+F 1 "+3V3" H 5150 3290 50  0000 C CNN
+F 2 "" H 5150 3150 50  0001 C CNN
+F 3 "" H 5150 3150 50  0001 C CNN
+	1    5150 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3150 5150 3250
+Text Label 1050 800  0    50   ~ 0
+ENCSW
+Text Label 1050 700  0    50   ~ 0
+ENCB
+Text Label 1050 600  0    50   ~ 0
+ENCA
+Wire Wire Line
+	3450 3700 3850 3700
+Text Label 3450 3700 0    50   ~ 0
+ENCA
+Text Label 3450 3800 0    50   ~ 0
+ENCB
+Text Label 3450 3900 0    50   ~ 0
+ENCSW
+$Comp
+L Device:R_Small R18
+U 1 1 61BC6324
+P 4450 3500
+F 0 "R18" H 4509 3546 50  0000 L CNN
+F 1 "2.2K" H 4509 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4450 3500 50  0001 C CNN
+F 3 "~" H 4450 3500 50  0001 C CNN
+	1    4450 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 61BC6E88
+P 4450 3300
+F 0 "#PWR0115" H 4450 3150 50  0001 C CNN
+F 1 "+3V3" H 4450 3440 50  0000 C CNN
+F 2 "" H 4450 3300 50  0001 C CNN
+F 3 "" H 4450 3300 50  0001 C CNN
+	1    4450 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3300 4450 3350
+$Comp
+L Device:R_Small R6
+U 1 1 61BDF39D
+P 4150 3500
+F 0 "R6" H 4209 3546 50  0000 L CNN
+F 1 "2.2K" H 4209 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 3500 50  0001 C CNN
+F 3 "~" H 4150 3500 50  0001 C CNN
+	1    4150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 61BE0403
+P 3850 3500
+F 0 "R5" H 3909 3546 50  0000 L CNN
+F 1 "2.2K" H 3909 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3850 3500 50  0001 C CNN
+F 3 "~" H 3850 3500 50  0001 C CNN
+	1    3850 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3700 3850 3600
+Wire Wire Line
+	4150 3800 4150 3600
+Wire Wire Line
+	3450 3800 4150 3800
+Wire Wire Line
+	4450 3900 4450 3600
+Wire Wire Line
+	3450 3900 4450 3900
+Wire Wire Line
+	4450 3350 4150 3350
+Wire Wire Line
+	3850 3350 3850 3400
+Connection ~ 4450 3350
+Wire Wire Line
+	4450 3350 4450 3400
+Wire Wire Line
+	4150 3400 4150 3350
+Connection ~ 4150 3350
+Wire Wire Line
+	4150 3350 3850 3350
 $EndSCHEMATC
