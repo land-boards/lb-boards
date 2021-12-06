@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:FTDI-USB-TTL-49MM-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -186,7 +186,7 @@ F 3 "" H 7950 3000 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L FTDI-USB-TTL-49MM-rescue:FTDI-LandBoards_Cards P1
+L LandBoards_Cards:FTDI P1
 U 1 1 4FF312DA
 P 8600 2900
 F 0 "P1" H 8550 3650 60  0000 C CNN
@@ -243,7 +243,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 4650 2700 3700
 $Comp
-L FTDI-USB-TTL-49MM-rescue:FT230XS-LandBoards_Semis U1
+L LandBoards_Semis:FT230XS U1
 U 1 1 525C3657
 P 5550 3650
 F 0 "U1" H 5150 4300 50  0000 L BNN
@@ -295,7 +295,7 @@ $EndComp
 Wire Wire Line
 	7500 3950 8400 3950
 $Comp
-L FTDI-USB-TTL-49MM-rescue:USB-B-LandBoards_Conns J1
+L LandBoards_Conns:USB-B J1
 U 1 1 5E667E72
 P 2150 3950
 F 0 "J1" H 2100 4897 60  0000 C CNN
@@ -316,7 +316,7 @@ Wire Wire Line
 	2000 4650 2100 4650
 Connection ~ 2100 4650
 $Comp
-L FTDI-USB-TTL-49MM-rescue:COUPON-LandBoards_Conns BD-49X49
+L LandBoards_Conns:COUPON BD-49X49
 U 1 1 5E674A53
 P 4200 7850
 F 0 "BD-49X49" H 4428 8081 60  0000 L CNN
