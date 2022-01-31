@@ -1,0 +1,3847 @@
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"USBUART_drv.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	USBUART_EP,108,4
+  20              		.comm	USBUART_configuration,1,1
+  21              		.comm	USBUART_interfaceNumber,1,1
+  22              		.comm	USBUART_configurationChanged,1,1
+  23              		.comm	USBUART_deviceAddress,1,1
+  24              		.comm	USBUART_deviceStatus,1,1
+  25              		.comm	USBUART_interfaceSetting,2,4
+  26              		.comm	USBUART_interfaceSettingLast,2,4
+  27              		.comm	USBUART_interfaceStatus,2,4
+  28              		.comm	USBUART_device,1,1
+  29              		.comm	USBUART_interfaceClass,4,4
+  30              		.comm	USBUART_ep0Toggle,1,1
+  31              		.comm	USBUART_lastPacketSize,1,1
+  32              		.comm	USBUART_transferState,1,1
+  33              		.comm	USBUART_currentTD,12,4
+  34              		.comm	USBUART_ep0Mode,1,1
+  35              		.comm	USBUART_ep0Count,1,1
+  36              		.comm	USBUART_transferByteCount,2,2
+  37              		.section	.text.USBUART_EP_0_ISR,"ax",%progbits
+  38              		.align	2
+  39              		.global	USBUART_EP_0_ISR
+  40              		.code	16
+  41              		.thumb_func
+  42              		.type	USBUART_EP_0_ISR, %function
+  43              	USBUART_EP_0_ISR:
+  44              	.LFB1:
+  45              		.file 1 "Generated_Source\\PSoC4\\USBUART_drv.c"
+   1:Generated_Source\PSoC4/USBUART_drv.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/USBUART_drv.c **** * \file USBUART_drv.c
+   3:Generated_Source\PSoC4/USBUART_drv.c **** * \version 3.10
+   4:Generated_Source\PSoC4/USBUART_drv.c **** *
+   5:Generated_Source\PSoC4/USBUART_drv.c **** * \brief
+   6:Generated_Source\PSoC4/USBUART_drv.c **** *  This file contains the Endpoint 0 Driver for the USBFS Component.  
+   7:Generated_Source\PSoC4/USBUART_drv.c **** *
+   8:Generated_Source\PSoC4/USBUART_drv.c **** ********************************************************************************
+   9:Generated_Source\PSoC4/USBUART_drv.c **** * \copyright
+  10:Generated_Source\PSoC4/USBUART_drv.c **** * Copyright 2008-2016, Cypress Semiconductor Corporation.  All rights reserved.
+  11:Generated_Source\PSoC4/USBUART_drv.c **** * You may use this file only in accordance with the license, terms, conditions,
+  12:Generated_Source\PSoC4/USBUART_drv.c **** * disclaimers, and limitations in the end user license agreement accompanying
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 2
+
+
+  13:Generated_Source\PSoC4/USBUART_drv.c **** * the software package with which this file was provided.
+  14:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+  15:Generated_Source\PSoC4/USBUART_drv.c **** 
+  16:Generated_Source\PSoC4/USBUART_drv.c **** #include "USBUART_pvt.h"
+  17:Generated_Source\PSoC4/USBUART_drv.c **** #include "cyapicallbacks.h"
+  18:Generated_Source\PSoC4/USBUART_drv.c **** 
+  19:Generated_Source\PSoC4/USBUART_drv.c **** 
+  20:Generated_Source\PSoC4/USBUART_drv.c **** /***************************************
+  21:Generated_Source\PSoC4/USBUART_drv.c **** * Global data allocation
+  22:Generated_Source\PSoC4/USBUART_drv.c **** ***************************************/
+  23:Generated_Source\PSoC4/USBUART_drv.c **** 
+  24:Generated_Source\PSoC4/USBUART_drv.c **** volatile T_USBUART_EP_CTL_BLOCK USBUART_EP[USBUART_MAX_EP];
+  25:Generated_Source\PSoC4/USBUART_drv.c **** 
+  26:Generated_Source\PSoC4/USBUART_drv.c **** /** Contains the current configuration number, which is set by the host using a 
+  27:Generated_Source\PSoC4/USBUART_drv.c ****  * SET_CONFIGURATION request. This variable is initialized to zero in 
+  28:Generated_Source\PSoC4/USBUART_drv.c ****  * USBFS_InitComponent() API and can be read by the USBFS_GetConfiguration() 
+  29:Generated_Source\PSoC4/USBUART_drv.c ****  * API.*/
+  30:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_configuration;
+  31:Generated_Source\PSoC4/USBUART_drv.c **** 
+  32:Generated_Source\PSoC4/USBUART_drv.c **** /** Contains the current interface number.*/
+  33:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_interfaceNumber;
+  34:Generated_Source\PSoC4/USBUART_drv.c **** 
+  35:Generated_Source\PSoC4/USBUART_drv.c **** /** This variable is set to one after SET_CONFIGURATION and SET_INTERFACE 
+  36:Generated_Source\PSoC4/USBUART_drv.c ****  *requests. It can be read by the USBFS_IsConfigurationChanged() API */
+  37:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_configurationChanged;
+  38:Generated_Source\PSoC4/USBUART_drv.c **** 
+  39:Generated_Source\PSoC4/USBUART_drv.c **** /** Contains the current device address.*/
+  40:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_deviceAddress;
+  41:Generated_Source\PSoC4/USBUART_drv.c **** 
+  42:Generated_Source\PSoC4/USBUART_drv.c **** /** This is a two-bit variable that contains power status in the bit 0 
+  43:Generated_Source\PSoC4/USBUART_drv.c ****  * (DEVICE_STATUS_BUS_POWERED or DEVICE_STATUS_SELF_POWERED) and remote wakeup 
+  44:Generated_Source\PSoC4/USBUART_drv.c ****  * status (DEVICE_STATUS_REMOTE_WAKEUP) in the bit 1. This variable is 
+  45:Generated_Source\PSoC4/USBUART_drv.c ****  * initialized to zero in USBFS_InitComponent() API, configured by the 
+  46:Generated_Source\PSoC4/USBUART_drv.c ****  * USBFS_SetPowerStatus() API. The remote wakeup status cannot be set using the 
+  47:Generated_Source\PSoC4/USBUART_drv.c ****  * API SetPowerStatus(). */
+  48:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_deviceStatus;
+  49:Generated_Source\PSoC4/USBUART_drv.c **** 
+  50:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_interfaceSetting[USBUART_MAX_INTERFACES_NUMBER];
+  51:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_interfaceSetting_last[USBUART_MAX_INTERFACES_NUMBER];
+  52:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_interfaceStatus[USBUART_MAX_INTERFACES_NUMBER];
+  53:Generated_Source\PSoC4/USBUART_drv.c **** 
+  54:Generated_Source\PSoC4/USBUART_drv.c **** /** Contains the started device number. This variable is set by the 
+  55:Generated_Source\PSoC4/USBUART_drv.c ****  * USBFS_Start() or USBFS_InitComponent() APIs.*/
+  56:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8 USBUART_device;
+  57:Generated_Source\PSoC4/USBUART_drv.c **** 
+  58:Generated_Source\PSoC4/USBUART_drv.c **** /** Initialized class array for each interface. It is used for handling Class 
+  59:Generated_Source\PSoC4/USBUART_drv.c ****  * specific requests depend on interface class. Different classes in multiple 
+  60:Generated_Source\PSoC4/USBUART_drv.c ****  * alternate settings are not supported.*/
+  61:Generated_Source\PSoC4/USBUART_drv.c **** const uint8 CYCODE *USBUART_interfaceClass;
+  62:Generated_Source\PSoC4/USBUART_drv.c **** 
+  63:Generated_Source\PSoC4/USBUART_drv.c **** 
+  64:Generated_Source\PSoC4/USBUART_drv.c **** /***************************************
+  65:Generated_Source\PSoC4/USBUART_drv.c **** * Local data allocation
+  66:Generated_Source\PSoC4/USBUART_drv.c **** ***************************************/
+  67:Generated_Source\PSoC4/USBUART_drv.c **** 
+  68:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8  USBUART_ep0Toggle;
+  69:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8  USBUART_lastPacketSize;
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 3
+
+
+  70:Generated_Source\PSoC4/USBUART_drv.c **** 
+  71:Generated_Source\PSoC4/USBUART_drv.c **** /** This variable is used by the communication functions to handle the current 
+  72:Generated_Source\PSoC4/USBUART_drv.c **** * transfer state.
+  73:Generated_Source\PSoC4/USBUART_drv.c **** * Initialized to TRANS_STATE_IDLE in the USBFS_InitComponent() API and after a 
+  74:Generated_Source\PSoC4/USBUART_drv.c **** * complete transfer in the status stage.
+  75:Generated_Source\PSoC4/USBUART_drv.c **** * Changed to the TRANS_STATE_CONTROL_READ or TRANS_STATE_CONTROL_WRITE in setup 
+  76:Generated_Source\PSoC4/USBUART_drv.c **** * transaction depending on the request type.
+  77:Generated_Source\PSoC4/USBUART_drv.c **** */
+  78:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8  USBUART_transferState;
+  79:Generated_Source\PSoC4/USBUART_drv.c **** volatile T_USBUART_TD USBUART_currentTD;
+  80:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8  USBUART_ep0Mode;
+  81:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint8  USBUART_ep0Count;
+  82:Generated_Source\PSoC4/USBUART_drv.c **** volatile uint16 USBUART_transferByteCount;
+  83:Generated_Source\PSoC4/USBUART_drv.c **** 
+  84:Generated_Source\PSoC4/USBUART_drv.c **** 
+  85:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+  86:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_ep_0_Interrupt
+  87:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+  88:Generated_Source\PSoC4/USBUART_drv.c **** *
+  89:Generated_Source\PSoC4/USBUART_drv.c **** *  This Interrupt Service Routine handles Endpoint 0 (Control Pipe) traffic.
+  90:Generated_Source\PSoC4/USBUART_drv.c **** *  It dispatches setup requests and handles the data and status stages.
+  91:Generated_Source\PSoC4/USBUART_drv.c **** *
+  92:Generated_Source\PSoC4/USBUART_drv.c **** *
+  93:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+  94:Generated_Source\PSoC4/USBUART_drv.c **** CY_ISR(USBUART_EP_0_ISR)
+  95:Generated_Source\PSoC4/USBUART_drv.c **** {
+  46              		.loc 1 95 0
+  47              		.cfi_startproc
+  48              		@ args = 0, pretend = 0, frame = 8
+  49              		@ frame_needed = 1, uses_anonymous_args = 0
+  50 0000 80B5     		push	{r7, lr}
+  51              		.cfi_def_cfa_offset 8
+  52              		.cfi_offset 7, -8
+  53              		.cfi_offset 14, -4
+  54 0002 82B0     		sub	sp, sp, #8
+  55              		.cfi_def_cfa_offset 16
+  56 0004 00AF     		add	r7, sp, #0
+  57              		.cfi_def_cfa_register 7
+  96:Generated_Source\PSoC4/USBUART_drv.c ****     uint32 tempReg;
+  97:Generated_Source\PSoC4/USBUART_drv.c ****     uint32 modifyReg;
+  98:Generated_Source\PSoC4/USBUART_drv.c **** 
+  99:Generated_Source\PSoC4/USBUART_drv.c **** #ifdef USBUART_EP_0_ISR_ENTRY_CALLBACK
+ 100:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_EP_0_ISR_EntryCallback();
+ 101:Generated_Source\PSoC4/USBUART_drv.c **** #endif /* (USBUART_EP_0_ISR_ENTRY_CALLBACK) */
+ 102:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 103:Generated_Source\PSoC4/USBUART_drv.c ****     tempReg = USBUART_EP0_CR_REG;
+  58              		.loc 1 103 0
+  59 0006 374B     		ldr	r3, .L11
+  60 0008 1B68     		ldr	r3, [r3]
+  61 000a 3B60     		str	r3, [r7]
+ 104:Generated_Source\PSoC4/USBUART_drv.c ****     if ((tempReg & USBUART_MODE_ACKD) != 0u)
+  62              		.loc 1 104 0
+  63 000c 3B68     		ldr	r3, [r7]
+  64 000e 1022     		movs	r2, #16
+  65 0010 1340     		ands	r3, r2
+  66 0012 60D0     		beq	.L2
+ 105:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 4
+
+
+ 106:Generated_Source\PSoC4/USBUART_drv.c ****         modifyReg = 1u;
+  67              		.loc 1 106 0
+  68 0014 0123     		movs	r3, #1
+  69 0016 7B60     		str	r3, [r7, #4]
+ 107:Generated_Source\PSoC4/USBUART_drv.c ****         if ((tempReg & USBUART_MODE_SETUP_RCVD) != 0u)
+  70              		.loc 1 107 0
+  71 0018 3B68     		ldr	r3, [r7]
+  72 001a 8022     		movs	r2, #128
+  73 001c 1340     		ands	r3, r2
+  74 001e 12D0     		beq	.L3
+ 108:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 109:Generated_Source\PSoC4/USBUART_drv.c ****             if ((tempReg & USBUART_MODE_MASK) != USBUART_MODE_NAK_IN_OUT)
+  75              		.loc 1 109 0
+  76 0020 3B68     		ldr	r3, [r7]
+  77 0022 0F22     		movs	r2, #15
+  78 0024 1340     		ands	r3, r2
+  79 0026 012B     		cmp	r3, #1
+  80 0028 02D0     		beq	.L4
+ 110:Generated_Source\PSoC4/USBUART_drv.c ****             {
+ 111:Generated_Source\PSoC4/USBUART_drv.c ****                 /* Mode not equal to NAK_IN_OUT: invalid setup */
+ 112:Generated_Source\PSoC4/USBUART_drv.c ****                 modifyReg = 0u;
+  81              		.loc 1 112 0
+  82 002a 0023     		movs	r3, #0
+  83 002c 7B60     		str	r3, [r7, #4]
+  84 002e 1AE0     		b	.L6
+  85              	.L4:
+ 113:Generated_Source\PSoC4/USBUART_drv.c ****             }
+ 114:Generated_Source\PSoC4/USBUART_drv.c ****             else
+ 115:Generated_Source\PSoC4/USBUART_drv.c ****             {
+ 116:Generated_Source\PSoC4/USBUART_drv.c ****                 USBUART_HandleSetup();
+  86              		.loc 1 116 0
+  87 0030 FFF7FEFF 		bl	USBUART_HandleSetup
+ 117:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 118:Generated_Source\PSoC4/USBUART_drv.c ****                 if ((USBUART_ep0Mode & USBUART_MODE_SETUP_RCVD) != 0u)
+  88              		.loc 1 118 0
+  89 0034 2C4B     		ldr	r3, .L11+4
+  90 0036 1B78     		ldrb	r3, [r3]
+  91 0038 DBB2     		uxtb	r3, r3
+  92 003a 5BB2     		sxtb	r3, r3
+  93 003c 002B     		cmp	r3, #0
+  94 003e 12DA     		bge	.L6
+ 119:Generated_Source\PSoC4/USBUART_drv.c ****                 {
+ 120:Generated_Source\PSoC4/USBUART_drv.c ****                     /* SETUP bit set: exit without mode modificaiton */
+ 121:Generated_Source\PSoC4/USBUART_drv.c ****                     modifyReg = 0u;
+  95              		.loc 1 121 0
+  96 0040 0023     		movs	r3, #0
+  97 0042 7B60     		str	r3, [r7, #4]
+  98 0044 0FE0     		b	.L6
+  99              	.L3:
+ 122:Generated_Source\PSoC4/USBUART_drv.c ****                 }
+ 123:Generated_Source\PSoC4/USBUART_drv.c ****             }
+ 124:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 125:Generated_Source\PSoC4/USBUART_drv.c ****         else if ((tempReg & USBUART_MODE_IN_RCVD) != 0u)
+ 100              		.loc 1 125 0
+ 101 0046 3B68     		ldr	r3, [r7]
+ 102 0048 4022     		movs	r2, #64
+ 103 004a 1340     		ands	r3, r2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 5
+
+
+ 104 004c 02D0     		beq	.L7
+ 126:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 127:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_HandleIN();
+ 105              		.loc 1 127 0
+ 106 004e FFF7FEFF 		bl	USBUART_HandleIN
+ 107 0052 08E0     		b	.L6
+ 108              	.L7:
+ 128:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 129:Generated_Source\PSoC4/USBUART_drv.c ****         else if ((tempReg & USBUART_MODE_OUT_RCVD) != 0u)
+ 109              		.loc 1 129 0
+ 110 0054 3B68     		ldr	r3, [r7]
+ 111 0056 2022     		movs	r2, #32
+ 112 0058 1340     		ands	r3, r2
+ 113 005a 02D0     		beq	.L8
+ 130:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 131:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_HandleOUT();
+ 114              		.loc 1 131 0
+ 115 005c FFF7FEFF 		bl	USBUART_HandleOUT
+ 116 0060 01E0     		b	.L6
+ 117              	.L8:
+ 132:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 133:Generated_Source\PSoC4/USBUART_drv.c ****         else
+ 134:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 135:Generated_Source\PSoC4/USBUART_drv.c ****             modifyReg = 0u;
+ 118              		.loc 1 135 0
+ 119 0062 0023     		movs	r3, #0
+ 120 0064 7B60     		str	r3, [r7, #4]
+ 121              	.L6:
+ 136:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 137:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 138:Generated_Source\PSoC4/USBUART_drv.c ****         /* Modify the EP0_CR register */
+ 139:Generated_Source\PSoC4/USBUART_drv.c ****         if (modifyReg != 0u)
+ 122              		.loc 1 139 0
+ 123 0066 7B68     		ldr	r3, [r7, #4]
+ 124 0068 002B     		cmp	r3, #0
+ 125 006a 34D0     		beq	.L2
+ 140:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 141:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 142:Generated_Source\PSoC4/USBUART_drv.c ****             tempReg = USBUART_EP0_CR_REG;
+ 126              		.loc 1 142 0
+ 127 006c 1D4B     		ldr	r3, .L11
+ 128 006e 1B68     		ldr	r3, [r3]
+ 129 0070 3B60     		str	r3, [r7]
+ 143:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 144:Generated_Source\PSoC4/USBUART_drv.c ****             /* Make sure that SETUP bit is cleared before modification */
+ 145:Generated_Source\PSoC4/USBUART_drv.c ****             if ((tempReg & USBUART_MODE_SETUP_RCVD) == 0u)
+ 130              		.loc 1 145 0
+ 131 0072 3B68     		ldr	r3, [r7]
+ 132 0074 8022     		movs	r2, #128
+ 133 0076 1340     		ands	r3, r2
+ 134 0078 2DD1     		bne	.L2
+ 146:Generated_Source\PSoC4/USBUART_drv.c ****             {
+ 147:Generated_Source\PSoC4/USBUART_drv.c ****                 /* Update count register */
+ 148:Generated_Source\PSoC4/USBUART_drv.c ****                 tempReg = (uint32) USBUART_ep0Toggle | USBUART_ep0Count;
+ 135              		.loc 1 148 0
+ 136 007a 1C4B     		ldr	r3, .L11+8
+ 137 007c 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 6
+
+
+ 138 007e DAB2     		uxtb	r2, r3
+ 139 0080 1B4B     		ldr	r3, .L11+12
+ 140 0082 1B78     		ldrb	r3, [r3]
+ 141 0084 DBB2     		uxtb	r3, r3
+ 142 0086 1343     		orrs	r3, r2
+ 143 0088 DBB2     		uxtb	r3, r3
+ 144 008a 3B60     		str	r3, [r7]
+ 149:Generated_Source\PSoC4/USBUART_drv.c ****                 USBUART_EP0_CNT_REG = tempReg;
+ 145              		.loc 1 149 0
+ 146 008c 194B     		ldr	r3, .L11+16
+ 147 008e 3A68     		ldr	r2, [r7]
+ 148 0090 1A60     		str	r2, [r3]
+ 150:Generated_Source\PSoC4/USBUART_drv.c ****                
+ 151:Generated_Source\PSoC4/USBUART_drv.c ****                 /* Make sure that previous write operaiton was successful */
+ 152:Generated_Source\PSoC4/USBUART_drv.c ****                 if (tempReg == USBUART_EP0_CNT_REG)
+ 149              		.loc 1 152 0
+ 150 0092 184B     		ldr	r3, .L11+16
+ 151 0094 1A68     		ldr	r2, [r3]
+ 152 0096 3B68     		ldr	r3, [r7]
+ 153 0098 9A42     		cmp	r2, r3
+ 154 009a 1CD1     		bne	.L2
+ 155              	.L10:
+ 153:Generated_Source\PSoC4/USBUART_drv.c ****                 {
+ 154:Generated_Source\PSoC4/USBUART_drv.c ****                     /* Repeat until next successful write operation */
+ 155:Generated_Source\PSoC4/USBUART_drv.c ****                     do
+ 156:Generated_Source\PSoC4/USBUART_drv.c ****                     {
+ 157:Generated_Source\PSoC4/USBUART_drv.c ****                         /* Init temporary variable */
+ 158:Generated_Source\PSoC4/USBUART_drv.c ****                         modifyReg = USBUART_ep0Mode;
+ 156              		.loc 1 158 0
+ 157 009c 124B     		ldr	r3, .L11+4
+ 158 009e 1B78     		ldrb	r3, [r3]
+ 159 00a0 DBB2     		uxtb	r3, r3
+ 160 00a2 7B60     		str	r3, [r7, #4]
+ 159:Generated_Source\PSoC4/USBUART_drv.c ****                         
+ 160:Generated_Source\PSoC4/USBUART_drv.c ****                         /* Unlock register */
+ 161:Generated_Source\PSoC4/USBUART_drv.c ****                         tempReg = (uint8) (USBUART_EP0_CR_REG & USBUART_MODE_SETUP_RCVD);
+ 161              		.loc 1 161 0
+ 162 00a4 0F4B     		ldr	r3, .L11
+ 163 00a6 1B68     		ldr	r3, [r3]
+ 164 00a8 8022     		movs	r2, #128
+ 165 00aa 1340     		ands	r3, r2
+ 166 00ac 3B60     		str	r3, [r7]
+ 162:Generated_Source\PSoC4/USBUART_drv.c ****                         
+ 163:Generated_Source\PSoC4/USBUART_drv.c ****                         /* Check if SETUP bit is not set */
+ 164:Generated_Source\PSoC4/USBUART_drv.c ****                         if (0u == tempReg)
+ 167              		.loc 1 164 0
+ 168 00ae 3B68     		ldr	r3, [r7]
+ 169 00b0 002B     		cmp	r3, #0
+ 170 00b2 09D1     		bne	.L9
+ 165:Generated_Source\PSoC4/USBUART_drv.c ****                         {
+ 166:Generated_Source\PSoC4/USBUART_drv.c ****                             /* Set the Mode Register  */
+ 167:Generated_Source\PSoC4/USBUART_drv.c ****                             USBUART_EP0_CR_REG = USBUART_ep0Mode;
+ 171              		.loc 1 167 0
+ 172 00b4 0B4B     		ldr	r3, .L11
+ 173 00b6 0C4A     		ldr	r2, .L11+4
+ 174 00b8 1278     		ldrb	r2, [r2]
+ 175 00ba D2B2     		uxtb	r2, r2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 7
+
+
+ 176 00bc 1A60     		str	r2, [r3]
+ 168:Generated_Source\PSoC4/USBUART_drv.c ****                             
+ 169:Generated_Source\PSoC4/USBUART_drv.c ****                             /* Writing check */
+ 170:Generated_Source\PSoC4/USBUART_drv.c ****                             modifyReg = USBUART_EP0_CR_REG & USBUART_MODE_MASK;
+ 177              		.loc 1 170 0
+ 178 00be 094B     		ldr	r3, .L11
+ 179 00c0 1B68     		ldr	r3, [r3]
+ 180 00c2 0F22     		movs	r2, #15
+ 181 00c4 1340     		ands	r3, r2
+ 182 00c6 7B60     		str	r3, [r7, #4]
+ 183              	.L9:
+ 171:Generated_Source\PSoC4/USBUART_drv.c ****                         }
+ 172:Generated_Source\PSoC4/USBUART_drv.c ****                     }
+ 173:Generated_Source\PSoC4/USBUART_drv.c ****                     while (modifyReg != USBUART_ep0Mode);
+ 184              		.loc 1 173 0
+ 185 00c8 074B     		ldr	r3, .L11+4
+ 186 00ca 1B78     		ldrb	r3, [r3]
+ 187 00cc DBB2     		uxtb	r3, r3
+ 188 00ce 1A00     		movs	r2, r3
+ 189 00d0 7B68     		ldr	r3, [r7, #4]
+ 190 00d2 9A42     		cmp	r2, r3
+ 191 00d4 E2D1     		bne	.L10
+ 192              	.L2:
+ 174:Generated_Source\PSoC4/USBUART_drv.c ****                 }
+ 175:Generated_Source\PSoC4/USBUART_drv.c ****             }
+ 176:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 177:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 178:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 179:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ClearSieInterruptSource(USBUART_INTR_SIE_EP0_INTR);
+ 193              		.loc 1 179 0
+ 194 00d6 084B     		ldr	r3, .L11+20
+ 195 00d8 0422     		movs	r2, #4
+ 196 00da 1A60     		str	r2, [r3]
+ 180:Generated_Source\PSoC4/USBUART_drv.c **** 	
+ 181:Generated_Source\PSoC4/USBUART_drv.c **** #ifdef USBUART_EP_0_ISR_EXIT_CALLBACK
+ 182:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_EP_0_ISR_ExitCallback();
+ 183:Generated_Source\PSoC4/USBUART_drv.c **** #endif /* (USBUART_EP_0_ISR_EXIT_CALLBACK) */
+ 184:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 197              		.loc 1 184 0
+ 198 00dc C046     		nop
+ 199 00de BD46     		mov	sp, r7
+ 200 00e0 02B0     		add	sp, sp, #8
+ 201              		@ sp needed
+ 202 00e2 80BD     		pop	{r7, pc}
+ 203              	.L12:
+ 204              		.align	2
+ 205              	.L11:
+ 206 00e4 A0002C40 		.word	1076625568
+ 207 00e8 00000000 		.word	USBUART_ep0Mode
+ 208 00ec 00000000 		.word	USBUART_ep0Toggle
+ 209 00f0 00000000 		.word	USBUART_ep0Count
+ 210 00f4 A4002C40 		.word	1076625572
+ 211 00f8 20202C40 		.word	1076633632
+ 212              		.cfi_endproc
+ 213              	.LFE1:
+ 214              		.size	USBUART_EP_0_ISR, .-USBUART_EP_0_ISR
+ 215              		.section	.text.USBUART_HandleSetup,"ax",%progbits
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 8
+
+
+ 216              		.align	2
+ 217              		.global	USBUART_HandleSetup
+ 218              		.code	16
+ 219              		.thumb_func
+ 220              		.type	USBUART_HandleSetup, %function
+ 221              	USBUART_HandleSetup:
+ 222              	.LFB2:
+ 185:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 186:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 187:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 188:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_HandleSetup
+ 189:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 190:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 191:Generated_Source\PSoC4/USBUART_drv.c **** *  This Routine dispatches requests for the four USB request types
+ 192:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 193:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 194:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 195:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 196:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 197:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 198:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_HandleSetup(void) 
+ 199:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 223              		.loc 1 199 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 8
+ 226              		@ frame_needed = 1, uses_anonymous_args = 0
+ 227 0000 90B5     		push	{r4, r7, lr}
+ 228              		.cfi_def_cfa_offset 12
+ 229              		.cfi_offset 4, -12
+ 230              		.cfi_offset 7, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 83B0     		sub	sp, sp, #12
+ 233              		.cfi_def_cfa_offset 24
+ 234 0004 00AF     		add	r7, sp, #0
+ 235              		.cfi_def_cfa_register 7
+ 200:Generated_Source\PSoC4/USBUART_drv.c ****     uint8 requestHandled;
+ 201:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 202:Generated_Source\PSoC4/USBUART_drv.c ****     /* Clear register lock by SIE (read register) and clear setup bit 
+ 203:Generated_Source\PSoC4/USBUART_drv.c ****     * (write any value in register).
+ 204:Generated_Source\PSoC4/USBUART_drv.c ****     */
+ 205:Generated_Source\PSoC4/USBUART_drv.c ****     requestHandled = (uint8) USBUART_EP0_CR_REG;
+ 236              		.loc 1 205 0
+ 237 0006 224B     		ldr	r3, .L23
+ 238 0008 1A68     		ldr	r2, [r3]
+ 239 000a FB1D     		adds	r3, r7, #7
+ 240 000c 1A70     		strb	r2, [r3]
+ 206:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_EP0_CR_REG = (uint32) requestHandled;
+ 241              		.loc 1 206 0
+ 242 000e 204B     		ldr	r3, .L23
+ 243 0010 FA1D     		adds	r2, r7, #7
+ 244 0012 1278     		ldrb	r2, [r2]
+ 245 0014 1A60     		str	r2, [r3]
+ 207:Generated_Source\PSoC4/USBUART_drv.c ****     requestHandled = (uint8) USBUART_EP0_CR_REG;
+ 246              		.loc 1 207 0
+ 247 0016 1E4B     		ldr	r3, .L23
+ 248 0018 1A68     		ldr	r2, [r3]
+ 249 001a FB1D     		adds	r3, r7, #7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 9
+
+
+ 250 001c 1A70     		strb	r2, [r3]
+ 208:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 209:Generated_Source\PSoC4/USBUART_drv.c ****     if ((requestHandled & USBUART_MODE_SETUP_RCVD) != 0u)
+ 251              		.loc 1 209 0
+ 252 001e FB1D     		adds	r3, r7, #7
+ 253 0020 1B78     		ldrb	r3, [r3]
+ 254 0022 5BB2     		sxtb	r3, r3
+ 255 0024 002B     		cmp	r3, #0
+ 256 0026 04DA     		bge	.L14
+ 210:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 211:Generated_Source\PSoC4/USBUART_drv.c ****         /* SETUP bit is set: exit without mode modification. */
+ 212:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_ep0Mode = requestHandled;
+ 257              		.loc 1 212 0
+ 258 0028 1A4B     		ldr	r3, .L23+4
+ 259 002a FA1D     		adds	r2, r7, #7
+ 260 002c 1278     		ldrb	r2, [r2]
+ 261 002e 1A70     		strb	r2, [r3]
+ 213:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 214:Generated_Source\PSoC4/USBUART_drv.c ****     else
+ 215:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 216:Generated_Source\PSoC4/USBUART_drv.c ****         /* In case the previous transfer did not complete, close it out */
+ 217:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_UpdateStatusBlock(USBUART_XFER_PREMATURE);
+ 218:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 219:Generated_Source\PSoC4/USBUART_drv.c ****         /* Check request type. */
+ 220:Generated_Source\PSoC4/USBUART_drv.c ****         switch (USBUART_bmRequestTypeReg & USBUART_RQST_TYPE_MASK)
+ 221:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 222:Generated_Source\PSoC4/USBUART_drv.c ****             case USBUART_RQST_TYPE_STD:
+ 223:Generated_Source\PSoC4/USBUART_drv.c ****                 requestHandled = USBUART_HandleStandardRqst();
+ 224:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 225:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 226:Generated_Source\PSoC4/USBUART_drv.c ****             case USBUART_RQST_TYPE_CLS:
+ 227:Generated_Source\PSoC4/USBUART_drv.c ****                 requestHandled = USBUART_DispatchClassRqst();
+ 228:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 229:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 230:Generated_Source\PSoC4/USBUART_drv.c ****             case USBUART_RQST_TYPE_VND:
+ 231:Generated_Source\PSoC4/USBUART_drv.c ****                 requestHandled = USBUART_HandleVendorRqst();
+ 232:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 233:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 234:Generated_Source\PSoC4/USBUART_drv.c ****             default:
+ 235:Generated_Source\PSoC4/USBUART_drv.c ****                 requestHandled = USBUART_FALSE;
+ 236:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 237:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 238:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 239:Generated_Source\PSoC4/USBUART_drv.c ****         /* If request is not recognized. Stall endpoint 0 IN and OUT. */
+ 240:Generated_Source\PSoC4/USBUART_drv.c ****         if (requestHandled == USBUART_FALSE)
+ 241:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 242:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ep0Mode = USBUART_MODE_STALL_IN_OUT;
+ 243:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 244:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 245:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 262              		.loc 1 245 0
+ 263 0030 29E0     		b	.L22
+ 264              	.L14:
+ 217:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 265              		.loc 1 217 0
+ 266 0032 0220     		movs	r0, #2
+ 267 0034 FFF7FEFF 		bl	USBUART_UpdateStatusBlock
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 10
+
+
+ 220:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 268              		.loc 1 220 0
+ 269 0038 174B     		ldr	r3, .L23+8
+ 270 003a 1B68     		ldr	r3, [r3]
+ 271 003c 6022     		movs	r2, #96
+ 272 003e 1340     		ands	r3, r2
+ 273 0040 202B     		cmp	r3, #32
+ 274 0042 09D0     		beq	.L17
+ 275 0044 402B     		cmp	r3, #64
+ 276 0046 0DD0     		beq	.L18
+ 277 0048 002B     		cmp	r3, #0
+ 278 004a 11D1     		bne	.L21
+ 223:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 279              		.loc 1 223 0
+ 280 004c FC1D     		adds	r4, r7, #7
+ 281 004e FFF7FEFF 		bl	USBUART_HandleStandardRqst
+ 282 0052 0300     		movs	r3, r0
+ 283 0054 2370     		strb	r3, [r4]
+ 224:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 284              		.loc 1 224 0
+ 285 0056 0FE0     		b	.L20
+ 286              	.L17:
+ 227:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 287              		.loc 1 227 0
+ 288 0058 FC1D     		adds	r4, r7, #7
+ 289 005a FFF7FEFF 		bl	USBUART_DispatchClassRqst
+ 290 005e 0300     		movs	r3, r0
+ 291 0060 2370     		strb	r3, [r4]
+ 228:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 292              		.loc 1 228 0
+ 293 0062 09E0     		b	.L20
+ 294              	.L18:
+ 231:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 295              		.loc 1 231 0
+ 296 0064 FC1D     		adds	r4, r7, #7
+ 297 0066 FFF7FEFF 		bl	USBUART_HandleVendorRqst
+ 298 006a 0300     		movs	r3, r0
+ 299 006c 2370     		strb	r3, [r4]
+ 232:Generated_Source\PSoC4/USBUART_drv.c ****                 
+ 300              		.loc 1 232 0
+ 301 006e 03E0     		b	.L20
+ 302              	.L21:
+ 235:Generated_Source\PSoC4/USBUART_drv.c ****                 break;
+ 303              		.loc 1 235 0
+ 304 0070 FB1D     		adds	r3, r7, #7
+ 305 0072 0022     		movs	r2, #0
+ 306 0074 1A70     		strb	r2, [r3]
+ 236:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 307              		.loc 1 236 0
+ 308 0076 C046     		nop
+ 309              	.L20:
+ 240:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 310              		.loc 1 240 0
+ 311 0078 FB1D     		adds	r3, r7, #7
+ 312 007a 1B78     		ldrb	r3, [r3]
+ 313 007c 002B     		cmp	r3, #0
+ 314 007e 02D1     		bne	.L22
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 11
+
+
+ 242:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 315              		.loc 1 242 0
+ 316 0080 044B     		ldr	r3, .L23+4
+ 317 0082 0322     		movs	r2, #3
+ 318 0084 1A70     		strb	r2, [r3]
+ 319              	.L22:
+ 320              		.loc 1 245 0
+ 321 0086 C046     		nop
+ 322 0088 BD46     		mov	sp, r7
+ 323 008a 03B0     		add	sp, sp, #12
+ 324              		@ sp needed
+ 325 008c 90BD     		pop	{r4, r7, pc}
+ 326              	.L24:
+ 327 008e C046     		.align	2
+ 328              	.L23:
+ 329 0090 A0002C40 		.word	1076625568
+ 330 0094 00000000 		.word	USBUART_ep0Mode
+ 331 0098 00002C40 		.word	1076625408
+ 332              		.cfi_endproc
+ 333              	.LFE2:
+ 334              		.size	USBUART_HandleSetup, .-USBUART_HandleSetup
+ 335              		.section	.text.USBUART_HandleIN,"ax",%progbits
+ 336              		.align	2
+ 337              		.global	USBUART_HandleIN
+ 338              		.code	16
+ 339              		.thumb_func
+ 340              		.type	USBUART_HandleIN, %function
+ 341              	USBUART_HandleIN:
+ 342              	.LFB3:
+ 246:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 247:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 248:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 249:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_HandleIN
+ 250:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 251:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 252:Generated_Source\PSoC4/USBUART_drv.c **** *  This routine handles EP0 IN transfers.
+ 253:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 254:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 255:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 256:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 257:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 258:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 259:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_HandleIN(void) 
+ 260:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 343              		.loc 1 260 0
+ 344              		.cfi_startproc
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 1, uses_anonymous_args = 0
+ 347 0000 80B5     		push	{r7, lr}
+ 348              		.cfi_def_cfa_offset 8
+ 349              		.cfi_offset 7, -8
+ 350              		.cfi_offset 14, -4
+ 351 0002 00AF     		add	r7, sp, #0
+ 352              		.cfi_def_cfa_register 7
+ 261:Generated_Source\PSoC4/USBUART_drv.c ****     switch (USBUART_transferState)
+ 353              		.loc 1 261 0
+ 354 0004 0D4B     		ldr	r3, .L34
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 12
+
+
+ 355 0006 1B78     		ldrb	r3, [r3]
+ 356 0008 DBB2     		uxtb	r3, r3
+ 357 000a 022B     		cmp	r3, #2
+ 358 000c 08D0     		beq	.L27
+ 359 000e 02DC     		bgt	.L28
+ 360 0010 002B     		cmp	r3, #0
+ 361 0012 0ED0     		beq	.L33
+ 262:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 263:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_IDLE:
+ 264:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 265:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 266:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_CONTROL_READ:
+ 267:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ControlReadDataStage();
+ 268:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 269:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 270:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_CONTROL_WRITE:
+ 271:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ControlWriteStatusStage();
+ 272:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 273:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 274:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_NO_DATA_CONTROL:
+ 275:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_NoDataControlStatusStage();
+ 276:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 277:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 278:Generated_Source\PSoC4/USBUART_drv.c ****         default:    /* there are no more states */
+ 279:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 362              		.loc 1 279 0
+ 363 0014 0EE0     		b	.L32
+ 364              	.L28:
+ 261:Generated_Source\PSoC4/USBUART_drv.c ****     switch (USBUART_transferState)
+ 365              		.loc 1 261 0
+ 366 0016 042B     		cmp	r3, #4
+ 367 0018 05D0     		beq	.L30
+ 368 001a 062B     		cmp	r3, #6
+ 369 001c 06D0     		beq	.L31
+ 370              		.loc 1 279 0
+ 371 001e 09E0     		b	.L32
+ 372              	.L27:
+ 267:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 373              		.loc 1 267 0
+ 374 0020 FFF7FEFF 		bl	USBUART_ControlReadDataStage
+ 268:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 375              		.loc 1 268 0
+ 376 0024 06E0     		b	.L32
+ 377              	.L30:
+ 271:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 378              		.loc 1 271 0
+ 379 0026 FFF7FEFF 		bl	USBUART_ControlWriteStatusStage
+ 272:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 380              		.loc 1 272 0
+ 381 002a 03E0     		b	.L32
+ 382              	.L31:
+ 275:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 383              		.loc 1 275 0
+ 384 002c FFF7FEFF 		bl	USBUART_NoDataControlStatusStage
+ 276:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 385              		.loc 1 276 0
+ 386 0030 00E0     		b	.L32
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 13
+
+
+ 387              	.L33:
+ 264:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 388              		.loc 1 264 0
+ 389 0032 C046     		nop
+ 390              	.L32:
+ 280:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 281:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 391              		.loc 1 281 0
+ 392 0034 C046     		nop
+ 393 0036 BD46     		mov	sp, r7
+ 394              		@ sp needed
+ 395 0038 80BD     		pop	{r7, pc}
+ 396              	.L35:
+ 397 003a C046     		.align	2
+ 398              	.L34:
+ 399 003c 00000000 		.word	USBUART_transferState
+ 400              		.cfi_endproc
+ 401              	.LFE3:
+ 402              		.size	USBUART_HandleIN, .-USBUART_HandleIN
+ 403              		.section	.text.USBUART_HandleOUT,"ax",%progbits
+ 404              		.align	2
+ 405              		.global	USBUART_HandleOUT
+ 406              		.code	16
+ 407              		.thumb_func
+ 408              		.type	USBUART_HandleOUT, %function
+ 409              	USBUART_HandleOUT:
+ 410              	.LFB4:
+ 282:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 283:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 284:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 285:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_HandleOUT
+ 286:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 287:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 288:Generated_Source\PSoC4/USBUART_drv.c **** *  This routine handles EP0 OUT transfers.
+ 289:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 290:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 291:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 292:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 293:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 294:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 295:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_HandleOUT(void) 
+ 296:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 411              		.loc 1 296 0
+ 412              		.cfi_startproc
+ 413              		@ args = 0, pretend = 0, frame = 0
+ 414              		@ frame_needed = 1, uses_anonymous_args = 0
+ 415 0000 80B5     		push	{r7, lr}
+ 416              		.cfi_def_cfa_offset 8
+ 417              		.cfi_offset 7, -8
+ 418              		.cfi_offset 14, -4
+ 419 0002 00AF     		add	r7, sp, #0
+ 420              		.cfi_def_cfa_register 7
+ 297:Generated_Source\PSoC4/USBUART_drv.c ****     switch (USBUART_transferState)
+ 421              		.loc 1 297 0
+ 422 0004 0F4B     		ldr	r3, .L45
+ 423 0006 1B78     		ldrb	r3, [r3]
+ 424 0008 DBB2     		uxtb	r3, r3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 14
+
+
+ 425 000a 022B     		cmp	r3, #2
+ 426 000c 08D0     		beq	.L38
+ 427 000e 02DC     		bgt	.L39
+ 428 0010 002B     		cmp	r3, #0
+ 429 0012 12D0     		beq	.L44
+ 298:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 299:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_IDLE:
+ 300:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 301:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 302:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_CONTROL_READ:
+ 303:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ControlReadStatusStage();
+ 304:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 305:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 306:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_CONTROL_WRITE:
+ 307:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ControlWriteDataStage();
+ 308:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 309:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 310:Generated_Source\PSoC4/USBUART_drv.c ****         case USBUART_TRANS_STATE_NO_DATA_CONTROL:
+ 311:Generated_Source\PSoC4/USBUART_drv.c ****             /* Update the completion block */
+ 312:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_UpdateStatusBlock(USBUART_XFER_ERROR);
+ 313:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 314:Generated_Source\PSoC4/USBUART_drv.c ****             /* We expect no more data, so stall INs and OUTs */
+ 315:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_ep0Mode = USBUART_MODE_STALL_IN_OUT;
+ 316:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 317:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 318:Generated_Source\PSoC4/USBUART_drv.c ****         default:    
+ 319:Generated_Source\PSoC4/USBUART_drv.c ****             /* There are no more states */
+ 320:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 430              		.loc 1 320 0
+ 431 0014 12E0     		b	.L43
+ 432              	.L39:
+ 297:Generated_Source\PSoC4/USBUART_drv.c ****     switch (USBUART_transferState)
+ 433              		.loc 1 297 0
+ 434 0016 042B     		cmp	r3, #4
+ 435 0018 05D0     		beq	.L41
+ 436 001a 062B     		cmp	r3, #6
+ 437 001c 06D0     		beq	.L42
+ 438              		.loc 1 320 0
+ 439 001e 0DE0     		b	.L43
+ 440              	.L38:
+ 303:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 441              		.loc 1 303 0
+ 442 0020 FFF7FEFF 		bl	USBUART_ControlReadStatusStage
+ 304:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 443              		.loc 1 304 0
+ 444 0024 0AE0     		b	.L43
+ 445              	.L41:
+ 307:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 446              		.loc 1 307 0
+ 447 0026 FFF7FEFF 		bl	USBUART_ControlWriteDataStage
+ 308:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 448              		.loc 1 308 0
+ 449 002a 07E0     		b	.L43
+ 450              	.L42:
+ 312:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 451              		.loc 1 312 0
+ 452 002c 0320     		movs	r0, #3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 15
+
+
+ 453 002e FFF7FEFF 		bl	USBUART_UpdateStatusBlock
+ 315:Generated_Source\PSoC4/USBUART_drv.c ****             break;
+ 454              		.loc 1 315 0
+ 455 0032 054B     		ldr	r3, .L45+4
+ 456 0034 0322     		movs	r2, #3
+ 457 0036 1A70     		strb	r2, [r3]
+ 316:Generated_Source\PSoC4/USBUART_drv.c ****             
+ 458              		.loc 1 316 0
+ 459 0038 00E0     		b	.L43
+ 460              	.L44:
+ 300:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 461              		.loc 1 300 0
+ 462 003a C046     		nop
+ 463              	.L43:
+ 321:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 322:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 464              		.loc 1 322 0
+ 465 003c C046     		nop
+ 466 003e BD46     		mov	sp, r7
+ 467              		@ sp needed
+ 468 0040 80BD     		pop	{r7, pc}
+ 469              	.L46:
+ 470 0042 C046     		.align	2
+ 471              	.L45:
+ 472 0044 00000000 		.word	USBUART_transferState
+ 473 0048 00000000 		.word	USBUART_ep0Mode
+ 474              		.cfi_endproc
+ 475              	.LFE4:
+ 476              		.size	USBUART_HandleOUT, .-USBUART_HandleOUT
+ 477              		.section	.text.USBUART_LoadEP0,"ax",%progbits
+ 478              		.align	2
+ 479              		.global	USBUART_LoadEP0
+ 480              		.code	16
+ 481              		.thumb_func
+ 482              		.type	USBUART_LoadEP0, %function
+ 483              	USBUART_LoadEP0:
+ 484              	.LFB5:
+ 323:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 324:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 325:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 326:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_LoadEP0
+ 327:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 328:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 329:Generated_Source\PSoC4/USBUART_drv.c **** *  This routine loads the EP0 data registers for OUT transfers. It uses the
+ 330:Generated_Source\PSoC4/USBUART_drv.c **** *  currentTD (previously initialized by the _InitControlWrite function and
+ 331:Generated_Source\PSoC4/USBUART_drv.c **** *  updated for each OUT transfer, and the bLastPacketSize) to determine how
+ 332:Generated_Source\PSoC4/USBUART_drv.c **** *  many uint8s to transfer on the current OUT.
+ 333:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 334:Generated_Source\PSoC4/USBUART_drv.c **** *  If the number of uint8s remaining is zero and the last transfer was full,
+ 335:Generated_Source\PSoC4/USBUART_drv.c **** *  we need to send a zero length packet.  Otherwise we send the minimum
+ 336:Generated_Source\PSoC4/USBUART_drv.c **** *  of the control endpoint size (8) or remaining number of uint8s for the
+ 337:Generated_Source\PSoC4/USBUART_drv.c **** *  transaction.
+ 338:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 339:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 340:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 341:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferByteCount - Update the transfer byte count from the
+ 342:Generated_Source\PSoC4/USBUART_drv.c **** *     last transaction.
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 16
+
+
+ 343:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Count - counts the data loaded to the SIE memory in
+ 344:Generated_Source\PSoC4/USBUART_drv.c **** *     current packet.
+ 345:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_lastPacketSize - remembers the USBFS_ep0Count value for the
+ 346:Generated_Source\PSoC4/USBUART_drv.c **** *     next packet.
+ 347:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferByteCount - sum of the previous bytes transferred
+ 348:Generated_Source\PSoC4/USBUART_drv.c **** *     on previous packets(sum of USBFS_lastPacketSize)
+ 349:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - inverted
+ 350:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - prepare for mode register content.
+ 351:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_CONTROL_READ
+ 352:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 353:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 354:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 355:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 356:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 357:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_LoadEP0(void) 
+ 358:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 485              		.loc 1 358 0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 8
+ 488              		@ frame_needed = 1, uses_anonymous_args = 0
+ 489 0000 80B5     		push	{r7, lr}
+ 490              		.cfi_def_cfa_offset 8
+ 491              		.cfi_offset 7, -8
+ 492              		.cfi_offset 14, -4
+ 493 0002 82B0     		sub	sp, sp, #8
+ 494              		.cfi_def_cfa_offset 16
+ 495 0004 00AF     		add	r7, sp, #0
+ 496              		.cfi_def_cfa_register 7
+ 359:Generated_Source\PSoC4/USBUART_drv.c ****     uint32 ep0Count = 0u;
+ 497              		.loc 1 359 0
+ 498 0006 0023     		movs	r3, #0
+ 499 0008 7B60     		str	r3, [r7, #4]
+ 360:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 361:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the transfer byte count from the last transaction */
+ 362:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferByteCount += USBUART_lastPacketSize;
+ 500              		.loc 1 362 0
+ 501 000a 2B4B     		ldr	r3, .L54
+ 502 000c 1B78     		ldrb	r3, [r3]
+ 503 000e DBB2     		uxtb	r3, r3
+ 504 0010 9AB2     		uxth	r2, r3
+ 505 0012 2A4B     		ldr	r3, .L54+4
+ 506 0014 1B88     		ldrh	r3, [r3]
+ 507 0016 9BB2     		uxth	r3, r3
+ 508 0018 D318     		adds	r3, r2, r3
+ 509 001a 9AB2     		uxth	r2, r3
+ 510 001c 274B     		ldr	r3, .L54+4
+ 511 001e 1A80     		strh	r2, [r3]
+ 363:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 364:Generated_Source\PSoC4/USBUART_drv.c ****     /* Now load the next transaction */
+ 365:Generated_Source\PSoC4/USBUART_drv.c ****     while ((USBUART_currentTD.count > 0u) && (ep0Count < 8u))
+ 512              		.loc 1 365 0
+ 513 0020 17E0     		b	.L48
+ 514              	.L50:
+ 366:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 367:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_EP0_DR_BASE.epData[ep0Count] = (uint32) *USBUART_currentTD.pData;
+ 515              		.loc 1 367 0
+ 516 0022 274A     		ldr	r2, .L54+8
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 17
+
+
+ 517 0024 274B     		ldr	r3, .L54+12
+ 518 0026 5B68     		ldr	r3, [r3, #4]
+ 519 0028 1B78     		ldrb	r3, [r3]
+ 520 002a DBB2     		uxtb	r3, r3
+ 521 002c 1900     		movs	r1, r3
+ 522 002e 7B68     		ldr	r3, [r7, #4]
+ 523 0030 9B00     		lsls	r3, r3, #2
+ 524 0032 9950     		str	r1, [r3, r2]
+ 368:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pData = &USBUART_currentTD.pData[1u];
+ 525              		.loc 1 368 0
+ 526 0034 234B     		ldr	r3, .L54+12
+ 527 0036 5B68     		ldr	r3, [r3, #4]
+ 528 0038 5A1C     		adds	r2, r3, #1
+ 529 003a 224B     		ldr	r3, .L54+12
+ 530 003c 5A60     		str	r2, [r3, #4]
+ 369:Generated_Source\PSoC4/USBUART_drv.c ****         ep0Count++;
+ 531              		.loc 1 369 0
+ 532 003e 7B68     		ldr	r3, [r7, #4]
+ 533 0040 0133     		adds	r3, r3, #1
+ 534 0042 7B60     		str	r3, [r7, #4]
+ 370:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.count--;
+ 535              		.loc 1 370 0
+ 536 0044 1F4B     		ldr	r3, .L54+12
+ 537 0046 1B88     		ldrh	r3, [r3]
+ 538 0048 9BB2     		uxth	r3, r3
+ 539 004a 013B     		subs	r3, r3, #1
+ 540 004c 9AB2     		uxth	r2, r3
+ 541 004e 1D4B     		ldr	r3, .L54+12
+ 542 0050 1A80     		strh	r2, [r3]
+ 543              	.L48:
+ 365:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 544              		.loc 1 365 0
+ 545 0052 1C4B     		ldr	r3, .L54+12
+ 546 0054 1B88     		ldrh	r3, [r3]
+ 547 0056 9BB2     		uxth	r3, r3
+ 548 0058 002B     		cmp	r3, #0
+ 549 005a 02D0     		beq	.L49
+ 365:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 550              		.loc 1 365 0 is_stmt 0 discriminator 1
+ 551 005c 7B68     		ldr	r3, [r7, #4]
+ 552 005e 072B     		cmp	r3, #7
+ 553 0060 DFD9     		bls	.L50
+ 554              	.L49:
+ 371:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 372:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 373:Generated_Source\PSoC4/USBUART_drv.c ****     /* Support zero-length packet */
+ 374:Generated_Source\PSoC4/USBUART_drv.c ****     if ((USBUART_lastPacketSize == 8u) || (ep0Count > 0u))
+ 555              		.loc 1 374 0 is_stmt 1
+ 556 0062 154B     		ldr	r3, .L54
+ 557 0064 1B78     		ldrb	r3, [r3]
+ 558 0066 DBB2     		uxtb	r3, r3
+ 559 0068 082B     		cmp	r3, #8
+ 560 006a 02D0     		beq	.L51
+ 561              		.loc 1 374 0 is_stmt 0 discriminator 1
+ 562 006c 7B68     		ldr	r3, [r7, #4]
+ 563 006e 002B     		cmp	r3, #0
+ 564 0070 0FD0     		beq	.L52
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 18
+
+
+ 565              	.L51:
+ 375:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 376:Generated_Source\PSoC4/USBUART_drv.c ****         /* Update the data toggle */
+ 377:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_ep0Toggle ^= USBUART_EP0_CNT_DATA_TOGGLE;
+ 566              		.loc 1 377 0 is_stmt 1
+ 567 0072 154B     		ldr	r3, .L54+16
+ 568 0074 1B78     		ldrb	r3, [r3]
+ 569 0076 DBB2     		uxtb	r3, r3
+ 570 0078 8022     		movs	r2, #128
+ 571 007a 5242     		rsbs	r2, r2, #0
+ 572 007c 5340     		eors	r3, r2
+ 573 007e DAB2     		uxtb	r2, r3
+ 574 0080 114B     		ldr	r3, .L54+16
+ 575 0082 1A70     		strb	r2, [r3]
+ 378:Generated_Source\PSoC4/USBUART_drv.c ****         /* Set the Mode Register  */
+ 379:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_ep0Mode = USBUART_MODE_ACK_IN_STATUS_OUT;
+ 576              		.loc 1 379 0
+ 577 0084 114B     		ldr	r3, .L54+20
+ 578 0086 0F22     		movs	r2, #15
+ 579 0088 1A70     		strb	r2, [r3]
+ 380:Generated_Source\PSoC4/USBUART_drv.c ****         /* Update the state (or stay the same) */
+ 381:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_transferState = USBUART_TRANS_STATE_CONTROL_READ;
+ 580              		.loc 1 381 0
+ 581 008a 114B     		ldr	r3, .L54+24
+ 582 008c 0222     		movs	r2, #2
+ 583 008e 1A70     		strb	r2, [r3]
+ 584 0090 05E0     		b	.L53
+ 585              	.L52:
+ 382:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 383:Generated_Source\PSoC4/USBUART_drv.c ****     else
+ 384:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 385:Generated_Source\PSoC4/USBUART_drv.c ****         /* Expect Status Stage Out */
+ 386:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_ep0Mode = USBUART_MODE_STATUS_OUT_ONLY;
+ 586              		.loc 1 386 0
+ 587 0092 0E4B     		ldr	r3, .L54+20
+ 588 0094 0222     		movs	r2, #2
+ 589 0096 1A70     		strb	r2, [r3]
+ 387:Generated_Source\PSoC4/USBUART_drv.c ****         /* Update the state (or stay the same) */
+ 388:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_transferState = USBUART_TRANS_STATE_CONTROL_READ;
+ 590              		.loc 1 388 0
+ 591 0098 0D4B     		ldr	r3, .L54+24
+ 592 009a 0222     		movs	r2, #2
+ 593 009c 1A70     		strb	r2, [r3]
+ 594              	.L53:
+ 389:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 390:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 391:Generated_Source\PSoC4/USBUART_drv.c ****     /* Save the packet size for next time */
+ 392:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Count =       (uint8) ep0Count;
+ 595              		.loc 1 392 0
+ 596 009e 7B68     		ldr	r3, [r7, #4]
+ 597 00a0 DAB2     		uxtb	r2, r3
+ 598 00a2 0C4B     		ldr	r3, .L54+28
+ 599 00a4 1A70     		strb	r2, [r3]
+ 393:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_lastPacketSize = (uint8) ep0Count;
+ 600              		.loc 1 393 0
+ 601 00a6 7B68     		ldr	r3, [r7, #4]
+ 602 00a8 DAB2     		uxtb	r2, r3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 19
+
+
+ 603 00aa 034B     		ldr	r3, .L54
+ 604 00ac 1A70     		strb	r2, [r3]
+ 394:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 605              		.loc 1 394 0
+ 606 00ae C046     		nop
+ 607 00b0 BD46     		mov	sp, r7
+ 608 00b2 02B0     		add	sp, sp, #8
+ 609              		@ sp needed
+ 610 00b4 80BD     		pop	{r7, pc}
+ 611              	.L55:
+ 612 00b6 C046     		.align	2
+ 613              	.L54:
+ 614 00b8 00000000 		.word	USBUART_lastPacketSize
+ 615 00bc 00000000 		.word	USBUART_transferByteCount
+ 616 00c0 00002C40 		.word	1076625408
+ 617 00c4 00000000 		.word	USBUART_currentTD
+ 618 00c8 00000000 		.word	USBUART_ep0Toggle
+ 619 00cc 00000000 		.word	USBUART_ep0Mode
+ 620 00d0 00000000 		.word	USBUART_transferState
+ 621 00d4 00000000 		.word	USBUART_ep0Count
+ 622              		.cfi_endproc
+ 623              	.LFE5:
+ 624              		.size	USBUART_LoadEP0, .-USBUART_LoadEP0
+ 625              		.section	.text.USBUART_InitControlRead,"ax",%progbits
+ 626              		.align	2
+ 627              		.global	USBUART_InitControlRead
+ 628              		.code	16
+ 629              		.thumb_func
+ 630              		.type	USBUART_InitControlRead, %function
+ 631              	USBUART_InitControlRead:
+ 632              	.LFB6:
+ 395:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 396:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 397:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 398:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_InitControlRead
+ 399:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 400:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 401:Generated_Source\PSoC4/USBUART_drv.c **** *  Initialize a control read transaction. It is used to send data to the host.
+ 402:Generated_Source\PSoC4/USBUART_drv.c **** *  The following global variables should be initialized before this function
+ 403:Generated_Source\PSoC4/USBUART_drv.c **** *  called. To send zero length packet use InitZeroLengthControlTransfer
+ 404:Generated_Source\PSoC4/USBUART_drv.c **** *  function.
+ 405:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 406:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 407:Generated_Source\PSoC4/USBUART_drv.c **** * \return
+ 408:Generated_Source\PSoC4/USBUART_drv.c **** *  requestHandled state.
+ 409:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 410:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 411:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.count - counts of data to be sent.
+ 412:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pData - data pointer.
+ 413:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 414:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 415:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 416:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 417:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 418:Generated_Source\PSoC4/USBUART_drv.c **** uint8 USBUART_InitControlRead(void) 
+ 419:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 633              		.loc 1 419 0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 20
+
+
+ 634              		.cfi_startproc
+ 635              		@ args = 0, pretend = 0, frame = 8
+ 636              		@ frame_needed = 1, uses_anonymous_args = 0
+ 637 0000 80B5     		push	{r7, lr}
+ 638              		.cfi_def_cfa_offset 8
+ 639              		.cfi_offset 7, -8
+ 640              		.cfi_offset 14, -4
+ 641 0002 82B0     		sub	sp, sp, #8
+ 642              		.cfi_def_cfa_offset 16
+ 643 0004 00AF     		add	r7, sp, #0
+ 644              		.cfi_def_cfa_register 7
+ 420:Generated_Source\PSoC4/USBUART_drv.c ****     uint16 xferCount;
+ 421:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 422:Generated_Source\PSoC4/USBUART_drv.c ****     if (USBUART_currentTD.count == 0u)
+ 645              		.loc 1 422 0
+ 646 0006 174B     		ldr	r3, .L61
+ 647 0008 1B88     		ldrh	r3, [r3]
+ 648 000a 9BB2     		uxth	r3, r3
+ 649 000c 002B     		cmp	r3, #0
+ 650 000e 02D1     		bne	.L57
+ 423:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 424:Generated_Source\PSoC4/USBUART_drv.c ****         (void) USBUART_InitZeroLengthControlTransfer();
+ 651              		.loc 1 424 0
+ 652 0010 FFF7FEFF 		bl	USBUART_InitZeroLengthControlTransfer
+ 653 0014 21E0     		b	.L58
+ 654              	.L57:
+ 425:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 426:Generated_Source\PSoC4/USBUART_drv.c ****     else
+ 427:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 428:Generated_Source\PSoC4/USBUART_drv.c ****         /* Set up the state machine */
+ 429:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_transferState = USBUART_TRANS_STATE_CONTROL_READ;
+ 655              		.loc 1 429 0
+ 656 0016 144B     		ldr	r3, .L61+4
+ 657 0018 0222     		movs	r2, #2
+ 658 001a 1A70     		strb	r2, [r3]
+ 430:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 431:Generated_Source\PSoC4/USBUART_drv.c ****         /* Set the toggle, it gets updated in LoadEP */
+ 432:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_ep0Toggle = 0u;
+ 659              		.loc 1 432 0
+ 660 001c 134B     		ldr	r3, .L61+8
+ 661 001e 0022     		movs	r2, #0
+ 662 0020 1A70     		strb	r2, [r3]
+ 433:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 434:Generated_Source\PSoC4/USBUART_drv.c ****         /* Initialize the Status Block */
+ 435:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_InitializeStatusBlock();
+ 663              		.loc 1 435 0
+ 664 0022 FFF7FEFF 		bl	USBUART_InitializeStatusBlock
+ 436:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 437:Generated_Source\PSoC4/USBUART_drv.c ****         xferCount = ((uint16)((uint16) USBUART_lengthHiReg << 8u) | ((uint16) USBUART_lengthLoReg))
+ 665              		.loc 1 437 0
+ 666 0026 124B     		ldr	r3, .L61+12
+ 667 0028 DB69     		ldr	r3, [r3, #28]
+ 668 002a 9BB2     		uxth	r3, r3
+ 669 002c 1B02     		lsls	r3, r3, #8
+ 670 002e 9BB2     		uxth	r3, r3
+ 671 0030 1AB2     		sxth	r2, r3
+ 672 0032 0F4B     		ldr	r3, .L61+12
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 21
+
+
+ 673 0034 9B69     		ldr	r3, [r3, #24]
+ 674 0036 1BB2     		sxth	r3, r3
+ 675 0038 1343     		orrs	r3, r2
+ 676 003a 1AB2     		sxth	r2, r3
+ 677 003c BB1D     		adds	r3, r7, #6
+ 678 003e 1A80     		strh	r2, [r3]
+ 438:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 439:Generated_Source\PSoC4/USBUART_drv.c ****         if (USBUART_currentTD.count > xferCount)
+ 679              		.loc 1 439 0
+ 680 0040 084B     		ldr	r3, .L61
+ 681 0042 1B88     		ldrh	r3, [r3]
+ 682 0044 9BB2     		uxth	r3, r3
+ 683 0046 BA1D     		adds	r2, r7, #6
+ 684 0048 1288     		ldrh	r2, [r2]
+ 685 004a 9A42     		cmp	r2, r3
+ 686 004c 03D2     		bcs	.L59
+ 440:Generated_Source\PSoC4/USBUART_drv.c ****         {
+ 441:Generated_Source\PSoC4/USBUART_drv.c ****             USBUART_currentTD.count = xferCount;
+ 687              		.loc 1 441 0
+ 688 004e 054B     		ldr	r3, .L61
+ 689 0050 BA1D     		adds	r2, r7, #6
+ 690 0052 1288     		ldrh	r2, [r2]
+ 691 0054 1A80     		strh	r2, [r3]
+ 692              	.L59:
+ 442:Generated_Source\PSoC4/USBUART_drv.c ****         }
+ 443:Generated_Source\PSoC4/USBUART_drv.c ****         
+ 444:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_LoadEP0();
+ 693              		.loc 1 444 0
+ 694 0056 FFF7FEFF 		bl	USBUART_LoadEP0
+ 695              	.L58:
+ 445:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 446:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 447:Generated_Source\PSoC4/USBUART_drv.c ****     return (USBUART_TRUE);
+ 696              		.loc 1 447 0
+ 697 005a 0123     		movs	r3, #1
+ 448:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 698              		.loc 1 448 0
+ 699 005c 1800     		movs	r0, r3
+ 700 005e BD46     		mov	sp, r7
+ 701 0060 02B0     		add	sp, sp, #8
+ 702              		@ sp needed
+ 703 0062 80BD     		pop	{r7, pc}
+ 704              	.L62:
+ 705              		.align	2
+ 706              	.L61:
+ 707 0064 00000000 		.word	USBUART_currentTD
+ 708 0068 00000000 		.word	USBUART_transferState
+ 709 006c 00000000 		.word	USBUART_ep0Toggle
+ 710 0070 00002C40 		.word	1076625408
+ 711              		.cfi_endproc
+ 712              	.LFE6:
+ 713              		.size	USBUART_InitControlRead, .-USBUART_InitControlRead
+ 714              		.section	.text.USBUART_InitZeroLengthControlTransfer,"ax",%progbits
+ 715              		.align	2
+ 716              		.global	USBUART_InitZeroLengthControlTransfer
+ 717              		.code	16
+ 718              		.thumb_func
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 22
+
+
+ 719              		.type	USBUART_InitZeroLengthControlTransfer, %function
+ 720              	USBUART_InitZeroLengthControlTransfer:
+ 721              	.LFB7:
+ 449:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 450:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 451:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 452:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_InitZeroLengthControlTransfer
+ 453:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 454:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 455:Generated_Source\PSoC4/USBUART_drv.c **** *  Initialize a zero length data IN transfer.
+ 456:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 457:Generated_Source\PSoC4/USBUART_drv.c **** * \return
+ 458:Generated_Source\PSoC4/USBUART_drv.c **** *  requestHandled state.
+ 459:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 460:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 461:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - set to EP0_CNT_DATA_TOGGLE
+ 462:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - prepare for mode register content.
+ 463:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_CONTROL_READ
+ 464:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Count - cleared, means the zero-length packet.
+ 465:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_lastPacketSize - cleared.
+ 466:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 467:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 468:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 469:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 470:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 471:Generated_Source\PSoC4/USBUART_drv.c **** uint8 USBUART_InitZeroLengthControlTransfer(void)
+ 472:Generated_Source\PSoC4/USBUART_drv.c ****                                                 
+ 473:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 722              		.loc 1 473 0
+ 723              		.cfi_startproc
+ 724              		@ args = 0, pretend = 0, frame = 0
+ 725              		@ frame_needed = 1, uses_anonymous_args = 0
+ 726 0000 80B5     		push	{r7, lr}
+ 727              		.cfi_def_cfa_offset 8
+ 728              		.cfi_offset 7, -8
+ 729              		.cfi_offset 14, -4
+ 730 0002 00AF     		add	r7, sp, #0
+ 731              		.cfi_def_cfa_register 7
+ 474:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the state */
+ 475:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_CONTROL_READ;
+ 732              		.loc 1 475 0
+ 733 0004 094B     		ldr	r3, .L65
+ 734 0006 0222     		movs	r2, #2
+ 735 0008 1A70     		strb	r2, [r3]
+ 476:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 477:Generated_Source\PSoC4/USBUART_drv.c ****     /* Set the data toggle */
+ 478:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Toggle = USBUART_EP0_CNT_DATA_TOGGLE;
+ 736              		.loc 1 478 0
+ 737 000a 094B     		ldr	r3, .L65+4
+ 738 000c 8022     		movs	r2, #128
+ 739 000e 1A70     		strb	r2, [r3]
+ 479:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 480:Generated_Source\PSoC4/USBUART_drv.c ****     /* Set the Mode Register  */
+ 481:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_ACK_IN_STATUS_OUT;
+ 740              		.loc 1 481 0
+ 741 0010 084B     		ldr	r3, .L65+8
+ 742 0012 0F22     		movs	r2, #15
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 23
+
+
+ 743 0014 1A70     		strb	r2, [r3]
+ 482:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 483:Generated_Source\PSoC4/USBUART_drv.c ****     /* Save the packet size for next time */
+ 484:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_lastPacketSize = 0u;
+ 744              		.loc 1 484 0
+ 745 0016 084B     		ldr	r3, .L65+12
+ 746 0018 0022     		movs	r2, #0
+ 747 001a 1A70     		strb	r2, [r3]
+ 485:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 486:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Count = 0u;
+ 748              		.loc 1 486 0
+ 749 001c 074B     		ldr	r3, .L65+16
+ 750 001e 0022     		movs	r2, #0
+ 751 0020 1A70     		strb	r2, [r3]
+ 487:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 488:Generated_Source\PSoC4/USBUART_drv.c ****     return (USBUART_TRUE);
+ 752              		.loc 1 488 0
+ 753 0022 0123     		movs	r3, #1
+ 489:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 754              		.loc 1 489 0
+ 755 0024 1800     		movs	r0, r3
+ 756 0026 BD46     		mov	sp, r7
+ 757              		@ sp needed
+ 758 0028 80BD     		pop	{r7, pc}
+ 759              	.L66:
+ 760 002a C046     		.align	2
+ 761              	.L65:
+ 762 002c 00000000 		.word	USBUART_transferState
+ 763 0030 00000000 		.word	USBUART_ep0Toggle
+ 764 0034 00000000 		.word	USBUART_ep0Mode
+ 765 0038 00000000 		.word	USBUART_lastPacketSize
+ 766 003c 00000000 		.word	USBUART_ep0Count
+ 767              		.cfi_endproc
+ 768              	.LFE7:
+ 769              		.size	USBUART_InitZeroLengthControlTransfer, .-USBUART_InitZeroLengthControlTransfer
+ 770              		.section	.text.USBUART_ControlReadDataStage,"ax",%progbits
+ 771              		.align	2
+ 772              		.global	USBUART_ControlReadDataStage
+ 773              		.code	16
+ 774              		.thumb_func
+ 775              		.type	USBUART_ControlReadDataStage, %function
+ 776              	USBUART_ControlReadDataStage:
+ 777              	.LFB8:
+ 490:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 491:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 492:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 493:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_ControlReadDataStage
+ 494:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 495:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 496:Generated_Source\PSoC4/USBUART_drv.c **** *  Handle the Data Stage of a control read transfer.
+ 497:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 498:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 499:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 500:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 501:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 502:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 503:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_ControlReadDataStage(void) 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 24
+
+
+ 504:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 505:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 778              		.loc 1 505 0
+ 779              		.cfi_startproc
+ 780              		@ args = 0, pretend = 0, frame = 0
+ 781              		@ frame_needed = 1, uses_anonymous_args = 0
+ 782 0000 80B5     		push	{r7, lr}
+ 783              		.cfi_def_cfa_offset 8
+ 784              		.cfi_offset 7, -8
+ 785              		.cfi_offset 14, -4
+ 786 0002 00AF     		add	r7, sp, #0
+ 787              		.cfi_def_cfa_register 7
+ 506:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_LoadEP0();
+ 788              		.loc 1 506 0
+ 789 0004 FFF7FEFF 		bl	USBUART_LoadEP0
+ 507:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 790              		.loc 1 507 0
+ 791 0008 C046     		nop
+ 792 000a BD46     		mov	sp, r7
+ 793              		@ sp needed
+ 794 000c 80BD     		pop	{r7, pc}
+ 795              		.cfi_endproc
+ 796              	.LFE8:
+ 797              		.size	USBUART_ControlReadDataStage, .-USBUART_ControlReadDataStage
+ 798 000e C046     		.section	.text.USBUART_ControlReadStatusStage,"ax",%progbits
+ 799              		.align	2
+ 800              		.global	USBUART_ControlReadStatusStage
+ 801              		.code	16
+ 802              		.thumb_func
+ 803              		.type	USBUART_ControlReadStatusStage, %function
+ 804              	USBUART_ControlReadStatusStage:
+ 805              	.LFB9:
+ 508:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 509:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 510:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 511:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_ControlReadStatusStage
+ 512:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 513:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 514:Generated_Source\PSoC4/USBUART_drv.c **** *  Handle the Status Stage of a control read transfer.
+ 515:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 516:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 517:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 518:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_USBFS_transferByteCount - updated with last packet size.
+ 519:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_IDLE.
+ 520:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - set to MODE_STALL_IN_OUT.
+ 521:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 522:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 523:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 524:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 525:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 526:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_ControlReadStatusStage(void) 
+ 527:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 806              		.loc 1 527 0
+ 807              		.cfi_startproc
+ 808              		@ args = 0, pretend = 0, frame = 0
+ 809              		@ frame_needed = 1, uses_anonymous_args = 0
+ 810 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 25
+
+
+ 811              		.cfi_def_cfa_offset 8
+ 812              		.cfi_offset 7, -8
+ 813              		.cfi_offset 14, -4
+ 814 0002 00AF     		add	r7, sp, #0
+ 815              		.cfi_def_cfa_register 7
+ 528:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the transfer byte count */
+ 529:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferByteCount += USBUART_lastPacketSize;
+ 816              		.loc 1 529 0
+ 817 0004 0B4B     		ldr	r3, .L69
+ 818 0006 1B78     		ldrb	r3, [r3]
+ 819 0008 DBB2     		uxtb	r3, r3
+ 820 000a 9AB2     		uxth	r2, r3
+ 821 000c 0A4B     		ldr	r3, .L69+4
+ 822 000e 1B88     		ldrh	r3, [r3]
+ 823 0010 9BB2     		uxth	r3, r3
+ 824 0012 D318     		adds	r3, r2, r3
+ 825 0014 9AB2     		uxth	r2, r3
+ 826 0016 084B     		ldr	r3, .L69+4
+ 827 0018 1A80     		strh	r2, [r3]
+ 530:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 531:Generated_Source\PSoC4/USBUART_drv.c ****     /* Go Idle */
+ 532:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_IDLE;
+ 828              		.loc 1 532 0
+ 829 001a 084B     		ldr	r3, .L69+8
+ 830 001c 0022     		movs	r2, #0
+ 831 001e 1A70     		strb	r2, [r3]
+ 533:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 534:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the completion block */
+ 535:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_UpdateStatusBlock(USBUART_XFER_STATUS_ACK);
+ 832              		.loc 1 535 0
+ 833 0020 0120     		movs	r0, #1
+ 834 0022 FFF7FEFF 		bl	USBUART_UpdateStatusBlock
+ 536:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 537:Generated_Source\PSoC4/USBUART_drv.c ****     /* We expect no more data, so stall INs and OUTs */
+ 538:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_STALL_IN_OUT;
+ 835              		.loc 1 538 0
+ 836 0026 064B     		ldr	r3, .L69+12
+ 837 0028 0322     		movs	r2, #3
+ 838 002a 1A70     		strb	r2, [r3]
+ 539:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 839              		.loc 1 539 0
+ 840 002c C046     		nop
+ 841 002e BD46     		mov	sp, r7
+ 842              		@ sp needed
+ 843 0030 80BD     		pop	{r7, pc}
+ 844              	.L70:
+ 845 0032 C046     		.align	2
+ 846              	.L69:
+ 847 0034 00000000 		.word	USBUART_lastPacketSize
+ 848 0038 00000000 		.word	USBUART_transferByteCount
+ 849 003c 00000000 		.word	USBUART_transferState
+ 850 0040 00000000 		.word	USBUART_ep0Mode
+ 851              		.cfi_endproc
+ 852              	.LFE9:
+ 853              		.size	USBUART_ControlReadStatusStage, .-USBUART_ControlReadStatusStage
+ 854              		.section	.text.USBUART_InitControlWrite,"ax",%progbits
+ 855              		.align	2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 26
+
+
+ 856              		.global	USBUART_InitControlWrite
+ 857              		.code	16
+ 858              		.thumb_func
+ 859              		.type	USBUART_InitControlWrite, %function
+ 860              	USBUART_InitControlWrite:
+ 861              	.LFB10:
+ 540:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 541:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 542:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 543:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_InitControlWrite
+ 544:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 545:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 546:Generated_Source\PSoC4/USBUART_drv.c **** *  Initialize a control write transaction
+ 547:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 548:Generated_Source\PSoC4/USBUART_drv.c **** * \return
+ 549:Generated_Source\PSoC4/USBUART_drv.c **** *  requestHandled state.
+ 550:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 551:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 552:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_USBFS_transferState - set to TRANS_STATE_CONTROL_WRITE
+ 553:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - set to EP0_CNT_DATA_TOGGLE
+ 554:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - set to MODE_ACK_OUT_STATUS_IN
+ 555:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 556:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 557:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 558:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 559:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 560:Generated_Source\PSoC4/USBUART_drv.c **** uint8 USBUART_InitControlWrite(void) 
+ 561:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 862              		.loc 1 561 0
+ 863              		.cfi_startproc
+ 864              		@ args = 0, pretend = 0, frame = 8
+ 865              		@ frame_needed = 1, uses_anonymous_args = 0
+ 866 0000 80B5     		push	{r7, lr}
+ 867              		.cfi_def_cfa_offset 8
+ 868              		.cfi_offset 7, -8
+ 869              		.cfi_offset 14, -4
+ 870 0002 82B0     		sub	sp, sp, #8
+ 871              		.cfi_def_cfa_offset 16
+ 872 0004 00AF     		add	r7, sp, #0
+ 873              		.cfi_def_cfa_register 7
+ 562:Generated_Source\PSoC4/USBUART_drv.c ****     uint16 xferCount;
+ 563:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 564:Generated_Source\PSoC4/USBUART_drv.c ****     /* Set up the state machine */
+ 565:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_CONTROL_WRITE;
+ 874              		.loc 1 565 0
+ 875 0006 144B     		ldr	r3, .L74
+ 876 0008 0422     		movs	r2, #4
+ 877 000a 1A70     		strb	r2, [r3]
+ 566:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 567:Generated_Source\PSoC4/USBUART_drv.c ****     /* This might not be necessary */
+ 568:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Toggle = USBUART_EP0_CNT_DATA_TOGGLE;
+ 878              		.loc 1 568 0
+ 879 000c 134B     		ldr	r3, .L74+4
+ 880 000e 8022     		movs	r2, #128
+ 881 0010 1A70     		strb	r2, [r3]
+ 569:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 570:Generated_Source\PSoC4/USBUART_drv.c ****     /* Initialize the Status Block */
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 27
+
+
+ 571:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_InitializeStatusBlock();
+ 882              		.loc 1 571 0
+ 883 0012 FFF7FEFF 		bl	USBUART_InitializeStatusBlock
+ 572:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 573:Generated_Source\PSoC4/USBUART_drv.c ****     xferCount = ((uint16)((uint16) USBUART_lengthHiReg << 8u) | ((uint16) USBUART_lengthLoReg));
+ 884              		.loc 1 573 0
+ 885 0016 124B     		ldr	r3, .L74+8
+ 886 0018 DB69     		ldr	r3, [r3, #28]
+ 887 001a 9BB2     		uxth	r3, r3
+ 888 001c 1B02     		lsls	r3, r3, #8
+ 889 001e 9BB2     		uxth	r3, r3
+ 890 0020 1AB2     		sxth	r2, r3
+ 891 0022 0F4B     		ldr	r3, .L74+8
+ 892 0024 9B69     		ldr	r3, [r3, #24]
+ 893 0026 1BB2     		sxth	r3, r3
+ 894 0028 1343     		orrs	r3, r2
+ 895 002a 1AB2     		sxth	r2, r3
+ 896 002c BB1D     		adds	r3, r7, #6
+ 897 002e 1A80     		strh	r2, [r3]
+ 574:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 575:Generated_Source\PSoC4/USBUART_drv.c ****     if (USBUART_currentTD.count > xferCount)
+ 898              		.loc 1 575 0
+ 899 0030 0C4B     		ldr	r3, .L74+12
+ 900 0032 1B88     		ldrh	r3, [r3]
+ 901 0034 9BB2     		uxth	r3, r3
+ 902 0036 BA1D     		adds	r2, r7, #6
+ 903 0038 1288     		ldrh	r2, [r2]
+ 904 003a 9A42     		cmp	r2, r3
+ 905 003c 03D2     		bcs	.L72
+ 576:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 577:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.count = xferCount;
+ 906              		.loc 1 577 0
+ 907 003e 094B     		ldr	r3, .L74+12
+ 908 0040 BA1D     		adds	r2, r7, #6
+ 909 0042 1288     		ldrh	r2, [r2]
+ 910 0044 1A80     		strh	r2, [r3]
+ 911              	.L72:
+ 578:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 579:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 580:Generated_Source\PSoC4/USBUART_drv.c ****     /* Expect Data or Status Stage */
+ 581:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_ACK_OUT_STATUS_IN;
+ 912              		.loc 1 581 0
+ 913 0046 084B     		ldr	r3, .L74+16
+ 914 0048 0B22     		movs	r2, #11
+ 915 004a 1A70     		strb	r2, [r3]
+ 582:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 583:Generated_Source\PSoC4/USBUART_drv.c ****     return(USBUART_TRUE);
+ 916              		.loc 1 583 0
+ 917 004c 0123     		movs	r3, #1
+ 584:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 918              		.loc 1 584 0
+ 919 004e 1800     		movs	r0, r3
+ 920 0050 BD46     		mov	sp, r7
+ 921 0052 02B0     		add	sp, sp, #8
+ 922              		@ sp needed
+ 923 0054 80BD     		pop	{r7, pc}
+ 924              	.L75:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 28
+
+
+ 925 0056 C046     		.align	2
+ 926              	.L74:
+ 927 0058 00000000 		.word	USBUART_transferState
+ 928 005c 00000000 		.word	USBUART_ep0Toggle
+ 929 0060 00002C40 		.word	1076625408
+ 930 0064 00000000 		.word	USBUART_currentTD
+ 931 0068 00000000 		.word	USBUART_ep0Mode
+ 932              		.cfi_endproc
+ 933              	.LFE10:
+ 934              		.size	USBUART_InitControlWrite, .-USBUART_InitControlWrite
+ 935              		.section	.text.USBUART_ControlWriteDataStage,"ax",%progbits
+ 936              		.align	2
+ 937              		.global	USBUART_ControlWriteDataStage
+ 938              		.code	16
+ 939              		.thumb_func
+ 940              		.type	USBUART_ControlWriteDataStage, %function
+ 941              	USBUART_ControlWriteDataStage:
+ 942              	.LFB11:
+ 585:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 586:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 587:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 588:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_ControlWriteDataStage
+ 589:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 590:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 591:Generated_Source\PSoC4/USBUART_drv.c **** *  Handle the Data Stage of a control write transfer
+ 592:Generated_Source\PSoC4/USBUART_drv.c **** *       1. Get the data (We assume the destination was validated previously)
+ 593:Generated_Source\PSoC4/USBUART_drv.c **** *       2. Update the count and data toggle
+ 594:Generated_Source\PSoC4/USBUART_drv.c **** *       3. Update the mode register for the next transaction
+ 595:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 596:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 597:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 598:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferByteCount - Update the transfer byte count from the
+ 599:Generated_Source\PSoC4/USBUART_drv.c **** *    last transaction.
+ 600:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Count - counts the data loaded from the SIE memory
+ 601:Generated_Source\PSoC4/USBUART_drv.c **** *    in current packet.
+ 602:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferByteCount - sum of the previous bytes transferred
+ 603:Generated_Source\PSoC4/USBUART_drv.c **** *    on previous packets(sum of USBFS_lastPacketSize)
+ 604:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - inverted
+ 605:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - set to MODE_ACK_OUT_STATUS_IN.
+ 606:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 607:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 608:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 609:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 610:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 611:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_ControlWriteDataStage(void) 
+ 612:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 943              		.loc 1 612 0
+ 944              		.cfi_startproc
+ 945              		@ args = 0, pretend = 0, frame = 8
+ 946              		@ frame_needed = 1, uses_anonymous_args = 0
+ 947 0000 80B5     		push	{r7, lr}
+ 948              		.cfi_def_cfa_offset 8
+ 949              		.cfi_offset 7, -8
+ 950              		.cfi_offset 14, -4
+ 951 0002 82B0     		sub	sp, sp, #8
+ 952              		.cfi_def_cfa_offset 16
+ 953 0004 00AF     		add	r7, sp, #0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 29
+
+
+ 954              		.cfi_def_cfa_register 7
+ 613:Generated_Source\PSoC4/USBUART_drv.c ****     uint32 ep0Count;
+ 614:Generated_Source\PSoC4/USBUART_drv.c ****     uint32 regIndex = 0u;
+ 955              		.loc 1 614 0
+ 956 0006 0023     		movs	r3, #0
+ 957 0008 3B60     		str	r3, [r7]
+ 615:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 616:Generated_Source\PSoC4/USBUART_drv.c ****     ep0Count = (USBUART_EP0_CNT_REG & USBUART_EPX_CNT0_MASK) - USBUART_EPX_CNTX_CRC_COUNT;
+ 958              		.loc 1 616 0
+ 959 000a 244B     		ldr	r3, .L80
+ 960 000c 1B68     		ldr	r3, [r3]
+ 961 000e 0F22     		movs	r2, #15
+ 962 0010 1340     		ands	r3, r2
+ 963 0012 023B     		subs	r3, r3, #2
+ 964 0014 7B60     		str	r3, [r7, #4]
+ 617:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 618:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferByteCount += (uint8)ep0Count;
+ 965              		.loc 1 618 0
+ 966 0016 7B68     		ldr	r3, [r7, #4]
+ 967 0018 9BB2     		uxth	r3, r3
+ 968 001a FF22     		movs	r2, #255
+ 969 001c 1340     		ands	r3, r2
+ 970 001e 9AB2     		uxth	r2, r3
+ 971 0020 1F4B     		ldr	r3, .L80+4
+ 972 0022 1B88     		ldrh	r3, [r3]
+ 973 0024 9BB2     		uxth	r3, r3
+ 974 0026 D318     		adds	r3, r2, r3
+ 975 0028 9AB2     		uxth	r2, r3
+ 976 002a 1D4B     		ldr	r3, .L80+4
+ 977 002c 1A80     		strh	r2, [r3]
+ 619:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 620:Generated_Source\PSoC4/USBUART_drv.c ****     while ((USBUART_currentTD.count > 0u) && (ep0Count > 0u))
+ 978              		.loc 1 620 0
+ 979 002e 19E0     		b	.L77
+ 980              	.L79:
+ 621:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 622:Generated_Source\PSoC4/USBUART_drv.c ****         *USBUART_currentTD.pData = (uint8) USBUART_EP0_DR_BASE.epData[regIndex];
+ 981              		.loc 1 622 0
+ 982 0030 1C4B     		ldr	r3, .L80+8
+ 983 0032 5B68     		ldr	r3, [r3, #4]
+ 984 0034 1C49     		ldr	r1, .L80+12
+ 985 0036 3A68     		ldr	r2, [r7]
+ 986 0038 9200     		lsls	r2, r2, #2
+ 987 003a 5258     		ldr	r2, [r2, r1]
+ 988 003c D2B2     		uxtb	r2, r2
+ 989 003e 1A70     		strb	r2, [r3]
+ 623:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pData = &USBUART_currentTD.pData[1u];
+ 990              		.loc 1 623 0
+ 991 0040 184B     		ldr	r3, .L80+8
+ 992 0042 5B68     		ldr	r3, [r3, #4]
+ 993 0044 5A1C     		adds	r2, r3, #1
+ 994 0046 174B     		ldr	r3, .L80+8
+ 995 0048 5A60     		str	r2, [r3, #4]
+ 624:Generated_Source\PSoC4/USBUART_drv.c ****         regIndex++;
+ 996              		.loc 1 624 0
+ 997 004a 3B68     		ldr	r3, [r7]
+ 998 004c 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 30
+
+
+ 999 004e 3B60     		str	r3, [r7]
+ 625:Generated_Source\PSoC4/USBUART_drv.c ****         ep0Count--;
+ 1000              		.loc 1 625 0
+ 1001 0050 7B68     		ldr	r3, [r7, #4]
+ 1002 0052 013B     		subs	r3, r3, #1
+ 1003 0054 7B60     		str	r3, [r7, #4]
+ 626:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.count--;
+ 1004              		.loc 1 626 0
+ 1005 0056 134B     		ldr	r3, .L80+8
+ 1006 0058 1B88     		ldrh	r3, [r3]
+ 1007 005a 9BB2     		uxth	r3, r3
+ 1008 005c 013B     		subs	r3, r3, #1
+ 1009 005e 9AB2     		uxth	r2, r3
+ 1010 0060 104B     		ldr	r3, .L80+8
+ 1011 0062 1A80     		strh	r2, [r3]
+ 1012              	.L77:
+ 620:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 1013              		.loc 1 620 0
+ 1014 0064 0F4B     		ldr	r3, .L80+8
+ 1015 0066 1B88     		ldrh	r3, [r3]
+ 1016 0068 9BB2     		uxth	r3, r3
+ 1017 006a 002B     		cmp	r3, #0
+ 1018 006c 02D0     		beq	.L78
+ 620:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 1019              		.loc 1 620 0 is_stmt 0 discriminator 1
+ 1020 006e 7B68     		ldr	r3, [r7, #4]
+ 1021 0070 002B     		cmp	r3, #0
+ 1022 0072 DDD1     		bne	.L79
+ 1023              	.L78:
+ 627:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 628:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 629:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Count = (uint8)ep0Count;
+ 1024              		.loc 1 629 0 is_stmt 1
+ 1025 0074 7B68     		ldr	r3, [r7, #4]
+ 1026 0076 DAB2     		uxtb	r2, r3
+ 1027 0078 0C4B     		ldr	r3, .L80+16
+ 1028 007a 1A70     		strb	r2, [r3]
+ 630:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 631:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the data toggle */
+ 632:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Toggle ^= USBUART_EP0_CNT_DATA_TOGGLE;
+ 1029              		.loc 1 632 0
+ 1030 007c 0C4B     		ldr	r3, .L80+20
+ 1031 007e 1B78     		ldrb	r3, [r3]
+ 1032 0080 DBB2     		uxtb	r3, r3
+ 1033 0082 8022     		movs	r2, #128
+ 1034 0084 5242     		rsbs	r2, r2, #0
+ 1035 0086 5340     		eors	r3, r2
+ 1036 0088 DAB2     		uxtb	r2, r3
+ 1037 008a 094B     		ldr	r3, .L80+20
+ 1038 008c 1A70     		strb	r2, [r3]
+ 633:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 634:Generated_Source\PSoC4/USBUART_drv.c ****     /* Expect Data or Status Stage */
+ 635:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_ACK_OUT_STATUS_IN;
+ 1039              		.loc 1 635 0
+ 1040 008e 094B     		ldr	r3, .L80+24
+ 1041 0090 0B22     		movs	r2, #11
+ 1042 0092 1A70     		strb	r2, [r3]
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 31
+
+
+ 636:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1043              		.loc 1 636 0
+ 1044 0094 C046     		nop
+ 1045 0096 BD46     		mov	sp, r7
+ 1046 0098 02B0     		add	sp, sp, #8
+ 1047              		@ sp needed
+ 1048 009a 80BD     		pop	{r7, pc}
+ 1049              	.L81:
+ 1050              		.align	2
+ 1051              	.L80:
+ 1052 009c A4002C40 		.word	1076625572
+ 1053 00a0 00000000 		.word	USBUART_transferByteCount
+ 1054 00a4 00000000 		.word	USBUART_currentTD
+ 1055 00a8 00002C40 		.word	1076625408
+ 1056 00ac 00000000 		.word	USBUART_ep0Count
+ 1057 00b0 00000000 		.word	USBUART_ep0Toggle
+ 1058 00b4 00000000 		.word	USBUART_ep0Mode
+ 1059              		.cfi_endproc
+ 1060              	.LFE11:
+ 1061              		.size	USBUART_ControlWriteDataStage, .-USBUART_ControlWriteDataStage
+ 1062              		.section	.text.USBUART_ControlWriteStatusStage,"ax",%progbits
+ 1063              		.align	2
+ 1064              		.global	USBUART_ControlWriteStatusStage
+ 1065              		.code	16
+ 1066              		.thumb_func
+ 1067              		.type	USBUART_ControlWriteStatusStage, %function
+ 1068              	USBUART_ControlWriteStatusStage:
+ 1069              	.LFB12:
+ 637:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 638:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 639:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 640:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_ControlWriteStatusStage
+ 641:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 642:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 643:Generated_Source\PSoC4/USBUART_drv.c **** *  Handle the Status Stage of a control write transfer
+ 644:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 645:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 646:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_IDLE.
+ 647:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_USBFS_ep0Mode  - set to MODE_STALL_IN_OUT.
+ 648:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 649:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 650:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 651:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 652:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 653:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_ControlWriteStatusStage(void) 
+ 654:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 1070              		.loc 1 654 0
+ 1071              		.cfi_startproc
+ 1072              		@ args = 0, pretend = 0, frame = 0
+ 1073              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1074 0000 80B5     		push	{r7, lr}
+ 1075              		.cfi_def_cfa_offset 8
+ 1076              		.cfi_offset 7, -8
+ 1077              		.cfi_offset 14, -4
+ 1078 0002 00AF     		add	r7, sp, #0
+ 1079              		.cfi_def_cfa_register 7
+ 655:Generated_Source\PSoC4/USBUART_drv.c ****     /* Go Idle */
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 32
+
+
+ 656:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_IDLE;
+ 1080              		.loc 1 656 0
+ 1081 0004 054B     		ldr	r3, .L83
+ 1082 0006 0022     		movs	r2, #0
+ 1083 0008 1A70     		strb	r2, [r3]
+ 657:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 658:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the completion block */    
+ 659:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_UpdateStatusBlock(USBUART_XFER_STATUS_ACK);
+ 1084              		.loc 1 659 0
+ 1085 000a 0120     		movs	r0, #1
+ 1086 000c FFF7FEFF 		bl	USBUART_UpdateStatusBlock
+ 660:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 661:Generated_Source\PSoC4/USBUART_drv.c ****     /* We expect no more data, so stall INs and OUTs */
+ 662:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_STALL_IN_OUT;
+ 1087              		.loc 1 662 0
+ 1088 0010 034B     		ldr	r3, .L83+4
+ 1089 0012 0322     		movs	r2, #3
+ 1090 0014 1A70     		strb	r2, [r3]
+ 663:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1091              		.loc 1 663 0
+ 1092 0016 C046     		nop
+ 1093 0018 BD46     		mov	sp, r7
+ 1094              		@ sp needed
+ 1095 001a 80BD     		pop	{r7, pc}
+ 1096              	.L84:
+ 1097              		.align	2
+ 1098              	.L83:
+ 1099 001c 00000000 		.word	USBUART_transferState
+ 1100 0020 00000000 		.word	USBUART_ep0Mode
+ 1101              		.cfi_endproc
+ 1102              	.LFE12:
+ 1103              		.size	USBUART_ControlWriteStatusStage, .-USBUART_ControlWriteStatusStage
+ 1104              		.section	.text.USBUART_InitNoDataControlTransfer,"ax",%progbits
+ 1105              		.align	2
+ 1106              		.global	USBUART_InitNoDataControlTransfer
+ 1107              		.code	16
+ 1108              		.thumb_func
+ 1109              		.type	USBUART_InitNoDataControlTransfer, %function
+ 1110              	USBUART_InitNoDataControlTransfer:
+ 1111              	.LFB13:
+ 664:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 665:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 666:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 667:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_InitNoDataControlTransfer
+ 668:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 669:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 670:Generated_Source\PSoC4/USBUART_drv.c **** *  Initialize a no data control transfer
+ 671:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 672:Generated_Source\PSoC4/USBUART_drv.c **** * \return
+ 673:Generated_Source\PSoC4/USBUART_drv.c **** *  requestHandled state.
+ 674:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 675:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 676:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_NO_DATA_CONTROL.
+ 677:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - set to MODE_STATUS_IN_ONLY.
+ 678:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Count - cleared.
+ 679:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - set to EP0_CNT_DATA_TOGGLE
+ 680:Generated_Source\PSoC4/USBUART_drv.c **** *
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 33
+
+
+ 681:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 682:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 683:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 684:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 685:Generated_Source\PSoC4/USBUART_drv.c **** uint8 USBUART_InitNoDataControlTransfer(void) 
+ 686:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 1112              		.loc 1 686 0
+ 1113              		.cfi_startproc
+ 1114              		@ args = 0, pretend = 0, frame = 0
+ 1115              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1116 0000 80B5     		push	{r7, lr}
+ 1117              		.cfi_def_cfa_offset 8
+ 1118              		.cfi_offset 7, -8
+ 1119              		.cfi_offset 14, -4
+ 1120 0002 00AF     		add	r7, sp, #0
+ 1121              		.cfi_def_cfa_register 7
+ 687:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_NO_DATA_CONTROL;
+ 1122              		.loc 1 687 0
+ 1123 0004 074B     		ldr	r3, .L87
+ 1124 0006 0622     		movs	r2, #6
+ 1125 0008 1A70     		strb	r2, [r3]
+ 688:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode       = USBUART_MODE_STATUS_IN_ONLY;
+ 1126              		.loc 1 688 0
+ 1127 000a 074B     		ldr	r3, .L87+4
+ 1128 000c 0622     		movs	r2, #6
+ 1129 000e 1A70     		strb	r2, [r3]
+ 689:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Toggle     = USBUART_EP0_CNT_DATA_TOGGLE;
+ 1130              		.loc 1 689 0
+ 1131 0010 064B     		ldr	r3, .L87+8
+ 1132 0012 8022     		movs	r2, #128
+ 1133 0014 1A70     		strb	r2, [r3]
+ 690:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Count      = 0u;
+ 1134              		.loc 1 690 0
+ 1135 0016 064B     		ldr	r3, .L87+12
+ 1136 0018 0022     		movs	r2, #0
+ 1137 001a 1A70     		strb	r2, [r3]
+ 691:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 692:Generated_Source\PSoC4/USBUART_drv.c ****     return (USBUART_TRUE);
+ 1138              		.loc 1 692 0
+ 1139 001c 0123     		movs	r3, #1
+ 693:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1140              		.loc 1 693 0
+ 1141 001e 1800     		movs	r0, r3
+ 1142 0020 BD46     		mov	sp, r7
+ 1143              		@ sp needed
+ 1144 0022 80BD     		pop	{r7, pc}
+ 1145              	.L88:
+ 1146              		.align	2
+ 1147              	.L87:
+ 1148 0024 00000000 		.word	USBUART_transferState
+ 1149 0028 00000000 		.word	USBUART_ep0Mode
+ 1150 002c 00000000 		.word	USBUART_ep0Toggle
+ 1151 0030 00000000 		.word	USBUART_ep0Count
+ 1152              		.cfi_endproc
+ 1153              	.LFE13:
+ 1154              		.size	USBUART_InitNoDataControlTransfer, .-USBUART_InitNoDataControlTransfer
+ 1155              		.section	.text.USBUART_NoDataControlStatusStage,"ax",%progbits
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 34
+
+
+ 1156              		.align	2
+ 1157              		.global	USBUART_NoDataControlStatusStage
+ 1158              		.code	16
+ 1159              		.thumb_func
+ 1160              		.type	USBUART_NoDataControlStatusStage, %function
+ 1161              	USBUART_NoDataControlStatusStage:
+ 1162              	.LFB14:
+ 694:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 695:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 696:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 697:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_NoDataControlStatusStage
+ 698:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 699:Generated_Source\PSoC4/USBUART_drv.c **** *  Handle the Status Stage of a no data control transfer.
+ 700:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 701:Generated_Source\PSoC4/USBUART_drv.c **** *  SET_ADDRESS is special, since we need to receive the status stage with
+ 702:Generated_Source\PSoC4/USBUART_drv.c **** *  the old address.
+ 703:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 704:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 705:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferState - set to TRANS_STATE_IDLE.
+ 706:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Mode  - set to MODE_STALL_IN_OUT.
+ 707:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_ep0Toggle - set to EP0_CNT_DATA_TOGGLE
+ 708:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_deviceAddress - used to set new address and cleared
+ 709:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 710:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 711:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 712:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 713:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 714:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_NoDataControlStatusStage(void) 
+ 715:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 1163              		.loc 1 715 0
+ 1164              		.cfi_startproc
+ 1165              		@ args = 0, pretend = 0, frame = 0
+ 1166              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1167 0000 80B5     		push	{r7, lr}
+ 1168              		.cfi_def_cfa_offset 8
+ 1169              		.cfi_offset 7, -8
+ 1170              		.cfi_offset 14, -4
+ 1171 0002 00AF     		add	r7, sp, #0
+ 1172              		.cfi_def_cfa_register 7
+ 716:Generated_Source\PSoC4/USBUART_drv.c ****     if (0u != USBUART_deviceAddress)
+ 1173              		.loc 1 716 0
+ 1174 0004 0E4B     		ldr	r3, .L91
+ 1175 0006 1B78     		ldrb	r3, [r3]
+ 1176 0008 DBB2     		uxtb	r3, r3
+ 1177 000a 002B     		cmp	r3, #0
+ 1178 000c 0BD0     		beq	.L90
+ 717:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 718:Generated_Source\PSoC4/USBUART_drv.c ****         /* Update device address if we got new address. */
+ 719:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_CR0_REG = (uint32) USBUART_deviceAddress | USBUART_CR0_ENABLE;
+ 1179              		.loc 1 719 0
+ 1180 000e 0D4B     		ldr	r3, .L91+4
+ 1181 0010 0B4A     		ldr	r2, .L91
+ 1182 0012 1278     		ldrb	r2, [r2]
+ 1183 0014 D2B2     		uxtb	r2, r2
+ 1184 0016 8021     		movs	r1, #128
+ 1185 0018 4942     		rsbs	r1, r1, #0
+ 1186 001a 0A43     		orrs	r2, r1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 35
+
+
+ 1187 001c D2B2     		uxtb	r2, r2
+ 1188 001e 1A60     		str	r2, [r3]
+ 720:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_deviceAddress = 0u;
+ 1189              		.loc 1 720 0
+ 1190 0020 074B     		ldr	r3, .L91
+ 1191 0022 0022     		movs	r2, #0
+ 1192 0024 1A70     		strb	r2, [r3]
+ 1193              	.L90:
+ 721:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 722:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 723:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferState = USBUART_TRANS_STATE_IDLE;
+ 1194              		.loc 1 723 0
+ 1195 0026 084B     		ldr	r3, .L91+8
+ 1196 0028 0022     		movs	r2, #0
+ 1197 002a 1A70     		strb	r2, [r3]
+ 724:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 725:Generated_Source\PSoC4/USBUART_drv.c ****     /* Update the completion block. */
+ 726:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_UpdateStatusBlock(USBUART_XFER_STATUS_ACK);
+ 1198              		.loc 1 726 0
+ 1199 002c 0120     		movs	r0, #1
+ 1200 002e FFF7FEFF 		bl	USBUART_UpdateStatusBlock
+ 727:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 728:Generated_Source\PSoC4/USBUART_drv.c ****     /* Stall IN and OUT, no more data is expected. */
+ 729:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_ep0Mode = USBUART_MODE_STALL_IN_OUT;
+ 1201              		.loc 1 729 0
+ 1202 0032 064B     		ldr	r3, .L91+12
+ 1203 0034 0322     		movs	r2, #3
+ 1204 0036 1A70     		strb	r2, [r3]
+ 730:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1205              		.loc 1 730 0
+ 1206 0038 C046     		nop
+ 1207 003a BD46     		mov	sp, r7
+ 1208              		@ sp needed
+ 1209 003c 80BD     		pop	{r7, pc}
+ 1210              	.L92:
+ 1211 003e C046     		.align	2
+ 1212              	.L91:
+ 1213 0040 00000000 		.word	USBUART_deviceAddress
+ 1214 0044 20002C40 		.word	1076625440
+ 1215 0048 00000000 		.word	USBUART_transferState
+ 1216 004c 00000000 		.word	USBUART_ep0Mode
+ 1217              		.cfi_endproc
+ 1218              	.LFE14:
+ 1219              		.size	USBUART_NoDataControlStatusStage, .-USBUART_NoDataControlStatusStage
+ 1220              		.section	.text.USBUART_UpdateStatusBlock,"ax",%progbits
+ 1221              		.align	2
+ 1222              		.global	USBUART_UpdateStatusBlock
+ 1223              		.code	16
+ 1224              		.thumb_func
+ 1225              		.type	USBUART_UpdateStatusBlock, %function
+ 1226              	USBUART_UpdateStatusBlock:
+ 1227              	.LFB15:
+ 731:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 732:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 733:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 734:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_UpdateStatusBlock
+ 735:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 36
+
+
+ 736:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 737:Generated_Source\PSoC4/USBUART_drv.c **** *  Update the Completion Status Block for a Request.  The block is updated
+ 738:Generated_Source\PSoC4/USBUART_drv.c **** *  with the completion code the USBUART_transferByteCount.  The
+ 739:Generated_Source\PSoC4/USBUART_drv.c **** *  StatusBlock Pointer is set to NULL.
+ 740:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 741:Generated_Source\PSoC4/USBUART_drv.c **** *  completionCode - status.
+ 742:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 743:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 744:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 745:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pStatusBlock->status - updated by the
+ 746:Generated_Source\PSoC4/USBUART_drv.c **** *    completionCode parameter.
+ 747:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pStatusBlock->length - updated.
+ 748:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pStatusBlock - cleared.
+ 749:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 750:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 751:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 752:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 753:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 754:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_UpdateStatusBlock(uint8 completionCode) 
+ 755:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 1228              		.loc 1 755 0
+ 1229              		.cfi_startproc
+ 1230              		@ args = 0, pretend = 0, frame = 8
+ 1231              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1232 0000 80B5     		push	{r7, lr}
+ 1233              		.cfi_def_cfa_offset 8
+ 1234              		.cfi_offset 7, -8
+ 1235              		.cfi_offset 14, -4
+ 1236 0002 82B0     		sub	sp, sp, #8
+ 1237              		.cfi_def_cfa_offset 16
+ 1238 0004 00AF     		add	r7, sp, #0
+ 1239              		.cfi_def_cfa_register 7
+ 1240 0006 0200     		movs	r2, r0
+ 1241 0008 FB1D     		adds	r3, r7, #7
+ 1242 000a 1A70     		strb	r2, [r3]
+ 756:Generated_Source\PSoC4/USBUART_drv.c ****     if (USBUART_currentTD.pStatusBlock != NULL)
+ 1243              		.loc 1 756 0
+ 1244 000c 0A4B     		ldr	r3, .L96
+ 1245 000e 9B68     		ldr	r3, [r3, #8]
+ 1246 0010 002B     		cmp	r3, #0
+ 1247 0012 0DD0     		beq	.L95
+ 757:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 758:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pStatusBlock->status = completionCode;
+ 1248              		.loc 1 758 0
+ 1249 0014 084B     		ldr	r3, .L96
+ 1250 0016 9B68     		ldr	r3, [r3, #8]
+ 1251 0018 FA1D     		adds	r2, r7, #7
+ 1252 001a 1278     		ldrb	r2, [r2]
+ 1253 001c 1A70     		strb	r2, [r3]
+ 759:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pStatusBlock->length = USBUART_transferByteCount;
+ 1254              		.loc 1 759 0
+ 1255 001e 064B     		ldr	r3, .L96
+ 1256 0020 9B68     		ldr	r3, [r3, #8]
+ 1257 0022 064A     		ldr	r2, .L96+4
+ 1258 0024 1288     		ldrh	r2, [r2]
+ 1259 0026 92B2     		uxth	r2, r2
+ 1260 0028 5A80     		strh	r2, [r3, #2]
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 37
+
+
+ 760:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pStatusBlock = NULL;
+ 1261              		.loc 1 760 0
+ 1262 002a 034B     		ldr	r3, .L96
+ 1263 002c 0022     		movs	r2, #0
+ 1264 002e 9A60     		str	r2, [r3, #8]
+ 1265              	.L95:
+ 761:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 762:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1266              		.loc 1 762 0
+ 1267 0030 C046     		nop
+ 1268 0032 BD46     		mov	sp, r7
+ 1269 0034 02B0     		add	sp, sp, #8
+ 1270              		@ sp needed
+ 1271 0036 80BD     		pop	{r7, pc}
+ 1272              	.L97:
+ 1273              		.align	2
+ 1274              	.L96:
+ 1275 0038 00000000 		.word	USBUART_currentTD
+ 1276 003c 00000000 		.word	USBUART_transferByteCount
+ 1277              		.cfi_endproc
+ 1278              	.LFE15:
+ 1279              		.size	USBUART_UpdateStatusBlock, .-USBUART_UpdateStatusBlock
+ 1280              		.section	.text.USBUART_InitializeStatusBlock,"ax",%progbits
+ 1281              		.align	2
+ 1282              		.global	USBUART_InitializeStatusBlock
+ 1283              		.code	16
+ 1284              		.thumb_func
+ 1285              		.type	USBUART_InitializeStatusBlock, %function
+ 1286              	USBUART_InitializeStatusBlock:
+ 1287              	.LFB16:
+ 763:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 764:Generated_Source\PSoC4/USBUART_drv.c **** 
+ 765:Generated_Source\PSoC4/USBUART_drv.c **** /*******************************************************************************
+ 766:Generated_Source\PSoC4/USBUART_drv.c **** * Function Name: USBUART_InitializeStatusBlock
+ 767:Generated_Source\PSoC4/USBUART_drv.c **** ****************************************************************************//**
+ 768:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 769:Generated_Source\PSoC4/USBUART_drv.c **** *  Initialize the Completion Status Block for a Request.  The completion
+ 770:Generated_Source\PSoC4/USBUART_drv.c **** *  code is set to USB_XFER_IDLE.
+ 771:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 772:Generated_Source\PSoC4/USBUART_drv.c **** *  Also, initializes USBUART_transferByteCount.  Save some space,
+ 773:Generated_Source\PSoC4/USBUART_drv.c **** *  this is the only consumer.
+ 774:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 775:Generated_Source\PSoC4/USBUART_drv.c **** * \globalvars
+ 776:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pStatusBlock->status - set to XFER_IDLE.
+ 777:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_currentTD.pStatusBlock->length - cleared.
+ 778:Generated_Source\PSoC4/USBUART_drv.c **** *  USBUART_transferByteCount - cleared.
+ 779:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 780:Generated_Source\PSoC4/USBUART_drv.c **** * \reentrant
+ 781:Generated_Source\PSoC4/USBUART_drv.c **** *  No.
+ 782:Generated_Source\PSoC4/USBUART_drv.c **** *
+ 783:Generated_Source\PSoC4/USBUART_drv.c **** *******************************************************************************/
+ 784:Generated_Source\PSoC4/USBUART_drv.c **** void USBUART_InitializeStatusBlock(void) 
+ 785:Generated_Source\PSoC4/USBUART_drv.c **** {
+ 1288              		.loc 1 785 0
+ 1289              		.cfi_startproc
+ 1290              		@ args = 0, pretend = 0, frame = 0
+ 1291              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 38
+
+
+ 1292 0000 80B5     		push	{r7, lr}
+ 1293              		.cfi_def_cfa_offset 8
+ 1294              		.cfi_offset 7, -8
+ 1295              		.cfi_offset 14, -4
+ 1296 0002 00AF     		add	r7, sp, #0
+ 1297              		.cfi_def_cfa_register 7
+ 786:Generated_Source\PSoC4/USBUART_drv.c ****     USBUART_transferByteCount = 0u;
+ 1298              		.loc 1 786 0
+ 1299 0004 084B     		ldr	r3, .L101
+ 1300 0006 0022     		movs	r2, #0
+ 1301 0008 1A80     		strh	r2, [r3]
+ 787:Generated_Source\PSoC4/USBUART_drv.c ****     
+ 788:Generated_Source\PSoC4/USBUART_drv.c ****     if (USBUART_currentTD.pStatusBlock != NULL)
+ 1302              		.loc 1 788 0
+ 1303 000a 084B     		ldr	r3, .L101+4
+ 1304 000c 9B68     		ldr	r3, [r3, #8]
+ 1305 000e 002B     		cmp	r3, #0
+ 1306 0010 07D0     		beq	.L100
+ 789:Generated_Source\PSoC4/USBUART_drv.c ****     {
+ 790:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pStatusBlock->status = USBUART_XFER_IDLE;
+ 1307              		.loc 1 790 0
+ 1308 0012 064B     		ldr	r3, .L101+4
+ 1309 0014 9B68     		ldr	r3, [r3, #8]
+ 1310 0016 0022     		movs	r2, #0
+ 1311 0018 1A70     		strb	r2, [r3]
+ 791:Generated_Source\PSoC4/USBUART_drv.c ****         USBUART_currentTD.pStatusBlock->length = 0u;
+ 1312              		.loc 1 791 0
+ 1313 001a 044B     		ldr	r3, .L101+4
+ 1314 001c 9B68     		ldr	r3, [r3, #8]
+ 1315 001e 0022     		movs	r2, #0
+ 1316 0020 5A80     		strh	r2, [r3, #2]
+ 1317              	.L100:
+ 792:Generated_Source\PSoC4/USBUART_drv.c ****     }
+ 793:Generated_Source\PSoC4/USBUART_drv.c **** }
+ 1318              		.loc 1 793 0
+ 1319 0022 C046     		nop
+ 1320 0024 BD46     		mov	sp, r7
+ 1321              		@ sp needed
+ 1322 0026 80BD     		pop	{r7, pc}
+ 1323              	.L102:
+ 1324              		.align	2
+ 1325              	.L101:
+ 1326 0028 00000000 		.word	USBUART_transferByteCount
+ 1327 002c 00000000 		.word	USBUART_currentTD
+ 1328              		.cfi_endproc
+ 1329              	.LFE16:
+ 1330              		.size	USBUART_InitializeStatusBlock, .-USBUART_InitializeStatusBlock
+ 1331              		.text
+ 1332              	.Letext0:
+ 1333              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 1334              		.file 3 "Generated_Source\\PSoC4\\USBUART.h"
+ 1335              		.section	.debug_info,"",%progbits
+ 1336              	.Ldebug_info0:
+ 1337 0000 3A050000 		.4byte	0x53a
+ 1338 0004 0400     		.2byte	0x4
+ 1339 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1340 000a 04       		.byte	0x4
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 39
+
+
+ 1341 000b 01       		.uleb128 0x1
+ 1342 000c 80020000 		.4byte	.LASF77
+ 1343 0010 0C       		.byte	0xc
+ 1344 0011 61040000 		.4byte	.LASF78
+ 1345 0015 DB030000 		.4byte	.LASF79
+ 1346 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1347 001d 00000000 		.4byte	0
+ 1348 0021 00000000 		.4byte	.Ldebug_line0
+ 1349 0025 02       		.uleb128 0x2
+ 1350 0026 01       		.byte	0x1
+ 1351 0027 06       		.byte	0x6
+ 1352 0028 0B010000 		.4byte	.LASF0
+ 1353 002c 02       		.uleb128 0x2
+ 1354 002d 01       		.byte	0x1
+ 1355 002e 08       		.byte	0x8
+ 1356 002f 9F040000 		.4byte	.LASF1
+ 1357 0033 02       		.uleb128 0x2
+ 1358 0034 02       		.byte	0x2
+ 1359 0035 05       		.byte	0x5
+ 1360 0036 AD040000 		.4byte	.LASF2
+ 1361 003a 02       		.uleb128 0x2
+ 1362 003b 02       		.byte	0x2
+ 1363 003c 07       		.byte	0x7
+ 1364 003d 1B020000 		.4byte	.LASF3
+ 1365 0041 02       		.uleb128 0x2
+ 1366 0042 04       		.byte	0x4
+ 1367 0043 05       		.byte	0x5
+ 1368 0044 64010000 		.4byte	.LASF4
+ 1369 0048 02       		.uleb128 0x2
+ 1370 0049 04       		.byte	0x4
+ 1371 004a 07       		.byte	0x7
+ 1372 004b EC010000 		.4byte	.LASF5
+ 1373 004f 02       		.uleb128 0x2
+ 1374 0050 08       		.byte	0x8
+ 1375 0051 05       		.byte	0x5
+ 1376 0052 FD000000 		.4byte	.LASF6
+ 1377 0056 02       		.uleb128 0x2
+ 1378 0057 08       		.byte	0x8
+ 1379 0058 07       		.byte	0x7
+ 1380 0059 98000000 		.4byte	.LASF7
+ 1381 005d 03       		.uleb128 0x3
+ 1382 005e 04       		.byte	0x4
+ 1383 005f 05       		.byte	0x5
+ 1384 0060 696E7400 		.ascii	"int\000"
+ 1385 0064 02       		.uleb128 0x2
+ 1386 0065 04       		.byte	0x4
+ 1387 0066 07       		.byte	0x7
+ 1388 0067 D5010000 		.4byte	.LASF8
+ 1389 006b 04       		.uleb128 0x4
+ 1390 006c 7E010000 		.4byte	.LASF9
+ 1391 0070 02       		.byte	0x2
+ 1392 0071 D201     		.2byte	0x1d2
+ 1393 0073 2C000000 		.4byte	0x2c
+ 1394 0077 04       		.uleb128 0x4
+ 1395 0078 25000000 		.4byte	.LASF10
+ 1396 007c 02       		.byte	0x2
+ 1397 007d D301     		.2byte	0x1d3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 40
+
+
+ 1398 007f 3A000000 		.4byte	0x3a
+ 1399 0083 04       		.uleb128 0x4
+ 1400 0084 AC010000 		.4byte	.LASF11
+ 1401 0088 02       		.byte	0x2
+ 1402 0089 D401     		.2byte	0x1d4
+ 1403 008b 48000000 		.4byte	0x48
+ 1404 008f 02       		.uleb128 0x2
+ 1405 0090 04       		.byte	0x4
+ 1406 0091 04       		.byte	0x4
+ 1407 0092 50040000 		.4byte	.LASF12
+ 1408 0096 02       		.uleb128 0x2
+ 1409 0097 08       		.byte	0x8
+ 1410 0098 04       		.byte	0x4
+ 1411 0099 8D010000 		.4byte	.LASF13
+ 1412 009d 02       		.uleb128 0x2
+ 1413 009e 01       		.byte	0x1
+ 1414 009f 08       		.byte	0x8
+ 1415 00a0 11050000 		.4byte	.LASF14
+ 1416 00a4 05       		.uleb128 0x5
+ 1417 00a5 6B000000 		.4byte	0x6b
+ 1418 00a9 05       		.uleb128 0x5
+ 1419 00aa 77000000 		.4byte	0x77
+ 1420 00ae 04       		.uleb128 0x4
+ 1421 00af 18030000 		.4byte	.LASF15
+ 1422 00b3 02       		.byte	0x2
+ 1423 00b4 7E02     		.2byte	0x27e
+ 1424 00b6 BA000000 		.4byte	0xba
+ 1425 00ba 05       		.uleb128 0x5
+ 1426 00bb 83000000 		.4byte	0x83
+ 1427 00bf 02       		.uleb128 0x2
+ 1428 00c0 08       		.byte	0x8
+ 1429 00c1 04       		.byte	0x4
+ 1430 00c2 47030000 		.4byte	.LASF16
+ 1431 00c6 02       		.uleb128 0x2
+ 1432 00c7 04       		.byte	0x4
+ 1433 00c8 07       		.byte	0x7
+ 1434 00c9 3E030000 		.4byte	.LASF17
+ 1435 00cd 06       		.uleb128 0x6
+ 1436 00ce 0C       		.byte	0xc
+ 1437 00cf 03       		.byte	0x3
+ 1438 00d0 92       		.byte	0x92
+ 1439 00d1 42010000 		.4byte	0x142
+ 1440 00d5 07       		.uleb128 0x7
+ 1441 00d6 6C030000 		.4byte	.LASF18
+ 1442 00da 03       		.byte	0x3
+ 1443 00db 94       		.byte	0x94
+ 1444 00dc 6B000000 		.4byte	0x6b
+ 1445 00e0 00       		.byte	0
+ 1446 00e1 07       		.uleb128 0x7
+ 1447 00e2 56040000 		.4byte	.LASF19
+ 1448 00e6 03       		.byte	0x3
+ 1449 00e7 95       		.byte	0x95
+ 1450 00e8 6B000000 		.4byte	0x6b
+ 1451 00ec 01       		.byte	0x1
+ 1452 00ed 07       		.uleb128 0x7
+ 1453 00ee 34030000 		.4byte	.LASF20
+ 1454 00f2 03       		.byte	0x3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 41
+
+
+ 1455 00f3 96       		.byte	0x96
+ 1456 00f4 6B000000 		.4byte	0x6b
+ 1457 00f8 02       		.byte	0x2
+ 1458 00f9 07       		.uleb128 0x7
+ 1459 00fa 84010000 		.4byte	.LASF21
+ 1460 00fe 03       		.byte	0x3
+ 1461 00ff 97       		.byte	0x97
+ 1462 0100 6B000000 		.4byte	0x6b
+ 1463 0104 03       		.byte	0x3
+ 1464 0105 07       		.uleb128 0x7
+ 1465 0106 AF000000 		.4byte	.LASF22
+ 1466 010a 03       		.byte	0x3
+ 1467 010b 98       		.byte	0x98
+ 1468 010c 6B000000 		.4byte	0x6b
+ 1469 0110 04       		.byte	0x4
+ 1470 0111 07       		.uleb128 0x7
+ 1471 0112 B9010000 		.4byte	.LASF23
+ 1472 0116 03       		.byte	0x3
+ 1473 0117 99       		.byte	0x99
+ 1474 0118 6B000000 		.4byte	0x6b
+ 1475 011c 05       		.byte	0x5
+ 1476 011d 07       		.uleb128 0x7
+ 1477 011e 47050000 		.4byte	.LASF24
+ 1478 0122 03       		.byte	0x3
+ 1479 0123 9A       		.byte	0x9a
+ 1480 0124 77000000 		.4byte	0x77
+ 1481 0128 06       		.byte	0x6
+ 1482 0129 07       		.uleb128 0x7
+ 1483 012a 16050000 		.4byte	.LASF25
+ 1484 012e 03       		.byte	0x3
+ 1485 012f 9B       		.byte	0x9b
+ 1486 0130 77000000 		.4byte	0x77
+ 1487 0134 08       		.byte	0x8
+ 1488 0135 07       		.uleb128 0x7
+ 1489 0136 0E030000 		.4byte	.LASF26
+ 1490 013a 03       		.byte	0x3
+ 1491 013b 9C       		.byte	0x9c
+ 1492 013c 6B000000 		.4byte	0x6b
+ 1493 0140 0A       		.byte	0xa
+ 1494 0141 00       		.byte	0
+ 1495 0142 08       		.uleb128 0x8
+ 1496 0143 30050000 		.4byte	.LASF27
+ 1497 0147 03       		.byte	0x3
+ 1498 0148 9D       		.byte	0x9d
+ 1499 0149 CD000000 		.4byte	0xcd
+ 1500 014d 06       		.uleb128 0x6
+ 1501 014e 04       		.byte	0x4
+ 1502 014f 03       		.byte	0x3
+ 1503 0150 A9       		.byte	0xa9
+ 1504 0151 6E010000 		.4byte	0x16e
+ 1505 0155 07       		.uleb128 0x7
+ 1506 0156 9B050000 		.4byte	.LASF28
+ 1507 015a 03       		.byte	0x3
+ 1508 015b AB       		.byte	0xab
+ 1509 015c 6B000000 		.4byte	0x6b
+ 1510 0160 00       		.byte	0
+ 1511 0161 07       		.uleb128 0x7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 42
+
+
+ 1512 0162 EC040000 		.4byte	.LASF29
+ 1513 0166 03       		.byte	0x3
+ 1514 0167 AC       		.byte	0xac
+ 1515 0168 77000000 		.4byte	0x77
+ 1516 016c 02       		.byte	0x2
+ 1517 016d 00       		.byte	0
+ 1518 016e 08       		.uleb128 0x8
+ 1519 016f BF000000 		.4byte	.LASF30
+ 1520 0173 03       		.byte	0x3
+ 1521 0174 AD       		.byte	0xad
+ 1522 0175 4D010000 		.4byte	0x14d
+ 1523 0179 06       		.uleb128 0x6
+ 1524 017a 0C       		.byte	0xc
+ 1525 017b 03       		.byte	0x3
+ 1526 017c AF       		.byte	0xaf
+ 1527 017d A6010000 		.4byte	0x1a6
+ 1528 0181 07       		.uleb128 0x7
+ 1529 0182 1F000000 		.4byte	.LASF31
+ 1530 0186 03       		.byte	0x3
+ 1531 0187 B1       		.byte	0xb1
+ 1532 0188 77000000 		.4byte	0x77
+ 1533 018c 00       		.byte	0
+ 1534 018d 07       		.uleb128 0x7
+ 1535 018e B3010000 		.4byte	.LASF32
+ 1536 0192 03       		.byte	0x3
+ 1537 0193 B2       		.byte	0xb2
+ 1538 0194 A6010000 		.4byte	0x1a6
+ 1539 0198 04       		.byte	0x4
+ 1540 0199 07       		.uleb128 0x7
+ 1541 019a 00000000 		.4byte	.LASF33
+ 1542 019e 03       		.byte	0x3
+ 1543 019f B3       		.byte	0xb3
+ 1544 01a0 AC010000 		.4byte	0x1ac
+ 1545 01a4 08       		.byte	0x8
+ 1546 01a5 00       		.byte	0
+ 1547 01a6 09       		.uleb128 0x9
+ 1548 01a7 04       		.byte	0x4
+ 1549 01a8 A4000000 		.4byte	0xa4
+ 1550 01ac 09       		.uleb128 0x9
+ 1551 01ad 04       		.byte	0x4
+ 1552 01ae 6E010000 		.4byte	0x16e
+ 1553 01b2 08       		.uleb128 0x8
+ 1554 01b3 B7040000 		.4byte	.LASF34
+ 1555 01b7 03       		.byte	0x3
+ 1556 01b8 B4       		.byte	0xb4
+ 1557 01b9 79010000 		.4byte	0x179
+ 1558 01bd 06       		.uleb128 0x6
+ 1559 01be 20       		.byte	0x20
+ 1560 01bf 03       		.byte	0x3
+ 1561 01c0 CA       		.byte	0xca
+ 1562 01c1 D2010000 		.4byte	0x1d2
+ 1563 01c5 07       		.uleb128 0x7
+ 1564 01c6 C2050000 		.4byte	.LASF35
+ 1565 01ca 03       		.byte	0x3
+ 1566 01cb CC       		.byte	0xcc
+ 1567 01cc D2010000 		.4byte	0x1d2
+ 1568 01d0 00       		.byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 43
+
+
+ 1569 01d1 00       		.byte	0
+ 1570 01d2 0A       		.uleb128 0xa
+ 1571 01d3 83000000 		.4byte	0x83
+ 1572 01d7 E2010000 		.4byte	0x1e2
+ 1573 01db 0B       		.uleb128 0xb
+ 1574 01dc C6000000 		.4byte	0xc6
+ 1575 01e0 07       		.byte	0x7
+ 1576 01e1 00       		.byte	0
+ 1577 01e2 08       		.uleb128 0x8
+ 1578 01e3 4C010000 		.4byte	.LASF36
+ 1579 01e7 03       		.byte	0x3
+ 1580 01e8 CD       		.byte	0xcd
+ 1581 01e9 BD010000 		.4byte	0x1bd
+ 1582 01ed 0C       		.uleb128 0xc
+ 1583 01ee 6D010000 		.4byte	.LASF39
+ 1584 01f2 01       		.byte	0x1
+ 1585 01f3 5E       		.byte	0x5e
+ 1586 01f4 00000000 		.4byte	.LFB1
+ 1587 01f8 FC000000 		.4byte	.LFE1-.LFB1
+ 1588 01fc 01       		.uleb128 0x1
+ 1589 01fd 9C       		.byte	0x9c
+ 1590 01fe 1F020000 		.4byte	0x21f
+ 1591 0202 0D       		.uleb128 0xd
+ 1592 0203 93050000 		.4byte	.LASF37
+ 1593 0207 01       		.byte	0x1
+ 1594 0208 60       		.byte	0x60
+ 1595 0209 83000000 		.4byte	0x83
+ 1596 020d 02       		.uleb128 0x2
+ 1597 020e 91       		.byte	0x91
+ 1598 020f 70       		.sleb128 -16
+ 1599 0210 0D       		.uleb128 0xd
+ 1600 0211 E2010000 		.4byte	.LASF38
+ 1601 0215 01       		.byte	0x1
+ 1602 0216 61       		.byte	0x61
+ 1603 0217 83000000 		.4byte	0x83
+ 1604 021b 02       		.uleb128 0x2
+ 1605 021c 91       		.byte	0x91
+ 1606 021d 74       		.sleb128 -12
+ 1607 021e 00       		.byte	0
+ 1608 021f 0C       		.uleb128 0xc
+ 1609 0220 55000000 		.4byte	.LASF40
+ 1610 0224 01       		.byte	0x1
+ 1611 0225 C6       		.byte	0xc6
+ 1612 0226 00000000 		.4byte	.LFB2
+ 1613 022a 9C000000 		.4byte	.LFE2-.LFB2
+ 1614 022e 01       		.uleb128 0x1
+ 1615 022f 9C       		.byte	0x9c
+ 1616 0230 43020000 		.4byte	0x243
+ 1617 0234 0D       		.uleb128 0xd
+ 1618 0235 21050000 		.4byte	.LASF41
+ 1619 0239 01       		.byte	0x1
+ 1620 023a C8       		.byte	0xc8
+ 1621 023b 6B000000 		.4byte	0x6b
+ 1622 023f 02       		.uleb128 0x2
+ 1623 0240 91       		.byte	0x91
+ 1624 0241 6F       		.sleb128 -17
+ 1625 0242 00       		.byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 44
+
+
+ 1626 0243 0E       		.uleb128 0xe
+ 1627 0244 82050000 		.4byte	.LASF42
+ 1628 0248 01       		.byte	0x1
+ 1629 0249 0301     		.2byte	0x103
+ 1630 024b 00000000 		.4byte	.LFB3
+ 1631 024f 40000000 		.4byte	.LFE3-.LFB3
+ 1632 0253 01       		.uleb128 0x1
+ 1633 0254 9C       		.byte	0x9c
+ 1634 0255 0E       		.uleb128 0xe
+ 1635 0256 52050000 		.4byte	.LASF43
+ 1636 025a 01       		.byte	0x1
+ 1637 025b 2701     		.2byte	0x127
+ 1638 025d 00000000 		.4byte	.LFB4
+ 1639 0261 4C000000 		.4byte	.LFE4-.LFB4
+ 1640 0265 01       		.uleb128 0x1
+ 1641 0266 9C       		.byte	0x9c
+ 1642 0267 0F       		.uleb128 0xf
+ 1643 0268 AB030000 		.4byte	.LASF44
+ 1644 026c 01       		.byte	0x1
+ 1645 026d 6501     		.2byte	0x165
+ 1646 026f 00000000 		.4byte	.LFB5
+ 1647 0273 D8000000 		.4byte	.LFE5-.LFB5
+ 1648 0277 01       		.uleb128 0x1
+ 1649 0278 9C       		.byte	0x9c
+ 1650 0279 8D020000 		.4byte	0x28d
+ 1651 027d 10       		.uleb128 0x10
+ 1652 027e 77020000 		.4byte	.LASF45
+ 1653 0282 01       		.byte	0x1
+ 1654 0283 6701     		.2byte	0x167
+ 1655 0285 83000000 		.4byte	0x83
+ 1656 0289 02       		.uleb128 0x2
+ 1657 028a 91       		.byte	0x91
+ 1658 028b 74       		.sleb128 -12
+ 1659 028c 00       		.byte	0
+ 1660 028d 11       		.uleb128 0x11
+ 1661 028e 17010000 		.4byte	.LASF49
+ 1662 0292 01       		.byte	0x1
+ 1663 0293 A201     		.2byte	0x1a2
+ 1664 0295 6B000000 		.4byte	0x6b
+ 1665 0299 00000000 		.4byte	.LFB6
+ 1666 029d 74000000 		.4byte	.LFE6-.LFB6
+ 1667 02a1 01       		.uleb128 0x1
+ 1668 02a2 9C       		.byte	0x9c
+ 1669 02a3 B7020000 		.4byte	0x2b7
+ 1670 02a7 10       		.uleb128 0x10
+ 1671 02a8 B8050000 		.4byte	.LASF46
+ 1672 02ac 01       		.byte	0x1
+ 1673 02ad A401     		.2byte	0x1a4
+ 1674 02af 77000000 		.4byte	0x77
+ 1675 02b3 02       		.uleb128 0x2
+ 1676 02b4 91       		.byte	0x91
+ 1677 02b5 76       		.sleb128 -10
+ 1678 02b6 00       		.byte	0
+ 1679 02b7 12       		.uleb128 0x12
+ 1680 02b8 2E020000 		.4byte	.LASF54
+ 1681 02bc 01       		.byte	0x1
+ 1682 02bd D701     		.2byte	0x1d7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 45
+
+
+ 1683 02bf 6B000000 		.4byte	0x6b
+ 1684 02c3 00000000 		.4byte	.LFB7
+ 1685 02c7 40000000 		.4byte	.LFE7-.LFB7
+ 1686 02cb 01       		.uleb128 0x1
+ 1687 02cc 9C       		.byte	0x9c
+ 1688 02cd 0E       		.uleb128 0xe
+ 1689 02ce FE010000 		.4byte	.LASF47
+ 1690 02d2 01       		.byte	0x1
+ 1691 02d3 F701     		.2byte	0x1f7
+ 1692 02d5 00000000 		.4byte	.LFB8
+ 1693 02d9 0E000000 		.4byte	.LFE8-.LFB8
+ 1694 02dd 01       		.uleb128 0x1
+ 1695 02de 9C       		.byte	0x9c
+ 1696 02df 0E       		.uleb128 0xe
+ 1697 02e0 E3050000 		.4byte	.LASF48
+ 1698 02e4 01       		.byte	0x1
+ 1699 02e5 0E02     		.2byte	0x20e
+ 1700 02e7 00000000 		.4byte	.LFB9
+ 1701 02eb 44000000 		.4byte	.LFE9-.LFB9
+ 1702 02ef 01       		.uleb128 0x1
+ 1703 02f0 9C       		.byte	0x9c
+ 1704 02f1 11       		.uleb128 0x11
+ 1705 02f2 53030000 		.4byte	.LASF50
+ 1706 02f6 01       		.byte	0x1
+ 1707 02f7 3002     		.2byte	0x230
+ 1708 02f9 6B000000 		.4byte	0x6b
+ 1709 02fd 00000000 		.4byte	.LFB10
+ 1710 0301 6C000000 		.4byte	.LFE10-.LFB10
+ 1711 0305 01       		.uleb128 0x1
+ 1712 0306 9C       		.byte	0x9c
+ 1713 0307 1B030000 		.4byte	0x31b
+ 1714 030b 10       		.uleb128 0x10
+ 1715 030c B8050000 		.4byte	.LASF46
+ 1716 0310 01       		.byte	0x1
+ 1717 0311 3202     		.2byte	0x232
+ 1718 0313 77000000 		.4byte	0x77
+ 1719 0317 02       		.uleb128 0x2
+ 1720 0318 91       		.byte	0x91
+ 1721 0319 76       		.sleb128 -10
+ 1722 031a 00       		.byte	0
+ 1723 031b 0F       		.uleb128 0xf
+ 1724 031c 64050000 		.4byte	.LASF51
+ 1725 0320 01       		.byte	0x1
+ 1726 0321 6302     		.2byte	0x263
+ 1727 0323 00000000 		.4byte	.LFB11
+ 1728 0327 B8000000 		.4byte	.LFE11-.LFB11
+ 1729 032b 01       		.uleb128 0x1
+ 1730 032c 9C       		.byte	0x9c
+ 1731 032d 50030000 		.4byte	0x350
+ 1732 0331 10       		.uleb128 0x10
+ 1733 0332 77020000 		.4byte	.LASF45
+ 1734 0336 01       		.byte	0x1
+ 1735 0337 6502     		.2byte	0x265
+ 1736 0339 83000000 		.4byte	0x83
+ 1737 033d 02       		.uleb128 0x2
+ 1738 033e 91       		.byte	0x91
+ 1739 033f 74       		.sleb128 -12
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 46
+
+
+ 1740 0340 10       		.uleb128 0x10
+ 1741 0341 69000000 		.4byte	.LASF52
+ 1742 0345 01       		.byte	0x1
+ 1743 0346 6602     		.2byte	0x266
+ 1744 0348 83000000 		.4byte	0x83
+ 1745 034c 02       		.uleb128 0x2
+ 1746 034d 91       		.byte	0x91
+ 1747 034e 70       		.sleb128 -16
+ 1748 034f 00       		.byte	0
+ 1749 0350 0E       		.uleb128 0xe
+ 1750 0351 BB030000 		.4byte	.LASF53
+ 1751 0355 01       		.byte	0x1
+ 1752 0356 8D02     		.2byte	0x28d
+ 1753 0358 00000000 		.4byte	.LFB12
+ 1754 035c 24000000 		.4byte	.LFE12-.LFB12
+ 1755 0360 01       		.uleb128 0x1
+ 1756 0361 9C       		.byte	0x9c
+ 1757 0362 12       		.uleb128 0x12
+ 1758 0363 DB000000 		.4byte	.LASF55
+ 1759 0367 01       		.byte	0x1
+ 1760 0368 AD02     		.2byte	0x2ad
+ 1761 036a 6B000000 		.4byte	0x6b
+ 1762 036e 00000000 		.4byte	.LFB13
+ 1763 0372 34000000 		.4byte	.LFE13-.LFB13
+ 1764 0376 01       		.uleb128 0x1
+ 1765 0377 9C       		.byte	0x9c
+ 1766 0378 0E       		.uleb128 0xe
+ 1767 0379 8A030000 		.4byte	.LASF56
+ 1768 037d 01       		.byte	0x1
+ 1769 037e CA02     		.2byte	0x2ca
+ 1770 0380 00000000 		.4byte	.LFB14
+ 1771 0384 50000000 		.4byte	.LFE14-.LFB14
+ 1772 0388 01       		.uleb128 0x1
+ 1773 0389 9C       		.byte	0x9c
+ 1774 038a 0F       		.uleb128 0xf
+ 1775 038b C9050000 		.4byte	.LASF57
+ 1776 038f 01       		.byte	0x1
+ 1777 0390 F202     		.2byte	0x2f2
+ 1778 0392 00000000 		.4byte	.LFB15
+ 1779 0396 40000000 		.4byte	.LFE15-.LFB15
+ 1780 039a 01       		.uleb128 0x1
+ 1781 039b 9C       		.byte	0x9c
+ 1782 039c B0030000 		.4byte	0x3b0
+ 1783 03a0 13       		.uleb128 0x13
+ 1784 03a1 72000000 		.4byte	.LASF80
+ 1785 03a5 01       		.byte	0x1
+ 1786 03a6 F202     		.2byte	0x2f2
+ 1787 03a8 6B000000 		.4byte	0x6b
+ 1788 03ac 02       		.uleb128 0x2
+ 1789 03ad 91       		.byte	0x91
+ 1790 03ae 77       		.sleb128 -9
+ 1791 03af 00       		.byte	0
+ 1792 03b0 14       		.uleb128 0x14
+ 1793 03b1 F3040000 		.4byte	.LASF58
+ 1794 03b5 01       		.byte	0x1
+ 1795 03b6 1003     		.2byte	0x310
+ 1796 03b8 00000000 		.4byte	.LFB16
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 47
+
+
+ 1797 03bc 30000000 		.4byte	.LFE16-.LFB16
+ 1798 03c0 01       		.uleb128 0x1
+ 1799 03c1 9C       		.byte	0x9c
+ 1800 03c2 15       		.uleb128 0x15
+ 1801 03c3 2C000000 		.4byte	.LASF59
+ 1802 03c7 01       		.byte	0x1
+ 1803 03c8 38       		.byte	0x38
+ 1804 03c9 A4000000 		.4byte	0xa4
+ 1805 03cd 05       		.uleb128 0x5
+ 1806 03ce 03       		.byte	0x3
+ 1807 03cf 00000000 		.4byte	USBUART_device
+ 1808 03d3 15       		.uleb128 0x15
+ 1809 03d4 02060000 		.4byte	.LASF60
+ 1810 03d8 01       		.byte	0x1
+ 1811 03d9 4E       		.byte	0x4e
+ 1812 03da A4000000 		.4byte	0xa4
+ 1813 03de 05       		.uleb128 0x5
+ 1814 03df 03       		.byte	0x3
+ 1815 03e0 00000000 		.4byte	USBUART_transferState
+ 1816 03e4 15       		.uleb128 0x15
+ 1817 03e5 A2050000 		.4byte	.LASF61
+ 1818 03e9 01       		.byte	0x1
+ 1819 03ea 1E       		.byte	0x1e
+ 1820 03eb A4000000 		.4byte	0xa4
+ 1821 03ef 05       		.uleb128 0x5
+ 1822 03f0 03       		.byte	0x3
+ 1823 03f1 00000000 		.4byte	USBUART_configuration
+ 1824 03f5 15       		.uleb128 0x15
+ 1825 03f6 18060000 		.4byte	.LASF62
+ 1826 03fa 01       		.byte	0x1
+ 1827 03fb 25       		.byte	0x25
+ 1828 03fc A4000000 		.4byte	0xa4
+ 1829 0400 05       		.uleb128 0x5
+ 1830 0401 03       		.byte	0x3
+ 1831 0402 00000000 		.4byte	USBUART_configurationChanged
+ 1832 0406 15       		.uleb128 0x15
+ 1833 0407 C0010000 		.4byte	.LASF63
+ 1834 040b 01       		.byte	0x1
+ 1835 040c 30       		.byte	0x30
+ 1836 040d A4000000 		.4byte	0xa4
+ 1837 0411 05       		.uleb128 0x5
+ 1838 0412 03       		.byte	0x3
+ 1839 0413 00000000 		.4byte	USBUART_deviceStatus
+ 1840 0417 15       		.uleb128 0x15
+ 1841 0418 94010000 		.4byte	.LASF64
+ 1842 041c 01       		.byte	0x1
+ 1843 041d 21       		.byte	0x21
+ 1844 041e A4000000 		.4byte	0xa4
+ 1845 0422 05       		.uleb128 0x5
+ 1846 0423 03       		.byte	0x3
+ 1847 0424 00000000 		.4byte	USBUART_interfaceNumber
+ 1848 0428 0A       		.uleb128 0xa
+ 1849 0429 A4000000 		.4byte	0xa4
+ 1850 042d 38040000 		.4byte	0x438
+ 1851 0431 0B       		.uleb128 0xb
+ 1852 0432 C6000000 		.4byte	0xc6
+ 1853 0436 01       		.byte	0x1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 48
+
+
+ 1854 0437 00       		.byte	0
+ 1855 0438 15       		.uleb128 0x15
+ 1856 0439 86040000 		.4byte	.LASF65
+ 1857 043d 01       		.byte	0x1
+ 1858 043e 32       		.byte	0x32
+ 1859 043f 49040000 		.4byte	0x449
+ 1860 0443 05       		.uleb128 0x5
+ 1861 0444 03       		.byte	0x3
+ 1862 0445 00000000 		.4byte	USBUART_interfaceSetting
+ 1863 0449 05       		.uleb128 0x5
+ 1864 044a 28040000 		.4byte	0x428
+ 1865 044e 15       		.uleb128 0x15
+ 1866 044f 2F010000 		.4byte	.LASF66
+ 1867 0453 01       		.byte	0x1
+ 1868 0454 33       		.byte	0x33
+ 1869 0455 5F040000 		.4byte	0x45f
+ 1870 0459 05       		.uleb128 0x5
+ 1871 045a 03       		.byte	0x3
+ 1872 045b 00000000 		.4byte	USBUART_interfaceSettingLast
+ 1873 045f 05       		.uleb128 0x5
+ 1874 0460 28040000 		.4byte	0x428
+ 1875 0464 15       		.uleb128 0x15
+ 1876 0465 1E030000 		.4byte	.LASF67
+ 1877 0469 01       		.byte	0x1
+ 1878 046a 28       		.byte	0x28
+ 1879 046b A4000000 		.4byte	0xa4
+ 1880 046f 05       		.uleb128 0x5
+ 1881 0470 03       		.byte	0x3
+ 1882 0471 00000000 		.4byte	USBUART_deviceAddress
+ 1883 0475 15       		.uleb128 0x15
+ 1884 0476 C4040000 		.4byte	.LASF68
+ 1885 047a 01       		.byte	0x1
+ 1886 047b 34       		.byte	0x34
+ 1887 047c 86040000 		.4byte	0x486
+ 1888 0480 05       		.uleb128 0x5
+ 1889 0481 03       		.byte	0x3
+ 1890 0482 00000000 		.4byte	USBUART_interfaceStatus
+ 1891 0486 05       		.uleb128 0x5
+ 1892 0487 28040000 		.4byte	0x428
+ 1893 048b 15       		.uleb128 0x15
+ 1894 048c 73030000 		.4byte	.LASF69
+ 1895 0490 01       		.byte	0x1
+ 1896 0491 3D       		.byte	0x3d
+ 1897 0492 9C040000 		.4byte	0x49c
+ 1898 0496 05       		.uleb128 0x5
+ 1899 0497 03       		.byte	0x3
+ 1900 0498 00000000 		.4byte	USBUART_interfaceClass
+ 1901 049c 09       		.uleb128 0x9
+ 1902 049d 04       		.byte	0x4
+ 1903 049e A2040000 		.4byte	0x4a2
+ 1904 04a2 16       		.uleb128 0x16
+ 1905 04a3 6B000000 		.4byte	0x6b
+ 1906 04a7 0A       		.uleb128 0xa
+ 1907 04a8 B7040000 		.4byte	0x4b7
+ 1908 04ac B7040000 		.4byte	0x4b7
+ 1909 04b0 0B       		.uleb128 0xb
+ 1910 04b1 C6000000 		.4byte	0xc6
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 49
+
+
+ 1911 04b5 08       		.byte	0x8
+ 1912 04b6 00       		.byte	0
+ 1913 04b7 05       		.uleb128 0x5
+ 1914 04b8 42010000 		.4byte	0x142
+ 1915 04bc 15       		.uleb128 0x15
+ 1916 04bd B4000000 		.4byte	.LASF70
+ 1917 04c1 01       		.byte	0x1
+ 1918 04c2 18       		.byte	0x18
+ 1919 04c3 CD040000 		.4byte	0x4cd
+ 1920 04c7 05       		.uleb128 0x5
+ 1921 04c8 03       		.byte	0x3
+ 1922 04c9 00000000 		.4byte	USBUART_EP
+ 1923 04cd 05       		.uleb128 0x5
+ 1924 04ce A7040000 		.4byte	0x4a7
+ 1925 04d2 15       		.uleb128 0x15
+ 1926 04d3 65020000 		.4byte	.LASF71
+ 1927 04d7 01       		.byte	0x1
+ 1928 04d8 4F       		.byte	0x4f
+ 1929 04d9 E3040000 		.4byte	0x4e3
+ 1930 04dd 05       		.uleb128 0x5
+ 1931 04de 03       		.byte	0x3
+ 1932 04df 00000000 		.4byte	USBUART_currentTD
+ 1933 04e3 05       		.uleb128 0x5
+ 1934 04e4 B2010000 		.4byte	0x1b2
+ 1935 04e8 15       		.uleb128 0x15
+ 1936 04e9 0D000000 		.4byte	.LASF72
+ 1937 04ed 01       		.byte	0x1
+ 1938 04ee 44       		.byte	0x44
+ 1939 04ef A4000000 		.4byte	0xa4
+ 1940 04f3 05       		.uleb128 0x5
+ 1941 04f4 03       		.byte	0x3
+ 1942 04f5 00000000 		.4byte	USBUART_ep0Toggle
+ 1943 04f9 15       		.uleb128 0x15
+ 1944 04fa 81000000 		.4byte	.LASF73
+ 1945 04fe 01       		.byte	0x1
+ 1946 04ff 45       		.byte	0x45
+ 1947 0500 A4000000 		.4byte	0xa4
+ 1948 0504 05       		.uleb128 0x5
+ 1949 0505 03       		.byte	0x3
+ 1950 0506 00000000 		.4byte	USBUART_lastPacketSize
+ 1951 050a 15       		.uleb128 0x15
+ 1952 050b DC040000 		.4byte	.LASF74
+ 1953 050f 01       		.byte	0x1
+ 1954 0510 50       		.byte	0x50
+ 1955 0511 A4000000 		.4byte	0xa4
+ 1956 0515 05       		.uleb128 0x5
+ 1957 0516 03       		.byte	0x3
+ 1958 0517 00000000 		.4byte	USBUART_ep0Mode
+ 1959 051b 15       		.uleb128 0x15
+ 1960 051c 54020000 		.4byte	.LASF75
+ 1961 0520 01       		.byte	0x1
+ 1962 0521 51       		.byte	0x51
+ 1963 0522 A4000000 		.4byte	0xa4
+ 1964 0526 05       		.uleb128 0x5
+ 1965 0527 03       		.byte	0x3
+ 1966 0528 00000000 		.4byte	USBUART_ep0Count
+ 1967 052c 15       		.uleb128 0x15
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 50
+
+
+ 1968 052d 3B000000 		.4byte	.LASF76
+ 1969 0531 01       		.byte	0x1
+ 1970 0532 52       		.byte	0x52
+ 1971 0533 A9000000 		.4byte	0xa9
+ 1972 0537 05       		.uleb128 0x5
+ 1973 0538 03       		.byte	0x3
+ 1974 0539 00000000 		.4byte	USBUART_transferByteCount
+ 1975 053d 00       		.byte	0
+ 1976              		.section	.debug_abbrev,"",%progbits
+ 1977              	.Ldebug_abbrev0:
+ 1978 0000 01       		.uleb128 0x1
+ 1979 0001 11       		.uleb128 0x11
+ 1980 0002 01       		.byte	0x1
+ 1981 0003 25       		.uleb128 0x25
+ 1982 0004 0E       		.uleb128 0xe
+ 1983 0005 13       		.uleb128 0x13
+ 1984 0006 0B       		.uleb128 0xb
+ 1985 0007 03       		.uleb128 0x3
+ 1986 0008 0E       		.uleb128 0xe
+ 1987 0009 1B       		.uleb128 0x1b
+ 1988 000a 0E       		.uleb128 0xe
+ 1989 000b 55       		.uleb128 0x55
+ 1990 000c 17       		.uleb128 0x17
+ 1991 000d 11       		.uleb128 0x11
+ 1992 000e 01       		.uleb128 0x1
+ 1993 000f 10       		.uleb128 0x10
+ 1994 0010 17       		.uleb128 0x17
+ 1995 0011 00       		.byte	0
+ 1996 0012 00       		.byte	0
+ 1997 0013 02       		.uleb128 0x2
+ 1998 0014 24       		.uleb128 0x24
+ 1999 0015 00       		.byte	0
+ 2000 0016 0B       		.uleb128 0xb
+ 2001 0017 0B       		.uleb128 0xb
+ 2002 0018 3E       		.uleb128 0x3e
+ 2003 0019 0B       		.uleb128 0xb
+ 2004 001a 03       		.uleb128 0x3
+ 2005 001b 0E       		.uleb128 0xe
+ 2006 001c 00       		.byte	0
+ 2007 001d 00       		.byte	0
+ 2008 001e 03       		.uleb128 0x3
+ 2009 001f 24       		.uleb128 0x24
+ 2010 0020 00       		.byte	0
+ 2011 0021 0B       		.uleb128 0xb
+ 2012 0022 0B       		.uleb128 0xb
+ 2013 0023 3E       		.uleb128 0x3e
+ 2014 0024 0B       		.uleb128 0xb
+ 2015 0025 03       		.uleb128 0x3
+ 2016 0026 08       		.uleb128 0x8
+ 2017 0027 00       		.byte	0
+ 2018 0028 00       		.byte	0
+ 2019 0029 04       		.uleb128 0x4
+ 2020 002a 16       		.uleb128 0x16
+ 2021 002b 00       		.byte	0
+ 2022 002c 03       		.uleb128 0x3
+ 2023 002d 0E       		.uleb128 0xe
+ 2024 002e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 51
+
+
+ 2025 002f 0B       		.uleb128 0xb
+ 2026 0030 3B       		.uleb128 0x3b
+ 2027 0031 05       		.uleb128 0x5
+ 2028 0032 49       		.uleb128 0x49
+ 2029 0033 13       		.uleb128 0x13
+ 2030 0034 00       		.byte	0
+ 2031 0035 00       		.byte	0
+ 2032 0036 05       		.uleb128 0x5
+ 2033 0037 35       		.uleb128 0x35
+ 2034 0038 00       		.byte	0
+ 2035 0039 49       		.uleb128 0x49
+ 2036 003a 13       		.uleb128 0x13
+ 2037 003b 00       		.byte	0
+ 2038 003c 00       		.byte	0
+ 2039 003d 06       		.uleb128 0x6
+ 2040 003e 13       		.uleb128 0x13
+ 2041 003f 01       		.byte	0x1
+ 2042 0040 0B       		.uleb128 0xb
+ 2043 0041 0B       		.uleb128 0xb
+ 2044 0042 3A       		.uleb128 0x3a
+ 2045 0043 0B       		.uleb128 0xb
+ 2046 0044 3B       		.uleb128 0x3b
+ 2047 0045 0B       		.uleb128 0xb
+ 2048 0046 01       		.uleb128 0x1
+ 2049 0047 13       		.uleb128 0x13
+ 2050 0048 00       		.byte	0
+ 2051 0049 00       		.byte	0
+ 2052 004a 07       		.uleb128 0x7
+ 2053 004b 0D       		.uleb128 0xd
+ 2054 004c 00       		.byte	0
+ 2055 004d 03       		.uleb128 0x3
+ 2056 004e 0E       		.uleb128 0xe
+ 2057 004f 3A       		.uleb128 0x3a
+ 2058 0050 0B       		.uleb128 0xb
+ 2059 0051 3B       		.uleb128 0x3b
+ 2060 0052 0B       		.uleb128 0xb
+ 2061 0053 49       		.uleb128 0x49
+ 2062 0054 13       		.uleb128 0x13
+ 2063 0055 38       		.uleb128 0x38
+ 2064 0056 0B       		.uleb128 0xb
+ 2065 0057 00       		.byte	0
+ 2066 0058 00       		.byte	0
+ 2067 0059 08       		.uleb128 0x8
+ 2068 005a 16       		.uleb128 0x16
+ 2069 005b 00       		.byte	0
+ 2070 005c 03       		.uleb128 0x3
+ 2071 005d 0E       		.uleb128 0xe
+ 2072 005e 3A       		.uleb128 0x3a
+ 2073 005f 0B       		.uleb128 0xb
+ 2074 0060 3B       		.uleb128 0x3b
+ 2075 0061 0B       		.uleb128 0xb
+ 2076 0062 49       		.uleb128 0x49
+ 2077 0063 13       		.uleb128 0x13
+ 2078 0064 00       		.byte	0
+ 2079 0065 00       		.byte	0
+ 2080 0066 09       		.uleb128 0x9
+ 2081 0067 0F       		.uleb128 0xf
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 52
+
+
+ 2082 0068 00       		.byte	0
+ 2083 0069 0B       		.uleb128 0xb
+ 2084 006a 0B       		.uleb128 0xb
+ 2085 006b 49       		.uleb128 0x49
+ 2086 006c 13       		.uleb128 0x13
+ 2087 006d 00       		.byte	0
+ 2088 006e 00       		.byte	0
+ 2089 006f 0A       		.uleb128 0xa
+ 2090 0070 01       		.uleb128 0x1
+ 2091 0071 01       		.byte	0x1
+ 2092 0072 49       		.uleb128 0x49
+ 2093 0073 13       		.uleb128 0x13
+ 2094 0074 01       		.uleb128 0x1
+ 2095 0075 13       		.uleb128 0x13
+ 2096 0076 00       		.byte	0
+ 2097 0077 00       		.byte	0
+ 2098 0078 0B       		.uleb128 0xb
+ 2099 0079 21       		.uleb128 0x21
+ 2100 007a 00       		.byte	0
+ 2101 007b 49       		.uleb128 0x49
+ 2102 007c 13       		.uleb128 0x13
+ 2103 007d 2F       		.uleb128 0x2f
+ 2104 007e 0B       		.uleb128 0xb
+ 2105 007f 00       		.byte	0
+ 2106 0080 00       		.byte	0
+ 2107 0081 0C       		.uleb128 0xc
+ 2108 0082 2E       		.uleb128 0x2e
+ 2109 0083 01       		.byte	0x1
+ 2110 0084 3F       		.uleb128 0x3f
+ 2111 0085 19       		.uleb128 0x19
+ 2112 0086 03       		.uleb128 0x3
+ 2113 0087 0E       		.uleb128 0xe
+ 2114 0088 3A       		.uleb128 0x3a
+ 2115 0089 0B       		.uleb128 0xb
+ 2116 008a 3B       		.uleb128 0x3b
+ 2117 008b 0B       		.uleb128 0xb
+ 2118 008c 27       		.uleb128 0x27
+ 2119 008d 19       		.uleb128 0x19
+ 2120 008e 11       		.uleb128 0x11
+ 2121 008f 01       		.uleb128 0x1
+ 2122 0090 12       		.uleb128 0x12
+ 2123 0091 06       		.uleb128 0x6
+ 2124 0092 40       		.uleb128 0x40
+ 2125 0093 18       		.uleb128 0x18
+ 2126 0094 9642     		.uleb128 0x2116
+ 2127 0096 19       		.uleb128 0x19
+ 2128 0097 01       		.uleb128 0x1
+ 2129 0098 13       		.uleb128 0x13
+ 2130 0099 00       		.byte	0
+ 2131 009a 00       		.byte	0
+ 2132 009b 0D       		.uleb128 0xd
+ 2133 009c 34       		.uleb128 0x34
+ 2134 009d 00       		.byte	0
+ 2135 009e 03       		.uleb128 0x3
+ 2136 009f 0E       		.uleb128 0xe
+ 2137 00a0 3A       		.uleb128 0x3a
+ 2138 00a1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 53
+
+
+ 2139 00a2 3B       		.uleb128 0x3b
+ 2140 00a3 0B       		.uleb128 0xb
+ 2141 00a4 49       		.uleb128 0x49
+ 2142 00a5 13       		.uleb128 0x13
+ 2143 00a6 02       		.uleb128 0x2
+ 2144 00a7 18       		.uleb128 0x18
+ 2145 00a8 00       		.byte	0
+ 2146 00a9 00       		.byte	0
+ 2147 00aa 0E       		.uleb128 0xe
+ 2148 00ab 2E       		.uleb128 0x2e
+ 2149 00ac 00       		.byte	0
+ 2150 00ad 3F       		.uleb128 0x3f
+ 2151 00ae 19       		.uleb128 0x19
+ 2152 00af 03       		.uleb128 0x3
+ 2153 00b0 0E       		.uleb128 0xe
+ 2154 00b1 3A       		.uleb128 0x3a
+ 2155 00b2 0B       		.uleb128 0xb
+ 2156 00b3 3B       		.uleb128 0x3b
+ 2157 00b4 05       		.uleb128 0x5
+ 2158 00b5 27       		.uleb128 0x27
+ 2159 00b6 19       		.uleb128 0x19
+ 2160 00b7 11       		.uleb128 0x11
+ 2161 00b8 01       		.uleb128 0x1
+ 2162 00b9 12       		.uleb128 0x12
+ 2163 00ba 06       		.uleb128 0x6
+ 2164 00bb 40       		.uleb128 0x40
+ 2165 00bc 18       		.uleb128 0x18
+ 2166 00bd 9642     		.uleb128 0x2116
+ 2167 00bf 19       		.uleb128 0x19
+ 2168 00c0 00       		.byte	0
+ 2169 00c1 00       		.byte	0
+ 2170 00c2 0F       		.uleb128 0xf
+ 2171 00c3 2E       		.uleb128 0x2e
+ 2172 00c4 01       		.byte	0x1
+ 2173 00c5 3F       		.uleb128 0x3f
+ 2174 00c6 19       		.uleb128 0x19
+ 2175 00c7 03       		.uleb128 0x3
+ 2176 00c8 0E       		.uleb128 0xe
+ 2177 00c9 3A       		.uleb128 0x3a
+ 2178 00ca 0B       		.uleb128 0xb
+ 2179 00cb 3B       		.uleb128 0x3b
+ 2180 00cc 05       		.uleb128 0x5
+ 2181 00cd 27       		.uleb128 0x27
+ 2182 00ce 19       		.uleb128 0x19
+ 2183 00cf 11       		.uleb128 0x11
+ 2184 00d0 01       		.uleb128 0x1
+ 2185 00d1 12       		.uleb128 0x12
+ 2186 00d2 06       		.uleb128 0x6
+ 2187 00d3 40       		.uleb128 0x40
+ 2188 00d4 18       		.uleb128 0x18
+ 2189 00d5 9742     		.uleb128 0x2117
+ 2190 00d7 19       		.uleb128 0x19
+ 2191 00d8 01       		.uleb128 0x1
+ 2192 00d9 13       		.uleb128 0x13
+ 2193 00da 00       		.byte	0
+ 2194 00db 00       		.byte	0
+ 2195 00dc 10       		.uleb128 0x10
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 54
+
+
+ 2196 00dd 34       		.uleb128 0x34
+ 2197 00de 00       		.byte	0
+ 2198 00df 03       		.uleb128 0x3
+ 2199 00e0 0E       		.uleb128 0xe
+ 2200 00e1 3A       		.uleb128 0x3a
+ 2201 00e2 0B       		.uleb128 0xb
+ 2202 00e3 3B       		.uleb128 0x3b
+ 2203 00e4 05       		.uleb128 0x5
+ 2204 00e5 49       		.uleb128 0x49
+ 2205 00e6 13       		.uleb128 0x13
+ 2206 00e7 02       		.uleb128 0x2
+ 2207 00e8 18       		.uleb128 0x18
+ 2208 00e9 00       		.byte	0
+ 2209 00ea 00       		.byte	0
+ 2210 00eb 11       		.uleb128 0x11
+ 2211 00ec 2E       		.uleb128 0x2e
+ 2212 00ed 01       		.byte	0x1
+ 2213 00ee 3F       		.uleb128 0x3f
+ 2214 00ef 19       		.uleb128 0x19
+ 2215 00f0 03       		.uleb128 0x3
+ 2216 00f1 0E       		.uleb128 0xe
+ 2217 00f2 3A       		.uleb128 0x3a
+ 2218 00f3 0B       		.uleb128 0xb
+ 2219 00f4 3B       		.uleb128 0x3b
+ 2220 00f5 05       		.uleb128 0x5
+ 2221 00f6 27       		.uleb128 0x27
+ 2222 00f7 19       		.uleb128 0x19
+ 2223 00f8 49       		.uleb128 0x49
+ 2224 00f9 13       		.uleb128 0x13
+ 2225 00fa 11       		.uleb128 0x11
+ 2226 00fb 01       		.uleb128 0x1
+ 2227 00fc 12       		.uleb128 0x12
+ 2228 00fd 06       		.uleb128 0x6
+ 2229 00fe 40       		.uleb128 0x40
+ 2230 00ff 18       		.uleb128 0x18
+ 2231 0100 9642     		.uleb128 0x2116
+ 2232 0102 19       		.uleb128 0x19
+ 2233 0103 01       		.uleb128 0x1
+ 2234 0104 13       		.uleb128 0x13
+ 2235 0105 00       		.byte	0
+ 2236 0106 00       		.byte	0
+ 2237 0107 12       		.uleb128 0x12
+ 2238 0108 2E       		.uleb128 0x2e
+ 2239 0109 00       		.byte	0
+ 2240 010a 3F       		.uleb128 0x3f
+ 2241 010b 19       		.uleb128 0x19
+ 2242 010c 03       		.uleb128 0x3
+ 2243 010d 0E       		.uleb128 0xe
+ 2244 010e 3A       		.uleb128 0x3a
+ 2245 010f 0B       		.uleb128 0xb
+ 2246 0110 3B       		.uleb128 0x3b
+ 2247 0111 05       		.uleb128 0x5
+ 2248 0112 27       		.uleb128 0x27
+ 2249 0113 19       		.uleb128 0x19
+ 2250 0114 49       		.uleb128 0x49
+ 2251 0115 13       		.uleb128 0x13
+ 2252 0116 11       		.uleb128 0x11
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 55
+
+
+ 2253 0117 01       		.uleb128 0x1
+ 2254 0118 12       		.uleb128 0x12
+ 2255 0119 06       		.uleb128 0x6
+ 2256 011a 40       		.uleb128 0x40
+ 2257 011b 18       		.uleb128 0x18
+ 2258 011c 9742     		.uleb128 0x2117
+ 2259 011e 19       		.uleb128 0x19
+ 2260 011f 00       		.byte	0
+ 2261 0120 00       		.byte	0
+ 2262 0121 13       		.uleb128 0x13
+ 2263 0122 05       		.uleb128 0x5
+ 2264 0123 00       		.byte	0
+ 2265 0124 03       		.uleb128 0x3
+ 2266 0125 0E       		.uleb128 0xe
+ 2267 0126 3A       		.uleb128 0x3a
+ 2268 0127 0B       		.uleb128 0xb
+ 2269 0128 3B       		.uleb128 0x3b
+ 2270 0129 05       		.uleb128 0x5
+ 2271 012a 49       		.uleb128 0x49
+ 2272 012b 13       		.uleb128 0x13
+ 2273 012c 02       		.uleb128 0x2
+ 2274 012d 18       		.uleb128 0x18
+ 2275 012e 00       		.byte	0
+ 2276 012f 00       		.byte	0
+ 2277 0130 14       		.uleb128 0x14
+ 2278 0131 2E       		.uleb128 0x2e
+ 2279 0132 00       		.byte	0
+ 2280 0133 3F       		.uleb128 0x3f
+ 2281 0134 19       		.uleb128 0x19
+ 2282 0135 03       		.uleb128 0x3
+ 2283 0136 0E       		.uleb128 0xe
+ 2284 0137 3A       		.uleb128 0x3a
+ 2285 0138 0B       		.uleb128 0xb
+ 2286 0139 3B       		.uleb128 0x3b
+ 2287 013a 05       		.uleb128 0x5
+ 2288 013b 27       		.uleb128 0x27
+ 2289 013c 19       		.uleb128 0x19
+ 2290 013d 11       		.uleb128 0x11
+ 2291 013e 01       		.uleb128 0x1
+ 2292 013f 12       		.uleb128 0x12
+ 2293 0140 06       		.uleb128 0x6
+ 2294 0141 40       		.uleb128 0x40
+ 2295 0142 18       		.uleb128 0x18
+ 2296 0143 9742     		.uleb128 0x2117
+ 2297 0145 19       		.uleb128 0x19
+ 2298 0146 00       		.byte	0
+ 2299 0147 00       		.byte	0
+ 2300 0148 15       		.uleb128 0x15
+ 2301 0149 34       		.uleb128 0x34
+ 2302 014a 00       		.byte	0
+ 2303 014b 03       		.uleb128 0x3
+ 2304 014c 0E       		.uleb128 0xe
+ 2305 014d 3A       		.uleb128 0x3a
+ 2306 014e 0B       		.uleb128 0xb
+ 2307 014f 3B       		.uleb128 0x3b
+ 2308 0150 0B       		.uleb128 0xb
+ 2309 0151 49       		.uleb128 0x49
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 56
+
+
+ 2310 0152 13       		.uleb128 0x13
+ 2311 0153 3F       		.uleb128 0x3f
+ 2312 0154 19       		.uleb128 0x19
+ 2313 0155 02       		.uleb128 0x2
+ 2314 0156 18       		.uleb128 0x18
+ 2315 0157 00       		.byte	0
+ 2316 0158 00       		.byte	0
+ 2317 0159 16       		.uleb128 0x16
+ 2318 015a 26       		.uleb128 0x26
+ 2319 015b 00       		.byte	0
+ 2320 015c 49       		.uleb128 0x49
+ 2321 015d 13       		.uleb128 0x13
+ 2322 015e 00       		.byte	0
+ 2323 015f 00       		.byte	0
+ 2324 0160 00       		.byte	0
+ 2325              		.section	.debug_aranges,"",%progbits
+ 2326 0000 94000000 		.4byte	0x94
+ 2327 0004 0200     		.2byte	0x2
+ 2328 0006 00000000 		.4byte	.Ldebug_info0
+ 2329 000a 04       		.byte	0x4
+ 2330 000b 00       		.byte	0
+ 2331 000c 0000     		.2byte	0
+ 2332 000e 0000     		.2byte	0
+ 2333 0010 00000000 		.4byte	.LFB1
+ 2334 0014 FC000000 		.4byte	.LFE1-.LFB1
+ 2335 0018 00000000 		.4byte	.LFB2
+ 2336 001c 9C000000 		.4byte	.LFE2-.LFB2
+ 2337 0020 00000000 		.4byte	.LFB3
+ 2338 0024 40000000 		.4byte	.LFE3-.LFB3
+ 2339 0028 00000000 		.4byte	.LFB4
+ 2340 002c 4C000000 		.4byte	.LFE4-.LFB4
+ 2341 0030 00000000 		.4byte	.LFB5
+ 2342 0034 D8000000 		.4byte	.LFE5-.LFB5
+ 2343 0038 00000000 		.4byte	.LFB6
+ 2344 003c 74000000 		.4byte	.LFE6-.LFB6
+ 2345 0040 00000000 		.4byte	.LFB7
+ 2346 0044 40000000 		.4byte	.LFE7-.LFB7
+ 2347 0048 00000000 		.4byte	.LFB8
+ 2348 004c 0E000000 		.4byte	.LFE8-.LFB8
+ 2349 0050 00000000 		.4byte	.LFB9
+ 2350 0054 44000000 		.4byte	.LFE9-.LFB9
+ 2351 0058 00000000 		.4byte	.LFB10
+ 2352 005c 6C000000 		.4byte	.LFE10-.LFB10
+ 2353 0060 00000000 		.4byte	.LFB11
+ 2354 0064 B8000000 		.4byte	.LFE11-.LFB11
+ 2355 0068 00000000 		.4byte	.LFB12
+ 2356 006c 24000000 		.4byte	.LFE12-.LFB12
+ 2357 0070 00000000 		.4byte	.LFB13
+ 2358 0074 34000000 		.4byte	.LFE13-.LFB13
+ 2359 0078 00000000 		.4byte	.LFB14
+ 2360 007c 50000000 		.4byte	.LFE14-.LFB14
+ 2361 0080 00000000 		.4byte	.LFB15
+ 2362 0084 40000000 		.4byte	.LFE15-.LFB15
+ 2363 0088 00000000 		.4byte	.LFB16
+ 2364 008c 30000000 		.4byte	.LFE16-.LFB16
+ 2365 0090 00000000 		.4byte	0
+ 2366 0094 00000000 		.4byte	0
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 57
+
+
+ 2367              		.section	.debug_ranges,"",%progbits
+ 2368              	.Ldebug_ranges0:
+ 2369 0000 00000000 		.4byte	.LFB1
+ 2370 0004 FC000000 		.4byte	.LFE1
+ 2371 0008 00000000 		.4byte	.LFB2
+ 2372 000c 9C000000 		.4byte	.LFE2
+ 2373 0010 00000000 		.4byte	.LFB3
+ 2374 0014 40000000 		.4byte	.LFE3
+ 2375 0018 00000000 		.4byte	.LFB4
+ 2376 001c 4C000000 		.4byte	.LFE4
+ 2377 0020 00000000 		.4byte	.LFB5
+ 2378 0024 D8000000 		.4byte	.LFE5
+ 2379 0028 00000000 		.4byte	.LFB6
+ 2380 002c 74000000 		.4byte	.LFE6
+ 2381 0030 00000000 		.4byte	.LFB7
+ 2382 0034 40000000 		.4byte	.LFE7
+ 2383 0038 00000000 		.4byte	.LFB8
+ 2384 003c 0E000000 		.4byte	.LFE8
+ 2385 0040 00000000 		.4byte	.LFB9
+ 2386 0044 44000000 		.4byte	.LFE9
+ 2387 0048 00000000 		.4byte	.LFB10
+ 2388 004c 6C000000 		.4byte	.LFE10
+ 2389 0050 00000000 		.4byte	.LFB11
+ 2390 0054 B8000000 		.4byte	.LFE11
+ 2391 0058 00000000 		.4byte	.LFB12
+ 2392 005c 24000000 		.4byte	.LFE12
+ 2393 0060 00000000 		.4byte	.LFB13
+ 2394 0064 34000000 		.4byte	.LFE13
+ 2395 0068 00000000 		.4byte	.LFB14
+ 2396 006c 50000000 		.4byte	.LFE14
+ 2397 0070 00000000 		.4byte	.LFB15
+ 2398 0074 40000000 		.4byte	.LFE15
+ 2399 0078 00000000 		.4byte	.LFB16
+ 2400 007c 30000000 		.4byte	.LFE16
+ 2401 0080 00000000 		.4byte	0
+ 2402 0084 00000000 		.4byte	0
+ 2403              		.section	.debug_line,"",%progbits
+ 2404              	.Ldebug_line0:
+ 2405 0000 36020000 		.section	.debug_str,"MS",%progbits,1
+ 2405      02005500 
+ 2405      00000201 
+ 2405      FB0E0D00 
+ 2405      01010101 
+ 2406              	.LASF33:
+ 2407 0000 70537461 		.ascii	"pStatusBlock\000"
+ 2407      74757342 
+ 2407      6C6F636B 
+ 2407      00
+ 2408              	.LASF72:
+ 2409 000d 55534255 		.ascii	"USBUART_ep0Toggle\000"
+ 2409      4152545F 
+ 2409      65703054 
+ 2409      6F67676C 
+ 2409      6500
+ 2410              	.LASF31:
+ 2411 001f 636F756E 		.ascii	"count\000"
+ 2411      7400
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 58
+
+
+ 2412              	.LASF10:
+ 2413 0025 75696E74 		.ascii	"uint16\000"
+ 2413      313600
+ 2414              	.LASF59:
+ 2415 002c 55534255 		.ascii	"USBUART_device\000"
+ 2415      4152545F 
+ 2415      64657669 
+ 2415      636500
+ 2416              	.LASF76:
+ 2417 003b 55534255 		.ascii	"USBUART_transferByteCount\000"
+ 2417      4152545F 
+ 2417      7472616E 
+ 2417      73666572 
+ 2417      42797465 
+ 2418              	.LASF40:
+ 2419 0055 55534255 		.ascii	"USBUART_HandleSetup\000"
+ 2419      4152545F 
+ 2419      48616E64 
+ 2419      6C655365 
+ 2419      74757000 
+ 2420              	.LASF52:
+ 2421 0069 72656749 		.ascii	"regIndex\000"
+ 2421      6E646578 
+ 2421      00
+ 2422              	.LASF80:
+ 2423 0072 636F6D70 		.ascii	"completionCode\000"
+ 2423      6C657469 
+ 2423      6F6E436F 
+ 2423      646500
+ 2424              	.LASF73:
+ 2425 0081 55534255 		.ascii	"USBUART_lastPacketSize\000"
+ 2425      4152545F 
+ 2425      6C617374 
+ 2425      5061636B 
+ 2425      65745369 
+ 2426              	.LASF7:
+ 2427 0098 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2427      206C6F6E 
+ 2427      6720756E 
+ 2427      7369676E 
+ 2427      65642069 
+ 2428              	.LASF22:
+ 2429 00af 61646472 		.ascii	"addr\000"
+ 2429      00
+ 2430              	.LASF70:
+ 2431 00b4 55534255 		.ascii	"USBUART_EP\000"
+ 2431      4152545F 
+ 2431      455000
+ 2432              	.LASF30:
+ 2433 00bf 545F5553 		.ascii	"T_USBUART_XFER_STATUS_BLOCK\000"
+ 2433      42554152 
+ 2433      545F5846 
+ 2433      45525F53 
+ 2433      54415455 
+ 2434              	.LASF55:
+ 2435 00db 55534255 		.ascii	"USBUART_InitNoDataControlTransfer\000"
+ 2435      4152545F 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 59
+
+
+ 2435      496E6974 
+ 2435      4E6F4461 
+ 2435      7461436F 
+ 2436              	.LASF6:
+ 2437 00fd 6C6F6E67 		.ascii	"long long int\000"
+ 2437      206C6F6E 
+ 2437      6720696E 
+ 2437      7400
+ 2438              	.LASF0:
+ 2439 010b 7369676E 		.ascii	"signed char\000"
+ 2439      65642063 
+ 2439      68617200 
+ 2440              	.LASF49:
+ 2441 0117 55534255 		.ascii	"USBUART_InitControlRead\000"
+ 2441      4152545F 
+ 2441      496E6974 
+ 2441      436F6E74 
+ 2441      726F6C52 
+ 2442              	.LASF66:
+ 2443 012f 55534255 		.ascii	"USBUART_interfaceSettingLast\000"
+ 2443      4152545F 
+ 2443      696E7465 
+ 2443      72666163 
+ 2443      65536574 
+ 2444              	.LASF36:
+ 2445 014c 55534255 		.ascii	"USBUART_ep0_data_struct\000"
+ 2445      4152545F 
+ 2445      6570305F 
+ 2445      64617461 
+ 2445      5F737472 
+ 2446              	.LASF4:
+ 2447 0164 6C6F6E67 		.ascii	"long int\000"
+ 2447      20696E74 
+ 2447      00
+ 2448              	.LASF39:
+ 2449 016d 55534255 		.ascii	"USBUART_EP_0_ISR\000"
+ 2449      4152545F 
+ 2449      45505F30 
+ 2449      5F495352 
+ 2449      00
+ 2450              	.LASF9:
+ 2451 017e 75696E74 		.ascii	"uint8\000"
+ 2451      3800
+ 2452              	.LASF21:
+ 2453 0184 6570546F 		.ascii	"epToggle\000"
+ 2453      67676C65 
+ 2453      00
+ 2454              	.LASF13:
+ 2455 018d 646F7562 		.ascii	"double\000"
+ 2455      6C6500
+ 2456              	.LASF64:
+ 2457 0194 55534255 		.ascii	"USBUART_interfaceNumber\000"
+ 2457      4152545F 
+ 2457      696E7465 
+ 2457      72666163 
+ 2457      654E756D 
+ 2458              	.LASF11:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 60
+
+
+ 2459 01ac 75696E74 		.ascii	"uint32\000"
+ 2459      333200
+ 2460              	.LASF32:
+ 2461 01b3 70446174 		.ascii	"pData\000"
+ 2461      6100
+ 2462              	.LASF23:
+ 2463 01b9 65704D6F 		.ascii	"epMode\000"
+ 2463      646500
+ 2464              	.LASF63:
+ 2465 01c0 55534255 		.ascii	"USBUART_deviceStatus\000"
+ 2465      4152545F 
+ 2465      64657669 
+ 2465      63655374 
+ 2465      61747573 
+ 2466              	.LASF8:
+ 2467 01d5 756E7369 		.ascii	"unsigned int\000"
+ 2467      676E6564 
+ 2467      20696E74 
+ 2467      00
+ 2468              	.LASF38:
+ 2469 01e2 6D6F6469 		.ascii	"modifyReg\000"
+ 2469      66795265 
+ 2469      6700
+ 2470              	.LASF5:
+ 2471 01ec 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2471      20756E73 
+ 2471      69676E65 
+ 2471      6420696E 
+ 2471      7400
+ 2472              	.LASF47:
+ 2473 01fe 55534255 		.ascii	"USBUART_ControlReadDataStage\000"
+ 2473      4152545F 
+ 2473      436F6E74 
+ 2473      726F6C52 
+ 2473      65616444 
+ 2474              	.LASF3:
+ 2475 021b 73686F72 		.ascii	"short unsigned int\000"
+ 2475      7420756E 
+ 2475      7369676E 
+ 2475      65642069 
+ 2475      6E7400
+ 2476              	.LASF54:
+ 2477 022e 55534255 		.ascii	"USBUART_InitZeroLengthControlTransfer\000"
+ 2477      4152545F 
+ 2477      496E6974 
+ 2477      5A65726F 
+ 2477      4C656E67 
+ 2478              	.LASF75:
+ 2479 0254 55534255 		.ascii	"USBUART_ep0Count\000"
+ 2479      4152545F 
+ 2479      65703043 
+ 2479      6F756E74 
+ 2479      00
+ 2480              	.LASF71:
+ 2481 0265 55534255 		.ascii	"USBUART_currentTD\000"
+ 2481      4152545F 
+ 2481      63757272 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 61
+
+
+ 2481      656E7454 
+ 2481      4400
+ 2482              	.LASF45:
+ 2483 0277 65703043 		.ascii	"ep0Count\000"
+ 2483      6F756E74 
+ 2483      00
+ 2484              	.LASF77:
+ 2485 0280 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2485      43313120 
+ 2485      352E342E 
+ 2485      31203230 
+ 2485      31363036 
+ 2486 02b3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2486      20726576 
+ 2486      6973696F 
+ 2486      6E203233 
+ 2486      37373135 
+ 2487 02e6 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2487      66756E63 
+ 2487      74696F6E 
+ 2487      2D736563 
+ 2487      74696F6E 
+ 2488              	.LASF26:
+ 2489 030e 696E7465 		.ascii	"interface\000"
+ 2489      72666163 
+ 2489      6500
+ 2490              	.LASF15:
+ 2491 0318 72656733 		.ascii	"reg32\000"
+ 2491      3200
+ 2492              	.LASF67:
+ 2493 031e 55534255 		.ascii	"USBUART_deviceAddress\000"
+ 2493      4152545F 
+ 2493      64657669 
+ 2493      63654164 
+ 2493      64726573 
+ 2494              	.LASF20:
+ 2495 0334 68774570 		.ascii	"hwEpState\000"
+ 2495      53746174 
+ 2495      6500
+ 2496              	.LASF17:
+ 2497 033e 73697A65 		.ascii	"sizetype\000"
+ 2497      74797065 
+ 2497      00
+ 2498              	.LASF16:
+ 2499 0347 6C6F6E67 		.ascii	"long double\000"
+ 2499      20646F75 
+ 2499      626C6500 
+ 2500              	.LASF50:
+ 2501 0353 55534255 		.ascii	"USBUART_InitControlWrite\000"
+ 2501      4152545F 
+ 2501      496E6974 
+ 2501      436F6E74 
+ 2501      726F6C57 
+ 2502              	.LASF18:
+ 2503 036c 61747472 		.ascii	"attrib\000"
+ 2503      696200
+ 2504              	.LASF69:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 62
+
+
+ 2505 0373 55534255 		.ascii	"USBUART_interfaceClass\000"
+ 2505      4152545F 
+ 2505      696E7465 
+ 2505      72666163 
+ 2505      65436C61 
+ 2506              	.LASF56:
+ 2507 038a 55534255 		.ascii	"USBUART_NoDataControlStatusStage\000"
+ 2507      4152545F 
+ 2507      4E6F4461 
+ 2507      7461436F 
+ 2507      6E74726F 
+ 2508              	.LASF44:
+ 2509 03ab 55534255 		.ascii	"USBUART_LoadEP0\000"
+ 2509      4152545F 
+ 2509      4C6F6164 
+ 2509      45503000 
+ 2510              	.LASF53:
+ 2511 03bb 55534255 		.ascii	"USBUART_ControlWriteStatusStage\000"
+ 2511      4152545F 
+ 2511      436F6E74 
+ 2511      726F6C57 
+ 2511      72697465 
+ 2512              	.LASF79:
+ 2513 03db 433A5C55 		.ascii	"C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\"
+ 2513      73657273 
+ 2513      5C48507A 
+ 2513      3432305C 
+ 2513      446F6375 
+ 2514 0408 6C622D62 		.ascii	"lb-boards\\FPGA Cards\\RETRO-EP4CE15\\PSOC\\USBFS_U"
+ 2514      6F617264 
+ 2514      735C4650 
+ 2514      47412043 
+ 2514      61726473 
+ 2515 0437 41525430 		.ascii	"ART01\\USBFS_UART01.cydsn\000"
+ 2515      315C5553 
+ 2515      4246535F 
+ 2515      55415254 
+ 2515      30312E63 
+ 2516              	.LASF12:
+ 2517 0450 666C6F61 		.ascii	"float\000"
+ 2517      7400
+ 2518              	.LASF19:
+ 2519 0456 61706945 		.ascii	"apiEpState\000"
+ 2519      70537461 
+ 2519      746500
+ 2520              	.LASF78:
+ 2521 0461 47656E65 		.ascii	"Generated_Source\\PSoC4\\USBUART_drv.c\000"
+ 2521      72617465 
+ 2521      645F536F 
+ 2521      75726365 
+ 2521      5C50536F 
+ 2522              	.LASF65:
+ 2523 0486 55534255 		.ascii	"USBUART_interfaceSetting\000"
+ 2523      4152545F 
+ 2523      696E7465 
+ 2523      72666163 
+ 2523      65536574 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 63
+
+
+ 2524              	.LASF1:
+ 2525 049f 756E7369 		.ascii	"unsigned char\000"
+ 2525      676E6564 
+ 2525      20636861 
+ 2525      7200
+ 2526              	.LASF2:
+ 2527 04ad 73686F72 		.ascii	"short int\000"
+ 2527      7420696E 
+ 2527      7400
+ 2528              	.LASF34:
+ 2529 04b7 545F5553 		.ascii	"T_USBUART_TD\000"
+ 2529      42554152 
+ 2529      545F5444 
+ 2529      00
+ 2530              	.LASF68:
+ 2531 04c4 55534255 		.ascii	"USBUART_interfaceStatus\000"
+ 2531      4152545F 
+ 2531      696E7465 
+ 2531      72666163 
+ 2531      65537461 
+ 2532              	.LASF74:
+ 2533 04dc 55534255 		.ascii	"USBUART_ep0Mode\000"
+ 2533      4152545F 
+ 2533      6570304D 
+ 2533      6F646500 
+ 2534              	.LASF29:
+ 2535 04ec 6C656E67 		.ascii	"length\000"
+ 2535      746800
+ 2536              	.LASF58:
+ 2537 04f3 55534255 		.ascii	"USBUART_InitializeStatusBlock\000"
+ 2537      4152545F 
+ 2537      496E6974 
+ 2537      69616C69 
+ 2537      7A655374 
+ 2538              	.LASF14:
+ 2539 0511 63686172 		.ascii	"char\000"
+ 2539      00
+ 2540              	.LASF25:
+ 2541 0516 62756666 		.ascii	"bufferSize\000"
+ 2541      65725369 
+ 2541      7A6500
+ 2542              	.LASF41:
+ 2543 0521 72657175 		.ascii	"requestHandled\000"
+ 2543      65737448 
+ 2543      616E646C 
+ 2543      656400
+ 2544              	.LASF27:
+ 2545 0530 545F5553 		.ascii	"T_USBUART_EP_CTL_BLOCK\000"
+ 2545      42554152 
+ 2545      545F4550 
+ 2545      5F43544C 
+ 2545      5F424C4F 
+ 2546              	.LASF24:
+ 2547 0547 62756666 		.ascii	"buffOffset\000"
+ 2547      4F666673 
+ 2547      657400
+ 2548              	.LASF43:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 64
+
+
+ 2549 0552 55534255 		.ascii	"USBUART_HandleOUT\000"
+ 2549      4152545F 
+ 2549      48616E64 
+ 2549      6C654F55 
+ 2549      5400
+ 2550              	.LASF51:
+ 2551 0564 55534255 		.ascii	"USBUART_ControlWriteDataStage\000"
+ 2551      4152545F 
+ 2551      436F6E74 
+ 2551      726F6C57 
+ 2551      72697465 
+ 2552              	.LASF42:
+ 2553 0582 55534255 		.ascii	"USBUART_HandleIN\000"
+ 2553      4152545F 
+ 2553      48616E64 
+ 2553      6C65494E 
+ 2553      00
+ 2554              	.LASF37:
+ 2555 0593 74656D70 		.ascii	"tempReg\000"
+ 2555      52656700 
+ 2556              	.LASF28:
+ 2557 059b 73746174 		.ascii	"status\000"
+ 2557      757300
+ 2558              	.LASF61:
+ 2559 05a2 55534255 		.ascii	"USBUART_configuration\000"
+ 2559      4152545F 
+ 2559      636F6E66 
+ 2559      69677572 
+ 2559      6174696F 
+ 2560              	.LASF46:
+ 2561 05b8 78666572 		.ascii	"xferCount\000"
+ 2561      436F756E 
+ 2561      7400
+ 2562              	.LASF35:
+ 2563 05c2 65704461 		.ascii	"epData\000"
+ 2563      746100
+ 2564              	.LASF57:
+ 2565 05c9 55534255 		.ascii	"USBUART_UpdateStatusBlock\000"
+ 2565      4152545F 
+ 2565      55706461 
+ 2565      74655374 
+ 2565      61747573 
+ 2566              	.LASF48:
+ 2567 05e3 55534255 		.ascii	"USBUART_ControlReadStatusStage\000"
+ 2567      4152545F 
+ 2567      436F6E74 
+ 2567      726F6C52 
+ 2567      65616453 
+ 2568              	.LASF60:
+ 2569 0602 55534255 		.ascii	"USBUART_transferState\000"
+ 2569      4152545F 
+ 2569      7472616E 
+ 2569      73666572 
+ 2569      53746174 
+ 2570              	.LASF62:
+ 2571 0618 55534255 		.ascii	"USBUART_configurationChanged\000"
+ 2571      4152545F 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccdZL6Mt.s 			page 65
+
+
+ 2571      636F6E66 
+ 2571      69677572 
+ 2571      6174696F 
+ 2572              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,1177 @@
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"USBUART_msc.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.bss
+  20              	USBUART_lunCount:
+  21 0000 00       		.space	1
+  22              		.section	.text.USBUART_DispatchMSCClassRqst,"ax",%progbits
+  23              		.align	2
+  24              		.global	USBUART_DispatchMSCClassRqst
+  25              		.code	16
+  26              		.thumb_func
+  27              		.type	USBUART_DispatchMSCClassRqst, %function
+  28              	USBUART_DispatchMSCClassRqst:
+  29              	.LFB1:
+  30              		.file 1 "Generated_Source\\PSoC4\\USBUART_msc.c"
+   1:Generated_Source\PSoC4/USBUART_msc.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/USBUART_msc.c **** * \file USBUART_cdc.c
+   3:Generated_Source\PSoC4/USBUART_msc.c **** * \version 3.10
+   4:Generated_Source\PSoC4/USBUART_msc.c **** *
+   5:Generated_Source\PSoC4/USBUART_msc.c **** * \brief
+   6:Generated_Source\PSoC4/USBUART_msc.c **** *  This file contains the USB MSC Class request handler and global API for MSC 
+   7:Generated_Source\PSoC4/USBUART_msc.c **** *  class.
+   8:Generated_Source\PSoC4/USBUART_msc.c **** *
+   9:Generated_Source\PSoC4/USBUART_msc.c **** * Related Document:
+  10:Generated_Source\PSoC4/USBUART_msc.c **** *  Universal Serial Bus Class Definitions for Communication Devices Version 1.1
+  11:Generated_Source\PSoC4/USBUART_msc.c **** *
+  12:Generated_Source\PSoC4/USBUART_msc.c **** ********************************************************************************
+  13:Generated_Source\PSoC4/USBUART_msc.c **** * \copyright
+  14:Generated_Source\PSoC4/USBUART_msc.c **** * Copyright 2012-2016, Cypress Semiconductor Corporation.  All rights reserved.
+  15:Generated_Source\PSoC4/USBUART_msc.c **** * You may use this file only in accordance with the license, terms, conditions,
+  16:Generated_Source\PSoC4/USBUART_msc.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  17:Generated_Source\PSoC4/USBUART_msc.c **** * the software package with which this file was provided.
+  18:Generated_Source\PSoC4/USBUART_msc.c **** *******************************************************************************/
+  19:Generated_Source\PSoC4/USBUART_msc.c **** 
+  20:Generated_Source\PSoC4/USBUART_msc.c **** #include "USBUART_msc.h"
+  21:Generated_Source\PSoC4/USBUART_msc.c **** #include "USBUART_pvt.h"
+  22:Generated_Source\PSoC4/USBUART_msc.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC4/USBUART_msc.c **** 
+  24:Generated_Source\PSoC4/USBUART_msc.c **** #if (USBUART_HANDLE_MSC_REQUESTS)
+  25:Generated_Source\PSoC4/USBUART_msc.c **** 
+  26:Generated_Source\PSoC4/USBUART_msc.c **** /***************************************
+  27:Generated_Source\PSoC4/USBUART_msc.c **** *          Internal variables
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 2
+
+
+  28:Generated_Source\PSoC4/USBUART_msc.c **** ***************************************/
+  29:Generated_Source\PSoC4/USBUART_msc.c **** 
+  30:Generated_Source\PSoC4/USBUART_msc.c **** static uint8 USBUART_lunCount = USBUART_MSC_LUN_NUMBER;
+  31:Generated_Source\PSoC4/USBUART_msc.c **** 
+  32:Generated_Source\PSoC4/USBUART_msc.c **** 
+  33:Generated_Source\PSoC4/USBUART_msc.c **** /*******************************************************************************
+  34:Generated_Source\PSoC4/USBUART_msc.c **** * Function Name: USBUART_DispatchMSCClassRqst
+  35:Generated_Source\PSoC4/USBUART_msc.c **** ****************************************************************************//**
+  36:Generated_Source\PSoC4/USBUART_msc.c **** *   
+  37:Generated_Source\PSoC4/USBUART_msc.c **** *  \internal 
+  38:Generated_Source\PSoC4/USBUART_msc.c **** *  This routine dispatches MSC class requests.
+  39:Generated_Source\PSoC4/USBUART_msc.c **** *
+  40:Generated_Source\PSoC4/USBUART_msc.c **** * \return
+  41:Generated_Source\PSoC4/USBUART_msc.c **** *  Status of request processing: handled or not handled.
+  42:Generated_Source\PSoC4/USBUART_msc.c **** *
+  43:Generated_Source\PSoC4/USBUART_msc.c **** * \globalvars
+  44:Generated_Source\PSoC4/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+  45:Generated_Source\PSoC4/USBUART_msc.c **** *
+  46:Generated_Source\PSoC4/USBUART_msc.c **** * \reentrant
+  47:Generated_Source\PSoC4/USBUART_msc.c **** *  No.
+  48:Generated_Source\PSoC4/USBUART_msc.c **** *
+  49:Generated_Source\PSoC4/USBUART_msc.c **** *******************************************************************************/
+  50:Generated_Source\PSoC4/USBUART_msc.c **** uint8 USBUART_DispatchMSCClassRqst(void) 
+  51:Generated_Source\PSoC4/USBUART_msc.c **** {
+  31              		.loc 1 51 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 8
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 90B5     		push	{r4, r7, lr}
+  36              		.cfi_def_cfa_offset 12
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 83B0     		sub	sp, sp, #12
+  41              		.cfi_def_cfa_offset 24
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_def_cfa_register 7
+  52:Generated_Source\PSoC4/USBUART_msc.c ****     uint8 requestHandled = USBUART_FALSE;
+  44              		.loc 1 52 0
+  45 0006 FB1D     		adds	r3, r7, #7
+  46 0008 0022     		movs	r2, #0
+  47 000a 1A70     		strb	r2, [r3]
+  53:Generated_Source\PSoC4/USBUART_msc.c ****     
+  54:Generated_Source\PSoC4/USBUART_msc.c ****     /* Get request data. */
+  55:Generated_Source\PSoC4/USBUART_msc.c ****     uint16 value  = USBUART_GET_UINT16(USBUART_wValueHiReg,  USBUART_wValueLoReg);
+  48              		.loc 1 55 0
+  49 000c 294B     		ldr	r3, .L6
+  50 000e DB68     		ldr	r3, [r3, #12]
+  51 0010 9BB2     		uxth	r3, r3
+  52 0012 1B02     		lsls	r3, r3, #8
+  53 0014 99B2     		uxth	r1, r3
+  54 0016 274B     		ldr	r3, .L6
+  55 0018 9B68     		ldr	r3, [r3, #8]
+  56 001a 9BB2     		uxth	r3, r3
+  57 001c FF22     		movs	r2, #255
+  58 001e 1340     		ands	r3, r2
+  59 0020 9AB2     		uxth	r2, r3
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 3
+
+
+  60 0022 3B1D     		adds	r3, r7, #4
+  61 0024 0A43     		orrs	r2, r1
+  62 0026 1A80     		strh	r2, [r3]
+  56:Generated_Source\PSoC4/USBUART_msc.c ****     uint16 dataLength = USBUART_GET_UINT16(USBUART_wLengthHiReg, USBUART_wLengthLoReg);
+  63              		.loc 1 56 0
+  64 0028 224B     		ldr	r3, .L6
+  65 002a DB69     		ldr	r3, [r3, #28]
+  66 002c 9BB2     		uxth	r3, r3
+  67 002e 1B02     		lsls	r3, r3, #8
+  68 0030 99B2     		uxth	r1, r3
+  69 0032 204B     		ldr	r3, .L6
+  70 0034 9B69     		ldr	r3, [r3, #24]
+  71 0036 9BB2     		uxth	r3, r3
+  72 0038 FF22     		movs	r2, #255
+  73 003a 1340     		ands	r3, r2
+  74 003c 9AB2     		uxth	r2, r3
+  75 003e BB1C     		adds	r3, r7, #2
+  76 0040 0A43     		orrs	r2, r1
+  77 0042 1A80     		strh	r2, [r3]
+  57:Generated_Source\PSoC4/USBUART_msc.c ****        
+  58:Generated_Source\PSoC4/USBUART_msc.c ****     /* Check request direction: D2H or H2D. */
+  59:Generated_Source\PSoC4/USBUART_msc.c ****     if (0u != (USBUART_bmRequestTypeReg & USBUART_RQST_DIR_D2H))
+  78              		.loc 1 59 0
+  79 0044 1B4B     		ldr	r3, .L6
+  80 0046 1B68     		ldr	r3, [r3]
+  81 0048 8022     		movs	r2, #128
+  82 004a 1340     		ands	r3, r2
+  83 004c 17D0     		beq	.L2
+  60:Generated_Source\PSoC4/USBUART_msc.c ****     {
+  61:Generated_Source\PSoC4/USBUART_msc.c ****         /* Handle direction from device to host. */
+  62:Generated_Source\PSoC4/USBUART_msc.c ****         
+  63:Generated_Source\PSoC4/USBUART_msc.c ****         if (USBUART_MSC_GET_MAX_LUN == USBUART_bRequestReg)
+  84              		.loc 1 63 0
+  85 004e 194B     		ldr	r3, .L6
+  86 0050 5B68     		ldr	r3, [r3, #4]
+  87 0052 FE2B     		cmp	r3, #254
+  88 0054 27D1     		bne	.L4
+  64:Generated_Source\PSoC4/USBUART_msc.c ****         {
+  65:Generated_Source\PSoC4/USBUART_msc.c ****             /* Check request fields. */
+  66:Generated_Source\PSoC4/USBUART_msc.c ****             if ((value  == USBUART_MSC_GET_MAX_LUN_WVALUE) &&
+  89              		.loc 1 66 0
+  90 0056 3B1D     		adds	r3, r7, #4
+  91 0058 1B88     		ldrh	r3, [r3]
+  92 005a 002B     		cmp	r3, #0
+  93 005c 23D1     		bne	.L4
+  94              		.loc 1 66 0 is_stmt 0 discriminator 1
+  95 005e BB1C     		adds	r3, r7, #2
+  96 0060 1B88     		ldrh	r3, [r3]
+  97 0062 012B     		cmp	r3, #1
+  98 0064 1FD1     		bne	.L4
+  67:Generated_Source\PSoC4/USBUART_msc.c ****                 (dataLength == USBUART_MSC_GET_MAX_LUN_WLENGTH))
+  68:Generated_Source\PSoC4/USBUART_msc.c ****             {
+  69:Generated_Source\PSoC4/USBUART_msc.c ****                 /* Reply to Get Max LUN request: setup control read. */
+  70:Generated_Source\PSoC4/USBUART_msc.c ****                 USBUART_currentTD.pData = &USBUART_lunCount;
+  99              		.loc 1 70 0 is_stmt 1
+ 100 0066 144B     		ldr	r3, .L6+4
+ 101 0068 144A     		ldr	r2, .L6+8
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 4
+
+
+ 102 006a 5A60     		str	r2, [r3, #4]
+  71:Generated_Source\PSoC4/USBUART_msc.c ****                 USBUART_currentTD.count =  USBUART_MSC_GET_MAX_LUN_WLENGTH;
+ 103              		.loc 1 71 0
+ 104 006c 124B     		ldr	r3, .L6+4
+ 105 006e 0122     		movs	r2, #1
+ 106 0070 1A80     		strh	r2, [r3]
+  72:Generated_Source\PSoC4/USBUART_msc.c ****                 
+  73:Generated_Source\PSoC4/USBUART_msc.c ****                 requestHandled  = USBUART_InitControlRead();
+ 107              		.loc 1 73 0
+ 108 0072 FC1D     		adds	r4, r7, #7
+ 109 0074 FFF7FEFF 		bl	USBUART_InitControlRead
+ 110 0078 0300     		movs	r3, r0
+ 111 007a 2370     		strb	r3, [r4]
+ 112 007c 13E0     		b	.L4
+ 113              	.L2:
+  74:Generated_Source\PSoC4/USBUART_msc.c ****             }
+  75:Generated_Source\PSoC4/USBUART_msc.c ****         }
+  76:Generated_Source\PSoC4/USBUART_msc.c ****     }
+  77:Generated_Source\PSoC4/USBUART_msc.c ****     else
+  78:Generated_Source\PSoC4/USBUART_msc.c ****     {
+  79:Generated_Source\PSoC4/USBUART_msc.c ****         /* Handle direction from host to device. */
+  80:Generated_Source\PSoC4/USBUART_msc.c ****         
+  81:Generated_Source\PSoC4/USBUART_msc.c ****         if (USBUART_MSC_RESET == USBUART_bRequestReg)
+ 114              		.loc 1 81 0
+ 115 007e 0D4B     		ldr	r3, .L6
+ 116 0080 5B68     		ldr	r3, [r3, #4]
+ 117 0082 FF2B     		cmp	r3, #255
+ 118 0084 0FD1     		bne	.L4
+  82:Generated_Source\PSoC4/USBUART_msc.c ****         {
+  83:Generated_Source\PSoC4/USBUART_msc.c ****             /* Check request fields. */
+  84:Generated_Source\PSoC4/USBUART_msc.c ****             if ((value  == USBUART_MSC_RESET_WVALUE) &&
+ 119              		.loc 1 84 0
+ 120 0086 3B1D     		adds	r3, r7, #4
+ 121 0088 1B88     		ldrh	r3, [r3]
+ 122 008a 002B     		cmp	r3, #0
+ 123 008c 0BD1     		bne	.L4
+ 124              		.loc 1 84 0 is_stmt 0 discriminator 1
+ 125 008e BB1C     		adds	r3, r7, #2
+ 126 0090 1B88     		ldrh	r3, [r3]
+ 127 0092 002B     		cmp	r3, #0
+ 128 0094 07D1     		bne	.L4
+  85:Generated_Source\PSoC4/USBUART_msc.c ****                 (dataLength == USBUART_MSC_RESET_WLENGTH))
+  86:Generated_Source\PSoC4/USBUART_msc.c ****             {
+  87:Generated_Source\PSoC4/USBUART_msc.c ****                 /* Handle to Bulk-Only Reset request: no data control transfer. */
+  88:Generated_Source\PSoC4/USBUART_msc.c ****                 USBUART_currentTD.count = USBUART_MSC_RESET_WLENGTH;
+ 129              		.loc 1 88 0 is_stmt 1
+ 130 0096 084B     		ldr	r3, .L6+4
+ 131 0098 0022     		movs	r2, #0
+ 132 009a 1A80     		strh	r2, [r3]
+  89:Generated_Source\PSoC4/USBUART_msc.c ****                 
+  90:Generated_Source\PSoC4/USBUART_msc.c ****             #ifdef USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK
+  91:Generated_Source\PSoC4/USBUART_msc.c ****                 USBUART_DispatchMSCClass_MSC_RESET_RQST_Callback();
+  92:Generated_Source\PSoC4/USBUART_msc.c ****             #endif /* (USBUART_DISPATCH_MSC_CLASS_MSC_RESET_RQST_CALLBACK) */
+  93:Generated_Source\PSoC4/USBUART_msc.c ****                 
+  94:Generated_Source\PSoC4/USBUART_msc.c ****                 requestHandled = USBUART_InitNoDataControlTransfer();
+ 133              		.loc 1 94 0
+ 134 009c FC1D     		adds	r4, r7, #7
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 5
+
+
+ 135 009e FFF7FEFF 		bl	USBUART_InitNoDataControlTransfer
+ 136 00a2 0300     		movs	r3, r0
+ 137 00a4 2370     		strb	r3, [r4]
+ 138              	.L4:
+  95:Generated_Source\PSoC4/USBUART_msc.c ****             }
+  96:Generated_Source\PSoC4/USBUART_msc.c ****         }
+  97:Generated_Source\PSoC4/USBUART_msc.c ****     }
+  98:Generated_Source\PSoC4/USBUART_msc.c ****     
+  99:Generated_Source\PSoC4/USBUART_msc.c ****     return (requestHandled);
+ 139              		.loc 1 99 0
+ 140 00a6 FB1D     		adds	r3, r7, #7
+ 141 00a8 1B78     		ldrb	r3, [r3]
+ 100:Generated_Source\PSoC4/USBUART_msc.c **** }
+ 142              		.loc 1 100 0
+ 143 00aa 1800     		movs	r0, r3
+ 144 00ac BD46     		mov	sp, r7
+ 145 00ae 03B0     		add	sp, sp, #12
+ 146              		@ sp needed
+ 147 00b0 90BD     		pop	{r4, r7, pc}
+ 148              	.L7:
+ 149 00b2 C046     		.align	2
+ 150              	.L6:
+ 151 00b4 00002C40 		.word	1076625408
+ 152 00b8 00000000 		.word	USBUART_currentTD
+ 153 00bc 00000000 		.word	USBUART_lunCount
+ 154              		.cfi_endproc
+ 155              	.LFE1:
+ 156              		.size	USBUART_DispatchMSCClassRqst, .-USBUART_DispatchMSCClassRqst
+ 157              		.section	.text.USBUART_MSC_SetLunCount,"ax",%progbits
+ 158              		.align	2
+ 159              		.global	USBUART_MSC_SetLunCount
+ 160              		.code	16
+ 161              		.thumb_func
+ 162              		.type	USBUART_MSC_SetLunCount, %function
+ 163              	USBUART_MSC_SetLunCount:
+ 164              	.LFB2:
+ 101:Generated_Source\PSoC4/USBUART_msc.c **** 
+ 102:Generated_Source\PSoC4/USBUART_msc.c **** 
+ 103:Generated_Source\PSoC4/USBUART_msc.c **** /*******************************************************************************
+ 104:Generated_Source\PSoC4/USBUART_msc.c **** * Function Name: USBUART_MSC_SetLunCount
+ 105:Generated_Source\PSoC4/USBUART_msc.c **** ****************************************************************************//**
+ 106:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 107:Generated_Source\PSoC4/USBUART_msc.c **** *  This function sets the number of logical units supported in the application. 
+ 108:Generated_Source\PSoC4/USBUART_msc.c **** *  The default number of logical units is set in the component customizer.
+ 109:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 110:Generated_Source\PSoC4/USBUART_msc.c **** *  \param lunCount: Count of the logical units. Valid range is between 1 and 16.
+ 111:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 112:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 113:Generated_Source\PSoC4/USBUART_msc.c **** * \globalvars
+ 114:Generated_Source\PSoC4/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+ 115:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 116:Generated_Source\PSoC4/USBUART_msc.c **** * \reentrant
+ 117:Generated_Source\PSoC4/USBUART_msc.c **** *  No.
+ 118:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 119:Generated_Source\PSoC4/USBUART_msc.c **** *******************************************************************************/
+ 120:Generated_Source\PSoC4/USBUART_msc.c **** void USBUART_MSC_SetLunCount(uint8 lunCount) 
+ 121:Generated_Source\PSoC4/USBUART_msc.c **** {
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 6
+
+
+ 165              		.loc 1 121 0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 8
+ 168              		@ frame_needed = 1, uses_anonymous_args = 0
+ 169 0000 80B5     		push	{r7, lr}
+ 170              		.cfi_def_cfa_offset 8
+ 171              		.cfi_offset 7, -8
+ 172              		.cfi_offset 14, -4
+ 173 0002 82B0     		sub	sp, sp, #8
+ 174              		.cfi_def_cfa_offset 16
+ 175 0004 00AF     		add	r7, sp, #0
+ 176              		.cfi_def_cfa_register 7
+ 177 0006 0200     		movs	r2, r0
+ 178 0008 FB1D     		adds	r3, r7, #7
+ 179 000a 1A70     		strb	r2, [r3]
+ 122:Generated_Source\PSoC4/USBUART_msc.c ****     USBUART_lunCount = (lunCount - 1u);
+ 180              		.loc 1 122 0
+ 181 000c FB1D     		adds	r3, r7, #7
+ 182 000e 1B78     		ldrb	r3, [r3]
+ 183 0010 013B     		subs	r3, r3, #1
+ 184 0012 DAB2     		uxtb	r2, r3
+ 185 0014 024B     		ldr	r3, .L9
+ 186 0016 1A70     		strb	r2, [r3]
+ 123:Generated_Source\PSoC4/USBUART_msc.c **** }
+ 187              		.loc 1 123 0
+ 188 0018 C046     		nop
+ 189 001a BD46     		mov	sp, r7
+ 190 001c 02B0     		add	sp, sp, #8
+ 191              		@ sp needed
+ 192 001e 80BD     		pop	{r7, pc}
+ 193              	.L10:
+ 194              		.align	2
+ 195              	.L9:
+ 196 0020 00000000 		.word	USBUART_lunCount
+ 197              		.cfi_endproc
+ 198              	.LFE2:
+ 199              		.size	USBUART_MSC_SetLunCount, .-USBUART_MSC_SetLunCount
+ 200              		.section	.text.USBUART_MSC_GetLunCount,"ax",%progbits
+ 201              		.align	2
+ 202              		.global	USBUART_MSC_GetLunCount
+ 203              		.code	16
+ 204              		.thumb_func
+ 205              		.type	USBUART_MSC_GetLunCount, %function
+ 206              	USBUART_MSC_GetLunCount:
+ 207              	.LFB3:
+ 124:Generated_Source\PSoC4/USBUART_msc.c **** 
+ 125:Generated_Source\PSoC4/USBUART_msc.c **** 
+ 126:Generated_Source\PSoC4/USBUART_msc.c **** /*******************************************************************************
+ 127:Generated_Source\PSoC4/USBUART_msc.c **** * Function Name: USBUART_MSC_GetLunCount
+ 128:Generated_Source\PSoC4/USBUART_msc.c **** ****************************************************************************//**
+ 129:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 130:Generated_Source\PSoC4/USBUART_msc.c **** *  This function returns the number of logical units.
+ 131:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 132:Generated_Source\PSoC4/USBUART_msc.c **** * \return
+ 133:Generated_Source\PSoC4/USBUART_msc.c **** *   Number of the logical units.
+ 134:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 135:Generated_Source\PSoC4/USBUART_msc.c **** * \globalvars
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 7
+
+
+ 136:Generated_Source\PSoC4/USBUART_msc.c **** *  USBUART_lunCount - stores number of LUN (logical units).
+ 137:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 138:Generated_Source\PSoC4/USBUART_msc.c **** * \reentrant
+ 139:Generated_Source\PSoC4/USBUART_msc.c **** *  No.
+ 140:Generated_Source\PSoC4/USBUART_msc.c **** *
+ 141:Generated_Source\PSoC4/USBUART_msc.c **** *******************************************************************************/
+ 142:Generated_Source\PSoC4/USBUART_msc.c **** uint8 USBUART_MSC_GetLunCount(void) 
+ 143:Generated_Source\PSoC4/USBUART_msc.c **** {
+ 208              		.loc 1 143 0
+ 209              		.cfi_startproc
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 1, uses_anonymous_args = 0
+ 212 0000 80B5     		push	{r7, lr}
+ 213              		.cfi_def_cfa_offset 8
+ 214              		.cfi_offset 7, -8
+ 215              		.cfi_offset 14, -4
+ 216 0002 00AF     		add	r7, sp, #0
+ 217              		.cfi_def_cfa_register 7
+ 144:Generated_Source\PSoC4/USBUART_msc.c ****     return (USBUART_lunCount + 1u);
+ 218              		.loc 1 144 0
+ 219 0004 034B     		ldr	r3, .L13
+ 220 0006 1B78     		ldrb	r3, [r3]
+ 221 0008 0133     		adds	r3, r3, #1
+ 222 000a DBB2     		uxtb	r3, r3
+ 145:Generated_Source\PSoC4/USBUART_msc.c **** }   
+ 223              		.loc 1 145 0
+ 224 000c 1800     		movs	r0, r3
+ 225 000e BD46     		mov	sp, r7
+ 226              		@ sp needed
+ 227 0010 80BD     		pop	{r7, pc}
+ 228              	.L14:
+ 229 0012 C046     		.align	2
+ 230              	.L13:
+ 231 0014 00000000 		.word	USBUART_lunCount
+ 232              		.cfi_endproc
+ 233              	.LFE3:
+ 234              		.size	USBUART_MSC_GetLunCount, .-USBUART_MSC_GetLunCount
+ 235              		.text
+ 236              	.Letext0:
+ 237              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 238              		.file 3 "Generated_Source\\PSoC4\\USBUART.h"
+ 239              		.file 4 "Generated_Source\\PSoC4\\USBUART_pvt.h"
+ 240              		.section	.debug_info,"",%progbits
+ 241              	.Ldebug_info0:
+ 242 0000 F2010000 		.4byte	0x1f2
+ 243 0004 0400     		.2byte	0x4
+ 244 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 245 000a 04       		.byte	0x4
+ 246 000b 01       		.uleb128 0x1
+ 247 000c BF000000 		.4byte	.LASF30
+ 248 0010 0C       		.byte	0xc
+ 249 0011 DB010000 		.4byte	.LASF31
+ 250 0015 54010000 		.4byte	.LASF32
+ 251 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 252 001d 00000000 		.4byte	0
+ 253 0021 00000000 		.4byte	.Ldebug_line0
+ 254 0025 02       		.uleb128 0x2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 8
+
+
+ 255 0026 01       		.byte	0x1
+ 256 0027 06       		.byte	0x6
+ 257 0028 DC020000 		.4byte	.LASF0
+ 258 002c 02       		.uleb128 0x2
+ 259 002d 01       		.byte	0x1
+ 260 002e 08       		.byte	0x8
+ 261 002f 6F000000 		.4byte	.LASF1
+ 262 0033 02       		.uleb128 0x2
+ 263 0034 02       		.byte	0x2
+ 264 0035 05       		.byte	0x5
+ 265 0036 96020000 		.4byte	.LASF2
+ 266 003a 02       		.uleb128 0x2
+ 267 003b 02       		.byte	0x2
+ 268 003c 07       		.byte	0x7
+ 269 003d 42000000 		.4byte	.LASF3
+ 270 0041 02       		.uleb128 0x2
+ 271 0042 04       		.byte	0x4
+ 272 0043 05       		.byte	0x5
+ 273 0044 C7020000 		.4byte	.LASF4
+ 274 0048 02       		.uleb128 0x2
+ 275 0049 04       		.byte	0x4
+ 276 004a 07       		.byte	0x7
+ 277 004b A7000000 		.4byte	.LASF5
+ 278 004f 02       		.uleb128 0x2
+ 279 0050 08       		.byte	0x8
+ 280 0051 05       		.byte	0x5
+ 281 0052 83020000 		.4byte	.LASF6
+ 282 0056 02       		.uleb128 0x2
+ 283 0057 08       		.byte	0x8
+ 284 0058 07       		.byte	0x7
+ 285 0059 1B020000 		.4byte	.LASF7
+ 286 005d 03       		.uleb128 0x3
+ 287 005e 04       		.byte	0x4
+ 288 005f 05       		.byte	0x5
+ 289 0060 696E7400 		.ascii	"int\000"
+ 290 0064 02       		.uleb128 0x2
+ 291 0065 04       		.byte	0x4
+ 292 0066 07       		.byte	0x7
+ 293 0067 0E020000 		.4byte	.LASF8
+ 294 006b 04       		.uleb128 0x4
+ 295 006c B9000000 		.4byte	.LASF9
+ 296 0070 02       		.byte	0x2
+ 297 0071 D201     		.2byte	0x1d2
+ 298 0073 2C000000 		.4byte	0x2c
+ 299 0077 04       		.uleb128 0x4
+ 300 0078 00020000 		.4byte	.LASF10
+ 301 007c 02       		.byte	0x2
+ 302 007d D301     		.2byte	0x1d3
+ 303 007f 3A000000 		.4byte	0x3a
+ 304 0083 04       		.uleb128 0x4
+ 305 0084 07020000 		.4byte	.LASF11
+ 306 0088 02       		.byte	0x2
+ 307 0089 D401     		.2byte	0x1d4
+ 308 008b 48000000 		.4byte	0x48
+ 309 008f 02       		.uleb128 0x2
+ 310 0090 04       		.byte	0x4
+ 311 0091 04       		.byte	0x4
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 9
+
+
+ 312 0092 69000000 		.4byte	.LASF12
+ 313 0096 02       		.uleb128 0x2
+ 314 0097 08       		.byte	0x8
+ 315 0098 04       		.byte	0x4
+ 316 0099 4D010000 		.4byte	.LASF13
+ 317 009d 02       		.uleb128 0x2
+ 318 009e 01       		.byte	0x1
+ 319 009f 08       		.byte	0x8
+ 320 00a0 91020000 		.4byte	.LASF14
+ 321 00a4 05       		.uleb128 0x5
+ 322 00a5 6B000000 		.4byte	0x6b
+ 323 00a9 02       		.uleb128 0x2
+ 324 00aa 08       		.byte	0x8
+ 325 00ab 04       		.byte	0x4
+ 326 00ac D0020000 		.4byte	.LASF15
+ 327 00b0 02       		.uleb128 0x2
+ 328 00b1 04       		.byte	0x4
+ 329 00b2 07       		.byte	0x7
+ 330 00b3 7A020000 		.4byte	.LASF16
+ 331 00b7 06       		.uleb128 0x6
+ 332 00b8 04       		.byte	0x4
+ 333 00b9 03       		.byte	0x3
+ 334 00ba A9       		.byte	0xa9
+ 335 00bb D8000000 		.4byte	0xd8
+ 336 00bf 07       		.uleb128 0x7
+ 337 00c0 55000000 		.4byte	.LASF17
+ 338 00c4 03       		.byte	0x3
+ 339 00c5 AB       		.byte	0xab
+ 340 00c6 6B000000 		.4byte	0x6b
+ 341 00ca 00       		.byte	0
+ 342 00cb 07       		.uleb128 0x7
+ 343 00cc E8020000 		.4byte	.LASF18
+ 344 00d0 03       		.byte	0x3
+ 345 00d1 AC       		.byte	0xac
+ 346 00d2 77000000 		.4byte	0x77
+ 347 00d6 02       		.byte	0x2
+ 348 00d7 00       		.byte	0
+ 349 00d8 08       		.uleb128 0x8
+ 350 00d9 46020000 		.4byte	.LASF19
+ 351 00dd 03       		.byte	0x3
+ 352 00de AD       		.byte	0xad
+ 353 00df B7000000 		.4byte	0xb7
+ 354 00e3 06       		.uleb128 0x6
+ 355 00e4 0C       		.byte	0xc
+ 356 00e5 03       		.byte	0x3
+ 357 00e6 AF       		.byte	0xaf
+ 358 00e7 10010000 		.4byte	0x110
+ 359 00eb 07       		.uleb128 0x7
+ 360 00ec 24000000 		.4byte	.LASF20
+ 361 00f0 03       		.byte	0x3
+ 362 00f1 B1       		.byte	0xb1
+ 363 00f2 77000000 		.4byte	0x77
+ 364 00f6 00       		.byte	0
+ 365 00f7 07       		.uleb128 0x7
+ 366 00f8 5C000000 		.4byte	.LASF21
+ 367 00fc 03       		.byte	0x3
+ 368 00fd B2       		.byte	0xb2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 10
+
+
+ 369 00fe 10010000 		.4byte	0x110
+ 370 0102 04       		.byte	0x4
+ 371 0103 07       		.uleb128 0x7
+ 372 0104 11000000 		.4byte	.LASF22
+ 373 0108 03       		.byte	0x3
+ 374 0109 B3       		.byte	0xb3
+ 375 010a 16010000 		.4byte	0x116
+ 376 010e 08       		.byte	0x8
+ 377 010f 00       		.byte	0
+ 378 0110 09       		.uleb128 0x9
+ 379 0111 04       		.byte	0x4
+ 380 0112 A4000000 		.4byte	0xa4
+ 381 0116 09       		.uleb128 0x9
+ 382 0117 04       		.byte	0x4
+ 383 0118 D8000000 		.4byte	0xd8
+ 384 011c 08       		.uleb128 0x8
+ 385 011d 9A000000 		.4byte	.LASF23
+ 386 0121 03       		.byte	0x3
+ 387 0122 B4       		.byte	0xb4
+ 388 0123 E3000000 		.4byte	0xe3
+ 389 0127 06       		.uleb128 0x6
+ 390 0128 20       		.byte	0x20
+ 391 0129 03       		.byte	0x3
+ 392 012a CA       		.byte	0xca
+ 393 012b 3C010000 		.4byte	0x13c
+ 394 012f 07       		.uleb128 0x7
+ 395 0130 62000000 		.4byte	.LASF24
+ 396 0134 03       		.byte	0x3
+ 397 0135 CC       		.byte	0xcc
+ 398 0136 3C010000 		.4byte	0x13c
+ 399 013a 00       		.byte	0
+ 400 013b 00       		.byte	0
+ 401 013c 0A       		.uleb128 0xa
+ 402 013d 83000000 		.4byte	0x83
+ 403 0141 4C010000 		.4byte	0x14c
+ 404 0145 0B       		.uleb128 0xb
+ 405 0146 B0000000 		.4byte	0xb0
+ 406 014a 07       		.byte	0x7
+ 407 014b 00       		.byte	0
+ 408 014c 08       		.uleb128 0x8
+ 409 014d 62020000 		.4byte	.LASF25
+ 410 0151 03       		.byte	0x3
+ 411 0152 CD       		.byte	0xcd
+ 412 0153 27010000 		.4byte	0x127
+ 413 0157 0C       		.uleb128 0xc
+ 414 0158 7D000000 		.4byte	.LASF33
+ 415 015c 01       		.byte	0x1
+ 416 015d 32       		.byte	0x32
+ 417 015e 6B000000 		.4byte	0x6b
+ 418 0162 00000000 		.4byte	.LFB1
+ 419 0166 C0000000 		.4byte	.LFE1-.LFB1
+ 420 016a 01       		.uleb128 0x1
+ 421 016b 9C       		.byte	0x9c
+ 422 016c 9B010000 		.4byte	0x19b
+ 423 0170 0D       		.uleb128 0xd
+ 424 0171 B8020000 		.4byte	.LASF26
+ 425 0175 01       		.byte	0x1
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 11
+
+
+ 426 0176 34       		.byte	0x34
+ 427 0177 6B000000 		.4byte	0x6b
+ 428 017b 02       		.uleb128 0x2
+ 429 017c 91       		.byte	0x91
+ 430 017d 6F       		.sleb128 -17
+ 431 017e 0D       		.uleb128 0xd
+ 432 017f 1E000000 		.4byte	.LASF27
+ 433 0183 01       		.byte	0x1
+ 434 0184 37       		.byte	0x37
+ 435 0185 77000000 		.4byte	0x77
+ 436 0189 02       		.uleb128 0x2
+ 437 018a 91       		.byte	0x91
+ 438 018b 6C       		.sleb128 -20
+ 439 018c 0D       		.uleb128 0xd
+ 440 018d 3B020000 		.4byte	.LASF28
+ 441 0191 01       		.byte	0x1
+ 442 0192 38       		.byte	0x38
+ 443 0193 77000000 		.4byte	0x77
+ 444 0197 02       		.uleb128 0x2
+ 445 0198 91       		.byte	0x91
+ 446 0199 6A       		.sleb128 -22
+ 447 019a 00       		.byte	0
+ 448 019b 0E       		.uleb128 0xe
+ 449 019c 2A000000 		.4byte	.LASF34
+ 450 01a0 01       		.byte	0x1
+ 451 01a1 78       		.byte	0x78
+ 452 01a2 00000000 		.4byte	.LFB2
+ 453 01a6 24000000 		.4byte	.LFE2-.LFB2
+ 454 01aa 01       		.uleb128 0x1
+ 455 01ab 9C       		.byte	0x9c
+ 456 01ac BF010000 		.4byte	0x1bf
+ 457 01b0 0F       		.uleb128 0xf
+ 458 01b1 32020000 		.4byte	.LASF35
+ 459 01b5 01       		.byte	0x1
+ 460 01b6 78       		.byte	0x78
+ 461 01b7 6B000000 		.4byte	0x6b
+ 462 01bb 02       		.uleb128 0x2
+ 463 01bc 91       		.byte	0x91
+ 464 01bd 77       		.sleb128 -9
+ 465 01be 00       		.byte	0
+ 466 01bf 10       		.uleb128 0x10
+ 467 01c0 A0020000 		.4byte	.LASF36
+ 468 01c4 01       		.byte	0x1
+ 469 01c5 8E       		.byte	0x8e
+ 470 01c6 6B000000 		.4byte	0x6b
+ 471 01ca 00000000 		.4byte	.LFB3
+ 472 01ce 18000000 		.4byte	.LFE3-.LFB3
+ 473 01d2 01       		.uleb128 0x1
+ 474 01d3 9C       		.byte	0x9c
+ 475 01d4 0D       		.uleb128 0xd
+ 476 01d5 00000000 		.4byte	.LASF29
+ 477 01d9 01       		.byte	0x1
+ 478 01da 1E       		.byte	0x1e
+ 479 01db 6B000000 		.4byte	0x6b
+ 480 01df 05       		.uleb128 0x5
+ 481 01e0 03       		.byte	0x3
+ 482 01e1 00000000 		.4byte	USBUART_lunCount
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 12
+
+
+ 483 01e5 11       		.uleb128 0x11
+ 484 01e6 C9010000 		.4byte	.LASF37
+ 485 01ea 04       		.byte	0x4
+ 486 01eb 7B       		.byte	0x7b
+ 487 01ec F0010000 		.4byte	0x1f0
+ 488 01f0 05       		.uleb128 0x5
+ 489 01f1 1C010000 		.4byte	0x11c
+ 490 01f5 00       		.byte	0
+ 491              		.section	.debug_abbrev,"",%progbits
+ 492              	.Ldebug_abbrev0:
+ 493 0000 01       		.uleb128 0x1
+ 494 0001 11       		.uleb128 0x11
+ 495 0002 01       		.byte	0x1
+ 496 0003 25       		.uleb128 0x25
+ 497 0004 0E       		.uleb128 0xe
+ 498 0005 13       		.uleb128 0x13
+ 499 0006 0B       		.uleb128 0xb
+ 500 0007 03       		.uleb128 0x3
+ 501 0008 0E       		.uleb128 0xe
+ 502 0009 1B       		.uleb128 0x1b
+ 503 000a 0E       		.uleb128 0xe
+ 504 000b 55       		.uleb128 0x55
+ 505 000c 17       		.uleb128 0x17
+ 506 000d 11       		.uleb128 0x11
+ 507 000e 01       		.uleb128 0x1
+ 508 000f 10       		.uleb128 0x10
+ 509 0010 17       		.uleb128 0x17
+ 510 0011 00       		.byte	0
+ 511 0012 00       		.byte	0
+ 512 0013 02       		.uleb128 0x2
+ 513 0014 24       		.uleb128 0x24
+ 514 0015 00       		.byte	0
+ 515 0016 0B       		.uleb128 0xb
+ 516 0017 0B       		.uleb128 0xb
+ 517 0018 3E       		.uleb128 0x3e
+ 518 0019 0B       		.uleb128 0xb
+ 519 001a 03       		.uleb128 0x3
+ 520 001b 0E       		.uleb128 0xe
+ 521 001c 00       		.byte	0
+ 522 001d 00       		.byte	0
+ 523 001e 03       		.uleb128 0x3
+ 524 001f 24       		.uleb128 0x24
+ 525 0020 00       		.byte	0
+ 526 0021 0B       		.uleb128 0xb
+ 527 0022 0B       		.uleb128 0xb
+ 528 0023 3E       		.uleb128 0x3e
+ 529 0024 0B       		.uleb128 0xb
+ 530 0025 03       		.uleb128 0x3
+ 531 0026 08       		.uleb128 0x8
+ 532 0027 00       		.byte	0
+ 533 0028 00       		.byte	0
+ 534 0029 04       		.uleb128 0x4
+ 535 002a 16       		.uleb128 0x16
+ 536 002b 00       		.byte	0
+ 537 002c 03       		.uleb128 0x3
+ 538 002d 0E       		.uleb128 0xe
+ 539 002e 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 13
+
+
+ 540 002f 0B       		.uleb128 0xb
+ 541 0030 3B       		.uleb128 0x3b
+ 542 0031 05       		.uleb128 0x5
+ 543 0032 49       		.uleb128 0x49
+ 544 0033 13       		.uleb128 0x13
+ 545 0034 00       		.byte	0
+ 546 0035 00       		.byte	0
+ 547 0036 05       		.uleb128 0x5
+ 548 0037 35       		.uleb128 0x35
+ 549 0038 00       		.byte	0
+ 550 0039 49       		.uleb128 0x49
+ 551 003a 13       		.uleb128 0x13
+ 552 003b 00       		.byte	0
+ 553 003c 00       		.byte	0
+ 554 003d 06       		.uleb128 0x6
+ 555 003e 13       		.uleb128 0x13
+ 556 003f 01       		.byte	0x1
+ 557 0040 0B       		.uleb128 0xb
+ 558 0041 0B       		.uleb128 0xb
+ 559 0042 3A       		.uleb128 0x3a
+ 560 0043 0B       		.uleb128 0xb
+ 561 0044 3B       		.uleb128 0x3b
+ 562 0045 0B       		.uleb128 0xb
+ 563 0046 01       		.uleb128 0x1
+ 564 0047 13       		.uleb128 0x13
+ 565 0048 00       		.byte	0
+ 566 0049 00       		.byte	0
+ 567 004a 07       		.uleb128 0x7
+ 568 004b 0D       		.uleb128 0xd
+ 569 004c 00       		.byte	0
+ 570 004d 03       		.uleb128 0x3
+ 571 004e 0E       		.uleb128 0xe
+ 572 004f 3A       		.uleb128 0x3a
+ 573 0050 0B       		.uleb128 0xb
+ 574 0051 3B       		.uleb128 0x3b
+ 575 0052 0B       		.uleb128 0xb
+ 576 0053 49       		.uleb128 0x49
+ 577 0054 13       		.uleb128 0x13
+ 578 0055 38       		.uleb128 0x38
+ 579 0056 0B       		.uleb128 0xb
+ 580 0057 00       		.byte	0
+ 581 0058 00       		.byte	0
+ 582 0059 08       		.uleb128 0x8
+ 583 005a 16       		.uleb128 0x16
+ 584 005b 00       		.byte	0
+ 585 005c 03       		.uleb128 0x3
+ 586 005d 0E       		.uleb128 0xe
+ 587 005e 3A       		.uleb128 0x3a
+ 588 005f 0B       		.uleb128 0xb
+ 589 0060 3B       		.uleb128 0x3b
+ 590 0061 0B       		.uleb128 0xb
+ 591 0062 49       		.uleb128 0x49
+ 592 0063 13       		.uleb128 0x13
+ 593 0064 00       		.byte	0
+ 594 0065 00       		.byte	0
+ 595 0066 09       		.uleb128 0x9
+ 596 0067 0F       		.uleb128 0xf
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 14
+
+
+ 597 0068 00       		.byte	0
+ 598 0069 0B       		.uleb128 0xb
+ 599 006a 0B       		.uleb128 0xb
+ 600 006b 49       		.uleb128 0x49
+ 601 006c 13       		.uleb128 0x13
+ 602 006d 00       		.byte	0
+ 603 006e 00       		.byte	0
+ 604 006f 0A       		.uleb128 0xa
+ 605 0070 01       		.uleb128 0x1
+ 606 0071 01       		.byte	0x1
+ 607 0072 49       		.uleb128 0x49
+ 608 0073 13       		.uleb128 0x13
+ 609 0074 01       		.uleb128 0x1
+ 610 0075 13       		.uleb128 0x13
+ 611 0076 00       		.byte	0
+ 612 0077 00       		.byte	0
+ 613 0078 0B       		.uleb128 0xb
+ 614 0079 21       		.uleb128 0x21
+ 615 007a 00       		.byte	0
+ 616 007b 49       		.uleb128 0x49
+ 617 007c 13       		.uleb128 0x13
+ 618 007d 2F       		.uleb128 0x2f
+ 619 007e 0B       		.uleb128 0xb
+ 620 007f 00       		.byte	0
+ 621 0080 00       		.byte	0
+ 622 0081 0C       		.uleb128 0xc
+ 623 0082 2E       		.uleb128 0x2e
+ 624 0083 01       		.byte	0x1
+ 625 0084 3F       		.uleb128 0x3f
+ 626 0085 19       		.uleb128 0x19
+ 627 0086 03       		.uleb128 0x3
+ 628 0087 0E       		.uleb128 0xe
+ 629 0088 3A       		.uleb128 0x3a
+ 630 0089 0B       		.uleb128 0xb
+ 631 008a 3B       		.uleb128 0x3b
+ 632 008b 0B       		.uleb128 0xb
+ 633 008c 27       		.uleb128 0x27
+ 634 008d 19       		.uleb128 0x19
+ 635 008e 49       		.uleb128 0x49
+ 636 008f 13       		.uleb128 0x13
+ 637 0090 11       		.uleb128 0x11
+ 638 0091 01       		.uleb128 0x1
+ 639 0092 12       		.uleb128 0x12
+ 640 0093 06       		.uleb128 0x6
+ 641 0094 40       		.uleb128 0x40
+ 642 0095 18       		.uleb128 0x18
+ 643 0096 9642     		.uleb128 0x2116
+ 644 0098 19       		.uleb128 0x19
+ 645 0099 01       		.uleb128 0x1
+ 646 009a 13       		.uleb128 0x13
+ 647 009b 00       		.byte	0
+ 648 009c 00       		.byte	0
+ 649 009d 0D       		.uleb128 0xd
+ 650 009e 34       		.uleb128 0x34
+ 651 009f 00       		.byte	0
+ 652 00a0 03       		.uleb128 0x3
+ 653 00a1 0E       		.uleb128 0xe
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 15
+
+
+ 654 00a2 3A       		.uleb128 0x3a
+ 655 00a3 0B       		.uleb128 0xb
+ 656 00a4 3B       		.uleb128 0x3b
+ 657 00a5 0B       		.uleb128 0xb
+ 658 00a6 49       		.uleb128 0x49
+ 659 00a7 13       		.uleb128 0x13
+ 660 00a8 02       		.uleb128 0x2
+ 661 00a9 18       		.uleb128 0x18
+ 662 00aa 00       		.byte	0
+ 663 00ab 00       		.byte	0
+ 664 00ac 0E       		.uleb128 0xe
+ 665 00ad 2E       		.uleb128 0x2e
+ 666 00ae 01       		.byte	0x1
+ 667 00af 3F       		.uleb128 0x3f
+ 668 00b0 19       		.uleb128 0x19
+ 669 00b1 03       		.uleb128 0x3
+ 670 00b2 0E       		.uleb128 0xe
+ 671 00b3 3A       		.uleb128 0x3a
+ 672 00b4 0B       		.uleb128 0xb
+ 673 00b5 3B       		.uleb128 0x3b
+ 674 00b6 0B       		.uleb128 0xb
+ 675 00b7 27       		.uleb128 0x27
+ 676 00b8 19       		.uleb128 0x19
+ 677 00b9 11       		.uleb128 0x11
+ 678 00ba 01       		.uleb128 0x1
+ 679 00bb 12       		.uleb128 0x12
+ 680 00bc 06       		.uleb128 0x6
+ 681 00bd 40       		.uleb128 0x40
+ 682 00be 18       		.uleb128 0x18
+ 683 00bf 9742     		.uleb128 0x2117
+ 684 00c1 19       		.uleb128 0x19
+ 685 00c2 01       		.uleb128 0x1
+ 686 00c3 13       		.uleb128 0x13
+ 687 00c4 00       		.byte	0
+ 688 00c5 00       		.byte	0
+ 689 00c6 0F       		.uleb128 0xf
+ 690 00c7 05       		.uleb128 0x5
+ 691 00c8 00       		.byte	0
+ 692 00c9 03       		.uleb128 0x3
+ 693 00ca 0E       		.uleb128 0xe
+ 694 00cb 3A       		.uleb128 0x3a
+ 695 00cc 0B       		.uleb128 0xb
+ 696 00cd 3B       		.uleb128 0x3b
+ 697 00ce 0B       		.uleb128 0xb
+ 698 00cf 49       		.uleb128 0x49
+ 699 00d0 13       		.uleb128 0x13
+ 700 00d1 02       		.uleb128 0x2
+ 701 00d2 18       		.uleb128 0x18
+ 702 00d3 00       		.byte	0
+ 703 00d4 00       		.byte	0
+ 704 00d5 10       		.uleb128 0x10
+ 705 00d6 2E       		.uleb128 0x2e
+ 706 00d7 00       		.byte	0
+ 707 00d8 3F       		.uleb128 0x3f
+ 708 00d9 19       		.uleb128 0x19
+ 709 00da 03       		.uleb128 0x3
+ 710 00db 0E       		.uleb128 0xe
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 16
+
+
+ 711 00dc 3A       		.uleb128 0x3a
+ 712 00dd 0B       		.uleb128 0xb
+ 713 00de 3B       		.uleb128 0x3b
+ 714 00df 0B       		.uleb128 0xb
+ 715 00e0 27       		.uleb128 0x27
+ 716 00e1 19       		.uleb128 0x19
+ 717 00e2 49       		.uleb128 0x49
+ 718 00e3 13       		.uleb128 0x13
+ 719 00e4 11       		.uleb128 0x11
+ 720 00e5 01       		.uleb128 0x1
+ 721 00e6 12       		.uleb128 0x12
+ 722 00e7 06       		.uleb128 0x6
+ 723 00e8 40       		.uleb128 0x40
+ 724 00e9 18       		.uleb128 0x18
+ 725 00ea 9742     		.uleb128 0x2117
+ 726 00ec 19       		.uleb128 0x19
+ 727 00ed 00       		.byte	0
+ 728 00ee 00       		.byte	0
+ 729 00ef 11       		.uleb128 0x11
+ 730 00f0 34       		.uleb128 0x34
+ 731 00f1 00       		.byte	0
+ 732 00f2 03       		.uleb128 0x3
+ 733 00f3 0E       		.uleb128 0xe
+ 734 00f4 3A       		.uleb128 0x3a
+ 735 00f5 0B       		.uleb128 0xb
+ 736 00f6 3B       		.uleb128 0x3b
+ 737 00f7 0B       		.uleb128 0xb
+ 738 00f8 49       		.uleb128 0x49
+ 739 00f9 13       		.uleb128 0x13
+ 740 00fa 3F       		.uleb128 0x3f
+ 741 00fb 19       		.uleb128 0x19
+ 742 00fc 3C       		.uleb128 0x3c
+ 743 00fd 19       		.uleb128 0x19
+ 744 00fe 00       		.byte	0
+ 745 00ff 00       		.byte	0
+ 746 0100 00       		.byte	0
+ 747              		.section	.debug_aranges,"",%progbits
+ 748 0000 2C000000 		.4byte	0x2c
+ 749 0004 0200     		.2byte	0x2
+ 750 0006 00000000 		.4byte	.Ldebug_info0
+ 751 000a 04       		.byte	0x4
+ 752 000b 00       		.byte	0
+ 753 000c 0000     		.2byte	0
+ 754 000e 0000     		.2byte	0
+ 755 0010 00000000 		.4byte	.LFB1
+ 756 0014 C0000000 		.4byte	.LFE1-.LFB1
+ 757 0018 00000000 		.4byte	.LFB2
+ 758 001c 24000000 		.4byte	.LFE2-.LFB2
+ 759 0020 00000000 		.4byte	.LFB3
+ 760 0024 18000000 		.4byte	.LFE3-.LFB3
+ 761 0028 00000000 		.4byte	0
+ 762 002c 00000000 		.4byte	0
+ 763              		.section	.debug_ranges,"",%progbits
+ 764              	.Ldebug_ranges0:
+ 765 0000 00000000 		.4byte	.LFB1
+ 766 0004 C0000000 		.4byte	.LFE1
+ 767 0008 00000000 		.4byte	.LFB2
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 17
+
+
+ 768 000c 24000000 		.4byte	.LFE2
+ 769 0010 00000000 		.4byte	.LFB3
+ 770 0014 18000000 		.4byte	.LFE3
+ 771 0018 00000000 		.4byte	0
+ 772 001c 00000000 		.4byte	0
+ 773              		.section	.debug_line,"",%progbits
+ 774              	.Ldebug_line0:
+ 775 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
+ 775      02006600 
+ 775      00000201 
+ 775      FB0E0D00 
+ 775      01010101 
+ 776              	.LASF29:
+ 777 0000 55534255 		.ascii	"USBUART_lunCount\000"
+ 777      4152545F 
+ 777      6C756E43 
+ 777      6F756E74 
+ 777      00
+ 778              	.LASF22:
+ 779 0011 70537461 		.ascii	"pStatusBlock\000"
+ 779      74757342 
+ 779      6C6F636B 
+ 779      00
+ 780              	.LASF27:
+ 781 001e 76616C75 		.ascii	"value\000"
+ 781      6500
+ 782              	.LASF20:
+ 783 0024 636F756E 		.ascii	"count\000"
+ 783      7400
+ 784              	.LASF34:
+ 785 002a 55534255 		.ascii	"USBUART_MSC_SetLunCount\000"
+ 785      4152545F 
+ 785      4D53435F 
+ 785      5365744C 
+ 785      756E436F 
+ 786              	.LASF3:
+ 787 0042 73686F72 		.ascii	"short unsigned int\000"
+ 787      7420756E 
+ 787      7369676E 
+ 787      65642069 
+ 787      6E7400
+ 788              	.LASF17:
+ 789 0055 73746174 		.ascii	"status\000"
+ 789      757300
+ 790              	.LASF21:
+ 791 005c 70446174 		.ascii	"pData\000"
+ 791      6100
+ 792              	.LASF24:
+ 793 0062 65704461 		.ascii	"epData\000"
+ 793      746100
+ 794              	.LASF12:
+ 795 0069 666C6F61 		.ascii	"float\000"
+ 795      7400
+ 796              	.LASF1:
+ 797 006f 756E7369 		.ascii	"unsigned char\000"
+ 797      676E6564 
+ 797      20636861 
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 18
+
+
+ 797      7200
+ 798              	.LASF33:
+ 799 007d 55534255 		.ascii	"USBUART_DispatchMSCClassRqst\000"
+ 799      4152545F 
+ 799      44697370 
+ 799      61746368 
+ 799      4D534343 
+ 800              	.LASF23:
+ 801 009a 545F5553 		.ascii	"T_USBUART_TD\000"
+ 801      42554152 
+ 801      545F5444 
+ 801      00
+ 802              	.LASF5:
+ 803 00a7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 803      20756E73 
+ 803      69676E65 
+ 803      6420696E 
+ 803      7400
+ 804              	.LASF9:
+ 805 00b9 75696E74 		.ascii	"uint8\000"
+ 805      3800
+ 806              	.LASF30:
+ 807 00bf 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 807      43313120 
+ 807      352E342E 
+ 807      31203230 
+ 807      31363036 
+ 808 00f2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 808      20726576 
+ 808      6973696F 
+ 808      6E203233 
+ 808      37373135 
+ 809 0125 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 809      66756E63 
+ 809      74696F6E 
+ 809      2D736563 
+ 809      74696F6E 
+ 810              	.LASF13:
+ 811 014d 646F7562 		.ascii	"double\000"
+ 811      6C6500
+ 812              	.LASF32:
+ 813 0154 433A5C55 		.ascii	"C:\\Users\\HPz420\\Documents\\GitHub\\land-boards\\"
+ 813      73657273 
+ 813      5C48507A 
+ 813      3432305C 
+ 813      446F6375 
+ 814 0181 6C622D62 		.ascii	"lb-boards\\FPGA Cards\\RETRO-EP4CE15\\PSOC\\USBFS_U"
+ 814      6F617264 
+ 814      735C4650 
+ 814      47412043 
+ 814      61726473 
+ 815 01b0 41525430 		.ascii	"ART01\\USBFS_UART01.cydsn\000"
+ 815      315C5553 
+ 815      4246535F 
+ 815      55415254 
+ 815      30312E63 
+ 816              	.LASF37:
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 19
+
+
+ 817 01c9 55534255 		.ascii	"USBUART_currentTD\000"
+ 817      4152545F 
+ 817      63757272 
+ 817      656E7454 
+ 817      4400
+ 818              	.LASF31:
+ 819 01db 47656E65 		.ascii	"Generated_Source\\PSoC4\\USBUART_msc.c\000"
+ 819      72617465 
+ 819      645F536F 
+ 819      75726365 
+ 819      5C50536F 
+ 820              	.LASF10:
+ 821 0200 75696E74 		.ascii	"uint16\000"
+ 821      313600
+ 822              	.LASF11:
+ 823 0207 75696E74 		.ascii	"uint32\000"
+ 823      333200
+ 824              	.LASF8:
+ 825 020e 756E7369 		.ascii	"unsigned int\000"
+ 825      676E6564 
+ 825      20696E74 
+ 825      00
+ 826              	.LASF7:
+ 827 021b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 827      206C6F6E 
+ 827      6720756E 
+ 827      7369676E 
+ 827      65642069 
+ 828              	.LASF35:
+ 829 0232 6C756E43 		.ascii	"lunCount\000"
+ 829      6F756E74 
+ 829      00
+ 830              	.LASF28:
+ 831 023b 64617461 		.ascii	"dataLength\000"
+ 831      4C656E67 
+ 831      746800
+ 832              	.LASF19:
+ 833 0246 545F5553 		.ascii	"T_USBUART_XFER_STATUS_BLOCK\000"
+ 833      42554152 
+ 833      545F5846 
+ 833      45525F53 
+ 833      54415455 
+ 834              	.LASF25:
+ 835 0262 55534255 		.ascii	"USBUART_ep0_data_struct\000"
+ 835      4152545F 
+ 835      6570305F 
+ 835      64617461 
+ 835      5F737472 
+ 836              	.LASF16:
+ 837 027a 73697A65 		.ascii	"sizetype\000"
+ 837      74797065 
+ 837      00
+ 838              	.LASF6:
+ 839 0283 6C6F6E67 		.ascii	"long long int\000"
+ 839      206C6F6E 
+ 839      6720696E 
+ 839      7400
+ARM GAS  C:\Users\HPz420\AppData\Local\Temp\ccW977cQ.s 			page 20
+
+
+ 840              	.LASF14:
+ 841 0291 63686172 		.ascii	"char\000"
+ 841      00
+ 842              	.LASF2:
+ 843 0296 73686F72 		.ascii	"short int\000"
+ 843      7420696E 
+ 843      7400
+ 844              	.LASF36:
+ 845 02a0 55534255 		.ascii	"USBUART_MSC_GetLunCount\000"
+ 845      4152545F 
+ 845      4D53435F 
+ 845      4765744C 
+ 845      756E436F 
+ 846              	.LASF26:
+ 847 02b8 72657175 		.ascii	"requestHandled\000"
+ 847      65737448 
+ 847      616E646C 
+ 847      656400
+ 848              	.LASF4:
+ 849 02c7 6C6F6E67 		.ascii	"long int\000"
+ 849      20696E74 
+ 849      00
+ 850              	.LASF15:
+ 851 02d0 6C6F6E67 		.ascii	"long double\000"
+ 851      20646F75 
+ 851      626C6500 
+ 852              	.LASF0:
+ 853 02dc 7369676E 		.ascii	"signed char\000"
+ 853      65642063 
+ 853      68617200 
+ 854              	.LASF18:
+ 855 02e8 6C656E67 		.ascii	"length\000"
+ 855      746800
+ 856              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

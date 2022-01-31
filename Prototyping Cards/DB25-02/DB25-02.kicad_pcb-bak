@@ -18,9 +18,9 @@
   )
 
   (layers
-    (0 Front signal hide)
+    (0 Front signal)
     (31 Back signal hide)
-    (36 B.SilkS user hide)
+    (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
@@ -59,6 +59,7 @@
     (pad_drill 3.175)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
+    (grid_origin 21 6)
     (visible_elements 7EFFEF7F)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
@@ -166,7 +167,7 @@
   (module LandBoards_Marking:TEST_BLK-REAR (layer Front) (tedit 5935B6D1) (tstamp 5935BA98)
     (at 24 28)
     (path /592AF46D)
-    (fp_text reference TEST1 (at 0 -3.5) (layer B.SilkS)
+    (fp_text reference TEST (at 0 -3.5) (layer B.SilkS)
       (effects (font (size 1.524 1.524) (thickness 0.3048)) (justify mirror))
     )
     (fp_text value COUPON (at 0 4) (layer F.SilkS) hide

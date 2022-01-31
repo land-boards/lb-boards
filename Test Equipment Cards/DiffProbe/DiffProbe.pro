@@ -1,4 +1,4 @@
-update=5/8/2021 7:57:44 AM
+update=1/17/2022 4:40:56 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -8,6 +8,19 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[eeschema]
+version=1
+LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -51,7 +64,7 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.07619999999999999
+SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=-0
@@ -233,16 +246,3 @@ uViaDrill=0.127
 dPairWidth=0.254
 dPairGap=0.25
 dPairViaGap=0.25
-[eeschema]
-version=1
-LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
