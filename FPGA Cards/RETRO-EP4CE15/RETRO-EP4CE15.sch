@@ -5,7 +5,7 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 1 1
 Title "RETRO-EP4CE15"
-Date "2021-03-02"
+Date "2022-02-11"
 Rev "4"
 Comp "land-boards.com"
 Comment1 "FPGA CARD"
@@ -2346,7 +2346,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 5950 1550 5950
 $Comp
-L Connector:USB_B J4
+L RETRO-EP4CE15-rescue:USB_B-Connector J4
 U 1 1 5F57D027
 P 15550 6600
 F 0 "J4" H 15320 6619 50  0000 R CNN
@@ -2864,4 +2864,6 @@ NoConn ~ 15500 3150
 NoConn ~ 15500 3450
 NoConn ~ 2250 5750
 NoConn ~ 2250 6550
+Text Notes 5500 9300 2    100  ~ 20
+FPGA\nREG
 $EndSCHEMATC
