@@ -1070,4 +1070,20 @@ Wire Wire Line
 	10100 7100 10200 7100
 Wire Wire Line
 	6000 3550 6000 3700
+Text Label 7000 4750 0    60   ~ 0
+GP0
+Text Label 7000 4650 0    60   ~ 0
+GP1
+Text Label 7000 4550 0    60   ~ 0
+GP2
+Text Label 7000 4450 0    60   ~ 0
+GP3
+Text Label 7000 4350 0    60   ~ 0
+GP4
+Text Label 7000 4250 0    60   ~ 0
+GP5
+Text Label 7000 4150 0    60   ~ 0
+GP6
+Text Label 7000 4050 0    60   ~ 0
+GP7
 $EndSCHEMATC
