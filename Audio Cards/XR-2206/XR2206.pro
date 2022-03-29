@@ -1,4 +1,4 @@
-update=2/23/2017 5:07:36 PM
+update=3/28/2022 11:40:25 AM
 last_client=kicad
 [general]
 version=1
@@ -31,21 +31,4 @@ LibName2=discret
 LibName3=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 [eeschema]
 version=1
-LibDir=/home/doug/arduino-1.0.1/Projects/PCB Designs/KiCAD/library
-[eeschema/libraries]
-LibName1=XR2206-rescue
-LibName2=power
-LibName3=device
-LibName4=transistors
-LibName5=conn
-LibName6=linear
-LibName7=regul
-LibName8=special
-LibName9=audio
-LibName10=interface
-LibName11=philips
-LibName12=display
-LibName13=opto
-LibName14=atmel
-LibName15=contrib
-LibName16=EXAR
+LibDir=

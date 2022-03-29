@@ -1,20 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:XR2206-rescue
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:audio
-LIBS:interface
-LIBS:philips
-LIBS:display
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:XR2206-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -32,7 +17,7 @@ Text Notes 2800 3900 2    60   ~ 0
 G\n\nADJ
 NoConn ~ 6950 5750
 $Comp
-L CONN_1 MTG3
+L XR2206-rescue:CONN_1 MTG3
 U 1 1 511E84D9
 P 7100 5750
 F 0 "MTG3" H 7180 5750 40  0000 L CNN
@@ -43,7 +28,7 @@ F 3 "" H 7100 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 2950 7700 2950
+	3850 2950 5300 2950
 Wire Wire Line
 	5950 3850 7650 3850
 Wire Wire Line
@@ -58,7 +43,7 @@ Wire Wire Line
 	4100 4450 4750 4450
 Connection ~ 6650 3950
 Wire Wire Line
-	6450 3950 6900 3950
+	6450 3950 6650 3950
 Connection ~ 3850 3650
 Wire Wire Line
 	3350 3650 3850 3650
@@ -101,7 +86,7 @@ Wire Wire Line
 Connection ~ 3850 4150
 Connection ~ 5300 2950
 Wire Wire Line
-	3850 3450 3850 5250
+	3850 3450 3850 3650
 Wire Wire Line
 	4750 4350 4150 4350
 Wire Wire Line
@@ -109,7 +94,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 4250 4200 4250
 Wire Wire Line
-	7550 5200 3850 5200
+	7550 5200 6000 5200
 Connection ~ 6000 5200
 Wire Wire Line
 	7550 3150 7700 3150
@@ -128,13 +113,13 @@ Wire Wire Line
 	3850 4750 3950 4750
 Connection ~ 3850 4750
 Wire Wire Line
-	7550 3150 7550 5200
+	7550 3150 7550 4050
 Wire Wire Line
 	7550 4050 7650 4050
 Text Notes 8150 3900 0    60   ~ 0
 VCO-OUT\n\nGND
 $Comp
-L CONN_2 J3
+L XR2206-rescue:CONN_2 J3
 U 1 1 511E7A29
 P 8000 3950
 F 0 "J3" V 7950 3950 40  0000 C CNN
@@ -145,7 +130,7 @@ F 3 "" H 8000 3950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 J1
+L XR2206-rescue:CONN_2 J1
 U 1 1 511E7A25
 P 8050 3050
 F 0 "J1" V 8000 3050 40  0000 C CNN
@@ -156,7 +141,7 @@ F 3 "" H 8050 3050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT-RESCUE-XR2206 RV1
+L XR2206-rescue:POT-RESCUE-XR2206 RV1
 U 1 1 511E791A
 P 4100 4750
 F 0 "RV1" H 4100 4650 50  0000 C CNN
@@ -167,7 +152,7 @@ F 3 "" H 4100 4750 60  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CP1 C3
+L Device:CP1 C3
 U 1 1 511BA085
 P 3850 3300
 F 0 "C3" H 3900 3400 50  0000 L CNN
@@ -184,7 +169,7 @@ SC
 Text Label 6000 3950 0    60   ~ 0
 M
 $Comp
-L CONN_1 MTG2
+L XR2206-rescue:CONN_1 MTG2
 U 1 1 501125B1
 P 7100 5600
 F 0 "MTG2" H 7180 5600 40  0000 L CNN
@@ -196,7 +181,7 @@ F 3 "" H 7100 5600 60  0001 C CNN
 $EndComp
 NoConn ~ 6950 5600
 $Comp
-L R R5
+L Device:R R5
 U 1 1 501123D0
 P 6300 3950
 F 0 "R5" V 6380 3950 50  0000 C CNN
@@ -207,7 +192,7 @@ F 3 "" H 6300 3950 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R7
+L Device:R R7
 U 1 1 501123C8
 P 7050 4250
 F 0 "R7" V 7150 4250 50  0000 C CNN
@@ -218,7 +203,7 @@ F 3 "" H 7050 4250 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 501123BB
 P 7050 3950
 F 0 "R6" V 7150 3950 50  0000 C CNN
@@ -247,7 +232,7 @@ TR1
 Text Label 5900 4350 0    60   ~ 0
 BIAS
 $Comp
-L CONN_2 J2
+L XR2206-rescue:CONN_2 J2
 U 1 1 4FDCA902
 P 3000 3750
 F 0 "J2" V 2950 3750 40  0000 C CNN
@@ -261,7 +246,7 @@ Text Notes 8200 3000 0    60   ~ 0
 +12V\n\nGND
 NoConn ~ 6950 5450
 $Comp
-L CONN_1 MTG1
+L XR2206-rescue:CONN_1 MTG1
 U 1 1 4FDBED61
 P 7100 5450
 F 0 "MTG1" H 7180 5450 40  0000 L CNN
@@ -279,7 +264,7 @@ NoConn ~ 5950 3550
 NoConn ~ 4750 4050
 NoConn ~ 4750 3950
 $Comp
-L R R3
+L Device:R R3
 U 1 1 4FDBE56E
 P 4350 4250
 F 0 "R3" V 4430 4250 50  0000 C CNN
@@ -290,7 +275,7 @@ F 3 "" H 4350 4250 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CAPAPOL C2
+L XR2206-rescue:CAPAPOL C2
 U 1 1 4FDBC7A6
 P 6000 4650
 F 0 "C2" H 6050 4750 50  0000 L CNN
@@ -301,7 +286,7 @@ F 3 "" H 6000 4650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 4FDBC755
 P 4200 3350
 F 0 "C1" H 4250 3450 50  0000 L CNN
@@ -312,7 +297,7 @@ F 3 "" H 4200 3350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 4FDBC71A
 P 3850 5250
 F 0 "#PWR01" H 3850 5250 30  0001 C CNN
@@ -323,7 +308,7 @@ F 3 "" H 3850 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 4FDBC393
 P 4200 3850
 F 0 "R1" V 4280 3850 50  0000 C CNN
@@ -334,7 +319,7 @@ F 3 "" H 4200 3850 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L XR2206 U1
+L XR2206-rescue:XR2206 U1
 U 1 1 4FDBC311
 P 5300 4050
 F 0 "U1" H 5820 4720 60  0000 C CNN
@@ -348,6 +333,26 @@ Wire Wire Line
 	7450 3950 7200 3950
 Connection ~ 7450 2950
 Connection ~ 7550 4050
-Connection ~ 3400 3450
-Connection ~ 6300 3700
+Wire Wire Line
+	6650 3950 6900 3950
+Wire Wire Line
+	3850 3650 3850 4150
+Wire Wire Line
+	5300 5200 3850 5200
+Wire Wire Line
+	3850 5200 3850 5250
+Wire Wire Line
+	3850 4150 3850 4750
+Wire Wire Line
+	5300 2950 7450 2950
+Wire Wire Line
+	6000 5200 5300 5200
+Wire Wire Line
+	7550 4250 7550 5200
+Wire Wire Line
+	3850 4750 3850 5200
+Wire Wire Line
+	7450 2950 7700 2950
+Wire Wire Line
+	7550 4050 7550 4250
 $EndSCHEMATC
