@@ -1,11 +1,32 @@
-<a href="https://www.tindie.com/stores/land_boards/" >
-<img src="http://land-boards.com/tindie/tindie-larges-v2.png" alt="Tindie Logo">
-</img></a>
+<a href="https://www.tindie.com/products/13284/"><img src="http://land-boards.com/blwiki/images/5/51/Tindie-mediums.png" alt="Tindie Logo"></img></a>
 
-== lb-boards Open Data Acquisition Cards Designs ==
+== land-boards ODAS-RELAY-16 Card Example Arduino Source Code Files ==
 
-=== land-boards.com - Open Data Acquisition Cards Printed Circuit Board Designs ===
+<img src="http://land-boards.com/blwiki/images/2/28/ODAS-RELAY-16-P356-720px.JPG" alt="ODAS-RELAY-I2C Card image"></img>
 
-Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad based designs]:  "Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools."
+* These are Land Boards' [http://land-boards.com/blwiki/index.php?title=ODAS-RELAY-16 ODAS-RELAY-16 card related] files.
+** These files were created to exercise our [http://land-boards.com/blwiki/index.php?title=ODAS-RELAY-16 ODAS-RELAY-16 card].
+* Requires [https://github.com/land-boards/lb-Arduino-Code/tree/master/libraries/LandBoards_MCP23017 LandBoards_MCP23017 library]
 
-See [http://land-boards.com/content/ our PCB Designs Website][ourWebsite] and our [http://land-boards.com/blwiki/ land-boards Wiki][ourWiki].
+== Features ==
+
+* I2C bus
+** Up to 400 KHz
+* MCP23017 I2C Expander
+** Extensive Library Support
+* Three I2C address jumpers allow up to 8 cards
+* 16-channels of relays
+** SPST
+** Normally Open Relays
+** 1 FORM A
+* Individual Relay Channel Drivers
+* D-Sub DC-37 connector
+** Two pins for contact pair
+* 3.3V or 5V I2C operation
+** Power via I2C connector or dedicated power connector
+* Relay Power Connector
+** 12V
+** 5mm terminal block
+* Configuration EEPROM
+* ODAS Form Factor
+** 95x95mm
