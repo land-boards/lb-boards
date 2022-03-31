@@ -1,4 +1,4 @@
-update=3/31/2022 12:01:28 PM
+update=7/28/2016 7:13:35 PM
 version=1
 last_client=kicad
 [general]
@@ -43,3 +43,9 @@ LibName11=C:/Users/Doug/Documents/GitHub/lb-boards/KiCAD/modules/dougsLib
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
+LibName1=power
+LibName2=device
+LibName3=conn
+LibName4=atmel
+LibName5=C:/Users/doug_000/Documents/GitHub/lb-boards/KiCAD/library/DougsSch
