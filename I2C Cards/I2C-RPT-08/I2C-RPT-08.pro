@@ -1,4 +1,4 @@
-update=4/3/2022 9:00:18 AM
+update=4/3/2022 10:24:56 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -11,20 +11,10 @@ version=1
 [eeschema]
 version=1
 LibDir=
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=OptoIn8-I2C.net
+LastNetListRead=I2C-RPT-08.net
 CopperLayerCount=2
 BoardThickness=1.6002
 AllowMicroVias=0
@@ -67,7 +57,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=Front
 Type=0
@@ -246,3 +236,13 @@ uViaDrill=0.127
 dPairWidth=0.2032
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
