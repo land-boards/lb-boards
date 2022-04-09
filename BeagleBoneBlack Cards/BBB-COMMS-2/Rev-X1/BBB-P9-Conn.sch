@@ -1,18 +1,9 @@
-EESchema Schematic File Version 2
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:TXB0108
-LIBS:beaglebone
-LIBS:linear
-LIBS:memory
-LIBS:BBB-GVS-3-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 6
+Sheet 4 4
 Title "BeagleBone Cape Baseline"
 Date "24 feb 2015"
 Rev "X4"
@@ -24,14 +15,6 @@ Comment4 ""
 $EndDescr
 Text Label 1650 3200 0    60   ~ 0
 CLKOUT2
-Text Label 1650 3100 0    60   ~ 0
-AIN0
-Text Label 1650 3000 0    60   ~ 0
-AIN2
-Text Label 1650 2900 0    60   ~ 0
-AIN6
-Text Label 1650 2800 0    60   ~ 0
-AIN4
 Text Label 1650 2500 0    60   ~ 0
 GPIO3_19
 Text Label 1650 2300 0    60   ~ 0
@@ -111,7 +94,7 @@ GND
 Text GLabel 1650 1300 0    60   UnSpc ~ 0
 VDD_3V3-UF
 $Comp
-L GND #U05
+L power:GND #U05
 U 1 1 00000000
 P 2000 3550
 F 0 "#U05" H 2000 3550 60  0001 C CNN
@@ -122,9 +105,11 @@ F 3 "" H 2000 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE BRD1
+L BBB-COMMS-2-rescue:BEAGLEBONE BRD1
 U 4 1 53AD83F9
 P 2500 2300
+AR Path="/53AD83F9" Ref="BRD1"  Part="4" 
+AR Path="/54E536E4/53AD83F9" Ref="BRD1"  Part="4" 
 F 0 "BRD1" H 2600 800 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2750 900 60  0000 C CNN
 F 2 "dougsLib:BEAGLEBONE" H 2750 1000 60  0000 C CNN
@@ -133,9 +118,11 @@ F 3 "~" H 2500 2300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE BRD1
+L BBB-COMMS-2-rescue:BEAGLEBONE BRD1
 U 5 1 53BFD0D2
 P 2600 5900
+AR Path="/53BFD0D2" Ref="BRD1"  Part="5" 
+AR Path="/54E536E4/53BFD0D2" Ref="BRD1"  Part="5" 
 F 0 "BRD1" H 2700 4400 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2850 4500 60  0000 C CNN
 F 2 "dougsLib:BEAGLEBONE" H 2850 4600 60  0000 C CNN
@@ -150,14 +137,6 @@ VDD_3V3-UF
 NoConn ~ 2200 2400
 NoConn ~ 2200 2600
 NoConn ~ 2200 2700
-Text GLabel 1650 3100 0    60   Input ~ 0
-AIN0
-Text GLabel 1650 3000 0    60   Input ~ 0
-AIN2
-Text GLabel 1650 2900 0    60   Input ~ 0
-AIN6
-Text GLabel 1650 2800 0    60   Input ~ 0
-AIN4
 Text GLabel 1550 6700 0    60   Input ~ 0
 AIN1
 Text GLabel 1550 6600 0    60   Input ~ 0
@@ -173,166 +152,121 @@ GND
 Text GLabel 1650 1500 0    60   UnSpc ~ 0
 SYS_5V
 NoConn ~ 2300 6100
-Text Label 5600 6150 0    60   ~ 0
-SPI1_D1
-Text Label 5600 5150 0    60   ~ 0
+Text Label 8800 2800 0    60   ~ 0
 UART1_RXD
-Text Label 5600 5050 0    60   ~ 0
+Text Label 8800 2900 0    60   ~ 0
 UART1_TXD
-Text Label 5600 3950 0    60   ~ 0
+Text Label 8800 2150 0    60   ~ 0
 UART2_RXD
-Text Label 5600 3450 0    60   ~ 0
+Text Label 8800 1600 0    60   ~ 0
 I2C1_SDA
-Text Label 5600 1750 0    60   ~ 0
-EHRPWM1A
-Text Label 5600 1250 0    60   ~ 0
-GPIO1_28
-Text Label 5600 5650 0    60   ~ 0
-GPIO3_19
-Text Label 5600 4550 0    60   ~ 0
-GPIO1_17
-Text Label 5600 4050 0    60   ~ 0
+Text Label 8800 2250 0    60   ~ 0
 UART2_TXD
-Text Label 5600 3350 0    60   ~ 0
+Text Label 8800 1500 0    60   ~ 0
 I2C1_SCL
-Text Label 5600 2850 0    60   ~ 0
-GPIO1_16
-Text Label 5600 2350 0    60   ~ 0
+Text Label 8800 950  0    60   ~ 0
 UART4_TXD
-Text Label 5600 2250 0    60   ~ 0
+Text Label 8800 850  0    60   ~ 0
 UART4_RXD
 Text GLabel 1550 5700 0    60   Output ~ 0
 I2C2_SDA
 Text GLabel 1650 2100 0    60   Output ~ 0
 I2C2_SCL
-$Comp
-L CONN_3 J7
-U 1 1 5649C787
-P 6950 2950
-F 0 "J7" H 6950 2750 50  0000 C CNN
-F 1 "CONN_3" V 7000 2950 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 3150 60  0000 C CNN
-F 3 "" H 6950 2950 60  0000 C CNN
-	1    6950 2950
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J4
-U 1 1 5649C7AF
-P 6950 4650
-F 0 "J4" H 6950 4450 50  0000 C CNN
-F 1 "CONN_3" V 7000 4650 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 4850 60  0000 C CNN
-F 3 "" H 6950 4650 60  0000 C CNN
-	1    6950 4650
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_4 J8
-U 1 1 5649C8AB
-P 6950 2400
-F 0 "J8" H 6950 2150 50  0000 C CNN
-F 1 "CONN_4" V 7000 2400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 7500 2650 60  0000 C CNN
-F 3 "" H 6950 2400 60  0000 C CNN
-	1    6950 2400
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_4 J6
-U 1 1 5649D0CB
-P 6950 3500
-F 0 "J6" H 6950 3250 50  0000 C CNN
-F 1 "CONN_4" V 7000 3500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 7500 3750 60  0000 C CNN
-F 3 "" H 6950 3500 60  0000 C CNN
-	1    6950 3500
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_4 J5
-U 1 1 5649D864
-P 6950 4100
-F 0 "J5" H 6950 3850 50  0000 C CNN
-F 1 "CONN_4" V 7000 4100 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 7500 4350 60  0000 C CNN
-F 3 "" H 6950 4100 60  0000 C CNN
-	1    6950 4100
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J2
-U 1 1 5649DAF0
-P 6950 5750
-F 0 "J2" H 6950 5550 50  0000 C CNN
-F 1 "CONN_3" V 7000 5750 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 5950 60  0000 C CNN
-F 3 "" H 6950 5750 60  0000 C CNN
-	1    6950 5750
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J10
-U 1 1 5649DD9E
-P 6950 1350
-F 0 "J10" H 6950 1150 50  0000 C CNN
-F 1 "CONN_3" V 7000 1350 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 1550 60  0000 C CNN
-F 3 "" H 6950 1350 60  0000 C CNN
-	1    6950 1350
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J9
-U 1 1 5649DE55
-P 6950 1850
-F 0 "J9" H 6950 1650 50  0000 C CNN
-F 1 "CONN_3" V 7000 1850 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 2050 60  0000 C CNN
-F 3 "" H 6950 1850 60  0000 C CNN
-	1    6950 1850
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_4 J3
-U 1 1 5649E2E2
-P 6950 5200
-F 0 "J3" H 6950 4950 50  0000 C CNN
-F 1 "CONN_4" V 7000 5200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 7500 5450 60  0000 C CNN
-F 3 "" H 6950 5200 60  0000 C CNN
-	1    6950 5200
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J1
-U 1 1 5649E81D
-P 6950 6250
-F 0 "J1" H 6950 6050 50  0000 C CNN
-F 1 "CONN_3" V 7000 6250 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7500 6450 60  0000 C CNN
-F 3 "" H 6950 6250 60  0000 C CNN
-	1    6950 6250
-	1    0    0    1   
-$EndComp
-Text GLabel 5800 900  0    60   UnSpc ~ 0
+Text GLabel 8650 1050 0    60   UnSpc ~ 0
 VDD_3V3EXP
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H9
+U 1 1 593966AA
+P 9750 1000
+F 0 "H9" H 9750 1250 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 1000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 1350 30  0000 C CNN
+F 3 "" H 9750 1000 60  0000 C CNN
+	1    9750 1000
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H6
+U 1 1 59396800
+P 9750 1650
+F 0 "H6" H 9750 1900 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 1650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 2000 30  0000 C CNN
+F 3 "" H 9750 1650 60  0000 C CNN
+	1    9750 1650
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H5
+U 1 1 593968EC
+P 9750 2300
+F 0 "H5" H 9750 2550 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 2300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 2650 30  0000 C CNN
+F 3 "" H 9750 2300 60  0000 C CNN
+	1    9750 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H4
+U 1 1 593968F2
+P 9750 2950
+F 0 "H4" H 9750 3200 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 3300 30  0000 C CNN
+F 3 "" H 9750 2950 60  0000 C CNN
+	1    9750 2950
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #U06
+U 1 1 59396957
+P 9450 6050
+F 0 "#U06" H 9450 6050 60  0001 C CNN
+F 1 "~" H 9450 6050 60  0001 C CNN
+F 2 "" H 9450 6050 60  0000 C CNN
+F 3 "" H 9450 6050 60  0000 C CNN
+	1    9450 6050
+	1    0    0    -1  
+$EndComp
+Text Label 8800 1050 0    60   ~ 0
+VDD_3V3-UF
+Text Label 8800 3550 0    60   ~ 0
+EHRPWM1B
+Text Label 8800 3450 0    60   ~ 0
+GPIO1_16
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H7
+U 1 1 5939F2E0
+P 9750 3600
+F 0 "H7" H 9750 3850 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 3600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 3950 30  0000 C CNN
+F 3 "" H 9750 3600 60  0000 C CNN
+	1    9750 3600
+	1    0    0    1   
+$EndComp
+Text Label 8800 4200 0    60   ~ 0
+EHRPWM1A
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X04 H8
+U 1 1 5939F8B4
+P 9750 4250
+F 0 "H8" H 9750 4500 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 4600 30  0000 C CNN
+F 3 "" H 9750 4250 60  0000 C CNN
+	1    9750 4250
+	1    0    0    1   
+$EndComp
+Text Label 8800 4100 0    60   ~ 0
+GPIO1_28
 Wire Wire Line
 	2200 3200 1650 3200
 Wire Wire Line
 	2200 3300 1650 3300
 Wire Wire Line
 	1650 3400 2000 3400
-Wire Wire Line
-	2000 3400 2200 3400
-Wire Wire Line
-	2200 3000 1650 3000
-Wire Wire Line
-	2200 3100 1650 3100
-Wire Wire Line
-	2200 2900 1650 2900
-Wire Wire Line
-	2200 2800 1650 2800
 Wire Wire Line
 	2200 2000 1650 2000
 Wire Wire Line
@@ -407,142 +341,138 @@ Wire Wire Line
 	2000 3400 2000 3550
 Connection ~ 2000 3400
 Wire Wire Line
-	6600 2250 5550 2250
+	9550 1150 9450 1150
 Wire Wire Line
-	6600 2850 5550 2850
+	9450 1150 9450 1800
 Wire Wire Line
-	6600 2350 5550 2350
+	9350 1050 9350 1700
 Wire Wire Line
-	6600 3350 5550 3350
+	9350 3000 9550 3000
+Connection ~ 9350 1050
 Wire Wire Line
-	6600 3450 5550 3450
+	9450 3100 9550 3100
+Connection ~ 9450 3100
 Wire Wire Line
-	6600 3950 5550 3950
+	9550 2450 9450 2450
+Connection ~ 9450 2450
 Wire Wire Line
-	6600 4050 5550 4050
+	9550 1800 9450 1800
+Connection ~ 9450 1800
 Wire Wire Line
-	6600 4550 5550 4550
+	9550 1700 9350 1700
+Connection ~ 9350 1700
 Wire Wire Line
-	6600 5650 5550 5650
+	9550 2350 9350 2350
+Connection ~ 9350 2350
 Wire Wire Line
-	6600 1250 5550 1250
+	8650 1050 9350 1050
 Wire Wire Line
-	6600 1750 5550 1750
+	9550 3450 8650 3450
 Wire Wire Line
-	6600 5050 5550 5050
+	9550 3550 8650 3550
 Wire Wire Line
-	6600 5150 5550 5150
+	9550 4100 8650 4100
 Wire Wire Line
-	6600 6150 5550 6150
+	9550 4200 8650 4200
 Wire Wire Line
-	5800 900  6400 900 
+	9550 3750 9450 3750
+Connection ~ 9450 3750
 Wire Wire Line
-	6600 1450 6500 1450
+	9550 4400 9450 4400
+Connection ~ 9450 4400
 Wire Wire Line
-	6500 1450 6500 1950
+	9350 4300 9550 4300
+Connection ~ 9350 3000
 Wire Wire Line
-	6500 1950 6500 2550
+	9550 3650 9350 3650
+Connection ~ 9350 3650
 Wire Wire Line
-	6500 2550 6500 3050
+	9550 2800 8650 2800
 Wire Wire Line
-	6500 3050 6500 3650
+	9550 2900 8650 2900
 Wire Wire Line
-	6500 3650 6500 4250
+	9550 2150 8650 2150
 Wire Wire Line
-	6500 4250 6500 4750
+	9550 2250 8650 2250
 Wire Wire Line
-	6500 4750 6500 5350
+	9550 1500 8650 1500
 Wire Wire Line
-	6500 5350 6500 5850
+	9550 1600 8650 1600
 Wire Wire Line
-	6500 5850 6500 6350
+	9550 850  8650 850 
 Wire Wire Line
-	6500 6350 6500 6450
-Wire Wire Line
-	6600 6350 6500 6350
-Connection ~ 6500 6350
-Wire Wire Line
-	6600 5850 6500 5850
-Connection ~ 6500 5850
-Wire Wire Line
-	6400 6250 6600 6250
-Wire Wire Line
-	6600 1350 6400 1350
-Connection ~ 6400 1350
-Wire Wire Line
-	6600 1850 6400 1850
-Connection ~ 6400 1850
-Wire Wire Line
-	6600 1950 6500 1950
-Connection ~ 6500 1950
-Wire Wire Line
-	6600 2450 6400 2450
-Connection ~ 6400 2450
-Wire Wire Line
-	6600 2550 6500 2550
-Connection ~ 6500 2550
-Wire Wire Line
-	6600 2950 6400 2950
-Connection ~ 6400 2950
-Wire Wire Line
-	6600 3050 6500 3050
-Connection ~ 6500 3050
-Connection ~ 6400 3550
-Wire Wire Line
-	6600 3650 6500 3650
-Connection ~ 6500 3650
-Wire Wire Line
-	6600 4150 6400 4150
-Connection ~ 6400 4150
-Wire Wire Line
-	6600 4250 6500 4250
-Connection ~ 6500 4250
-Wire Wire Line
-	6600 4650 6400 4650
-Connection ~ 6400 4650
-Wire Wire Line
-	6600 4750 6500 4750
-Connection ~ 6500 4750
-Wire Wire Line
-	6600 5250 6400 5250
-Connection ~ 6400 5250
-Wire Wire Line
-	6600 5350 6500 5350
-Connection ~ 6500 5350
-Wire Wire Line
-	6600 5750 6400 5750
-Connection ~ 6400 5750
+	9550 950  8650 950 
 $Comp
-L GND #PWR06
-U 1 1 564A33E0
-P 6500 6450
-F 0 "#PWR06" H 6500 6450 30  0001 C CNN
-F 1 "GND" H 6500 6380 30  0001 C CNN
-F 2 "" H 6500 6450 60  0000 C CNN
-F 3 "" H 6500 6450 60  0000 C CNN
-	1    6500 6450
-	1    0    0    -1  
+L BBB-COMMS-2-rescue:CONN_01X04 H3
+U 1 1 593A1A99
+P 9750 4900
+F 0 "H3" H 9750 5150 50  0000 C CNN
+F 1 "CONN_01X04" V 9850 4900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9750 5250 30  0000 C CNN
+F 3 "" H 9750 4900 60  0000 C CNN
+	1    9750 4900
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	6400 900  6400 1350
+	9550 4750 8650 4750
 Wire Wire Line
-	6400 1350 6400 1850
+	9550 4850 8650 4850
+Text Label 8800 4750 0    60   ~ 0
+GPIO1_17
+Text Label 8800 4850 0    60   ~ 0
+GPIO3_19
 Wire Wire Line
-	6400 1850 6400 2450
+	9550 5050 9450 5050
+Connection ~ 9450 5050
 Wire Wire Line
-	6400 2450 6400 2950
+	9350 4950 9550 4950
+Connection ~ 9350 4300
 Wire Wire Line
-	6400 2950 6400 3550
+	9350 5500 9550 5500
+Connection ~ 9350 4950
 Wire Wire Line
-	6400 3550 6400 4150
+	9550 5600 9450 5600
+Connection ~ 9450 5600
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H2
+U 1 1 593B6C7A
+P 9750 5500
+F 0 "H2" H 9750 5700 50  0000 C CNN
+F 1 "CONN_01X03" V 9850 5500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9750 5800 30  0000 C CNN
+F 3 "" H 9750 5500 50  0000 C CNN
+	1    9750 5500
+	1    0    0    1   
+$EndComp
+NoConn ~ 9550 5400
 Wire Wire Line
-	6400 4150 6400 4650
+	2000 3400 2200 3400
 Wire Wire Line
-	6400 4650 6400 5250
+	9350 1050 9550 1050
 Wire Wire Line
-	6400 5250 6400 5750
+	9450 3100 9450 3750
 Wire Wire Line
-	6400 5750 6400 6250
+	9450 2450 9450 3100
 Wire Wire Line
-	6400 3550 6600 3550
+	9450 1800 9450 2450
+Wire Wire Line
+	9350 1700 9350 2350
+Wire Wire Line
+	9350 2350 9350 3000
+Wire Wire Line
+	9450 3750 9450 4400
+Wire Wire Line
+	9450 4400 9450 5050
+Wire Wire Line
+	9350 3000 9350 3650
+Wire Wire Line
+	9350 3650 9350 4300
+Wire Wire Line
+	9450 5050 9450 5600
+Wire Wire Line
+	9350 4300 9350 4950
+Wire Wire Line
+	9350 4950 9350 5500
+Wire Wire Line
+	9450 5600 9450 6050
 $EndSCHEMATC

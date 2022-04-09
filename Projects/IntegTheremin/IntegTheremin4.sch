@@ -1,9 +1,5 @@
-EESchema Schematic File Version 2  date 26/04/2013 12:58:44
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:IntegTheremin-cache
-EELAYER 27 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -24,7 +20,7 @@ Text HLabel 5250 1600 0    60   UnSpc ~ 0
 Text HLabel 3450 2000 0    60   Input ~ 0
 AUDIO_IN
 $Comp
-L GNDA #PWR011
+L IntegTheremin-rescue:GNDA #PWR011
 U 1 1 5127AFE7
 P 6300 3400
 F 0 "#PWR011" H 6300 3400 40  0001 C CNN
@@ -80,7 +76,7 @@ Wire Wire Line
 Wire Wire Line
 	5350 1600 5250 1600
 $Comp
-L R R1
+L IntegTheremin-rescue:R R1
 U 1 1 512763B7
 P 3800 2000
 F 0 "R1" V 3880 2000 50  0000 C CNN
@@ -93,7 +89,7 @@ F 5 "260-2.2M-RC" H 3800 2000 60  0001 C CNN "MfgPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L CP1 C3
+L IntegTheremin-rescue:CP1 C3
 U 1 1 500C93F2
 P 6700 2100
 F 0 "C3" V 6750 1950 50  0000 L CNN
@@ -114,7 +110,7 @@ COMP
 Text Label 7150 2100 0    60   ~ 0
 OUT
 $Comp
-L RCA-JACK J2
+L IntegTheremin-rescue:RCA-JACK J2
 U 1 1 4FDCEF97
 P 7950 2150
 F 0 "J2" H 7950 2400 60  0000 C CNN
@@ -129,7 +125,7 @@ F 7 "568-NYS354" H 7950 2150 60  0001 C CNN "VendorPN"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L C C1
+L IntegTheremin-rescue:C C1
 U 1 1 4FDCB12E
 P 4400 2000
 F 0 "C1" V 4500 1850 50  0000 L CNN
@@ -144,7 +140,7 @@ F 7 "75-1C10Z5U104M050B" V 4400 2000 60  0001 C CNN "VendorPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L IntegTheremin-rescue:R R2
 U 1 1 4FDCB0F6
 P 6300 3000
 F 0 "R2" V 6380 3000 50  0000 C CNN
@@ -159,7 +155,7 @@ F 7 "71-CCF0710R0GKE36" V 6300 3000 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L IntegTheremin-rescue:C C2
 U 1 1 4FDCB0F0
 P 6300 2450
 F 0 "C2" H 6350 2550 50  0000 L CNN
@@ -172,7 +168,7 @@ F 5 "VJ0805Y473JXAPW1BC" H 6300 2450 60  0001 C CNN "MfgPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM386 U1
+L IntegTheremin-rescue:LM386 U1
 U 1 1 4FDCAFD4
 P 5450 2100
 F 0 "U1" H 5600 2300 60  0000 C CNN

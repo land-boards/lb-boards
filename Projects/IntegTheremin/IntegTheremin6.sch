@@ -1,9 +1,5 @@
-EESchema Schematic File Version 2  date 26/04/2013 12:58:44
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:IntegTheremin-cache
-EELAYER 27 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -36,12 +32,12 @@ Wire Wire Line
 	8350 1900 8350 2150
 Connection ~ 8250 1900
 Wire Wire Line
-	8250 1600 8250 1900
+	8250 1600 8250 1700
 Wire Wire Line
 	8250 1700 6850 1700
 Connection ~ 7500 1900
 Wire Wire Line
-	7350 1900 7550 1900
+	7350 1900 7500 1900
 Wire Wire Line
 	6950 1900 6850 1900
 Connection ~ 6000 2800
@@ -53,7 +49,7 @@ Connection ~ 4550 1750
 Wire Wire Line
 	4550 1750 4550 1950
 Wire Wire Line
-	3650 1750 5200 1750
+	3650 1750 3900 1750
 Wire Wire Line
 	4050 1750 4050 1950
 Connection ~ 4050 1750
@@ -64,23 +60,23 @@ Wire Wire Line
 Wire Wire Line
 	6850 2100 7500 2100
 Wire Wire Line
-	7500 1900 7500 2200
+	7500 1900 7500 2100
 Connection ~ 7500 2100
 Wire Wire Line
-	8150 1900 8500 1900
+	8150 1900 8250 1900
 Wire Wire Line
 	8350 2800 8350 2550
 Connection ~ 7500 2800
 Wire Wire Line
 	3650 1950 3750 1950
 Wire Wire Line
-	3750 2800 8350 2800
+	3750 2800 4050 2800
 Wire Wire Line
-	3750 1950 3750 3050
+	3750 1950 3750 2800
 Wire Wire Line
 	3750 3050 4400 3050
 $Comp
-L LM22674-5.0 U4
+L IntegTheremin-rescue:LM22674-5.0 U4
 U 1 1 512B9EA3
 P 6000 1900
 F 0 "U4" H 6400 2300 60  0000 C CNN
@@ -97,7 +93,7 @@ GNDA
 Text HLabel 4050 1450 2    60   Output ~ 0
 +12V
 $Comp
-L CONN_2 J1
+L IntegTheremin-rescue:CONN_2 J1
 U 1 1 512A4A49
 P 3300 1850
 F 0 "J1" V 3250 1850 40  0000 C CNN
@@ -110,7 +106,7 @@ $EndComp
 Text HLabel 8500 1900 2    60   Output ~ 0
 +5V
 $Comp
-L C C4
+L IntegTheremin-rescue:C C4
 U 1 1 512A48B1
 P 8350 2350
 F 0 "C4" H 8400 2450 50  0000 L CNN
@@ -123,7 +119,7 @@ F 5 "C3225X5R1E106K" H 8350 2350 60  0001 C CNN "MfgPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L INDUCTOR L1
+L IntegTheremin-rescue:INDUCTOR L1
 U 1 1 512A4874
 P 7850 1900
 F 0 "L1" V 7950 1900 40  0000 C CNN
@@ -136,7 +132,7 @@ F 5 "SRN6045-680M" H 7850 1900 60  0001 C CNN "MfgPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C15
+L IntegTheremin-rescue:C C15
 U 1 1 512A47B3
 P 7150 1900
 F 0 "C15" V 7000 1950 50  0000 L CNN
@@ -149,7 +145,7 @@ F 5 "C0805C103K5RACTU" H 7150 1900 60  0001 C CNN "MfgPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L DIODE D2
+L IntegTheremin-rescue:DIODE D2
 U 1 1 512A477F
 P 7500 2400
 F 0 "D2" H 7500 2500 40  0000 C CNN
@@ -162,7 +158,7 @@ F 5 "MBR0520LT1G" H 7500 2400 60  0001 C CNN "MfgPN"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C12
+L IntegTheremin-rescue:C C12
 U 1 1 512A46D9
 P 4050 2150
 F 0 "C12" H 4100 2250 50  0000 L CNN
@@ -175,7 +171,7 @@ F 5 "GRM21BR61E475MA12L" H 4050 2150 60  0001 C CNN "MfgPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C13
+L IntegTheremin-rescue:C C13
 U 1 1 512A46D2
 P 4550 2150
 F 0 "C13" H 4600 2250 50  0000 L CNN
@@ -188,7 +184,7 @@ F 5 "GRM21BR61C105MA01L" H 4550 2150 60  0001 C CNN "MfgPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R12
+L IntegTheremin-rescue:R R12
 U 1 1 515AEF59
 P 5050 2150
 F 0 "R12" V 5130 2150 50  0000 C CNN
@@ -211,7 +207,7 @@ Connection ~ 4550 2800
 Connection ~ 4050 2800
 Connection ~ 3750 2800
 $Comp
-L TST P4
+L IntegTheremin-rescue:TST P4
 U 1 1 517AB33C
 P 4750 1700
 F 0 "P4" H 4750 2000 40  0000 C CNN
@@ -226,7 +222,7 @@ Wire Wire Line
 Connection ~ 4750 1750
 Connection ~ 8250 1700
 $Comp
-L TST P3
+L IntegTheremin-rescue:TST P3
 U 1 1 517AB3F9
 P 8250 1600
 F 0 "P3" H 8250 1900 40  0000 C CNN
@@ -237,7 +233,7 @@ F 3 "~" H 8250 1600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TST P8
+L IntegTheremin-rescue:TST P8
 U 1 1 517AD695
 P 7950 2700
 F 0 "P8" H 7950 3000 40  0000 C CNN
@@ -250,4 +246,38 @@ $EndComp
 Wire Wire Line
 	7950 2700 7950 2800
 Connection ~ 7950 2800
+Wire Wire Line
+	6200 2800 7500 2800
+Wire Wire Line
+	3900 1750 4050 1750
+Wire Wire Line
+	8350 1900 8500 1900
+Wire Wire Line
+	8250 1900 8350 1900
+Wire Wire Line
+	7500 1900 7550 1900
+Wire Wire Line
+	6000 2800 6200 2800
+Wire Wire Line
+	4550 1750 4750 1750
+Wire Wire Line
+	4050 1750 4550 1750
+Wire Wire Line
+	7500 2100 7500 2200
+Wire Wire Line
+	7500 2800 7950 2800
+Wire Wire Line
+	5050 1750 5200 1750
+Wire Wire Line
+	4550 2800 6000 2800
+Wire Wire Line
+	4050 2800 4550 2800
+Wire Wire Line
+	3750 2800 3750 3050
+Wire Wire Line
+	4750 1750 5050 1750
+Wire Wire Line
+	8250 1700 8250 1900
+Wire Wire Line
+	7950 2800 8350 2800
 $EndSCHEMATC

@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:DIGIO-128-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 9
 Title "16-CHANNEL DIGITAL I/O"
-Date "Sunday, August 09, 2015"
-Rev "X3"
+Date "2022-04-03"
+Rev "X4"
 Comp "land-boards.com"
 Comment1 ""
 Comment2 ""

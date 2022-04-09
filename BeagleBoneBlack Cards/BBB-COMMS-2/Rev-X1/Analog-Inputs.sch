@@ -1,13 +1,11 @@
 EESchema Schematic File Version 2
-LIBS:DougsSch
 LIBS:power
 LIBS:device
 LIBS:conn
 LIBS:TXB0108
-LIBS:beaglebone
 LIBS:linear
 LIBS:memory
-LIBS:BBB-GVS-3-cache
+LIBS:BBB-GVS-4-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
@@ -61,15 +59,11 @@ $EndComp
 Wire Wire Line
 	3200 1700 3200 1650
 Wire Wire Line
-	2500 1650 3200 1650
-Wire Wire Line
-	3200 1650 3350 1650
+	2500 1650 3350 1650
 Wire Wire Line
 	3200 2500 3200 2700
 Wire Wire Line
-	2500 2700 3200 2700
-Wire Wire Line
-	3200 2700 3350 2700
+	2500 2700 3350 2700
 Text Label 2800 1650 0    60   ~ 0
 VDD_ADC
 Text Label 2700 2700 0    60   ~ 0
@@ -83,9 +77,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 2550 3900 2100
 Wire Wire Line
-	3800 2100 3900 2100
-Wire Wire Line
-	3900 2100 4000 2100
+	3800 2100 4000 2100
 Wire Wire Line
 	1750 2200 2500 2200
 Wire Wire Line
@@ -137,9 +129,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 3800 3900 3350
 Wire Wire Line
-	3800 3350 3900 3350
-Wire Wire Line
-	3900 3350 4000 3350
+	3800 3350 4000 3350
 Wire Wire Line
 	1750 3450 2500 3450
 Wire Wire Line
@@ -191,9 +181,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 5100 3900 4650
 Wire Wire Line
-	3800 4650 3900 4650
-Wire Wire Line
-	3900 4650 4000 4650
+	3800 4650 4000 4650
 Wire Wire Line
 	1750 4750 2500 4750
 Wire Wire Line
@@ -245,9 +233,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 6350 3900 5900
 Wire Wire Line
-	3800 5900 3900 5900
-Wire Wire Line
-	3900 5900 4000 5900
+	3800 5900 4000 5900
 Wire Wire Line
 	1750 6000 2500 6000
 Wire Wire Line
@@ -299,9 +285,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 2700 9500 2250
 Wire Wire Line
-	9400 2250 9500 2250
-Wire Wire Line
-	9500 2250 9600 2250
+	9400 2250 9600 2250
 Wire Wire Line
 	7350 2350 8100 2350
 Wire Wire Line
@@ -353,9 +337,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 3950 9500 3500
 Wire Wire Line
-	9400 3500 9500 3500
-Wire Wire Line
-	9500 3500 9600 3500
+	9400 3500 9600 3500
 Wire Wire Line
 	7350 3600 8100 3600
 Wire Wire Line
@@ -407,9 +389,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 5250 9500 4800
 Wire Wire Line
-	9400 4800 9500 4800
-Wire Wire Line
-	9500 4800 9600 4800
+	9400 4800 9600 4800
 Wire Wire Line
 	7350 4900 8100 4900
 Wire Wire Line

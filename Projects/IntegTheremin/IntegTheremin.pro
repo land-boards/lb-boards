@@ -1,6 +1,6 @@
-update=26/04/2013 12:48:45
+update=3/28/2022 2:25:12 PM
 version=1
-last_client=pcbnew
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -8,18 +8,6 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-NetFmtName=
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
-[eeschema/libraries]
-LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/library/DougsSch
-LibName2=power
-LibName3=device
 [pcbnew]
 version=1
 LastNetListRead=IntegTheremin.net
@@ -43,3 +31,16 @@ LibDir=
 LibName1=C:/Users/DGilliland.AACISD/Documents/PCB Designs/DougsPCBDesigns/KiCAD/modules/dougsLib
 LibName2=iTheremin
 LibName3=pin_array
+[eeschema]
+version=1
+LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

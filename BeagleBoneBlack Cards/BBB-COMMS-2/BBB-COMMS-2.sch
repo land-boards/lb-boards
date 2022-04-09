@@ -1,23 +1,14 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:TXB0108
-LIBS:linear
-LIBS:memory
-LIBS:LandBoards_Semis
-LIBS:LandBoards_Conns
-LIBS:BBB-COMMS-2-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 4
-Title "BeagleBone Cape Baseline"
-Date "24 feb 2015"
-Rev "X4"
-Comp "Doug Gilliland <doug@douglasgilliland.com>"
-Comment1 "https://github.com/douggilliland/"
+Title "BBB-COMMS-2"
+Date "2022-04-07"
+Rev "X3"
+Comp "LAND BOARDS LLC"
+Comment1 "http://land-boards.com/blwiki/index.php?title=BBB-COMMS-2"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -41,7 +32,7 @@ F0 "P9 Connector" 60
 F1 "BBB-P9-Conn.sch" 60
 $EndSheet
 $Comp
-L CONN_1 FID2
+L BBB-COMMS-2-rescue:CONN_1 FID2
 U 1 1 54E53947
 P 5500 7200
 F 0 "FID2" H 5580 7200 40  0000 L CNN
@@ -52,7 +43,7 @@ F 3 "" H 5500 7200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_1 FID1
+L BBB-COMMS-2-rescue:CONN_1 FID1
 U 1 1 54E5394D
 P 5500 7050
 F 0 "FID1" H 5580 7050 40  0000 L CNN
@@ -63,7 +54,7 @@ F 3 "" H 5500 7050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L COUPON TESTED1
+L BBB-COMMS-2-rescue:COUPON TESTED1
 U 1 1 54E53953
 P 5200 7700
 F 0 "TESTED1" H 5100 7600 60  0000 C CNN

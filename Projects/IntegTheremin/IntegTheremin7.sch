@@ -1,9 +1,5 @@
-EESchema Schematic File Version 2  date 26/04/2013 12:58:44
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:IntegTheremin-cache
-EELAYER 27 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -27,7 +23,7 @@ Wire Wire Line
 	4900 2950 4000 2950
 Connection ~ 4300 1800
 Wire Wire Line
-	4100 1800 5900 1800
+	4100 1800 4300 1800
 Wire Wire Line
 	4100 1800 4100 2750
 Wire Wire Line
@@ -38,7 +34,7 @@ Connection ~ 6500 4750
 Wire Wire Line
 	6500 4850 6500 4750
 Wire Wire Line
-	6800 4750 3400 4750
+	6800 4750 6500 4750
 Wire Wire Line
 	6800 4750 6800 2750
 Wire Wire Line
@@ -46,7 +42,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 2050 4300 1800
 Wire Wire Line
-	5900 1700 5900 2150
+	5900 1700 5900 1800
 Wire Wire Line
 	4900 4250 4800 4250
 Wire Wire Line
@@ -87,9 +83,9 @@ Wire Wire Line
 	4800 4250 4800 4750
 Connection ~ 4800 4750
 Wire Wire Line
-	5700 1700 5700 2150
+	5700 1700 5700 1900
 Wire Wire Line
-	4600 1900 5700 1900
+	4600 1900 4850 1900
 Connection ~ 4850 1900
 Wire Wire Line
 	6100 4750 6100 4650
@@ -123,7 +119,7 @@ VUSB
 Text Label 5050 1900 0    60   ~ 0
 VCCIO
 $Comp
-L CP1 C10
+L IntegTheremin-rescue:CP1 C10
 U 1 1 50FC0C27
 P 4300 2250
 F 0 "C10" H 4350 2350 50  0000 L CNN
@@ -134,7 +130,7 @@ F 3 "" H 4300 2250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C11
+L IntegTheremin-rescue:C C11
 U 1 1 50FC0C05
 P 4600 2250
 F 0 "C11" H 4650 2350 50  0000 L CNN
@@ -149,7 +145,7 @@ F 7 "75-1C10Z5U104M050B" H 4600 2250 60  0001 C CNN "Field7"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L IntegTheremin-rescue:GND #PWR01
 U 1 1 50FC0BB0
 P 6500 4850
 F 0 "#PWR01" H 6500 4850 30  0001 C CNN
@@ -160,7 +156,7 @@ F 3 "" H 6500 4850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB-B J3
+L IntegTheremin-rescue:USB-B J3
 U 1 1 50FC0B5E
 P 3550 3300
 F 0 "J3" H 3650 4050 60  0000 C CNN
@@ -171,7 +167,7 @@ F 3 "" H 3550 3300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L FT232RL U7
+L IntegTheremin-rescue:FT232RL U7
 U 1 1 50FC0B0A
 P 5800 3350
 F 0 "U7" H 5200 4400 50  0000 L BNN
@@ -184,7 +180,7 @@ F 5 "VendorPN" H 5800 3350 60  0001 C CNN "VendorPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L TST P2
+L IntegTheremin-rescue:TST P2
 U 1 1 517AB2BF
 P 5900 1700
 F 0 "P2" H 5900 2000 40  0000 C CNN
@@ -195,7 +191,7 @@ F 3 "~" H 5900 1700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TST P1
+L IntegTheremin-rescue:TST P1
 U 1 1 517AB2CE
 P 5700 1700
 F 0 "P1" H 5700 2000 40  0000 C CNN
@@ -207,4 +203,32 @@ F 3 "~" H 5700 1700 60  0000 C CNN
 $EndComp
 Connection ~ 5700 1900
 Connection ~ 5900 1800
+Wire Wire Line
+	4300 1800 5900 1800
+Wire Wire Line
+	6500 4750 6100 4750
+Wire Wire Line
+	4600 4750 4300 4750
+Wire Wire Line
+	5900 4750 5700 4750
+Wire Wire Line
+	5500 4750 4800 4750
+Wire Wire Line
+	6100 4750 5900 4750
+Wire Wire Line
+	3500 4750 3400 4750
+Wire Wire Line
+	5700 4750 5500 4750
+Wire Wire Line
+	4150 4750 3500 4750
+Wire Wire Line
+	4300 4750 4150 4750
+Wire Wire Line
+	4800 4750 4600 4750
+Wire Wire Line
+	4850 1900 5700 1900
+Wire Wire Line
+	5700 1900 5700 2150
+Wire Wire Line
+	5900 1800 5900 2150
 $EndSCHEMATC

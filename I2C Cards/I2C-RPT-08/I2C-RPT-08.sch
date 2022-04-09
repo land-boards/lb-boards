@@ -168,19 +168,19 @@ F 3 "" H 1750 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5200 1750 0    60   ~ 0
-SCK0
+SCL0
 Text Label 5200 1850 0    60   ~ 0
 SDA0
 Text Label 6550 1750 0    60   ~ 0
-SCK1
+SCL1
 Text Label 6550 1850 0    60   ~ 0
 SDA1
 Text Label 5200 2400 0    60   ~ 0
-SCK2
+SCL2
 Text Label 5200 2500 0    60   ~ 0
 SDA2
 Text Label 6550 2400 0    60   ~ 0
-SCK3
+SCL3
 Text Label 6550 2500 0    60   ~ 0
 SDA3
 $Comp
@@ -208,28 +208,28 @@ $EndComp
 $Comp
 L I2C-RPT-08-rescue:CONN_01X04 J1
 U 1 1 587F5589
-P 1700 2000
-F 0 "J1" H 1700 2250 50  0000 C CNN
-F 1 "CONN_01X04" V 1800 2000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 1700 2000 60  0001 C CNN
-F 3 "" H 1700 2000 60  0000 C CNN
-	1    1700 2000
+P 1150 2000
+F 0 "J1" H 1150 2250 50  0000 C CNN
+F 1 "CONN_01X04" V 1250 2000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 1150 2000 60  0001 C CNN
+F 3 "" H 1150 2000 60  0000 C CNN
+	1    1150 2000
 	-1   0    0    -1  
 $EndComp
 Text Label 5200 3050 0    60   ~ 0
-SCK4
+SCL4
 Text Label 5200 3150 0    60   ~ 0
 SDA4
 Text Label 6550 3050 0    60   ~ 0
-SCK5
+SCL5
 Text Label 6550 3150 0    60   ~ 0
 SDA5
 Text Label 5200 3700 0    60   ~ 0
-SCK6
+SCL6
 Text Label 5200 3800 0    60   ~ 0
 SDA6
 Text Label 6550 3700 0    60   ~ 0
-SCK7
+SCL7
 Text Label 6550 3800 0    60   ~ 0
 SDA7
 $Comp
@@ -299,35 +299,35 @@ F 3 "" H 2000 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3650 1850 0    60   ~ 0
-SCK0
+SCL0
 Text Label 3650 1950 0    60   ~ 0
 SDA0
 Text Label 3650 2450 0    60   ~ 0
-SCK2
+SCL2
 Text Label 3650 2550 0    60   ~ 0
 SDA2
 Text Label 3650 3050 0    60   ~ 0
-SCK4
+SCL4
 Text Label 3650 3150 0    60   ~ 0
 SDA4
 Text Label 3650 3650 0    60   ~ 0
-SCK6
+SCL6
 Text Label 3650 3750 0    60   ~ 0
 SDA6
 Text Label 3650 2150 0    60   ~ 0
-SCK1
+SCL1
 Text Label 3650 2250 0    60   ~ 0
 SDA1
 Text Label 3650 2750 0    60   ~ 0
-SCK3
+SCL3
 Text Label 3650 2850 0    60   ~ 0
 SDA3
 Text Label 3650 3350 0    60   ~ 0
-SCK5
+SCL5
 Text Label 3650 3450 0    60   ~ 0
 SDA5
 Text Label 3650 3950 0    60   ~ 0
-SCK7
+SCL7
 Text Label 3650 4050 0    60   ~ 0
 SDA7
 $Comp
@@ -342,35 +342,35 @@ F 3 "" H 1450 6950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 8250 1500 0    60   ~ 0
-SCK0
+SCL0
 Text Label 8250 1700 0    60   ~ 0
 SDA0
 Text Label 8250 2300 0    60   ~ 0
-SCK2
+SCL2
 Text Label 8250 2500 0    60   ~ 0
 SDA2
 Text Label 8250 3100 0    60   ~ 0
-SCK4
+SCL4
 Text Label 8250 3300 0    60   ~ 0
 SDA4
 Text Label 8250 3900 0    60   ~ 0
-SCK6
+SCL6
 Text Label 8250 4100 0    60   ~ 0
 SDA6
 Text Label 8250 1900 0    60   ~ 0
-SCK1
+SCL1
 Text Label 8250 2100 0    60   ~ 0
 SDA1
 Text Label 8250 2700 0    60   ~ 0
-SCK3
+SCL3
 Text Label 8250 2900 0    60   ~ 0
 SDA3
 Text Label 8250 3500 0    60   ~ 0
-SCK5
+SCL5
 Text Label 8250 3700 0    60   ~ 0
 SDA5
 Text Label 8250 4300 0    60   ~ 0
-SCK7
+SCL7
 Text Label 8250 4500 0    60   ~ 0
 SDA7
 $Comp
@@ -589,15 +589,15 @@ Wire Wire Line
 Wire Wire Line
 	1750 7400 1750 7450
 Wire Wire Line
-	1900 1850 2100 1850
+	1350 1850 2100 1850
 Wire Wire Line
-	1900 1950 2250 1950
+	1350 1950 2250 1950
 Wire Wire Line
-	2000 2050 1900 2050
+	2000 2050 1350 2050
 Wire Wire Line
 	2000 1250 2000 1450
 Wire Wire Line
-	1900 2150 2050 2150
+	1350 2150 2050 2150
 Wire Wire Line
 	2050 2150 2050 2200
 Wire Wire Line
@@ -1177,4 +1177,8 @@ Wire Wire Line
 	1900 3200 1750 3200
 Wire Wire Line
 	2050 3200 1900 3200
+Text Label 1450 1850 0    60   ~ 0
+SCL
+Text Label 1450 1950 0    60   ~ 0
+SDA
 $EndSCHEMATC

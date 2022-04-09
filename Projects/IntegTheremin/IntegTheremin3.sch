@@ -1,9 +1,5 @@
-EESchema Schematic File Version 2  date 26/04/2013 12:58:44
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:IntegTheremin-cache
-EELAYER 27 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
@@ -21,14 +17,14 @@ Text HLabel 7500 3850 2    60   Output ~ 0
 VCO_HV_OUT
 Connection ~ 7200 3850
 Wire Wire Line
-	7500 3850 5950 3850
+	7500 3850 7350 3850
 Wire Wire Line
 	7200 3850 7200 4050
 Connection ~ 6650 5200
 Wire Wire Line
 	7200 5150 7200 5200
 Wire Wire Line
-	7200 5200 3850 5200
+	7200 5200 6650 5200
 Connection ~ 3850 2950
 Wire Wire Line
 	6600 3150 6600 2950
@@ -44,7 +40,7 @@ Wire Wire Line
 	4100 4450 4750 4450
 Connection ~ 6650 3950
 Wire Wire Line
-	6550 3950 6900 3950
+	6550 3950 6600 3950
 Connection ~ 5300 5200
 Wire Wire Line
 	5300 5200 5300 4750
@@ -82,7 +78,7 @@ Wire Wire Line
 Connection ~ 3850 4150
 Connection ~ 5300 2950
 Wire Wire Line
-	3850 5250 3850 3550
+	3850 5250 3850 5200
 Wire Wire Line
 	4750 4350 3950 4350
 Wire Wire Line
@@ -91,7 +87,7 @@ Wire Wire Line
 	3950 4250 4000 4250
 Connection ~ 6000 5200
 Wire Wire Line
-	3950 3850 3350 3850
+	3950 3850 3450 3850
 Wire Wire Line
 	6650 3950 6650 4400
 Wire Wire Line
@@ -108,14 +104,14 @@ Wire Wire Line
 	3650 5000 3850 5000
 Connection ~ 3850 5000
 Wire Wire Line
-	6600 2950 3700 2950
+	6600 2950 5300 2950
 Wire Wire Line
-	7200 4550 7200 4650
+	7200 4550 7200 4600
 Wire Wire Line
 	7200 4600 7550 4600
 Connection ~ 7200 4600
 $Comp
-L R R11
+L IntegTheremin-rescue:R R11
 U 1 1 5128DC7B
 P 7200 4900
 F 0 "R11" V 7280 4900 50  0000 C CNN
@@ -128,7 +124,7 @@ F 5 "260-2.2K-RC" H 7200 4900 60  0001 C CNN "MfgPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R10
+L IntegTheremin-rescue:R R10
 U 1 1 5128DC76
 P 7200 4300
 F 0 "R10" V 7280 4300 50  0000 C CNN
@@ -147,7 +143,7 @@ VCO_LV_OUT
 Text HLabel 3350 3850 0    60   Input ~ 0
 FREQ-W
 $Comp
-L GNDA #PWR02
+L IntegTheremin-rescue:GNDA #PWR02
 U 1 1 5127AF9C
 P 3850 5250
 F 0 "#PWR02" H 3850 5250 40  0001 C CNN
@@ -158,7 +154,7 @@ F 3 "" H 3850 5250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
+L IntegTheremin-rescue:POT RV1
 U 1 1 511E791A
 P 4100 4750
 F 0 "RV1" H 4100 4650 50  0000 C CNN
@@ -169,7 +165,7 @@ F 3 "" H 4100 4750 60  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CP1 C5
+L IntegTheremin-rescue:CP1 C5
 U 1 1 511BA085
 P 3850 3350
 F 0 "C5" H 3900 3450 50  0000 L CNN
@@ -184,7 +180,7 @@ SC
 Text Label 6000 3950 0    60   ~ 0
 M
 $Comp
-L R R5
+L IntegTheremin-rescue:R R5
 U 1 1 501123D0
 P 6300 3950
 F 0 "R5" V 6380 3950 50  0000 C CNN
@@ -197,7 +193,7 @@ F 5 "CRCW080510K0JNEB" H 6300 3950 60  0001 C CNN "MfgPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R7
+L IntegTheremin-rescue:R R7
 U 1 1 501123C8
 P 6650 4650
 F 0 "R7" V 6750 4650 50  0000 C CNN
@@ -208,7 +204,7 @@ F 3 "" H 6650 4650 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R6
+L IntegTheremin-rescue:R R6
 U 1 1 501123BB
 P 6600 3400
 F 0 "R6" V 6700 3400 50  0000 C CNN
@@ -244,7 +240,7 @@ NoConn ~ 5950 3550
 NoConn ~ 4750 4050
 NoConn ~ 4750 3950
 $Comp
-L R R4
+L IntegTheremin-rescue:R R4
 U 1 1 4FDBE56E
 P 4250 4250
 F 0 "R4" V 4330 4250 50  0000 C CNN
@@ -257,7 +253,7 @@ F 5 "260-221-RC" H 4250 4250 60  0001 C CNN "MfgPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L CAPAPOL C7
+L IntegTheremin-rescue:CAPAPOL C7
 U 1 1 4FDBC7A6
 P 6000 4750
 F 0 "C7" H 6050 4850 50  0000 L CNN
@@ -268,7 +264,7 @@ F 3 "" H 6000 4750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
+L IntegTheremin-rescue:C C6
 U 1 1 4FDBC755
 P 4200 3400
 F 0 "C6" H 4250 3500 50  0000 L CNN
@@ -283,7 +279,7 @@ F 7 "75-1C10Z5U104M050B" H 4200 3400 60  0001 C CNN "Field7"
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L IntegTheremin-rescue:R R3
 U 1 1 4FDBC393
 P 4200 3850
 F 0 "R3" V 4280 3850 50  0000 C CNN
@@ -296,7 +292,7 @@ F 5 "CRCW080510K0JNEB" H 4200 3850 60  0001 C CNN "MfgPN"
 	0    1    1    0   
 $EndComp
 $Comp
-L XR2206 U2
+L IntegTheremin-rescue:XR2206 U2
 U 1 1 4FDBC311
 P 5300 4050
 F 0 "U2" H 5820 4720 60  0000 C CNN
@@ -307,7 +303,7 @@ F 3 "" H 5300 4050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TST P6
+L IntegTheremin-rescue:TST P6
 U 1 1 517AB4DA
 P 3450 3800
 F 0 "P6" H 3450 4100 40  0000 C CNN
@@ -324,7 +320,7 @@ Wire Wire Line
 	7350 3850 7350 3750
 Connection ~ 7350 3850
 $Comp
-L TST P5
+L IntegTheremin-rescue:TST P5
 U 1 1 517AB55A
 P 7350 3750
 F 0 "P5" H 7350 4050 40  0000 C CNN
@@ -334,4 +330,34 @@ F 3 "~" H 7350 3750 60  0000 C CNN
 	1    7350 3750
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7200 3850 5950 3850
+Wire Wire Line
+	6650 5200 6000 5200
+Wire Wire Line
+	3850 2950 3700 2950
+Wire Wire Line
+	6650 3950 6900 3950
+Wire Wire Line
+	5300 5200 3850 5200
+Wire Wire Line
+	3850 5200 3850 5000
+Wire Wire Line
+	3850 4150 3850 3550
+Wire Wire Line
+	5300 2950 3850 2950
+Wire Wire Line
+	6000 5200 5300 5200
+Wire Wire Line
+	3850 4750 3850 4150
+Wire Wire Line
+	6600 3950 6650 3950
+Wire Wire Line
+	3850 5000 3850 4750
+Wire Wire Line
+	7200 4600 7200 4650
+Wire Wire Line
+	3450 3850 3350 3850
+Wire Wire Line
+	7350 3850 7200 3850
 $EndSCHEMATC
