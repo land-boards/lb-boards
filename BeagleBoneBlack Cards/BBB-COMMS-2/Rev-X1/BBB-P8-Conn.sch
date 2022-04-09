@@ -1,18 +1,9 @@
-EESchema Schematic File Version 2
-LIBS:DougsSch
-LIBS:power
-LIBS:device
-LIBS:conn
-LIBS:TXB0108
-LIBS:beaglebone
-LIBS:linear
-LIBS:memory
-LIBS:BBB-GVS-3-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 6
+Sheet 3 4
 Title "BeagleBone Cape Baseline"
 Date "24 feb 2015"
 Rev "X4"
@@ -87,9 +78,11 @@ Wire Wire Line
 Wire Wire Line
 	1600 5350 950  5350
 $Comp
-L BEAGLEBONE BRD1
+L BBB-COMMS-2-rescue:BEAGLEBONE BRD1
 U 2 1 54E25DF8
 P 1950 2100
+AR Path="/54E25DF8" Ref="BRD1"  Part="2" 
+AR Path="/54E536E2/54E25DF8" Ref="BRD1"  Part="2" 
 F 0 "BRD1" H 2050 800 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2250 700 60  0000 C CNN
 F 2 "dougsLib:BEAGLEBONE" H 1450 -50 60  0000 C CNN
@@ -98,9 +91,11 @@ F 3 "~" H 1450 -50 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BEAGLEBONE BRD1
+L BBB-COMMS-2-rescue:BEAGLEBONE BRD1
 U 3 1 54E25E07
 P 1900 5750
+AR Path="/54E25E07" Ref="BRD1"  Part="3" 
+AR Path="/54E536E2/54E25E07" Ref="BRD1"  Part="3" 
 F 0 "BRD1" H 2000 4450 60  0000 C CNN
 F 1 "BEAGLEBONE" H 2200 4350 60  0000 C CNN
 F 2 "dougsLib:BEAGLEBONE" H 1850 4200 60  0000 C CNN
@@ -138,298 +133,215 @@ NoConn ~ 1600 5650
 NoConn ~ 1600 5550
 NoConn ~ 1600 4850
 NoConn ~ 1600 4750
-Text Label 3500 6450 0    60   ~ 0
-EHRPWM2A
-Text Label 3500 5450 0    60   ~ 0
-GPIO0_27
-Text Label 3500 4450 0    60   ~ 0
-GPIO1_15
-Text Label 3500 3950 0    60   ~ 0
-EHRPWM2B
-Text Label 3500 2950 0    60   ~ 0
-GPIO1_13
-Text Label 3500 1450 0    60   ~ 0
-TIMER4
-Wire Wire Line
-	4300 1450 3450 1450
-Wire Wire Line
-	4300 2950 3450 2950
-Wire Wire Line
-	4300 4450 3450 4450
-Wire Wire Line
-	4300 6450 3450 6450
-Wire Wire Line
-	4300 5450 3450 5450
-Wire Wire Line
-	4300 3950 3450 3950
-Text Label 3500 6950 0    60   ~ 0
-GPIO1_29
-Text Label 3500 5950 0    60   ~ 0
-GPIO2_1
-Text Label 3500 4950 0    60   ~ 0
-GPIO1_14
-Text Label 3500 3450 0    60   ~ 0
-GPIO1_12
-Text Label 3500 1950 0    60   ~ 0
-TIMER6
-Text Label 3500 950  0    60   ~ 0
-TIMER7
-Wire Wire Line
-	4300 6950 3450 6950
-Wire Wire Line
-	4300 5950 3450 5950
-Wire Wire Line
-	4300 1950 3450 1950
-Wire Wire Line
-	4300 950  3450 950 
-Wire Wire Line
-	4300 3450 3450 3450
-Wire Wire Line
-	4300 4950 3450 4950
-$Comp
-L CONN_3 J23
-U 1 1 564908E3
-P 4650 1550
-F 0 "J23" H 4650 1350 50  0000 C CNN
-F 1 "CONN_3" V 4700 1550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 1750 60  0000 C CNN
-F 3 "" H 4650 1550 60  0000 C CNN
-	1    4650 1550
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J20
-U 1 1 56490ADE
-P 4650 3050
-F 0 "J20" H 4650 2850 50  0000 C CNN
-F 1 "CONN_3" V 4700 3050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 3250 60  0000 C CNN
-F 3 "" H 4650 3050 60  0000 C CNN
-	1    4650 3050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J18
-U 1 1 56490B7D
-P 4650 4050
-F 0 "J18" H 4650 3850 50  0000 C CNN
-F 1 "CONN_3" V 4700 4050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 4250 60  0000 C CNN
-F 3 "" H 4650 4050 60  0000 C CNN
-	1    4650 4050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J17
-U 1 1 56490BC3
-P 4650 4550
-F 0 "J17" H 4650 4350 50  0000 C CNN
-F 1 "CONN_3" V 4700 4550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 4750 60  0000 C CNN
-F 3 "" H 4650 4550 60  0000 C CNN
-	1    4650 4550
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J15
-U 1 1 56490CA6
-P 4650 5550
-F 0 "J15" H 4650 5350 50  0000 C CNN
-F 1 "CONN_3" V 4700 5550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 5750 60  0000 C CNN
-F 3 "" H 4650 5550 60  0000 C CNN
-	1    4650 5550
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J13
-U 1 1 56490CE0
-P 4650 6550
-F 0 "J13" H 4650 6350 50  0000 C CNN
-F 1 "CONN_3" V 4700 6550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 6750 60  0000 C CNN
-F 3 "" H 4650 6550 60  0000 C CNN
-	1    4650 6550
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J24
-U 1 1 56490E0E
-P 4650 1050
-F 0 "J24" H 4650 850 50  0000 C CNN
-F 1 "CONN_3" V 4700 1050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 1250 60  0000 C CNN
-F 3 "" H 4650 1050 60  0000 C CNN
-	1    4650 1050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J22
-U 1 1 56490E14
-P 4650 2050
-F 0 "J22" H 4650 1850 50  0000 C CNN
-F 1 "CONN_3" V 4700 2050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 2250 60  0000 C CNN
-F 3 "" H 4650 2050 60  0000 C CNN
-	1    4650 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J19
-U 1 1 56490E1A
-P 4650 3550
-F 0 "J19" H 4650 3350 50  0000 C CNN
-F 1 "CONN_3" V 4700 3550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 3750 60  0000 C CNN
-F 3 "" H 4650 3550 60  0000 C CNN
-	1    4650 3550
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J16
-U 1 1 56490FE6
-P 4650 5050
-F 0 "J16" H 4650 4850 50  0000 C CNN
-F 1 "CONN_3" V 4700 5050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 5250 60  0000 C CNN
-F 3 "" H 4650 5050 60  0000 C CNN
-	1    4650 5050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J14
-U 1 1 56490FEC
-P 4650 6050
-F 0 "J14" H 4650 5850 50  0000 C CNN
-F 1 "CONN_3" V 4700 6050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 6250 60  0000 C CNN
-F 3 "" H 4650 6050 60  0000 C CNN
-	1    4650 6050
-	1    0    0    1   
-$EndComp
-$Comp
-L CONN_3 J12
-U 1 1 56490FF2
-P 4650 7050
-F 0 "J12" H 4650 6850 50  0000 C CNN
-F 1 "CONN_3" V 4700 7050 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 7250 60  0000 C CNN
-F 3 "" H 4650 7050 60  0000 C CNN
-	1    4650 7050
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	4300 1150 4200 1150
-Wire Wire Line
-	4200 1150 4200 7300
-Wire Wire Line
-	4300 7150 4200 7150
-Connection ~ 4200 7150
-Wire Wire Line
-	4300 6650 4200 6650
-Connection ~ 4200 6650
-Wire Wire Line
-	4300 6150 4200 6150
-Connection ~ 4200 6150
-Wire Wire Line
-	4300 5650 4200 5650
-Connection ~ 4200 5650
-Wire Wire Line
-	4300 5150 4200 5150
-Connection ~ 4200 5150
-Wire Wire Line
-	4300 4650 4200 4650
-Connection ~ 4200 4650
-Wire Wire Line
-	4300 4150 4200 4150
-Connection ~ 4200 4150
-Wire Wire Line
-	4300 3650 4200 3650
-Connection ~ 4200 3650
-Wire Wire Line
-	4300 3150 4200 3150
-Connection ~ 4200 3150
-Wire Wire Line
-	4300 2650 4200 2650
-Connection ~ 4200 2650
-$Comp
-L GND #PWR04
-U 1 1 56492E09
-P 4200 7300
-F 0 "#PWR04" H 4200 7300 30  0001 C CNN
-F 1 "GND" H 4200 7230 30  0001 C CNN
-F 2 "" H 4200 7300 60  0000 C CNN
-F 3 "" H 4200 7300 60  0000 C CNN
-	1    4200 7300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 7050 4300 7050
-Wire Wire Line
-	4100 750  4100 7050
-Wire Wire Line
-	4300 1050 4100 1050
-Connection ~ 4100 1050
-Wire Wire Line
-	4300 2150 4200 2150
-Connection ~ 4200 2150
-Wire Wire Line
-	4300 2050 4100 2050
-Connection ~ 4100 2050
-Wire Wire Line
-	4300 2550 4100 2550
-Connection ~ 4100 2550
-Wire Wire Line
-	4300 3050 4100 3050
-Connection ~ 4100 3050
-Wire Wire Line
-	4300 4050 4100 4050
-Connection ~ 4100 4050
-Wire Wire Line
-	4300 4550 4100 4550
-Connection ~ 4100 4550
-Wire Wire Line
-	4300 5550 4100 5550
-Connection ~ 4100 5550
-Wire Wire Line
-	4300 5050 4100 5050
-Connection ~ 4100 5050
-Wire Wire Line
-	4300 6050 4100 6050
-Connection ~ 4100 6050
-Wire Wire Line
-	4300 6550 4100 6550
-Connection ~ 4100 6550
-Wire Wire Line
-	4100 750  3450 750 
-Text GLabel 3450 750  0    60   UnSpc ~ 0
-VDD_3V3EXP
 Text Label 1050 1350 0    60   ~ 0
 TIMER5
 Wire Wire Line
 	1000 1350 1650 1350
-Text Label 3500 2450 0    60   ~ 0
-TIMER5
+Text GLabel 6750 1400 0    60   Input ~ 0
+VDD_3V3EXP
 $Comp
-L CONN_3 J21
-U 1 1 5649913A
-P 4650 2550
-F 0 "J21" H 4650 2350 50  0000 C CNN
-F 1 "CONN_3" V 4700 2550 40  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 5200 2750 60  0000 C CNN
-F 3 "" H 4650 2550 60  0000 C CNN
-	1    4650 2550
+L BBB-COMMS-2-rescue:CONN_01X03 H17
+U 1 1 593A342D
+P 7800 1400
+F 0 "H17" H 7800 1600 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 1400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 1700 50  0000 C CNN
+F 3 "" H 7800 1400 50  0000 C CNN
+	1    7800 1400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	4300 1650 4200 1650
-Connection ~ 4200 1650
+	6750 1400 7400 1400
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H16
+U 1 1 593A35B1
+P 7800 2000
+F 0 "H16" H 7800 2200 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 2000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 2300 50  0000 C CNN
+F 3 "" H 7800 2000 50  0000 C CNN
+	1    7800 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H15
+U 1 1 593A362F
+P 7800 2600
+F 0 "H15" H 7800 2800 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 2600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 2900 50  0000 C CNN
+F 3 "" H 7800 2600 50  0000 C CNN
+	1    7800 2600
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H14
+U 1 1 593A36AC
+P 7800 3200
+F 0 "H14" H 7800 3400 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 3500 50  0000 C CNN
+F 3 "" H 7800 3200 50  0000 C CNN
+	1    7800 3200
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H13
+U 1 1 593A3788
+P 7800 3800
+F 0 "H13" H 7800 4000 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 3800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 4100 50  0000 C CNN
+F 3 "" H 7800 3800 50  0000 C CNN
+	1    7800 3800
+	1    0    0    1   
+$EndComp
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H12
+U 1 1 593A3811
+P 7800 4400
+F 0 "H12" H 7800 4600 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 4400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 4700 50  0000 C CNN
+F 3 "" H 7800 4400 50  0000 C CNN
+	1    7800 4400
+	1    0    0    1   
+$EndComp
 Wire Wire Line
-	4300 1550 4100 1550
-Connection ~ 4100 1550
+	7600 1500 7500 1500
 Wire Wire Line
-	4300 2450 3450 2450
+	7500 1500 7500 2100
 Wire Wire Line
-	4300 3550 4100 3550
-Connection ~ 4100 3550
+	7500 4500 7600 4500
+Connection ~ 7500 4500
+$Comp
+L power:GND #PWR04
+U 1 1 593A3A5B
+P 7500 5750
+F 0 "#PWR04" H 7500 5500 50  0001 C CNN
+F 1 "GND" H 7500 5600 50  0000 C CNN
+F 2 "" H 7500 5750 50  0000 C CNN
+F 3 "" H 7500 5750 50  0000 C CNN
+	1    7500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3900 7500 3900
+Connection ~ 7500 3900
+Wire Wire Line
+	7600 3300 7500 3300
+Connection ~ 7500 3300
+Wire Wire Line
+	7600 2700 7500 2700
+Connection ~ 7500 2700
+Wire Wire Line
+	7600 2100 7500 2100
+Connection ~ 7500 2100
+Wire Wire Line
+	7400 4400 7600 4400
+Wire Wire Line
+	7400 1400 7400 2000
+Connection ~ 7400 1400
+Wire Wire Line
+	7600 2000 7400 2000
+Connection ~ 7400 2000
+Wire Wire Line
+	7600 2600 7400 2600
+Connection ~ 7400 2600
+Wire Wire Line
+	7600 3200 7400 3200
+Connection ~ 7400 3200
+Wire Wire Line
+	7600 3800 7400 3800
+Connection ~ 7400 3800
+Wire Wire Line
+	7600 1300 6750 1300
+Wire Wire Line
+	7600 1900 6750 1900
+Wire Wire Line
+	7600 2500 6750 2500
+Wire Wire Line
+	7600 3100 6750 3100
+Wire Wire Line
+	7600 3700 6750 3700
+Text Label 6800 1300 0    60   ~ 0
+GPIO1_13
+Text Label 6800 1900 0    60   ~ 0
+GPIO1_12
+Text Label 6800 2500 0    60   ~ 0
+GPIO1_15
+Text Label 6800 3100 0    60   ~ 0
+GPIO1_14
+Text Label 6800 3700 0    60   ~ 0
+GPIO0_27
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X03 H11
+U 1 1 593A51C4
+P 7800 5000
+F 0 "H11" H 7800 5200 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 5000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8600 5300 50  0000 C CNN
+F 3 "" H 7800 5000 50  0000 C CNN
+	1    7800 5000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7600 5100 7500 5100
+Connection ~ 7500 5100
+Wire Wire Line
+	7400 5000 7600 5000
+Connection ~ 7400 4400
+Wire Wire Line
+	7600 4300 6750 4300
+Text Label 6800 4300 0    60   ~ 0
+GPIO2_1
+Wire Wire Line
+	7600 4900 6750 4900
+Text Label 6800 4900 0    60   ~ 0
+GPIO1_29
+Wire Wire Line
+	7400 5550 7600 5550
+Connection ~ 7400 5000
+$Comp
+L BBB-COMMS-2-rescue:CONN_01X02 H10
+U 1 1 593B2A7A
+P 7800 5600
+F 0 "H10" H 7800 5750 50  0000 C CNN
+F 1 "CONN_01X02" V 7900 5600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7800 5600 50  0000 C CNN
+F 3 "" H 7800 5600 50  0000 C CNN
+	1    7800 5600
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7600 5650 7500 5650
+Connection ~ 7500 5650
+Wire Wire Line
+	7500 4500 7500 5100
+Wire Wire Line
+	7500 3900 7500 4500
+Wire Wire Line
+	7500 3300 7500 3900
+Wire Wire Line
+	7500 2700 7500 3300
+Wire Wire Line
+	7500 2100 7500 2700
+Wire Wire Line
+	7400 1400 7600 1400
+Wire Wire Line
+	7400 2000 7400 2600
+Wire Wire Line
+	7400 2600 7400 3200
+Wire Wire Line
+	7400 3200 7400 3800
+Wire Wire Line
+	7400 3800 7400 4400
+Wire Wire Line
+	7500 5100 7500 5650
+Wire Wire Line
+	7400 4400 7400 5000
+Wire Wire Line
+	7400 5000 7400 5550
+Wire Wire Line
+	7500 5650 7500 5750
 $EndSCHEMATC
