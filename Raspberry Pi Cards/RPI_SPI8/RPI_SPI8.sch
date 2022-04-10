@@ -4,9 +4,9 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "RASPBERRY PI SPI8"
-Date "2021-06-18"
-Rev "2"
+Title "RASPBERRY PI )RPI_SPI8)"
+Date "2022-04-09"
+Rev "3"
 Comp "LAND BOARDS LLC"
 Comment1 ""
 Comment2 ""
@@ -356,18 +356,6 @@ Text Notes 4950 2450 0    60   ~ 0
 IO_1
 Text Notes 1550 2450 0    60   ~ 0
 IO_0
-Text Label 2900 6200 0    60   ~ 0
-SPIMOSI
-Text Label 2900 6300 0    60   ~ 0
-SPIMISO
-Text Label 2900 6400 0    60   ~ 0
-SPISCK
-Wire Wire Line
-	3650 6200 2800 6200
-Wire Wire Line
-	3650 6300 2800 6300
-Wire Wire Line
-	3650 6400 2800 6400
 Text Notes 4950 2350 0    60   ~ 0
 IO_7
 Text Notes 4950 2250 0    60   ~ 0
