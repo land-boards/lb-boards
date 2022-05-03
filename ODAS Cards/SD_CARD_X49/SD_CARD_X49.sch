@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "SD_CARD_X49"
-Date "2020-02-21"
-Rev "1"
+Date "2022-05-02"
+Rev "2"
 Comp "Land Boards LLC"
 Comment1 ""
 Comment2 ""
@@ -89,7 +89,7 @@ U 1 1 51CCA2BF
 P 1850 7100
 F 0 "C2" H 1850 7200 40  0000 L CNN
 F 1 "0.1uF" H 1856 7015 40  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 1850 6700 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1850 6450 30  0000 C CNN
 F 3 "~" H 1850 7100 60  0000 C CNN
 	1    1850 7100
 	1    0    0    -1  
@@ -100,7 +100,7 @@ U 1 1 51CCA2CE
 P 2200 7100
 F 0 "C4" H 2200 7200 40  0000 L CNN
 F 1 "0.1uF" H 2206 7015 40  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 2200 6550 30  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2200 6400 30  0000 C CNN
 F 3 "~" H 2200 7100 60  0000 C CNN
 	1    2200 7100
 	1    0    0    -1  
@@ -119,7 +119,7 @@ U 1 1 57F0F90C
 P 1450 7100
 F 0 "C1" H 1450 7200 40  0000 L CNN
 F 1 "10uF" H 1456 7015 40  0000 L CNN
-F 2 "Resistors_SMD:R_1210_HandSoldering" H 1450 6750 30  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 1450 6500 30  0000 C CNN
 F 3 "~" H 1450 7100 60  0000 C CNN
 	1    1450 7100
 	1    0    0    -1  
@@ -140,7 +140,7 @@ U 1 1 5DD34C75
 P 7850 4750
 F 0 "J2" H 7850 5300 50  0000 C CNN
 F 1 "SD_Card" H 7850 4200 50  0000 C CNN
-F 2 "LandBoards_Conns:SD_CARD" H 7850 4750 50  0001 C CNN
+F 2 "LandBoards_Conns:SD_CARD" H 7850 4100 50  0000 C CNN
 F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 7850 4750 50  0001 C CNN
 	1    7850 4750
 	1    0    0    -1  
@@ -171,7 +171,7 @@ U 1 1 5DD354A1
 P 4150 3050
 F 0 "D1" H 4150 2950 50  0000 C CNN
 F 1 "LED_ALT" H 4150 3150 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm_IRBlack" H 4150 3050 50  0001 C CNN
+F 2 "LED_THT:LED_D3.0mm_Horizontal_O1.27mm_Z2.0mm_IRBlack" H 3900 3300 20  0000 C CNN
 F 3 "~" H 4150 3050 50  0001 C CNN
 	1    4150 3050
 	-1   0    0    1   
@@ -182,7 +182,7 @@ U 1 1 5DD35555
 P 4550 3050
 F 0 "R1" V 4450 3050 50  0000 L CNN
 F 1 "1K" V 4650 3050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4550 3050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4850 3050 20  0000 C CNN
 F 3 "~" H 4550 3050 50  0001 C CNN
 	1    4550 3050
 	0    1    1    0   
@@ -345,7 +345,7 @@ U 1 1 5DD6AAAE
 P 5200 3900
 F 0 "U1" H 5200 4450 50  0000 C CNN
 F 1 "TXS0104" H 5200 3350 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5200 4600 30  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5200 4600 35  0000 C CNN
 F 3 "DOCUMENTATION" H 5200 3150 50  0001 C CNN
 	1    5200 3900
 	-1   0    0    1   
@@ -424,7 +424,7 @@ U 1 1 5DDC66A7
 P 5400 1550
 F 0 "J3" H 5480 1542 50  0000 L CNN
 F 1 "Conn_01x02" H 5480 1451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 5400 1550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 5600 1350 20  0000 C CNN
 F 3 "~" H 5400 1550 50  0001 C CNN
 	1    5400 1550
 	1    0    0    -1  
@@ -454,10 +454,10 @@ Wire Wire Line
 Text Label 3400 4450 0    50   ~ 0
 ~CD
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR0104
 U 1 1 5DDD3623
 P 3600 1500
-F 0 "#PWR?" H 3600 1600 30  0001 C CNN
+F 0 "#PWR0104" H 3600 1600 30  0001 C CNN
 F 1 "VCC" H 3600 1600 30  0000 C CNN
 F 2 "" H 3600 1500 60  0001 C CNN
 F 3 "" H 3600 1500 60  0001 C CNN
@@ -467,4 +467,24 @@ $EndComp
 Wire Wire Line
 	3600 1500 3600 1550
 Connection ~ 3600 1550
+$Comp
+L Device:C_Small C3
+U 1 1 62700B43
+P 5050 2400
+F 0 "C3" H 5142 2480 50  0000 L CNN
+F 1 "0.01uF" H 5142 2389 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4200 2050 35  0000 L CNN
+F 3 "~" H 5050 2400 50  0001 C CNN
+	1    5050 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2250 5050 2250
+Wire Wire Line
+	5050 2250 5050 2300
+Wire Wire Line
+	4450 2650 5050 2650
+Wire Wire Line
+	5050 2650 5050 2500
+Connection ~ 4450 2650
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=9/22/2021 6:41:11 PM
+update=5/2/2022 10:04:28 AM
 version=1
 last_client=kicad
 [general]
@@ -17,14 +17,14 @@ PageLayoutDescrFile=
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=
+NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=
+LastNetListRead=SD_CARD_X49.net
 CopperLayerCount=2
 BoardThickness=1.6002
 AllowMicroVias=0
@@ -68,7 +68,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=Front
 Type=0
