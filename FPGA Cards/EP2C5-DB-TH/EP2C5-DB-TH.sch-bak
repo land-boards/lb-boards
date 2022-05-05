@@ -950,15 +950,9 @@ F 3 "" H 9050 6050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 6350 7550 6350
-Text Label 7600 6350 0    60   ~ 0
-P92
-Wire Wire Line
 	8150 5950 8050 5950
 Wire Wire Line
 	8050 5950 8050 6250
-Wire Wire Line
-	8050 6250 8150 6250
 Connection ~ 8050 6250
 $Comp
 L EP2C5-DB-TH-rescue:GND-power-EP2C5-DB-rescue #PWR011
@@ -986,14 +980,6 @@ Wire Wire Line
 	8150 6050 7950 6050
 Wire Wire Line
 	7950 6050 7950 5550
-Wire Wire Line
-	8150 6150 7550 6150
-Text Label 7600 6150 0    60   ~ 0
-P94
-Wire Wire Line
-	8150 5750 7550 5750
-Text Label 7600 5750 0    60   ~ 0
-P97
 Text Notes 3900 6700 0    63   ~ 0
 DATA\nCLK
 $Comp
@@ -1362,10 +1348,6 @@ Wire Wire Line
 Wire Wire Line
 	4850 2200 4850 2150
 Wire Wire Line
-	8150 5850 7550 5850
-Text Label 7600 5850 0    60   ~ 0
-P93
-Wire Wire Line
 	9950 6150 10100 6150
 Wire Wire Line
 	10100 6150 10100 6250
@@ -1580,36 +1562,36 @@ Text Notes 900  1600 0    60   ~ 0
 (NC)
 Text Notes 900  1700 0    60   ~ 0
 (NC)
-Text Label 6700 5100 0    60   ~ 0
+Text Label 6650 4800 0    60   ~ 0
 P53
 Wire Wire Line
-	6600 5100 7100 5100
+	6550 4800 7050 4800
 Wire Wire Line
-	7100 5100 7100 5300
+	7050 4800 7050 5000
 Wire Wire Line
-	7100 5600 7100 5700
+	7050 5300 7050 5400
 Wire Wire Line
-	7100 6000 7100 6100
+	7050 5700 7050 5800
 $Comp
 L EP2C5-DB-TH-rescue:GND-power-EP2C5-DB-rescue #PWR022
 U 1 1 5884F07C
-P 7100 6100
-F 0 "#PWR022" H 7100 5850 50  0001 C CNN
-F 1 "GND" H 7100 5950 50  0000 C CNN
-F 2 "" H 7100 6100 50  0000 C CNN
-F 3 "" H 7100 6100 50  0000 C CNN
-	1    7100 6100
+P 7050 5800
+F 0 "#PWR022" H 7050 5550 50  0001 C CNN
+F 1 "GND" H 7050 5650 50  0000 C CNN
+F 2 "" H 7050 5800 50  0000 C CNN
+F 3 "" H 7050 5800 50  0000 C CNN
+	1    7050 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L EP2C5-DB-TH-rescue:R-Device-EP2C5-DB-rescue R17
 U 1 1 5884F709
-P 7100 5450
-F 0 "R17" V 7180 5450 50  0000 C CNN
-F 1 "220" V 7100 5450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 7030 5450 20  0000 C CNN
-F 3 "" H 7100 5450 30  0000 C CNN
-	1    7100 5450
+P 7050 5150
+F 0 "R17" V 7130 5150 50  0000 C CNN
+F 1 "220" V 7050 5150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6980 5150 20  0000 C CNN
+F 3 "" H 7050 5150 30  0000 C CNN
+	1    7050 5150
 	1    0    0    -1  
 $EndComp
 Text Label 6950 2350 0    60   ~ 0
@@ -1713,21 +1695,21 @@ Text Notes 4800 4900 0    60   ~ 0
 $Comp
 L EP2C5-DB-TH-rescue:LED_ALT-Device-EP2C5-DB-rescue DS1
 U 1 1 5CAA4486
-P 7100 5850
-F 0 "DS1" V 7138 5732 50  0000 R CNN
-F 1 "LED_ALT" V 7047 5732 50  0000 R CNN
-F 2 "LEDs:LED_D5.0mm" H 7100 5850 50  0001 C CNN
-F 3 "~" H 7100 5850 50  0001 C CNN
-	1    7100 5850
+P 7050 5550
+F 0 "DS1" V 7088 5432 50  0000 R CNN
+F 1 "LED_ALT" V 6997 5432 50  0000 R CNN
+F 2 "LEDs:LED_D5.0mm" H 7050 5550 50  0001 C CNN
+F 3 "~" H 7050 5550 50  0001 C CNN
+	1    7050 5550
 	0    -1   -1   0   
 $EndComp
-Text Notes 7800 6350 0    50   ~ 0
+Text Notes 7750 6350 0    50   ~ 0
 MISO
-Text Notes 7800 6150 0    50   ~ 0
+Text Notes 7750 6150 0    50   ~ 0
 SCLK
-Text Notes 7800 5750 0    50   ~ 0
+Text Notes 7750 5750 0    50   ~ 0
 SDCS
-Text Notes 7800 5850 0    50   ~ 0
+Text Notes 7750 5850 0    50   ~ 0
 MOSI
 $Comp
 L Connector_Generic:Conn_01x06 J7
@@ -1775,4 +1757,22 @@ F 3 "" H 4800 3900 30  0000 C CNN
 	1    4800 3900
 	0    -1   -1   0   
 $EndComp
+Text Label 7500 5850 0    60   ~ 0
+P93
+Text Label 7500 5750 0    60   ~ 0
+P97
+Text Label 7500 6150 0    60   ~ 0
+P94
+Text Label 7500 6350 0    60   ~ 0
+P92
+Wire Wire Line
+	8050 6250 8150 6250
+Wire Wire Line
+	8150 5850 7400 5850
+Wire Wire Line
+	8150 5750 7400 5750
+Wire Wire Line
+	8150 6150 7400 6150
+Wire Wire Line
+	8150 6350 7400 6350
 $EndSCHEMATC
