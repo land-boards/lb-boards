@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Raspberry Pi Cards\PiPicoMite01\PiPicoMite01.kicad_sch</source>
-    <date>5/15/2022 7:12:03 PM</date>
+    <date>5/16/2022 6:50:28 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -143,7 +143,7 @@
       <tstamps>00000000-0000-0000-0000-0000627b5dae</tstamps>
     </comp>
     <comp ref="J3">
-      <value>HEADER, 1x20</value>
+      <value>Socket, Female. 1x20</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -152,7 +152,7 @@
       <tstamps>a2095d65-2182-4f3d-96c4-50601ede76e1</tstamps>
     </comp>
     <comp ref="J4">
-      <value>Conn_02x02_Odd_Even</value>
+      <value>Header, Vert, 2x2</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -161,7 +161,7 @@
       <tstamps>2b62d50f-99ff-426c-b19e-b7062454e685</tstamps>
     </comp>
     <comp ref="J5">
-      <value>HEADER, 1x20</value>
+      <value>Socket, Female. 1x20</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -170,7 +170,7 @@
       <tstamps>aff9b715-004b-496b-b7a5-8a3d352dea1a</tstamps>
     </comp>
     <comp ref="J6">
-      <value>Conn_02x10_Odd_Even</value>
+      <value>Header, Vert, 2x10</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_02x10_Odd_Even" description="Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -197,7 +197,7 @@
       <tstamps>c3973cc8-ab60-43d1-b890-28d77514165a</tstamps>
     </comp>
     <comp ref="J9">
-      <value>Conn_02x03_Odd_Even</value>
+      <value>Header, Vert, 2x3</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -269,13 +269,13 @@
       <tstamps>8b6100ba-f9bf-4030-91d0-aee3dcd62d3a</tstamps>
     </comp>
     <comp ref="R3">
-      <value>390</value>
+      <value>270</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00006065ae55</tstamps>
+      <tstamps>00000000-0000-0000-0000-00005dee8e1c</tstamps>
     </comp>
     <comp ref="R4">
       <value>270</value>
@@ -287,13 +287,13 @@
       <tstamps>00000000-0000-0000-0000-000060670596</tstamps>
     </comp>
     <comp ref="R5">
-      <value>270</value>
+      <value>390</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005dee8e1c</tstamps>
+      <tstamps>00000000-0000-0000-0000-00006065ae55</tstamps>
     </comp>
     <comp ref="R6">
       <value>47</value>
@@ -1015,12 +1015,12 @@
     </net>
     <net code="23" name="/GP20">
       <node ref="J5" pin="15" pinfunction="Pin_15" pintype="passive"/>
-      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="I2C0SDA/GP20" pintype="bidirectional"/>
     </net>
     <net code="24" name="/GP21">
       <node ref="J5" pin="14" pinfunction="Pin_14" pintype="passive"/>
-      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
       <node ref="U1" pin="27" pinfunction="I2C0SCL/GP21" pintype="bidirectional"/>
     </net>
     <net code="25" name="/GP22">
@@ -1136,12 +1136,12 @@
     </net>
     <net code="52" name="/VGA_G">
       <node ref="P1" pin="2" pinfunction="P2" pintype="passive"/>
-      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
     <net code="53" name="/VGA_R">
       <node ref="P1" pin="1" pinfunction="P1" pintype="passive"/>
-      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
     </net>
     <net code="54" name="/VS">
       <node ref="P1" pin="14" pinfunction="P14" pintype="passive"/>
