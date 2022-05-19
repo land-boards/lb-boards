@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\I2C Cards\I2CIO16-DB25\I2CIO16-DB25.kicad_sch</source>
+    <date>5/18/2022 12:54:36 PM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>16-CHANNEL DIGITAL I/O</title>
+        <company>land-boards.com</company>
+        <rev>1</rev>
+        <date>2022-05-18</date>
+        <source>I2CIO16-DB25.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>47uF</value>
+      <footprint>Capacitors_ThroughHole:C_Radial_D5_L11_P2.5</footprint>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000580f56eb</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitors_ThroughHole:C_Rect_L7_W2_P5</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553d2ddf</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>DB25</value>
+      <footprint>LandBoards_Conns:DB25FC</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB25_Female" description="25-pin female D-SUB connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e2ea48e-c907-4299-8879-90157a676425</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>CONN_02X02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Horizontal</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Counter_Clockwise" description="Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000580ef093</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>CONN_02X04</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Horizontal</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000580f39c0</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_02x03_Counter_Clockwise</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Horizontal</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6b851ff0-c254-4811-9256-0398e83b09a3</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000537a5ca4</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000537a5c95</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000537a5c86</tstamps>
+    </comp>
+    <comp ref="MTG4">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000537a5c77</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553c2255</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>2.2K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553adca8</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>2.2K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553addb1</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553c09ea</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000058604185</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553c21cf</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000553c2213</tstamps>
+    </comp>
+    <comp ref="TESTED1">
+      <value>TESTED_COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000580f6225</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP23017P</value>
+      <footprint>Housings_DIP:DIP-28_W7.62mm</footprint>
+      <libsource lib="LandBoards_Semis" part="MCP23017P" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="I2CIO16-DB25.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005399a0be</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="DB25_Female">
+      <description>25-pin female D-SUB connector</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>DSUB*Female*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB25_Female</field>
+        <field name="Datasheet"> ~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+        <pin num="17" name="P17" type="passive"/>
+        <pin num="18" name="P18" type="passive"/>
+        <pin num="19" name="P19" type="passive"/>
+        <pin num="20" name="P20" type="passive"/>
+        <pin num="21" name="P21" type="passive"/>
+        <pin num="22" name="P22" type="passive"/>
+        <pin num="23" name="P23" type="passive"/>
+        <pin num="24" name="P24" type="passive"/>
+        <pin num="25" name="P25" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Counter_Clockwise">
+      <description>Generic connector, double row, 02x02, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Counter_Clockwise</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
+      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x05_Odd_Even">
+      <description>Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x05_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards_Semis" part="MCP23017P">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP23017P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GPB0" type="bidirectional"/>
+        <pin num="2" name="GPB1" type="bidirectional"/>
+        <pin num="3" name="GPB2" type="bidirectional"/>
+        <pin num="4" name="GPB3" type="bidirectional"/>
+        <pin num="5" name="GPB4" type="bidirectional"/>
+        <pin num="6" name="GPB5" type="bidirectional"/>
+        <pin num="7" name="GPB6" type="bidirectional"/>
+        <pin num="8" name="GPB7" type="bidirectional"/>
+        <pin num="9" name="VDD" type="power_in"/>
+        <pin num="10" name="VSS" type="power_in"/>
+        <pin num="12" name="SCL" type="input"/>
+        <pin num="13" name="SDA" type="input"/>
+        <pin num="15" name="A0" type="input"/>
+        <pin num="16" name="A1" type="input"/>
+        <pin num="17" name="A2" type="input"/>
+        <pin num="18" name="~{RST}" type="input"/>
+        <pin num="19" name="INTB" type="open_collector"/>
+        <pin num="20" name="INTA" type="open_collector"/>
+        <pin num="21" name="GPA0" type="bidirectional"/>
+        <pin num="22" name="GPA1" type="bidirectional"/>
+        <pin num="23" name="GPA2" type="bidirectional"/>
+        <pin num="24" name="GPS3" type="bidirectional"/>
+        <pin num="25" name="GPA4" type="bidirectional"/>
+        <pin num="26" name="GPA5" type="bidirectional"/>
+        <pin num="27" name="GPA6" type="bidirectional"/>
+        <pin num="28" name="GPA7" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.lib</uri>
+    </library>
+    <library logical="LandBoards_Semis">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Semis.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/A0">
+      <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="2" name="/A1">
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="3" name="/A2">
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="4" name="/G0">
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GPA0" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/G1">
+      <node ref="J1" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="GPA1" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/G2">
+      <node ref="J1" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="GPA2" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/G3">
+      <node ref="J1" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="GPS3" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/G4">
+      <node ref="J1" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="GPA4" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/G5">
+      <node ref="J1" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="GPA5" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/G6">
+      <node ref="J1" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="GPA6" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/G7">
+      <node ref="J1" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="GPA7" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/G8">
+      <node ref="J1" pin="23" pinfunction="P23" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GPB0" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/G9">
+      <node ref="J1" pin="22" pinfunction="P22" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GPB1" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/G10">
+      <node ref="J1" pin="21" pinfunction="P21" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="GPB2" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/G11">
+      <node ref="J1" pin="20" pinfunction="P20" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="GPB3" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/G12">
+      <node ref="J1" pin="19" pinfunction="P19" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="GPB4" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/G13">
+      <node ref="J1" pin="18" pinfunction="P18" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="GPB5" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/G14">
+      <node ref="J1" pin="17" pinfunction="P17" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GPB6" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/G15">
+      <node ref="J1" pin="16" pinfunction="P16" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="GPB7" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="/IA">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="INTA" pintype="open_collector"/>
+    </net>
+    <net code="21" name="/RST">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="~{RST}" pintype="input"/>
+    </net>
+    <net code="22" name="/SCL">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="23" name="/SDA">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="SDA" pintype="input"/>
+    </net>
+    <net code="24" name="/VCC">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="P14" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="25" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J1" pin="12" pinfunction="12" pintype="passive"/>
+      <node ref="J1" pin="13" pinfunction="13" pintype="passive"/>
+      <node ref="J1" pin="25" pinfunction="P25" pintype="passive"/>
+      <node ref="J3" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J3" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="26" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="unconnected-(J1-Pad11)">
+      <node ref="J1" pin="11" pinfunction="11" pintype="passive"/>
+    </net>
+    <net code="29" name="unconnected-(J1-Pad15)">
+      <node ref="J1" pin="15" pinfunction="P15" pintype="passive"/>
+    </net>
+    <net code="30" name="unconnected-(J1-Pad24)">
+      <node ref="J1" pin="24" pinfunction="P24" pintype="passive"/>
+    </net>
+    <net code="31" name="unconnected-(U1-Pad19)">
+      <node ref="U1" pin="19" pinfunction="INTB" pintype="open_collector"/>
+    </net>
+  </nets>
+</export>
