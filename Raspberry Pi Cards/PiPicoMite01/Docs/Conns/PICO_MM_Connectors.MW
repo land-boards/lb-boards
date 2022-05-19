@@ -2,85 +2,105 @@
 ! GP
 ! FUNCTION
 ! PICO PIN
+! 
+! GP
+! FUNCTION
+! PICO PIN
 |-
-| GND
-| AUDIO-GND
-| 8
-|-
-| GP6
-| AUDIO-L
-| 9
-|-
-| GP7
-| AUDIO-R
-| 10
-|-
-| GP8
-| PS2_CLK
-| 11
-|-
-| GP9
-| PS2_DATA
-| 12
-|-
-| GP10
-| SD_SCK
-| 14
-|-
-| GP11
-| SD_MOSI
-| 15
-|-
-| GP12
-| SD_MISO
-| 16
-|-
-| GP13
-| SD_SLVSEL
-| 17
-|-
-| GP14
-| I2C1SDA
-| 19
-|-
-| GP15
-| I2C1SCL
-| 20
-|-
+| GP0
+| I2C1_INT (MCP23017)
+| 1
+| 
 | GP16
 | VGA_HSYNC
 | 21
 |-
+| GND
+| AUDIO-GND
+| 8
+| 
 | GP17
 | VGA_VSYNC
 | 22
 |-
+| GP6
+| AUDIO-L
+| 9
+| 
 | GP18
 | VGA_BLU
 | 24
 |-
+| GP7
+| AUDIO-R
+| 10
+| 
 | GP19
 | VGA_GRN_LO
 | 25
 |-
+| GP8
+| PS2_CLK
+| 11
+| 
 | GP20
 | VGA_GRN_HI
 | 26
 |-
+| GP9
+| PS2_DATA
+| 12
+| 
 | GP21
 | VGA_RED
 | 27
 |-
+| GP10
+| SD_SCK
+| 14
+| 
 | VSYS
 | PS2_5V
 | 39
 |-
+| GP11
+| SD_MOSI
+| 15
+| 
 | 3.3V
 | PS2_3.3V
 | 
 |-
+| GP12
+| SD_MISO
+| 16
+| 
 | 3.3V
 | SD_3.3V
+| 
+|-
+| GP13
+| SD_SLVSEL
+| 17
+| 
+| 
+| 
+| 
+|-
+| GP14
+| I2C1_SDA (MCP23017)
+| 19
+| 
+| 
+| 
+| 
+|-
+| GP15
+| I2C1_SCL (MCP23017)
+| 20
+| 
+| 
+| 
 | 
 |-
 |}
