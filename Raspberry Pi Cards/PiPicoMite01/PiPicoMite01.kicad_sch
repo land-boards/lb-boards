@@ -4925,7 +4925,7 @@
   (symbol (lib_id "power:GND") (at 77.47 115.57 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid aa491b2a-ba5a-43d3-8810-4eb82571215d)
-    (property "Reference" "#PWR?" (id 0) (at 77.47 121.92 0)
+    (property "Reference" "#PWR0102" (id 0) (at 77.47 121.92 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 77.47 119.38 0))
@@ -5057,7 +5057,7 @@
   (symbol (lib_id "power:+3.3V") (at 77.47 101.6 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d68ba233-86ab-4bb0-840d-b6f5f1aad046)
-    (property "Reference" "#PWR?" (id 0) (at 77.47 105.41 0)
+    (property "Reference" "#PWR0101" (id 0) (at 77.47 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (id 1) (at 77.47 98.044 0))
@@ -5228,11 +5228,11 @@
     (path "/8d014086-3e33-4bc0-8327-409754df19be"
       (reference "#PWR021") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/aa491b2a-ba5a-43d3-8810-4eb82571215d"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/d68ba233-86ab-4bb0-840d-b6f5f1aad046"
-      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+      (reference "#PWR0101") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/aa491b2a-ba5a-43d3-8810-4eb82571215d"
+      (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005e4c8faa"
       (reference "C1") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm")
