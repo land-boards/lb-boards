@@ -70,6 +70,9 @@
   )
 
 
+  (no_connect (at 135.89 182.88) (uuid bf7c5623-e76c-463e-92ec-34c7f2e1a568))
+  (no_connect (at 135.89 179.07) (uuid bf7c5623-e76c-463e-92ec-34c7f2e1a568))
+
   (symbol (lib_id "BBB-GVS-4-rescue:CONN_1") (at 139.7 182.88 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000054e53947)
@@ -256,14 +259,11 @@
     (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cbcb"
       (reference "C1") (unit 1) (value "1uF") (footprint "Capacitors_SMD:C_0805_HandSoldering")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae3e"
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae5c"
       (reference "C2") (unit 1) (value "104") (footprint "Capacitors_SMD:C_0805_HandSoldering")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae4d"
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae3e"
       (reference "C3") (unit 1) (value "104") (footprint "Capacitors_SMD:C_0805_HandSoldering")
-    )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae5c"
-      (reference "C4") (unit 1) (value "104") (footprint "Capacitors_SMD:C_0805_HandSoldering")
     )
     (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c05879"
       (reference "D1") (unit 1) (value "LED") (footprint "Resistors_SMD:R_0805_HandSoldering")
@@ -271,10 +271,10 @@
     (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adff8d"
       (reference "D2") (unit 1) (value "LED") (footprint "Resistors_SMD:R_0805_HandSoldering")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aad570"
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c053d8"
       (reference "F1") (unit 1) (value "FUSE") (footprint "Capacitors_SMD:C_1206_HandSoldering")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c053d8"
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aad570"
       (reference "F2") (unit 1) (value "FUSE") (footprint "Capacitors_SMD:C_1206_HandSoldering")
     )
     (path "/00000000-0000-0000-0000-000054e5394d"
@@ -289,11 +289,11 @@
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649daf0"
       (reference "J2") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
     )
-    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649e2e2"
-      (reference "J3") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
-    )
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c7af"
-      (reference "J4") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+      (reference "J3") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649e2e2"
+      (reference "J4") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
     )
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649d864"
       (reference "J5") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
@@ -301,11 +301,11 @@
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649d0cb"
       (reference "J6") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
     )
-    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c787"
-      (reference "J7") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
-    )
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c8ab"
-      (reference "J8") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+      (reference "J7") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c787"
+      (reference "J8") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
     )
     (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649de55"
       (reference "J9") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
@@ -334,20 +334,20 @@
     (path "/00000000-0000-0000-0000-00004eb0f8c5/00000000-0000-0000-0000-000054e261b0"
       (reference "P1") (unit 1) (value "CONN_8") (footprint "Pin_Headers:Pin_Header_Straight_1x08")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c0587f"
-      (reference "R1") (unit 1) (value "120") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adff9c"
-      (reference "R2") (unit 1) (value "330") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053f103c2"
-      (reference "R3") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cace"
+      (reference "R1") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cac9"
+      (reference "R2") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c0587f"
+      (reference "R3") (unit 1) (value "120") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053f103c2"
       (reference "R4") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
-    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cace"
-      (reference "R5") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adff9c"
+      (reference "R5") (unit 1) (value "330") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-000054e53953"
       (reference "TESTED1") (unit 1) (value "COUPON") (footprint "REV_BLOCK")
@@ -356,10 +356,10 @@
       (reference "U1") (unit 1) (value "I2C-EEPROM") (footprint "dougsLib:SO8E-wider")
     )
     (path "/00000000-0000-0000-0000-00004eb0f8c5/ec2e0d5a-2ed9-46c3-91e8-921d6f55a2ac"
-      (reference "U4") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_5.3x10.2mm_P1.27mm")
+      (reference "U4") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_3.9x8.65mm_P1.27mm")
     )
     (path "/00000000-0000-0000-0000-00004eb0f8c5/d5765701-87de-4b69-9a3c-eaf69dbc75db"
-      (reference "U5") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_5.3x10.2mm_P1.27mm")
+      (reference "U5") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_3.9x8.65mm_P1.27mm")
     )
   )
 )
