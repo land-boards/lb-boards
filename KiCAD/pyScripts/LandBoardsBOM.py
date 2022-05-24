@@ -1,5 +1,7 @@
 #
-# Example python script to generate a BOM from a KiCad generic netlist
+# Python script to generate a BOM from a KiCad generic netlist
+#
+# Land Boards LLC 2022
 #
 # Example: Sorted and Grouped CSV BOM
 #
@@ -9,12 +11,10 @@
     Output: CSV (comma-separated)
     Grouped By: Value
     Sorted By: Ref
-    Fields: Item, Qty, Reference(s), Value, LibPart, Footprint, Datasheet, all additional symbol fields
-
-    Outputs ungrouped components first, then outputs grouped components.
+    Fields: Item, Qty, Reference(s), Value/Path to Datasheet
 
     Command line:
-    python "pathToFile/bom_csv_grouped_by_value.py" "%I" "%O.csv"
+    python "pathToFile/LandBoardsBOM.py" "%I" "%O.csv"
 """
 
 from __future__ import print_function
@@ -92,7 +92,7 @@ partfields -= set( ['Reference', 'Value', 'Datasheet', 'Footprint'] )
 
 columnset = compfields | partfields     # union
 
-# prepend an initial 'hard coded' list and put the enchillada into list 'columns'
+# prepend an initial 'hard coded' list and put the enchilada into list 'columns'
 columns = ['Item', 'Qty', 'Reference(s)', 'Value', 'LibPart', 'Footprint', 'Datasheet'] + sorted(list(columnset))
 
 # Create a new csv writer object to use as the output formatter
@@ -104,47 +104,6 @@ def writerow( acsvwriter, columns ):
     for col in columns:
         utf8row.append( fromNetlistText( str(col) ) )
     acsvwriter.writerow( utf8row )
-
-# Output a set of rows as a header providing general information
-# writerow( out, ['Source:', net.getSource()] )
-# writerow( out, ['Date:', net.getDate()] )
-# writerow( out, ['Tool:', net.getTool()] )
-# writerow( out, ['Generator:', sys.argv[0]] )
-# writerow( out, ['Component Count:', len(components)] )
-# writerow( out, [] )
-# writerow( out, ['Individual Components:'] )
-# writerow( out, [] )                        # blank line
-# writerow( out, columns )
-
-# Output all the interesting components individually first:
-# row = []
-# for c in components:
-    # del row[:]
-    # row.append('')                                      # item is blank in individual table
-    # row.append('')                                      # Qty is always 1, why print it
-    # row.append( c.getRef() )                            # Reference
-    # row.append( c.getValue() )                          # Value
-    # row.append( c.getLibName() + ":" + c.getPartName() ) # LibPart
-    # #row.append( c.getDescription() )
-    # row.append( c.getFootprint() )
-    # row.append( c.getDatasheet() )
-
-    # # from column 7 upwards, use the fieldnames to grab the data
-    # for field in columns[7:]:
-        # row.append( c.getField( field ) );
-
-    # writerow( out, row )
-
-
-# writerow( out, [] )                        # blank line
-# writerow( out, [] )                        # blank line
-# writerow( out, [] )                        # blank line
-
-# writerow( out, ['Collated Components:'] )
-# writerow( out, [] )                        # blank line
-# writerow( out, columns )                   # reuse same columns
-
-
 
 # Get all of the components in groups of matching parts + values
 # (see kicad_netlist_reader.py)
@@ -178,11 +137,7 @@ for group in grouped:
     else:
         partLink = c.getValue()
     row.append( partLink )
-    #row.append( c.getLibName() + ":" + c.getPartName() )
-    #row.append( net.getGroupFootprint(group) )
-    # row.append( net.getGroupDatasheet(group) )
 
-    # from column 7 upwards, use the fieldnames to grab the data
     for field in columns[7:]:
         row.append( net.getGroupField(group, field) );
 

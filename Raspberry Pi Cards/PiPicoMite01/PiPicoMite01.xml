@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Raspberry Pi Cards\PiPicoMite01\PiPicoMite01.kicad_sch</source>
-    <date>5/24/2022 1:42:52 PM</date>
+    <date>5/24/2022 4:01:54 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -419,7 +419,7 @@
     <comp ref="SD1">
       <value>Conn, SD Card</value>
       <footprint>LandBoards_Conns:SD_CARD</footprint>
-      <datasheet>http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf</datasheet>
+      <datasheet>https://www.mouser.com/datasheet/2/18/1/bwb_sdmemorycard-2584945.pdf</datasheet>
       <libsource lib="PiPico-01-rescue" part="SD_Card-Connector-ESP32-VGA-rescue" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -438,7 +438,7 @@
     <comp ref="U1">
       <value>RPi-PICO</value>
       <footprint>LandBoards_BoardOutlines:RasPiPico</footprint>
-      <datasheet>DOCUMENTATION</datasheet>
+      <datasheet>https://www.adafruit.com/product/4864</datasheet>
       <libsource lib="LandBoards_Semis" part="RPi-PICO" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
