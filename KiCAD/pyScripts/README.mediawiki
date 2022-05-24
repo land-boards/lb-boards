@@ -1,10 +1,10 @@
-== Custom BOM Python Script (KiCad 6) ==
+= Custom BOM Python Script (KiCad 6) =
 
 * Create a BOM that requires minimal manual editing to use on MediaWiki webpage
 * Adds Datasheet path to Description
 * Creates BOM .csv file in the folder where the schematic is located
 
-=== Source Code ===
+== Source Code ==
 
 * [https://github.com/land-boards/lb-boards/blob/master/KiCAD/pyScripts/LandBoardsBOM.py LandBoardsBOM.py] - our BOM script that runs from "Generate Bill of Materials..." in KiCad Schematic Editor
 ** Based on com_csv_grouped_by_value.py that comes in KiCad 6
@@ -13,7 +13,7 @@
 *** [https://github.com/land-boards/lb-boards/blob/master/KiCAD/pyScripts/kicad_utils.py kicad_utils.py]
 * Put the 3 scripts into folder in KiCad projects pyScripts folder
 
-=== Running ===
+== Running ==
 
 * Add links to schematic parts
 
@@ -29,7 +29,7 @@
 
 * Click Generate
 
-=== Post-Processing ===
+== Post-Processing ==
 
 * Edit in spreadsheet program
 * Use [https://github.com/land-boards/lb-Python-Code/tree/master/pyCSVtoMWTable/src pyCSVtoMWTable] to create MediaWiki format output
