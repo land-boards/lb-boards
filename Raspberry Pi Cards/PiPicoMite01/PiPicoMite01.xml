@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Raspberry Pi Cards\PiPicoMite01\PiPicoMite01.kicad_sch</source>
-    <date>5/24/2022 4:01:54 PM</date>
+    <date>5/26/2022 10:28:24 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -24,37 +24,26 @@
     </sheet>
   </design>
   <components>
+    <comp ref="B6">
+      <value>Header, Vert, 2x3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e68f4c5-1a6c-4784-817b-a4bfcb7e70f7</tstamps>
+    </comp>
+    <comp ref="B7">
+      <value>PS2_DIN6</value>
+      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/222/KMDGX-334716.pdf</datasheet>
+      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3973cc8-ab60-43d1-b890-28d77514165a</tstamps>
+    </comp>
     <comp ref="C1">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005e4c8faa</tstamps>
-    </comp>
-    <comp ref="C2">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005e4e658b</tstamps>
-    </comp>
-    <comp ref="C3">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005cafbaec</tstamps>
-    </comp>
-    <comp ref="C4">
       <value>0.1uF</value>
       <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
@@ -64,7 +53,27 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005cafc032</tstamps>
     </comp>
-    <comp ref="C5">
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005cafbaec</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>47uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a055b70-7b7b-4358-a1c6-91b093a6e15b</tstamps>
+    </comp>
+    <comp ref="C4">
       <value>47nF</value>
       <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/TDK/FG18X7R1H473KNT06?qs=qf2ddTMq67Ua7q%2FdN4IhqA%3D%3D</datasheet>
@@ -74,17 +83,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>938dc300-1655-49ab-8f3c-f0849c707a78</tstamps>
     </comp>
-    <comp ref="C6">
-      <value>47nF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/TDK/FG18X7R1H473KNT06?qs=qf2ddTMq67Ua7q%2FdN4IhqA%3D%3D</datasheet>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005e24ba59</tstamps>
-    </comp>
-    <comp ref="C7">
+    <comp ref="C5">
       <value>47uF</value>
       <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
@@ -94,15 +93,35 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005e297506</tstamps>
     </comp>
-    <comp ref="C8">
-      <value>47uF</value>
-      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
-      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4a055b70-7b7b-4358-a1c6-91b093a6e15b</tstamps>
+      <tstamps>00000000-0000-0000-0000-00005e4c8faa</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>47nF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/TDK/FG18X7R1H473KNT06?qs=qf2ddTMq67Ua7q%2FdN4IhqA%3D%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e24ba59</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/75-1C10Z5U104M050B</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e4e658b</tstamps>
     </comp>
     <comp ref="D1">
       <value>1N5288</value>
@@ -133,8 +152,8 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2b62d50f-99ff-426c-b19e-b7062454e685</tstamps>
     </comp>
-    <comp ref="J1">
-      <value>Conn_01x02</value>
+    <comp ref="H2">
+      <value>Header, Vert, 1x2</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -142,82 +161,16 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>60687573-08eb-47ec-9824-f6aa684b9a32</tstamps>
     </comp>
-    <comp ref="J2">
-      <value>USB-B</value>
-      <footprint>Connector_USB:USB_B_Lumberg_2411_02_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/670/uj2_bh_th-1779177.pdf</datasheet>
-      <libsource lib="LandBoards_Conns" part="USB-B" description=""/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-0000627b5dae</tstamps>
-    </comp>
-    <comp ref="J3">
-      <value>Socket, Female. 1x20</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>a2095d65-2182-4f3d-96c4-50601ede76e1</tstamps>
-    </comp>
-    <comp ref="J4">
-      <value>Header, Vert, 2x3</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>9e68f4c5-1a6c-4784-817b-a4bfcb7e70f7</tstamps>
-    </comp>
-    <comp ref="J5">
-      <value>Socket, Female. 1x20</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>aff9b715-004b-496b-b7a5-8a3d352dea1a</tstamps>
-    </comp>
-    <comp ref="J6">
-      <value>Header, Vert, 2x8</value>
-      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_02x08_Odd_Even" description="Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>4fdb0b3e-8025-4e8e-9fb5-a8e68093e6f0</tstamps>
-    </comp>
-    <comp ref="J7">
-      <value>AudioJack3</value>
-      <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/670/sj1_352xn-1779157.pdf</datasheet>
-      <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>4657a725-f83f-41d7-8d78-5df6c4ca4b46</tstamps>
-    </comp>
-    <comp ref="J8">
-      <value>PS2_DIN6</value>
-      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/222/KMDGX-334716.pdf</datasheet>
-      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3973cc8-ab60-43d1-b890-28d77514165a</tstamps>
-    </comp>
-    <comp ref="J9">
+    <comp ref="J1">
       <value>Header, Vert, 2x10</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_02x10_Odd_Even" description="Generic connector, double row, 02x10, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>ef6173c4-f2d8-4003-a584-767305ade712</tstamps>
+      <tstamps>fc62ff58-f2ca-4221-b477-f95559d34d6e</tstamps>
     </comp>
-    <comp ref="J10">
+    <comp ref="J2">
       <value>CONN, DB15HD, BLUE (VGA)</value>
       <footprint>LandBoards_Conns:DB_15F-VGA-fixed</footprint>
       <datasheet>https://www.mouser.com/datasheet/2/123/English_634_Ordering_Guide-1830723.pdf</datasheet>
@@ -227,14 +180,61 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-00005dee8b2b</tstamps>
     </comp>
-    <comp ref="J11">
-      <value>Conn_01x04</value>
+    <comp ref="J3">
+      <value>Header, Vert, 2x8</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x08_Odd_Even" description="Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4fdb0b3e-8025-4e8e-9fb5-a8e68093e6f0</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>AudioJack3</value>
+      <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/670/sj1_352xn-1779157.pdf</datasheet>
+      <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4657a725-f83f-41d7-8d78-5df6c4ca4b46</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>USB-B</value>
+      <footprint>Connector_USB:USB_B_Lumberg_2411_02_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/670/uj2_bh_th-1779177.pdf</datasheet>
+      <libsource lib="LandBoards_Conns" part="USB-B" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000627b5dae</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Header, Rt Angle, 1x4</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4634cda5-87b2-4b25-bd93-1ecb68c69718</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Socket, Female. 1x20</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aff9b715-004b-496b-b7a5-8a3d352dea1a</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>Socket, Female. 1x20</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x20" description="Generic connector, single row, 01x20, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2095d65-2182-4f3d-96c4-50601ede76e1</tstamps>
     </comp>
     <comp ref="MTG1">
       <value>MTG_HOLE</value>
@@ -293,6 +293,7 @@
     <comp ref="R3">
       <value>270</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Ohmite/OJ2715E-R52?qs=AkUtuiJmyfl8miHDMWB4Gg%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -302,6 +303,7 @@
     <comp ref="R4">
       <value>270</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Ohmite/OJ2715E-R52?qs=AkUtuiJmyfl8miHDMWB4Gg%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -311,6 +313,7 @@
     <comp ref="R5">
       <value>390</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-360-RC?qs=4SEauRHMWrgg5PAiO238Jg%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -320,6 +323,7 @@
     <comp ref="R6">
       <value>47</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Ohmite/OJ4705E-R52?qs=AkUtuiJmyfnsNaojPyuOog%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -329,6 +333,7 @@
     <comp ref="R7">
       <value>820</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-750-RC?qs=r3p0CtoijEudY32yxHjb0Q%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -338,6 +343,7 @@
     <comp ref="R8">
       <value>47</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Ohmite/OJ4705E-R52?qs=AkUtuiJmyfnsNaojPyuOog%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -347,6 +353,7 @@
     <comp ref="R9">
       <value>1K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-1K-RC?qs=LFVzBv9lGv703mrPrUE94Q%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -356,6 +363,7 @@
     <comp ref="R10">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -365,6 +373,7 @@
     <comp ref="R11">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -374,6 +383,7 @@
     <comp ref="R12">
       <value>1K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-1K-RC?qs=LFVzBv9lGv703mrPrUE94Q%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -383,6 +393,7 @@
     <comp ref="R13">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -392,6 +403,7 @@
     <comp ref="R14">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -401,6 +413,7 @@
     <comp ref="R15">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-10K-AP-RC?qs=prMBRl6N7VTb%2FbWyGMcQ7w%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -410,6 +423,7 @@
     <comp ref="R16">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-10K-AP-RC?qs=prMBRl6N7VTb%2FbWyGMcQ7w%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -419,7 +433,7 @@
     <comp ref="SD1">
       <value>Conn, SD Card</value>
       <footprint>LandBoards_Conns:SD_CARD</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/18/1/bwb_sdmemorycard-2584945.pdf</datasheet>
+      <datasheet>https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/gmc02008xhr.pdf</datasheet>
       <libsource lib="PiPico-01-rescue" part="SD_Card-Connector-ESP32-VGA-rescue" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -958,20 +972,20 @@
   </libraries>
   <nets>
     <net code="1" name="+3V3">
-      <node ref="C3" pin="1" pintype="passive"/>
-      <node ref="C4" pin="1" pintype="passive"/>
-      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J5" pin="5" pinfunction="Pin_5" pintype="passive"/>
-      <node ref="J6" pin="10" pinfunction="Pin_10" pintype="passive"/>
-      <node ref="J6" pin="12" pinfunction="Pin_12" pintype="passive"/>
-      <node ref="J6" pin="14" pinfunction="Pin_14" pintype="passive"/>
-      <node ref="J6" pin="16" pinfunction="Pin_16" pintype="passive"/>
-      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J6" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="J6" pin="6" pinfunction="Pin_6" pintype="passive"/>
-      <node ref="J6" pin="8" pinfunction="Pin_8" pintype="passive"/>
-      <node ref="J9" pin="17" pinfunction="Pin_17" pintype="passive"/>
-      <node ref="J9" pin="18" pinfunction="Pin_18" pintype="passive"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J3" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J3" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="J3" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="J3" pin="16" pinfunction="Pin_16" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J9" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="SD1" pin="4" pinfunction="VDD" pintype="power_in"/>
@@ -981,292 +995,301 @@
       <node ref="U3" pin="8" pinfunction="OE" pintype="input"/>
     </net>
     <net code="2" name="/ADCREF">
-      <node ref="J5" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J9" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="U1" pin="35" pinfunction="ADCREF" pintype="power_in"/>
     </net>
     <net code="3" name="/GP0">
-      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="GP0/SPI0RX/I2C0SDA/U0TX" pintype="bidirectional"/>
     </net>
     <net code="4" name="/GP1">
-      <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="GP1/SPI0CS/I2C0SCL/U0RX" pintype="bidirectional"/>
     </net>
     <net code="5" name="/GP2">
-      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="H2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J10" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="GP2/SPI0SCK/I2C1SDA" pintype="bidirectional"/>
     </net>
     <net code="6" name="/GP3">
-      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="GP3/SPI0TX/I2C1SCL" pintype="bidirectional"/>
     </net>
     <net code="7" name="/GP4">
-      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="GP4/SPI0RX/I2C0SDA/U1TX" pintype="bidirectional"/>
     </net>
     <net code="8" name="/GP5">
-      <node ref="J3" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J10" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="GP5/SPI0CS/I2C0SCL/U1RX" pintype="bidirectional"/>
     </net>
     <net code="9" name="/GP6">
-      <node ref="J3" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J10" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="GP6/SPI0SCK/I2C1SDA" pintype="bidirectional"/>
     </net>
     <net code="10" name="/GP7">
-      <node ref="J3" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J10" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="GP7SPI0TX/I2C2SCL" pintype="bidirectional"/>
     </net>
     <net code="11" name="/GP8">
-      <node ref="J3" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="J10" pin="11" pinfunction="Pin_11" pintype="passive"/>
       <node ref="U1" pin="11" pinfunction="GP8/SPI1RX/I2C0SDA/U1TX" pintype="bidirectional"/>
       <node ref="U3" pin="3" pinfunction="A2" pintype="bidirectional"/>
     </net>
     <net code="12" name="/GP9">
-      <node ref="J3" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="J10" pin="12" pinfunction="Pin_12" pintype="passive"/>
       <node ref="U1" pin="12" pinfunction="GP9/SPI1CS/I2C0SCL/U1RX" pintype="bidirectional"/>
       <node ref="U3" pin="2" pinfunction="A1" pintype="bidirectional"/>
     </net>
     <net code="13" name="/GP10">
-      <node ref="J3" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="J10" pin="14" pinfunction="Pin_14" pintype="passive"/>
       <node ref="SD1" pin="5" pinfunction="CLK" pintype="input"/>
       <node ref="U1" pin="14" pinfunction="GP10/SPI1SCK/I2C1SDA" pintype="bidirectional"/>
     </net>
     <net code="14" name="/GP11">
-      <node ref="J3" pin="15" pinfunction="Pin_15" pintype="passive"/>
+      <node ref="J10" pin="15" pinfunction="Pin_15" pintype="passive"/>
       <node ref="SD1" pin="2" pinfunction="CMD" pintype="input"/>
       <node ref="U1" pin="15" pinfunction="GP11/SPI1TX/I2C1SCL" pintype="bidirectional"/>
     </net>
     <net code="15" name="/GP12">
-      <node ref="J3" pin="16" pinfunction="Pin_16" pintype="passive"/>
+      <node ref="J10" pin="16" pinfunction="Pin_16" pintype="passive"/>
       <node ref="SD1" pin="7" pinfunction="DAT0" pintype="input"/>
       <node ref="U1" pin="16" pinfunction="GP12/SPI1RX/I2C0SDA/U0TX" pintype="bidirectional"/>
     </net>
     <net code="16" name="/GP13">
-      <node ref="J3" pin="17" pinfunction="Pin_17" pintype="passive"/>
+      <node ref="J10" pin="17" pinfunction="Pin_17" pintype="passive"/>
       <node ref="SD1" pin="1" pinfunction="CD/DAT3" pintype="input"/>
       <node ref="U1" pin="17" pinfunction="GP13/SPI1CS/I2C0SCL/U0RX" pintype="bidirectional"/>
     </net>
     <net code="17" name="/GP14">
       <node ref="H1" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J3" pin="19" pinfunction="Pin_19" pintype="passive"/>
+      <node ref="J10" pin="19" pinfunction="Pin_19" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="GP14/SPI1SCK/I2C1SDA" pintype="bidirectional"/>
       <node ref="U2" pin="13" pinfunction="SDA" pintype="bidirectional"/>
     </net>
     <net code="18" name="/GP15">
       <node ref="H1" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J3" pin="20" pinfunction="Pin_20" pintype="passive"/>
+      <node ref="J10" pin="20" pinfunction="Pin_20" pintype="passive"/>
       <node ref="U1" pin="20" pinfunction="GP15/SPI1TX/I2C1SCL" pintype="bidirectional"/>
       <node ref="U2" pin="12" pinfunction="SCK" pintype="input"/>
     </net>
     <net code="19" name="/GP16">
-      <node ref="J5" pin="20" pinfunction="Pin_20" pintype="passive"/>
+      <node ref="J9" pin="20" pinfunction="Pin_20" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="U1" pin="21" pinfunction="SPI0RX/I2C0SDA/U0TX/GP16" pintype="bidirectional"/>
     </net>
     <net code="20" name="/GP17">
-      <node ref="J5" pin="19" pinfunction="Pin_19" pintype="passive"/>
+      <node ref="J9" pin="19" pinfunction="Pin_19" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="U1" pin="22" pinfunction="SPI0CS/I2C0SCL/U0RX/GP17" pintype="bidirectional"/>
     </net>
     <net code="21" name="/GP18">
-      <node ref="J5" pin="17" pinfunction="Pin_17" pintype="passive"/>
+      <node ref="J9" pin="17" pinfunction="Pin_17" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="U1" pin="24" pinfunction="SPI0SCK/I2C1SDA/GP18" pintype="bidirectional"/>
     </net>
     <net code="22" name="/GP19">
-      <node ref="J5" pin="16" pinfunction="Pin_16" pintype="passive"/>
+      <node ref="J9" pin="16" pinfunction="Pin_16" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U1" pin="25" pinfunction="SPI0SCK/I2C1SDA/GP19" pintype="bidirectional"/>
     </net>
     <net code="23" name="/GP20">
-      <node ref="J5" pin="15" pinfunction="Pin_15" pintype="passive"/>
+      <node ref="J9" pin="15" pinfunction="Pin_15" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="U1" pin="26" pinfunction="I2C0SDA/GP20" pintype="bidirectional"/>
     </net>
     <net code="24" name="/GP21">
-      <node ref="J5" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="J9" pin="14" pinfunction="Pin_14" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
       <node ref="U1" pin="27" pinfunction="I2C0SCL/GP21" pintype="bidirectional"/>
     </net>
     <net code="25" name="/GP22">
-      <node ref="J5" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="J9" pin="12" pinfunction="Pin_12" pintype="passive"/>
       <node ref="U1" pin="29" pinfunction="GP22" pintype="bidirectional"/>
     </net>
     <net code="26" name="/GP26">
-      <node ref="J5" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J9" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="U1" pin="31" pinfunction="ADC0/I2C1SDA/GP26" pintype="bidirectional"/>
     </net>
     <net code="27" name="/GP27">
-      <node ref="J5" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J9" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="U1" pin="32" pinfunction="ADC1/I2C1SCL/GP27" pintype="bidirectional"/>
     </net>
     <net code="28" name="/GP28">
-      <node ref="J5" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J9" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="U1" pin="34" pinfunction="ADC2/GP28" pintype="bidirectional"/>
     </net>
     <net code="29" name="/GPA0">
-      <node ref="J9" pin="15" pinfunction="Pin_15" pintype="passive"/>
+      <node ref="J1" pin="17" pinfunction="Pin_17" pintype="passive"/>
       <node ref="U2" pin="21" pinfunction="GPA0" pintype="bidirectional"/>
     </net>
     <net code="30" name="/GPA1">
-      <node ref="J9" pin="13" pinfunction="Pin_13" pintype="passive"/>
+      <node ref="J1" pin="15" pinfunction="Pin_15" pintype="passive"/>
       <node ref="U2" pin="22" pinfunction="GPA1" pintype="bidirectional"/>
     </net>
     <net code="31" name="/GPA2">
-      <node ref="J9" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="J1" pin="13" pinfunction="Pin_13" pintype="passive"/>
       <node ref="U2" pin="23" pinfunction="GPA2" pintype="bidirectional"/>
     </net>
     <net code="32" name="/GPA3">
-      <node ref="J9" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="Pin_11" pintype="passive"/>
       <node ref="U2" pin="24" pinfunction="GPA3" pintype="bidirectional"/>
     </net>
     <net code="33" name="/GPA4">
-      <node ref="J9" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="U2" pin="25" pinfunction="GPA4" pintype="bidirectional"/>
     </net>
     <net code="34" name="/GPA5">
-      <node ref="J9" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="U2" pin="26" pinfunction="GPA5" pintype="bidirectional"/>
     </net>
     <net code="35" name="/GPA6">
-      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="U2" pin="27" pinfunction="GPA6" pintype="bidirectional"/>
     </net>
     <net code="36" name="/GPA7">
-      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="U2" pin="28" pinfunction="GPA7" pintype="bidirectional"/>
     </net>
     <net code="37" name="/GPB0">
-      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="GPB0" pintype="bidirectional"/>
     </net>
     <net code="38" name="/GPB1">
-      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="GPB1" pintype="bidirectional"/>
     </net>
     <net code="39" name="/GPB2">
-      <node ref="J9" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="GPB2" pintype="bidirectional"/>
     </net>
     <net code="40" name="/GPB3">
-      <node ref="J9" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="GPB3" pintype="bidirectional"/>
     </net>
     <net code="41" name="/GPB4">
-      <node ref="J9" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J1" pin="12" pinfunction="Pin_12" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="GPB4" pintype="bidirectional"/>
     </net>
     <net code="42" name="/GPB5">
-      <node ref="J9" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="J1" pin="14" pinfunction="Pin_14" pintype="passive"/>
       <node ref="U2" pin="6" pinfunction="GPB5" pintype="bidirectional"/>
     </net>
     <net code="43" name="/GPB6">
-      <node ref="J9" pin="14" pinfunction="Pin_14" pintype="passive"/>
+      <node ref="J1" pin="16" pinfunction="Pin_16" pintype="passive"/>
       <node ref="U2" pin="7" pinfunction="GPB6" pintype="bidirectional"/>
     </net>
     <net code="44" name="/GPB7">
-      <node ref="J9" pin="16" pinfunction="Pin_16" pintype="passive"/>
+      <node ref="J1" pin="18" pinfunction="Pin_18" pintype="passive"/>
       <node ref="U2" pin="8" pinfunction="GPB7" pintype="bidirectional"/>
     </net>
     <net code="45" name="/HS">
-      <node ref="J10" pin="13" pinfunction="P13" pintype="passive"/>
+      <node ref="J2" pin="13" pinfunction="P13" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
     <net code="46" name="/PS2CLK">
-      <node ref="J8" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="B7" pin="5" pinfunction="CLK" pintype="input"/>
       <node ref="R16" pin="2" pintype="passive"/>
       <node ref="U3" pin="12" pinfunction="B2" pintype="bidirectional"/>
     </net>
     <net code="47" name="/PS2DAT">
-      <node ref="J8" pin="1" pinfunction="DATA" pintype="input"/>
+      <node ref="B7" pin="1" pinfunction="DATA" pintype="input"/>
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="U3" pin="13" pinfunction="B1" pintype="bidirectional"/>
     </net>
     <net code="48" name="/RUN">
-      <node ref="J5" pin="11" pinfunction="Pin_11" pintype="passive"/>
+      <node ref="J9" pin="11" pinfunction="Pin_11" pintype="passive"/>
       <node ref="U1" pin="30" pinfunction="RUN" pintype="input"/>
       <node ref="U2" pin="18" pinfunction="~{RESET}" pintype="input"/>
     </net>
-    <net code="49" name="/VBUS">
-      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    <net code="49" name="/USB5V">
+      <node ref="B6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="B6" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="B6" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="VCC" pintype="power_out"/>
+    </net>
+    <net code="50" name="/VBUS">
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U1" pin="40" pinfunction="VBUS" pintype="power_out"/>
     </net>
-    <net code="50" name="/VEN3">
-      <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    <net code="51" name="/VEN3">
+      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U1" pin="37" pinfunction="VEN3" pintype="bidirectional"/>
     </net>
-    <net code="51" name="/VGA_B">
-      <node ref="J10" pin="3" pinfunction="P3" pintype="passive"/>
+    <net code="52" name="/VGA_B">
+      <node ref="J2" pin="3" pinfunction="P3" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
-    <net code="52" name="/VGA_G">
-      <node ref="J10" pin="2" pinfunction="P2" pintype="passive"/>
+    <net code="53" name="/VGA_G">
+      <node ref="J2" pin="2" pinfunction="P2" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="53" name="/VGA_R">
-      <node ref="J10" pin="1" pinfunction="P1" pintype="passive"/>
+    <net code="54" name="/VGA_R">
+      <node ref="J2" pin="1" pinfunction="P1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
-    <net code="54" name="/VS">
-      <node ref="J10" pin="14" pinfunction="P14" pintype="passive"/>
+    <net code="55" name="/VS">
+      <node ref="J2" pin="14" pinfunction="P14" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="55" name="/VSYS">
-      <node ref="C2" pin="1" pintype="passive"/>
+    <net code="56" name="/VSYS">
+      <node ref="B7" pin="4" pinfunction="VCC" pintype="input"/>
+      <node ref="C8" pin="1" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J8" pin="4" pinfunction="VCC" pintype="input"/>
+      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
       <node ref="U1" pin="39" pinfunction="VSYS" pintype="power_in"/>
       <node ref="U3" pin="14" pinfunction="VCCB(HV)" pintype="passive"/>
     </net>
-    <net code="56" name="GND">
+    <net code="57" name="GND">
+      <node ref="B6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="B6" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="B6" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="B7" pin="3" pinfunction="GND" pintype="input"/>
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
-      <node ref="C3" pin="2" pintype="passive"/>
       <node ref="C4" pin="2" pintype="passive"/>
-      <node ref="C5" pin="2" pintype="passive"/>
       <node ref="C6" pin="2" pintype="passive"/>
-      <node ref="J10" pin="10" pinfunction="P10" pintype="passive"/>
-      <node ref="J10" pin="5" pinfunction="P5" pintype="passive"/>
-      <node ref="J10" pin="6" pinfunction="P6" pintype="passive"/>
-      <node ref="J10" pin="7" pinfunction="P7" pintype="passive"/>
-      <node ref="J10" pin="8" pinfunction="P8" pintype="passive"/>
-      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="J2" pin="4" pinfunction="GND" pintype="power_out"/>
-      <node ref="J2" pin="G1" pinfunction="GND1" pintype="passive"/>
-      <node ref="J2" pin="G2" pinfunction="GND2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="J1" pin="19" pinfunction="Pin_19" pintype="passive"/>
+      <node ref="J1" pin="20" pinfunction="Pin_20" pintype="passive"/>
+      <node ref="J10" pin="13" pinfunction="Pin_13" pintype="passive"/>
+      <node ref="J10" pin="18" pinfunction="Pin_18" pintype="passive"/>
+      <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J10" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J2" pin="10" pinfunction="P10" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="P5" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="P6" pintype="passive"/>
+      <node ref="J2" pin="7" pinfunction="P7" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="P8" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="11" pinfunction="Pin_11" pintype="passive"/>
       <node ref="J3" pin="13" pinfunction="Pin_13" pintype="passive"/>
-      <node ref="J3" pin="18" pinfunction="Pin_18" pintype="passive"/>
+      <node ref="J3" pin="15" pinfunction="Pin_15" pintype="passive"/>
       <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J3" pin="8" pinfunction="Pin_8" pintype="passive"/>
-      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive"/>
-      <node ref="J5" pin="13" pinfunction="Pin_13" pintype="passive"/>
-      <node ref="J5" pin="18" pinfunction="Pin_18" pintype="passive"/>
-      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J5" pin="8" pinfunction="Pin_8" pintype="passive"/>
-      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J6" pin="11" pinfunction="Pin_11" pintype="passive"/>
-      <node ref="J6" pin="13" pinfunction="Pin_13" pintype="passive"/>
-      <node ref="J6" pin="15" pinfunction="Pin_15" pintype="passive"/>
-      <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J6" pin="5" pinfunction="Pin_5" pintype="passive"/>
-      <node ref="J6" pin="7" pinfunction="Pin_7" pintype="passive"/>
-      <node ref="J6" pin="9" pinfunction="Pin_9" pintype="passive"/>
-      <node ref="J7" pin="S" pintype="passive"/>
-      <node ref="J8" pin="3" pinfunction="GND" pintype="input"/>
-      <node ref="J9" pin="19" pinfunction="Pin_19" pintype="passive"/>
-      <node ref="J9" pin="20" pinfunction="Pin_20" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J3" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J4" pin="S" pintype="passive"/>
+      <node ref="J5" pin="4" pinfunction="GND" pintype="power_out"/>
+      <node ref="J5" pin="G1" pinfunction="GND1" pintype="passive"/>
+      <node ref="J5" pin="G2" pinfunction="GND2" pintype="passive"/>
+      <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J9" pin="13" pinfunction="Pin_13" pintype="passive"/>
+      <node ref="J9" pin="18" pinfunction="Pin_18" pintype="passive"/>
+      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J9" pin="8" pinfunction="Pin_8" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
       <node ref="SD1" pin="3" pinfunction="VSS" pintype="power_in"/>
@@ -1285,42 +1308,33 @@
       <node ref="U2" pin="17" pinfunction="A2" pintype="input"/>
       <node ref="U3" pin="7" pinfunction="GND" pintype="passive"/>
     </net>
-    <net code="57" name="Net-(C1-Pad1)">
-      <node ref="C1" pin="1" pintype="passive"/>
-      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="J2" pin="1" pinfunction="VCC" pintype="power_out"/>
-      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive"/>
-    </net>
-    <net code="58" name="Net-(C5-Pad1)">
-      <node ref="C5" pin="1" pintype="passive"/>
-      <node ref="R10" pin="2" pintype="passive"/>
-      <node ref="R9" pin="1" pintype="passive"/>
-    </net>
-    <net code="59" name="Net-(C6-Pad1)">
-      <node ref="C6" pin="1" pintype="passive"/>
-      <node ref="R12" pin="1" pintype="passive"/>
-      <node ref="R13" pin="2" pintype="passive"/>
-    </net>
-    <net code="60" name="Net-(C7-Pad1)">
-      <node ref="C7" pin="1" pintype="passive"/>
-      <node ref="R13" pin="1" pintype="passive"/>
-      <node ref="R14" pin="2" pintype="passive"/>
-    </net>
-    <net code="61" name="Net-(C7-Pad2)">
-      <node ref="C7" pin="2" pintype="passive"/>
-      <node ref="J7" pin="R" pintype="passive"/>
-    </net>
-    <net code="62" name="Net-(C8-Pad1)">
-      <node ref="C8" pin="1" pintype="passive"/>
+    <net code="58" name="Net-(C3-Pad1)">
+      <node ref="C3" pin="1" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
-    <net code="63" name="Net-(C8-Pad2)">
-      <node ref="C8" pin="2" pintype="passive"/>
-      <node ref="J7" pin="T" pintype="passive"/>
+    <net code="59" name="Net-(C3-Pad2)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J4" pin="T" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(C5-Pad1)">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(C5-Pad2)">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="J4" pin="R" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
     </net>
     <net code="64" name="Net-(H1-Pad2)">
       <node ref="H1" pin="2" pinfunction="Pin_2" pintype="passive"/>
@@ -1330,39 +1344,39 @@
       <node ref="H1" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
-    <net code="66" name="Net-(J1-Pad2)">
-      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    <net code="66" name="Net-(H2-Pad2)">
+      <node ref="H2" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U2" pin="20" pinfunction="INTA" pintype="tri_state"/>
     </net>
-    <net code="67" name="unconnected-(J2-Pad2)">
-      <node ref="J2" pin="2" pinfunction="D-" pintype="bidirectional+no_connect"/>
+    <net code="67" name="unconnected-(B7-Pad2)">
+      <node ref="B7" pin="2" pinfunction="NC" pintype="input+no_connect"/>
     </net>
-    <net code="68" name="unconnected-(J2-Pad3)">
-      <node ref="J2" pin="3" pinfunction="D+" pintype="bidirectional+no_connect"/>
+    <net code="68" name="unconnected-(B7-Pad6)">
+      <node ref="B7" pin="6" pinfunction="NC" pintype="input+no_connect"/>
     </net>
-    <net code="69" name="unconnected-(J2-PadNC)">
-      <node ref="J2" pin="NC" pinfunction="NC" pintype="power_in+no_connect"/>
+    <net code="69" name="unconnected-(J2-Pad4)">
+      <node ref="J2" pin="4" pinfunction="P4" pintype="passive+no_connect"/>
     </net>
-    <net code="70" name="unconnected-(J8-Pad2)">
-      <node ref="J8" pin="2" pinfunction="NC" pintype="input+no_connect"/>
+    <net code="70" name="unconnected-(J2-Pad9)">
+      <node ref="J2" pin="9" pinfunction="P9" pintype="passive+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(J8-Pad6)">
-      <node ref="J8" pin="6" pinfunction="NC" pintype="input+no_connect"/>
+    <net code="71" name="unconnected-(J2-Pad11)">
+      <node ref="J2" pin="11" pinfunction="P11" pintype="passive+no_connect"/>
     </net>
-    <net code="72" name="unconnected-(J10-Pad4)">
-      <node ref="J10" pin="4" pinfunction="P4" pintype="passive+no_connect"/>
+    <net code="72" name="unconnected-(J2-Pad12)">
+      <node ref="J2" pin="12" pinfunction="P12" pintype="passive+no_connect"/>
     </net>
-    <net code="73" name="unconnected-(J10-Pad9)">
-      <node ref="J10" pin="9" pinfunction="P9" pintype="passive+no_connect"/>
+    <net code="73" name="unconnected-(J2-Pad15)">
+      <node ref="J2" pin="15" pinfunction="P15" pintype="passive+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(J10-Pad11)">
-      <node ref="J10" pin="11" pinfunction="P11" pintype="passive+no_connect"/>
+    <net code="74" name="unconnected-(J5-Pad2)">
+      <node ref="J5" pin="2" pinfunction="D-" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="75" name="unconnected-(J10-Pad12)">
-      <node ref="J10" pin="12" pinfunction="P12" pintype="passive+no_connect"/>
+    <net code="75" name="unconnected-(J5-Pad3)">
+      <node ref="J5" pin="3" pinfunction="D+" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="76" name="unconnected-(J10-Pad15)">
-      <node ref="J10" pin="15" pinfunction="P15" pintype="passive+no_connect"/>
+    <net code="76" name="unconnected-(J5-PadNC)">
+      <node ref="J5" pin="NC" pinfunction="NC" pintype="power_in+no_connect"/>
     </net>
     <net code="77" name="unconnected-(SD1-Pad8)">
       <node ref="SD1" pin="8" pinfunction="DAT1" pintype="input+no_connect"/>

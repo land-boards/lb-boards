@@ -132,7 +132,7 @@ for group in grouped:
     row.append( len(group) ) # Qty
     row.append( refs ) # Ref Des
     # row.append( c.getValue() )
-    if net.getGroupDatasheet(group) != '~':
+    if net.getGroupDatasheet(group) != '~' and net.getGroupDatasheet(group) != '':
         partLink = '[' + net.getGroupDatasheet(group) + ' ' + c.getValue() + ']'
     else:
         partLink = c.getValue()
