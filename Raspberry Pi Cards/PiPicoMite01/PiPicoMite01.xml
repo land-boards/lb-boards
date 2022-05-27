@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Raspberry Pi Cards\PiPicoMite01\PiPicoMite01.kicad_sch</source>
-    <date>5/26/2022 10:28:24 AM</date>
+    <date>5/27/2022 12:24:09 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -24,25 +24,6 @@
     </sheet>
   </design>
   <components>
-    <comp ref="B6">
-      <value>Header, Vert, 2x3</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>9e68f4c5-1a6c-4784-817b-a4bfcb7e70f7</tstamps>
-    </comp>
-    <comp ref="B7">
-      <value>PS2_DIN6</value>
-      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
-      <datasheet>https://www.mouser.com/datasheet/2/222/KMDGX-334716.pdf</datasheet>
-      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>c3973cc8-ab60-43d1-b890-28d77514165a</tstamps>
-    </comp>
     <comp ref="C1">
       <value>0.1uF</value>
       <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
@@ -124,7 +105,7 @@
       <tstamps>00000000-0000-0000-0000-00005e4e658b</tstamps>
     </comp>
     <comp ref="D1">
-      <value>1N5288</value>
+      <value>MBR0520T1H</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/583-1N5822-T</datasheet>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
@@ -134,9 +115,9 @@
       <tstamps>6c8c0289-6b78-4da5-98e2-9b7639f150b3</tstamps>
     </comp>
     <comp ref="D2">
-      <value>MBR0520T1H</value>
-      <footprint>Diode_THT:D_DO-201AD_P12.70mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/863-MBR0530T1G</datasheet>
+      <value>1N5819</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/345/1n5817-1n5819-24580.pdf</datasheet>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -209,6 +190,25 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-0000627b5dae</tstamps>
     </comp>
+    <comp ref="J6">
+      <value>Header, Vert, 2x3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e68f4c5-1a6c-4784-817b-a4bfcb7e70f7</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>PS2_DIN6</value>
+      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <datasheet>https://www.mouser.com/datasheet/2/222/KMDGX-334716.pdf</datasheet>
+      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3973cc8-ab60-43d1-b890-28d77514165a</tstamps>
+    </comp>
     <comp ref="J8">
       <value>Header, Rt Angle, 1x4</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
@@ -275,6 +275,7 @@
     <comp ref="R1">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/299-2.2K-RC</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -284,6 +285,7 @@
     <comp ref="R2">
       <value>2.2K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/299-2.2K-RC</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="PiPicoMite01.kicad_sch"/>
@@ -1192,12 +1194,12 @@
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
     <net code="46" name="/PS2CLK">
-      <node ref="B7" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="J7" pin="5" pinfunction="CLK" pintype="input"/>
       <node ref="R16" pin="2" pintype="passive"/>
       <node ref="U3" pin="12" pinfunction="B2" pintype="bidirectional"/>
     </net>
     <net code="47" name="/PS2DAT">
-      <node ref="B7" pin="1" pinfunction="DATA" pintype="input"/>
+      <node ref="J7" pin="1" pinfunction="DATA" pintype="input"/>
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="U3" pin="13" pinfunction="B1" pintype="bidirectional"/>
     </net>
@@ -1207,13 +1209,13 @@
       <node ref="U2" pin="18" pinfunction="~{RESET}" pintype="input"/>
     </net>
     <net code="49" name="/USB5V">
-      <node ref="B6" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="B6" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="B6" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J5" pin="1" pinfunction="VCC" pintype="power_out"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J6" pin="5" pinfunction="Pin_5" pintype="passive"/>
     </net>
     <net code="50" name="/VBUS">
       <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
@@ -1241,10 +1243,10 @@
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
     <net code="56" name="/VSYS">
-      <node ref="B7" pin="4" pinfunction="VCC" pintype="input"/>
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J7" pin="4" pinfunction="VCC" pintype="input"/>
       <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
@@ -1252,10 +1254,6 @@
       <node ref="U3" pin="14" pinfunction="VCCB(HV)" pintype="passive"/>
     </net>
     <net code="57" name="GND">
-      <node ref="B6" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="B6" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="B6" pin="6" pinfunction="Pin_6" pintype="passive"/>
-      <node ref="B7" pin="3" pinfunction="GND" pintype="input"/>
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C4" pin="2" pintype="passive"/>
@@ -1285,6 +1283,10 @@
       <node ref="J5" pin="4" pinfunction="GND" pintype="power_out"/>
       <node ref="J5" pin="G1" pinfunction="GND1" pintype="passive"/>
       <node ref="J5" pin="G2" pinfunction="GND2" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J6" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J6" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J7" pin="3" pinfunction="GND" pintype="input"/>
       <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J9" pin="13" pinfunction="Pin_13" pintype="passive"/>
       <node ref="J9" pin="18" pinfunction="Pin_18" pintype="passive"/>
@@ -1348,35 +1350,35 @@
       <node ref="H2" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U2" pin="20" pinfunction="INTA" pintype="tri_state"/>
     </net>
-    <net code="67" name="unconnected-(B7-Pad2)">
-      <node ref="B7" pin="2" pinfunction="NC" pintype="input+no_connect"/>
-    </net>
-    <net code="68" name="unconnected-(B7-Pad6)">
-      <node ref="B7" pin="6" pinfunction="NC" pintype="input+no_connect"/>
-    </net>
-    <net code="69" name="unconnected-(J2-Pad4)">
+    <net code="67" name="unconnected-(J2-Pad4)">
       <node ref="J2" pin="4" pinfunction="P4" pintype="passive+no_connect"/>
     </net>
-    <net code="70" name="unconnected-(J2-Pad9)">
+    <net code="68" name="unconnected-(J2-Pad9)">
       <node ref="J2" pin="9" pinfunction="P9" pintype="passive+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(J2-Pad11)">
+    <net code="69" name="unconnected-(J2-Pad11)">
       <node ref="J2" pin="11" pinfunction="P11" pintype="passive+no_connect"/>
     </net>
-    <net code="72" name="unconnected-(J2-Pad12)">
+    <net code="70" name="unconnected-(J2-Pad12)">
       <node ref="J2" pin="12" pinfunction="P12" pintype="passive+no_connect"/>
     </net>
-    <net code="73" name="unconnected-(J2-Pad15)">
+    <net code="71" name="unconnected-(J2-Pad15)">
       <node ref="J2" pin="15" pinfunction="P15" pintype="passive+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(J5-Pad2)">
+    <net code="72" name="unconnected-(J5-Pad2)">
       <node ref="J5" pin="2" pinfunction="D-" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="75" name="unconnected-(J5-Pad3)">
+    <net code="73" name="unconnected-(J5-Pad3)">
       <node ref="J5" pin="3" pinfunction="D+" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="76" name="unconnected-(J5-PadNC)">
+    <net code="74" name="unconnected-(J5-PadNC)">
       <node ref="J5" pin="NC" pinfunction="NC" pintype="power_in+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(J7-Pad2)">
+      <node ref="J7" pin="2" pinfunction="NC" pintype="input+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(J7-Pad6)">
+      <node ref="J7" pin="6" pinfunction="NC" pintype="input+no_connect"/>
     </net>
     <net code="77" name="unconnected-(SD1-Pad8)">
       <node ref="SD1" pin="8" pinfunction="DAT1" pintype="input+no_connect"/>
