@@ -1,0 +1,13 @@
+.SUBCKT BS170 1 2 3
+* 1=drain  2=gate  3=source
+Cgs  2 3 12.3E-12
+Cgd1 2 4 27.4E-12
+Cgd2 1 4 6E-12
+M1 1 2 3 3 MOST1
+M2 4 2 1 3 MOST2
+D1 3 1 Dbody
+.MODEL MOST1 NMOS(Level=3 Kp=20.78u W=9.7m L=2u Rs=20m Vto=2 Rd=1.186)
+.MODEL MOST2 NMOS(VTO=-4.73 Kp=20.78u W=9.7m L=2u Rs=20m)
+.MODEL Dbody D(Is=125f N=1.023 Rs=1.281 Ikf=18.01 Cjo=46.3p M=.3423
++            Vj=.4519 Bv=60 Ibv=10u Tt=161.6n)
+.ENDS
