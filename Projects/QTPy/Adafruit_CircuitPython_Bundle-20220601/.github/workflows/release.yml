@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2017 Scott Shawcroft, written for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
+
+name: Release Actions
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-release-assets:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Translate Repo Name For Build Tools filename_prefix
+      id: repo-name
+      run: |
+        echo ::set-output name=repo-name::$(
+        echo ${{ github.repository }} |
+        awk -F '\/' '{ print tolower($2) }' |
+        tr '_' '-'
+        )
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Versions
+      run: |
+        python3 --version
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - name: Install deps
+      run: |
+        sudo apt-get install gettext
+        pip install -r requirements.txt
+    - name: Build assets
+      run: circuitpython-build-bundles --filename_prefix ${{ steps.repo-name.outputs.repo-name }} --library_location libraries --library_depth 2 --package_folder_prefix "adafruit_, asyncio"
+    - name: Upload Release Assets
+      # the 'official' actions version does not yet support dynamically
+      # supplying asset names to upload. @csexton's version chosen based on
+      # discussion in the issue below, as its the simplest to implement and
+      # allows for selecting files with a pattern.
+      # https://github.com/actions/upload-release-asset/issues/4
+      #uses: actions/upload-release-asset@v1.0.1
+      uses: csexton/release-asset-action@master
+      with:
+        pattern: "bundles/*"
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload Assets To AWS S3
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: "[ -z \"$AWS_ACCESS_KEY_ID\" ] || aws s3 cp bundles/ s3://adafruit-circuit-python/bundles/adafruit --recursive --no-progress --region us-east-1"
