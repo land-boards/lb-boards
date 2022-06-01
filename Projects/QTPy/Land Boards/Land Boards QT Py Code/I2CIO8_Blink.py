@@ -27,28 +27,39 @@ def readMCP23xxxReg(reg):
     i2c.writeto_then_readfrom(MCP23008_BASEADDR, bytes([reg]), result)
     return result
 
+def readJumpers():
+    rdVal = int(readMCP23xxxReg(MCP23008_GPIO)[0])
+    rdVal = ((rdVal >> 4) & 0x0F)
+    return rdVal
+
+def writeLEDs(wrVal):
+    writeMCP23xxxReg(MCP23008_OLAT, wrVal)
+
+def initI2CIO8():
+    writeMCP23xxxReg(MCP23008_IODIR, 0xF0)
+    writeMCP23xxxReg(MCP23008_IPOL, 0xF0)
+    writeMCP23xxxReg(MCP23008_GPINTEN, 0x0F)
+    writeMCP23xxxReg(MCP23008_INTCON, 0x00)
+    writeMCP23xxxReg(MCP23008_IOCON, 0x22)
+    writeMCP23xxxReg(MCP23008_GPPU, 0x00)
+
 i2c = busio.I2C(board.SCL, board.SDA)
-print("allocated i2c")
 
 def doI2CIO8():
-    print("started")
-
     # Lock the I2C device before accessing I2C
     while not i2c.try_lock():
         pass
 
-    print("Locked")
+    initI2CIO8()
 
     writeMCP23xxxReg(MCP23008_IODIR, 0xF0)
     loopCount = 0
     while loopCount < 60:
-        writeMCP23xxxReg(MCP23008_OLAT, 0xA5)
-        time.sleep(0.5)
-        writeMCP23xxxReg(MCP23008_OLAT, 0x5A)
-        time.sleep(0.5)
+        ledVal = 1
+        while ledVal < 0x0F:
+            writeLEDs(ledVal)
+            time.sleep(0.5)
+            ledVal <<= 1
         loopCount += 1
 
-    print("Done")
-
     i2c.unlock()
-    print("Unlocked")
