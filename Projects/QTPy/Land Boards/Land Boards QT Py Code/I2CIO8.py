@@ -40,11 +40,15 @@ def doI2CIO8():
     print("Locked")
 
     writeMCP23xxxReg(MCP23008_IODIR, 0xF0)
-    writeMCP23xxxReg(MCP23008_OLAT, 0xA5)
-    time.sleep(0.5)
-    writeMCP23xxxReg(MCP23008_OLAT, 0x5A)
-    time.sleep(0.5)
-    print("wrote")
+    loopCount = 0
+    while loopCount < 60:
+        writeMCP23xxxReg(MCP23008_OLAT, 0xA5)
+        time.sleep(0.5)
+        writeMCP23xxxReg(MCP23008_OLAT, 0x5A)
+        time.sleep(0.5)
+        loopCount += 1
+
+    print("Done")
 
     i2c.unlock()
     print("Unlocked")
