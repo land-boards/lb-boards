@@ -28,18 +28,19 @@ def readMCP23xxxReg(reg):
     return result
 
 i2c = busio.I2C(board.SCL, board.SDA)
-print("allocated i2c")
+# print("allocated i2c")
 
 def doI2CIO8():
-    print("started")
+    # print("started")
 
     # Lock the I2C device before accessing I2C
     while not i2c.try_lock():
         pass
 
-    print("Locked")
+    # print("Locked")
 
     writeMCP23xxxReg(MCP23008_IODIR, 0xF0)
+    writeMCP23xxxReg(MCP23008_IPOL, 0xF0)
     loopCount = 0
     while True:
         rdVal = int(readMCP23xxxReg(MCP23008_GPIO)[0])
@@ -47,7 +48,7 @@ def doI2CIO8():
         # print(rdVal)
         writeMCP23xxxReg(MCP23008_OLAT, rdVal)
 
-    print("Done")
+    # print("Done")
 
     i2c.unlock()
-    print("Unlocked")
+    # print("Unlocked")
