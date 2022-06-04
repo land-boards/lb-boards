@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,(6.0.1)*%
-%TF.CreationDate,2022-05-18T12:52:58-04:00*%
+%TF.CreationDate,2022-06-02T14:42:02-04:00*%
 %TF.ProjectId,I2CIO16-DB25,49324349-4f31-4362-9d44-4232352e6b69,X1*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Soldermask,Top*%
 %TF.FilePolarity,Negative*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (6.0.1)) date 2022-05-18 12:52:58*
+G04 Created by KiCad (PCBNEW (6.0.1)) date 2022-06-02 14:42:02*
 %MOMM*%
 %LPD*%
 G01*
