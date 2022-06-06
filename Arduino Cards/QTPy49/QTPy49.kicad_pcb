@@ -785,10 +785,10 @@
       (net 16 "GND") (pinfunction "2") (pintype "passive") (tstamp 2d833f53-95af-4ea0-b94e-80bb8989b6f5))
     (pad "3" thru_hole oval (at 3.2 4.6 270) (size 4.6 2) (drill oval 2.54 1) (layers *.Cu *.Mask "F.SilkS")
       (net 16 "GND") (pinfunction "3") (pintype "passive") (tstamp 68baab26-1b39-4921-b628-7419535628be))
-    (model "connectors/POWER_21.wrl"
+    (model "${KICAD6_3RD_PARTY}/DC_Jack/DS-261B.step"
       (offset (xyz 0 0 0))
-      (scale (xyz 0.8 0.8 0.8))
-      (rotate (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
     )
   )
 

@@ -1,0 +1,122 @@
+{| class="wikitable"
+! LVL_PIN
+! LVL AT
+! BRD
+! SIGNAL
+! FTDI
+! TO
+! WIRE/TRACE
+|-
+| 1 (GND)
+| H9
+| H12
+| GND
+| 
+| H9
+| TRACE
+|-
+| 2 (B4)
+| G9
+| G12
+| RX (TO NANO)
+| 
+| G9
+| TRACE
+|-
+| 3 (B3)
+| F9
+| F12
+| TX (FROM NANO)
+| 
+| F9
+| TRACE
+|-
+| 4 (B2)
+| E9
+| E12
+| RTS (TO NANO)
+| 
+| E9
+| TRACE
+|-
+| 5 (B1)
+| D9
+| D12
+| CTS (FROM NANO)
+| 
+| D9
+| TRACE
+|-
+| 6 (HV)
+| C9
+| C12
+| +5V
+| 
+| C9
+| TRACE
+|-
+| 7 (LV)
+| C5
+| 
+| +3.3V
+| 
+| B7
+| WIRE
+|-
+| 8 (A1)
+| D5
+| 
+| CTS (FROM NANO)
+| 2
+| 
+| WIRE
+|-
+| 9 (A2)
+| E5
+| 
+| RTS (TO NANO)
+| 6
+| 
+| WIRE
+|-
+| 10 (A3)
+| F5
+| 
+| TX (FROM NANO)
+| 4
+| 
+| WIRE
+|-
+| 11 (A4)
+| G5
+| 
+| RX (TO NANO)
+| 5
+| 
+| WIRE
+|-
+| 12 (GND)
+| H5
+| 
+| 
+| 
+| H6
+| WIRE
+|-
+| GND
+| 
+| K5
+| 
+| 1
+| K6
+| WIRE
+|-
+| +3.3V
+| 
+| 
+| 
+| 
+| 
+| 
+|-
+|}
