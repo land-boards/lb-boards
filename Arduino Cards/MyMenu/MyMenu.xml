@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Arduino Cards\MyMenu\MyMenu.kicad_sch</source>
+    <date>6/7/2022 12:04:04 PM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>MYMENU</title>
+        <company>Land Boards LLC</company>
+        <rev>5</rev>
+        <date>2022-06-07</date>
+        <source>MyMenu.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="ADR1">
+      <value>COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dda762a1-2d9f-4bce-a512-8bd69c61d493</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <libsource lib="MyMenu-rescue" part="LED-RESCUE-MyMenu" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae832</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <libsource lib="MyMenu-rescue" part="LED-RESCUE-MyMenu" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae823</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <libsource lib="MyMenu-rescue" part="LED-RESCUE-MyMenu" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae814</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x03_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be147eac-c43b-4531-9825-86ae24fe72aa</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_02x03_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ead61e2-2ced-472f-98b6-f9e595a26774</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>CONN_1</value>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004fd64065</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>CONN_1</value>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004fd6406a</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>CONN_1</value>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004fd6406f</tstamps>
+    </comp>
+    <comp ref="MTG4">
+      <value>CONN_1</value>
+      <footprint>MTG-4-40</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004fd64072</tstamps>
+    </comp>
+    <comp ref="MTG5">
+      <value>CONN_1</value>
+      <footprint>MTG-2.5MM</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fb3677</tstamps>
+    </comp>
+    <comp ref="MTG6">
+      <value>CONN_1</value>
+      <footprint>MTG-2.5MM</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fb3686</tstamps>
+    </comp>
+    <comp ref="MTG7">
+      <value>CONN_1</value>
+      <footprint>MTG-2.5MM</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fb368d</tstamps>
+    </comp>
+    <comp ref="MTG8">
+      <value>CONN_1</value>
+      <footprint>MTG-2.5MM</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fb3694</tstamps>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_4</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faf136</tstamps>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_5</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x05</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fb4442</tstamps>
+    </comp>
+    <comp ref="P3">
+      <value>CONN_4</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04</footprint>
+      <libsource lib="MyMenu-rescue" part="CONN_4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005599e150</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>2.2K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb70</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>2.2K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb6a</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>560</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae84b</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>560</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae845</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>560</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae83f</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae379</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae373</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae36d</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae367</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb88</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>DNP</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb82</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>DNP</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb7c</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>DNP</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054faeb76</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="MyMenu-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae35a</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_PUSH_OMRON</value>
+      <footprint>dougsLib:SW-PB-6MM</footprint>
+      <libsource lib="MyMenu-rescue" part="SW_PUSH_OMRON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000053bdd5b6</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_PUSH_OMRON</value>
+      <footprint>dougsLib:SW-PB-6MM</footprint>
+      <libsource lib="MyMenu-rescue" part="SW_PUSH_OMRON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000053bdd5c5</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_PUSH_OMRON</value>
+      <footprint>dougsLib:SW-PB-6MM</footprint>
+      <libsource lib="MyMenu-rescue" part="SW_PUSH_OMRON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000053bdd5d4</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_PUSH_OMRON</value>
+      <footprint>dougsLib:SW-PB-6MM</footprint>
+      <libsource lib="MyMenu-rescue" part="SW_PUSH_OMRON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000053bdd5e3</tstamps>
+    </comp>
+    <comp ref="SW5">
+      <value>SW_PUSH_OMRON</value>
+      <footprint>dougsLib:SW-PB-6MM</footprint>
+      <libsource lib="MyMenu-rescue" part="SW_PUSH_OMRON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000053bdd5f2</tstamps>
+    </comp>
+    <comp ref="TESTED1">
+      <value>COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a7c6140-363d-4e2a-b40c-b4a55f18513c</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP23008SO</value>
+      <footprint>dougsLib:SO18W</footprint>
+      <libsource lib="MyMenu-rescue" part="MCP23008P" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="MyMenu.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000054fae31e</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
+      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="CONN_1">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="CONN_4">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="CONN_5">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="LED-RESCUE-MyMenu">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-RESCUE-MyMenu</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="MCP23008P">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP23008P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="SDA" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="A1" type="input"/>
+        <pin num="5" name="A0" type="input"/>
+        <pin num="6" name="~{RST}" type="input"/>
+        <pin num="8" name="INT" type="output"/>
+        <pin num="9" name="VSS" type="power_in"/>
+        <pin num="10" name="GP0" type="output"/>
+        <pin num="11" name="GP1" type="output"/>
+        <pin num="12" name="GP2" type="output"/>
+        <pin num="13" name="GP3" type="output"/>
+        <pin num="14" name="GP4" type="output"/>
+        <pin num="15" name="GP5" type="output"/>
+        <pin num="16" name="GP6" type="output"/>
+        <pin num="17" name="GP7" type="bidirectional"/>
+        <pin num="18" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyMenu-rescue" part="SW_PUSH_OMRON">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_PUSH_OMRON</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    </library>
+    <library logical="MyMenu-rescue">
+      <uri>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Arduino Cards\MyMenu/MyMenu-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/A0">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="2" name="/A1">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="3" name="/A2">
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="4" name="/GND">
+      <node ref="D1" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="P2" pin="1" pintype="passive"/>
+      <node ref="P3" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW1" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="SW2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW2" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="SW3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW3" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="SW4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW4" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="SW5" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW5" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="5" name="/INT*">
+      <node ref="P2" pin="5" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="INT" pintype="output"/>
+    </net>
+    <net code="6" name="/SCL">
+      <node ref="P1" pin="3" pinfunction="P3" pintype="passive"/>
+      <node ref="P2" pin="4" pintype="passive"/>
+      <node ref="P3" pin="4" pinfunction="P4" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="7" name="/SDA">
+      <node ref="P1" pin="4" pinfunction="P4" pintype="passive"/>
+      <node ref="P2" pin="3" pintype="passive"/>
+      <node ref="P3" pin="3" pinfunction="P3" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SDA" pintype="input"/>
+    </net>
+    <net code="8" name="/VCC">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="P2" pin="2" pintype="passive"/>
+      <node ref="P3" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="9" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="P1" pin="2" pinfunction="P2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="P1" pin="1" pinfunction="P1" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="GP0" pintype="output"/>
+    </net>
+    <net code="15" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="GP1" pintype="output"/>
+    </net>
+    <net code="16" name="Net-(R5-Pad1)">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="GP2" pintype="output"/>
+    </net>
+    <net code="17" name="Net-(R6-Pad2)">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="SW5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="GP3" pintype="output"/>
+    </net>
+    <net code="18" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GP4" pintype="output"/>
+    </net>
+    <net code="19" name="Net-(R8-Pad2)">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="GP5" pintype="output"/>
+    </net>
+    <net code="20" name="Net-(R9-Pad2)">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="GP6" pintype="output"/>
+    </net>
+    <net code="21" name="Net-(R12-Pad2)">
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="~{RST}" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(R19-Pad2)">
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="GP7" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="unconnected-(MTG1-Pad1)">
+      <node ref="MTG1" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(MTG2-Pad1)">
+      <node ref="MTG2" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(MTG3-Pad1)">
+      <node ref="MTG3" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(MTG4-Pad1)">
+      <node ref="MTG4" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(MTG5-Pad1)">
+      <node ref="MTG5" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(MTG6-Pad1)">
+      <node ref="MTG6" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(MTG7-Pad1)">
+      <node ref="MTG7" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(MTG8-Pad1)">
+      <node ref="MTG8" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
