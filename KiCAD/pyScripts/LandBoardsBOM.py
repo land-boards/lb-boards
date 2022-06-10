@@ -141,6 +141,7 @@ for group in grouped:
     for field in columns[7:]:
         row.append( net.getGroupField(group, field) );
 
-    writerow( out, row  )
+    if row[2][0:3] != "MTG" and row[3][0:3] != "COU":	# Ignore MTG holes and Coupons
+        writerow( out, row  )
 
 f.close()
