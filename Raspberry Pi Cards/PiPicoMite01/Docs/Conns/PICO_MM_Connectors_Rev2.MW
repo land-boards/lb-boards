@@ -8,7 +8,7 @@
 ! PICO PIN
 |-
 | GP0
-| SPARE
+| J8-2 (I2C0_SDA) 
 | 1
 | 
 | GP16
@@ -16,15 +16,23 @@
 | 21
 |-
 | GP1
-| SPARE
+| J8-1 (I2C0_SCL) 
 | 2
 | 
 | GP17
 | VGA_VSYNC
 | 22
 |-
+| GND
+| 
+| 3
+| 
+| GND
+| 
+| 23
+|-
 | GP2
-| I2C1_INT (MCP23017)
+| MCP23017_INTA (H2)
 | 4
 | 
 | GP18
@@ -32,7 +40,7 @@
 | 24
 |-
 | GP3
-| SPARE
+| SPARE GPIO
 | 5
 | 
 | GP19
@@ -40,7 +48,7 @@
 | 25
 |-
 | GP4
-| SPARE
+| SPARE GPIO
 | 6
 | 
 | GP20
@@ -48,91 +56,115 @@
 | 26
 |-
 | GP5
-| SPARE
+| SPARE GPIO
 | 7
 | 
 | GP21
 | VGA_RED
 | 27
 |-
+| GND
+| 
+| 8
+| 
+| GND
+| 
+| 28
+|-
 | GP6
 | AUDIO-L
 | 9
 | 
 | GP22
-| SPARE
+| SPARE GPIO
 | 29
 |-
 | GP7
 | AUDIO-R
 | 10
 | 
-| GP26
-| SPARE
-| 31
+| RUN
+| 
+| 30
 |-
 | GP8
 | PS2_CLK
 | 11
 | 
-| GP27
-| SPARE
-| 32
+| GP26
+| SPARE GPIO
+| 31
 |-
 | GP9
 | PS2_DATA
 | 12
 | 
-| GP28
-| SPARE
-| 34
+| GP27
+| SPARE GPIO
+| 32
+|-
+| GND
+| 
+| 13
+| 
+| GND
+| 
+| 33
 |-
 | GP10
 | SD_SCK
 | 14
 | 
-| 3.3V
-| POWER_3.3V
-| 36
+| GP28
+| SPARE GPIO
+| 34
 |-
 | GP11
 | SD_MOSI
 | 15
 | 
-| VSYS
-| PS2_5V
-| 39
+| ADCREF
+| 
+| 35
 |-
 | GP12
 | SD_MISO
 | 16
 | 
-| 
-| 
-| 
+| 3.3V
+| POWER_3.3V
+| 36
 |-
 | GP13
 | SD_SLVSEL
 | 17
 | 
+| VEN3
 | 
+| 37
+|-
+| GND
 | 
+| 18
 | 
+| GND
+| 
+| 38
 |-
 | GP14
 | I2C1_SDA (MCP23017)
 | 19
 | 
-| 
-| 
-| 
+| VSYS
+| PS2_5V
+| 39
 |-
 | GP15
 | I2C1_SCL (MCP23017)
 | 20
 | 
+| VBUS
 | 
-| 
-| 
+| 40
 |-
 |}
