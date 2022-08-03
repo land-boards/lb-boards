@@ -6,8 +6,9 @@
 
   (paper "B")
   (title_block
-    (title "8-Channel Opto-Isolated Output I2C")
-    (rev "X1")
+    (title "JOYPAD")
+    (date "2022-08-02")
+    (rev "2")
     (company "land-boards.com")
   )
 
@@ -631,7 +632,7 @@
       (net 1 "GND") (pinfunction "8") (pintype "passive") (tstamp 5f844a36-76eb-4d8f-9b81-ee402d2eda88))
     (pad "9" thru_hole circle (at -9.695 2.84 180) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask)
       (net 13 "unconnected-(J2-Pad9)") (pinfunction "9") (pintype "passive") (tstamp 630ddd10-f9cf-453e-8619-22194eb4bd01))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_Dsub.3dshapes/DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_Dsub.3dshapes/DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm.wrl" hide
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1146,7 +1147,12 @@
       (net 1 "GND") (pinfunction "Pin_11") (pintype "passive") (tstamp e1c30a32-820e-4b17-aec9-5cb8b76f0ccc))
     (pad "12" thru_hole oval locked (at 0 -27.94 90) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "Pin_12") (pintype "passive") (tstamp 88d2c4b8-79f2-4e8b-9f70-b7e0ed9c70f8))
-    (model "${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x12_P2.54mm_Vertical.wrl"
+    (model "${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x12_P2.54mm_Vertical.wrl" hide
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x12_P2.54mm_Horizontal.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
