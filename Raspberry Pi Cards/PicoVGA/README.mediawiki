@@ -2,10 +2,29 @@
 <img src="http://land-boards.com/tindie/tindie-larges-v2.png" alt="Tindie Logo">
 </img></a>
 
-== lb-boards Open Data Acquisition Cards Designs ==
+== Features ==
 
-=== land-boards.com - Open Data Acquisition Cards Printed Circuit Board Designs ===
-
-Design files are kept here. Most are [http://www.kicad-pcb.org/display/KICAD/KiCad+EDA+Software+Suite/ Kicad based designs]:  "Kicad is an open source electronic design suite which includes professional quality schematic capture and board layout tools."
-
-See [http://land-boards.com/content/ our PCB Designs Website][ourWebsite] and our [http://land-boards.com/blwiki/ land-boards Wiki][ourWiki].
+* Raspberry Pi Pico
+** Automatic overclocking of processor
+** Library uses the 2nd core, main program uses 1st core
+* VGA
+** 8-bit output in R:G:B 3:3:2 format (256 colors)
+** VGA progressive output up to 1280x960 resolution
+** Automatic configuration video mode timings
+** Composite sync
+* Video formats
+** 1 base layer and 3 overlay layers with transparency
+** 30 frame buffer formats: graphics, tiles, text, special
+** Colour palettes
+** Screen split into segments of different formats
+** RLE compression
+** Transparency with selectable key colour
+** Hardware sprites
+** Output layers to different color bits (color planes)
+* PWM mono audio output
+** 3.5mm stereo jack
+* Joystick connector(s)
+** [[JOYPAD]] or 9-pin "Atari" Joystick
+* 99.5x69.5mm card
+* Fits into 100x76mm extruded aluminum enclosure
+* (4) 4-40 mounting holes
