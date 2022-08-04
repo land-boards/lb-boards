@@ -48,12 +48,15 @@
 <li>27 x 28 x 8.4mm</li>
 <li>DS1307 RTC</li>
 <li>DS18B20 Digital Thermometer</li>
-<h3>BASIC Interprete</h3>
+</ul>
+</ul>
+<h3>BASIC Interpreter</h3>
 The <a href="https://geoffg.net/picomitevga.html"> PicoMiteVGA</a> boots straight into the MMBasic prompt. At which point you can enter, edit and save the program, test BASIC commands and run the program.
+
 MMBasic is a Microsoft BASIC compatible implementation of the BASIC language, originally written by Geoff Graham and enhanced and ported to the Pico by Peter Mather, who also designed the original PicoMite on which this design is based. It is full featured with floating point, 64-bit integers and string variables, long variable names, arrays of floats, integers or strings with multiple dimensions, extensive string handling and user defined subroutines and functions. Typically it will execute a program up to 100,000 lines per second. Embedded compiled C programs can be used for even higher performance.
 Using MMBasic you can use communications protocols such as I2C or SPI to get data from a variety of sensors. You can save data to an SD card, measure voltages, detect digital inputs and drive output pins to turn on lights, relays, etc.
 The emphasis with MMBasic is on ease of use and development. The development cycle is very fast with the ability to instantly switch from edit to run. Errors are listed in plain English and when an error does occur a single keystroke will invoke the built in editor with the cursor positioned on the line that caused the error.
+
 <h4>MMBASIC Credi</h4>
+
 Peter Mather led the project, ported the MMBasic interpreter to the Raspberry Pi Pico and wrote the hardware device drivers. Geoff Graham wrote the MMBasic interpreter and the manual.  Mick Ames wrote the PIO compiler and its corresponding documentation. The VGA driver code was derived from work by Miroslav Nemecek.
-</ul>
-</ul>
