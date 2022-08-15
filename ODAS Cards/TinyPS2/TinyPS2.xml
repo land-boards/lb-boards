@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\ODAS Cards\TinyPS2\TinyPS2.kicad_sch</source>
+    <date>8/15/2022 5:59:56 AM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>TinyPS2</title>
+        <company>land-boards.com</company>
+        <rev>4</rev>
+        <date>2022-08-01</date>
+        <source>TinyPS2.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BRD1">
+      <value>QT_Py</value>
+      <footprint>LandBoards_BoardOutlines:QT_Py</footprint>
+      <libsource lib="LandBoards_Cards" part="QT_Py" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aae81720-20e6-4276-a88c-0d6e7e7f9f9d</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000051cca2bf</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N5819</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2253008-8e1c-4c73-af40-538d333d413d</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x04</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dd88e4a</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>PS2_DIN6</value>
+      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dd95fb9</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5c5a79b-9605-4548-9912-d982d1f17da0</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ef3066f-d0da-486c-abf0-c72dae85736e</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dee2c933-3b9b-4ff4-ba0f-6dfc525ae535</tstamps>
+    </comp>
+    <comp ref="MTG4">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f0d48993-7073-47a5-bb2c-84b73c86c437</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dd9d6db</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dd9e658</tstamps>
+    </comp>
+    <comp ref="TEST1">
+      <value>COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000627479f5</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>TXS0104</value>
+      <footprint>Package_SO:SO-14_3.9x8.65mm_P1.27mm</footprint>
+      <datasheet>DOCUMENTATION</datasheet>
+      <libsource lib="LandBoards_Semis" part="TXS0104" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="TinyPS2.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da8c8625-aafd-4cdd-8a69-a69db75bbf93</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards_Cards" part="QT_Py">
+      <fields>
+        <field name="Reference">BRD</field>
+        <field name="Value">QT_Py</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D0/A0/AOUT" type="bidirectional"/>
+        <pin num="2" name="D1/A1/AREF" type="bidirectional"/>
+        <pin num="3" name="D2/A2" type="bidirectional"/>
+        <pin num="4" name="D3/A3" type="bidirectional"/>
+        <pin num="5" name="D4/SDA" type="bidirectional"/>
+        <pin num="6" name="D5/SCL" type="bidirectional"/>
+        <pin num="7" name="D6/TX/A6" type="bidirectional"/>
+        <pin num="8" name="D7/RX/A7" type="bidirectional"/>
+        <pin num="9" name="D8/SCK/A8" type="bidirectional"/>
+        <pin num="10" name="D9/MISO/A9" type="bidirectional"/>
+        <pin num="11" name="D10/MOSI/A10" type="bidirectional"/>
+        <pin num="12" name="3.3V" type="power_out"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="5V" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Conns" part="PS2_DIN6">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PS2_DIN6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DATA" type="input"/>
+        <pin num="2" name="NC" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="VCC" type="input"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="NC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Semis" part="TXS0104">
+      <docs>DOCUMENTATION</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TXS0104</field>
+        <field name="Footprint">SO14</field>
+        <field name="Datasheet">DOCUMENTATION</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCA(LV)" type="passive"/>
+        <pin num="2" name="A1" type="bidirectional"/>
+        <pin num="3" name="A2" type="bidirectional"/>
+        <pin num="4" name="A3" type="bidirectional"/>
+        <pin num="5" name="A4" type="bidirectional"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="OE" type="input"/>
+        <pin num="10" name="B4" type="bidirectional"/>
+        <pin num="11" name="B3" type="bidirectional"/>
+        <pin num="12" name="B2" type="bidirectional"/>
+        <pin num="13" name="B1" type="bidirectional"/>
+        <pin num="14" name="VCCB(HV)" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Cards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Cards.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Conns">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Conns.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Semis">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Semis.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="BRD1" pin="12" pinfunction="3.3V" pintype="power_out"/>
+      <node ref="U1" pin="1" pinfunction="VCCA(LV)" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="OE" pintype="input"/>
+    </net>
+    <net code="2" name="+5VD">
+      <node ref="BRD1" pin="14" pinfunction="5V" pintype="power_in"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="VCC" pintype="input"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VCCB(HV)" pintype="passive"/>
+    </net>
+    <net code="3" name="/D2V3">
+      <node ref="BRD1" pin="3" pinfunction="D2/A2" pintype="bidirectional"/>
+      <node ref="U1" pin="4" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/D2V5">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="B3" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/KBCLK3">
+      <node ref="BRD1" pin="1" pinfunction="D0/A0/AOUT" pintype="bidirectional"/>
+      <node ref="U1" pin="2" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/KBCLK5">
+      <node ref="J2" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="B1" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/KBDAT3">
+      <node ref="BRD1" pin="2" pinfunction="D1/A1/AREF" pintype="bidirectional"/>
+      <node ref="U1" pin="3" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/KBDAT5">
+      <node ref="J2" pin="1" pinfunction="DATA" pintype="input"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="B2" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/KBTX5">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="B4" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/SERTX">
+      <node ref="BRD1" pin="7" pinfunction="D6/TX/A6" pintype="bidirectional"/>
+      <node ref="U1" pin="5" pinfunction="A4" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="GND">
+      <node ref="BRD1" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="U1" pin="7" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="13" name="unconnected-(BRD1-Pad4)">
+      <node ref="BRD1" pin="4" pinfunction="D3/A3" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="unconnected-(BRD1-Pad5)">
+      <node ref="BRD1" pin="5" pinfunction="D4/SDA" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="unconnected-(BRD1-Pad6)">
+      <node ref="BRD1" pin="6" pinfunction="D5/SCL" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="unconnected-(BRD1-Pad8)">
+      <node ref="BRD1" pin="8" pinfunction="D7/RX/A7" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="unconnected-(BRD1-Pad9)">
+      <node ref="BRD1" pin="9" pinfunction="D8/SCK/A8" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="unconnected-(BRD1-Pad10)">
+      <node ref="BRD1" pin="10" pinfunction="D9/MISO/A9" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="unconnected-(BRD1-Pad11)">
+      <node ref="BRD1" pin="11" pinfunction="D10/MOSI/A10" pintype="bidirectional"/>
+    </net>
+    <net code="20" name="unconnected-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="NC" pintype="input"/>
+    </net>
+    <net code="21" name="unconnected-(J2-Pad6)">
+      <node ref="J2" pin="6" pinfunction="NC" pintype="input"/>
+    </net>
+  </nets>
+</export>
