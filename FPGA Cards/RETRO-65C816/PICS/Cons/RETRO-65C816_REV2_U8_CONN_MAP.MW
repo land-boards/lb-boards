@@ -1,0 +1,530 @@
+{| class="wikitable"
+! U8 PIN
+! EP4CE15
+! EP4CE55
+! 5CEFA2
+! 10C1006
+! J1
+! Function
+! 
+! U8 PIN
+! EP4CE15
+! EP4CE55
+! 5CEFA2
+! 10C1006
+! J1
+! Function
+|-
+| 1
+| GND
+| GND
+| GND
+| GND
+| N/C
+| 
+| 
+| 2
+| GND
+| GND
+| GND
+| GND
+| N/C
+| 
+|-
+| 3
+| 3.3V
+| 3.3V
+| 3.3V
+| 3.3V
+| J1-1
+| 
+| 
+| 4
+| 3.3V
+| 3.3V
+| 3.3V
+| 3.3V
+| J1-2
+| 
+|-
+| 5
+| GND
+| GND
+| GND
+| GND
+| N/C
+| 
+| 
+| 6
+| GND
+| GND
+| GND
+| GND
+| N/C
+| 
+|-
+| 7
+| PIN_AA13
+| PIN_AA13
+| PIN_AA14
+| PIN_R9
+| N/C
+| CPUE
+| 
+| 8
+| PIN_AB13
+| PIN_AB13
+| PIN_AA13
+| PIN_T9
+| N/C
+| CPURES*
+|-
+| 9
+| PIN_AA14
+| PIN_AA14
+| PIN_AA15
+| PIN_R10
+| J1-4
+| CPUMX
+| 
+| 10
+| PIN_AB14
+| PIN_AB14
+| PIN_AB15
+| PIN_T10
+| J1-3
+| CPUCLK
+|-
+| 11
+| PIN_AA15
+| PIN_AA15
+| PIN_Y15
+| PIN_R11
+| J1-6
+| CPUBE
+| 
+| 12
+| PIN_AB15
+| PIN_AB15
+| PIN_Y13
+| PIN_T11
+| J1-5
+| CPUNMIB
+|-
+| 13
+| PIN_AA16
+| PIN_AA16
+| PIN_AB18
+| PIN_R12
+| J1-8
+| CPURWB
+| 
+| 14
+| PIN_AB16
+| PIN_AB16
+| PIN_AB17
+| PIN_T12
+| J1-7
+| CPUIRQB
+|-
+| 15
+| PIN_AA17
+| PIN_AA17
+| PIN_Y7
+| PIN_N9
+| J1-10
+| CPUVDA
+| 
+| 16
+| PIN_AB17
+| PIN_AB17
+| PIN_Y16
+| PIN_M9
+| J1-9
+| CPUABORTB
+|-
+| 17
+| PIN_AA18
+| PIN_AA18
+| PIN_AA18
+| PIN_M10
+| J1-12
+| CPUVPA
+| 
+| 18
+| PIN_AB18
+| PIN_AB18
+| PIN_AA17
+| PIN_P9
+| J1-11
+| CPURDY
+|-
+| 19
+| PIN_AA19
+| PIN_AA19
+| PIN_AA20
+| PIN_P11
+| J1-14
+| CPUVPB
+| 
+| 20
+| PIN_AB19
+| PIN_AB19
+| PIN_AA19
+| PIN_N11
+| J1-13
+| CPUMLB
+|-
+| 21
+| PIN_AA20
+| PIN_AA20
+| PIN_Y20
+| PIN_R13
+| I1-16
+| 
+| 
+| 22
+| PIN_AB20
+| PIN_AB20
+| PIN_Y19
+| PIN_T13
+| J1-15
+| 
+|-
+| 23
+| PIN_Y22
+| PIN_Y22
+| PIN_AB21
+| PIN_T15
+| J1-18
+| 
+| 
+| 24
+| PIN_Y21
+| PIN_Y21
+| PIN_AB20
+| PIN_T14
+| J1-17
+| 
+|-
+| 25
+| PIN_W22
+| PIN_W22
+| PIN_AA22
+| PIN_N12
+| J1-20
+| 
+| 
+| 26
+| PIN_W21
+| PIN_W21
+| PIN_AB22
+| PIN_M11
+| J1-19
+| 
+|-
+| 27
+| PIN_V22
+| PIN_V22
+| PIN_W22
+| PIN_R14
+| J1-22
+| 
+| 
+| 28
+| PIN_V21
+| PIN_V21
+| PIN_Y22
+| PIN_N13
+| J1-21
+| 
+|-
+| 29
+| PIN_U22
+| PIN_U22
+| PIN_Y21
+| PIN_N14
+| J1-24
+| 
+| 
+| 30
+| PIN_U21
+| PIN_U21
+| PIN_W21
+| PIN_P14
+| J1-23
+| 
+|-
+| 31
+| PIN_R22
+| PIN_R22
+| PIN_U22
+| PIN_P16
+| J1-26
+| 
+| 
+| 32
+| PIN_R21
+| PIN_R21
+| PIN_V21
+| PIN_R16
+| J1-25
+| 
+|-
+| 33
+| PIN_P22
+| PIN_P22
+| PIN_V20
+| PIN_N16
+| J1-28
+| 
+| 
+| 34
+| PIN_P21
+| PIN_P21
+| PIN_W19
+| PIN_N15
+| J1-27
+| 
+|-
+| 35
+| PIN_N22
+| PIN_N22
+| PIN_U21
+| PIN_M16 (Note 1)
+| J3-3
+| 
+| 
+| 36
+| PIN_N21
+| PIN_N21
+| PIN_U20
+| PIN_M15  (Note 1)
+| J3-1
+| 
+|-
+| 37
+| PIN_M22
+| PIN_M22
+| PIN_R22
+| PIN_L16
+| J1-30
+| 
+| 
+| 38
+| PIN_M21
+| PIN_M21
+| PIN_T22
+| PIN_L15
+| J1-29
+| 
+|-
+| 39
+| PIN_L22
+| PIN_L22
+| PIN_P22
+| PIN_P15
+| J1-32
+| 
+| 
+| 40
+| PIN_L21
+| PIN_L21
+| PIN_R21
+| PIN_M12
+| J1-31
+| 
+|-
+| 41
+| PIN_K22
+| PIN_K22
+| PIN_T20
+| PIN_L14
+| J1-34
+| 
+| 
+| 42
+| PIN_K21
+| PIN_K21
+| PIN_T19
+| PIN_L13
+| J1-33
+| 
+|-
+| 43
+| PIN_J22
+| PIN_J22
+| PIN_P16
+| PIN_K16
+| J1-36
+| 
+| 
+| 44
+| PIN_J21
+| PIN_J21
+| PIN_P17
+| PIN_K15
+| J1-35
+| 
+|-
+| 45
+| PIN_H22
+| PIN_H22
+| PIN_N20
+| PIN_K12
+| J1-38
+| 
+| 
+| 46
+| PIN_H21
+| PIN_H21
+| PIN_N21
+| PIN_J12
+| J1-37
+| 
+|-
+| 47
+| PIN_F22
+| PIN_F22
+| PIN_M21
+| PIN_J14
+| J1-40
+| 
+| 
+| 48
+| PIN_F21
+| PIN_F21
+| PIN_M20
+| PIN_J13
+| J1-39
+| 
+|-
+| 49
+| PIN_E22
+| PIN_E22
+| PIN_M18
+| PIN_K11
+| J1-42
+| 
+| 
+| 50
+| PIN_E21
+| PIN_E21
+| PIN_N19
+| PIN_J11
+| J1-41
+| 
+|-
+| 51
+| PIN_D22
+| PIN_D22
+| PIN_L18
+| PIN_G11
+| J1-44
+| 
+| 
+| 52
+| PIN_D21
+| PIN_D21
+| PIN_L19
+| PIN_F11
+| J1-43
+| 
+|-
+| 53
+| PIN_C22
+| PIN_C22
+| PIN_M22
+| PIN_F13
+| J1-46
+| 
+| 
+| 54
+| PIN_C21
+| PIN_C21
+| PIN_L22
+| PIN_F14
+| J1-45
+| 
+|-
+| 55
+| PIN_B22
+| PIN_B22
+| PIN_L17
+| PIN_F10
+| J1-48
+| 
+| 
+| 56
+| PIN_B21
+| PIN_B21
+| PIN_K17
+| PIN_F9
+| J1-47
+| 
+|-
+| 57
+| PIN_N20
+| PIN_N20
+| PIN_K22
+| PIN_E16 (Note 1)
+| J3-5
+| 
+| 
+| 58
+| PIN_N19
+| PIN_N19
+| PIN_K21
+| PIN_E15 (Note 1)
+| J3-7
+| 
+|-
+| 59
+| PIN_M20
+| PIN_M20
+| PIN_M16
+| PIN_D16
+| J3-8
+| 
+| 
+| 60
+| PIN_M19
+| PIN_M19
+| PIN_N16
+| PIN_D15
+| J3-11
+| 
+|-
+| 61
+| GND
+| GND
+| GND
+| GND
+| J1-50
+| 
+| 
+| 62
+| GND
+| GND
+| GND
+| GND
+| J1-49
+| 
+|-
+| 63
+| +5V 
+| +5V 
+| +5V 
+| +5V 
+| J1-50
+| 
+| 
+| 64
+| +5V 
+| +5V 
+| +5V 
+| +5V 
+| J1-50
+| 
+|-
+|}
