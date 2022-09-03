@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\ESP32\ESP32-VGA\ESP32-VGA.kicad_sch</source>
+    <date>9/3/2022 10:53:58 AM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ESP32-VGA</title>
+        <company>land-boards.com</company>
+        <rev>3</rev>
+        <date>2021-03-10</date>
+        <source>ESP32-VGA.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/KEMET/C0805C104M5RACTU?qs=sGAEpiMZZMvsSlwiRhF8qsKzCboK%252BzaM5WRFsGtbC9s%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e24ba59</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/KEMET/C0805C104M5RACTU?qs=sGAEpiMZZMvsSlwiRhF8qsKzCboK%252BzaM5WRFsGtbC9s%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e4c8faa</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Taiyo-Yuden/EMK316BJ106KD-T?qs=sGAEpiMZZMs0AnBnWHyRQPSjYu%2Fkbgu8yl4Qxd63iAEnZPPprTwdOQ%3D%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e4e658b</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/KEMET/C0805C104M5RACTU?qs=sGAEpiMZZMvsSlwiRhF8qsKzCboK%252BzaM5WRFsGtbC9s%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005cafbaec</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/KEMET/C0805C104M5RACTU?qs=sGAEpiMZZMvsSlwiRhF8qsKzCboK%252BzaM5WRFsGtbC9s%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005cafc032</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Taiyo-Yuden/EMK316BJ106KD-T?qs=sGAEpiMZZMs0AnBnWHyRQPSjYu%2Fkbgu8yl4Qxd63iAEnZPPprTwdOQ%3D%3D</datasheet>
+      <libsource lib="Device" part="CP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e297506</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e51b869</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>Header, Vert, 2x4</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e40635f</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>Header, Vert, 1x4</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e447d67</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>DCJ0202</value>
+      <footprint>LandBoards_Conns:DCJ-NEW-Slotted</footprint>
+      <datasheet>https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=m570.l1313&amp;_nkw=5.5mm+x+2.5mm+Plastic+DC+Power+Jack&amp;_sacat=0</datasheet>
+      <libsource lib="LandBoards_Conns" part="DCJ0202" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e4b4f7c</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Header, 1x6, Rt Ang, (FTDI)</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal</footprint>
+      <libsource lib="LandBoards_Cards" part="FTDI-Slave" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005cf868f5</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Header, 1x6, Rt Ang, (FTDI)</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal</footprint>
+      <libsource lib="LandBoards_Cards" part="FTDI-Slave" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee186a</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn, SD Card</value>
+      <footprint>LandBoards_Conns:SD_CARD</footprint>
+      <datasheet>http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf</datasheet>
+      <libsource lib="ESP32-VGA-rescue" part="SD_Card-Connector" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e39ef9e</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>Conn_02x02_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00006049bae4</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000586ad6d2</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000586ad65d</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000586ad691</tstamps>
+    </comp>
+    <comp ref="MTG?1">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-6-32</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000586ad5e2</tstamps>
+    </comp>
+    <comp ref="P1">
+      <value>MINI-DIN6, PS2 (GRN)</value>
+      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <datasheet>https://www.ebay.com/itm/10Pcs-mini-6pin-female-pcb-mount-ps2-jack-mouse-keyboard-plug-connec-CO/312856912531?ssPageName=STRK%3AMEBIDX%3AIT&amp;var=611569754103&amp;_trksid=p2057872.m2749.l2649</datasheet>
+      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e0dde0b</tstamps>
+    </comp>
+    <comp ref="P2">
+      <value>MINI-DIN6, PS2 (PURP)</value>
+      <footprint>LandBoards_Conns:Connector_Mini-DIN_Female_6Pin_2rows</footprint>
+      <datasheet>https://www.ebay.com/itm/10PCS-MINI-6PIN-FEMALE-PCB-MOUNT-PS2-JACK-mouse-keyboard-plug-connector-Purple/141976500445?hash=item210e7578dd:g:GjMAAMXQC-tTBKMC</datasheet>
+      <libsource lib="LandBoards_Conns" part="PS2_DIN6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e0ddd97</tstamps>
+    </comp>
+    <comp ref="P3">
+      <value>CONN, DB15HD, BLUE (VGA)</value>
+      <footprint>LandBoards_Conns:DB_15F-VGA-fixed</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/587-634-015-274-906</datasheet>
+      <libsource lib="LandBoards_Conns" part="VGA" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8b2b</tstamps>
+    </comp>
+    <comp ref="P4">
+      <value>JACK,, RT ANG, RCA</value>
+      <footprint>LandBoards_Conns:RCA</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/568-NYS354</datasheet>
+      <libsource lib="LandBoards_Conns" part="RCA-JACK" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e2c8977</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>422</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/652-CR0805FX-4220ELF</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8bf6</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>845</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/603-RC0805FR-07845RL</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8e1c</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>422</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/652-CR0805FX-4220ELF</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8e68</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>845</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/603-RC0805FR-07845RL</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8f5c</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>422</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/652-CR0805FX-4220ELF</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8f62</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>845</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/603-RC0805FR-07845RL</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005dee8f68</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/YAGEO/RC0805JR-13270RL?qs=fRxXYNj8ftGjdryVMthBYw%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e24b595</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>150</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Yageo/RT0805FRE07150RL?qs=sGAEpiMZZMu61qfTUdNhGxEjuuBLd0B4fB5OA91vaXU%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005e24bc5e</tstamps>
+    </comp>
+    <comp ref="TEST1">
+      <value>COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000059399b7a</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32 MODULE</value>
+      <footprint>LandBoards_BoardOutlines:ESP32_EXP</footprint>
+      <datasheet>DOCUMENTATION</datasheet>
+      <libsource lib="ESP32-VGA-rescue" part="ESP32-ESP32-LandBoards_Semis" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005c875761</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>TXS0104ED</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Texas-Instruments/TXS0104ED?qs=7kv20MEVUlg5V59AplM5UA%3D%3D</datasheet>
+      <libsource lib="LandBoards_Semis" part="TXS0104" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP32-VGA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005df7ec0f</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Odd_Even">
+      <description>Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Odd_Even">
+      <description>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP1">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">Device_CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ESP32-VGA-rescue" part="ESP32-ESP32-LandBoards_Semis">
+      <docs>DOCUMENTATION</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-ESP32-LandBoards_Semis</field>
+        <field name="Footprint">MODULE</field>
+        <field name="Datasheet">DOCUMENTATION</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3.3V" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="IO15/SD_CMD/A2_3/T3" type="bidirectional"/>
+        <pin num="4" name="IO2/SD_D0/A2_2/T2" type="bidirectional"/>
+        <pin num="5" name="IO4/SD_D1/A2_0/T0" type="bidirectional"/>
+        <pin num="6" name="IO16/RX2" type="input"/>
+        <pin num="7" name="IO17/TX2" type="output"/>
+        <pin num="8" name="IO5" type="bidirectional"/>
+        <pin num="9" name="IO18/SCK" type="bidirectional"/>
+        <pin num="10" name="IO19/CTS0" type="bidirectional"/>
+        <pin num="11" name="IO21/SDA/RX0" type="bidirectional"/>
+        <pin num="12" name="IO3/RX0" type="input"/>
+        <pin num="13" name="IO1/TX0" type="bidirectional"/>
+        <pin num="14" name="IO22/RTS1" type="input"/>
+        <pin num="15" name="IO23/MOSI" type="bidirectional"/>
+        <pin num="16" name="EN" type="input"/>
+        <pin num="17" name="VP/I36/A1_0" type="input"/>
+        <pin num="18" name="VN/I39/A1_3" type="input"/>
+        <pin num="19" name="A6/I34" type="input"/>
+        <pin num="20" name="A7/I35" type="input"/>
+        <pin num="21" name="A4/IO32/T9" type="input"/>
+        <pin num="22" name="A5/IO33/T8" type="input"/>
+        <pin num="23" name="A8/IO25/DAC1" type="input"/>
+        <pin num="24" name="A9/I026/DAC2" type="input"/>
+        <pin num="25" name="IO27/A2_7/T7" type="bidirectional"/>
+        <pin num="26" name="IO14/SD_CLK/A2_6/T6" type="bidirectional"/>
+        <pin num="27" name="IO12/SD_D2/A2_5/T5" type="bidirectional"/>
+        <pin num="28" name="IO13/SD_D3/A2_4/T4" type="bidirectional"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="ESP32-VGA-rescue" part="SD_Card-Connector">
+      <footprints>
+        <fp>SD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SD_Card-Connector</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CD/DAT3" type="input"/>
+        <pin num="2" name="CMD" type="input"/>
+        <pin num="3" name="VSS" type="power_in"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="input"/>
+        <pin num="8" name="DAT1" type="input"/>
+        <pin num="9" name="DAT2" type="input"/>
+        <pin num="10" name="CARD_DETECT" type="input"/>
+        <pin num="11" name="WRITE_PROTECT" type="input"/>
+        <pin num="12" name="SHELL1" type="input"/>
+        <pin num="13" name="SHELL2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards_Cards" part="FTDI-Slave">
+      <fields>
+        <field name="Reference">BRD</field>
+        <field name="Value">FTDI-Slave</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_out"/>
+        <pin num="2" name="RTS&lt;" type="input"/>
+        <pin num="3" name="VCC" type="power_out"/>
+        <pin num="4" name="RX&gt;" type="output"/>
+        <pin num="5" name="TX&lt;" type="input"/>
+        <pin num="6" name="CTS&gt;" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Conns" part="DCJ0202">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DCJ0202</field>
+        <field name="Footprint">con-jack-DCJ0202</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Conns" part="PS2_DIN6">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PS2_DIN6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DATA" type="input"/>
+        <pin num="2" name="NC" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="VCC" type="input"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="NC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Conns" part="RCA-JACK">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RCA-JACK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="power_in"/>
+        <pin num="2" name="G" type="power_in"/>
+        <pin num="3" name="G" type="power_in"/>
+        <pin num="4" name="CENTER" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Conns" part="VGA">
+      <footprints>
+        <fp>Pin_Header_Straight_1X15</fp>
+        <fp>Pin_Header_Angled_1X15</fp>
+        <fp>Socket_Strip_Straight_1X15</fp>
+        <fp>Socket_Strip_Angled_1X15</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">VGA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P11" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards_Semis" part="TXS0104">
+      <docs>DOCUMENTATION</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TXS0104</field>
+        <field name="Footprint">SO14</field>
+        <field name="Datasheet">DOCUMENTATION</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCCA(LV)" type="passive"/>
+        <pin num="2" name="A1" type="bidirectional"/>
+        <pin num="3" name="A2" type="bidirectional"/>
+        <pin num="4" name="A3" type="bidirectional"/>
+        <pin num="5" name="A4" type="bidirectional"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="OE" type="input"/>
+        <pin num="10" name="B4" type="bidirectional"/>
+        <pin num="11" name="B3" type="bidirectional"/>
+        <pin num="12" name="B2" type="bidirectional"/>
+        <pin num="13" name="B1" type="bidirectional"/>
+        <pin num="14" name="VCCB(HV)" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="ESP32-VGA-rescue">
+      <uri>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\ESP32\ESP32-VGA/ESP32-VGA-rescue.lib</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Cards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Cards.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Conns">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Conns.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards_Semis">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Semis.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="H2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="H2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="H2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="H2" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="3.3V" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="VCCA(LV)" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="OE" pintype="input"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="H1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="P1" pin="4" pinfunction="VCC" pintype="input"/>
+      <node ref="P2" pin="4" pinfunction="VCC" pintype="input"/>
+      <node ref="U1" pin="30" pinfunction="VIN" pintype="power_in"/>
+      <node ref="U2" pin="14" pinfunction="VCCB(HV)" pintype="passive"/>
+    </net>
+    <net code="3" name="/AUDIO">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="A8/IO25/DAC1" pintype="input"/>
+    </net>
+    <net code="4" name="/BLUHI">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="IO4/SD_D1/A2_0/T0" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/BLULO">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="IO5" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/EN">
+      <node ref="U1" pin="16" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="7" name="/GP12">
+      <node ref="H3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="IO12/SD_D2/A2_5/T5" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/GP35">
+      <node ref="H3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="A7/I35" pintype="input"/>
+    </net>
+    <net code="9" name="/GRNHI">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="IO18/SCK" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/GRNLO">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="IO19/CTS0" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/HSYNC">
+      <node ref="P3" pin="13" pinfunction="P13" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="IO23/MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/KBCLK">
+      <node ref="U1" pin="22" pinfunction="A5/IO33/T8" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/KBDAT">
+      <node ref="U1" pin="21" pinfunction="A4/IO32/T9" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/MISO">
+      <node ref="J4" pin="7" pinfunction="DAT0" pintype="input"/>
+      <node ref="U1" pin="6" pinfunction="IO16/RX2" pintype="input"/>
+    </net>
+    <net code="15" name="/MOSI">
+      <node ref="J4" pin="2" pinfunction="CMD" pintype="input"/>
+      <node ref="U1" pin="7" pinfunction="IO17/TX2" pintype="output"/>
+    </net>
+    <net code="16" name="/MSECLK">
+      <node ref="U1" pin="24" pinfunction="A9/I026/DAC2" pintype="input"/>
+      <node ref="U2" pin="5" pinfunction="A4" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/MSEDAT">
+      <node ref="U1" pin="25" pinfunction="IO27/A2_7/T7" pintype="bidirectional"/>
+      <node ref="U2" pin="4" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="/REDHI">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="IO21/SDA/RX0" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/REDLO">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="IO22/RTS1" pintype="input"/>
+    </net>
+    <net code="20" name="/RX0">
+      <node ref="J2" pin="4" pinfunction="RX&gt;" pintype="output"/>
+      <node ref="U1" pin="12" pinfunction="IO3/RX0" pintype="input"/>
+    </net>
+    <net code="21" name="/RX2">
+      <node ref="J3" pin="4" pinfunction="RX&gt;" pintype="output"/>
+      <node ref="U1" pin="19" pinfunction="A6/I34" pintype="input"/>
+    </net>
+    <net code="22" name="/SCLK">
+      <node ref="J4" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="U1" pin="26" pinfunction="IO14/SD_CLK/A2_6/T6" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="/SDCS">
+      <node ref="J4" pin="1" pinfunction="CD/DAT3" pintype="input"/>
+      <node ref="U1" pin="28" pinfunction="IO13/SD_D3/A2_4/T4" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="/TX0">
+      <node ref="J2" pin="5" pinfunction="TX&lt;" pintype="input"/>
+      <node ref="U1" pin="13" pinfunction="IO1/TX0" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="/TX2">
+      <node ref="J3" pin="5" pinfunction="TX&lt;" pintype="input"/>
+      <node ref="U1" pin="4" pinfunction="IO2/SD_D0/A2_2/T2" pintype="bidirectional"/>
+    </net>
+    <net code="26" name="/VN">
+      <node ref="H3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="VN/I39/A1_3" pintype="input"/>
+    </net>
+    <net code="27" name="/VP">
+      <node ref="H3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="VP/I36/A1_0" pintype="input"/>
+    </net>
+    <net code="28" name="/VSYNC">
+      <node ref="P3" pin="14" pinfunction="P14" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="IO15/SD_CMD/A2_3/T3" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="H2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="H2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="H2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="H2" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="GND" pintype="power_out"/>
+      <node ref="J3" pin="1" pinfunction="GND" pintype="power_out"/>
+      <node ref="J4" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="J4" pin="6" pinfunction="VSS" pintype="power_in"/>
+      <node ref="P1" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="P2" pin="3" pinfunction="GND" pintype="input"/>
+      <node ref="P3" pin="10" pinfunction="P10" pintype="passive"/>
+      <node ref="P3" pin="5" pinfunction="P5" pintype="passive"/>
+      <node ref="P3" pin="6" pinfunction="P6" pintype="passive"/>
+      <node ref="P3" pin="7" pinfunction="P7" pintype="passive"/>
+      <node ref="P3" pin="8" pinfunction="P8" pintype="passive"/>
+      <node ref="P4" pin="1" pinfunction="G" pintype="power_in"/>
+      <node ref="P4" pin="2" pinfunction="G" pintype="power_in"/>
+      <node ref="P4" pin="3" pinfunction="G" pintype="power_in"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="29" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="H1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(C6-Pad2)">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="P4" pin="4" pinfunction="CENTER" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(J2-Pad3)">
+      <node ref="J2" pin="3" pinfunction="VCC" pintype="power_out"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(J3-Pad3)">
+      <node ref="J3" pin="3" pinfunction="VCC" pintype="power_out"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(P1-Pad1)">
+      <node ref="P1" pin="1" pinfunction="DATA" pintype="input"/>
+      <node ref="U2" pin="11" pinfunction="B3" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="Net-(P1-Pad5)">
+      <node ref="P1" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="U2" pin="10" pinfunction="B4" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="Net-(P2-Pad1)">
+      <node ref="P2" pin="1" pinfunction="DATA" pintype="input"/>
+      <node ref="U2" pin="13" pinfunction="B1" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="Net-(P2-Pad5)">
+      <node ref="P2" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="U2" pin="12" pinfunction="B2" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="Net-(P3-Pad1)">
+      <node ref="P3" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(P3-Pad2)">
+      <node ref="P3" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(P3-Pad3)">
+      <node ref="P3" pin="3" pinfunction="P3" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="42" name="unconnected-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="RTS&lt;" pintype="input+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(J2-Pad6)">
+      <node ref="J2" pin="6" pinfunction="CTS&gt;" pintype="output+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="RTS&lt;" pintype="input+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(J3-Pad6)">
+      <node ref="J3" pin="6" pinfunction="CTS&gt;" pintype="output+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(J4-Pad8)">
+      <node ref="J4" pin="8" pinfunction="DAT1" pintype="input"/>
+    </net>
+    <net code="47" name="unconnected-(J4-Pad9)">
+      <node ref="J4" pin="9" pinfunction="DAT2" pintype="input"/>
+    </net>
+    <net code="48" name="unconnected-(J4-Pad10)">
+      <node ref="J4" pin="10" pinfunction="CARD_DETECT" pintype="input"/>
+    </net>
+    <net code="49" name="unconnected-(J4-Pad11)">
+      <node ref="J4" pin="11" pinfunction="WRITE_PROTECT" pintype="input"/>
+    </net>
+    <net code="50" name="unconnected-(J4-Pad12)">
+      <node ref="J4" pin="12" pinfunction="SHELL1" pintype="input"/>
+    </net>
+    <net code="51" name="unconnected-(J4-Pad13)">
+      <node ref="J4" pin="13" pinfunction="SHELL2" pintype="input"/>
+    </net>
+    <net code="52" name="unconnected-(P1-Pad2)">
+      <node ref="P1" pin="2" pinfunction="NC" pintype="input"/>
+    </net>
+    <net code="53" name="unconnected-(P1-Pad6)">
+      <node ref="P1" pin="6" pinfunction="NC" pintype="input"/>
+    </net>
+    <net code="54" name="unconnected-(P2-Pad2)">
+      <node ref="P2" pin="2" pinfunction="NC" pintype="input"/>
+    </net>
+    <net code="55" name="unconnected-(P2-Pad6)">
+      <node ref="P2" pin="6" pinfunction="NC" pintype="input"/>
+    </net>
+    <net code="56" name="unconnected-(P3-Pad4)">
+      <node ref="P3" pin="4" pinfunction="P4" pintype="passive"/>
+    </net>
+    <net code="57" name="unconnected-(P3-Pad9)">
+      <node ref="P3" pin="9" pinfunction="P9" pintype="passive"/>
+    </net>
+    <net code="58" name="unconnected-(P3-Pad11)">
+      <node ref="P3" pin="11" pinfunction="P11" pintype="passive"/>
+    </net>
+    <net code="59" name="unconnected-(P3-Pad12)">
+      <node ref="P3" pin="12" pinfunction="P12" pintype="passive"/>
+    </net>
+    <net code="60" name="unconnected-(P3-Pad15)">
+      <node ref="P3" pin="15" pinfunction="P15" pintype="passive"/>
+    </net>
+  </nets>
+</export>
