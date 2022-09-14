@@ -1,0 +1,56 @@
+= SmithBUG Builds for SIMPLE-MC6802 CPU Card=
+
+* [http://land-boards.com/blwiki/index.php?title=SIMPLE-6802 SIMPLE-6802 Wiki Page] 
+* Pre-built for 4KB, 8K, 16KB EPROMs
+
+= Building Code =
+
+* Uses a68 assembler
+** Command line makes S-Record output
+* Use srec_cat to shift from EPROM absolute addresses to 0x0000 as HEX file
+
+== 4KB Build ==
+
+<pre>
+A68 SMITHBUG_SIMPLE-6802_F000.ASM -l SMITHBUG_SIMPLE-6802_F000.LST -s SMITHBUG_SIMPLE-6802_F000.S
+srec_cat SMITHBUG_SIMPLE-6802_F000.s -offset - -minimum-addr SMITHBUG_SIMPLE-6802_F000.s -o smithbug_F000.hex -Intel
+</pre>
+
+== 8KB Build ==
+
+<pre>
+A68 SMITHBUG_SIMPLE-6802_E000.ASM -l SMITHBUG_SIMPLE-6802_E000.LST -s SMITHBUG_SIMPLE-6802_E000.S
+srec_cat SMITHBUG_SIMPLE-6802_E000.s -offset - -minimum-addr SMITHBUG_SIMPLE-6802_E000.s -o smithbug_E000.hex -Intel
+</pre>
+
+== 16KB Build ==
+
+<pre>
+A68 SMITHBUG_SIMPLE-6802_C000.ASM -l SMITHBUG_SIMPLE-6802_C000.LST -s SMITHBUG_SIMPLE-6802_C000.S
+srec_cat SMITHBUG_SIMPLE-6802_C000.s -offset - -minimum-addr SMITHBUG_SIMPLE-6802_C000.s -o smithbug_C000.hex -Intel
+</pre>
+
+= SmithBUG Commands =
+
+<pre>
+;	M	MOVE MEMORY
+;	E	CHANGE MEMORY
+;	G	GO TO PROGRAM
+;	R	PRINT
+;	T	TRACE PROGRAM
+;	@	ASCII CONVERSION
+;	H	PRINTER ON
+;	V	VIEW MEMORY
+;	I	FILL MEMORY
+;	J	JUMP TO TARGET PROGRAM
+;	F	FIND 
+;	Q	HARDWARE LOCATION
+;	D	DISASSEMBLE CODE
+;	K	CONTINUE AFTER BREAK
+;	1	BREAKPOINT ONE
+;	2	BREAKPOINT TWO
+;	&	S1 LOAD PROGRAM
+;	*	HARDWARE LOCATION (TBA)
+;	O	ECHO ON
+;	N	ECHO OFF
+</pre>

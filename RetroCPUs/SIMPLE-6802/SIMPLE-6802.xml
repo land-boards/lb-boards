@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\RetroCPUs\SIMPLE-6802\SIMPLE-6802.kicad_sch</source>
-    <date>9/12/2022 9:30:33 AM</date>
+    <date>9/13/2022 9:53:39 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>SIMPLE-6809</title>
+        <title>SIMPLE-6802</title>
         <company>Land Boards LLC</company>
         <rev>1</rev>
-        <date>2022-09-11</date>
+        <date>2022-09-12</date>
         <source>SIMPLE-6802.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -147,13 +147,13 @@
       <tstamps>fcb61aaa-2a5c-4f3d-a17e-c409e21c9f07</tstamps>
     </comp>
     <comp ref="J2">
-      <value>JUMPER, EEP (1X3)</value>
+      <value>JUMPER, EP-1 (1X3)</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c02cb16b-594f-4980-84bc-d3a41f893fe1</tstamps>
+      <tstamps>c02cb16b-594f-4980-84bc-d3a41f893fe2</tstamps>
     </comp>
     <comp ref="J3">
       <value>HEADER, STRT, 1X6</value>
@@ -172,6 +172,15 @@
       <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>32ab811e-a79b-4e00-ad6a-f97e15009684</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>JUMPER, EP-27 (1X3)</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4c18369-dccb-4099-ae8e-83828edb21ff</tstamps>
     </comp>
     <comp ref="MTG1">
       <value>MTG_HOLE</value>
@@ -218,6 +227,36 @@
       <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>fd610f15-3810-4594-94ce-06da37e3eade</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>2.7K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e073b19e-d87e-4f67-a159-429770c9e2ca</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>2.7K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d5aeeb7-4ec0-465e-a454-b1ad8b02eaed</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>2.7K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15d82734-dfa8-47d0-8121-4c4e5bee9093</tstamps>
     </comp>
     <comp ref="R6">
       <value>2.7K</value>
@@ -288,14 +327,14 @@
       <tstamps>5e838f2d-28fb-420d-a9aa-c0cb09701e58</tstamps>
     </comp>
     <comp ref="U4">
-      <value>27C128</value>
+      <value>27C512</value>
       <footprint>Package_DIP:DIP-28_W15.24mm</footprint>
-      <datasheet>http://ww1.microchip.com/downloads/en/devicedoc/11003L.pdf</datasheet>
-      <libsource lib="Memory_EPROM" part="27C128" description="OTP EPROM 128 KiBit, [Obsolete 2004-01]"/>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf</datasheet>
+      <libsource lib="Memory_EPROM" part="27C512" description="OTP EPROM 512 KiBit"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4560655f-5c4a-4311-bc41-23dde6f4104d</tstamps>
+      <tstamps>3ea03728-7a77-4313-bf8a-27a007c9d6a6</tstamps>
     </comp>
     <comp ref="U5">
       <value>MC68B02</value>
@@ -308,14 +347,14 @@
       <tstamps>caaac10f-fff3-4567-8b4f-23e44ea7421b</tstamps>
     </comp>
     <comp ref="U6">
-      <value>74HC00</value>
+      <value>74HC04</value>
       <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/595-SN74HC00AN</datasheet>
-      <libsource lib="74xx" part="74LS00" description="quad 2-input NAND gate"/>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf</datasheet>
+      <libsource lib="74xx" part="74HC04" description="Hex Inverter"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>62859ce5-abc0-4f05-bd8a-537e0f8d6bbc cc716d51-62cb-4f27-a86b-33362708e848 7f3f5959-e5f6-44be-9f1c-3c8c2e5ce799 6c48e7cf-a98d-44f9-a8b5-ee2f7f637038 2cbf2b6d-6013-4f88-a46c-26e854c89df6</tstamps>
+      <tstamps>b0e327af-c2d4-4b07-ab49-fdbed93a350b 5ea7fc81-866a-4dad-a68b-cf54a49f9431 18c071cb-9958-4d9e-b596-4fa07c16815e 313181bf-fb81-4faa-aca6-8b5c2984564a e2ed8b25-f3f9-4176-8e11-805fc13c4221 3c993573-30d0-49f8-9c2f-3c5877e87b33 050606af-a337-4600-931a-332781428d3b</tstamps>
     </comp>
     <comp ref="U7">
       <value>DS1813-5</value>
@@ -327,8 +366,18 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>781351ad-49e1-447e-96c4-449a6986a238</tstamps>
     </comp>
+    <comp ref="U8">
+      <value>74HC10</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS10</datasheet>
+      <libsource lib="74xx" part="74LS10" description="Triple 3-input NAND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SIMPLE-6802.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fed4fe10-2dc9-4334-b4ca-e9fadb0bb959 ebf8cf32-6802-433e-975f-df86cf590c88 44d75afb-5d15-4465-b626-f2d6c9c4c270 36f9ea7d-c1fa-4f04-b84b-3d93ef5bc37d</tstamps>
+    </comp>
     <comp ref="Y1">
-      <value>1.8432 MHz</value>
+      <value>7.3728 MHz</value>
       <footprint>Crystal:Crystal_HC49-4H_Vertical</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/815-ABL-7.3728-B2</datasheet>
       <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
@@ -339,22 +388,51 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="74xx" part="74LS00">
-      <description>quad 2-input NAND gate</description>
-      <docs>http://www.ti.com/lit/gpn/sn74ls00</docs>
+    <libpart lib="74xx" part="74HC04">
+      <description>Hex Inverter</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf</docs>
       <footprints>
         <fp>DIP*W7.62mm*</fp>
-        <fp>SO14*</fp>
+        <fp>SSOP?14*</fp>
+        <fp>TSSOP?14*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">74LS00</field>
-        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74ls00</field>
+        <field name="Value">74HC04</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="input"/>
+        <pin num="2" name="" type="output"/>
+        <pin num="3" name="" type="input"/>
+        <pin num="4" name="" type="output"/>
+        <pin num="5" name="" type="input"/>
+        <pin num="6" name="" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="" type="output"/>
+        <pin num="9" name="" type="input"/>
+        <pin num="10" name="" type="output"/>
+        <pin num="11" name="" type="input"/>
+        <pin num="12" name="" type="output"/>
+        <pin num="13" name="" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS10">
+      <description>Triple 3-input NAND</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS10</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS10</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS10</field>
       </fields>
       <pins>
         <pin num="1" name="" type="input"/>
         <pin num="2" name="" type="input"/>
-        <pin num="3" name="" type="output"/>
+        <pin num="3" name="" type="input"/>
         <pin num="4" name="" type="input"/>
         <pin num="5" name="" type="input"/>
         <pin num="6" name="" type="output"/>
@@ -362,8 +440,8 @@
         <pin num="8" name="" type="output"/>
         <pin num="9" name="" type="input"/>
         <pin num="10" name="" type="input"/>
-        <pin num="11" name="" type="output"/>
-        <pin num="12" name="" type="input"/>
+        <pin num="11" name="" type="input"/>
+        <pin num="12" name="" type="output"/>
         <pin num="13" name="" type="input"/>
         <pin num="14" name="VCC" type="power_in"/>
       </pins>
@@ -646,20 +724,20 @@
         <pin num="24" name="~{CTS}" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="Memory_EPROM" part="27C128">
-      <description>OTP EPROM 128 KiBit, [Obsolete 2004-01]</description>
-      <docs>http://ww1.microchip.com/downloads/en/devicedoc/11003L.pdf</docs>
+    <libpart lib="Memory_EPROM" part="27C512">
+      <description>OTP EPROM 512 KiBit</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf</docs>
       <footprints>
         <fp>DIP*W15.24mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">27C128</field>
+        <field name="Value">27C512</field>
         <field name="Footprint">Package_DIP:DIP-28_W15.24mm</field>
-        <field name="Datasheet">http://ww1.microchip.com/downloads/en/devicedoc/11003L.pdf</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf</field>
       </fields>
       <pins>
-        <pin num="1" name="VPP" type="input"/>
+        <pin num="1" name="A15" type="input"/>
         <pin num="2" name="A12" type="input"/>
         <pin num="3" name="A7" type="input"/>
         <pin num="4" name="A6" type="input"/>
@@ -685,7 +763,7 @@
         <pin num="24" name="A9" type="input"/>
         <pin num="25" name="A8" type="input"/>
         <pin num="26" name="A13" type="input"/>
-        <pin num="27" name="~{PGM}" type="input"/>
+        <pin num="27" name="A14" type="input"/>
         <pin num="28" name="VCC" type="power_in"/>
       </pins>
     </libpart>
@@ -853,7 +931,6 @@
     </net>
     <net code="14" name="/CPUA13">
       <node ref="U2" pin="26" pinfunction="A13" pintype="input"/>
-      <node ref="U3" pin="10" pinfunction="CS1" pintype="input"/>
       <node ref="U4" pin="26" pinfunction="A13" pintype="input"/>
       <node ref="U5" pin="23" pinfunction="A13" pintype="output"/>
     </net>
@@ -861,13 +938,13 @@
       <node ref="U2" pin="1" pinfunction="A14" pintype="input"/>
       <node ref="U3" pin="9" pinfunction="CS2" pintype="input"/>
       <node ref="U5" pin="24" pinfunction="A14" pintype="output"/>
-      <node ref="U6" pin="1" pintype="input"/>
+      <node ref="U8" pin="9" pintype="input"/>
     </net>
     <net code="16" name="/CPUA15">
       <node ref="U2" pin="20" pinfunction="~{CS}" pintype="input"/>
       <node ref="U3" pin="8" pinfunction="CS0" pintype="input"/>
       <node ref="U5" pin="25" pinfunction="A15" pintype="output"/>
-      <node ref="U6" pin="2" pintype="input"/>
+      <node ref="U8" pin="10" pintype="input"/>
     </net>
     <net code="17" name="/CPUD0">
       <node ref="U2" pin="11" pinfunction="Q0" pintype="tri_state"/>
@@ -922,66 +999,86 @@
       <node ref="U3" pin="3" pinfunction="Rx_CLK" pintype="input"/>
       <node ref="U3" pin="4" pinfunction="Tx_CLK" pintype="input"/>
       <node ref="U5" pin="37" pinfunction="E" pintype="output"/>
-      <node ref="U6" pin="10" pintype="input"/>
-      <node ref="U6" pin="5" pintype="input"/>
+      <node ref="U8" pin="1" pintype="input"/>
+      <node ref="U8" pin="11" pintype="input"/>
+      <node ref="U8" pin="3" pintype="input"/>
     </net>
-    <net code="26" name="/EPROM_PIN1">
+    <net code="26" name="/EE_PIN1">
       <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="U4" pin="1" pinfunction="VPP" pintype="input"/>
+      <node ref="U4" pin="1" pinfunction="A15" pintype="input"/>
     </net>
-    <net code="27" name="/R1W0">
+    <net code="27" name="/EE_PIN27">
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U4" pin="27" pinfunction="A14" pintype="input"/>
+    </net>
+    <net code="28" name="/R1W0">
       <node ref="U3" pin="13" pinfunction="R/~{W}" pintype="input"/>
       <node ref="U5" pin="34" pinfunction="R/~{W}" pintype="output"/>
-      <node ref="U6" pin="12" pintype="input"/>
-      <node ref="U6" pin="13" pintype="input"/>
-      <node ref="U6" pin="4" pintype="input"/>
+      <node ref="U6" pin="1" pintype="input"/>
+      <node ref="U8" pin="13" pintype="input"/>
     </net>
-    <net code="28" name="/READ*">
+    <net code="29" name="/READ*">
       <node ref="U2" pin="22" pinfunction="~{OE}" pintype="input"/>
       <node ref="U4" pin="22" pinfunction="~{OE}" pintype="input"/>
-      <node ref="U6" pin="6" pintype="output"/>
+      <node ref="U8" pin="12" pintype="output"/>
     </net>
-    <net code="29" name="/RS_RTS*">
+    <net code="30" name="/RS_RTS*">
       <node ref="J1" pin="7" pinfunction="7" pintype="passive"/>
       <node ref="U1" pin="14" pinfunction="T1OUT" pintype="output"/>
     </net>
-    <net code="30" name="/RS_RX">
+    <net code="31" name="/RS_RX">
       <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="R2IN" pintype="input"/>
     </net>
-    <net code="31" name="/RS_TX">
+    <net code="32" name="/RS_TX">
       <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="T2OUT" pintype="output"/>
     </net>
-    <net code="32" name="/TOP16K*">
-      <node ref="U4" pin="20" pinfunction="~{CE}" pintype="input"/>
-      <node ref="U6" pin="3" pintype="output"/>
+    <net code="33" name="/SER_BUSY*">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="~{IRQ}" pintype="output"/>
+      <node ref="U6" pin="13" pintype="input"/>
     </net>
-    <net code="33" name="/UART_RX">
+    <net code="34" name="/TOP16K*">
+      <node ref="U4" pin="20" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U8" pin="8" pintype="output"/>
+    </net>
+    <net code="35" name="/UART_RTS*">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="T1IN" pintype="input"/>
+      <node ref="U6" pin="12" pintype="output"/>
+    </net>
+    <net code="36" name="/UART_RX">
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="R2OUT" pintype="output"/>
       <node ref="U3" pin="2" pinfunction="Rx_Data" pintype="input"/>
     </net>
-    <net code="34" name="/UART_TX">
+    <net code="37" name="/UART_TX">
       <node ref="R7" pin="1" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="T2IN" pintype="input"/>
       <node ref="U3" pin="6" pinfunction="Tx_Data" pintype="output"/>
     </net>
-    <net code="35" name="/W1R0">
-      <node ref="U6" pin="11" pintype="output"/>
-      <node ref="U6" pin="9" pintype="input"/>
+    <net code="38" name="/VMA">
+      <node ref="U3" pin="10" pinfunction="CS1" pintype="input"/>
+      <node ref="U5" pin="5" pinfunction="VMA" pintype="output"/>
+      <node ref="U8" pin="2" pintype="input"/>
+      <node ref="U8" pin="4" pintype="input"/>
     </net>
-    <net code="36" name="/WRITE*">
+    <net code="39" name="/W1R0">
+      <node ref="U6" pin="2" pintype="output"/>
+      <node ref="U8" pin="5" pintype="input"/>
+    </net>
+    <net code="40" name="/WRITE*">
       <node ref="U2" pin="27" pinfunction="~{WE}" pintype="input"/>
-      <node ref="U6" pin="8" pintype="output"/>
+      <node ref="U8" pin="6" pintype="output"/>
     </net>
-    <net code="37" name="/~{CPURESB}">
+    <net code="41" name="/~{CPURESB}">
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U5" pin="40" pinfunction="~{RESET}" pintype="input"/>
       <node ref="U7" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="38" name="GND">
+    <net code="42" name="GND">
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C12" pin="1" pintype="passive"/>
       <node ref="C13" pin="1" pintype="passive"/>
@@ -999,6 +1096,7 @@
       <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="J4" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="GND" pintype="power_in"/>
       <node ref="U2" pin="14" pinfunction="GND" pintype="power_in"/>
@@ -1011,58 +1109,66 @@
       <node ref="U5" pin="36" pinfunction="RE" pintype="input"/>
       <node ref="U6" pin="7" pinfunction="GND" pintype="power_in"/>
       <node ref="U7" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U8" pin="7" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="39" name="Net-(C1-Pad1)">
+    <net code="43" name="Net-(C1-Pad1)">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="C1+" pintype="passive"/>
     </net>
-    <net code="40" name="Net-(C1-Pad2)">
+    <net code="44" name="Net-(C1-Pad2)">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="C1-" pintype="passive"/>
     </net>
-    <net code="41" name="Net-(C2-Pad1)">
+    <net code="45" name="Net-(C2-Pad1)">
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="C2+" pintype="passive"/>
     </net>
-    <net code="42" name="Net-(C2-Pad2)">
+    <net code="46" name="Net-(C2-Pad2)">
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="C2-" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(C3-Pad1)">
+    <net code="47" name="Net-(C3-Pad1)">
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="VS+" pintype="power_out"/>
     </net>
-    <net code="44" name="Net-(C4-Pad2)">
+    <net code="48" name="Net-(C4-Pad2)">
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="VS-" pintype="power_out"/>
     </net>
-    <net code="45" name="Net-(C5-Pad1)">
+    <net code="49" name="Net-(C5-Pad1)">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="U5" pin="38" pinfunction="XTAL" pintype="passive"/>
       <node ref="Y1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="46" name="Net-(C6-Pad1)">
+    <net code="50" name="Net-(C6-Pad1)">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="U5" pin="39" pinfunction="EXTAL" pintype="passive"/>
       <node ref="Y1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="47" name="Net-(J1-Pad4)">
+    <net code="51" name="Net-(J1-Pad4)">
       <node ref="J1" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="J1" pin="6" pinfunction="6" pintype="passive"/>
     </net>
-    <net code="48" name="Net-(J3-Pad4)">
+    <net code="52" name="Net-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="RTS&lt;" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="53" name="Net-(J3-Pad4)">
       <node ref="J3" pin="4" pinfunction="RX&gt;" pintype="output"/>
       <node ref="R6" pin="2" pintype="passive"/>
     </net>
-    <net code="49" name="Net-(J3-Pad5)">
+    <net code="54" name="Net-(J3-Pad5)">
       <node ref="J3" pin="5" pinfunction="TX&lt;" pintype="input"/>
       <node ref="R7" pin="2" pintype="passive"/>
     </net>
-    <net code="50" name="Net-(U1-Pad11)">
-      <node ref="U1" pin="11" pinfunction="T1IN" pintype="input"/>
-      <node ref="U3" pin="5" pinfunction="~{RTS}" pintype="output"/>
+    <net code="55" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U6" pin="11" pintype="input"/>
+      <node ref="U6" pin="3" pintype="input"/>
+      <node ref="U6" pin="5" pintype="input"/>
+      <node ref="U6" pin="9" pintype="input"/>
     </net>
-    <net code="51" name="VCC">
+    <net code="56" name="VCC">
       <node ref="C10" pin="1" pintype="passive"/>
       <node ref="C12" pin="2" pintype="passive"/>
       <node ref="C13" pin="2" pintype="passive"/>
@@ -1075,11 +1181,13 @@
       <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J4" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
       <node ref="U1" pin="16" pinfunction="VCC" pintype="power_in"/>
       <node ref="U2" pin="28" pinfunction="VCC" pintype="power_in"/>
       <node ref="U3" pin="12" pinfunction="VCC" pintype="power_in"/>
-      <node ref="U4" pin="27" pinfunction="~{PGM}" pintype="input"/>
       <node ref="U4" pin="28" pinfunction="VCC" pintype="power_in"/>
       <node ref="U5" pin="2" pinfunction="~{HALT}" pintype="input"/>
       <node ref="U5" pin="3" pinfunction="MR" pintype="input"/>
@@ -1089,36 +1197,43 @@
       <node ref="U5" pin="8" pinfunction="VCC" pintype="power_in"/>
       <node ref="U6" pin="14" pinfunction="VCC" pintype="power_in"/>
       <node ref="U7" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U8" pin="14" pinfunction="VCC" pintype="power_in"/>
     </net>
-    <net code="52" name="unconnected-(J1-Pad1)">
+    <net code="57" name="unconnected-(J1-Pad1)">
       <node ref="J1" pin="1" pinfunction="1" pintype="passive+no_connect"/>
     </net>
-    <net code="53" name="unconnected-(J1-Pad8)">
+    <net code="58" name="unconnected-(J1-Pad8)">
       <node ref="J1" pin="8" pinfunction="8" pintype="passive+no_connect"/>
     </net>
-    <net code="54" name="unconnected-(J1-Pad9)">
+    <net code="59" name="unconnected-(J1-Pad9)">
       <node ref="J1" pin="9" pinfunction="9" pintype="passive+no_connect"/>
     </net>
-    <net code="55" name="unconnected-(J3-Pad2)">
-      <node ref="J3" pin="2" pinfunction="RTS&lt;" pintype="input+no_connect"/>
-    </net>
-    <net code="56" name="unconnected-(J3-Pad6)">
+    <net code="60" name="unconnected-(J3-Pad6)">
       <node ref="J3" pin="6" pinfunction="CTS&gt;" pintype="output+no_connect"/>
     </net>
-    <net code="57" name="unconnected-(U1-Pad12)">
+    <net code="61" name="unconnected-(U1-Pad12)">
       <node ref="U1" pin="12" pinfunction="R1OUT" pintype="output+no_connect"/>
     </net>
-    <net code="58" name="unconnected-(U1-Pad13)">
+    <net code="62" name="unconnected-(U1-Pad13)">
       <node ref="U1" pin="13" pinfunction="R1IN" pintype="input+no_connect"/>
     </net>
-    <net code="59" name="unconnected-(U3-Pad7)">
-      <node ref="U3" pin="7" pinfunction="~{IRQ}" pintype="output"/>
+    <net code="63" name="unconnected-(U3-Pad5)">
+      <node ref="U3" pin="5" pinfunction="~{RTS}" pintype="output"/>
     </net>
-    <net code="60" name="unconnected-(U5-Pad5)">
-      <node ref="U5" pin="5" pinfunction="VMA" pintype="output"/>
+    <net code="64" name="unconnected-(U5-Pad7)">
+      <node ref="U5" pin="7" pinfunction="BA" pintype="output+no_connect"/>
     </net>
-    <net code="61" name="unconnected-(U5-Pad7)">
-      <node ref="U5" pin="7" pinfunction="BA" pintype="output"/>
+    <net code="65" name="unconnected-(U6-Pad4)">
+      <node ref="U6" pin="4" pintype="output"/>
+    </net>
+    <net code="66" name="unconnected-(U6-Pad6)">
+      <node ref="U6" pin="6" pintype="output"/>
+    </net>
+    <net code="67" name="unconnected-(U6-Pad8)">
+      <node ref="U6" pin="8" pintype="output"/>
+    </net>
+    <net code="68" name="unconnected-(U6-Pad10)">
+      <node ref="U6" pin="10" pintype="output"/>
     </net>
   </nets>
 </export>
