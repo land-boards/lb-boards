@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\RetroCPUs\SIMPLE-6502\SIMPLE-6502.kicad_sch</source>
-    <date>9/13/2022 9:53:33 AM</date>
+    <date>9/17/2022 12:40:23 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -402,7 +402,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SIMPLE-6502.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d1b5b8d6-20bf-49b8-9381-946b5f4842a5 cc716d51-62cb-4f27-a86b-33362708e848 67fd3627-0582-4d65-96f5-8926ab2b4dba 62859ce5-abc0-4f05-bd8a-537e0f8d6bbc 259019bb-e5f9-4de5-8413-630765971ced</tstamps>
+      <tstamps>67fd3627-0582-4d65-96f5-8926ab2b4dba cc716d51-62cb-4f27-a86b-33362708e848 62859ce5-abc0-4f05-bd8a-537e0f8d6bbc d1b5b8d6-20bf-49b8-9381-946b5f4842a5 259019bb-e5f9-4de5-8413-630765971ced</tstamps>
     </comp>
     <comp ref="U7">
       <value>74HC04</value>
@@ -412,7 +412,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SIMPLE-6502.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>dc0fa110-e5f4-409d-b0f4-57315e5a03a8 5c95416a-f2ff-42f2-9715-adf5ba2be18c 6f76b1bf-f534-4bc2-9d8d-982038a98c50 790c21cf-50cd-4586-8200-ed73c1591878 8ef6d76a-46ec-4508-b73b-670a1cca1fe5 2d92db8a-14ba-498d-b302-fae8c5369942 151fc776-9a7c-4b31-b7d2-2398d9083f9d</tstamps>
+      <tstamps>6f76b1bf-f534-4bc2-9d8d-982038a98c50 dc0fa110-e5f4-409d-b0f4-57315e5a03a8 5c95416a-f2ff-42f2-9715-adf5ba2be18c 2d92db8a-14ba-498d-b302-fae8c5369942 790c21cf-50cd-4586-8200-ed73c1591878 8ef6d76a-46ec-4508-b73b-670a1cca1fe5 151fc776-9a7c-4b31-b7d2-2398d9083f9d</tstamps>
     </comp>
     <comp ref="U8">
       <value>74HC74</value>
@@ -1127,16 +1127,16 @@
       <node ref="U4" pin="27" pinfunction="A14" pintype="input"/>
     </net>
     <net code="31" name="/F-RTS*">
-      <node ref="J3" pin="2" pinfunction="RTS&lt;" pintype="input"/>
+      <node ref="J3" pin="6" pinfunction="CTS&gt;" pintype="output"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
     <net code="32" name="/F-RX">
-      <node ref="J3" pin="4" pinfunction="RX&gt;" pintype="output"/>
-      <node ref="R6" pin="2" pintype="passive"/>
-    </net>
-    <net code="33" name="/F-TX">
       <node ref="J3" pin="5" pinfunction="TX&lt;" pintype="input"/>
       <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="/F-TX">
+      <node ref="J3" pin="4" pinfunction="RX&gt;" pintype="output"/>
+      <node ref="R6" pin="2" pintype="passive"/>
     </net>
     <net code="34" name="/PH2_OUT">
       <node ref="U3" pin="14" pinfunction="E" pintype="input"/>
@@ -1178,12 +1178,12 @@
       <node ref="U6" pin="6" pintype="output"/>
     </net>
     <net code="42" name="/UART_RX">
-      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="R2OUT" pintype="output"/>
       <node ref="U3" pin="2" pinfunction="Rx_Data" pintype="input"/>
     </net>
     <net code="43" name="/UART_TX">
-      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U1" pin="10" pinfunction="T2IN" pintype="input"/>
       <node ref="U3" pin="6" pinfunction="Tx_Data" pintype="output"/>
     </net>
@@ -1345,8 +1345,8 @@
     <net code="65" name="unconnected-(J1-Pad9)">
       <node ref="J1" pin="9" pinfunction="9" pintype="passive+no_connect"/>
     </net>
-    <net code="66" name="unconnected-(J3-Pad6)">
-      <node ref="J3" pin="6" pinfunction="CTS&gt;" pintype="output+no_connect"/>
+    <net code="66" name="unconnected-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="RTS&lt;" pintype="input"/>
     </net>
     <net code="67" name="unconnected-(U1-Pad12)">
       <node ref="U1" pin="12" pinfunction="R1OUT" pintype="output+no_connect"/>

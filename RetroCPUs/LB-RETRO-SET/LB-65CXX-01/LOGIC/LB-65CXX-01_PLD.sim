@@ -1,0 +1,37 @@
+%SIGNAL
+PIN   1 =  CLK 
+PIN   2 =  CPUA12 
+PIN   3 =  CPUA13 
+PIN   4 =  CPUA14 
+PIN   5 =  CPUA15 
+PIN   6 =  CPUREAD 
+PIN  13 = !IOCS 
+PIN  15 = !MEMRD 
+PIN  16 = !RAMCS 
+PIN  18 =  RDY 
+PIN  14 = !ROMCS 
+PIN   9 =  VDA 
+PIN   8 =  VPA 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+IOCS =>
+    !CPUA12 & !CPUA13 & !CPUA14 & CPUA15 & VPA
+
+MEMRD =>
+    CPUREAD
+
+RAMCS =>
+    !CPUA15 & VDA
+
+RDY =>
+    VPA
+  # VDA
+
+ROMCS =>
+    CPUA12 & CPUA13 & CPUA14 & CPUA15 & VDA
+
+%END
