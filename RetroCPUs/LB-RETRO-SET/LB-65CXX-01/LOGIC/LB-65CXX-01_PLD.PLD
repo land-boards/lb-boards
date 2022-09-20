@@ -5,10 +5,11 @@ Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
 Assembly   U00;
-Location   San PA;
+Location   Connellsville, PA;
 Device     G16V8;
 
 /*
+	65C816 Control
 */
 
 
@@ -29,13 +30,17 @@ PIN    15  = !MEMRD;
 PIN    16  = !RAMCS;
 PIN    18  = RDY;
 
-ROMCS = CPUA15 & CPUA14 & CPUA13 & CPUA12 & VDA;
+ROMCS = CPUA15 & CPUA14 & CPUA13 & CPUA12 & CPUREAD & VDA
+#       CPUA15 & CPUA14 & CPUA13 & CPUA12 & CPUREAD & VPA;
 
-RAMCS = !CPUA15 & VDA;
+RAMCS = !CPUA15 & VDA
+#       !CPUA15 & VPA;
 
-IOCS = CPUA15 & !CPUA14 & !CPUA13 & !CPUA12 & VPA;
+IOCS = CPUA15 & !CPUA14 & !CPUA13 & !CPUA12 & VDA;
 
+MEMRD = CPUREAD & CLK;
+
+/*
 RDY = VPA
 #     VDA;
-
-MEMRD = CPUREAD;
+*/
