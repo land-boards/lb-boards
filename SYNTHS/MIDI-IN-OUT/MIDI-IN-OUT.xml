@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Audio Cards\MIDI-IN-OUT\MIDI-IN-OUT.kicad_sch</source>
-    <date>9/29/2022 10:39:55 AM</date>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\MIDI-IN-OUT\MIDI-IN-OUT.kicad_sch</source>
+    <date>9/29/2022 11:57:18 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -27,6 +27,7 @@
     <comp ref="D1">
       <value>BAT41</value>
       <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/STMicroelectronics/BAT41?qs=JV7lzlMm3yLsDyxobuLK1w%3D%3D</datasheet>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="MIDI-IN-OUT.kicad_sch"/>
@@ -36,7 +37,7 @@
     <comp ref="J1">
       <value>DIN-5</value>
       <footprint>LandBoards_Conns:MIDI_DIN-5</footprint>
-      <datasheet>http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf</datasheet>
+      <datasheet>https://www.amazon.com/dp/B07NY6Z2N7?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details</datasheet>
       <libsource lib="Connector" part="DIN-5" description="5-pin DIN connector"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="MIDI-IN-OUT.kicad_sch"/>
@@ -46,7 +47,7 @@
     <comp ref="J2">
       <value>DIN-5</value>
       <footprint>LandBoards_Conns:MIDI_DIN-5</footprint>
-      <datasheet>http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf</datasheet>
+      <datasheet>https://www.amazon.com/dp/B07NY6Z2N7?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details</datasheet>
       <libsource lib="Connector" part="DIN-5" description="5-pin DIN connector"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="MIDI-IN-OUT.kicad_sch"/>
@@ -166,7 +167,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="MIDI-IN-OUT.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>de552ae9-cde6-4643-8cc7-9de2579dadae fd2dfb7f-0b8d-4dd6-8f05-2013a181e8ec ca20a2c3-53e7-4f16-8485-d0e8134f92a0 acb413d0-4ad8-4a42-abc7-30a25a2bfe60 6a15f517-8cc8-4d42-aaa4-3437a91011ef 950d0cc2-df83-4010-bb7e-8148784ecf71 107b3863-6510-45fe-8193-4c5f49adf12b</tstamps>
+      <tstamps>fd2dfb7f-0b8d-4dd6-8f05-2013a181e8ec de552ae9-cde6-4643-8cc7-9de2579dadae ca20a2c3-53e7-4f16-8485-d0e8134f92a0 acb413d0-4ad8-4a42-abc7-30a25a2bfe60 6a15f517-8cc8-4d42-aaa4-3437a91011ef 950d0cc2-df83-4010-bb7e-8148784ecf71 107b3863-6510-45fe-8193-4c5f49adf12b</tstamps>
     </comp>
     <comp ref="U2">
       <value>CNY17-4X006</value>

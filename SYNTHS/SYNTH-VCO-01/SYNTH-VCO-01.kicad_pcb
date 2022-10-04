@@ -614,6 +614,11 @@
       (net 33 "Net-(R7-Pad1)") (pinfunction "2") (pintype "passive") (tstamp bfbdabc9-6b94-4359-bf60-8277d39098e9))
     (pad "3" thru_hole oval locked (at 0 10.16) (size 1.651 2.54) (drill oval 0.762 1.778) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "3") (pintype "passive") (tstamp bb6fc6b9-f2c3-4c2b-813d-6dbdfd14a632))
+    (model "${KICAD6_3RD_PARTY}/POTS/Potentiometer.step"
+      (offset (xyz -6 -5 13))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 -90 90))
+    )
   )
 
   (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" (layer "F.Cu")
@@ -2495,6 +2500,11 @@
       (net 32 "Net-(R3-Pad1)") (pinfunction "2") (pintype "passive") (tstamp 557feca6-91cb-4b62-adbc-42447c376c20))
     (pad "3" thru_hole oval locked (at 0 10.16) (size 1.651 2.54) (drill oval 0.762 1.778) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "3") (pintype "passive") (tstamp 0e2e89cc-dd69-463a-9c2b-f588e942e642))
+    (model "${KICAD6_3RD_PARTY}/POTS/Potentiometer.step"
+      (offset (xyz -6 -5 13))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 -90 90))
+    )
   )
 
   (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (layer "F.Cu")
