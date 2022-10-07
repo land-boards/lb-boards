@@ -5,9 +5,9 @@
   (paper "A")
 
   (title_block
-    (title "LB-MEM-02")
-    (date "2022-10-06")
-    (rev "2")
+    (title "LB-MEM-01")
+    (date "2022-09-16")
+    (rev "1")
     (company "Land Boards LLC")
   )
 
@@ -2199,7 +2199,7 @@
     (uuid 2e8e86ad-323a-42bf-841c-e4854c61d3af)
     (property "Reference" "U1" (id 0) (at 85.09 142.0835 0))
     (property "Value" "74HC04" (id 1) (at 85.09 144.8586 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 85.09 149.86 0)
+    (property "Footprint" "" (id 2) (at 85.09 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 85.09 149.86 0)
@@ -2329,7 +2329,7 @@
     (uuid 6e544c5b-ac47-4d22-a00d-ce2e4b2c2315)
     (property "Reference" "U1" (id 0) (at 43.18 142.0835 0))
     (property "Value" "74HC04" (id 1) (at 43.18 144.8586 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 43.18 149.86 0)
+    (property "Footprint" "Package_DIP:DIP-14_W10.16mm_LongPads" (id 2) (at 43.18 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 43.18 149.86 0)
@@ -2344,7 +2344,7 @@
     (uuid 742294f9-06a4-4827-9dd1-72402f4ca7ee)
     (property "Reference" "U1" (id 0) (at 43.18 167.4835 0))
     (property "Value" "74HC04" (id 1) (at 43.18 170.2586 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 43.18 175.26 0)
+    (property "Footprint" "" (id 2) (at 43.18 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 43.18 175.26 0)
@@ -2417,10 +2417,10 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 160.02 106.68 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 82b50d3c-b09e-41e1-8cc2-357ace49a064)
-    (property "Reference" "J3" (id 0) (at 160.02 101.6 0))
-    (property "Value" "JUMPER" (id 1) (at 160.02 113.03 0))
+    (property "Reference" "J2" (id 0) (at 160.02 98.9035 0))
+    (property "Value" "Conn_01x03" (id 1) (at 160.02 101.6786 0))
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (id 2) (at 160.02 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2484,10 +2484,10 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 161.29 80.01 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b8ad100d-457d-4378-bda1-dbc7b4229b44)
-    (property "Reference" "J1" (id 0) (at 161.29 74.93 0))
-    (property "Value" "JUMPER" (id 1) (at 161.29 85.09 0))
+    (property "Reference" "J6" (id 0) (at 161.29 72.2335 0))
+    (property "Value" "Conn_01x03" (id 1) (at 161.29 75.0086 0))
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (id 2) (at 161.29 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2504,7 +2504,7 @@
     (uuid bf7351bd-9ba6-4db5-9c43-3c6bf70da2e2)
     (property "Reference" "U1" (id 0) (at 43.18 154.7835 0))
     (property "Value" "74HC04" (id 1) (at 43.18 157.5586 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 43.18 162.56 0)
+    (property "Footprint" "" (id 2) (at 43.18 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 43.18 162.56 0)
@@ -2539,7 +2539,7 @@
     (property "Value" "74HC04" (id 1) (at 146.812 146.6466 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 140.97 144.78 0)
+    (property "Footprint" "" (id 2) (at 140.97 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 140.97 144.78 0)
@@ -2554,7 +2554,7 @@
     (uuid ef4b3081-58b3-4688-9afc-235d4c458dd6)
     (property "Reference" "U1" (id 0) (at 85.09 168.7535 0))
     (property "Value" "74HC04" (id 1) (at 85.09 171.5286 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 85.09 176.53 0)
+    (property "Footprint" "" (id 2) (at 85.09 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 85.09 176.53 0)
@@ -2569,7 +2569,7 @@
     (uuid f628e888-4186-4f22-991a-e57745138273)
     (property "Reference" "U1" (id 0) (at 85.09 156.0535 0))
     (property "Value" "74HC04" (id 1) (at 85.09 158.8286 0))
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_LongPads" (id 2) (at 85.09 163.83 0)
+    (property "Footprint" "" (id 2) (at 85.09 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" (id 3) (at 85.09 163.83 0)
@@ -2667,11 +2667,11 @@
     (path "/8b451724-53d3-46ca-b6b0-211db936e827"
       (reference "J1") (unit 1) (value "Conn_02x20_Odd_Even") (footprint "LandBoards_Conns:PinHeader_2x20_P2.54mm_Horizontal-FLIPPED")
     )
-    (path "/b8ad100d-457d-4378-bda1-dbc7b4229b44"
-      (reference "J1") (unit 1) (value "JUMPER") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-    )
     (path "/82b50d3c-b09e-41e1-8cc2-357ace49a064"
-      (reference "J3") (unit 1) (value "JUMPER") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+      (reference "J2") (unit 1) (value "Conn_01x03") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+    )
+    (path "/b8ad100d-457d-4378-bda1-dbc7b4229b44"
+      (reference "J6") (unit 1) (value "Conn_01x03") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
     (path "/36c879a9-bf1c-4be4-9256-3241b727c356"
       (reference "R1") (unit 1) (value "2.7K") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
@@ -2680,25 +2680,25 @@
       (reference "TEST1") (unit 1) (value "COUPON") (footprint "LandBoards_Marking:TEST_BLK-REAR")
     )
     (path "/6e544c5b-ac47-4d22-a00d-ce2e4b2c2315"
-      (reference "U1") (unit 1) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 1) (value "74HC04") (footprint "Package_DIP:DIP-14_W10.16mm_LongPads")
     )
     (path "/bf7351bd-9ba6-4db5-9c43-3c6bf70da2e2"
-      (reference "U1") (unit 2) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 2) (value "74HC04") (footprint "")
     )
     (path "/742294f9-06a4-4827-9dd1-72402f4ca7ee"
-      (reference "U1") (unit 3) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 3) (value "74HC04") (footprint "")
     )
     (path "/2e8e86ad-323a-42bf-841c-e4854c61d3af"
-      (reference "U1") (unit 4) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 4) (value "74HC04") (footprint "")
     )
     (path "/f628e888-4186-4f22-991a-e57745138273"
-      (reference "U1") (unit 5) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 5) (value "74HC04") (footprint "")
     )
     (path "/ef4b3081-58b3-4688-9afc-235d4c458dd6"
-      (reference "U1") (unit 6) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 6) (value "74HC04") (footprint "")
     )
     (path "/e18b80eb-3b7d-4c30-9897-8afca246e161"
-      (reference "U1") (unit 7) (value "74HC04") (footprint "Package_DIP:DIP-14_W7.62mm_LongPads")
+      (reference "U1") (unit 7) (value "74HC04") (footprint "")
     )
     (path "/136a7b63-4a86-435b-b00a-ec07b72683ca"
       (reference "U2") (unit 1) (value "HM62256BLP") (footprint "Package_DIP:DIP-28_W15.24mm")
