@@ -1,0 +1,38 @@
+%SIGNAL
+PIN   1 =  CLK 
+PIN   2 =  CPUA13 
+PIN   3 =  CPUA14 
+PIN   4 =  CPUA15 
+PIN   8 = !CPURD 
+PIN   9 = !CPUWR 
+PIN  14 = !IOCS 
+PIN   6 = !IORQ 
+PIN   7 = !M1 
+PIN  16 = !MEMRD 
+PIN   5 = !MREQ 
+PIN  15 = !RAMCS 
+PIN  13 = !ROMCS 
+PIN  18 = !WAIT 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+IOCS =>
+    !CPUA13 & !CPUA14 & CPUA15 & !IORQ
+
+MEMRD =>
+    !CPURD
+
+RAMCS =>
+    !CPUA15 & !MREQ
+
+ROMCS =>
+    CPUA13 & CPUA14 & CPUA15 & !CPURD & !MREQ
+
+WAIT =>
+    MREQ
+  # IORQ
+
+%END

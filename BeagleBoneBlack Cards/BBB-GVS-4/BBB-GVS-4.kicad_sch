@@ -1,0 +1,365 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 6595b9c7-02ee-4647-bde5-6b566e35163e)
+
+  (paper "A")
+
+  (title_block
+    (title "BeagleBone Cape Baseline")
+    (date "24 feb 2015")
+    (rev "X4")
+    (company "Doug Gilliland <doug@douglasgilliland.com>")
+    (comment 1 "https://github.com/douggilliland/")
+  )
+
+  (lib_symbols
+    (symbol "BBB-GVS-4-rescue:CONN_1" (pin_numbers hide) (pin_names (offset 0.762) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "P" (id 0) (at 2.032 0 0)
+        (effects (font (size 1.016 1.016)) (justify left))
+      )
+      (property "Value" "CONN_1" (id 1) (at 0 1.397 0)
+        (effects (font (size 0.762 0.762)) hide)
+      )
+      (property "Footprint" "" (id 2) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Datasheet" "" (id 3) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (symbol "CONN_1_0_1"
+        (polyline
+          (pts
+            (xy -0.762 0)
+            (xy -1.27 0)
+          )
+          (stroke (width 0) (type default) (color 0 0 0 0))
+          (fill (type none))
+        )
+        (circle (center 0 0) (radius 0.7874)
+          (stroke (width 0) (type default) (color 0 0 0 0))
+          (fill (type none))
+        )
+      )
+      (symbol "CONN_1_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "1" (effects (font (size 1.524 1.524))))
+          (number "1" (effects (font (size 1.524 1.524))))
+        )
+      )
+    )
+    (symbol "BBB-GVS-4-rescue:COUPON" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "COUP?" (id 0) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Value" "COUPON" (id 1) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Footprint" "" (id 2) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (property "Datasheet" "" (id 3) (at 0 0 0)
+        (effects (font (size 1.524 1.524)))
+      )
+      (symbol "COUPON_0_1"
+        (rectangle (start -5.08 0) (end 5.08 6.35)
+          (stroke (width 0) (type default) (color 0 0 0 0))
+          (fill (type none))
+        )
+      )
+    )
+  )
+
+
+  (no_connect (at 135.89 182.88) (uuid bf7c5623-e76c-463e-92ec-34c7f2e1a568))
+  (no_connect (at 135.89 179.07) (uuid bf7c5623-e76c-463e-92ec-34c7f2e1a568))
+
+  (symbol (lib_id "BBB-GVS-4-rescue:CONN_1") (at 139.7 182.88 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 00000000-0000-0000-0000-000054e53947)
+    (property "Reference" "FID2" (id 0) (at 141.732 182.88 0)
+      (effects (font (size 1.016 1.016)) (justify left))
+    )
+    (property "Value" "CONN_1" (id 1) (at 139.7 181.483 0)
+      (effects (font (size 0.762 0.762)) hide)
+    )
+    (property "Footprint" "FIDUCIAL" (id 2) (at 139.7 184.15 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Datasheet" "" (id 3) (at 139.7 182.88 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (pin "1" (uuid 6597e724-ffad-43f1-9619-cca25cced87f))
+  )
+
+  (symbol (lib_id "BBB-GVS-4-rescue:CONN_1") (at 139.7 179.07 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 00000000-0000-0000-0000-000054e5394d)
+    (property "Reference" "FID1" (id 0) (at 141.732 179.07 0)
+      (effects (font (size 1.016 1.016)) (justify left))
+    )
+    (property "Value" "CONN_1" (id 1) (at 139.7 177.673 0)
+      (effects (font (size 0.762 0.762)) hide)
+    )
+    (property "Footprint" "FIDUCIAL" (id 2) (at 139.7 180.34 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Datasheet" "" (id 3) (at 139.7 179.07 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (pin "1" (uuid 95aed042-4cef-4360-9184-83bbe2dcfbaa))
+  )
+
+  (symbol (lib_id "BBB-GVS-4-rescue:COUPON") (at 132.08 195.58 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 00000000-0000-0000-0000-000054e53953)
+    (property "Reference" "TESTED1" (id 0) (at 129.54 198.12 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Value" "COUPON" (id 1) (at 130.81 199.39 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Footprint" "REV_BLOCK" (id 2) (at 132.08 196.85 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Datasheet" "~" (id 3) (at 132.08 195.58 0)
+      (effects (font (size 1.524 1.524)))
+    )
+  )
+
+  (sheet (at 144.78 24.13) (size 30.48 25.4) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-00004eb0f8c5)
+    (property "Sheet name" "16-bit Translator" (id 0) (at 144.78 23.2914 0)
+      (effects (font (size 1.524 1.524)) (justify left bottom))
+    )
+    (property "Sheet file" "trans16.kicad_sch" (id 1) (at 144.78 50.2162 0)
+      (effects (font (size 1.524 1.524)) (justify left top))
+    )
+  )
+
+  (sheet (at 100.33 24.13) (size 30.48 25.4) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-00004eb0f8e9)
+    (property "Sheet name" "BBB EEPROM Power Etc" (id 0) (at 100.33 23.2914 0)
+      (effects (font (size 1.524 1.524)) (justify left bottom))
+    )
+    (property "Sheet file" "BBB-Conn.kicad_sch" (id 1) (at 100.33 50.2162 0)
+      (effects (font (size 1.524 1.524)) (justify left top))
+    )
+  )
+
+  (sheet (at 182.88 24.13) (size 30.48 25.4) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-000054e2626d)
+    (property "Sheet name" "Analog Inputs" (id 0) (at 182.88 23.4184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "Analog-Inputs.kicad_sch" (id 1) (at 182.88 50.1146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
+  (sheet (at 101.6 60.96) (size 30.48 25.4) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-000054e536e2)
+    (property "Sheet name" "P8 Connector" (id 0) (at 101.6 60.1214 0)
+      (effects (font (size 1.524 1.524)) (justify left bottom))
+    )
+    (property "Sheet file" "BBB-P8-Conn.kicad_sch" (id 1) (at 101.6 87.0462 0)
+      (effects (font (size 1.524 1.524)) (justify left top))
+    )
+  )
+
+  (sheet (at 144.78 60.96) (size 30.48 25.4) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 00000000-0000-0000-0000-000054e536e4)
+    (property "Sheet name" "P9 Connector" (id 0) (at 144.78 60.1214 0)
+      (effects (font (size 1.524 1.524)) (justify left bottom))
+    )
+    (property "Sheet file" "BBB-P9-Conn.kicad_sch" (id 1) (at 144.78 87.0462 0)
+      (effects (font (size 1.524 1.524)) (justify left top))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/00000000-0000-0000-0000-00004eb0f8e9" (page "2"))
+    (path "/00000000-0000-0000-0000-000054e536e2" (page "3"))
+    (path "/00000000-0000-0000-0000-00004eb0f8c5" (page "4"))
+    (path "/00000000-0000-0000-0000-000054e536e4" (page "5"))
+    (path "/00000000-0000-0000-0000-000054e2626d" (page "6"))
+  )
+
+  (symbol_instances
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000056492e09"
+      (reference "#PWR04") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000056882b58"
+      (reference "#PWR05") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000056883ec8"
+      (reference "#PWR06") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-0000564a33e0"
+      (reference "#PWR08") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8c5/00000000-0000-0000-0000-000054e26244"
+      (reference "#PWR09") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aeed58"
+      (reference "#U01") (unit 1) (value "~") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aeed59"
+      (reference "#U02") (unit 1) (value "~") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aeed5a"
+      (reference "#U03") (unit 1) (value "~") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/422b10b9-e829-44a2-8808-05edd8cb3050"
+      (reference "#U07") (unit 1) (value "~") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53e4e"
+      (reference "A0") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53e32"
+      (reference "A1") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53e14"
+      (reference "A2") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53dee"
+      (reference "A3") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53dd2"
+      (reference "A4") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e53db6"
+      (reference "A5") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e2626d/00000000-0000-0000-0000-000054e262e1"
+      (reference "A6") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000054e25df8"
+      (reference "BRD1") (unit 2) (value "BEAGLEBONE") (footprint "dougsLib:BEAGLEBONE")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000054e25e07"
+      (reference "BRD1") (unit 3) (value "BEAGLEBONE") (footprint "dougsLib:BEAGLEBONE")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-000053ad83f9"
+      (reference "BRD1") (unit 4) (value "BEAGLEBONE") (footprint "dougsLib:BEAGLEBONE")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-000053bfd0d2"
+      (reference "BRD1") (unit 5) (value "BEAGLEBONE") (footprint "dougsLib:BEAGLEBONE")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cbcb"
+      (reference "C1") (unit 1) (value "1uF") (footprint "Capacitors_SMD:C_0805_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae5c"
+      (reference "C2") (unit 1) (value "104") (footprint "Capacitors_SMD:C_0805_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adae3e"
+      (reference "C3") (unit 1) (value "104") (footprint "Capacitors_SMD:C_0805_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c05879"
+      (reference "D1") (unit 1) (value "LED") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adff8d"
+      (reference "D2") (unit 1) (value "LED") (footprint "Resistors_SMD:R_0805_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c053d8"
+      (reference "F1") (unit 1) (value "FUSE") (footprint "Capacitors_SMD:C_1206_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053aad570"
+      (reference "F2") (unit 1) (value "FUSE") (footprint "Capacitors_SMD:C_1206_HandSoldering")
+    )
+    (path "/00000000-0000-0000-0000-000054e5394d"
+      (reference "FID1") (unit 1) (value "CONN_1") (footprint "FIDUCIAL")
+    )
+    (path "/00000000-0000-0000-0000-000054e53947"
+      (reference "FID2") (unit 1) (value "CONN_1") (footprint "FIDUCIAL")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649e81d"
+      (reference "J1") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649daf0"
+      (reference "J2") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c7af"
+      (reference "J3") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649e2e2"
+      (reference "J4") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649d864"
+      (reference "J5") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649d0cb"
+      (reference "J6") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c8ab"
+      (reference "J7") (unit 1) (value "CONN_4") (footprint "Pin_Headers:Pin_Header_Straight_1x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649c787"
+      (reference "J8") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649de55"
+      (reference "J9") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e4/00000000-0000-0000-0000-00005649dd9e"
+      (reference "J10") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053f107e0"
+      (reference "J11") (unit 1) (value "CONN_2") (footprint "Pin_Headers:Pin_Header_Straight_1x02")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000056490ff2"
+      (reference "J12") (unit 1) (value "CONN_3") (footprint "Pin_Headers:Pin_Header_Straight_1x03")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-000056883a5b"
+      (reference "J16") (unit 1) (value "GVS-4X3") (footprint "DougsNewMods:Pin_Header_Straight_3x04")
+    )
+    (path "/00000000-0000-0000-0000-000054e536e2/00000000-0000-0000-0000-0000568818b6"
+      (reference "J24") (unit 1) (value "GVS-8X3") (footprint "DougsNewMods:Pin_Header_Straight_3x08")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c03d1e"
+      (reference "J25") (unit 1) (value "CONN_3") (footprint "PIN_ARRAY_3X1")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8c5/00000000-0000-0000-0000-0000568802ec"
+      (reference "J26") (unit 1) (value "GVS-8X3") (footprint "DougsNewMods:Pin_Header_Straight_3x08")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8c5/00000000-0000-0000-0000-000054e261b0"
+      (reference "P1") (unit 1) (value "CONN_8") (footprint "Pin_Headers:Pin_Header_Straight_1x08")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cace"
+      (reference "R1") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00004eb9cac9"
+      (reference "R2") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053c0587f"
+      (reference "R3") (unit 1) (value "120") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053f103c2"
+      (reference "R4") (unit 1) (value "5.6K") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-000053adff9c"
+      (reference "R5") (unit 1) (value "330") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-000054e53953"
+      (reference "TESTED1") (unit 1) (value "COUPON") (footprint "REV_BLOCK")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8e9/00000000-0000-0000-0000-00005633d704"
+      (reference "U1") (unit 1) (value "I2C-EEPROM") (footprint "dougsLib:SO8E-wider")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8c5/ec2e0d5a-2ed9-46c3-91e8-921d6f55a2ac"
+      (reference "U4") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_3.9x8.65mm_P1.27mm")
+    )
+    (path "/00000000-0000-0000-0000-00004eb0f8c5/d5765701-87de-4b69-9a3c-eaf69dbc75db"
+      (reference "U5") (unit 1) (value "TXS0104") (footprint "Package_SO:SO-14_3.9x8.65mm_P1.27mm")
+    )
+  )
+)

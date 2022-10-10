@@ -1,0 +1,892 @@
+# SPDX-FileCopyrightText: 2020 ladyada
+#
+# SPDX-License-Identifier: MIT
+
+[submodule "libraries/register"]
+	path = libraries/helpers/register
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Register.git
+[submodule "libraries/bus_device"]
+	path = libraries/helpers/bus_device
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BusDevice.git
+[submodule "libraries/helpers/simpleio"]
+	path = libraries/helpers/simpleio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SimpleIO.git
+[submodule "libraries/drivers/mcp9808"]
+	path = libraries/drivers/mcp9808
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP9808.git
+[submodule "libraries/drivers/thermistor"]
+	path = libraries/drivers/thermistor
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Thermistor.git
+[submodule "libraries/drivers/mpr121"]
+	path = libraries/drivers/mpr121
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MPR121.git
+[submodule "libraries/drivers/si7021"]
+	path = libraries/drivers/si7021
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SI7021.git
+[submodule "libraries/drivers/max31855"]
+	path = libraries/drivers/max31855
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MAX31855.git
+[submodule "libraries/drivers/bno055"]
+	path = libraries/drivers/bno055
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BNO055.git
+[submodule "libraries/drivers/lis3dh"]
+	path = libraries/drivers/lis3dh
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIS3DH.git
+[submodule "libraries/helpers/hid"]
+	path = libraries/helpers/hid
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HID.git
+[submodule "cipy_pca9685"]
+	path = libraries/drivers/pca9685
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCA9685.git
+[submodule "cipy_ht16k33"]
+	path = libraries/drivers/ht16k33
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HT16K33.git
+[submodule "rgb_display"]
+	path = libraries/drivers/rgb-display
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RGB_Display.git
+[submodule "cipy_neopixel"]
+	path = libraries/drivers/neopixel
+	url = https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel.git
+[submodule "cipy_ssd1306"]
+	path = libraries/drivers/ssd1306
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1306.git
+[submodule "libraries/drivers/pcf8523"]
+	path = libraries/drivers/pcf8523
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCF8523.git
+[submodule "is31fl3731_2"]
+	path = libraries/drivers/is31fl3731
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731.git
+[submodule "libraries/helpers/rtttl"]
+	path = libraries/helpers/rtttl
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RTTTL.git
+[submodule "libraries/helpers/waveform"]
+	path = libraries/helpers/waveform
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Waveform.git
+[submodule "libraries/drivers/dotstar"]
+	path = libraries/drivers/dotstar
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DotStar.git
+[submodule "libraries/drivers/circuitplayground"]
+	path = libraries/drivers/circuitplayground
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CircuitPlayground.git
+[submodule "libraries/drivers/sdcard"]
+	path = libraries/drivers/sdcard
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SD.git
+[submodule "libraries/drivers/ds3231"]
+	path = libraries/drivers/ds3231
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS3231.git
+[submodule "libraries/drivers/max7219"]
+	path = libraries/drivers/max7219
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MAX7219.git
+[submodule "libraries/drivers/dht"]
+	path = libraries/drivers/dht
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DHT.git
+[submodule "libraries/drivers/ccs811"]
+	path = libraries/drivers/ccs811
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CCS811.git
+[submodule "libraries/drivers/bmp280"]
+	path = libraries/drivers/bmp280
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BMP280.git
+[submodule "libraries/drivers/bme280"]
+	path = libraries/drivers/bme280
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BME280.git
+[submodule "libraries/drivers/bme680"]
+	path = libraries/drivers/bme680
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BME680.git
+[submodule "libraries/drivers/tsl2561"]
+	path = libraries/drivers/tsl2561
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TSL2561.git
+[submodule "libraries/drivers/ads1x15"]
+	path = libraries/drivers/ads1x15
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ADS1x15.git
+[submodule "libraries/drivers/gps"]
+	path = libraries/drivers/gps
+	url = https://github.com/adafruit/Adafruit_CircuitPython_GPS.git
+[submodule "libraries/drivers/vc0706"]
+	path = libraries/drivers/vc0706
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VC0706.git
+[submodule "libraries/drivers/charlcd"]
+	path = libraries/drivers/charlcd
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CharLCD.git
+[submodule "libraries/drivers/amg88xx"]
+	path = libraries/drivers/amg88xx
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AMG88xx.git
+[submodule "libraries/drivers/seesaw"]
+	path = libraries/drivers/seesaw
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Seesaw.git
+[submodule "libraries/drivers/fingerprint"]
+	path = libraries/drivers/fingerprint
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Fingerprint.git
+[submodule "libraries/drivers/max31865"]
+	path = libraries/drivers/max31865
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MAX31865.git
+[submodule "libraries/drivers/ina219"]
+	path = libraries/drivers/ina219
+	url = https://github.com/adafruit/Adafruit_CircuitPython_INA219.git
+[submodule "libraries/drivers/ds1307"]
+	path = libraries/drivers/ds1307
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS1307.git
+[submodule "libraries/drivers/irremote"]
+	path = libraries/drivers/irremote
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IRRemote.git
+[submodule "libraries/drivers/fxos8700"]
+	path = libraries/drivers/fxos8700
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FXOS8700.git
+[submodule "libraries/drivers/vcnl4010"]
+	path = libraries/drivers/vcnl4010
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VCNL4010.git
+[submodule "libraries/drivers/drv2605"]
+	path = libraries/drivers/drv2605
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DRV2605.git
+[submodule "libraries/drivers/tcs34725"]
+	path = libraries/drivers/tcs34725
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TCS34725.git
+[submodule "libraries/drivers/lsm9ds0"]
+	path = libraries/drivers/lsm9ds0
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS0.git
+[submodule "libraries/drivers/lsm9ds1"]
+	path = libraries/drivers/lsm9ds1
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM9DS1.git
+[submodule "libraries/drivers/fxas21002c"]
+	path = libraries/drivers/fxas21002c
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FXAS21002C.git
+[submodule "libraries/drivers/vl530l0x"]
+	path = libraries/drivers/vl53l0x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VL53L0X.git
+[submodule "libraries/drivers/apds9960"]
+	path = libraries/drivers/apds9960
+	url = https://github.com/adafruit/Adafruit_CircuitPython_APDS9960.git
+[submodule "libraries/helpers/featherwing"]
+	path = libraries/helpers/featherwing
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FeatherWing.git
+[submodule "libraries/helpers/motor"]
+	path = libraries/helpers/motor
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Motor.git
+[submodule "libraries/helpers/avrprog"]
+	path = libraries/helpers/avrprog
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AVRprog.git
+[submodule "libraries/drivers/sgp30"]
+	path = libraries/drivers/sgp30
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SGP30.git
+[submodule "libraries/helpers/onewire"]
+	path = libraries/helpers/onewire
+	url = https://github.com/adafruit/Adafruit_CircuitPython_OneWire.git
+[submodule "libraries/drivers/vl6180x"]
+	path = libraries/drivers/vl6180x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VL6180X.git
+[submodule "libraries/drivers/ds2413"]
+	path = libraries/drivers/ds2413
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS2413.git
+[submodule "libraries/drivers/thermal_printer"]
+	path = libraries/drivers/thermal_printer
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Thermal_Printer.git
+[submodule "libraries/drivers/rfm69"]
+	path = libraries/drivers/rfm69
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RFM69.git
+[submodule "libraries/drivers/veml6070"]
+	path = libraries/drivers/veml6070
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VEML6070.git
+[submodule "libraries/helpers/fancyled"]
+	path = libraries/helpers/fancyled
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FancyLED.git
+[submodule "libraries/drivers/tsl2591"]
+	path = libraries/drivers/tsl2591
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TSL2591.git
+[submodule "libraries/drivers/mcp4725"]
+	path = libraries/drivers/mcp4725
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP4725.git
+[submodule "libraries/drivers/max9744"]
+	path = libraries/drivers/max9744
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MAX9744.git
+[submodule "libraries/drivers/tlc59711"]
+	path = libraries/drivers/tlc59711
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TLC59711.git
+[submodule "libraries/drivers/tlc5947"]
+	path = libraries/drivers/tlc5947
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TLC5947.git
+[submodule "libraries/drivers/mma8451"]
+	path = libraries/drivers/mma8451
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MMA8451.git
+[submodule "libraries/drivers/si5351"]
+	path = libraries/drivers/si5351
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SI5351.git
+[submodule "libraries/drivers/sht31"]
+	path = libraries/drivers/sht31
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SHT31D.git
+[submodule "libraries/drivers/si4713"]
+	path = libraries/drivers/si4713
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SI4713.git
+[submodule "libraries/drivers/mpl3115a2"]
+	path = libraries/drivers/mpl3115a2
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MPL3115A2.git
+[submodule "libraries/drivers/lsm303"]
+	path = libraries/drivers/lsm303
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM303.git
+[submodule "libraries/drivers/ds18x20"]
+	path = libraries/drivers/ds18x20
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS18X20.git
+[submodule "libraries/drivers/rfm9x"]
+	path = libraries/drivers/rfm9x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RFM9x.git
+[submodule "libraries/drivers/am2320"]
+	path = libraries/drivers/am2320
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AM2320.git
+[submodule "libraries/drivers/mcp230xx"]
+	path = libraries/drivers/mcp230xx
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP230xx.git
+[submodule "libraries/drivers/trellis"]
+	path = libraries/drivers/trellis
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Trellis.git
+[submodule "libraries/drivers/ws2801"]
+	path = libraries/drivers/ws2801
+	url = https://github.com/adafruit/Adafruit_CircuitPython_WS2801.git
+[submodule "libraries/drivers/focaltouch"]
+	path = libraries/drivers/focaltouch
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FocalTouch.git
+[submodule "libraries/drivers/as726x"]
+	path = libraries/drivers/as726x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AS726x.git
+[submodule "libraries/drivers/stmpe610"]
+	path = libraries/drivers/stmpe610
+	url = https://github.com/adafruit/Adafruit_CircuitPython_STMPE610.git
+[submodule "libraries/drivers/matrixkeypad"]
+	path = libraries/drivers/matrixkeypad
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MatrixKeypad.git
+[submodule "libraries/drivers/l3gd20"]
+	path = libraries/drivers/l3gd20
+	url = https://github.com/adafruit/Adafruit_CircuitPython_L3GD20.git
+[submodule "libraries/drivers/crickit"]
+	path = libraries/drivers/crickit
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Crickit.git
+[submodule "libraries/drivers/pixie"]
+	path = libraries/drivers/pixie
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Pixie.git
+[submodule "libraries/drivers/epd"]
+	path = libraries/drivers/epd
+	url = https://github.com/adafruit/Adafruit_CircuitPython_EPD.git
+[submodule "libraries/drivers/neotrellis"]
+	path = libraries/drivers/neotrellis
+	url = https://github.com/adafruit/Adafruit_CircuitPython_NeoTrellis
+[submodule "libraries/drivers/tmp007"]
+	path = libraries/drivers/tmp007
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TMP007.git
+[submodule "libraries/drivers/tca9584a"]
+	path = libraries/drivers/tca9584a
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TCA9548A.git
+[submodule "libraries/drivers/mcp3xxx"]
+	path = libraries/drivers/mcp3xxx
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP3xxx.git
+[submodule "libraries/helpers/led-animation"]
+	path = libraries/helpers/led-animation
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LED_Animation.git
+[submodule "libraries/drivers/mlx90614"]
+	path = libraries/drivers/mlx90614
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MLX90614.git
+[submodule "libraries/drivers/pn532"]
+	path = libraries/drivers/pn532
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PN532.git
+[submodule "libraries/helpers/imageload"]
+	path = libraries/helpers/imageload
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ImageLoad.git
+[submodule "libraries/drivers/hcsr04"]
+	path = libraries/drivers/hcsr04
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HCSR04.git
+[submodule "libraries/drivers/mprls"]
+	path = libraries/drivers/mprls
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MPRLS.git
+[submodule "libraries/drivers/veml6075"]
+	path = libraries/drivers/veml6075
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VEML6075.git
+[submodule "libraries/helpers/miniqr"]
+	path = libraries/helpers/miniqr
+	url = https://github.com/adafruit/Adafruit_CircuitPython_miniQR.git
+[submodule "libraries/drivers/htu21d"]
+	path = libraries/drivers/htu21d
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HTU21D.git
+[submodule "libraries/drivers/lidarlite"]
+	path = libraries/drivers/lidarlite
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIDARLite.git
+[submodule "libraries/helpers/slideshow"]
+	path = libraries/helpers/slideshow
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Slideshow.git
+[submodule "libraries/drivers/cap1188"]
+	path = libraries/drivers/cap1188
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CAP1188.git
+[submodule "libraries/drivers/max31856"]
+	path = libraries/drivers/max31856
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MAX31856.git
+[submodule "libraries/drivers/adxl34x"]
+	path = libraries/drivers/adxl34x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ADXL34x.git
+[submodule "libraries/drivers/trellism4"]
+	path = libraries/drivers/trellism4
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TrellisM4.git
+[submodule "libraries/drivers/tfmini"]
+	path = libraries/drivers/tfmini
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TFmini.git
+[submodule "libraries/drivers/vs1053"]
+	path = libraries/drivers/vs1053
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VS1053.git
+[submodule "libraries/drivers/fram"]
+	path = libraries/drivers/fram
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FRAM.git
+[submodule "libraries/drivers/mlx90393"]
+	path = libraries/drivers/mlx90393
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MLX90393.git
+[submodule "libraries/drivers/bluefruitspi"]
+	path = libraries/drivers/bluefruitspi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BluefruitSPI.git
+[submodule "libraries/drivers/bmp3xx"]
+	path = libraries/drivers/bmp3xx
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BMP3XX.git
+[submodule "libraries/drivers/mpl115a2"]
+	path = libraries/drivers/mpl115a2
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MPL115A2.git
+[submodule "libraries/drivers/74hc595"]
+	path = libraries/drivers/74hc595
+	url = https://github.com/adafruit/Adafruit_CircuitPython_74HC595.git
+[submodule "libraries/drivers/tmp006"]
+	path = libraries/drivers/tmp006
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TMP006.git
+[submodule "libraries/helpers/tinylora"]
+	path = libraries/helpers/tinylora
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TinyLoRa.git
+[submodule "libraries/helpers/motorkit"]
+	path = libraries/helpers/motorkit
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MotorKit.git
+[submodule "libraries/drivers/esp-atcontrol"]
+	path = libraries/drivers/esp-atcontrol
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ESP_ATcontrol.git
+[submodule "libraries/helpers/miniesptool"]
+	path = libraries/helpers/miniesptool
+	url = https://github.com/adafruit/Adafruit_CircuitPython_miniesptool.git
+[submodule "libraries/helpers/framebuf"]
+	path = libraries/helpers/framebuf
+	url = https://github.com/adafruit/Adafruit_CircuitPython_framebuf.git
+[submodule "libraries/drivers/sharpmemorydisplay"]
+	path = libraries/drivers/sharpmemorydisplay
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SharpMemoryDisplay.git
+[submodule "libraries/drivers/pcd8544"]
+	path = libraries/drivers/pcd8544
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCD8544.git
+[submodule "libraries/drivers/us100"]
+	path = libraries/drivers/us100
+	url = https://github.com/adafruit/Adafruit_CircuitPython_US100.git
+[submodule "libraries/helpers/servokit"]
+	path = libraries/helpers/servokit
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ServoKit.git
+[submodule "libraries/helpers/debouncer"]
+	path = libraries/helpers/debouncer
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Debouncer.git
+[submodule "libraries/drivers/adt7410"]
+	path = libraries/drivers/adt7410
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ADT7410.git
+[submodule "libraries/helpers/boardtest"]
+	path = libraries/helpers/boardtest
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BoardTest.git
+[submodule "libraries/helpers/ble"]
+	path = libraries/helpers/ble
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE.git
+[submodule "libraries/helpers/bluefruitconnect"]
+	path = libraries/helpers/bluefruitconnect
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BluefruitConnect.git
+[submodule "libraries/helpers/midi"]
+	path = libraries/helpers/midi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MIDI.git
+[submodule "libraries/drivers/ra8875"]
+	path = libraries/drivers/ra8875
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RA8875.git
+[submodule "libraries/drivers/esp32spi"]
+	path = libraries/drivers/esp32spi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ESP32SPI.git
+[submodule "libraries/drivers/touchscreen"]
+	path = libraries/drivers/touchscreen
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Touchscreen.git
+[submodule "libraries/helpers/display-text"]
+	path = libraries/helpers/display-text
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Display_Text.git
+[submodule "libraries/helpers/binascii"]
+	path = libraries/helpers/binascii
+	url = https://github.com/adafruit/Adafruit_CircuitPython_binascii.git
+[submodule "libraries/helpers/bitmap-font"]
+	path = libraries/helpers/bitmap-font
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Bitmap_Font.git
+[submodule "libraries/drivers/pyportal"]
+	path = libraries/drivers/pyportal
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PyPortal.git
+[submodule "libraries/drivers/ina260"]
+	path = libraries/drivers/ina260
+	url = https://github.com/adafruit/Adafruit_CircuitPython_INA260.git
+[submodule "libraries/helpers/logging"]
+	path = libraries/helpers/logging
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Logging.git
+[submodule "libraries/helpers/adafruitio"]
+	path = libraries/helpers/adafruitio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AdafruitIO.git
+[submodule "libraries/drivers/tpa2016"]
+	path = libraries/drivers/tpa2016
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TPA2016.git
+[submodule "libraries/helpers/display-button"]
+	path = libraries/helpers/display-button
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Display_Button.git
+[submodule "libraries/helpers/display-shapes"]
+	path = libraries/helpers/display-shapes
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Display_Shapes.git
+[submodule "libraries/drivers/veml7700"]
+	path = libraries/drivers/veml7700
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VEML7700.git
+[submodule "libraries/drivers/dymoscale"]
+	path = libraries/drivers/dymoscale
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DymoScale.git
+[submodule "libraries/helpers/itertools"]
+	path = libraries/helpers/itertools
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IterTools.git
+[submodule "libraries/helpers/lifx"]
+	path = libraries/helpers/lifx
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIFX.git
+[submodule "libraries/helpers/hue"]
+	path = libraries/helpers/hue
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Hue.git
+[submodule "libraries/drivers/lps35hw"]
+	path = libraries/drivers/lps35hw
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LPS35HW.git
+[submodule "libraries/drivers/ili9341"]
+	path = libraries/drivers/ili9341
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ILI9341.git
+[submodule "libraries/drivers/st7735r"]
+	path = libraries/drivers/st7735r
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ST7735R.git
+[submodule "libraries/drivers/st7735"]
+	path = libraries/drivers/st7735
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ST7735.git
+[submodule "libraries/drivers/hx8357"]
+	path = libraries/drivers/hx8357
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HX8357.git
+[submodule "libraries/drivers/ssd1351"]
+	path = libraries/drivers/ssd1351
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1351.git
+[submodule "libraries/drivers/ssd1331"]
+	path = libraries/drivers/ssd1331
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1331.git
+[submodule "libraries/drivers/st7789"]
+	path = libraries/drivers/st7789
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ST7789.git
+[submodule "libraries/helpers/azure"]
+	path = libraries/helpers/azure
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AzureIoT.git
+[submodule "libraries/drivers/bd3491fs"]
+	path = libraries/drivers/bd3491fs
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BD3491FS.git
+[submodule "libraries/drivers/ds3502"]
+	path = libraries/drivers/ds3502
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS3502.git
+[submodule "libraries/helpers/rgbled"]
+	path = libraries/helpers/rgbled
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RGBLED.git
+[submodule "libraries/helpers/pyoa"]
+	path = libraries/helpers/pyoa
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PYOA.git
+[submodule "libraries/helpers/turtle"]
+	path = libraries/helpers/turtle
+	url = https://github.com/adafruit/Adafruit_CircuitPython_turtle.git
+[submodule "libraries/drivers/vcnl4040"]
+	path = libraries/drivers/vcnl4040
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VCNL4040.git
+[submodule "libraries/helpers/cursorcontrol"]
+	path = libraries/helpers/cursorcontrol
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CursorControl.git
+[submodule "libraries/helpers/pybadger"]
+	path = libraries/helpers/pybadger
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PyBadger.git
+[submodule "libraries/helpers/minimqtt"]
+	path = libraries/helpers/minimqtt
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MiniMQTT.git
+[submodule "libraries/drivers/nunchuk"]
+	path = libraries/drivers/nunchuk
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Nunchuk.git
+[submodule "libraries/helpers/requests"]
+	path = libraries/helpers/requests
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Requests.git
+[submodule "libraries/drivers/displayio_ssd1306"]
+	path = libraries/drivers/displayio_ssd1306
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SSD1306.git
+[submodule "libraries/drivers/ssd1322"]
+	path = libraries/drivers/ssd1322
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1322.git
+[submodule "libraries/drivers/ssd1325"]
+	path = libraries/drivers/ssd1325
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1325.git
+[submodule "libraries/drivers/ssd1327"]
+	path = libraries/drivers/ssd1327
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1327.git
+[submodule "libraries/helpers/hashlib"]
+	path = libraries/helpers/hashlib
+	url = https://github.com/adafruit/Adafruit_CircuitPython_hashlib.git
+[submodule "libraries/helpers/rsa"]
+	path = libraries/helpers/rsa
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RSA.git
+[submodule "libraries/helpers/ntp"]
+	path = libraries/helpers/ntp
+	url = https://github.com/adafruit/Adafruit_CircuitPython_NTP.git
+[submodule "libraries/helpers/jwt"]
+	path = libraries/helpers/jwt
+	url = https://github.com/adafruit/Adafruit_CircuitPython_JWT.git
+[submodule "libraries/helpers/GC_IOT_Core"]
+	path = libraries/helpers/GC_IOT_Core
+	url = https://github.com/adafruit/Adafruit_CircuitPython_GC_IOT_Core.git
+[submodule "libraries/drivers/pct2075"]
+	path = libraries/drivers/pct2075
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCT2075.git
+[submodule "libraries/drivers/tlv493d"]
+	path = libraries/drivers/tlv493d
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TLV493D.git
+[submodule "libraries/helpers/bitmapsaver"]
+	path = libraries/helpers/bitmapsaver
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BitmapSaver.git
+[submodule "libraries/drivers/il91874"]
+	path = libraries/drivers/il91874
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IL91874.git
+[submodule "libraries/drivers/il0373"]
+	path = libraries/drivers/il0373
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IL0373.git
+[submodule "libraries/drivers/il0398"]
+	path = libraries/drivers/il0398
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IL0398.git
+[submodule "libraries/drivers/ssd1608"]
+	path = libraries/drivers/ssd1608
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1608.git
+[submodule "libraries/drivers/ssd1675"]
+	path = libraries/drivers/ssd1675
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1675.git
+[submodule "libraries/drivers/msa301"]
+	path = libraries/drivers/msa301
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MSA301.git
+[submodule "libraries/drivers/atecc"]
+	path = libraries/drivers/atecc
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ATECC.git
+[submodule "libraries/helpers/AWS_IOT"]
+	path = libraries/helpers/AWS_IOT
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AWS_IOT.git
+[submodule "libraries/drivers/lsm303-accel"]
+	path = libraries/drivers/lsm303-accel
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM303_Accel.git
+[submodule "libraries/drivers/lsm303dlh-mag"]
+	path = libraries/drivers/lsm303dlh-mag
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM303DLH_Mag.git
+[submodule "libraries/drivers/mpu6050"]
+	path = libraries/drivers/mpu6050
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MPU6050.git
+[submodule "libraries/drivers/mcp9600"]
+	path = libraries/drivers/mcp9600
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP9600.git
+[submodule "libraries/helpers/gizmo"]
+	path = libraries/helpers/gizmo
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Gizmo.git
+[submodule "libraries/drivers/displayio_ssd1305"]
+	path = libraries/drivers/displayio_ssd1305
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SSD1305.git
+[submodule "libraries/drivers/ssd1305"]
+	path = libraries/drivers/ssd1305
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1305.git
+[submodule "libraries/drivers/rplidar"]
+	path = libraries/drivers/rplidar
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RPLIDAR.git
+[submodule "libraries/drivers/neopixel_spi"]
+	path = libraries/drivers/neopixel_spi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel_SPI.git
+[submodule "libraries/drivers/mlx90640"]
+	path = libraries/drivers/mlx90640
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MLX90640.git
+[submodule "libraries/drivers/lsm6ds"]
+	path = libraries/drivers/lsm6ds
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS.git
+[submodule "libraries/drivers/mcp4728"]
+	path = libraries/drivers/mcp4728
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP4728.git
+[submodule "libraries/helpers/ble_apple_notification_center"]
+	path = libraries/helpers/ble_apple_notification_center
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Apple_Notification_Center.git
+[submodule "libraries/helpers/ble_magic_light"]
+	path = libraries/helpers/ble_magic_light
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Magic_Light.git
+[submodule "libraries/helpers/display_notification"]
+	path = libraries/helpers/display_notification
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Display_Notification.git
+[submodule "libraries/drivers/lis2mdl"]
+	path = libraries/drivers/lis2mdl
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIS2MDL.git
+[submodule "libraries/drivers/lis3mdl"]
+	path = libraries/drivers/lis3mdl
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIS3MDL.git
+[submodule "libraries/helpers/ble_apple_media"]
+	path = libraries/helpers/ble_apple_media
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Apple_Media.git
+[submodule "libraries/drivers/dps310"]
+	path = libraries/drivers/dps310
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DPS310.git
+[submodule "libraries/drivers/clue"]
+	path = libraries/drivers/clue
+	url = https://github.com/adafruit/Adafruit_CircuitPython_CLUE.git
+[submodule "libraries/helpers/ble_heart_rate"]
+	path = libraries/helpers/ble_heart_rate
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Heart_Rate.git
+[submodule "libraries/helpers/ble_cycling_speed_and_cadence"]
+	path = libraries/helpers/ble_cycling_speed_and_cadence
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Cycling_Speed_and_Cadence.git
+[submodule "libraries/drivers/lps2x"]
+	path = libraries/drivers/lps2x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LPS2X.git
+[submodule "libraries/helpers/ble_eddystone"]
+	path = libraries/helpers/ble_eddystone
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Eddystone.git
+[submodule "libraries/drivers/hts221"]
+	path = libraries/drivers/hts221
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HTS221.git
+[submodule "libraries/helpers/ble-broadcastnet"]
+	path = libraries/helpers/ble-broadcastnet
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_BroadcastNet.git
+[submodule "libraries/helpers/debug-i2c"]
+	path = libraries/helpers/debug-i2c
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Debug_I2C.git
+[submodule "libraries/helpers/wsgi"]
+	path = libraries/helpers/wsgi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_WSGI.git
+[submodule "libraries/helpers/progressbar"]
+	path = libraries/helpers/progressbar
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ProgressBar.git
+[submodule "libraries/drivers/wiznet5k"]
+	path = libraries/drivers/wiznet5k
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Wiznet5k.git
+[submodule "libraries/drivers/rockblock"]
+	path = libraries/drivers/rockblock
+	url = https://github.com/adafruit/Adafruit_CircuitPython_RockBlock.git
+[submodule "libraries/drivers/ds1841"]
+	path = libraries/drivers/ds1841
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DS1841.git
+[submodule "libraries/helpers/ble-radio"]
+	path = libraries/helpers/ble-radio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Radio.git
+[submodule "libraries/helpers/ble_ibbq"]
+	path = libraries/helpers/ble_ibbq
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_iBBQ.git
+[submodule "libraries/helpers/ble_midi"]
+	path = libraries/helpers/ble_midi
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_MIDI.git
+[submodule "libraries/helpers/bitbangio"]
+	path = libraries/helpers/bitbangio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BitbangIO.git
+[submodule "libraries/helpers/ble_berrymed_pulse_oximeter"]
+	path = libraries/helpers/ble_berrymed_pulse_oximeter
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_BerryMed_Pulse_Oximeter.git
+[submodule "libraries/drivers/fona"]
+	path = libraries/drivers/fona
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FONA.git
+[submodule "libraries/drivers/lis331"]
+	path = libraries/drivers/lis331
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LIS331.git
+[submodule "libraries/helpers/ble_adafruit"]
+	path = libraries/helpers/ble_adafruit
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_Adafruit.git
+[submodule "libraries/drivers/icm20x"]
+	path = libraries/drivers/icm20x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ICM20X.git
+[submodule "libraries/drivers/pm25"]
+	path = libraries/drivers/pm25
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PM25.git
+[submodule "libraries/drivers/ahtx0"]
+	path = libraries/drivers/ahtx0
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AHTx0.git
+[submodule "libraries/drivers/shtc3"]
+	path = libraries/drivers/shtc3
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SHTC3.git
+[submodule "libraries/drivers/pcf8591"]
+	path = libraries/drivers/pcf8591
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCF8591.git
+[submodule "libraries/drivers/bh1750"]
+	path = libraries/drivers/bh1750
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BH1750.git
+[submodule "libraries/drivers/as7341"]
+	path = libraries/drivers/as7341
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AS7341.git
+[submodule "libraries/drivers/ms8607"]
+	path = libraries/drivers/ms8607
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MS8607.git
+[submodule "libraries/helpers/matrixportal"]
+	path = libraries/helpers/matrixportal
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MatrixPortal.git
+[submodule "libraries/drivers/tc74"]
+	path = libraries/drivers/tc74
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TC74.git
+[submodule "libraries/helpers/pixel_framebuf"]
+	path = libraries/helpers/pixel_framebuf
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Pixel_Framebuf.git
+[submodule "libraries/drivers/bno08x_rvc"]
+	path = libraries/drivers/bno08x_rvc
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BNO08X_RVC.git
+[submodule "libraries/helpers/airlift"]
+	path = libraries/helpers/airlift
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AirLift.git
+[submodule "libraries/drivers/bno08x"]
+	path = libraries/drivers/bno08x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BNO08X.git
+[submodule "libraries/drivers/displayio_sh1107"]
+	path = libraries/drivers/displayio_sh1107
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SH1107.git
+[submodule "libraries/drivers/tla202x"]
+	path = libraries/drivers/tla202x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TLA202X.git
+[submodule "libraries/drivers/lc709203f"]
+	path = libraries/drivers/lc709203f
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LC709203F.git
+[submodule "libraries/drivers/emc2101"]
+	path = libraries/drivers/emc2101
+	url = https://github.com/adafruit/Adafruit_CircuitPython_EMC2101.git
+[submodule "libraries/drivers/monsterm4sk"]
+	path = libraries/drivers/monsterm4sk
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MONSTERM4SK.git
+[submodule "libraries/drivers/tmp117"]
+	path = libraries/drivers/tmp117
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TMP117
+[submodule "libraries/helpers/magtag"]
+	path = libraries/helpers/magtag
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MagTag.git
+[submodule "libraries/drivers/mlx90395"]
+	path = libraries/drivers/mlx90395
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MLX90395.git
+[submodule "libraries/helpers/fakerequests"]
+	path = libraries/helpers/fakerequests
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FakeRequests.git
+[submodule "libraries/helpers/portalbase"]
+	path = libraries/helpers/portalbase
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PortalBase.git
+[submodule "libraries/drivers/scd30"]
+	path = libraries/drivers/scd30
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SCD30.git
+[submodule "libraries/drivers/ltr390"]
+	path = libraries/drivers/ltr390
+	url = https://github.com/adafruit/Adafruit_CircuitPython_LTR390.git
+[submodule "libraries/drivers/sgp40"]
+	path = libraries/drivers/sgp40
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SGP40.git
+[submodule "libraries/helpers/oauth_2"]
+	path = libraries/helpers/oauth_2
+	url = https://github.com/adafruit/Adafruit_CircuitPython_OAuth2.git
+[submodule "libraries/drivers/sht4x"]
+	path = libraries/drivers/sht4x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SHT4x.git
+[submodule "libraries/helpers/pioasm"]
+	path = libraries/helpers/pioasm
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PIOASM.git
+[submodule "libraries/drivers/aw9523"]
+	path = libraries/drivers/aw9523
+	url = https://github.com/adafruit/Adafruit_CircuitPython_AW9523.git
+[submodule "libraries/helpers/datetime"]
+	path = libraries/helpers/datetime
+	url = https://github.com/adafruit/Adafruit_CircuitPython_datetime.git
+[submodule "libraries/drivers/htu31d"]
+	path = libraries/drivers/htu31d
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HTU31D.git
+[submodule "libraries/helpers/simplemath"]
+	path = libraries/helpers/simplemath
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SimpleMath.git
+[submodule "libraries/drivers/mcp2515"]
+	path = libraries/drivers/mcp2515
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP2515.git
+[submodule "libraries/helpers/ble_lywsd03mmc"]
+	path = libraries/helpers/ble_lywsd03mmc
+	url = https://github.com/adafruit/Adafruit_CircuitPython_BLE_LYWSD03MMC.git
+[submodule "libraries/drivers/ssd1681"]
+	path = libraries/drivers/ssd1681
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1681.git
+[submodule "libraries/helpers/displayio_layout"]
+	path = libraries/helpers/displayio_layout
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_Layout.git
+[submodule "libraries/drivers/ssd1680"]
+	path = libraries/drivers/ssd1680
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1680.git
+[submodule "libraries/helpers/funhouse"]
+	path = libraries/helpers/funhouse
+	url = https://github.com/adafruit/Adafruit_CircuitPython_FunHouse.git
+[submodule "libraries/helpers/colorsys"]
+	path = libraries/helpers/colorsys
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Colorsys.git
+[submodule "libraries/drivers/ov7670"]
+	path = libraries/drivers/ov7670
+	url = https://github.com/adafruit/Adafruit_CircuitPython_OV7670
+[submodule "libraries/helpers/dash_display"]
+	path = libraries/helpers/dash_display
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Dash_Display
+[submodule "libraries/helpers/simple-text-display"]
+	path = libraries/helpers/simple-text-display
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Simple_Text_Display.git
+[submodule "libraries/drivers/ov2640"]
+	path = libraries/drivers/ov2640
+	url = https://github.com/adafruit/Adafruit_CircuitPython_OV2640.git
+[submodule "libraries/helpers/neokey"]
+	path = libraries/helpers/neokey
+	url = https://github.com/adafruit/Adafruit_CircuitPython_NeoKey.git
+[submodule "libraries/drivers/displayio_sh1106"]
+	path = libraries/drivers/displayio_sh1106
+	url = https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SH1106.git
+[submodule "libraries/helpers/macropad"]
+	path = libraries/helpers/macropad
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MacroPad.git
+[submodule "libraries/helpers/pixelbuf"]
+	path = libraries/helpers/pixelbuf
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Pixelbuf.git
+[submodule "libraries/helpers/ticks"]
+	path = libraries/helpers/ticks
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Ticks.git
+[submodule "libraries/drivers/scd4x"]
+	path = libraries/drivers/scd4x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SCD4X.git
+[submodule "libraries/drivers/is31fl3741"]
+	path = libraries/drivers/is31fl3741
+	url = https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3741.git
+[submodule "libraries/helpers/ducky"]
+	path = libraries/helpers/ducky
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Ducky.git
+[submodule "libraries/drivers/pcf8563"]
+	path = libraries/drivers/pcf8563
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PCF8563.git
+[submodule "libraries/drivers/st7565"]
+	path = libraries/drivers/st7565
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ST7565.git
+[submodule "libraries/drivers/uc8151d"]
+	path = libraries/drivers/uc8151d
+	url = https://github.com/adafruit/Adafruit_CircuitPython_UC8151D.git
+[submodule "libraries/helpers/radial_controller"]
+	path = libraries/helpers/radial_controller
+	url = https://github.com/adafruit/Adafruit_CircuitPython_Radial_Controller.git
+[submodule "libraries/drivers/ov5640"]
+	path = libraries/drivers/ov5640
+	url = https://github.com/adafruit/Adafruit_CircuitPython_OV5640.git
+[submodule "libraries/drivers/vl53l1x"]
+	path = libraries/drivers/vl53l1x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VL53L1X.git
+[submodule "libraries/helpers/asyncio"]
+	path = libraries/helpers/asyncio
+	url = https://github.com/adafruit/Adafruit_CircuitPython_asyncio.git
+[submodule "libraries/drivers/24lc32"]
+	path = libraries/drivers/24lc32
+	url = https://github.com/adafruit/Adafruit_CircuitPython_24LC32.git
+[submodule "libraries/drivers/adxl37x"]
+	path = libraries/drivers/adxl37x
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ADXL37x.git
+[submodule "libraries/helpers/esp32s2tft"]
+	path = libraries/helpers/esp32s2tft
+	url = https://github.com/adafruit/Adafruit_CircuitPython_ESP32S2TFT.git
+[submodule "libraries/drivers/vl53l4cd"]
+	path = libraries/drivers/vl53l4cd
+	url = https://github.com/adafruit/Adafruit_CircuitPython_VL53L4CD.git
+[submodule "libraries/drivers/tt21100"]
+	path = libraries/drivers/tt21100
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TT21100.git
+[submodule "libraries/helpers/httpserver"]
+	path = libraries/helpers/httpserver
+	url = https://github.com/adafruit/Adafruit_CircuitPython_HTTPServer.git
+[submodule "libraries/drivers/tsc2007"]
+	path = libraries/drivers/tsc2007
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TSC2007.git
+[submodule "libraries/drivers/floppy"]
+	path = libraries/drivers/floppy
+	url = https://github.com/adafruit/Adafruit_CircuitPython_floppy.git

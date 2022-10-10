@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\I2C Cards\I2CIO-8\I2CIO-8.kicad_sch</source>
+    <date>5/16/2022 8:15:22 AM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>8-Bit I2C I/O Card</title>
+        <company>Land Boards LLC</company>
+        <rev>3</rev>
+        <date>2022-05-16</date>
+        <source>I2CIO-8.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004fecd7af</tstamps>
+    </comp>
+    <comp ref="D0">
+      <value>LED-fixed</value>
+      <footprint>LEDs:LED-3MM</footprint>
+      <libsource lib="I2CIO-8-rescue" part="LED-fixed" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563fe120</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED-fixed</value>
+      <footprint>LEDs:LED-3MM</footprint>
+      <libsource lib="I2CIO-8-rescue" part="LED-fixed" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563fecae</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED-fixed</value>
+      <footprint>LEDs:LED-3MM</footprint>
+      <libsource lib="I2CIO-8-rescue" part="LED-fixed" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563fed16</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED-fixed</value>
+      <footprint>LEDs:LED-3MM</footprint>
+      <libsource lib="I2CIO-8-rescue" part="LED-fixed" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563feec9</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>LED-fixed</value>
+      <footprint>LEDs:LED-3MM</footprint>
+      <libsource lib="I2CIO-8-rescue" part="LED-fixed" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563fef35</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>Conn_02x02_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Odd_Even" description="Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb428fee-e612-48c3-a986-37e2c72e0112</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>CONN_02X03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="I2CIO-8-rescue" part="CONN_02X03" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000563f7aba</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>CONN_02X04</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x04</footprint>
+      <libsource lib="I2CIO-8-rescue" part="CONN_02X04" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561e0826</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x05_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Horizontal</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>985992c2-bebf-4fd9-80f4-f2dea134b3d4</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f002787f-87b1-4dcb-bfab-7922a3d2c655</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2c4d8bb6-5666-45df-865f-b85a6f18563a</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9cb382b-3d90-4739-a3ab-a4dedf24a08a</tstamps>
+    </comp>
+    <comp ref="MTG4">
+      <value>MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd1dd8f3-96c5-4e45-9a8f-59016e62235f</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>3.3K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca501</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>3.3K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca4fb</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bb3bc</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bb8b6</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bb9d6</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bb9e2</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>1K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bbec0</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>1K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bbecc</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>1K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bbed8</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561bbee4</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>1K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561be81e</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca2a4</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca2ac</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca2b1</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="I2CIO-8-rescue" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca3d8</tstamps>
+    </comp>
+    <comp ref="TEST1">
+      <value>TEST</value>
+      <footprint>DougsNewMods:TEST_BLK-REAR</footprint>
+      <libsource lib="I2CIO-8-rescue" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-0000561d0970</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MCP23008P</value>
+      <footprint>Housings_DIP:DIP-18_W7.62mm_LongPads</footprint>
+      <libsource lib="I2CIO-8-rescue" part="MCP23008P" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/I2C Cards/I2CIO-8/I2CIO-8.sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004feca226</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Odd_Even">
+      <description>Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x05_Odd_Even">
+      <description>Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x05_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="C">
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="CONN_02X03">
+      <footprints>
+        <fp>Pin_Header_Straight_2X03</fp>
+        <fp>Pin_Header_Angled_2X03</fp>
+        <fp>Socket_Strip_Straight_2X03</fp>
+        <fp>Socket_Strip_Angled_2X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="CONN_02X04">
+      <footprints>
+        <fp>Pin_Header_Straight_2X04</fp>
+        <fp>Pin_Header_Angled_2X04</fp>
+        <fp>Socket_Strip_Straight_2X04</fp>
+        <fp>Socket_Strip_Angled_2X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="LED-fixed">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-fixed</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="MCP23008P">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP23008P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="SDA" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="A1" type="input"/>
+        <pin num="5" name="A0" type="input"/>
+        <pin num="6" name="~{RST}" type="input"/>
+        <pin num="8" name="INT" type="output"/>
+        <pin num="9" name="VSS" type="power_in"/>
+        <pin num="10" name="GP0" type="output"/>
+        <pin num="11" name="GP1" type="output"/>
+        <pin num="12" name="GP2" type="output"/>
+        <pin num="13" name="GP3" type="output"/>
+        <pin num="14" name="GP4" type="output"/>
+        <pin num="15" name="GP5" type="output"/>
+        <pin num="16" name="GP6" type="output"/>
+        <pin num="17" name="GP7" type="bidirectional"/>
+        <pin num="18" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="I2CIO-8-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="I2CIO-8-rescue">
+      <uri>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\I2C Cards\I2CIO-8/I2CIO-8-rescue.lib</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\KiCAD\library\LandBoards.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/A0">
+      <node ref="H2" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="2" name="/A1">
+      <node ref="H2" pin="4" pinfunction="P4" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="3" name="/A2">
+      <node ref="H2" pin="6" pinfunction="P6" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="A2" pintype="input"/>
+    </net>
+    <net code="4" name="/GP0">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="GP0" pintype="output"/>
+    </net>
+    <net code="5" name="/GP1">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="GP1" pintype="output"/>
+    </net>
+    <net code="6" name="/GP2">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="GP2" pintype="output"/>
+    </net>
+    <net code="7" name="/GP3">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="GP3" pintype="output"/>
+    </net>
+    <net code="8" name="/GP4">
+      <node ref="H3" pin="2" pinfunction="P2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GP4" pintype="output"/>
+    </net>
+    <net code="9" name="/GP5">
+      <node ref="H3" pin="4" pinfunction="P4" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="GP5" pintype="output"/>
+    </net>
+    <net code="10" name="/GP6">
+      <node ref="H3" pin="6" pinfunction="P6" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="GP6" pintype="output"/>
+    </net>
+    <net code="11" name="/GP7">
+      <node ref="H3" pin="8" pinfunction="P8" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="GP7" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/INT">
+      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="INT" pintype="output"/>
+    </net>
+    <net code="13" name="/RST">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="~{RST}" pintype="input"/>
+    </net>
+    <net code="14" name="/SCK">
+      <node ref="H1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="15" name="/SDA">
+      <node ref="H1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SDA" pintype="input"/>
+    </net>
+    <net code="16" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="D0" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="H2" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="H2" pin="3" pinfunction="P3" pintype="passive"/>
+      <node ref="H2" pin="5" pinfunction="P5" pintype="passive"/>
+      <node ref="H3" pin="1" pinfunction="P1" pintype="passive"/>
+      <node ref="H3" pin="3" pinfunction="P3" pintype="passive"/>
+      <node ref="H3" pin="5" pinfunction="P5" pintype="passive"/>
+      <node ref="H3" pin="7" pinfunction="P7" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="VSS" pintype="power_in"/>
+    </net>
+    <net code="17" name="Net-(D0-Pad2)">
+      <node ref="D0" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(R1-Pad2)">
+      <node ref="H1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(R2-Pad2)">
+      <node ref="H1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(R11-Pad1)">
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+    </net>
+    <net code="24" name="VCC">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="VDD" pintype="power_in"/>
+    </net>
+  </nets>
+</export>

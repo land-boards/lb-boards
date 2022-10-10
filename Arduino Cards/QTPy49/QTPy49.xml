@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Arduino Cards\QTPy49\QTPy49.kicad_sch</source>
+    <date>6/2/2022 1:01:41 PM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>QTPy49</title>
+        <company>land-boards.com</company>
+        <rev>1</rev>
+        <date>2022-06-02</date>
+        <source>QTPy49.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="BRD1">
+      <value>QT_Py</value>
+      <footprint>LandBoards_BoardOutlines:QT_Py</footprint>
+      <libsource lib="" part="QT_Py_1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5861528f-ce16-49d7-bebe-d9c307b5d78e</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm</footprint>
+      <libsource lib="QTPy49-rescue" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61035a50-9e0d-40ec-8d60-6f257bd2d672</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>CP1</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <libsource lib="QTPy49-rescue" part="CP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000056254622</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>CP1</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <libsource lib="QTPy49-rescue" part="CP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000056254b9b</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm</footprint>
+      <libsource lib="QTPy49-rescue" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>547bb636-06af-4942-83f0-af7ef5925aa5</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm</footprint>
+      <libsource lib="QTPy49-rescue" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005243451c</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm</footprint>
+      <libsource lib="QTPy49-rescue" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d0286c3-0217-4900-b501-e756c44ded99</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>D_Schottky</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03b65061-4ad3-41f9-a17f-35d1e3ee1c74</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>DCJ0202</value>
+      <footprint>DCJ-NEW</footprint>
+      <libsource lib="QTPy49-rescue" part="DCJ0202" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-000052407574</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48444454-0189-4885-9973-ac1acf099313</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x06</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75460b4a-0150-4a43-9025-a4ded097a9d6</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x04</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de64a5e6-4438-4b48-be3e-49b67c231fad</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>Conn_01x04</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2160c3f5-97b9-4ff6-bbf2-fc6a1a2df5ad</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0249c163-32d8-4069-afc0-1f859e6f8de0</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96d38b60-f73e-4b2a-977a-3fd1097da2eb</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7372cf12-113c-476b-b9ef-3393d1180a55</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>76e499af-0d09-4ab4-a323-97aa87e26d23</tstamps>
+    </comp>
+    <comp ref="MTG1">
+      <value>4-40_MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2463c1c7-fd79-4c58-8b85-f04bf2c3ad2f</tstamps>
+    </comp>
+    <comp ref="MTG2">
+      <value>4-40_MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c34dda2f-d9cb-400c-b863-7432782a7751</tstamps>
+    </comp>
+    <comp ref="MTG3">
+      <value>4-40_MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acc3657b-be98-443a-92ee-25490b9882d8</tstamps>
+    </comp>
+    <comp ref="MTG4">
+      <value>4-40_MTG_HOLE</value>
+      <footprint>LandBoards_MountHoles:MTG-4-40</footprint>
+      <libsource lib="LandBoards" part="MTG_HOLE" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac17f15e-4ba7-4c4b-b973-2c7f9d1a5fa9</tstamps>
+    </comp>
+    <comp ref="TEST1">
+      <value>TEST COUPON</value>
+      <footprint>LandBoards_Marking:TEST_BLK-REAR</footprint>
+      <libsource lib="LandBoards" part="COUPON" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8cacea2a-7b68-4132-bb19-b0bb2e1c6f76</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>AP1117</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223</footprint>
+      <libsource lib="QTPy49-rescue" part="AP1117" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="QTPy49.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00004ff58dee</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="QT_Py_1">
+      <fields>
+        <field name="Reference">BRD</field>
+        <field name="Value">QT_Py_1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D0/A0/AOUT" type="bidirectional"/>
+        <pin num="2" name="D1/A1/AREF" type="bidirectional"/>
+        <pin num="3" name="D2/A2" type="bidirectional"/>
+        <pin num="4" name="D3/A3" type="bidirectional"/>
+        <pin num="5" name="D4/SDA" type="bidirectional"/>
+        <pin num="6" name="D5/SCL" type="bidirectional"/>
+        <pin num="7" name="D6/TX/A6" type="bidirectional"/>
+        <pin num="8" name="D7/RX/A7" type="bidirectional"/>
+        <pin num="9" name="D8/SCK/A8" type="bidirectional"/>
+        <pin num="10" name="D9/MISO/A9" type="bidirectional"/>
+        <pin num="11" name="D10/MOSI/A10" type="bidirectional"/>
+        <pin num="12" name="3.3V" type="power_out"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="5V" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="COUPON">
+      <fields>
+        <field name="Reference">COUP?</field>
+        <field name="Value">COUPON</field>
+      </fields>
+    </libpart>
+    <libpart lib="LandBoards" part="MTG_HOLE">
+      <fields>
+        <field name="Reference">MTG?</field>
+        <field name="Value">MTG_HOLE</field>
+      </fields>
+    </libpart>
+    <libpart lib="QTPy49-rescue" part="AP1117">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP1117</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="passive"/>
+        <pin num="3" name="VIN" type="power_in"/>
+        <pin num="4" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="QTPy49-rescue" part="C">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="QTPy49-rescue" part="CP1">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="QTPy49-rescue" part="DCJ0202">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DCJ0202</field>
+        <field name="Footprint">con-jack-DCJ0202</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    </library>
+    <library logical="QTPy49-rescue">
+      <uri>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Arduino Cards\QTPy49/QTPy49-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="BRD1" pin="12" pinfunction="3.3V" pintype="power_out"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="BRD1" pin="14" pinfunction="5V" pintype="power_in"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+    </net>
+    <net code="3" name="/AD0">
+      <node ref="BRD1" pin="1" pinfunction="D0/A0/AOUT" pintype="bidirectional"/>
+      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="4" name="/AD1">
+      <node ref="BRD1" pin="2" pinfunction="D1/A1/AREF" pintype="bidirectional"/>
+      <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="5" name="/AD2">
+      <node ref="BRD1" pin="3" pinfunction="D2/A2" pintype="bidirectional"/>
+      <node ref="J7" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="6" name="/AD3">
+      <node ref="BRD1" pin="4" pinfunction="D3/A3" pintype="bidirectional"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="7" name="/AD6_TX">
+      <node ref="BRD1" pin="7" pinfunction="D6/TX/A6" pintype="bidirectional"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="8" name="/AD7_RX">
+      <node ref="BRD1" pin="8" pinfunction="D7/RX/A7" pintype="bidirectional"/>
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="9" name="/AD8_SCK">
+      <node ref="BRD1" pin="9" pinfunction="D8/SCK/A8" pintype="bidirectional"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="10" name="/AD9_MISO">
+      <node ref="BRD1" pin="10" pinfunction="D9/MISO/A9" pintype="bidirectional"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="11" name="/AD10_MOSI">
+      <node ref="BRD1" pin="11" pinfunction="D10/MOSI/A10" pintype="bidirectional"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="12" name="/D4_SDA">
+      <node ref="BRD1" pin="5" pinfunction="D4/SDA" pintype="bidirectional"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="13" name="/D5_SCL">
+      <node ref="BRD1" pin="6" pinfunction="D5/SCL" pintype="bidirectional"/>
+      <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="14" name="/VIN">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="15" name="/VREG">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="VO" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="16" name="GND">
+      <node ref="BRD1" pin="13" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+    </net>
+  </nets>
+</export>

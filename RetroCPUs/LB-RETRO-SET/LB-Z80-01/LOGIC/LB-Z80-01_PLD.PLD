@@ -1,0 +1,41 @@
+Name       LB-Z80-01_PLD;
+Partno     ATF16V8B;
+Date       09/17/20;
+Revision   01;
+Designer   DOUG G;
+Company    LAND BOARDS LLC;
+Assembly   U00;
+Location   San PA;
+Device     G16V8;
+
+/*
+*/
+
+
+/* Control inputs */
+PIN    1   = CLK;
+PIN    2   = CPUA13;
+PIN    3   = CPUA14;
+PIN    4   = CPUA15;
+PIN    5   = !MREQ;
+PIN    6   = !IORQ;
+PIN    7   = !M1;
+PIN    8   = !CPURD;
+PIN    9   = !CPUWR;
+
+/* Counter data inputs */
+PIN    13  = !ROMCS;
+PIN    14  = !IOCS;
+PIN    16  = !MEMRD;
+PIN    15  = !RAMCS;
+PIN    18  = !WAIT;
+
+ROMCS = CPUA15 & CPUA14 & CPUA13 & MREQ & CPURD;
+
+RAMCS = !CPUA15 & MREQ;
+
+IOCS = CPUA15 & !CPUA14 & !CPUA13 & IORQ;
+
+WAIT = !MREQ # !IORQ;
+
+MEMRD = CPURD;

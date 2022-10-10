@@ -1,0 +1,547 @@
+EESchema Schematic File Version 5
+EELAYER 36 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "SWITCHX8"
+Date "Wednesday, May 03, 2017"
+Rev "X1"
+Comp "land-boards.com"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Connection ~ 2800 3350
+Connection ~ 2950 3100
+Connection ~ 2950 3650
+Connection ~ 3150 2900
+Connection ~ 3200 4700
+Connection ~ 3300 3000
+Connection ~ 3400 4700
+Connection ~ 3450 2250
+Connection ~ 3500 4700
+Connection ~ 3600 2250
+Connection ~ 3600 3400
+Connection ~ 3750 2250
+Connection ~ 3750 3300
+Connection ~ 3900 2250
+Connection ~ 3900 3200
+Connection ~ 4500 5050
+Connection ~ 4550 2250
+Connection ~ 6900 4100
+NoConn ~ 5100 3800
+Wire Wire Line
+	2050 3100 2050 3650
+Wire Wire Line
+	2050 3650 2950 3650
+Wire Wire Line
+	2150 3200 2150 3350
+Wire Wire Line
+	2150 3350 2800 3350
+Wire Wire Line
+	2200 2800 1800 2800
+Wire Wire Line
+	2200 2900 1800 2900
+Wire Wire Line
+	2200 3000 1800 3000
+Wire Wire Line
+	2200 3100 2050 3100
+Wire Wire Line
+	2200 3200 2150 3200
+Wire Wire Line
+	2700 2900 3150 2900
+Wire Wire Line
+	2700 3000 3300 3000
+Wire Wire Line
+	2700 3100 2950 3100
+Wire Wire Line
+	2700 3200 2800 3200
+Wire Wire Line
+	2800 3200 2800 3350
+Wire Wire Line
+	2800 3350 2800 3400
+Wire Wire Line
+	2950 3100 2950 3650
+Wire Wire Line
+	2950 3100 3250 3100
+Wire Wire Line
+	2950 3650 2950 4700
+Wire Wire Line
+	2950 4700 3200 4700
+Wire Wire Line
+	3100 2800 2700 2800
+Wire Wire Line
+	3150 2900 4000 2900
+Wire Wire Line
+	3150 3600 3150 2900
+Wire Wire Line
+	3150 3900 3150 4000
+Wire Wire Line
+	3150 4000 3200 4000
+Wire Wire Line
+	3200 4000 3200 4100
+Wire Wire Line
+	3200 4700 3200 4600
+Wire Wire Line
+	3200 4700 3300 4700
+Wire Wire Line
+	3250 2250 3450 2250
+Wire Wire Line
+	3250 3100 3250 2250
+Wire Wire Line
+	3300 3000 3300 3600
+Wire Wire Line
+	3300 3000 4000 3000
+Wire Wire Line
+	3300 3900 3300 4100
+Wire Wire Line
+	3300 4700 3300 4600
+Wire Wire Line
+	3400 3200 3900 3200
+Wire Wire Line
+	3400 4100 3400 3200
+Wire Wire Line
+	3400 4600 3400 4700
+Wire Wire Line
+	3400 4700 3400 5050
+Wire Wire Line
+	3400 4700 3500 4700
+Wire Wire Line
+	3400 5050 4500 5050
+Wire Wire Line
+	3450 2250 3600 2250
+Wire Wire Line
+	3450 2350 3450 2250
+Wire Wire Line
+	3450 2650 3450 3600
+Wire Wire Line
+	3450 3600 4000 3600
+Wire Wire Line
+	3500 3300 3750 3300
+Wire Wire Line
+	3500 4100 3500 3300
+Wire Wire Line
+	3500 4600 3500 4700
+Wire Wire Line
+	3500 4700 3600 4700
+Wire Wire Line
+	3600 2250 3600 2350
+Wire Wire Line
+	3600 2250 3750 2250
+Wire Wire Line
+	3600 2650 3600 3400
+Wire Wire Line
+	3600 3400 3600 4100
+Wire Wire Line
+	3600 3400 4000 3400
+Wire Wire Line
+	3600 4700 3600 4600
+Wire Wire Line
+	3750 2250 3900 2250
+Wire Wire Line
+	3750 2350 3750 2250
+Wire Wire Line
+	3750 2650 3750 3300
+Wire Wire Line
+	3750 3300 4000 3300
+Wire Wire Line
+	3900 2250 4550 2250
+Wire Wire Line
+	3900 2350 3900 2250
+Wire Wire Line
+	3900 2650 3900 3200
+Wire Wire Line
+	3900 3200 4000 3200
+Wire Wire Line
+	4500 5000 4500 5050
+Wire Wire Line
+	4500 5050 4500 5100
+Wire Wire Line
+	4550 2050 4550 2250
+Wire Wire Line
+	4550 2250 4550 2450
+Wire Wire Line
+	5100 2900 5600 2900
+Wire Wire Line
+	5100 3000 5600 3000
+Wire Wire Line
+	5100 3100 5600 3100
+Wire Wire Line
+	5100 3200 5600 3200
+Wire Wire Line
+	5100 3300 5600 3300
+Wire Wire Line
+	5100 3400 5600 3400
+Wire Wire Line
+	5100 3500 5600 3500
+Wire Wire Line
+	5100 3600 5600 3600
+Wire Wire Line
+	5100 4000 5600 4000
+Wire Wire Line
+	5100 4100 5600 4100
+Wire Wire Line
+	5100 4200 5600 4200
+Wire Wire Line
+	5100 4300 5600 4300
+Wire Wire Line
+	5100 4400 5600 4400
+Wire Wire Line
+	5100 4500 5600 4500
+Wire Wire Line
+	5100 4600 5600 4600
+Wire Wire Line
+	5100 4700 5600 4700
+Wire Wire Line
+	5600 2700 5100 2700
+Wire Wire Line
+	6500 3150 7000 3150
+Wire Wire Line
+	6500 3250 7000 3250
+Wire Wire Line
+	6500 3350 7000 3350
+Wire Wire Line
+	6500 3450 7000 3450
+Wire Wire Line
+	6500 3550 7000 3550
+Wire Wire Line
+	6500 3650 7000 3650
+Wire Wire Line
+	6500 3750 7000 3750
+Wire Wire Line
+	6500 3850 7000 3850
+Wire Wire Line
+	6850 3050 6850 2850
+Wire Wire Line
+	6900 3950 6900 4100
+Wire Wire Line
+	6900 3950 7000 3950
+Wire Wire Line
+	6900 4100 6900 4200
+Wire Wire Line
+	6900 4100 7600 4100
+Wire Wire Line
+	7000 3050 6850 3050
+Wire Wire Line
+	7500 3150 8000 3150
+Wire Wire Line
+	7500 3250 8000 3250
+Wire Wire Line
+	7500 3350 8000 3350
+Wire Wire Line
+	7500 3450 8000 3450
+Wire Wire Line
+	7500 3550 8000 3550
+Wire Wire Line
+	7500 3650 8000 3650
+Wire Wire Line
+	7500 3750 8000 3750
+Wire Wire Line
+	7500 3850 8000 3850
+Wire Wire Line
+	7600 3950 7500 3950
+Wire Wire Line
+	7600 4100 7600 3950
+Text Label 1950 2800 0    60   ~ 0
+INTS
+Text Label 1950 2900 0    60   ~ 0
+SCL
+Text Label 1950 3000 0    60   ~ 0
+SDA
+Text Label 2800 2800 0    60   ~ 0
+INTS
+Text Label 2800 2900 0    60   ~ 0
+SCL
+Text Label 2800 3000 0    60   ~ 0
+SDA
+Text Label 3800 3300 0    60   ~ 0
+A1
+Text Label 3800 3400 0    60   ~ 0
+A0
+Text Label 3800 3600 0    60   ~ 0
+RST
+Text Label 3900 3150 0    60   ~ 0
+A2
+Text Label 5250 2700 0    60   ~ 0
+INTS
+Text Label 5250 2900 0    60   ~ 0
+S0
+Text Label 5250 3000 0    60   ~ 0
+S1
+Text Label 5250 3100 0    60   ~ 0
+S2
+Text Label 5250 3200 0    60   ~ 0
+S3
+Text Label 5250 3300 0    60   ~ 0
+S4
+Text Label 5250 3400 0    60   ~ 0
+S5
+Text Label 5250 3500 0    60   ~ 0
+S6
+Text Label 5250 3600 0    60   ~ 0
+S7
+Text Label 5250 4000 0    60   ~ 0
+L0
+Text Label 5250 4100 0    60   ~ 0
+L1
+Text Label 5250 4200 0    60   ~ 0
+L2
+Text Label 5250 4300 0    60   ~ 0
+L3
+Text Label 5250 4400 0    60   ~ 0
+L4
+Text Label 5250 4500 0    60   ~ 0
+L5
+Text Label 5250 4600 0    60   ~ 0
+L6
+Text Label 5250 4700 0    60   ~ 0
+L7
+Text Label 6750 3150 0    60   ~ 0
+S0
+Text Label 6750 3250 0    60   ~ 0
+S1
+Text Label 6750 3350 0    60   ~ 0
+S2
+Text Label 6750 3450 0    60   ~ 0
+S3
+Text Label 6750 3550 0    60   ~ 0
+S4
+Text Label 6750 3650 0    60   ~ 0
+S5
+Text Label 6750 3750 0    60   ~ 0
+S6
+Text Label 6750 3850 0    60   ~ 0
+S7
+Text Label 7700 3150 0    60   ~ 0
+L0
+Text Label 7700 3250 0    60   ~ 0
+L1
+Text Label 7700 3350 0    60   ~ 0
+L2
+Text Label 7700 3450 0    60   ~ 0
+L3
+Text Label 7700 3550 0    60   ~ 0
+L4
+Text Label 7700 3650 0    60   ~ 0
+L5
+Text Label 7700 3750 0    60   ~ 0
+L6
+Text Label 7700 3850 0    60   ~ 0
+L7
+$Comp
+L SWLEDX8-I2C-rescue:VCC #PWR04
+U 1 1 5909ED12
+P 4550 2050
+F 0 "#PWR04" H 4550 1900 50  0001 C CNN
+F 1 "VCC" H 4550 2200 50  0000 C CNN
+F 2 "" H 4550 2050 60  0000 C CNN
+F 3 "" H 4550 2050 60  0000 C CNN
+	1    4550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:VCC #PWR01
+U 1 1 59092180
+P 6850 2850
+F 0 "#PWR01" H 6850 2700 50  0001 C CNN
+F 1 "VCC" H 6850 3000 50  0000 C CNN
+F 2 "" H 6850 2850 60  0000 C CNN
+F 3 "" H 6850 2850 60  0000 C CNN
+	1    6850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:MTG_HOLE MTG1
+U 1 1 590A3FE0
+P 4700 7250
+F 0 "MTG1" H 4700 7350 60  0000 C CNN
+F 1 "MTG_HOLE" H 4700 7150 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 4700 7100 30  0000 C CNN
+F 3 "" H 4700 7250 60  0000 C CNN
+	1    4700 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:MTG_HOLE MTG2
+U 1 1 590A3F10
+P 4700 7600
+F 0 "MTG2" H 4700 7700 60  0000 C CNN
+F 1 "MTG_HOLE" H 4700 7500 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 4700 7450 30  0000 C CNN
+F 3 "" H 4700 7600 60  0000 C CNN
+	1    4700 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:MTG_HOLE MTG?1
+U 1 1 590A3C67
+P 5550 7250
+F 0 "MTG?1" H 5550 7350 60  0000 C CNN
+F 1 "MTG_HOLE" H 5550 7150 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 5550 7100 30  0000 C CNN
+F 3 "" H 5550 7250 60  0000 C CNN
+	1    5550 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:MTG_HOLE MTG3
+U 1 1 590A3EAE
+P 5550 7600
+F 0 "MTG3" H 5550 7700 60  0000 C CNN
+F 1 "MTG_HOLE" H 5550 7500 60  0000 C CNN
+F 2 "LandBoards_MountHoles:MTG-4-40" H 5550 7450 30  0000 C CNN
+F 3 "" H 5550 7600 60  0000 C CNN
+	1    5550 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:GND #PWR05
+U 1 1 5909F36A
+P 2800 3400
+F 0 "#PWR05" H 2800 3150 50  0001 C CNN
+F 1 "GND" H 2800 3250 50  0000 C CNN
+F 2 "" H 2800 3400 60  0000 C CNN
+F 3 "" H 2800 3400 60  0000 C CNN
+	1    2800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:GND #PWR03
+U 1 1 5909EC9E
+P 4500 5100
+F 0 "#PWR03" H 4500 4850 50  0001 C CNN
+F 1 "GND" H 4500 4950 50  0000 C CNN
+F 2 "" H 4500 5100 60  0000 C CNN
+F 3 "" H 4500 5100 60  0000 C CNN
+	1    4500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:GND #PWR02
+U 1 1 59092E63
+P 6900 4200
+F 0 "#PWR02" H 6900 3950 50  0001 C CNN
+F 1 "GND" H 6900 4050 50  0000 C CNN
+F 2 "" H 6900 4200 60  0000 C CNN
+F 3 "" H 6900 4200 60  0000 C CNN
+	1    6900 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R5
+U 1 1 5909F89B
+P 3150 3750
+F 0 "R5" V 3230 3750 50  0000 C CNN
+F 1 "2.2K" V 3150 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3080 3750 30  0000 C CNN
+F 3 "" H 3150 3750 30  0000 C CNN
+	1    3150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R6
+U 1 1 5909F93B
+P 3300 3750
+F 0 "R6" V 3380 3750 50  0000 C CNN
+F 1 "2.2K" V 3300 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3230 3750 30  0000 C CNN
+F 3 "" H 3300 3750 30  0000 C CNN
+	1    3300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R1
+U 1 1 5909F633
+P 3450 2500
+F 0 "R1" V 3530 2500 50  0000 C CNN
+F 1 "10K" V 3450 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3380 2500 30  0000 C CNN
+F 3 "" H 3450 2500 30  0000 C CNN
+	1    3450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R2
+U 1 1 5909EF32
+P 3600 2500
+F 0 "R2" V 3680 2500 50  0000 C CNN
+F 1 "10K" V 3600 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3530 2500 30  0000 C CNN
+F 3 "" H 3600 2500 30  0000 C CNN
+	1    3600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R3
+U 1 1 5909EF0E
+P 3750 2500
+F 0 "R3" V 3830 2500 50  0000 C CNN
+F 1 "10K" V 3750 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3680 2500 30  0000 C CNN
+F 3 "" H 3750 2500 30  0000 C CNN
+	1    3750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:R R4
+U 1 1 5909EE47
+P 3900 2500
+F 0 "R4" V 3980 2500 50  0000 C CNN
+F 1 "10K" V 3900 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3830 2500 30  0000 C CNN
+F 3 "" H 3900 2500 30  0000 C CNN
+	1    3900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:CONN_02X05 P2
+U 1 1 591A13B1
+P 2450 3000
+F 0 "P2" H 2450 3300 50  0000 C CNN
+F 1 "CONN_02X05" H 2450 2700 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_2x05_Pitch2.54mm" H 2200 2600 30  0000 C CNN
+F 3 "" H 2450 1800 60  0000 C CNN
+	1    2450 3000
+	1    0    0    1   
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:CONN_02X05 P3
+U 1 1 5909F7B0
+P 3400 4350
+F 0 "P3" H 3400 4650 50  0000 C CNN
+F 1 "CONN_02X05" H 3400 4050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 3400 4750 25  0000 C CNN
+F 3 "" H 3400 3150 60  0000 C CNN
+	1    3400 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:CONN_02X10 P1
+U 1 1 5909495C
+P 7250 3500
+F 0 "P1" H 7250 4050 50  0000 C CNN
+F 1 "CONN_02X10" V 7250 3500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_2x10_Pitch2.54mm" H 7200 2950 30  0000 C CNN
+F 3 "" H 7250 2300 60  0000 C CNN
+	1    7250 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWLEDX8-I2C-rescue:MCP23017P U1
+U 1 1 5909E739
+P 4600 3550
+F 0 "U1" H 4750 4550 60  0000 C CNN
+F 1 "MCP23017P" H 4850 2200 60  0000 C CNN
+F 2 "Housings_DIP:DIP-28_W7.62mm_LongPads" H 4600 1650 30  0000 C CNN
+F 3 "" H 4600 3550 60  0000 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
