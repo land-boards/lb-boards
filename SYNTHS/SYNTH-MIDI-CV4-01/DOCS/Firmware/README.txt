@@ -1,0 +1,3 @@
+Fuse LOW:  0xFF
+Fuse HIGH: 0xDE
+Fuse EXT:  0x05

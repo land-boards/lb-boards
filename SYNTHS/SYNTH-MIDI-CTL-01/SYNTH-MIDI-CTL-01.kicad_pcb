@@ -650,6 +650,11 @@
       (net 29 "Net-(R2-Pad1)") (pinfunction "2") (pintype "passive") (tstamp bfbdabc9-6b94-4359-bf60-8277d39098e9))
     (pad "3" thru_hole oval locked (at 0 10.16) (size 1.651 2.54) (drill oval 0.762 1.778) (layers *.Cu *.Mask)
       (net 48 "GND") (pinfunction "3") (pintype "passive") (tstamp bb6fc6b9-f2c3-4c2b-813d-6dbdfd14a632))
+    (model "${KICAD6_3RD_PARTY}/POTS/Potentiometer.step"
+      (offset (xyz -6 -5 12))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 -90 0))
+    )
   )
 
   (footprint "LandBoards_MountHoles:MTG-6-32" (layer "F.Cu")
@@ -1632,8 +1637,8 @@
       (net 19 "Net-(J6-Pad5)") (pintype "passive") (tstamp cf5ee48a-155d-4501-bf80-7c179dbcf7be))
     (pad "6" thru_hole circle (at -5 7 90) (size 2.5 2.5) (drill 1.4) (layers *.Cu *.Mask) (tstamp b228096d-8ab7-4231-8e88-68bf103be70c))
     (pad "6" thru_hole circle (at 5 7 90) (size 2.5 2.5) (drill 1.4) (layers *.Cu *.Mask) (tstamp d8d060be-9169-4ace-a014-b5d558a2cf69))
-    (model "walter/conn_av/din-5.wrl"
-      (offset (xyz 0 0 0))
+    (model "${KICAD6_3RD_PARTY}/DIN-5_MIDI/Cube.wrl"
+      (offset (xyz -9.5 -11 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -1886,7 +1891,12 @@
       (net 52 "/DIG1") (pinfunction "Pin_15") (pintype "passive") (tstamp 9924ca11-147e-42df-a403-68d01752dd9b))
     (pad "16" thru_hole oval (at 2.54 17.78 90) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 52 "/DIG1") (pinfunction "Pin_16") (pintype "passive") (tstamp 69b45179-40c1-46ab-b5ee-8a0754c3a400))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x08_P2.54mm_Vertical.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x08_P2.54mm_Vertical.wrl" hide
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KICAD6_3DMODEL_DIR}/Connector_IDC.3dshapes/IDC-Header_2x08_P2.54mm_Vertical.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2498,8 +2508,8 @@
       (net 18 "Net-(D5-Pad2)") (pintype "passive") (tstamp 1d5d6693-eda1-423e-a563-7a2114f51108))
     (pad "6" thru_hole circle (at -5 7 90) (size 2.5 2.5) (drill 1.4) (layers *.Cu *.Mask) (tstamp 2dfebaa8-3a9a-4de6-82d3-224a8e68482a))
     (pad "6" thru_hole circle (at 5 7 90) (size 2.5 2.5) (drill 1.4) (layers *.Cu *.Mask) (tstamp ab57be61-3be2-49a1-b1a4-004ab8e0694b))
-    (model "walter/conn_av/din-5.wrl"
-      (offset (xyz 0 0 0))
+    (model "${KICAD6_3RD_PARTY}/DIN-5_MIDI/Cube.wrl"
+      (offset (xyz -9.5 -11 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -3109,7 +3119,7 @@
       (net 4 "/FREQ_POT") (pintype "passive") (tstamp fadc2bad-5d44-4cf8-84fc-f2543f888a32))
     (pad "2" thru_hole circle (at 2.5 0) (size 1.6 1.6) (drill 0.8) (layers *.Cu *.Mask)
       (net 48 "GND") (pintype "passive") (tstamp 4ffaa684-7b79-43c4-93da-e6676a4b9f14))
-    (model "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L4.0mm_W2.5mm_P2.50mm.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Disc_D5.0mm_W2.5mm_P2.50mm.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3242,7 +3252,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp 847e8d9f-68b8-458e-a56b-095489c111da)
     (pts (xy 168.402 72.898) (xy 168.402 62.992))
     (height -3.556)
-    (gr_text "390.0000 mils" (at 163.696 67.945 90) (layer "Dwgs.User") (tstamp 847e8d9f-68b8-458e-a56b-095489c111da)
+    (gr_text "9.9060 mm" (at 163.696 67.945 90) (layer "Dwgs.User") (tstamp 847e8d9f-68b8-458e-a56b-095489c111da)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (units 3) (units_format 1) (precision 4))
@@ -3260,7 +3270,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp a6e79250-4ea1-4a1f-b168-c1d347acb43a)
     (pts (xy 158.242 60.452) (xy 158.242 75.438))
     (height -3.81)
-    (gr_text "590.0000 mils" (at 160.902 67.945 90) (layer "Dwgs.User") (tstamp a6e79250-4ea1-4a1f-b168-c1d347acb43a)
+    (gr_text "14.9860 mm" (at 160.902 67.945 90) (layer "Dwgs.User") (tstamp a6e79250-4ea1-4a1f-b168-c1d347acb43a)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (units 3) (units_format 1) (precision 4))
@@ -3287,7 +3297,7 @@
   (dimension (type aligned) (layer "Dwgs.User") (tstamp e7a006ce-0f82-4892-91e0-922dbe7a9a24)
     (pts (xy 158.242 68.072) (xy 168.402 68.072))
     (height -1.27)
-    (gr_text "400.0000 mils" (at 163.322 65.652) (layer "Dwgs.User") (tstamp e7a006ce-0f82-4892-91e0-922dbe7a9a24)
+    (gr_text "10.1600 mm" (at 163.322 65.652) (layer "Dwgs.User") (tstamp e7a006ce-0f82-4892-91e0-922dbe7a9a24)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (units 3) (units_format 1) (precision 4))

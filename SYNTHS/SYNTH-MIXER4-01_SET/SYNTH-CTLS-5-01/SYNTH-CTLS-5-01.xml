@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\SYNTH-MIXER5-01_SET\SYNTH-MIXER5-01\SYNTH-MIXER5-01.kicad_sch</source>
+    <date>10/4/2022 6:29:15 PM</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>SYNTH-MIXER5-01</title>
+        <company/>
+        <rev>1</rev>
+        <date>2022-10-04</date>
+        <source>SYNTH-MIXER5-01.kicad_sch</source>
+        <comment number="1" value="5 CHANNEL MIXER"/>
+        <comment number="2" value="https://note.com/solder_state/n/nffc1a33053be"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/TDK/FG18X7R1H473KNT06?qs=qf2ddTMq67Ua7q%2FdN4IhqA%3D%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e1f7230b-2ee8-44b1-aae4-354a46fb7188</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/TDK/FG18X7R1H473KNT06?qs=qf2ddTMq67Ua7q%2FdN4IhqA%3D%3D</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a58eb33c-bcd1-45ff-9e8e-71e125512a50</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92e454ae-6d47-4409-b3f8-488c9d208041</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>728eabb8-b2e6-43df-8d59-a025eb5603ca</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>34562de3-7ab5-4415-8360-8747fce5a304</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b19f7f03-3327-45b6-934d-2a8f0275bd58</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38c692ed-1db1-40de-8e67-963a6663a183</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c793b2d2-1b1e-47a9-a6df-d08a3c569086</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5a185a6-abfc-44fe-9f6b-a2856eb583fb</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>PJ-301BM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ301BM_Vertical</footprint>
+      <datasheet>https://www.taydaelectronics.com/pj-301bm-3-5-mm-mono-phone-jack.html</datasheet>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c470d15c-e936-4d41-a2f6-410d1adfd06b</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Conn_02x05</value>
+      <footprint>Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical</footprint>
+      <datasheet>https://store.synthrotek.com/10-Pin_Keyed_Shrouded_Eurorack_Power_Header</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x05_Odd_Even" description="Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d864eed5-b272-47d5-9144-cca015f2b36c</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>47df3bd9-03c5-4ca9-9d87-0d0dda554226</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b0a1d5e1-141a-479b-85a7-d81fadae1c0f</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b907552-26a7-42d8-8131-7896b150ec13</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75b32954-487f-4efb-a79f-3521551af2bc</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11817391-1526-4200-bdc8-edbe5952f7ee</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>100K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0947b6e-1cb4-4bb7-ba4d-22ee7c938be1</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>22K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>687b8207-4406-41dc-a607-390b9199b83c</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>4.7K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de5d1a8f-122c-4855-8a1e-8e0d6d99f7a8</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d23855c-4b93-4837-9b3b-c68997cd9de4</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d01102e9-b170-4eb1-a0a4-9a31feb850b7</tstamps>
+    </comp>
+    <comp ref="RV2">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9e6388e-4713-4e10-9afb-872c5bde531c</tstamps>
+    </comp>
+    <comp ref="RV3">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72ba5379-3b80-4878-986f-07fdd8f44b9f</tstamps>
+    </comp>
+    <comp ref="RV4">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a92cda2f-5261-4d07-813b-8b41f57e72f1</tstamps>
+    </comp>
+    <comp ref="RV5">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>580f0279-4851-4f02-891d-2077d20709ec</tstamps>
+    </comp>
+    <comp ref="RV6">
+      <value>10K</value>
+      <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
+      <libsource lib="LandBoards" part="POT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f552861-959c-49ad-b0a7-9d6762a9bae6</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>TL072</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://store.synthrotek.com/TL072P-Op-Amp_p_418.html</datasheet>
+      <libsource lib="Amplifier_Operational" part="TL072" description="Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d9df6135-439d-48d2-96bd-9ad112ffd471 b6fdb1e8-561d-403d-b95b-2e033e684fb0 48d72d0e-0fe4-426a-85c1-3c3ab2b66d46</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Amplifier_Operational" part="TL072">
+      <description>Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/tl071.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TL072</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/tl071.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="AudioJack2_SwitchT">
+      <description>Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">AudioJack2_SwitchT</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="S" name="" type="passive"/>
+        <pin num="T" name="" type="passive"/>
+        <pin num="TN" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x05_Odd_Even">
+      <description>Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x05_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LandBoards" part="POT">
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Amplifier_Operational">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Amplifier_Operational.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LandBoards">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+12V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J8" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J8" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="V+" pintype="power_in"/>
+    </net>
+    <net code="2" name="-12V">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="V-" pintype="power_in"/>
+    </net>
+    <net code="3" name="/OUT">
+      <node ref="J1" pin="T" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="/POTWIPER_1">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="RV2" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="5" name="/POTWIPER_2">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="RV3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/POTWIPER_3">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="RV4" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/POTWIPER_4">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="RV5" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/POTWIPER_5">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="RV6" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="9" name="/VI_1">
+      <node ref="J2" pin="T" pintype="passive"/>
+      <node ref="RV2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/VI_2">
+      <node ref="J3" pin="T" pintype="passive"/>
+      <node ref="RV3" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="11" name="/VI_3">
+      <node ref="J4" pin="T" pintype="passive"/>
+      <node ref="RV4" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/VI_4">
+      <node ref="J5" pin="T" pintype="passive"/>
+      <node ref="RV5" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/VI_5">
+      <node ref="J6" pin="T" pintype="passive"/>
+      <node ref="RV6" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/VO">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pintype="output"/>
+    </net>
+    <net code="15" name="/VOL1">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/VOL2">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="17" name="/VSUM">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J1" pin="S" pintype="passive"/>
+      <node ref="J2" pin="S" pintype="passive"/>
+      <node ref="J2" pin="TN" pintype="passive"/>
+      <node ref="J3" pin="S" pintype="passive"/>
+      <node ref="J3" pin="TN" pintype="passive"/>
+      <node ref="J4" pin="S" pintype="passive"/>
+      <node ref="J4" pin="TN" pintype="passive"/>
+      <node ref="J5" pin="S" pintype="passive"/>
+      <node ref="J5" pin="TN" pintype="passive"/>
+      <node ref="J6" pin="S" pintype="passive"/>
+      <node ref="J6" pin="TN" pintype="passive"/>
+      <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J8" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J8" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J8" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J8" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV5" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV6" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="+" pintype="input"/>
+      <node ref="U1" pin="5" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pintype="output"/>
+    </net>
+    <net code="20" name="unconnected-(J1-PadTN)">
+      <node ref="J1" pin="TN" pintype="passive"/>
+    </net>
+  </nets>
+</export>
