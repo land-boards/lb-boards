@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,(6.0.1)*%
-%TF.CreationDate,2022-10-12T18:45:10-04:00*%
+%TF.CreationDate,2022-10-17T10:49:28-04:00*%
 %TF.ProjectId,MOD-XIAO-RP2040-CPU,4d4f442d-5849-4414-9f2d-525032303430,rev?*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Soldermask,Top*%
 %TF.FilePolarity,Negative*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (6.0.1)) date 2022-10-12 18:45:10*
+G04 Created by KiCad (PCBNEW (6.0.1)) date 2022-10-17 10:49:28*
 %MOMM*%
 %LPD*%
 G01*

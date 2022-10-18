@@ -2156,7 +2156,7 @@
     (property "Value" "10nF" (id 1) (at 138.811 171.45 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (id 2) (at 121.92 185.42 0)
+    (property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" (id 2) (at 121.92 186.69 0)
       (effects (font (size 0.762 0.762)) (justify left))
     )
     (property "Datasheet" "https://www.mouser.com/ProductDetail/594-K103K10X7RF53L2" (id 3) (at 135.89 171.45 0)
@@ -3436,7 +3436,7 @@
     (uuid df42436b-ed24-42f0-995f-306f770e3594)
     (property "Reference" "J1" (id 0) (at 278.13 187.96 0))
     (property "Value" "HEADER, 2X8" (id 1) (at 279.4 210.82 0))
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" (id 2) (at 279.4 226.06 0)
+    (property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" (id 2) (at 279.4 226.06 0)
       (effects (font (size 0.762 0.762) bold))
     )
     (property "Datasheet" "https://store.synthrotek.com/16-Pin_Keyed_Shrouded_Eurorack_Power_Header" (id 3) (at 279.4 200.66 0)
@@ -3830,7 +3830,7 @@
       (reference "H1") (unit 1) (value "JUMPER_2") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
     (path "/df42436b-ed24-42f0-995f-306f770e3594"
-      (reference "J1") (unit 1) (value "HEADER, 2X8") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical")
+      (reference "J1") (unit 1) (value "HEADER, 2X8") (footprint "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical")
     )
     (path "/44d50881-053e-4315-b996-8ab226db9126"
       (reference "J2") (unit 1) (value "AudioJack3") (footprint "LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal")
