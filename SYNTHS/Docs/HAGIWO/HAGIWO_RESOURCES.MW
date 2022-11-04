@@ -6,7 +6,7 @@
 ! PBS
 ! ROT
 ! DIN5
-! CPU
+! PROCESSING
 ! LINK
 |-
 | MIDI-IN-OUT
@@ -49,9 +49,79 @@
 | XAIO RP2040
 | 
 |-
-| SYNTH-MIXER6-01
-| 7
-| 7
+| ER-ADSR
+| 4
+| 2
+| 0
+| 0
+| 0
+| 0
+| 555
+| 
+|-
+| ER5-MIDI-THRU MIDID THRU 4 OUTS
+| 5
+| 0
+| 0
+| 0
+| 0
+| 1
+| NONE
+| 
+|-
+| ER-MIXER5-01 5 CHANNEL MIXER
+| 6
+| 6
+| 0
+| 0
+| 0
+| 0
+| NONE
+| 
+|-
+| ER-PROTO-01 EURORACK BUILD PLATFORM
+| 6
+| 4
+| 0
+| 0
+| 0
+| 0
+| NONE
+| 
+|-
+| ER-PROTO-02 EURORACK BUILD PLATFORM
+| 6
+| 6
+| 0
+| 0
+| 0
+| 0
+| NONE
+| 
+|-
+| ER-MOZZI-DB
+| 6
+| 6
+| 0
+| 0
+| 0
+| 0
+| NANO
+| 
+|-
+| ER-VCA-01 VOLTAGE CONTR’D AMP
+| 6
+| 2
+| 0
+| 0
+| 0
+| 0
+| NONE
+| LM72000 BASED
+|-
+| ER-VCF-01 VOLTAGE CONTR’D FILTER
+| 6
+| 4
 | 0
 | 0
 | 0
@@ -69,7 +139,7 @@
 | XAIO RP2040
 | https://note.com/solder_state/n/nca6a1dec3921
 |-
-| SYNTH-VCO-03
+| ER-VCO-03 VOLTAGE CONTR’D OSCILLATOR
 | 4
 | 2
 | 2
@@ -78,6 +148,46 @@
 | 0
 | XAIO RP2040
 | https://note.com/solder_state/n/nca6a1dec3921
+|-
+| ER-PANEL-6HP
+| 0
+| 0
+| 0
+| 0
+| 0
+| 0
+| DIY PANEL
+| 
+|-
+| No. 59 CV Adder
+| 12
+| 0
+| 0
+| 0
+| 0
+| 0
+| NONE
+| https://note.com/solder_state/n/nd040f097cbc2
+|-
+| No. 58 Bezier CV
+| 2
+| 4
+| 0
+| 0
+| 0
+| 0
+| NANO
+| https://note.com/solder_state/n/n39aacefd73a3
+|-
+| No. 57 Strain CV
+| 
+| 
+| 
+| 
+| 
+| 
+| 
+| https://note.com/solder_state/n/n79cdb2c458a9
 |-
 | No.56 Sample Drum
 | 3

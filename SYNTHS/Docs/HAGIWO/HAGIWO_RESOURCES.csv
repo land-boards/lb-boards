@@ -1,11 +1,22 @@
-FUNCTION,3.5MM,POTS,TOGG,PBS,ROT,DIN5,CPU,LINK
+FUNCTION,3.5MM,POTS,TOGG,PBS,ROT,DIN5,PROCESSING,LINK
 MIDI-IN-OUT,0,0,0,0,0,2,NONE,
 SCF-2,2,0,0,0,0,0,NONE,
 SYNTH-MIDI-CTL-01,4,0,0,0,0,2,XAIO RP2040,
 SYNTH-MIDI-CV4-01,4,0,0,0,0,2,XAIO RP2040,
-SYNTH-MIXER6-01,7,7,0,0,0,0,NONE,
+ER-ADSR,4,2,0,0,0,0,555,
+ER5-MIDI-THRU MIDID THRU 4 OUTS,5,0,0,0,0,1,NONE,
+ER-MIXER5-01 5 CHANNEL MIXER,6,6,0,0,0,0,NONE,
+ER-PROTO-01 EURORACK BUILD PLATFORM,6,4,0,0,0,0,NONE,
+ER-PROTO-02 EURORACK BUILD PLATFORM,6,6,0,0,0,0,NONE,
+ER-MOZZI-DB,6,6,0,0,0,0,NANO,
+ER-VCA-01 VOLTAGE CONTR’D AMP,6,2,0,0,0,0,NONE,LM72000 BASED
+ER-VCF-01 VOLTAGE CONTR’D FILTER,6,4,0,0,0,0,NONE,
 SYNTH-VCO-01,4,2,2,1,0,0,XAIO RP2040,https://note.com/solder_state/n/nca6a1dec3921
-SYNTH-VCO-03,4,2,2,1,0,0,XAIO RP2040,https://note.com/solder_state/n/nca6a1dec3921
+ER-VCO-03 VOLTAGE CONTR’D OSCILLATOR,4,2,2,1,0,0,XAIO RP2040,https://note.com/solder_state/n/nca6a1dec3921
+ER-PANEL-6HP,0,0,0,0,0,0,DIY PANEL,
+No. 59 CV Adder,12,0,0,0,0,0,NONE,https://note.com/solder_state/n/nd040f097cbc2
+No. 58 Bezier CV,2,4,0,0,0,0,NANO,https://note.com/solder_state/n/n39aacefd73a3
+No. 57 Strain CV,,,,,,,,https://note.com/solder_state/n/n79cdb2c458a9
 No.56 Sample Drum,3,1,1,0,0,0,ESP32C3,https://note.com/solder_state/n/n950ed088c3cb
 No.55 V2164 Dual VCA,6,6,0,0,0,0,NONE,https://note.com/solder_state/n/nd82c027d0597
 No.54 PT2399 clock sync delay,4,3,1,0,0,0,NANO,https://note.com/solder_state/n/nf6dc0a61e26d

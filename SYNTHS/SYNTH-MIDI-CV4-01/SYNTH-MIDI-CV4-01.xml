@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\Audio Cards\SYNTH-MIDI-CV4-01\SYNTH-MIDI-CV4-01.kicad_sch</source>
-    <date>9/23/2022 11:32:49 AM</date>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\SYNTH-MIDI-CV4-01\SYNTH-MIDI-CV4-01.kicad_sch</source>
+    <date>11/2/2022 3:08:37 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -27,7 +27,6 @@
     <comp ref="C1">
       <value>10uF</value>
       <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -37,7 +36,6 @@
     <comp ref="C2">
       <value>10uF</value>
       <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -47,12 +45,47 @@
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P</datasheet>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>197b772e-15b4-489f-8571-b11e788d585f</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82df91bd-b1f7-4cb5-a4b8-f014077ed225</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b344dd7-44e4-417f-8dd5-bae719936934</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4497858e-0b02-45fb-9ef6-8285d34c751e</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ced9c057-ce14-4720-9155-5725ea0236ff</tstamps>
     </comp>
     <comp ref="D1">
       <value>BAT41</value>
@@ -136,7 +169,7 @@
       <tstamps>4ff29bb7-c21d-45b9-bf24-3ef8119477de</tstamps>
     </comp>
     <comp ref="H1">
-      <value>Conn_01x02</value>
+      <value>HEADER, 1X2</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
@@ -145,8 +178,8 @@
       <tstamps>54668a8d-6869-4185-80a1-6fb82701f4fe</tstamps>
     </comp>
     <comp ref="J1">
-      <value>Conn_02x08_Odd_Even</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical</footprint>
+      <value>HEADER, IDC, 2X8</value>
+      <footprint>Connector_IDC:IDC-Header_2x08_P2.54mm_Latch_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_02x08_Odd_Even" description="Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -154,7 +187,7 @@
       <tstamps>df42436b-ed24-42f0-995f-306f770e3594</tstamps>
     </comp>
     <comp ref="J2">
-      <value>AudioJack3</value>
+      <value>SJ1-3523N</value>
       <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/490-SJ1-3523N</datasheet>
       <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
@@ -164,7 +197,7 @@
       <tstamps>7db52073-1d8e-4401-b3bf-ffbeb19b1e37</tstamps>
     </comp>
     <comp ref="J3">
-      <value>AudioJack3</value>
+      <value>SJ1-3523N</value>
       <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/490-SJ1-3523N</datasheet>
       <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
@@ -184,7 +217,7 @@
       <tstamps>2d406012-41cd-469c-8a5e-4302ac053035</tstamps>
     </comp>
     <comp ref="J5">
-      <value>AudioJack3</value>
+      <value>SJ1-3523N</value>
       <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/490-SJ1-3523N</datasheet>
       <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
@@ -204,7 +237,7 @@
       <tstamps>707798fe-861c-4fe0-8741-efc03fdd7e8b</tstamps>
     </comp>
     <comp ref="J7">
-      <value>AudioJack3</value>
+      <value>SJ1-3523N</value>
       <footprint>LandBoards_Conns:Jack_3.5mm_CUI_SJ1-3523N_Horizontal</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/490-SJ1-3523N</datasheet>
       <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
@@ -214,7 +247,7 @@
       <tstamps>44d50881-053e-4315-b996-8ab226db9126</tstamps>
     </comp>
     <comp ref="J8">
-      <value>Conn_01x04</value>
+      <value>HEADER, 1X4</value>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -288,7 +321,6 @@
     <comp ref="R1">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -298,7 +330,6 @@
     <comp ref="R2">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -308,7 +339,6 @@
     <comp ref="R3">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -318,7 +348,6 @@
     <comp ref="R4">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -326,9 +355,8 @@
       <tstamps>8198acd5-8474-45da-a788-7a28a3ead094</tstamps>
     </comp>
     <comp ref="R5">
-      <value>5.6K</value>
+      <value>3.9K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -336,9 +364,8 @@
       <tstamps>69851e8f-36d7-47af-9904-6c55ee856ae3</tstamps>
     </comp>
     <comp ref="R6">
-      <value>2.7K</value>
+      <value>5.6K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -346,9 +373,8 @@
       <tstamps>05e72dc4-f75e-4512-b151-bc15a0309568</tstamps>
     </comp>
     <comp ref="R7">
-      <value>2.7K</value>
+      <value>5.6K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -356,9 +382,8 @@
       <tstamps>510ab5ee-db1e-4013-af9a-6ed702aca126</tstamps>
     </comp>
     <comp ref="R8">
-      <value>5.6K</value>
+      <value>3.9K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -366,9 +391,8 @@
       <tstamps>820f5752-29c5-47c0-8a13-7765e68aee81</tstamps>
     </comp>
     <comp ref="R9">
-      <value>5.6K</value>
+      <value>3.9K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -376,9 +400,8 @@
       <tstamps>5b63f4a7-18d0-4c5c-ab7b-d4c5a6335e76</tstamps>
     </comp>
     <comp ref="R10">
-      <value>2.7K</value>
+      <value>5.6K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -386,9 +409,8 @@
       <tstamps>b6695223-8dbd-4362-a9ac-b4377991a12a</tstamps>
     </comp>
     <comp ref="R11">
-      <value>2.7K</value>
+      <value>5.6K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -396,9 +418,8 @@
       <tstamps>02ea1e56-08e5-49c0-995f-bb7f74589744</tstamps>
     </comp>
     <comp ref="R12">
-      <value>5.6K</value>
+      <value>3.9K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -408,7 +429,6 @@
     <comp ref="R13">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -416,9 +436,8 @@
       <tstamps>155719dc-c62f-430a-8f5d-0237542a6d05</tstamps>
     </comp>
     <comp ref="R14">
-      <value>1K</value>
+      <value>4.7K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -428,7 +447,6 @@
     <comp ref="R15">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -438,7 +456,6 @@
     <comp ref="R16">
       <value>220</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -448,7 +465,6 @@
     <comp ref="R17">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -494,9 +510,9 @@
       <tstamps>0ccd7e79-6c84-4a03-b47c-6d9d28cf07ba</tstamps>
     </comp>
     <comp ref="U5">
-      <value>4N26</value>
+      <value>CNY17-4</value>
       <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
-      <datasheet>https://www.vishay.com/docs/83725/4n25.pdf</datasheet>
+      <datasheet>https://www.mouser.com/ProductDetail/Vishay-Semiconductors/CNY17-4X006?qs=%2Fjqivxn91ccVZaHNJrlaNA%3D%3D</datasheet>
       <libsource lib="Isolator" part="4N26" description="DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 1500V, DIP6"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
@@ -504,24 +520,23 @@
       <tstamps>4c2936eb-fe81-4eb4-a3ba-02012bbb0226</tstamps>
     </comp>
     <comp ref="U6">
-      <value>MCP6004</value>
+      <value>MCP6234</value>
       <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
-      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf</datasheet>
       <libsource lib="Amplifier_Operational" part="MCP6004" description="1MHz, Low-Power Op Amp, DIP-14/SOIC-14/TSSOP-14"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b0299914-5178-40c4-9716-29d440fcbc3d a104f8b7-5461-444e-b965-b1e6732ac99f 4bdf9273-f70d-4ee3-a52b-4a4d159d5e4d 3127db8b-82dc-4432-9fe5-52ae0f138e32 2dc8128f-408c-4d56-91b5-3b4d4c6dd33f</tstamps>
+      <tstamps>a104f8b7-5461-444e-b965-b1e6732ac99f 4bdf9273-f70d-4ee3-a52b-4a4d159d5e4d b0299914-5178-40c4-9716-29d440fcbc3d 3127db8b-82dc-4432-9fe5-52ae0f138e32 2dc8128f-408c-4d56-91b5-3b4d4c6dd33f</tstamps>
     </comp>
     <comp ref="U7">
-      <value>74HC04</value>
+      <value>74HC14</value>
       <footprint>Package_DIP:DIP-14_W7.62mm</footprint>
-      <datasheet>https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf</datasheet>
+      <datasheet>https://www.mouser.com/ProductDetail/595-SN74HC14AN</datasheet>
       <libsource lib="74xx" part="74HC04" description="Hex Inverter"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="SYNTH-MIDI-CV4-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>927a3a12-f9ce-4d5d-b801-f9bcaa391332 b13de145-b468-4c8e-b34d-b623d0eced24 7e3d001e-805d-4906-9000-1806f429ec75 9874a902-57e5-41f8-9536-4578f5275272 bf0c4796-8258-42e2-8c97-3f23211ae107 be9a3c2b-6d3b-41e4-b75b-901b5870048c 0656db00-84c0-4ce9-af8a-62cd26eec355</tstamps>
+      <tstamps>be9a3c2b-6d3b-41e4-b75b-901b5870048c b13de145-b468-4c8e-b34d-b623d0eced24 927a3a12-f9ce-4d5d-b801-f9bcaa391332 9874a902-57e5-41f8-9536-4578f5275272 7e3d001e-805d-4906-9000-1806f429ec75 bf0c4796-8258-42e2-8c97-3f23211ae107 0656db00-84c0-4ce9-af8a-62cd26eec355</tstamps>
     </comp>
   </components>
   <libparts>
@@ -711,6 +726,22 @@
         <pin num="16" name="Pin_16" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="C_Polarized">
       <description>Polarized capacitor</description>
       <docs>~</docs>
@@ -886,11 +917,19 @@
   <nets>
     <net code="1" name="+3V3">
       <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
       <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R14" pin="2" pintype="passive"/>
       <node ref="U2" pin="12" pinfunction="3.3V" pintype="power_out"/>
       <node ref="U3" pin="1" pinfunction="Vdd" pintype="power_in"/>
       <node ref="U4" pin="1" pinfunction="Vdd" pintype="power_in"/>
+      <node ref="U7" pin="1" pintype="input"/>
+      <node ref="U7" pin="14" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U7" pin="3" pintype="input"/>
+      <node ref="U7" pin="9" pintype="input"/>
     </net>
     <net code="2" name="+5V">
       <node ref="C3" pin="1" pintype="passive"/>
@@ -904,103 +943,122 @@
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="U2" pin="14" pinfunction="5V" pintype="power_in"/>
       <node ref="U6" pin="4" pinfunction="V+" pintype="power_in"/>
-      <node ref="U7" pin="1" pintype="input"/>
-      <node ref="U7" pin="14" pinfunction="VCC" pintype="power_in"/>
-      <node ref="U7" pin="3" pintype="input"/>
-      <node ref="U7" pin="9" pintype="input"/>
     </net>
     <net code="3" name="+12V">
       <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="VIN" pintype="power_in"/>
     </net>
-    <net code="4" name="/CS*">
+    <net code="4" name="/AOUT1">
+      <node ref="U4" pin="8" pinfunction="VA" pintype="output"/>
+      <node ref="U6" pin="12" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="5" name="/AOUT2">
+      <node ref="U4" pin="6" pinfunction="VB" pintype="output"/>
+      <node ref="U6" pin="3" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="6" name="/AOUT3">
+      <node ref="U3" pin="8" pinfunction="VA" pintype="output"/>
+      <node ref="U6" pin="5" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="7" name="/AOUT4">
+      <node ref="U3" pin="6" pinfunction="VB" pintype="output"/>
+      <node ref="U6" pin="10" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="8" name="/CS12*">
       <node ref="U2" pin="2" pinfunction="D1/P27" pintype="bidirectional"/>
-      <node ref="U3" pin="2" pinfunction="~{CS}" pintype="input"/>
       <node ref="U4" pin="2" pinfunction="~{CS}" pintype="input"/>
     </net>
-    <net code="5" name="/CV1">
+    <net code="9" name="/CS34*">
+      <node ref="U2" pin="4" pinfunction="D3/P29" pintype="bidirectional"/>
+      <node ref="U3" pin="2" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="10" name="/CV1">
       <node ref="J7" pin="T" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="6" name="/CV1_I">
+    <net code="11" name="/CV1_I">
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="U6" pin="14" pintype="output"/>
     </net>
-    <net code="7" name="/CV2">
+    <net code="12" name="/CV2">
       <node ref="J5" pin="T" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
-    <net code="8" name="/CV2_I">
+    <net code="13" name="/CV2_I">
       <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="U6" pin="1" pintype="output"/>
     </net>
-    <net code="9" name="/CV3">
+    <net code="14" name="/CV3">
       <node ref="J2" pin="T" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="10" name="/CV3_I">
+    <net code="15" name="/CV3_I">
       <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="U6" pin="7" pintype="output"/>
     </net>
-    <net code="11" name="/CV4">
+    <net code="16" name="/CV4">
       <node ref="J3" pin="T" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
     </net>
-    <net code="12" name="/CV4_I">
+    <net code="17" name="/CV4_I">
       <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="U6" pin="8" pintype="output"/>
     </net>
-    <net code="13" name="/CV_OUT">
+    <net code="18" name="/CV_OUT">
       <node ref="J1" pin="13" pinfunction="Pin_13" pintype="passive"/>
       <node ref="J1" pin="14" pinfunction="Pin_14" pintype="passive"/>
     </net>
-    <net code="14" name="/GATE_OUT">
+    <net code="19" name="/GATE_OUT">
       <node ref="J1" pin="15" pinfunction="Pin_15" pintype="passive"/>
       <node ref="J1" pin="16" pinfunction="Pin_16" pintype="passive"/>
     </net>
-    <net code="15" name="/LD12*">
+    <net code="20" name="/LD12*">
       <node ref="U2" pin="3" pinfunction="D2/P28" pintype="bidirectional"/>
       <node ref="U4" pin="5" pinfunction="~{LDAC}" pintype="input"/>
     </net>
-    <net code="16" name="/LD34*">
+    <net code="21" name="/LD34*">
       <node ref="U2" pin="1" pinfunction="D0/P26" pintype="bidirectional"/>
       <node ref="U3" pin="5" pinfunction="~{LDAC}" pintype="input"/>
     </net>
-    <net code="17" name="/MIDI_IN">
+    <net code="22" name="/MIDI_IN">
       <node ref="J4" pin="4" pintype="passive"/>
       <node ref="R13" pin="1" pintype="passive"/>
     </net>
-    <net code="18" name="/MOSI">
+    <net code="23" name="/MOSI">
       <node ref="U2" pin="11" pinfunction="D10/MOSI/P3" pintype="bidirectional"/>
       <node ref="U3" pin="4" pinfunction="SDI" pintype="input"/>
       <node ref="U4" pin="4" pinfunction="SDI" pintype="input"/>
     </net>
-    <net code="19" name="/RXD">
+    <net code="24" name="/RXD">
       <node ref="U2" pin="8" pinfunction="D7/RX/P1" pintype="bidirectional"/>
       <node ref="U7" pin="10" pintype="output"/>
     </net>
-    <net code="20" name="/SCK">
+    <net code="25" name="/SCK">
       <node ref="U2" pin="9" pinfunction="D8/SCK/P2" pintype="bidirectional"/>
       <node ref="U3" pin="3" pinfunction="SCK" pintype="input"/>
       <node ref="U4" pin="3" pinfunction="SCK" pintype="input"/>
     </net>
-    <net code="21" name="GND">
+    <net code="26" name="GND">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
@@ -1030,134 +1088,115 @@
       <node ref="U6" pin="11" pinfunction="V-" pintype="power_in"/>
       <node ref="U7" pin="7" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="22" name="Net-(C1-Pad1)">
+    <net code="27" name="Net-(C1-Pad1)">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="H1" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="VO" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="VO" pintype="power_out"/>
     </net>
-    <net code="23" name="Net-(D9-Pad1)">
+    <net code="28" name="Net-(D9-Pad1)">
       <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="U5" pin="1" pintype="passive"/>
     </net>
-    <net code="24" name="Net-(D9-Pad2)">
+    <net code="29" name="Net-(D9-Pad2)">
       <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J4" pin="5" pintype="passive"/>
       <node ref="U5" pin="2" pintype="passive"/>
     </net>
-    <net code="25" name="Net-(J6-Pad4)">
+    <net code="30" name="Net-(J6-Pad4)">
       <node ref="J6" pin="4" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
     </net>
-    <net code="26" name="Net-(J6-Pad5)">
+    <net code="31" name="Net-(J6-Pad5)">
       <node ref="J6" pin="5" pintype="passive"/>
       <node ref="R16" pin="2" pintype="passive"/>
     </net>
-    <net code="27" name="Net-(J8-Pad3)">
+    <net code="32" name="Net-(J8-Pad3)">
       <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="D4/SDA/P6" pintype="bidirectional"/>
     </net>
-    <net code="28" name="Net-(J8-Pad4)">
+    <net code="33" name="Net-(J8-Pad4)">
       <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U2" pin="6" pinfunction="D5/SCL/P7" pintype="bidirectional"/>
     </net>
-    <net code="29" name="Net-(Q1-Pad2)">
+    <net code="34" name="Net-(Q1-Pad2)">
       <node ref="Q1" pin="2" pinfunction="B" pintype="passive"/>
       <node ref="R17" pin="1" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(Q1-Pad3)">
+    <net code="35" name="Net-(Q1-Pad3)">
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
       <node ref="R16" pin="1" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(R5-Pad2)">
+    <net code="36" name="Net-(R5-Pad2)">
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U6" pin="2" pinfunction="-" pintype="input"/>
     </net>
-    <net code="32" name="Net-(R7-Pad1)">
+    <net code="37" name="Net-(R7-Pad1)">
       <node ref="R7" pin="1" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="U6" pin="13" pinfunction="-" pintype="input"/>
     </net>
-    <net code="33" name="Net-(R10-Pad1)">
+    <net code="38" name="Net-(R10-Pad1)">
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
       <node ref="U6" pin="6" pinfunction="-" pintype="input"/>
     </net>
-    <net code="34" name="Net-(R11-Pad1)">
+    <net code="39" name="Net-(R11-Pad1)">
       <node ref="R11" pin="1" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="U6" pin="9" pinfunction="-" pintype="input"/>
     </net>
-    <net code="35" name="Net-(R14-Pad1)">
+    <net code="40" name="Net-(R14-Pad1)">
       <node ref="R14" pin="1" pintype="passive"/>
       <node ref="U5" pin="5" pintype="passive"/>
       <node ref="U7" pin="13" pintype="input"/>
     </net>
-    <net code="36" name="Net-(R17-Pad2)">
+    <net code="41" name="Net-(R17-Pad2)">
       <node ref="R17" pin="2" pintype="passive"/>
       <node ref="U7" pin="6" pintype="output"/>
     </net>
-    <net code="37" name="Net-(U2-Pad7)">
+    <net code="42" name="Net-(U2-Pad7)">
       <node ref="U2" pin="7" pinfunction="D6/TX/P0" pintype="bidirectional"/>
       <node ref="U7" pin="5" pintype="input"/>
     </net>
-    <net code="38" name="Net-(U3-Pad6)">
-      <node ref="U3" pin="6" pinfunction="VB" pintype="output"/>
-      <node ref="U6" pin="10" pinfunction="+" pintype="input"/>
-    </net>
-    <net code="39" name="Net-(U3-Pad8)">
-      <node ref="U3" pin="8" pinfunction="VA" pintype="output"/>
-      <node ref="U6" pin="5" pinfunction="+" pintype="input"/>
-    </net>
-    <net code="40" name="Net-(U4-Pad6)">
-      <node ref="U4" pin="6" pinfunction="VB" pintype="output"/>
-      <node ref="U6" pin="3" pinfunction="+" pintype="input"/>
-    </net>
-    <net code="41" name="Net-(U4-Pad8)">
-      <node ref="U4" pin="8" pinfunction="VA" pintype="output"/>
-      <node ref="U6" pin="12" pinfunction="+" pintype="input"/>
-    </net>
-    <net code="42" name="Net-(U7-Pad11)">
+    <net code="43" name="Net-(U7-Pad11)">
       <node ref="U7" pin="11" pintype="input"/>
       <node ref="U7" pin="12" pintype="output"/>
     </net>
-    <net code="43" name="unconnected-(J1-Pad1)">
+    <net code="44" name="unconnected-(J1-Pad1)">
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
     </net>
-    <net code="44" name="unconnected-(J1-Pad2)">
+    <net code="45" name="unconnected-(J1-Pad2)">
       <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
     </net>
-    <net code="45" name="unconnected-(J2-PadR)">
+    <net code="46" name="unconnected-(J2-PadR)">
       <node ref="J2" pin="R" pintype="passive"/>
     </net>
-    <net code="46" name="unconnected-(J3-PadR)">
+    <net code="47" name="unconnected-(J3-PadR)">
       <node ref="J3" pin="R" pintype="passive"/>
     </net>
-    <net code="47" name="unconnected-(J4-Pad1)">
+    <net code="48" name="unconnected-(J4-Pad1)">
       <node ref="J4" pin="1" pintype="passive"/>
     </net>
-    <net code="48" name="unconnected-(J4-Pad2)">
+    <net code="49" name="unconnected-(J4-Pad2)">
       <node ref="J4" pin="2" pintype="passive"/>
     </net>
-    <net code="49" name="unconnected-(J4-Pad3)">
+    <net code="50" name="unconnected-(J4-Pad3)">
       <node ref="J4" pin="3" pintype="passive"/>
     </net>
-    <net code="50" name="unconnected-(J5-PadR)">
+    <net code="51" name="unconnected-(J5-PadR)">
       <node ref="J5" pin="R" pintype="passive"/>
     </net>
-    <net code="51" name="unconnected-(J6-Pad1)">
+    <net code="52" name="unconnected-(J6-Pad1)">
       <node ref="J6" pin="1" pintype="passive"/>
     </net>
-    <net code="52" name="unconnected-(J6-Pad3)">
+    <net code="53" name="unconnected-(J6-Pad3)">
       <node ref="J6" pin="3" pintype="passive"/>
     </net>
-    <net code="53" name="unconnected-(J7-PadR)">
+    <net code="54" name="unconnected-(J7-PadR)">
       <node ref="J7" pin="R" pintype="passive"/>
-    </net>
-    <net code="54" name="unconnected-(U2-Pad4)">
-      <node ref="U2" pin="4" pinfunction="D3/P29" pintype="bidirectional"/>
     </net>
     <net code="55" name="unconnected-(U2-Pad10)">
       <node ref="U2" pin="10" pinfunction="D9/MISO/P4" pintype="bidirectional"/>

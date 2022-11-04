@@ -127,7 +127,7 @@ class ProcessKicadSchematic:
 		This is the dialog which locates the Kicad Schematic files
 		"""
 		global defaultPath
-		filename =  os.path.normpath(filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.sch"),("all files","*.*"))))
+		filename =  os.path.normpath(filedialog.askopenfilename(initialdir = defaultPath,title = "Select file",filetypes = (("sch files","*.kicad_sch"),("all files","*.*"))))
 		defaultPath = self.extractPathFromPathfilename(filename)
 		#print("selectKicadSchematic: filename",filename)
 		return (filename)
@@ -470,7 +470,7 @@ class ProcessKicadSchematic:
 		if schematicAsList == []:
 			errorDialog("Failed to read in the schematic file")
 			return False
-		pcbFileName = schFileName[0:-4] + '.kicad_pcb'
+		pcbFileName = schFileName[0:-10] + '.kicad_pcb'
 		pcbFileAsList = self.readInFile(pcbFileName)
 		if pcbFileAsList == []:
 			failString = "Failed to read in the pcb file\n" + pcbFileName + "\nFile not found."

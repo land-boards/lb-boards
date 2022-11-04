@@ -10,113 +10,113 @@
 ! Part Number
 |-
 | 1
-| 3
-| C1-C3
-| [https://www.mouser.com/ProductDetail/140-REA470M1CBK0511P 10uF]
+| 7
+| R1-R4, R13, R15, R16
+| 220
 | 
-| 9
-| 1
-| U1
-| AZ1117-5
-|-
-| 2
-| 9
-| D1-D9
-| BAT41
-| 
-| 10
+| 12
 | 1
 | U2
 | XIAO_RP2040
 |-
-| 3
-| 7
-| R1-R4, R13, R15, R16
-| [https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D 220]
+| 2
+| 4
+| R5, R8, R9, R12
+| 3.9K
 | 
-| 11
+| 13
 | 2
 | U3, U4
 | [http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf MCP4822-E/P]
 |-
-| 4
-| 4
-| R5, R8, R9, R12
-| [https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D 5.6K]
-| 
-| 12
-| 1
-| U5
-| [https://www.vishay.com/docs/83725/4n25.pdf 4N26]
-|-
-| 5
+| 3
 | 4
 | R6, R7, R10, R11
-| [https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D 2.7K]
-| 
-| 13
-| 1
-| U6
-| [http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf MCP6004]
-|-
-| 6
-| 1
-| R14
-| [https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D 1K]
+| 5.6K
 | 
 | 14
 | 1
-| U7
-| [https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf 74HC04]
+| U5
+| [https://www.mouser.com/ProductDetail/Vishay-Semiconductors/CNY17-4X006?qs=%2Fjqivxn91ccVZaHNJrlaNA%3D%3D CNY17-4]
 |-
-| 7
+| 4
 | 1
-| R17
-| [https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D 10K]
+| R14
+| 4.7K
 | 
 | 15
 | 1
+| U6
+| [http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf MCP6234]
+|-
+| 5
+| 1
+| R17
+| 10K
+| 
+| 16
+| 1
+| U7
+| [https://www.mouser.com/ProductDetail/595-SN74HC14AN 74HC14]
+|-
+| 6
+| 9
+| D1-D9
+| BAT41
+| 
+| 17
+| 1
 | H1
-| Conn_01x02
+| HEADER, 1X2
+|-
+| 7
+| 4
+| C4-C7
+| 0.1uF
+| 
+| 18
+| 1
+| J1
+| HEADER, IDC, 2X8
 |-
 | 8
+| 3
+| C1-C3
+| 10uF
+| 
+| 19
+| 4
+| J2, J3, J5, J7
+| [https://www.mouser.com/ProductDetail/490-SJ1-3523N SJ1-3523N]
+|-
+| 9
 | 1
 | Q1
 | [https://www.onsemi.com/pub/Collateral/2N3903-D.PDF 2N3904]
 | 
-| 16
-| 1
-| J1
-| Conn_02x08_Odd_Even
-|-
-| 
-| 
-| 
-| 
-| 
-| 17
-| 4
-| J2, J3, J5, J7
-| [https://www.mouser.com/ProductDetail/490-SJ1-3523N AudioJack3]
-|-
-| 
-| 
-| 
-| 
-| 
-| 18
+| 20
 | 2
 | J4, J6
 | [http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf DIN-5]
 |-
+| 10
+| 1
+| U1
+| AZ1117-5
 | 
-| 
-| 
-| 
-| 
-| 19
+| 21
 | 1
 | J8
-| Conn_01x04
+| HEADER, 1X4
+|-
+| 11
+| 2
+| U2
+| SOCKET, FEMALE, 1X7
+| 
+| 
+| 
+| 
+| 
 |-
 |}
