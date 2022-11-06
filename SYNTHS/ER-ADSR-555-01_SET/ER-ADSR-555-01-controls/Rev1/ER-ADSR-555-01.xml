@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\ER-ADSR-555-01_SET\ER-ADSR-555-01-controls\ER-ADSR-555-01.kicad_sch</source>
-    <date>11/5/2022 8:32:23 PM</date>
+    <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\ER-ADSR-555-01_SET\ER-ADSR-555-01-controls\Rev1\ER-ADSR-555-01.kicad_sch</source>
+    <date>11/5/2022 8:42:57 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>ADSR GENERATOR</title>
+        <title/>
         <company/>
-        <rev>2</rev>
-        <date>2022-11-05</date>
+        <rev>1</rev>
+        <date>2022-11-03</date>
         <source>ER-ADSR-555-01.kicad_sch</source>
         <comment number="1" value="The Fastest Envelope in the West"/>
         <comment number="2" value="https://www.schmitzbits.de/adsr.html"/>
@@ -43,7 +43,7 @@
       <tstamps>cf7deaee-10c1-4a8b-be79-2d22e2cc9dd3</tstamps>
     </comp>
     <comp ref="C3">
-      <value>1uF</value>
+      <value>4.7uF</value>
       <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
       <property name="Sheetname" value=""/>
@@ -51,35 +51,8 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>4d9ddca8-237d-4fed-afce-2dc8bfdc81da</tstamps>
     </comp>
-    <comp ref="C4">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>b138eaa4-2327-405a-b495-7f4d88501763</tstamps>
-    </comp>
-    <comp ref="C5">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>ccd4ce06-b30f-4b1d-a858-0f630243acf2</tstamps>
-    </comp>
-    <comp ref="C6">
-      <value>0.1uF</value>
-      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>77d4f722-96be-4cd2-bfa3-7d0a4942337b</tstamps>
-    </comp>
     <comp ref="D1">
-      <value>1N4148</value>
+      <value>BAT41</value>
       <footprint>Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
       <property name="Sheetname" value=""/>
@@ -123,7 +96,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>cc2c9b88-4831-459b-88fd-d09de72e1012</tstamps>
     </comp>
-    <comp ref="DS1">
+    <comp ref="D6">
       <value>LED</value>
       <footprint>LED_THT:LED_D5.0mm</footprint>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
@@ -164,7 +137,7 @@
     </comp>
     <comp ref="Q1">
       <value>2N3904</value>
-      <footprint>Package_TO_SOT_THT:TO-92_HandSolder</footprint>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
       <datasheet>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</datasheet>
       <libsource lib="Transistor_BJT" part="2N3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"/>
       <property name="Sheetname" value=""/>
@@ -174,7 +147,7 @@
     </comp>
     <comp ref="Q2">
       <value>2N3904</value>
-      <footprint>Package_TO_SOT_THT:TO-92_HandSolder</footprint>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
       <datasheet>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</datasheet>
       <libsource lib="Transistor_BJT" part="2N3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"/>
       <property name="Sheetname" value=""/>
@@ -184,7 +157,7 @@
     </comp>
     <comp ref="Q3">
       <value>2N3904</value>
-      <footprint>Package_TO_SOT_THT:TO-92_HandSolder</footprint>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
       <datasheet>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</datasheet>
       <libsource lib="Transistor_BJT" part="2N3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"/>
       <property name="Sheetname" value=""/>
@@ -220,15 +193,6 @@
       <tstamps>d77a02cd-cdc2-4181-a3d8-be30a5070024</tstamps>
     </comp>
     <comp ref="R4">
-      <value>10K</value>
-      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>a3f11492-7936-40fd-853f-e2b42a257f46</tstamps>
-    </comp>
-    <comp ref="R5">
       <value>4.7K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -237,7 +201,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>78b5ea94-d5e4-4bbf-bfaa-73ec75d5c2f0</tstamps>
     </comp>
-    <comp ref="R6">
+    <comp ref="R5">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -246,7 +210,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>31fb15c8-d66f-41e1-a2db-5d8de043b660</tstamps>
     </comp>
-    <comp ref="R7">
+    <comp ref="R6">
       <value>4.7K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -255,8 +219,8 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>42d54ace-5d83-4203-8c45-c1566eb1d782</tstamps>
     </comp>
-    <comp ref="R8">
-      <value>100</value>
+    <comp ref="R7">
+      <value>RA</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -264,8 +228,8 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1d0b6c16-5253-4339-8dad-06d828cb6da8</tstamps>
     </comp>
-    <comp ref="R9">
-      <value>100</value>
+    <comp ref="R8">
+      <value>RD</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -273,7 +237,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>7de98fe3-0af5-4b7b-a034-0825d48ac8bb</tstamps>
     </comp>
-    <comp ref="R10">
+    <comp ref="R9">
       <value>4.7K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -282,8 +246,8 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b7b52fb8-9692-4e9a-8810-9da10fb90c34</tstamps>
     </comp>
-    <comp ref="R11">
-      <value>100</value>
+    <comp ref="R10">
+      <value>RR</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -291,7 +255,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>29f47cc6-270a-4f64-88b2-0f43ec88976e</tstamps>
     </comp>
-    <comp ref="R12">
+    <comp ref="R11">
       <value>10K</value>
       <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
       <datasheet>https://www.mouser.com/ProductDetail/Xicon/299-2.2K-RC?qs=QaPBMFBEHz3RDbXknTj%252ByA%3D%3D</datasheet>
@@ -301,41 +265,50 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f4047145-9d9a-4593-9216-cccdd673bb27</tstamps>
     </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3f11492-7936-40fd-853f-e2b42a257f46</tstamps>
+    </comp>
     <comp ref="RV1">
-      <value>A1M</value>
-      <footprint>LandBoards_Conns:RV09ACF</footprint>
-      <libsource lib="LandBoards_Conns" part="R_Pot_CW_PIN3UP" description="Potentiometer"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>dc6a9fd0-8a12-4e12-ba4e-7f59c3508f44</tstamps>
-    </comp>
-    <comp ref="RV2">
-      <value>A1M</value>
-      <footprint>LandBoards_Conns:RV09ACF</footprint>
-      <libsource lib="LandBoards_Conns" part="R_Pot_CW_PIN3UP" description="Potentiometer"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>461af355-6f5a-4f9c-96a9-f13d6d323d30</tstamps>
-    </comp>
-    <comp ref="RV3">
-      <value>A1M</value>
+      <value>1M</value>
       <footprint>LandBoards_Conns:RV09ACF</footprint>
       <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>e0914859-795e-41b7-b948-5f59aaf6be16</tstamps>
+      <tstamps>9ce23001-4bd5-46ab-ac87-cb915687a3df</tstamps>
     </comp>
-    <comp ref="RV4">
-      <value>A1M</value>
+    <comp ref="RV2">
+      <value>1M</value>
+      <footprint>LandBoards_Conns:RV09ACF</footprint>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b7ad75e5-01c2-4b94-bc64-2241e8ac8d34</tstamps>
+    </comp>
+    <comp ref="RV3">
+      <value>10M</value>
       <footprint>LandBoards_Conns:RV09ACF</footprint>
       <libsource lib="LandBoards_Conns" part="R_Pot_CW_PIN3UP" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d8f30b02-7baf-4e33-a818-4a0fb6edca4b</tstamps>
+      <tstamps>c042aded-2414-4721-91f9-54216ce8e0c0</tstamps>
+    </comp>
+    <comp ref="RV4">
+      <value>1M</value>
+      <footprint>LandBoards_Conns:RV09ACF</footprint>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-ADSR-555-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ecc008dc-5f2b-47eb-9522-092e9f50e7d1</tstamps>
     </comp>
     <comp ref="U1">
       <value>TL072</value>
@@ -610,33 +583,30 @@
   </libraries>
   <nets>
     <net code="1" name="+12V">
-      <node ref="C4" pin="2" pintype="passive"/>
-      <node ref="C5" pin="2" pintype="passive"/>
       <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
       <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
-      <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
-      <node ref="R5" pin="2" pintype="passive"/>
-      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="V+" pintype="power_in"/>
       <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
     </net>
     <net code="2" name="-12V">
-      <node ref="C6" pin="1" pintype="passive"/>
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="V-" pintype="power_in"/>
     </net>
     <net code="3" name="/ATT">
-      <node ref="R8" pin="2" pintype="passive"/>
-      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
       <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
     </net>
     <net code="4" name="/BUFA">
       <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="Q1" pin="2" pinfunction="B" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
-      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
     </net>
     <net code="5" name="/BUFB">
       <node ref="Q2" pin="2" pinfunction="B" pintype="passive"/>
@@ -644,19 +614,19 @@
     </net>
     <net code="6" name="/BUFC">
       <node ref="Q3" pin="2" pinfunction="B" pintype="passive"/>
-      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
     </net>
     <net code="7" name="/CV">
       <node ref="C2" pin="1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="CV" pintype="input"/>
     </net>
     <net code="8" name="/DEC">
-      <node ref="R9" pin="2" pintype="passive"/>
-      <node ref="RV2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
       <node ref="RV2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
     </net>
     <net code="9" name="/DISCH">
-      <node ref="RV3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV3" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U2" pin="7" pinfunction="DIS" pintype="input"/>
     </net>
     <net code="10" name="/IN">
@@ -664,31 +634,31 @@
       <node ref="R1" pin="1" pintype="passive"/>
     </net>
     <net code="11" name="/LOOP1">
-      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pintype="output"/>
       <node ref="U1" pin="2" pinfunction="-" pintype="input"/>
     </net>
     <net code="12" name="/LOOP2">
-      <node ref="DS1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J3" pin="T" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="-" pintype="input"/>
       <node ref="U1" pin="7" pintype="output"/>
     </net>
     <net code="13" name="/QO">
-      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="Q" pintype="output"/>
     </net>
     <net code="14" name="/REL">
-      <node ref="R11" pin="2" pintype="passive"/>
-      <node ref="RV4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
       <node ref="RV4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
     </net>
     <net code="15" name="/RST">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="Q2" pin="3" pinfunction="C" pintype="passive"/>
-      <node ref="R11" pin="1" pintype="passive"/>
-      <node ref="R4" pin="2" pintype="passive"/>
-      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
       <node ref="U2" pin="4" pinfunction="R" pintype="input"/>
     </net>
     <net code="16" name="/SUSPOT">
@@ -705,15 +675,12 @@
     </net>
     <net code="18" name="/TRIG">
       <node ref="Q3" pin="3" pinfunction="C" pintype="passive"/>
-      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="TR" pintype="input"/>
     </net>
     <net code="19" name="GND">
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
-      <node ref="C4" pin="1" pintype="passive"/>
-      <node ref="C5" pin="1" pintype="passive"/>
-      <node ref="C6" pin="2" pintype="passive"/>
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
@@ -728,38 +695,38 @@
       <node ref="Q1" pin="1" pinfunction="E" pintype="passive"/>
       <node ref="Q2" pin="1" pinfunction="E" pintype="passive"/>
       <node ref="Q3" pin="1" pinfunction="E" pintype="passive"/>
-      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
       <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
     </net>
     <net code="20" name="Net-(C1-Pad2)">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
     </net>
     <net code="21" name="Net-(D3-Pad1)">
       <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV4" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="22" name="Net-(D4-Pad2)">
       <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
     <net code="23" name="Net-(D5-Pad1)">
       <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV2" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="24" name="Net-(DS1-Pad1)">
-      <node ref="DS1" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="R12" pin="2" pintype="passive"/>
+    <net code="24" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
     </net>
     <net code="25" name="Net-(Q1-Pad3)">
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
-    <net code="26" name="Net-(RV3-Pad1)">
-      <node ref="R10" pin="1" pintype="passive"/>
-      <node ref="RV3" pin="1" pinfunction="1" pintype="passive"/>
+    <net code="26" name="Net-(R9-Pad1)">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="RV3" pin="3" pinfunction="3" pintype="passive"/>
     </net>
     <net code="27" name="unconnected-(J3-PadTN)">
       <node ref="J3" pin="TN" pintype="passive"/>
