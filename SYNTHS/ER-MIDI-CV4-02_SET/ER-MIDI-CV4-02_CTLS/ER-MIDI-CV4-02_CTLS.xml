@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\ER-MIDI-CV4-02_SET\ER-MIDI-CV4-02_CTLS\ER-MIDI-CV4-02_CTLS.kicad_sch</source>
-    <date>11/2/2022 11:35:29 AM</date>
+    <date>11/8/2022 12:47:23 PM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>SYNTH MIDI CONTROLLER</title>
+        <title>SYNTH MIDI CONTROLLER - CONTROLS CARD</title>
         <company>LAND BOARDS LLC</company>
         <rev>1</rev>
-        <date>2022-10-23</date>
+        <date>2022-11-08</date>
         <source>ER-MIDI-CV4-02_CTLS.kicad_sch</source>
         <comment number="1" value="https://note.com/solder_state/n/n17e028497eba"/>
         <comment number="2" value=""/>
@@ -58,7 +58,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>bc0aec75-d181-4a45-96c8-cb576a317752</tstamps>
+      <tstamps>218845fe-92c8-422f-a391-268cd27dbcc1</tstamps>
     </comp>
     <comp ref="J2">
       <value>PJ398SM</value>
@@ -67,7 +67,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a3c45522-c5b4-410f-bb1d-cfd3b4acb8a5</tstamps>
+      <tstamps>bc0aec75-d181-4a45-96c8-cb576a317752</tstamps>
     </comp>
     <comp ref="J3">
       <value>PJ398SM</value>
@@ -76,7 +76,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b102ed26-7bcf-4703-9984-a492406f897b</tstamps>
+      <tstamps>a3c45522-c5b4-410f-bb1d-cfd3b4acb8a5</tstamps>
     </comp>
     <comp ref="J4">
       <value>PJ398SM</value>
@@ -85,7 +85,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>86a65ea7-8d65-45c6-acef-9f54018c6f4b</tstamps>
+      <tstamps>b102ed26-7bcf-4703-9984-a492406f897b</tstamps>
     </comp>
     <comp ref="J5">
       <value>PJ398SM</value>
@@ -94,7 +94,7 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>218845fe-92c8-422f-a391-268cd27dbcc1</tstamps>
+      <tstamps>86a65ea7-8d65-45c6-acef-9f54018c6f4b</tstamps>
     </comp>
     <comp ref="J6">
       <value>PJ398SM</value>
@@ -103,16 +103,16 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>61a081bd-8501-47d3-bd39-7d1a0c21cff0</tstamps>
+      <tstamps>1c82e014-bb02-4ca8-8ed9-58a81ffec9b3</tstamps>
     </comp>
     <comp ref="J7">
-      <value>PJ366ST</value>
-      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical</footprint>
-      <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
+      <value>PJ398SM</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical</footprint>
+      <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>eafca3df-f9b1-4671-b717-658463e817e6</tstamps>
+      <tstamps>61a081bd-8501-47d3-bd39-7d1a0c21cff0</tstamps>
     </comp>
     <comp ref="J8">
       <value>PJ366ST</value>
@@ -121,18 +121,18 @@
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>05399cf8-1b6d-4d6c-8b2c-7fbdf02f94d9</tstamps>
+      <tstamps>eafca3df-f9b1-4671-b717-658463e817e6</tstamps>
     </comp>
     <comp ref="J9">
-      <value>HEADER, STRT, 1x4</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <value>PJ366ST</value>
+      <footprint>AudioJacks:Jack_3.5mm_QingPu_WQP-PJ366ST_Vertical</footprint>
+      <libsource lib="Connector" part="AudioJack3" description="Audio Jack, 3 Poles (Stereo / TRS)"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f5d3be17-1a1a-43c4-b2df-39ebe15b4d13</tstamps>
+      <tstamps>05399cf8-1b6d-4d6c-8b2c-7fbdf02f94d9</tstamps>
     </comp>
-    <comp ref="J12">
+    <comp ref="J10">
       <value>HEADER, STRT, 1x10</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -140,6 +140,15 @@
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>41986a04-15d0-4233-8163-8e53c4326d7e</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>HEADER, STRT, 1x4</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f5d3be17-1a1a-43c4-b2df-39ebe15b4d13</tstamps>
     </comp>
     <comp ref="Q1">
       <value>2N3904</value>
@@ -267,6 +276,15 @@
       <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>155719dc-c62f-430a-8f5d-0237542a6d05</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>1K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-MIDI-CV4-02_CTLS.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f4758b5-9f3d-445e-bb8b-f092a059b55a</tstamps>
     </comp>
     <comp ref="RV1">
       <value>B100K</value>
@@ -496,67 +514,67 @@
   </libraries>
   <nets>
     <net code="1" name="+5V">
-      <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="R12" pin="2" pintype="passive"/>
       <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U5" pin="8" pinfunction="VCC" pintype="passive"/>
     </net>
     <net code="2" name="/CLK">
-      <node ref="J5" pin="T" pintype="passive"/>
+      <node ref="J1" pin="T" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
     </net>
-    <net code="3" name="/CLK-C">
-      <node ref="J12" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    <net code="3" name="/CLK_C">
+      <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
     <net code="4" name="/CV1">
-      <node ref="J1" pin="T" pintype="passive"/>
+      <node ref="J2" pin="T" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
     <net code="5" name="/CV1_C">
-      <node ref="J12" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J10" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
     </net>
     <net code="6" name="/CV2">
-      <node ref="J2" pin="T" pintype="passive"/>
+      <node ref="J3" pin="T" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
     <net code="7" name="/CV2_C">
-      <node ref="J12" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
     <net code="8" name="/CV3">
-      <node ref="J3" pin="T" pintype="passive"/>
+      <node ref="J4" pin="T" pintype="passive"/>
       <node ref="R4" pin="2" pintype="passive"/>
     </net>
     <net code="9" name="/CV3_C">
-      <node ref="J12" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J10" pin="8" pinfunction="Pin_8" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
     <net code="10" name="/CV4">
-      <node ref="J4" pin="T" pintype="passive"/>
+      <node ref="J5" pin="T" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
     </net>
     <net code="11" name="/CV4_C">
-      <node ref="J12" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J10" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
     <net code="12" name="/GATE">
-      <node ref="J6" pin="T" pintype="passive"/>
+      <node ref="J7" pin="T" pintype="passive"/>
       <node ref="R7" pin="2" pintype="passive"/>
     </net>
     <net code="13" name="/GATE_C">
-      <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
     <net code="14" name="/MIDI_GND">
       <node ref="C2" pin="1" pintype="passive"/>
-      <node ref="J7" pin="S" pintype="passive"/>
+      <node ref="J8" pin="S" pintype="passive"/>
     </net>
     <net code="15" name="/MIDI_IN">
-      <node ref="J7" pin="R" pintype="passive"/>
+      <node ref="J8" pin="R" pintype="passive"/>
       <node ref="R13" pin="1" pintype="passive"/>
     </net>
     <net code="16" name="/MIDI_RES">
@@ -566,15 +584,15 @@
     </net>
     <net code="17" name="/MIDI_RTN">
       <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="J7" pin="T" pintype="passive"/>
+      <node ref="J8" pin="T" pintype="passive"/>
       <node ref="U5" pin="3" pinfunction="C2" pintype="passive"/>
     </net>
     <net code="18" name="/MO5">
-      <node ref="J8" pin="R" pintype="passive"/>
+      <node ref="J9" pin="R" pintype="passive"/>
       <node ref="R12" pin="1" pintype="passive"/>
     </net>
     <net code="19" name="/MOLO">
-      <node ref="J8" pin="T" pintype="passive"/>
+      <node ref="J9" pin="T" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
     </net>
     <net code="20" name="/OBF">
@@ -582,7 +600,7 @@
       <node ref="U5" pin="7" pinfunction="VO1" pintype="passive"/>
     </net>
     <net code="21" name="/OPTOUT-C">
-      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U5" pin="6" pinfunction="VO2" pintype="passive"/>
     </net>
@@ -591,62 +609,73 @@
       <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
     <net code="23" name="/RBI-C">
-      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
     </net>
     <net code="24" name="/RBO">
       <node ref="Q1" pin="2" pinfunction="B" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
-    <net code="25" name="GND">
+    <net code="25" name="/TRIG">
+      <node ref="J6" pin="T" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="/TRIG_C">
+      <node ref="J10" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="GND">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="J1" pin="S" pintype="passive"/>
-      <node ref="J12" pin="10" pinfunction="Pin_10" pintype="passive"/>
-      <node ref="J12" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J10" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J2" pin="S" pintype="passive"/>
       <node ref="J3" pin="S" pintype="passive"/>
       <node ref="J4" pin="S" pintype="passive"/>
       <node ref="J5" pin="S" pintype="passive"/>
       <node ref="J6" pin="S" pintype="passive"/>
-      <node ref="J8" pin="S" pintype="passive"/>
-      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J7" pin="S" pintype="passive"/>
+      <node ref="J9" pin="S" pintype="passive"/>
       <node ref="Q1" pin="1" pinfunction="E" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="U5" pin="5" pinfunction="GND" pintype="passive"/>
     </net>
-    <net code="26" name="Net-(C1-Pad2)">
+    <net code="28" name="Net-(C1-Pad2)">
       <node ref="C1" pin="2" pintype="passive"/>
-      <node ref="J12" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="27" name="Net-(Q1-Pad3)">
+    <net code="29" name="Net-(Q1-Pad3)">
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
     </net>
-    <net code="28" name="unconnected-(J1-PadTN)">
+    <net code="30" name="unconnected-(J1-PadTN)">
       <node ref="J1" pin="TN" pintype="passive"/>
     </net>
-    <net code="29" name="unconnected-(J2-PadTN)">
+    <net code="31" name="unconnected-(J2-PadTN)">
       <node ref="J2" pin="TN" pintype="passive"/>
     </net>
-    <net code="30" name="unconnected-(J3-PadTN)">
+    <net code="32" name="unconnected-(J3-PadTN)">
       <node ref="J3" pin="TN" pintype="passive"/>
     </net>
-    <net code="31" name="unconnected-(J4-PadTN)">
+    <net code="33" name="unconnected-(J4-PadTN)">
       <node ref="J4" pin="TN" pintype="passive"/>
     </net>
-    <net code="32" name="unconnected-(J5-PadTN)">
+    <net code="34" name="unconnected-(J5-PadTN)">
       <node ref="J5" pin="TN" pintype="passive"/>
     </net>
-    <net code="33" name="unconnected-(J6-PadTN)">
+    <net code="35" name="unconnected-(J6-PadTN)">
       <node ref="J6" pin="TN" pintype="passive"/>
     </net>
-    <net code="34" name="unconnected-(U5-Pad1)">
+    <net code="36" name="unconnected-(J7-PadTN)">
+      <node ref="J7" pin="TN" pintype="passive"/>
+    </net>
+    <net code="37" name="unconnected-(U5-Pad1)">
       <node ref="U5" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="35" name="unconnected-(U5-Pad4)">
+    <net code="38" name="unconnected-(U5-Pad4)">
       <node ref="U5" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
