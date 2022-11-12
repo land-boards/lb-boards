@@ -14,75 +14,85 @@
 | U1, U2
 | SOCKET, 8 PIN
 | 
-| 9
+| 8
 | 2
-| U3
-| SOCKET, FEMALE, 1X12
+| U2
+| HEADER, FEMALE, 1X15
 |-
 | 2
-| 1
-| R1
-| 2.2K
+| 4
+| C1-C4
+| 0.1uF
 | 
-| 10
+| 9
 | 1
 | J1
 | CONN, IDC, 2X5
 |-
 | 3
-| 1
-| R2
-| 10
+| 15
+| D1-D15
+| BAT41
 | 
-| 11
+| 10
 | 1
 | J2
 | HEADER, STRT, 1x10
 |-
 | 4
 | 1
-| R3
-| 470
+| R1
+| 2.2K
 | 
-| 12
+| 11
 | 1
 | J3
-| Conn_01x04
+| HEADER, STRT, 1x4
 |-
 | 5
-| 12
-| D1-D12
-| BAT41
+| 1
+| R2
+| 10
 | 
-| 13
+| 12
 | 1
 | J4
 | HEADER, STRT, 1x4
 |-
 | 6
-| 4
-| C1-C4
-| 0.1uF
+| 1
+| R3
+| 470
 | 
-| 14
+| 13
 | 1
 | J5
 | HEADER, STRT, 1x2
 |-
 | 7
 | 1
-| D13
-| [https://www.mouser.com/ProductDetail/onsemi-Fairchild/1N4148?qs=i4Fj9T%2FoRm8RMUhj5DeFQg%3D%3D BAT41]
+| Q1
+| [https://www.onsemi.com/pub/Collateral/2N3903-D.PDF 2N3904]
+| 
+| 14
+| 1
+| J6
+| HEADER, STRT, 1x3
+|-
+| 
+| 
+| 
+| 
 | 
 | 15
 | 2
 | U1, U2
 | [http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf MCP4822-E/P]
 |-
-| 8
-| 1
-| Q1
-| [https://www.onsemi.com/pub/Collateral/2N3903-D.PDF 2N3904]
+| 
+| 
+| 
+| 
 | 
 | 16
 | 1

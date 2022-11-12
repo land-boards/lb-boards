@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\ER-MIDI-CV4-02_SET\ER-MIDI-CV4-02_CTLS\ER-MIDI-CV4-02_CTLS.kicad_sch</source>
-    <date>11/8/2022 12:47:23 PM</date>
+    <date>11/12/2022 11:58:55 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -542,7 +542,7 @@
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
     <net code="7" name="/CV2_C">
-      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R3" pin="1" pintype="passive"/>
     </net>
     <net code="8" name="/CV3">
@@ -604,27 +604,32 @@
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U5" pin="6" pinfunction="VO2" pintype="passive"/>
     </net>
-    <net code="22" name="/POT_C">
+    <net code="22" name="/POT">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="23" name="/POT_C">
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="23" name="/RBI-C">
+    <net code="24" name="/RBI-C">
       <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R11" pin="2" pintype="passive"/>
     </net>
-    <net code="24" name="/RBO">
+    <net code="25" name="/RBO">
       <node ref="Q1" pin="2" pinfunction="B" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
     </net>
-    <net code="25" name="/TRIG">
+    <net code="26" name="/TRIG">
       <node ref="J6" pin="T" pintype="passive"/>
       <node ref="R14" pin="2" pintype="passive"/>
     </net>
-    <net code="26" name="/TRIG_C">
+    <net code="27" name="/TRIG_C">
       <node ref="J10" pin="9" pinfunction="Pin_9" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
     </net>
-    <net code="27" name="GND">
+    <net code="28" name="GND">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="J1" pin="S" pintype="passive"/>
@@ -641,11 +646,6 @@
       <node ref="R8" pin="2" pintype="passive"/>
       <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="U5" pin="5" pinfunction="GND" pintype="passive"/>
-    </net>
-    <net code="28" name="Net-(C1-Pad2)">
-      <node ref="C1" pin="2" pintype="passive"/>
-      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
-      <node ref="R1" pin="2" pintype="passive"/>
     </net>
     <net code="29" name="Net-(Q1-Pad3)">
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
