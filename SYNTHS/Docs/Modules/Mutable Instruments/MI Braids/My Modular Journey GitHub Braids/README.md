@@ -1,4 +1,5 @@
 # Braids
+From https://github.com/MyModularJourney/Braids
 Front panel for MI Braids eurorack module - I removed the THT from the front panel in the published Gerber file.
 
 All credits go to the awesome Émilie Gillet of Mutable Instruments under the creative commons cc-by-sa.
