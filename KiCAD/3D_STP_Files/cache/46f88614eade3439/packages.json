@@ -130,10 +130,10 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "ec079fb1f379319cea653079f33016b8ade3f4d86ab7a8c68a975121efc96ae3",
-                    "download_size": 136204,
-                    "download_url": "https://github.com/openscopeproject/InteractiveHtmlBom/releases/download/v2.4.1/InteractiveHtmlBom_v2.4.1_pcm.zip",
-                    "install_size": 673918,
+                    "download_sha256": "96d23e986300b66bae2b71c8c1f9d7239b8bf56c0d399a6160fa61e617035f43",
+                    "download_size": 137832,
+                    "download_url": "https://github.com/openscopeproject/InteractiveHtmlBom/releases/download/v2.5.0/InteractiveHtmlBom_v2.5.0_pcm.zip",
+                    "install_size": 680994,
                     "kicad_version": "5.1",
                     "platforms": [
                         "linux",
@@ -141,7 +141,7 @@
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "2.4.1"
+                    "version": "2.5.0"
                 }
             ]
         },
@@ -298,13 +298,13 @@
                 "name": "Dawid Cisło"
             },
             "description": "Symbol and Footprint library focused on improving schematic and PCB readability and aesthetics, mainly intended for hobbyist use",
-            "description_full": "Current version: 2.1\n\nYou need to manually update the library tables in the Library Manager if you are installing AKL for the first time. No need to change library tables if you are updating from AKL V2.0. Refer to the links below for documentation and installation instructions.\n\nAKL started as a modification of the KiCAD library, where select footprints received new silkscreen markings helpful during hand-assembly. The list of footprints that have been modified and added has been greatly expanded, along with brand new footprints and footprint libraries. Double-layer silkscreen variants have been added where symbols have additional information on the bottom silkscreen layer for easier troubleshooting.\nAlternate KiCAD Library now contains massive symbol library (over 20 000 symbols as of version 2) with Diodes, Transistors, SCRs and Optocouplers. Each symbol is a separate orderable part number (example 1N4001, 1N4002, 1N4003 etc.), each has pre-assigned footprint and a datasheet link.",
+            "description_full": "Current version: 3.0\n\nYou need to manually update the library tables in the Library Manager. Refer to the links below for documentation and installation instructions.\n\nAlternate KiCad Library contains over 30000 symbols and 9200 footprints.\n New symbols include opamps, voltage comparators, instrumentation amplifiers, difference amplifiers, differential amplifiers and more.\nNew footprints include Potentiometers, SIP packages and new variants for existing libraries.\n\n",
             "identifier": "com.github.dawidcislo.alternate-kicad-library",
             "license": "CC-BY-SA",
             "name": "Alternate Kicad Library",
             "resources": {
                 "Github": "https://github.com/DawidCislo/Alternate-KiCad-Library",
-                "KiCad forum": "https://forum.kicad.info/t/alternate-kicad-library-2-0/32096"
+                "Website": "https://www.alternatekicadlibrary.com/"
             },
             "tags": [
                 "footprints",
@@ -312,6 +312,15 @@
             ],
             "type": "library",
             "versions": [
+                {
+                    "download_sha256": "55da0f126d556400a0511b75fc1543f91e5a4de1645cafbf057c307cb51a9e46",
+                    "download_size": 24209427,
+                    "download_url": "https://github.com/DawidCislo/Alternate-KiCad-Library/releases/download/v3.0/com_github_alternate_kicad_library.zip",
+                    "install_size": 107680556,
+                    "kicad_version": "6.0",
+                    "status": "stable",
+                    "version": "3.0"
+                },
                 {
                     "download_sha256": "dc07a18ece7a8df203229999b13efe2f0f8e15abf1b07ea507deefe760d5de8b",
                     "download_size": 15031216,
@@ -437,10 +446,10 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "7442f375d0d97f988ce7f19efd7b8e162aa484cefd9847a548ea80dbe394df8e",
-                    "download_size": 108725,
-                    "download_url": "https://gitlab.com/dennevi/kicad-plugins-releases/-/raw/main/Board2Pdf/releases/Board2Pdf_v0.6.zip",
-                    "install_size": 646403,
+                    "download_sha256": "0f0cd68c778682b17f0c9123220bda2bd24616cb9bfd38c3569937017698025c",
+                    "download_size": 105561,
+                    "download_url": "https://gitlab.com/dennevi/kicad-plugins-releases/-/raw/main/Board2Pdf/releases/Board2Pdf_v0.7.zip",
+                    "install_size": 646834,
                     "kicad_version": "6.0",
                     "platforms": [
                         "linux",
@@ -448,35 +457,7 @@
                         "windows"
                     ],
                     "status": "testing",
-                    "version": "0.6"
-                },
-                {
-                    "download_sha256": "35f94cdd7bc024d7850c92a1686540be27c7cb519af6c1d10c25d0577037f5fe",
-                    "download_size": 93264,
-                    "download_url": "https://gitlab.com/dennevi/kicad-plugins-releases/-/raw/main/Board2Pdf/releases/Board2Pdf_v0.5.zip",
-                    "install_size": 591748,
-                    "kicad_version": "6.0",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
-                    "status": "testing",
-                    "version": "0.5"
-                },
-                {
-                    "download_sha256": "1c7ac7a0bb1af756659d3b01de176c30402941e138d6d3990927a851d47c7660",
-                    "download_size": 91552,
-                    "download_url": "https://gitlab.com/dennevi/kicad-plugins-releases/-/raw/main/Board2Pdf/releases/Board2Pdf_v0.2.zip",
-                    "install_size": 580459,
-                    "kicad_version": "6.0",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
-                    "status": "testing",
-                    "version": "0.2"
+                    "version": "0.7"
                 }
             ]
         },
@@ -577,6 +558,15 @@
             ],
             "type": "library",
             "versions": [
+                {
+                    "download_sha256": "7d2632936cca4bf640b25889031d74dea4538e95ee5a7abbc15a3b8715297513",
+                    "download_size": 83746,
+                    "download_url": "https://gitlab.com/franzee/kicad-addons/-/raw/main/kicad-elektuur-symbols-0.6.4.zip",
+                    "install_size": 376628,
+                    "kicad_version": "6.0",
+                    "status": "stable",
+                    "version": "0.6.4"
+                },
                 {
                     "download_sha256": "7eb3c5709f700f81dc34847c21efe4e71aa6ee99b8be0cec6ec7eaefd6c53b72",
                     "download_size": 77609,
@@ -716,13 +706,13 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "3771012da59ffa680f663695b5d95adb33143c0d2e9b6977ffaaee35667eb1f5",
-                    "download_size": 9545,
-                    "download_url": "https://github.com/yaqwsx/KiKit/releases/download/v1.0.5/pcm-kikit.zip",
-                    "install_size": 10583,
+                    "download_sha256": "ed3778fc79a96e33affe0da5bc057163022ed9fc645a3fa01e5156e4a7ac60cd",
+                    "download_size": 9544,
+                    "download_url": "https://github.com/yaqwsx/KiKit/releases/download/v1.1.0/pcm-kikit.zip",
+                    "install_size": 10590,
                     "kicad_version": "6.0",
                     "status": "stable",
-                    "version": "1.0.5"
+                    "version": "1.1.0"
                 }
             ]
         },
@@ -754,13 +744,13 @@
             "type": "library",
             "versions": [
                 {
-                    "download_sha256": "a7212bedabf5a7e74e30cd2f23468e10d909b11468e1b214479ce6da92969c4e",
-                    "download_size": 11225,
-                    "download_url": "https://github.com/yaqwsx/KiKit/releases/download/v1.0.5/pcm-kikit-lib.zip",
-                    "install_size": 14939,
+                    "download_sha256": "241314947e56983287a9fa4a74286c5eae5de6421374b5983127e68f9f144d48",
+                    "download_size": 11217,
+                    "download_url": "https://github.com/yaqwsx/KiKit/releases/download/v1.1.0/pcm-kikit-lib.zip",
+                    "install_size": 14934,
                     "kicad_version": "6.0",
                     "status": "stable",
-                    "version": "1.0.5"
+                    "version": "1.1.0"
                 }
             ]
         },
@@ -792,22 +782,13 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "cd18fea13021561f83883d3ea9e356592533242906805a0a9fe65f3728e7dc0d",
-                    "download_size": 5638523,
-                    "download_url": "https://github.com/gregdavill/KiBuzzard/releases/download/1.1.0/KiBuzzard-1.1.0-pcm.zip",
-                    "install_size": 15960830,
-                    "kicad_version": "5.99",
-                    "status": "testing",
-                    "version": "1.1.0"
-                },
-                {
-                    "download_sha256": "ba17c84e8641c386f710b2164cc2d29d23d610ece87b6b2733ef7c65569ae42c",
-                    "download_size": 5626845,
-                    "download_url": "https://github.com/gregdavill/KiBuzzard/releases/download/1.0.0/KiBuzzard-1.0.0-pcm.zip",
-                    "install_size": 15617547,
-                    "kicad_version": "5.99",
+                    "download_sha256": "dbd0906ece41961ef7b28493ff1a9c1163dfbed028e8ccd6ce7a17a73a3154d8",
+                    "download_size": 6900468,
+                    "download_url": "https://github.com/gregdavill/KiBuzzard/releases/download/1.2.0/KiBuzzard-1.2.0-pcm.zip",
+                    "install_size": 22510171,
+                    "kicad_version": "6.0",
                     "status": "stable",
-                    "version": "1.0.0"
+                    "version": "1.2.0"
                 }
             ]
         },
@@ -833,10 +814,10 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "ef0213c92c56a43fa5dc565a10be6677d33cc0fbefeaebfde1c5140bd9c2e9da",
-                    "download_size": 15228,
-                    "download_url": "https://github.com/MitjaNemec/Archive3DModels/releases/download/1.0.3/Archive3DModels-1.0.3-pcm.zip",
-                    "install_size": 31182,
+                    "download_sha256": "f4d82682209cf07ce584989b7798f108fa4fcbf258deb0d8f237c2cdf2eaebb8",
+                    "download_size": 16234,
+                    "download_url": "https://github.com/MitjaNemec/Archive3DModels/releases/download/1.0.4/Archive3DModels-1.0.4-pcm.zip",
+                    "install_size": 34122,
                     "kicad_version": "6.0",
                     "kicad_version_max": "6.1",
                     "platforms": [
@@ -845,36 +826,7 @@
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "1.0.3"
-                },
-                {
-                    "download_sha256": "2d959c77656e14ed8091872206f50525130b282a6ccdea237e73282b7ccb7d5e",
-                    "download_size": 15228,
-                    "download_url": "https://github.com/MitjaNemec/Archive3DModels/releases/download/1.0.2/Archive3DModels-1.0.2-pcm.zip",
-                    "install_size": 31140,
-                    "kicad_version": "6.0",
-                    "kicad_version_max": "6.1",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
-                    "status": "stable",
-                    "version": "1.0.2"
-                },
-                {
-                    "download_sha256": "ff312c082f92f35dbe093fba5ea9fe47ba1b7d0d89be1b74f87e5e32836193fd",
-                    "download_size": 15059,
-                    "download_url": "https://github.com/MitjaNemec/Archive3DModels/releases/download/1.0.1/Archive3DModels-1.0.1-pcm.zip",
-                    "install_size": 30719,
-                    "kicad_version": "6.0",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
-                    "status": "stable",
-                    "version": "1.0.1"
+                    "version": "1.0.4"
                 }
             ]
         },
@@ -906,13 +858,13 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "7faed5b84bf092a3a80ece741052984f4a59e6b8d6baf5ff47b5a3c2e54c2875",
-                    "download_size": 12181,
-                    "download_url": "https://github.com/aislerhq/PushForKiCad/releases/download/0.1.4/PushForKiCad-0.1.4-pcm.zip",
-                    "install_size": 18161,
+                    "download_sha256": "8a1b3c2fbd641bf64ddb01d6cda83f0249a5c3a5bd63e4852e8e47b3e94264a7",
+                    "download_size": 12446,
+                    "download_url": "https://github.com/aislerhq/PushForKiCad/releases/download/0.1.6/PushForKiCad-0.1.6-pcm.zip",
+                    "install_size": 18996,
                     "kicad_version": "6.00",
                     "status": "stable",
-                    "version": "0.1.4"
+                    "version": "0.1.6"
                 }
             ]
         },
@@ -939,10 +891,10 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "7da75d4854df6a77ea74ba67a414a1475c2247934c411b84915ac1e021d576b4",
-                    "download_size": 20696,
-                    "download_url": "https://github.com/MitjaNemec/PlaceFootprints/releases/download/1.2.5/PlaceFootprints-1.2.5-pcm.zip",
-                    "install_size": 74193,
+                    "download_sha256": "0d6c019953efd4ef1265ae6fd5dfad716abda52ccac8b9ad5e1af9f1da5db7f8",
+                    "download_size": 21650,
+                    "download_url": "https://github.com/MitjaNemec/PlaceFootprints/releases/download/1.2.6/PlaceFootprints-1.2.6-pcm.zip",
+                    "install_size": 73890,
                     "kicad_version": "6.0",
                     "kicad_version_max": "6.1",
                     "platforms": [
@@ -951,7 +903,7 @@
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "1.2.5"
+                    "version": "1.2.6"
                 }
             ]
         },
@@ -978,18 +930,19 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "92158cb054e3996929070ae301104aeb2134dbd4494635b3b810eb3fdd4d1c9d",
-                    "download_size": 27513,
-                    "download_url": "https://github.com/MitjaNemec/ReplicateLayout/releases/download/1.1.2/ReplicateLayout-1.1.2-pcm.zip",
-                    "install_size": 94951,
+                    "download_sha256": "daa8ae63f8099e69af2012d54b630cd146c1f9775d4206ecf770c8d65dfbd161",
+                    "download_size": 28805,
+                    "download_url": "https://github.com/MitjaNemec/ReplicateLayout/releases/download/1.2.2/ReplicateLayout-1.2.2-pcm.zip",
+                    "install_size": 100232,
                     "kicad_version": "6.0",
+                    "kicad_version_max": "6.1",
                     "platforms": [
                         "linux",
                         "macos",
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "1.1.2"
+                    "version": "1.2.2"
                 }
             ]
         },
@@ -1011,6 +964,20 @@
             "type": "plugin",
             "versions": [
                 {
+                    "download_sha256": "e4d1087cf726018840f5f75291aae55de8cece49e2bada30be1e19ab6b474c40",
+                    "download_size": 15433,
+                    "download_url": "https://github.com/mitxela/kicad-round-tracks/releases/download/1.2/kicad-round-tracks-1.2.zip",
+                    "install_size": 32694,
+                    "kicad_version": "6.0",
+                    "platforms": [
+                        "linux",
+                        "macos",
+                        "windows"
+                    ],
+                    "status": "stable",
+                    "version": "1.2"
+                },
+                {
                     "download_sha256": "3ac65b3be5f1acd3e56583846d49b19ff425ed0a03154c775f4d655cd30fbdcc",
                     "download_size": 14742,
                     "download_url": "https://github.com/mitxela/kicad-round-tracks/releases/download/1.1/kicad-round-tracks-1.1.zip",
@@ -1023,6 +990,20 @@
                     ],
                     "status": "stable",
                     "version": "1.1"
+                },
+                {
+                    "download_sha256": "0ee531e5f324e22af07df691d529848e36f9960c2e0cf9ce8d4da3c2bcf0cc21",
+                    "download_size": 14632,
+                    "download_url": "https://github.com/mitxela/kicad-round-tracks/releases/download/1.0/kicad-round-tracks-1.0.zip",
+                    "install_size": 29167,
+                    "kicad_version": "6.0",
+                    "platforms": [
+                        "linux",
+                        "macos",
+                        "windows"
+                    ],
+                    "status": "stable",
+                    "version": "1.0"
                 }
             ]
         },
@@ -1086,13 +1067,13 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "2d07b8ebef7e9703926b0e4e54eecf7cd81d2b11027a628ce263777f3c212ef6",
-                    "download_size": 7962,
-                    "download_url": "https://gitlab.com/franzee/kicad-addons/-/raw/main/kicad-oktizer-0.0.8.zip",
-                    "install_size": 23529,
+                    "download_sha256": "fad7fbcaa7ef86943f87da6ce33a241915b8eb80e69e0a8c812d48ed3277746a",
+                    "download_size": 8081,
+                    "download_url": "https://gitlab.com/franzee/kicad-addons/-/raw/main/kicad-oktizer-0.0.9.zip",
+                    "install_size": 24099,
                     "kicad_version": "5.1",
                     "status": "stable",
-                    "version": "0.0.8"
+                    "version": "0.0.9"
                 }
             ]
         },
@@ -1153,10 +1134,10 @@
             "type": "plugin",
             "versions": [
                 {
-                    "download_sha256": "36fd2efacea10b4b14f594a1194d97ca8ca436d685f596f7374769c709e4862c",
-                    "download_size": 27518,
-                    "download_url": "https://github.com/MitjaNemec/SaveRestoreLayout/releases/download/1.1.2/SaveRestoreLayout-1.1.2-pcm.zip",
-                    "install_size": 78669,
+                    "download_sha256": "ad7492c6363fad20e89eba2779b2e3c80e15434764eb584cb5c71174d1d652f1",
+                    "download_size": 25856,
+                    "download_url": "https://github.com/MitjaNemec/SaveRestoreLayout/releases/download/1.1.5/SaveRestoreLayout-1.1.5-pcm.zip",
+                    "install_size": 79466,
                     "kicad_version": "6.0.3",
                     "kicad_version_max": "6.1",
                     "platforms": [
@@ -1165,52 +1146,387 @@
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "1.1.2"
+                    "version": "1.1.5"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "github": "https://github.com/bennymeg"
+                },
+                "name": "Benny Megidish"
+            },
+            "description": "JLC PCB fabrication toolkit",
+            "description_full": "Toolkit for automating PCB fabrication process with KiCad and JLC PCB. \n\n OPTIONS: \n• Include Component Part Number in Production Files \n Add an 'MPN' field with the LCSC component part number to the footprint component options.  \n\n• Ignore Footprint in Production Files \n Select 'Exclude from position files' or 'Exclude from BOM' in the footprint properties fabrication attributes in order to ignore the footprint from the relevant file.",
+            "identifier": "com.github.bennymeg.JLC-Plugin-for-KiCad",
+            "license": "Apache-2.0",
+            "maintainer": {
+                "contact": {
+                    "github": "https://github.com/bennymeg"
+                },
+                "name": "Benny Megidish"
+            },
+            "name": "Fabrication Toolkit",
+            "resources": {
+                "homepage": "https://github.com/bennymeg/JLC-Plugin-for-KiCad"
+            },
+            "tags": [
+                "jlc",
+                "production",
+                "fabrication",
+                "toolkit"
+            ],
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "fa5e7656c6d73d7e6da3ef6454e7a178f4d41504f6a1eaab9cb17e3cee1797bf",
+                    "download_size": 11447,
+                    "download_url": "https://github.com/bennymeg/JLC-Plugin-for-KiCad/releases/download/1.2.0/JLC-Plugin-for-KiCad-1.2.0.zip",
+                    "install_size": 20218,
+                    "kicad_version": "6.00",
+                    "status": "stable",
+                    "version": "1.2.0"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "web": "https://www.nextpcb.com"
+                },
+                "name": "NextPCB.com"
+            },
+            "description": "Start prototype and assembly by sending files to NextPCB with just one click.",
+            "description_full": "Start prototype and assembly by sending files to NextPCB with just one click.",
+            "identifier": "com.gitlab.nextpcbofficial.NextPCB-Plug-in-for-Kicad",
+            "license": "MIT",
+            "maintainer": {
+                "contact": {
+                    "web": "https://www.nextpcb.com"
+                },
+                "name": "NextPCB.com"
+            },
+            "name": "NextPCB Plug-in for KiCad",
+            "resources": {
+                "homepage": "https://gitlab.com/nextpcbofficial/NextPCB-Plug-in-for-Kicad"
+            },
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "06ccae7f8e2875b5ecf02e8f4663d43efafb2d2823c944653e3a4f82e358d3bf",
+                    "download_size": 9457,
+                    "download_url": "https://gitlab.com/nextpcbofficial/nextpcb-plug-in-for-kicad-files/-/raw/main/NextPCB-Plug-in-for-Kicad-v0.0.1.zip",
+                    "install_size": 14012,
+                    "kicad_version": "6.00",
+                    "status": "testing",
+                    "version": "0.0.1"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "web": "https://github.com/OneKiwiTech"
+                },
+                "name": "OneKiwi"
+            },
+            "description": "Track Length Calculator",
+            "description_full": "Track Length Calculator",
+            "identifier": "vn.onekiwi.length-matching",
+            "license": "MIT",
+            "name": "Length Matching",
+            "resources": {
+                "homepage": "https://github.com/OneKiwiTech/kicad-length-matching"
+            },
+            "tags": [
+                "highspeed",
+                "pcbnew"
+            ],
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "edbd15e155893ae4fdd1405d05be04ad4ac8dce8b1cea7f13cbed39815105acf",
+                    "download_size": 16573,
+                    "download_url": "https://github.com/OneKiwiTech/kicad-length-matching/releases/download/2022.08.09/length-matching-2022.08.09.zip",
+                    "install_size": 48903,
+                    "kicad_version": "6.0",
+                    "platforms": [
+                        "linux",
+                        "macos",
+                        "windows"
+                    ],
+                    "status": "stable",
+                    "version": "2022.08.09"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "email": "kicad-support@protoexpress.com"
+                },
+                "name": "Sierra Circuits"
+            },
+            "description": "Get an instant quote and order without leaving KiCad.",
+            "description_full": "Our plugin saves you time since you no longer need to output the data to send it to the PCB house. This also spares you from the errors that come with this step. Because, trust us, as a manufacturer, we see designers sending the wrong data every day, causing delays and money.\n So here's how it works: once you have completed the layout, all you need to do is go to Tools and External Plugins, and select Sierra Circuits Quote.\n A window will pop-up and show the specifications. Our plugin reads the design for a smooth quote process. Most of the board information will be automatically filled out, such as the dimensions and layer number. It is then up to you to choose the thickness, surface finish, etc. \n Review the parameters, pick the quantity and turn time, get assembly if needed, and place your order.This is as simple as it sounds!",
+            "identifier": "sierra.kicad.order",
+            "license": "GPL-3.0",
+            "maintainer": {
+                "contact": {
+                    "email": "kicad-support@protoexpress.com"
+                },
+                "name": "Sierra Support"
+            },
+            "name": "Sierra Quote Plugin",
+            "resources": {
+                "homepage": "https://www.protoexpress.com/kb"
+            },
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "4d85c248211de37a6b87e631128b376cd0fd760205a95ab03fe705369ef5dabc",
+                    "download_size": 242128,
+                    "download_url": "https://kicad-plugin-build-download-link.s3.amazonaws.com/sierra.kicad.order.zip",
+                    "install_size": 2161314,
+                    "kicad_version": "6.0.0",
+                    "platforms": [
+                        "macos",
+                        "windows"
+                    ],
+                    "status": "stable",
+                    "version": "2.0"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "web": "https://www.pcbgogo.com"
+                },
+                "name": "PCBGOGO.com"
+            },
+            "description": "Start prototype and assembly by sending files to PCBGOGO with just one click.",
+            "description_full": "Click this plugin for high quality prototyping and assembly services, PCBGOGO will commit to meeting your needs to the greatest extent.\n\nWhen you click PCBGOGO Plug-in button, we will export these files in your project:\n\n1. Gerber files in correct format for production\n2. IPC-Netlist file\n3. Bom-file that includes all information of components (please note designator, quantity, MPN/part number, package/footprint are necessary)\n4. Pick and Place-file used in assembly\n\nYou can click \"Save to Cart\" to place an order immediately after uploading the files ( usually only takes a few seconds), our engineers will double check the files before the production.\n\nAbout PCBGOGO:\n\nPCBGOGO is a Chinese company specializing in PCB prototyping and assembly, devotes to offer one-stop service. The build-time for standard PCBs is 24hrs. Our upgraded material with TG150-160 costs as low as $5/10pcs while our remarkable after-sale services are standing by for any questions you may encounter. As a sponsor of KiCad, we will always support its development.",
+            "identifier": "com.github.pcbgogo.PCBGOGO-Plug-in-for-Kicad",
+            "license": "MIT",
+            "maintainer": {
+                "contact": {
+                    "web": "https://www.pcbgogo.com"
+                },
+                "name": "PCBWay.com"
+            },
+            "name": "PCBGOGO Plug-in for KiCad",
+            "resources": {
+                "homepage": "https://github.com/pcbgogodev/PCBGOGO-Plug-in-for-Kicad"
+            },
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "b1da147eef57d829c3dac7d4f3956d3f491520d52f928abbbdb16cba4595c39e",
+                    "download_size": 9407,
+                    "download_url": "https://github.com/pcbgogodev/PCBGOGO-Plug-in-for-Kicad/releases/download/0.1.0/KiCadToPCBGOGO_v0.1.0.zip",
+                    "install_size": 13827,
+                    "kicad_version": "6.00",
+                    "status": "testing",
+                    "version": "0.1.0"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "email": "info@freerouting.app",
+                    "web": "https://www.freerouting.app/"
+                },
+                "name": "Andras Fuchs"
+            },
+            "description": "Freerouting KiCad integration",
+            "description_full": "This is the official KiCad integration for Freerouting, an advanced autorouter.\n",
+            "identifier": "app.freerouting.kicad-plugin",
+            "license": "GPL-3.0",
+            "maintainer": {
+                "contact": {
+                    "email": "info@freerouting.app"
+                },
+                "name": "Andras Fuchs"
+            },
+            "name": "Freerouting",
+            "resources": {
+                "Github": "https://github.com/freerouting/freerouting/tree/master/integrations/KiCad"
+            },
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "a72f4e5b5cedfee3ecea474315e6fc94e11fcb5480dc77a944dfe67fb2e96367",
+                    "download_size": 4095649,
+                    "download_url": "https://github.com/freerouting/freerouting/raw/master/integrations/KiCad/kicad-freerouting-1.6.2.zip",
+                    "install_size": 4526306,
+                    "kicad_version": "6.0",
+                    "status": "stable",
+                    "version": "1.6.2"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "web": "https://www.pcbgogo.jp"
+                },
+                "name": "PCBGOGO.jp"
+            },
+            "description": "PCBGOGOを送信して、基板製造と部品実装サービスを利用しましょう。",
+            "description_full": "KiCadでプリント基板の設計が完了すると、PCBGOGOプラグインボタンをクリックする\nことですぐに見積りをすることができ、PCBGOGOウェブ簡単見積もりページにプリント\n基板のレイアウトファイルが送信され、製造価格が自動的に計算されます。\n注意点：デフォルトの注文数量は5個です。\nPCBGOGOについて\nPCBGOGOは、クイックターンPCBの試作品やプリント基板の組み立てだけでなく、\n中・小容量のプリント基板の製造にも高い専門性に特化しています。三つの工場が\n17,000平方メートル以上の規模で設立されています。",
+            "identifier": "com.github.pcbgogo.PCBGOGO-JP-Plug-in-for-Kicad",
+            "license": "MIT",
+            "maintainer": {
+                "contact": {
+                    "web": "https://www.pcbgogo.jp"
+                },
+                "name": "PCBGOGO.jp"
+            },
+            "name": "KiCad用PCBGOGOプラグイ",
+            "resources": {
+                "homepage": "https://github.com/pcbgogodev/PCBGOGO-JP-Plug-in-for-Kicad"
+            },
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "16edcc2854269fd7cf706f20974abf2f88ae9583474b4bdde2b0eda686e5062e",
+                    "download_size": 10945,
+                    "download_url": "https://github.com/pcbgogodev/PCBGOGO-JP-Plug-in-for-Kicad/releases/download/0.1.1/KiCadToPCBGOGOJP_v0.1.1.zip",
+                    "install_size": 16322,
+                    "kicad_version": "6.00",
+                    "status": "testing",
+                    "version": "0.1.1"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "web": "https://thea.codes"
+                },
+                "name": "Alethea Katherine Flowers"
+            },
+            "description": "Dark theme designed by @theacodes",
+            "description_full": "Dark theme designed by @theacodes",
+            "identifier": "codes.thea.witchhazel",
+            "license": "Apache-2.0",
+            "maintainer": {
+                "contact": {
+                    "web": "https://thea.codes"
+                },
+                "name": "Alethea Katherine Flowers"
+            },
+            "name": "Witch Hazel",
+            "resources": {
+                "Github": "https://github.com/theacodes/witchhazel",
+                "Website": "https://witchhazel.thea.codes"
+            },
+            "type": "colortheme",
+            "versions": [
+                {
+                    "download_sha256": "bac5022d0b7c83b865a446eeb77466dc34f7c0a47035bb653ef5dbe414105721",
+                    "download_size": 7281,
+                    "download_url": "https://github.com/theacodes/witchhazel/releases/download/2022.11.18/kicad-witchhazel.zip",
+                    "install_size": 13890,
+                    "kicad_version": "6.0",
+                    "status": "stable",
+                    "version": "2022.11.18"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "email": "js.reynaud@gmail.com"
+                },
+                "name": "jsreynaud"
+            },
+            "description": "ViaStitching and more tools ",
+            "description_full": "Via stitching action tool and circular zone builder action tool. Use the action menu/toolbar feature.",
+            "identifier": "com.github.jsreynaud.kicad-action-scripts",
+            "license": "GPL-2.0",
+            "name": "kicad-action-scripts",
+            "resources": {
+                "Github": "https://github.com/jsreynaud/kicad-action-scripts",
+                "Readme": "https://github.com/jsreynaud/kicad-action-scripts/blob/master/README.md"
+            },
+            "tags": [
+                "annular",
+                "pcbnew",
+                "dxf",
+                "grid",
+                "mcad"
+            ],
+            "type": "plugin",
+            "versions": [
+                {
+                    "download_sha256": "74d7f7296b6aa4b659a6178d0a93d733e11013f1b12340647c8f863b493f0e32",
+                    "download_size": 51951,
+                    "download_url": "https://github.com/jsreynaud/kicad-action-scripts/releases/download/v6.0-0.1.0/kicad-action-scripts_v6.0-0.1.0.zip",
+                    "install_size": 276212,
+                    "kicad_version": "6.0",
+                    "kicad_version_max": "6.0",
+                    "platforms": [
+                        "linux",
+                        "macos",
+                        "windows"
+                    ],
+                    "status": "stable",
+                    "version": "6.0.0"
                 },
                 {
-                    "download_sha256": "3420851c7cbb318927a0e95053489f9b0aa47df4180100a2928af6be5948c6ad",
-                    "download_size": 27526,
-                    "download_url": "https://github.com/MitjaNemec/SaveRestoreLayout/releases/download/1.1.1/SaveRestoreLayout-1.1.1-pcm.zip",
-                    "install_size": 78671,
-                    "kicad_version": "6.0.3",
-                    "kicad_version_max": "6.1",
+                    "download_sha256": "c6ee187faf5c0cce50024e93d2fc358fe71d59a950735b9e8206e88d83ee6fa8",
+                    "download_size": 51020,
+                    "download_url": "https://github.com/jsreynaud/kicad-action-scripts/releases/download/v5.1-0.1.0/kicad-action-scripts_v5.1-0.1.0.zip",
+                    "install_size": 297823,
+                    "kicad_version": "5.1",
+                    "kicad_version_max": "5.1",
                     "platforms": [
                         "linux",
                         "macos",
                         "windows"
                     ],
                     "status": "stable",
-                    "version": "1.1.1"
+                    "version": "5.1.0"
+                }
+            ]
+        },
+        {
+            "author": {
+                "contact": {
+                    "github": "https://github.com/JarrettR",
+                    "web": "https://jrainimo.com"
                 },
-                {
-                    "download_sha256": "0195aeffbc095e0f14e08ffe9dd266a23c3e9b3ac97e2efba6775263f8183729",
-                    "download_size": 27510,
-                    "download_url": "https://github.com/MitjaNemec/SaveRestoreLayout/releases/download/1.1.0/SaveRestoreLayout-1.1.0-pcm.zip",
-                    "install_size": 78587,
-                    "kicad_version": "6.0.3",
-                    "kicad_version_max": "6.1",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
-                    "status": "stable",
-                    "version": "1.1.0"
+                "name": "Jarrett Rainier"
+            },
+            "description": "KiCad to SVG and then back again",
+            "description_full": "Seamless artistic workflow for KiCad and Inkscape.\n\nUsers can start by drawing a schematic and laying out a PCB, then bring it into Inkscape to arrange a thousand LEDs into a flower arrangement, then bring it back into KiCad to lay out traces, back into Inkscape to curve the traces, back into KiCad to change their microcontroller and few pin assignments, back into Inkscape to draw out some silkscreem patterns, back into KiCad to run DRC, and so on. The workflow is intended to be seamless and painless to go back and forth.\n\nClick the homepage link - https://github.com/JarrettR/Stretch - for how it works.",
+            "identifier": "com.github.jarrettr.stretch",
+            "license": "GPL-3.0",
+            "maintainer": {
+                "contact": {
+                    "github": "https://github.com/JarrettR",
+                    "web": "https://jrainimo.com"
                 },
+                "name": "Jarrett Rainier"
+            },
+            "name": "Stretch",
+            "resources": {
+                "homepage": "https://github.com/JarrettR/Stretch"
+            },
+            "type": "plugin",
+            "versions": [
                 {
-                    "download_sha256": "253508db5dcb947598d65610f9bfacc77c9841ab6bde06fa3265948c3a6d85cd",
-                    "download_size": 27343,
-                    "download_url": "https://github.com/MitjaNemec/SaveRestoreLayout/releases/download/1.0.0/SaveRestoreLayout-1.0.0-pcm.zip",
-                    "install_size": 77829,
-                    "kicad_version": "6.0.3",
-                    "kicad_version_max": "6.1",
-                    "platforms": [
-                        "linux",
-                        "macos",
-                        "windows"
-                    ],
+                    "download_sha256": "aab2dcb0c9abee0dbcc0acc49ff3e4836c83e073ec01e656cfbdb451d205f6f5",
+                    "download_size": 176395,
+                    "download_url": "https://github.com/JarrettR/Stretch/releases/download/1.2/Stretch-1.2-pcm.zip",
+                    "install_size": 628543,
+                    "kicad_version": "6.0",
                     "status": "stable",
-                    "version": "1.0.0"
+                    "version": "1.2"
                 }
             ]
         }
