@@ -26,3 +26,41 @@
 *** Split (2 knobs each)
 *** Twin
 *** Expert
+
+== Credits/Resources ==
+
+* [https://www.tindie.com/products/Sourcery/beaks-a-throughhole-pwm-version-of-mi-peaks/ Beaks Through-hole on Kristian Blåsol's Tindie]
+* [https://github.com/SourceryOne/Beaks/ Kristian Blåsol's GitHub]
+** [https://github.com/SourceryOne/Beaks/blob/main/Schematics_Beaks0.3.pdf Beaks Schematics]
+* [https://github.com/matias-levy/peaks Mathias Levy's Github]
+** [https://github.com/land-boards/lb-boards/tree/master/SYNTHS/Docs/Modules/Mutable%20Instruments/MI%20Beaks%20(Peaks)/Software Backup of firmware]
+
+=== Original Peaks Features ===
+
+* A SWISS-ARMY KNIFE FOR PERCUSSIVE PATCHES
+* Peaks is a dual-channel module – making it very useful for duophonic patches or for controlling/synthesizing the kick/snare rhythmic backbone of a patch.
+** Peaks provides 4 different functions in a small 8-HP package: ADSR, LFO / Tap tempo LFO, and drum synth.
+** Their common point? 
+*** They are all about generating an audio or CV signal in response to a trigger, and are all focused on rhythmic works.
+* Four in one…
+* ADSR envelope generator
+** Segment durations ranging from 0.2ms to 8s.
+** Quartic attack, exponential decay, exponential release.
+* LFO and tap-tempo LFO
+** 0.03 Hz to 160 Hz.
+** 5 basic waveforms: square, triangle, sine, stepped, random.
+** Waveform variations and morphing for each of these: PWM, slope, folding/harmonics, step size, interpolation.
+** Phase at reset control.
+** Tap LFO can lock onto irregular rhythms.
+* Drum synth
+** Channel 1: 808 kick model with extra parameters (tune, punch).
+** Channel 2: 808 snare model with extra parameters (tune, decay).
+** Channel 2: A specific combination of settings transform the snare into a modelled 808 hi-hat.
+* Control modes
+** Twin: Channel 1&2 share the same parameters but can be triggered independently.
+** Split: Channel 1 is edited by knobs 1&2, channel 2 edited by knobs 3&4, with a simplified 2-parameter control scheme.
+** Expert: Channel 1&2 are completely independent.
+* Specifications
+** Inputs: 100k impedance, threshold at 0.6V.
+** 16-bit CV/audio generation with 48kHz sample rate.
+** Output level: 0 to +8V for envelopes, 10Vpp for LFOs and drum signals.
