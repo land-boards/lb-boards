@@ -1,4 +1,4 @@
-From: https://github.com/matias-levy/peaks
+Originally from: https://github.com/matias-levy/peaks
 
 # $peaks, a fully-functional low-cost reversion of [Mutable instrument's Peaks](https://mutable-instruments.net/modules/peaks/)
 
