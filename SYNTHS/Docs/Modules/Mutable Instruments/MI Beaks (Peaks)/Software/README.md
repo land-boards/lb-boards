@@ -2,7 +2,7 @@ From: https://github.com/matias-levy/peaks
 
 # $peaks, a fully-functional low-cost reversion of [Mutable instrument's Peaks](https://mutable-instruments.net/modules/peaks/)
 
-![Photo of the finished build](photo.jpg)
+![Photo of the finished build](http://land-boards.com/blwiki/images/c/cd/Beaks_P1080894-720px.jpg)
 
 
 ## Motivation
