@@ -1,0 +1,37 @@
+Designator,Package,Quantity,Designation,"Tayda link, notes"
+"J12,J14",PinHeader_1x10_P2.54mm_Vertical,2,Conn_01x10_Female,https://www.taydaelectronics.com/40-pin-2-54-mm-single-row-female-pin-header.html
+"J11,J13",PinHeader_1x10_P2.54mm_Vertical,2,Conn_01x10_Male,https://www.taydaelectronics.com/40-pin-2-54-mm-single-row-pin-header-strip.html
+J10,PinHeader_1x03_P2.54mm_Vertical,1,Conn_01x03_Male,"same as previous, no need to order extra"
+J9,IDC-Header_2x05_P2.54mm_Vertical,1,Conn_02x05_Odd_Even,https://www.taydaelectronics.com/10-pin-box-header-connector-2-54mm.html
+"D1,D2",D_DO-41_SOD81_P7.62mm_Horizontal,2,1N4001,https://www.taydaelectronics.com/1n4001-diode-1a-50v.html
+"Q1,Q2",TO-92L_Inline_Wide,2,2N3904,https://www.taydaelectronics.com/2n3904-npn-general-propose-transistor.html
+"R1,R2,R3,R4,R5,R6,R7,R9",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,8,100K,https://www.taydaelectronics.com/10-x-resistor-100k-ohm-1-4w-1-metal-film-pkg-of-10.html
+"R32,R32,R33,R34,R35",R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,5,1K,https://www.taydaelectronics.com/10-x-resistor-1k-ohm-1-4w-1-metal-film-pkg-of-10.html
+"R11,R12",R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2,220R,https://www.taydaelectronics.com/resistor-220-ohm-1-4w-1-metal-film-pkg-of-10.html
+R10,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,1,"5,1K",https://www.taydaelectronics.com/resistor-5-1k-ohm-1-4w-1-metal-film-pkg-of-10.html
+"C5,C6",C_Disc_D5.0mm_W2.5mm_P2.50mm,2,1nF ceramic,https://www.taydaelectronics.com/10-1nf-50v-ceramic-disc-capacitor.html
+"C3,C4",C_Disc_D5.0mm_W2.5mm_P2.50mm,2,100nF ceramic,https://www.taydaelectronics.com/a-553-0-1uf-50v-ceramic-disc-capacitor-pkg-of-10.html
+"C1,C2",CP_Radial_D6.3mm_P2.50mm,2,10uF electrolytic,https://www.taydaelectronics.com/10uf-35v-105c-radial-electrolytic-capacitor-5x11mm.html
+U4,TO-92L_Inline_Wide,1,"LM4040LP-5 (or 10V Zener, see notes)",https://www.taydaelectronics.com/1n4740a-1n4740-zener-diode-10v-1w.html
+U3,DIP-8_W7.62mm_LongPads,1,MCP6002-xP,"NOT AVAILABLE from tayda. I may make another version that uses non rail-to-rail op-amps, like MCP602 or LM358. If you use them in current design you don’t get the full pot range"
+"SW1,SW2",DPDT_Momentary_Push_Button_Switch,2,SW_Push_DPDT_Latching,https://www.taydaelectronics.com/push-button-switch-latching-dpdt-0-5a-50vdc-6x6mm.html
+"RV1,RV2",Potentiometer,2,R_POT 10k,https://www.taydaelectronics.com/tayda-10k-ohm-linear-taper-potentiometer-spline-shaft-pcb-mount-9mm.html
+"J1,J2,J3,J4,J5,J6,J7,J8",Thonkiconn,8,Jack,https://www.taydaelectronics.com/pj-3001f-3-5-mm-mono-phone-jack.html
+"LED1,LED2",LED_D3.0mm,2,LED_Bicolor_2pin,https://www.taydaelectronics.com/bi-color-led-3mm-red-green.html
+A1,Arduino_Nano,1,Arduino_Nano,"https://www.taydaelectronics.com/nano-3-0-controller-compatible-with-arduino-nano-ch340-usb-driver.html Out of stock currently at tayda, but available from many places"
+,,,,
+EXTRAS,PinHeader_1x15_P2.54mm_Vertical,2,Headers for Arduino Nano,https://www.taydaelectronics.com/15-pin-2-54-mm-single-row-female-pin-header.html
+,Push Button Switch Caps White Color 6x5mm,2,Button Caps,https://www.taydaelectronics.com/push-button-switch-caps-white-color-6-x-5-mm.html
+,Knob DAVIES 1900H CLONE White,2,Knobs for pots,https://www.taydaelectronics.com/knob-davies-1900h-clone-white.html
+,Mini Jumper 2.54mm Gold Plated Closed Cover,1,Jumper for auto-gate config,https://www.taydaelectronics.com/mini-jumper-2-54mm-gold-plated-closed-cover.html OR https://www.taydaelectronics.com/mini-jumper-2-00mm-gold-plated-closed-cover.html
+,8 pin DIP IC Socket Adaptor Solder Type,1,Socket for MCP6002,https://www.taydaelectronics.com/8-pin-dip-ic-socket-adaptor-solder-type.html
+,,,,
+NOTES,,,,"Total cost of Tayda cart with the Arduino is about $10, without it’s about $6,3. CHEAP!"
+,,,,"The amount needed for tayda ordering may differ, ex: you only need to order one 40 pin header strip and cut to right sizes"
+,,,,"You may have to experiment with lower values for R10, until you get -5V at the anode (pin 3) of the LM4040"
+,,,,"You can replace the expensive and hard to source LM4040LP-5 with a 10V Zener, you just have to replace R3 and R6 with 200k resistors. The Zener and resistors and 14 cents to the cart"
+,,,,LED orientation isn’t vital so long as it’s consistent. Use LED orientation indicated on PCB (shorter lead to square pad) to have original Branches colors
+,,,,Switch orientation isn’t vital so long as it’s consistent. Just changes which mode corresponds to pushed/unpushed position
+,,,,"You could just use 1K resistors for R11 and R12, it would save ordering extra 220R ones. It just makes LEDs slightly duller"
+,,,,"You can get two 6mm M3 screws and a 11mm M3 standoff to hold the control and brain boars together, but I don’t find them necessary"
+,,,,"Auto-gate generation isn’t implemented yet, might never be"
