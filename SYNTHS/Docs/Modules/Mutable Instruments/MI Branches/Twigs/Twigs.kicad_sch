@@ -2075,7 +2075,7 @@
     (property "Reference" "RVX1" (id 0) (at 51.6382 27.8384 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100K" (id 1) (at 51.6382 25.527 0)
+    (property "Value" "10K" (id 1) (at 51.6382 25.527 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PJ302M:ModdedPotentiometer" (id 2) (at 53.34 26.67 0)
@@ -2179,8 +2179,8 @@
   (symbol (lib_id "Device:R") (at 61.595 110.49 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060bdd7d6)
-    (property "Reference" "RX11" (id 0) (at 61.595 105.2322 90))
-    (property "Value" "100K" (id 1) (at 61.595 107.5436 90))
+    (property "Reference" "RX11" (id 0) (at 61.595 107.95 90))
+    (property "Value" "100K" (id 1) (at 61.595 110.49 90))
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (id 2) (at 61.595 108.712 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2253,7 +2253,7 @@
   (symbol (lib_id "Connector:AudioJack2_SwitchT") (at 217.17 93.345 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060c039fb)
-    (property "Reference" "J3" (id 0) (at 221.7166 91.6432 0)
+    (property "Reference" "JX3" (id 0) (at 221.7166 91.6432 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Jack" (id 1) (at 221.7166 93.9546 0)
@@ -2304,7 +2304,7 @@
   (symbol (lib_id "Connector:AudioJack2_SwitchT") (at 217.17 111.125 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060c1c0ad)
-    (property "Reference" "J4" (id 0) (at 221.7166 109.4232 0)
+    (property "Reference" "JX4" (id 0) (at 221.7166 109.4232 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Jack" (id 1) (at 221.7166 111.7346 0)
@@ -2404,8 +2404,8 @@
   (symbol (lib_id "Device:D") (at 68.58 168.91 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060c71eca)
-    (property "Reference" "D1" (id 0) (at 68.58 174.4218 0))
-    (property "Value" "1N5819" (id 1) (at 68.58 172.1104 0))
+    (property "Reference" "D1" (id 0) (at 68.58 165.735 0))
+    (property "Value" "BAT41" (id 1) (at 68.58 172.1104 0))
     (property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" (id 2) (at 68.58 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2419,8 +2419,8 @@
   (symbol (lib_id "Device:R") (at 53.975 99.06 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000060cf1310)
-    (property "Reference" "R35" (id 0) (at 48.7172 99.06 90))
-    (property "Value" "1K" (id 1) (at 51.0286 99.06 90))
+    (property "Reference" "RX12" (id 0) (at 51.435 99.06 90))
+    (property "Value" "1K" (id 1) (at 53.975 99.06 90))
     (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (id 2) (at 52.197 99.06 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -2497,7 +2497,7 @@
   (symbol (lib_id "Connector:AudioJack2_SwitchT") (at 217.17 128.905 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 23559653-a313-4f99-be3c-676829ec40b0)
-    (property "Reference" "J5" (id 0) (at 221.7166 127.2032 0)
+    (property "Reference" "JX5" (id 0) (at 221.7166 127.2032 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Jack" (id 1) (at 221.7166 129.5146 0)
@@ -2769,7 +2769,7 @@
   (symbol (lib_id "Connector:AudioJack2_SwitchT") (at 217.17 146.685 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9eae5e22-9db0-4451-bdb1-2bb1f306a9cf)
-    (property "Reference" "J6" (id 0) (at 221.7166 144.9832 0)
+    (property "Reference" "JX6" (id 0) (at 221.7166 144.9832 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "Jack" (id 1) (at 221.7166 147.2946 0)
@@ -2906,7 +2906,7 @@
     (property "Reference" "RVX2" (id 0) (at 51.6382 78.0034 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100K" (id 1) (at 51.6382 75.692 0)
+    (property "Value" "10K" (id 1) (at 51.6382 75.692 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PJ302M:ModdedPotentiometer" (id 2) (at 53.34 76.835 0)
@@ -3009,7 +3009,7 @@
       (reference "C1") (unit 1) (value "10uF") (footprint "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-000060c71eca"
-      (reference "D1") (unit 1) (value "1N5819") (footprint "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal")
+      (reference "D1") (unit 1) (value "BAT41") (footprint "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal")
     )
     (path "/7e002b08-4e72-4141-9ced-cf3ad5894534"
       (reference "D2") (unit 1) (value "BAT41") (footprint "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp")
@@ -3022,18 +3022,6 @@
     )
     (path "/282156d4-fb9a-4e89-9b7d-23fd0b4610d5"
       (reference "D5") (unit 1) (value "BAT41") (footprint "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp")
-    )
-    (path "/00000000-0000-0000-0000-000060c039fb"
-      (reference "J3") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
-    )
-    (path "/00000000-0000-0000-0000-000060c1c0ad"
-      (reference "J4") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
-    )
-    (path "/23559653-a313-4f99-be3c-676829ec40b0"
-      (reference "J5") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
-    )
-    (path "/9eae5e22-9db0-4451-bdb1-2bb1f306a9cf"
-      (reference "J6") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
     )
     (path "/00000000-0000-0000-0000-000060bee87d"
       (reference "J9") (unit 1) (value "Conn_02x05_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical")
@@ -3050,6 +3038,18 @@
     (path "/00000000-0000-0000-0000-000060bca7de"
       (reference "JX2") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
     )
+    (path "/00000000-0000-0000-0000-000060c039fb"
+      (reference "JX3") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
+    )
+    (path "/00000000-0000-0000-0000-000060c1c0ad"
+      (reference "JX4") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
+    )
+    (path "/23559653-a313-4f99-be3c-676829ec40b0"
+      (reference "JX5") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
+    )
+    (path "/9eae5e22-9db0-4451-bdb1-2bb1f306a9cf"
+      (reference "JX6") (unit 1) (value "Jack") (footprint "PJ302M:ModdedThonkiconn")
+    )
     (path "/00000000-0000-0000-0000-000060c57104"
       (reference "LED1") (unit 1) (value "LED_Dual_2pin") (footprint "LED_THT:LED_D3.0mm")
     )
@@ -3062,14 +3062,11 @@
     (path "/5c78acd8-6613-4597-8e7c-7c78b1731909"
       (reference "R1") (unit 1) (value "10") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
-    (path "/00000000-0000-0000-0000-000060cf1310"
-      (reference "R35") (unit 1) (value "1K") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
-    )
     (path "/00000000-0000-0000-0000-000060bc8ba5"
-      (reference "RVX1") (unit 1) (value "100K") (footprint "PJ302M:ModdedPotentiometer")
+      (reference "RVX1") (unit 1) (value "10K") (footprint "PJ302M:ModdedPotentiometer")
     )
     (path "/e833dfc2-4ba6-4f1a-bbd3-029f3ede3a13"
-      (reference "RVX2") (unit 1) (value "100K") (footprint "PJ302M:ModdedPotentiometer")
+      (reference "RVX2") (unit 1) (value "10K") (footprint "PJ302M:ModdedPotentiometer")
     )
     (path "/4aa9c7c8-9714-4777-8670-be4bdf4f6f0a"
       (reference "RX2") (unit 1) (value "1K") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
@@ -3088,6 +3085,9 @@
     )
     (path "/00000000-0000-0000-0000-000060bdd7d6"
       (reference "RX11") (unit 1) (value "100K") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
+    )
+    (path "/00000000-0000-0000-0000-000060cf1310"
+      (reference "RX12") (unit 1) (value "1K") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
     )
     (path "/00000000-0000-0000-0000-000060bcd0b4"
       (reference "RX13") (unit 1) (value "100K") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal")
