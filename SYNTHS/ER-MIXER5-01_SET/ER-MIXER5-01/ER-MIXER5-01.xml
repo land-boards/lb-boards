@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\HPz420\Documents\GitHub\land-boards\lb-boards\SYNTHS\ER-MIXER5-01_SET\ER-MIXER5-01\ER-MIXER5-01.kicad_sch</source>
-    <date>10/25/2022 2:30:22 PM</date>
+    <date>12/28/2022 6:21:20 AM</date>
     <tool>Eeschema (6.0.1)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -68,6 +68,24 @@
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>dd81417d-c494-45ad-9b1b-cbe25b267081</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>BAT41</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61a55e3a-73e1-4b5e-9e35-63f792c09229</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>BAT41</value>
+      <footprint>Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp</footprint>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38d5615b-0179-4f6a-8819-223f00953545</tstamps>
     </comp>
     <comp ref="J1">
       <value>PJ-301BM</value>
@@ -215,58 +233,58 @@
       <tstamps>5d23855c-4b93-4837-9b3b-c68997cd9de4</tstamps>
     </comp>
     <comp ref="RV1">
-      <value>10K</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>d01102e9-b170-4eb1-a0a4-9a31feb850b7</tstamps>
+      <tstamps>1807c891-5ccf-491b-b7cb-6605d0030f30</tstamps>
     </comp>
     <comp ref="RV2">
-      <value>10K(A)</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>c9e6388e-4713-4e10-9afb-872c5bde531c</tstamps>
+      <tstamps>f9150491-93ff-43f0-be62-6e80d4885751</tstamps>
     </comp>
     <comp ref="RV3">
-      <value>10K(A)</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>72ba5379-3b80-4878-986f-07fdd8f44b9f</tstamps>
+      <tstamps>7584b969-db68-44f4-aab5-2fbaee1a1660</tstamps>
     </comp>
     <comp ref="RV4">
-      <value>10K(A)</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>a92cda2f-5261-4d07-813b-8b41f57e72f1</tstamps>
+      <tstamps>c8c061b1-f30f-40d8-87f9-8fe6625e9767</tstamps>
     </comp>
     <comp ref="RV5">
-      <value>10K(A)</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>580f0279-4851-4f02-891d-2077d20709ec</tstamps>
+      <tstamps>4a1f4571-b5e2-4942-a2cd-fc8c36372978</tstamps>
     </comp>
     <comp ref="RV6">
-      <value>10K(A)</value>
+      <value>B100K</value>
       <footprint>Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical</footprint>
-      <libsource lib="LandBoards" part="POT" description=""/>
+      <libsource lib="LandBoards_Conns" part="R_Pot_CW" description="Potentiometer"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ER-MIXER5-01.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>8f552861-959c-49ad-b0a7-9d6762a9bae6</tstamps>
+      <tstamps>6c4823d3-472d-4a47-84db-d5e7ac2712ba</tstamps>
     </comp>
     <comp ref="U1">
       <value>TL072</value>
@@ -385,6 +403,25 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <docs>~</docs>
@@ -401,10 +438,16 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="LandBoards" part="POT">
+    <libpart lib="LandBoards_Conns" part="R_Pot_CW">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
       <fields>
         <field name="Reference">RV</field>
-        <field name="Value">POT</field>
+        <field name="Value">R_Pot_CW</field>
+        <field name="Datasheet">~</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
@@ -426,23 +469,21 @@
     <library logical="Device">
       <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
     </library>
-    <library logical="LandBoards">
-      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards.kicad_sym</uri>
+    <library logical="LandBoards_Conns">
+      <uri>C:/Users/HPz420/Documents/GitHub/land-boards/lb-boards/KiCAD/library/LandBoards_Conns.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="+12V">
       <node ref="C1" pin="1" pintype="passive"/>
       <node ref="C3" pin="1" pintype="passive"/>
-      <node ref="J8" pin="10" pinfunction="Pin_10" pintype="passive"/>
-      <node ref="J8" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="V+" pintype="power_in"/>
     </net>
     <net code="2" name="-12V">
       <node ref="C2" pin="2" pintype="passive"/>
       <node ref="C4" pin="2" pintype="passive"/>
-      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="V-" pintype="power_in"/>
     </net>
     <net code="3" name="/OUT">
@@ -544,15 +585,25 @@
       <node ref="U1" pin="3" pinfunction="+" pintype="input"/>
       <node ref="U1" pin="5" pinfunction="+" pintype="input"/>
     </net>
-    <net code="19" name="Net-(R7-Pad2)">
+    <net code="19" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J8" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="J8" pin="9" pinfunction="Pin_9" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(R7-Pad2)">
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
       <node ref="U1" pin="1" pintype="output"/>
     </net>
-    <net code="20" name="unconnected-(J1-PadTN)">
+    <net code="22" name="unconnected-(J1-PadTN)">
       <node ref="J1" pin="TN" pintype="passive"/>
     </net>
-    <net code="21" name="unconnected-(RV1-Pad1)">
+    <net code="23" name="unconnected-(RV1-Pad1)">
       <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
   </nets>
