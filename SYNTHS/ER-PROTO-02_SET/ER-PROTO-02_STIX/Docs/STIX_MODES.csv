@@ -1,0 +1,9 @@
+Modes,RV3,Dependency,RV4,Dependency,Operation
+000,7-12,OUT1/OUT2 independent,7-9,OUT1/OUT2 independent,"Normal, coin toss one of OUTxA, OUTxB"
+001,7-12,OUT1/OUT2 independent,9-12,OUT1/OUT2 independent,"Coin toss determines OUTxA, OUTxB independently"
+010,7-12,OUT1/OUT2 independent,12-3,OUT1/OUT2 independent,Ping pong A/B
+011,7-12,OUT1/OUT2 independent,3-5,OUT1/OUT2 independent,Coin toss both on
+100,12-5,OUT1/OUT2 dependent,7-9,OUT1/OUT2 dependent,"Normal, coin toss one of OUT1A, OUT1B, OUT2A, OUT2B"
+101,12-5,OUT1/OUT2 dependent,9-12,OUT1/OUT2 dependent,"Coin toss determines OUTxA, OUTxB dependently"
+110,12-5,OUT1/OUT2 dependent,12-3,OUT1/OUT2 dependent,"Sequential OUT1A, OUT1B, OUT2A, OUT2B"
+111,12-5,OUT1/OUT2 dependent,3-5,OUT1/OUT2 dependent,All on
