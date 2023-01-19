@@ -1,24 +1,24 @@
 /*
-// Simple DIY Electronic Music Projects
-//    diyelectromusic.wordpress.com
-//
-//  Arduino Mozzi Sample Drum Machine
-//  https://diyelectromusic.wordpress.com/2021/06/22/arduino-mozzi-sample-drum-machine/
-//
+  // Simple DIY Electronic Music Projects
+  //    diyelectromusic.wordpress.com
+  //
+  //  Arduino Mozzi Sample Drum Machine
+  //  https://diyelectromusic.wordpress.com/2021/06/22/arduino-mozzi-sample-drum-machine/
+  //
       MIT License
-      
+
       Copyright (c) 2020 diyelectromusic (Kevin)
-      
+
       Permission is hereby granted, free of charge, to any person obtaining a copy of
       this software and associated documentation files (the "Software"), to deal in
       the Software without restriction, including without limitation the rights to
       use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
       the Software, and to permit persons to whom the Software is furnished to do so,
       subject to the following conditions:
-      
+
       The above copyright notice and this permission notice shall be included in all
       copies or substantial portions of the Software.
-      
+
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
       IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
       FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -72,7 +72,7 @@
 #define D_SD  4
 #define D_CH  3
 #define D_OH  2
-int d_pins[D_NUM] = {D_BD,D_SD,D_OH,D_CH};
+int d_pins[D_NUM] = {D_BD, D_SD, D_OH, D_CH};
 
 // use: Sample <table_size, update_rate> SampleName (wavetable)
 Sample <BD_NUM_CELLS, AUDIO_RATE> aBD(BD_DATA);
@@ -86,33 +86,33 @@ bool trig[D_NUM];
 
 #ifdef CALIBRATE
 void calcMaxMin (int drum) {
-  int8_t max=0;
-  int8_t min=0;
+  int8_t max = 0;
+  int8_t min = 0;
   int num_cells;
   int8_t *pData;
   switch (drum) {
     case D_BD:
-       num_cells = BD_NUM_CELLS;
-       pData = (int8_t *)&BD_DATA[0];
-       break;
+      num_cells = BD_NUM_CELLS;
+      pData = (int8_t *)&BD_DATA[0];
+      break;
     case D_SD:
-       num_cells = SD_NUM_CELLS;
-       pData = (int8_t *)&SD_DATA[0];
-       break;
+      num_cells = SD_NUM_CELLS;
+      pData = (int8_t *)&SD_DATA[0];
+      break;
     case D_CH:
-       num_cells = CH_NUM_CELLS;
-       pData = (int8_t *)&CH_DATA[0];
-       break;
+      num_cells = CH_NUM_CELLS;
+      pData = (int8_t *)&CH_DATA[0];
+      break;
     case D_OH:
-       num_cells = OH_NUM_CELLS;
-       pData = (int8_t *)&OH_DATA[0];
-       break;
+      num_cells = OH_NUM_CELLS;
+      pData = (int8_t *)&OH_DATA[0];
+      break;
     default:
-       Serial.print("Unknown drum on calibration\n");
-       return;
+      Serial.print("Unknown drum on calibration\n");
+      return;
   }
-  for (int i=0; i<num_cells; i++) {
-    int8_t val = pgm_read_byte_near (pData+i);
+  for (int i = 0; i < num_cells; i++) {
+    int8_t val = pgm_read_byte_near (pData + i);
     if (val > max) max = val;
     if (val < min) min = val;
   }
@@ -121,7 +121,7 @@ void calcMaxMin (int drum) {
   Serial.print(":\tMax: ");
   Serial.print(max);
   Serial.print("\tMin: ");
-  Serial.println(min);  
+  Serial.println(min);
 }
 #endif
 
@@ -137,7 +137,7 @@ void startDrum (int drum) {
 unsigned long millitime;
 void ledOff () {
   if (millitime < millis()) {
-     digitalWrite(TRIG_LED, LOW);
+    digitalWrite(TRIG_LED, LOW);
   }
 }
 
@@ -149,7 +149,7 @@ void ledOn () {
 void setup () {
   pinMode(TRIG_LED, OUTPUT);
   ledOff();
-  for (int i=0; i<D_NUM; i++) {
+  for (int i = 0; i < D_NUM; i++) {
     pinMode(d_pins[i], INPUT_PULLUP);
   }
   startMozzi();
@@ -170,21 +170,24 @@ void setup () {
 
 int drumScan;
 void updateControl() {
-  if (!digitalRead(d_pins[drumScan])) {
+  if (digitalRead(d_pins[drumScan]))
+  {
     if (!trig[drumScan]) {
       ledOn();
       startDrum(d_pins[drumScan]);
       trig[drumScan] = true;
     }
-  } else {
+  }
+  else
+  {
     trig[drumScan] = false;
-  }  
+  }
   drumScan++;
   if (drumScan >= D_NUM) drumScan = 0;
-  ledOff();
+    ledOff();
 }
 
-AudioOutput_t updateAudio(){
+AudioOutput_t updateAudio() {
   // Need to add together all the sample sources.
   // We down-convert using the scaling factor worked out
   // for our specific sample set from running in "CALIBRATE" mode.
@@ -193,6 +196,6 @@ AudioOutput_t updateAudio(){
   return MonoOutput::fromNBit(OUTPUTSCALING, d_sample);
 }
 
-void loop(){
+void loop() {
   audioHook();
 }
