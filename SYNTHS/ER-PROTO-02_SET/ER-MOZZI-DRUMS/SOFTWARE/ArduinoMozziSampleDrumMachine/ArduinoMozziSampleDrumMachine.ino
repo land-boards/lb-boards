@@ -5,6 +5,10 @@
   //  Arduino Mozzi Sample Drum Machine
   //  https://diyelectromusic.wordpress.com/2021/06/22/arduino-mozzi-sample-drum-machine/
   //
+  //  DGG - 2022-01-19 - Modified to use postive TRIGGER inputs
+  //  Runs on
+  //    http://land-boards.com/blwiki/index.php?title=ER-MOZZI-DRUMS
+  //
       MIT License
 
       Copyright (c) 2020 diyelectromusic (Kevin)
