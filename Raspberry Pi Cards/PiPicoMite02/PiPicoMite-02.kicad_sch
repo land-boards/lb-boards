@@ -3088,7 +3088,7 @@
   )
 
   (symbol (lib_id "LandBoards:COUPON") (at 287.02 257.81 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 00000000-0000-0000-0000-000059399b7a)
     (property "Reference" "TEST1" (id 0) (at 287.02 250.19 0)
       (effects (font (size 1.524 1.524)))
@@ -3826,7 +3826,7 @@
   )
 
   (symbol (lib_id "LandBoards:COUPON") (at 287.02 242.57 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 72e8f123-0bc8-4f5c-8f5e-c042829ee45d)
     (property "Reference" "BOARD2" (id 0) (at 287.02 234.95 0)
       (effects (font (size 1.524 1.524)))
@@ -3911,7 +3911,7 @@
     (in_bom yes) (on_board yes)
     (uuid a2095d65-2182-4f3d-96c4-50601ede76e1)
     (property "Reference" "J2" (id 0) (at 29.21 40.64 0))
-    (property "Value" "Socket, Female. 1x20" (id 1) (at 38.1 93.98 0))
+    (property "Value" "Header, Strt. 1x20" (id 1) (at 29.21 93.98 0))
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" (id 2) (at 58.42 100.33 0))
     (property "Datasheet" "~" (id 3) (at 29.21 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3975,7 +3975,7 @@
     (property "Reference" "J3" (id 0) (at 156.21 40.64 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Socket, Female. 1x20" (id 1) (at 138.43 93.98 0)
+    (property "Value" "Header, Strt. 1x20" (id 1) (at 148.59 93.98 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical" (id 2) (at 128.27 100.33 0))
@@ -4255,10 +4255,10 @@
       (reference "J1") (unit 1) (value "Conn_01x05") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal")
     )
     (path "/a2095d65-2182-4f3d-96c4-50601ede76e1"
-      (reference "J2") (unit 1) (value "Socket, Female. 1x20") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical")
+      (reference "J2") (unit 1) (value "Header, Strt. 1x20") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical")
     )
     (path "/aff9b715-004b-496b-b7a5-8a3d352dea1a"
-      (reference "J3") (unit 1) (value "Socket, Female. 1x20") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical")
+      (reference "J3") (unit 1) (value "Header, Strt. 1x20") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x20_P2.54mm_Vertical")
     )
     (path "/288fc15e-757f-4fab-b8f3-4722a12378d4/ec4fc1cc-a430-4ba4-915c-e133b77dc12b"
       (reference "J4") (unit 1) (value "Conn_01x02") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
