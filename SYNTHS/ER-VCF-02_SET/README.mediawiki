@@ -1,3 +1,18 @@
 = Voltage Controlled Filter =
 
 <img src="http://land-boards.com/blwiki/images/1/1c/ER-VCF-02_Front-Back-720px.jpg"></img>
+
+== Features ==
+
+* This is a diode ladder VCF - original design by Moritz Klein, with a couple of small adaptions made by [https://github.com/tkilla64/eurorack/tree/main/diode-vcf T Killa]
+* There are two CV inputs
+** CV1 with an attenuator to control the amount
+** CV2 with an attenuverter so it's possible to invert the signal as well as controlling the amount of modulation
+* The filter is a low-pass filter only
+* 3U tall
+* 6 HP (30mm) wide
+* Uses [[ER-PROTO-02]] controls cards
+
+=== Credits ===
+
+* [https://github.com/tkilla64/eurorack/tree/main/diode-vcf Tommy Killander Design]
