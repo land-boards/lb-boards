@@ -52,6 +52,7 @@
 ;	*	HARDWARE LOCATION (TBA)
 ;	O	ECHO ON
 ;	N	ECHO OFF
+;	4	RUN FORTH
 ;
 ; DGG - Addresses for ACIA
 ACIACS	EQU	$8000		; ACIA Control/Status port
