@@ -1,0 +1,49 @@
+Name       SIMPLE-68008_PLD_2;
+Partno     ATF16V8B;
+Date       06/19/24;
+Revision   01;
+Designer   DOUG G;
+Company    LAND BOARDS LLC;
+Assembly   U03;
+Location   RUSTBELT, USA;
+Device     G16V8;
+
+/*
+	RESET CONTROLLER, ROM CHIP SELECT
+*/
+
+/* Inputs */
+PIN    1   = CLK;
+PIN    2   = !CPUWR;
+PIN    3   = !CPUDS;
+PIN    4   = CPUA16;
+PIN    5   = CPUA17;
+PIN    6   = CPUA18;
+PIN    7   = CPUA19;
+PIN    8   = !POR;
+PIN    9   = CPUD0;
+
+/* Outputs */
+PIN    14  = SWAP;
+PIN    15  = !ROMCS;
+PIN    16  = !MEMRD;
+PIN    18  = !CPUHLT;
+PIN    19  = !CPURES;
+
+/* CLEAR SWAP AT POWER UP, RESET	*/
+/* SET SWAP BY FIRST WRITE TO START OF EPROM SPACE		*/
+SWAP.D = CPUDS &  CPUWR & CPUA19 & !CPUA18 & !CPUA17 & !CPUA16 & CPUD0 & !POR
+#        SWAP  & !POR;
+
+MEMRD = !CPUWR & CPUDS & !CPUA19 & SWAP;
+
+ROMCS = CPUDS & !CPUWR & CPUA19 & !CPUA18
+#       CPUDS & !CPUWR & CPUA19 & !CPUA17
+#       CPUDS & !CPUWR & CPUA19 & !CPUA16
+#       CPUDS & !CPUA19 & !CPUA18 & !CPUA17 & !CPUA16 & !SWAP;
+
+CPUHLT_N.OE = POR;
+CPUHLT_N = POR;
+
+CPURES_N.OE = POR;
+CPURES_N = POR;

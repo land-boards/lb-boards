@@ -1,0 +1,200 @@
+{COMPONENT C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\SIMPLE-68008\LOGIC\SIMPLE-68008_PLD_1\SIMPLE-68008_PLD_1.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Wed Jun 19 09:56:08 2024 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 320}}
+   {P CPUAS' {Pt "INPUT"}{Lq 0}{Ploc 100 300}}
+   {P CPUDS' {Pt "INPUT"}{Lq 0}{Ploc 100 280}}
+   {P CPUA16 {Pt "INPUT"}{Lq 0}{Ploc 100 260}}
+   {P CPUA17 {Pt "INPUT"}{Lq 0}{Ploc 100 240}}
+   {P CPUA18 {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P CPUA19 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P CPUFC0 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P CPUFC1 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P CPUFC2 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P DDTACK' {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P SWAP {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P CPUIACK' {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P WAIT1 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P RAMSEL' {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P WAIT2 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P DUARTCS' {Pt "I/O"}{Lq 0}{Ploc 350 20}}
+   {P CPUDTACK' {Pt "I/O"}{Lq 0}{Ploc 350 40}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 225 350}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 330}
+   {Pnl 120 310}
+   {Pnl 120 290}
+   {Pnl 120 270}
+   {Pnl 120 250}
+   {Pnl 120 230}
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 330 30}
+   {Pnl 330 50}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 11 12 13 14 17 18 19 15 16}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 340 320 0}
+   {L 130 320 100 320}
+   {L 120 300 100 300}
+   {C 125 300 5}
+   {L 120 280 100 280}
+   {C 125 280 5}
+   {L 130 260 100 260}
+   {L 130 240 100 240}
+   {L 130 220 100 220}
+   {L 130 200 100 200}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 120 120 100 120}
+   {C 125 120 5}
+   {L 130 100 100 100}
+   {L 120 80 100 80}
+   {C 125 80 5}
+   {L 130 60 100 60}
+   {L 120 40 100 40}
+   {C 125 40 5}
+   {L 130 20 100 20}
+   {C 325 20 5}
+   {L 330 20 350 20}
+   {C 325 40 5}
+   {L 330 40 350 40}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "CLK" 140 320}
+   {T "CPUAS'" 140 300}
+   {T "CPUDS'" 140 280}
+   {T "CPUA16" 140 260}
+   {T "CPUA17" 140 240}
+   {T "CPUA18" 140 220}
+   {T "CPUA19" 140 200}
+   {T "CPUFC0" 140 180}
+   {T "CPUFC1" 140 160}
+   {T "CPUFC2" 140 140}
+   {T "DDTACK'" 140 120}
+   {T "SWAP" 140 100}
+   {T "CPUIACK'" 140 80}
+   {T "WAIT1" 140 60}
+   {T "RAMSEL'" 140 40}
+   {T "WAIT2" 140 20}
+   [Tj "RC"]
+   {T "DUARTCS'" 310 20}
+   {T "CPUDTACK'" 310 40}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8S" 225 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\SIMPLE-68008\LOGIC\SIMPLE-68008_PLD_1\SIMPLE-68008_PLD_1 225 340}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N CLK
+   }
+   {N CPUAS'
+   }
+   {N CPUDS'
+   }
+   {N CPUA16
+   }
+   {N CPUA17
+   }
+   {N CPUA18
+   }
+   {N CPUA19
+   }
+   {N CPUFC0
+   }
+   {N CPUFC1
+   }
+   {N CPUFC2
+   }
+   {N DDTACK'
+   }
+   {N SWAP
+   }
+   {N CPUIACK'
+   }
+   {N WAIT1
+   }
+   {N RAMSEL'
+   }
+   {N WAIT2
+   }
+   {N DUARTCS'
+   }
+   {N CPUDTACK'
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

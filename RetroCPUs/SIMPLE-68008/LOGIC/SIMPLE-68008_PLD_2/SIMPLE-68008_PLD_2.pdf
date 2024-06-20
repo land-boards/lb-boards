@@ -1,0 +1,178 @@
+{COMPONENT C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\SIMPLE-68008\LOGIC\SIMPLE-68008_PLD_2\SIMPLE-68008_PLD_2.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Wed Jun 19 09:55:55 2024 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 260}}
+   {P CPUWR' {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P CPUDS' {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P CPUA16 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P CPUA17 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P CPUA18 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P CPUA19 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P POR' {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P CPUD0 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P SWAP {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P CPUHLT' {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P CPURES' {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P ROMCS' {Pt "I/O"}{Lq 0}{Ploc 310 20}}
+   {P MEMRD' {Pt "I/O"}{Lq 0}{Ploc 310 40}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 205 290}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 270}
+   [Ts 15][Tj "RC"]
+   {Pnl 120 230}
+   {Pnl 120 210}
+   {Pnl 120 190}
+   {Pnl 120 170}
+   {Pnl 120 150}
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 290 30}
+   {Pnl 290 50}
+
+   {Sd A 1 2 3 4 5 6 7 8 9 14 18 19 15 16}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 280 280 0}
+   {L 130 260 100 260}
+   {L 130 270 140 260 130 250}
+   {L 120 220 100 220}
+   {C 125 220 5}
+   {L 120 200 100 200}
+   {C 125 200 5}
+   {L 130 180 100 180}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
+   {L 130 120 100 120}
+   {L 120 100 100 100}
+   {C 125 100 5}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 120 40 100 40}
+   {C 125 40 5}
+   {L 120 20 100 20}
+   {C 125 20 5}
+   {C 285 20 5}
+   {L 290 20 310 20}
+   {C 285 40 5}
+   {L 290 40 310 40}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "CLK" 140 260}
+   {T "CPUWR'" 140 220}
+   {T "CPUDS'" 140 200}
+   {T "CPUA16" 140 180}
+   {T "CPUA17" 140 160}
+   {T "CPUA18" 140 140}
+   {T "CPUA19" 140 120}
+   {T "POR'" 140 100}
+   {T "CPUD0" 140 80}
+   {T "SWAP" 140 60}
+   {T "CPUHLT'" 140 40}
+   {T "CPURES'" 140 20}
+   [Tj "RC"]
+   {T "ROMCS'" 270 20}
+   {T "MEMRD'" 270 40}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G16V8MS" 205 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\SIMPLE-68008\LOGIC\SIMPLE-68008_PLD_2\SIMPLE-68008_PLD_2 205 280}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N CLK
+   }
+   {N CPUWR'
+   }
+   {N CPUDS'
+   }
+   {N CPUA16
+   }
+   {N CPUA17
+   }
+   {N CPUA18
+   }
+   {N CPUA19
+   }
+   {N POR'
+   }
+   {N CPUD0
+   }
+   {N SWAP
+   }
+   {N CPUHLT'
+   }
+   {N CPURES'
+   }
+   {N ROMCS'
+   }
+   {N MEMRD'
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}
