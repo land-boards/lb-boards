@@ -1,6 +1,6 @@
 Name       SIMPLE-68008_PLD_1;
 Partno     ATF16V8B;
-Date       06/19/24;
+Date       07/13/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
@@ -33,15 +33,16 @@ PIN    17  = WAIT1;
 PIN    18  = !RAMSEL;
 PIN    19  = WAIT2;
 
-CPUIACK = CPUFC2 & CPUFC1 & CPUFC0 & CPUDS;
+CPUIACK = CPUA19 & CPUA18 & CPUA17 & CPUA16 & CPUFC2 & CPUFC1 & CPUFC0 & CPUDS;
 
 DUARTCS = CPUA19 & CPUA18 & CPUA17 & CPUA16 & CPUDS & !CPUFC1 &  CPUFC0;
 
-RAMSEL = !CPUA19 & SWAP & CPUDS & !CPUFC1 &  CPUFC0  /* User/Super Data */
-#        !CPUA19 & SWAP & CPUDS &  CPUFC1 & !CPUFC0; /* User/Super Program */
+RAMSEL = !CPUA19 & SWAP & CPUDS & !CPUFC1 &  CPUFC0  		/* User/Super Data */
+#        !CPUA19 & SWAP & CPUDS &  CPUFC1 & !CPUFC0; 		/* User/Super Program */
 
-CPUDTACK =  CPUA19 & CPUA18 & CPUA17 & CPUA16 & CPUDS & DDTACK	/* DUART	*/
-#           CPUA19 & !CPUA18 & CPUDS											/* EPROM	*/
-#           CPUA19 & !CPUA17 & CPUDS											/* EPROM	*/
-#           CPUA19 & !CPUA16 & CPUDS											/* EPROM	*/
-#          !CPUA19 & CPUDS;															/* RAM 		*/
+CPUDTACK = CPUA19 & CPUA18 & CPUA17 & CPUA16 & CPUDS & !CPUFC1 & CPUFC0 & DDTACK		/* DUART Data spaces	*/
+#	    CPUA19 & CPUA18 & CPUA17 & CPUA16 & CPUDS & CPUFC2 & CPUFC1 & CPUFC0 & DDTACK	/* DUART IACK space */
+#          CPUA19 & !CPUA18 & CPUDS								/* EPROM	*/
+#          CPUA19 & !CPUA17 & CPUDS								/* EPROM	*/
+#          CPUA19 & !CPUA16 & CPUDS								/* EPROM	*/
+#          !CPUA19 & CPUDS;									/* RAM 		*/
