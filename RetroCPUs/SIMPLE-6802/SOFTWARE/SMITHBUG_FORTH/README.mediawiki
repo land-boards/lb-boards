@@ -7,7 +7,6 @@
 * Fixes in FIG-Forth to get it to run from ROM
 ** The comments in the file indicated it could be run from ROM but the stack pointed to ORIG which is in ROM
 ** Fixed addresses of stack and I/O pointer to get it to work from ROM
-* [https://github.com/land-boards/lb-boards/tree/master/RetroCPUs/SIMPLE-6802/SOFTWARE/SMITHBUG_FORTH SMITHBUG and FIGFORTH in ROM GitHub]
 * Assemble
 <PRE>
 A68 SMITHBUG_FORTH_SIMPLE-6802_C000.ASM -l SMITHBUG_FORTH_SIMPLE-6802_C000.LST -s SMITHBUG_FORTH_SIMPLE-6802_C000.S
