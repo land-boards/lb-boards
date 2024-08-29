@@ -1,0 +1,398 @@
+{| class="wikitable"
+! CPU6502
+! 
+! 
+! MEM-02
+! 68B50
+|-
+| Pin
+| Signal
+| DIR
+| Used
+| Used
+|-
+| 1
+| Vcc
+| PWR
+| X
+| X
+|-
+| 2
+| Vcc
+| PWR
+| X
+| X
+|-
+| 3
+| CPUA22
+| OUT
+| X
+| X
+|-
+| 4
+| CPUA23
+| OUT
+| X
+| X
+|-
+| 4
+| CPUA20
+| OUT
+| X
+| X
+|-
+| 5
+| CPUA21
+| OUT
+| X
+| X
+|-
+| 7
+| CPUA18
+| OUT
+| X
+| X
+|-
+| 8
+| CPUA19
+| OUT
+| X
+| X
+|-
+| 9
+| CPUA16
+| OUT
+| X
+| X
+|-
+| 10
+| CPUA17
+| OUT
+| X
+| X
+|-
+| 11
+| CPUA14
+| OUT
+| X
+| X
+|-
+| 12
+| CPUA15
+| OUT
+| X
+| X
+|-
+| 13
+| CPUA12
+| OUT
+| X
+| X
+|-
+| 14
+| CPUA13
+| OUT
+| X
+| X
+|-
+| 15
+| CPUA10
+| OUT
+| X
+| X
+|-
+| 16
+| CPUA11
+| OUT
+| X
+| X
+|-
+| 17
+| CPUA8
+| OUT
+| X
+| X
+|-
+| 18
+| CPUA9
+| OUT
+| X
+| X
+|-
+| 19
+| CPUA6
+| OUT
+| X
+| X
+|-
+| 20
+| CPUA7
+| OUT
+| X
+| X
+|-
+| 21
+| CPUA4
+| OUT
+| X
+| X
+|-
+| 22
+| CPUA5
+| OUT
+| X
+| X
+|-
+| 23
+| CPUA2
+| OUT
+| X
+| X
+|-
+| 24
+| CPUA3
+| OUT
+| X
+| X
+|-
+| 25
+| CPUA0
+| OUT
+| X
+| X
+|-
+| 26
+| CPUA1
+| OUT
+| X
+| X
+|-
+| 27
+| CPUD0
+| BIDIR
+| X
+| X
+|-
+| 28
+| CPUD7
+| BIDIR
+| X
+| X
+|-
+| 29
+| CPUD1
+| BIDIR
+| X
+| X
+|-
+| 30
+| CPUD6
+| BIDIR
+| X
+| X
+|-
+| 31
+| CPUD2
+| BIDIR
+| X
+| X
+|-
+| 32
+| CPUD5
+| BIDIR
+| X
+| X
+|-
+| 33
+| CPUD3
+| BIDIR
+| X
+| X
+|-
+| 34
+| CPUD4
+| BIDIR
+| X
+| X
+|-
+| 35
+| MEMRD*
+| OUT
+| X
+| -
+|-
+| 36
+| RAMCS*
+| OUT
+| X
+| -
+|-
+| 37
+| IOCS*
+| OUT
+| X
+| X
+|-
+| 38
+| ROMCS*
+| OUT
+| X
+| -
+|-
+| 39
+| GND
+| PWR
+| X
+| X
+|-
+| 40
+| GND
+| PWR
+| X
+| X
+|-
+| 41
+| CPUCLK
+| OUT
+| NC
+| X
+|-
+| 42
+| VPA/SYNC
+| OUT
+| NC
+| -
+|-
+| 43
+| IRQB*
+| IN/PUP
+| NC
+| X
+|-
+| 44
+| VPB
+| GND
+| NC
+| -
+|-
+| 45
+| NMIB*
+| IN/PUP
+| NC
+| -
+|-
+| 46
+| CPURESB*
+| OUT/PUP
+| NC
+| 
+|-
+| 47
+| ABORT*/PH1OUT
+| OUT
+| NC
+| 
+|-
+| 48
+| MLB
+| OUT
+| NC
+| 
+|-
+| 49
+| VDA/PH2OUT
+| OUT
+| NC
+| 
+|-
+| 50
+| RDY
+| OUT
+| NC
+| 
+|-
+| 51
+| IORQ* (BE)
+| IN/NC
+| NC
+| 
+|-
+| 52
+| CPUE
+| NC
+| NC
+| 
+|-
+| 53
+| CPUMX
+| IN/PUP
+| NC
+| 
+|-
+| 54
+| RWB
+| OUT
+| NC
+| 
+|-
+| 55
+| 
+| 
+| 
+| 
+|-
+| 56
+| 
+| 
+| 
+| 
+|-
+| 57
+| 
+| 
+| 
+| 
+|-
+| 58
+| 
+| 
+| 
+| 
+|-
+| 59
+| 
+| 
+| 
+| 
+|-
+| 60
+| 
+| 
+| 
+| 
+|-
+| 61
+| 
+| 
+| 
+| 
+|-
+| 62
+| 
+| 
+| 
+| 
+|-
+| 63
+| 
+| 
+| 
+| 
+|-
+| 64
+| 
+| 
+| 
+| 
+|-
+|}

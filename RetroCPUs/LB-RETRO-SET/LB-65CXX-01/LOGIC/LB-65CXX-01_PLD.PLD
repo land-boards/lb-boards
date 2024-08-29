@@ -1,17 +1,16 @@
 Name       LB-65CXX-01_PLD;
 Partno     ATF16V8B;
-Date       08/18/24;
+Date       08/19/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
-Assembly   U00;
+Assembly   LB65CXX01_U2;
 Location   Rustbelt, US;
 Device     G16V8;
 
 /*
 	65C816 Control
 */
-
 
 /* Control inputs */
 PIN    1   = CLK;
@@ -21,26 +20,28 @@ PIN    4   = CPUA14;
 PIN    5   = CPUA15;
 PIN    6   = CPUREAD;
 PIN    8   = VPA;
-PIN    9   = VDA;
+PIN    9   = VDA;		/* Pin 39, PH2OUT - Enable line */
 
-/* Counter data inputs */
+/* Address Decode and Chip Select outputs */
 PIN    13  = !IOCS;
 PIN    14  = !ROMCS;
 PIN    15  = !MEMRD;
 PIN    16  = !RAMCS;
 PIN    18  = RDY;
 
-ROMCS = CPUA15 & CPUA14 & CPUA13 & CPUA12 & CPUREAD & VDA
-#       CPUA15 & CPUA14 & CPUA13 & CPUA12 & CPUREAD & VPA;
+RAMCS = !CPUA15 & VDA								/* 0x0000-0x7FFF (32KB/64KB SRAM)	*/
+#        CPUA15 & !CPUA14 & !CPUA13 & CPUA12 & VDA	/* 0x9000-0x9FFF (128KB SRAM)		*/
+#        CPUA15 & !CPUA14 &  CPUA13 & VDA;			/* 0xA000-0xBFFF (128KB SRAM)		*/
 
-RAMCS = !CPUA15 & VDA
-#       !CPUA15 & VPA;
+IOCS = CPUA15 & !CPUA14 & !CPUA13 & !CPUA12 & VDA;	/* 0x8000-0x8FFF (4KB space)		*/
 
-IOCS = CPUA15 & !CPUA14 & !CPUA13 & !CPUA12 & VDA;
+ROMCS = CPUA15 & CPUA14 & CPUREAD & VDA;			/* 0xC000-0xFFFF (16KB space)		*/
 
-MEMRD = CPUREAD & CLK;
+MEMRD = !CPUA15 &                              CPUREAD & VDA	/* 0x0000-0x7FFF		*/
+#        CPUA15 & !CPUA14 & !CPUA13 & CPUA12 & CPUREAD & VDA	/* 0x9000-0x9FFF		*/
+#        CPUA15 & !CPUA14 &  CPUA13 &          CPUREAD & VDA	/* 0xA000-0xBFFF		*/
+#        CPUA15 &  CPUA14 &                    CPUREAD & VDA;	/* 0xC000-0xFFFF		*/
 
 /*
-RDY = VPA
-#     VDA;
+RDY = VDA;
 */
