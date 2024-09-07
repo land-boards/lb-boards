@@ -20,19 +20,21 @@ PIN  18 = !WAIT
 
 %EQUATION
 IOCS =>
-    !CPUA13 & !CPUA14 & CPUA15 & !IORQ
+    IORQ & !M1
 
 MEMRD =>
-    !CPURD
+    CPURD
 
 RAMCS =>
-    !CPUA15 & !MREQ
+    CPUA15 & MREQ
+  # CPUA14 & MREQ
+  # CPUA13 & MREQ
 
 ROMCS =>
-    CPUA13 & CPUA14 & CPUA15 & !CPURD & !MREQ
+    !CPUA13 & !CPUA14 & !CPUA15 & CPURD & MREQ
 
 WAIT =>
-    MREQ
-  # IORQ
+    !MREQ
+  # !IORQ
 
 %END

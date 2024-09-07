@@ -1,6 +1,6 @@
 Name       LB-6809-01_PLD;
 Partno     ATF16V8B;
-Date       08/19/24;
+Date       09/05/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
@@ -22,21 +22,31 @@ PIN    6   = CPUREAD;
 PIN    7   = VPB;		/* Added as wire on Rev 1 PCB	*/
 PIN    8   = VPA;
 PIN    9   = VDA;
+PIN    11  = D0;
 
 /* Address Decode and Chip Select outputs */
 PIN    12  = !ROMCS;
 PIN    13  = !IOCS;
 PIN    14  = !MEMRD;
+PIN	15  = LED;
 PIN    16  = !RAMCS;
+PIN    17  = LEDSTR;
 PIN    18  = RDY;
 
-ROMCS = CPUA15 & CPUA14 & VPB;
+ROMCS = CPUA15 & CPUA14 & CPUREAD;
 
-RAMCS = !CPUA15 & VPB						/* 0x0000-0x7FFF 32KB SRAM */
-#        CPUA15 & !CPUA14 & !CPUA13 & VPB;	/* 0x8000-0x9FFF Free (8KB	*/
+LEDSTR = CPUA15 & CPUA14 & !CPUREAD & VPB;
+
+LED =  LEDSTR & D0
+#      LED & !LEDSTR;
+
+RAMCS = !CPUA15 &  CPUREAD				/* 0x0000-0x7FFF 32KB SRAM */
+#       !CPUA15 & !CPUREAD & VPB
+#       CPUA15 & !CPUA14 & !CPUA13 &  CPUREAD	/* 0x8000-0x9FFF Free (8KB	*/
+#       CPUA15 & !CPUA14 & !CPUA13 & !CPUREAD & VPB;
 
 IOCS = CPUA15 & !CPUA14 & CPUA13 & VPB;		/* 0xA000-0xBFFF Serial (ACIA)	*/
 
 RDY = VPB;
 
-MEMRD = CPUREAD & VPB;
+MEMRD = CPUREAD;

@@ -5,7 +5,7 @@
   {Program "CUPL(WM) Version 5.0a"}
   {DBtype "Schematic"}
   {DBvrev 1.01}
-  {DBtime "Sat Sep 17 17:04:03 2022 "}
+  {DBtime "Fri Sep 06 15:01:05 2024 "}
   {DBunit "MIL"}
   {DBgrid 10}
   {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
@@ -33,86 +33,61 @@
  {SYMBOL
   {PIN_DEF
    [Ly "PINCON"]
-   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 240}}
-   {P CPUA12 {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
-   {P CPUA13 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
-   {P CPUA14 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
-   {P CPUA15 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
-   {P CPUREAD {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
-   {P VPA {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
-   {P VDA {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
-   {P ROMCS' {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
-   {P IOCS' {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
-   {P MEMRD' {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
-   {P RDY {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
-   {P RAMCS' {Pt "I/O"}{Lq 0}{Ploc 320 20}}
+   {P ROMCS' {Pt "I/O"}{Lq 0}{Ploc 280 20}}
+   {P IOCS' {Pt "I/O"}{Lq 0}{Ploc 280 40}}
+   {P MEMRD' {Pt "I/O"}{Lq 0}{Ploc 280 60}}
+   {P LED {Pt "I/O"}{Lq 0}{Ploc 280 80}}
+   {P RAMCS' {Pt "I/O"}{Lq 0}{Ploc 280 100}}
+   {P LEDSTR {Pt "I/O"}{Lq 0}{Ploc 280 120}}
+   {P RDY {Pt "I/O"}{Lq 0}{Ploc 280 140}}
   }
 
   {PKG
    [Ly "REFDES"]
    [Ts 25][Tj "CB"][Tr 0][Tm "N"]
-   {Rdl 210 270}
+   {Rdl 190 170}
 
    [Ly "PINNUM"]
-   [Ts 15][Tj "RC"]
-   {Pnl 120 250}
-   {Pnl 120 230}
-   {Pnl 120 210}
-   {Pnl 120 190}
-   {Pnl 120 170}
-   {Pnl 120 150}
-   {Pnl 120 130}
-   {Pnl 120 110}
-   {Pnl 120 90}
-   {Pnl 120 70}
-   {Pnl 120 50}
-   {Pnl 120 30}
    [Ts 15][Tj "LC"]
-   {Pnl 300 30}
+   {Pnl 260 30}
+   {Pnl 260 50}
+   {Pnl 260 70}
+   {Pnl 260 90}
+   {Pnl 260 110}
+   {Pnl 260 130}
+   {Pnl 260 150}
 
-   {Sd A 1 2 3 4 5 6 8 9 12 13 14 18 16}
+   {Sd A 12 13 14 15 16 17 18}
   }
 
   {PIC
    [Ly "GATE"]
    [Ts 15][Tj "LC"][Tr 0][Tm "N"]
-   {R 130 260 290 0}
-   {L 130 240 100 240}
-   {L 130 220 100 220}
-   {L 130 200 100 200}
-   {L 130 180 100 180}
-   {L 130 160 100 160}
-   {L 130 140 100 140}
-   {L 130 120 100 120}
-   {L 130 100 100 100}
-   {L 120 80 100 80}
-   {C 125 80 5}
-   {L 120 60 100 60}
-   {C 125 60 5}
-   {L 120 40 100 40}
-   {C 125 40 5}
-   {L 130 20 100 20}
-   {C 295 20 5}
-   {L 300 20 320 20}
+   {R 130 160 250 0}
+   {C 255 20 5}
+   {L 260 20 280 20}
+   {C 255 40 5}
+   {L 260 40 280 40}
+   {C 255 60 5}
+   {L 260 60 280 60}
+   {L 250 80 280 80}
+   {C 255 100 5}
+   {L 260 100 280 100}
+   {L 250 120 280 120}
+   {L 250 140 280 140}
    [Ly "PINNAM"]
    [Tj "LC"]
-   {T "CLK" 140 240}
-   {T "CPUA12" 140 220}
-   {T "CPUA13" 140 200}
-   {T "CPUA14" 140 180}
-   {T "CPUA15" 140 160}
-   {T "CPUREAD" 140 140}
-   {T "VPA" 140 120}
-   {T "VDA" 140 100}
-   {T "ROMCS'" 140 80}
-   {T "IOCS'" 140 60}
-   {T "MEMRD'" 140 40}
-   {T "RDY" 140 20}
    [Tj "RC"]
-   {T "RAMCS'" 280 20}
+   {T "ROMCS'" 240 20}
+   {T "IOCS'" 240 40}
+   {T "MEMRD'" 240 60}
+   {T "LED" 240 80}
+   {T "RAMCS'" 240 100}
+   {T "LEDSTR" 240 120}
+   {T "RDY" 240 140}
    [Ly "DEVICE"]
    [Tj "CT"]
-   {T "G16V8S" 210 -10}
+   {T "VIRTUAL" 190 -10}
   }
 
   {ATR
@@ -123,7 +98,7 @@
    {EX
     [Ly "ATTR2"]
     [Ts 12][Tj "CT"][Tr 0][Tm "N"]
-    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\LB-RETRO-SET\LB-6809-01\LOGIC\LB-6809-01_PLD 210 260}
+    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\LB-RETRO-SET\LB-6809-01\LOGIC\LB-6809-01_PLD 190 160}
    }
   }
  }
@@ -133,31 +108,19 @@
   }
 
   {NET_DEF
-   {N CLK
-   }
-   {N CPUA12
-   }
-   {N CPUA13
-   }
-   {N CPUA14
-   }
-   {N CPUA15
-   }
-   {N CPUREAD
-   }
-   {N VPA
-   }
-   {N VDA
-   }
    {N ROMCS'
    }
    {N IOCS'
    }
    {N MEMRD'
    }
-   {N RDY
+   {N LED
    }
    {N RAMCS'
+   }
+   {N LEDSTR
+   }
+   {N RDY
    }
   }
 
