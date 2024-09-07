@@ -1,0 +1,17 @@
+=== ROM BASIC assembly listing ===
+
+* AS9 was used to assemble the BASIC listing
+* Grant wrote a serial handler to control the text I/O, along with suitable Control-C break handling
+* Includes commands from the "Extended" BASIC ROM (from the "Extended BASIC Unraveled II" book)
+* The ROM in the SBC is fully working with all the commands in the Standard and Extended ROMS that are applicable to the SBC
+* Assembled using as9 (see link later on this page) with the following command...
+
+<pre>
+as9 exbasrom.asm -now l s19
+</pre>
+
+* *-now" suppresses warnings
+* "l" produces a lst file
+* "s19" produces an s19 hex file
+* If you use as9, you will probably get a "Null pointer assignment" message when it completes
+** This can be ignored, and is a known bug with as9 that doesn't affect operation (according to the readme file that came with it)
