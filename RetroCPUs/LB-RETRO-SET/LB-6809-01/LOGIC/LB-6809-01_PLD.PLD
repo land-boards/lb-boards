@@ -1,6 +1,6 @@
 Name       LB-6809-01_PLD;
 Partno     ATF16V8B;
-Date       09/05/24;
+Date       09/07/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
@@ -33,20 +33,19 @@ PIN    16  = !RAMCS;
 PIN    17  = LEDSTR;
 PIN    18  = RDY;
 
-ROMCS = CPUA15 & CPUA14 & CPUREAD;
+ROMCS = CPUA15 & CPUA14 & CPUREAD;	/* 0xC000-0xFFFF	*/
 
-LEDSTR = CPUA15 & CPUA14 & !CPUREAD & VPB;
+RAMCS = !CPUA15 &  CPUREAD		/* 0x0000-0x7FFF 32KB SRAM */
+#       !CPUA15 & !CPUREAD & VPB;
 
-LED =  LEDSTR & D0
-#      LED & !LEDSTR;
-
-RAMCS = !CPUA15 &  CPUREAD				/* 0x0000-0x7FFF 32KB SRAM */
-#       !CPUA15 & !CPUREAD & VPB
-#       CPUA15 & !CPUA14 & !CPUA13 &  CPUREAD	/* 0x8000-0x9FFF Free (8KB	*/
-#       CPUA15 & !CPUA14 & !CPUA13 & !CPUREAD & VPB;
-
-IOCS = CPUA15 & !CPUA14 & CPUA13 & VPB;		/* 0xA000-0xBFFF Serial (ACIA)	*/
+IOCS = CPUA15 & !CPUA14 & CPUA13 &  CPUREAD		/* 0xA000-0xBFFF Serial (ACIA) */
+#      CPUA15 & !CPUA14 & CPUA13 & !CPUREAD & VPB;	
 
 RDY = VPB;
 
 MEMRD = CPUREAD;
+
+LEDSTR = CPUA15 & CPUA14 & !CPUREAD & VPB;	/* write to LED */
+
+LED =  LEDSTR & D0
+#      LED & !LEDSTR;

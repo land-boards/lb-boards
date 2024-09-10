@@ -1,0 +1,42 @@
+Name       LB-68B50-02_6809_PLD;
+Partno     ATF16V8B;
+Date       09/09/24;
+Revision   01;
+Designer   DOUG G;
+Company    LAND BOARDS LLC;
+Assembly   LB-68B50-02_6809_U2;
+Location   Rustbelt, US;
+Device     G16V8;
+
+/*
+	68B50 Control for LB-6809-01 CPU board
+	0xA000-0xBFFF - 8KB I/O space
+*/
+
+/* Control inputs */
+PIN    1   = CPUA15;
+PIN    2   = CPUA14;
+PIN    3   = CPUA13;
+PIN    4   = CPUA12;
+PIN    5   = CPUA11;
+PIN    6   = CPUA10;
+PIN    7   = CPUA1;
+PIN    8   = CPUA0;
+PIN    9   = !IOCS;		/* IOCS is IO space decoded on all CPU cards */
+PIN    11  = VDA;		/* VDA is PH2OUT is enable on 65CXX CPU 	*/
+PIN    12  = VPB;		/* VPB is Enable on 6802 and 6809 CPUs	*/
+PIN    14  = !IORQ;		/* IORQ* is enable on Z80 cards		*/
+
+/* Address Decode and Chip Select outputs */
+PIN    16  = ACIACS1;
+PIN    17  = ACIACS0;
+PIN    18  = ACIARS;
+PIN    19  = ACIAE;
+
+ACIACS1 = CPUA15 & !CPUA14 & CPUA13;
+
+ACIACS0 = CPUA15 & !CPUA14 & CPUA13;
+
+ACIARS = CPUA0;
+
+ACIAE = CPUA15 & !CPUA14 &  CPUA13 & IOCS & VPB;

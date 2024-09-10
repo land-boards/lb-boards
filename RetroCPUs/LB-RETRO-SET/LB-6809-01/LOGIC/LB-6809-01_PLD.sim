@@ -23,7 +23,8 @@ PIN   7 =  VPB
 
 %EQUATION
 IOCS =>
-    CPUA13 & !CPUA14 & CPUA15 & VPB
+    CPUA13 & !CPUA14 & CPUA15 & CPUREAD
+  # CPUA13 & !CPUA14 & CPUA15 & !CPUREAD & VPB
 
 LED =>
     D0 & LEDSTR
@@ -38,13 +39,32 @@ MEMRD =>
 RAMCS =>
     !CPUA15 & CPUREAD
   # !CPUA15 & !CPUREAD & VPB
-  # !CPUA13 & !CPUA14 & CPUA15 & CPUREAD
-  # !CPUA13 & !CPUA14 & CPUA15 & !CPUREAD & VPB
 
 RDY =>
     VPB
 
 ROMCS =>
     CPUA14 & CPUA15 & CPUREAD
+
+IOCS.oe  =>
+    1 
+
+LED.oe  =>
+    1 
+
+LEDSTR.oe  =>
+    1 
+
+MEMRD.oe  =>
+    1 
+
+RAMCS.oe  =>
+    1 
+
+RDY.oe  =>
+    1 
+
+ROMCS.oe  =>
+    1 
 
 %END
