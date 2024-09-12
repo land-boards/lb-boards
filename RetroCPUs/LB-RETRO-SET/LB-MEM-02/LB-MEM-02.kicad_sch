@@ -1845,6 +1845,156 @@
 				)
 			)
 		)
+		(symbol "Device:CP1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Device_CP1"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CP1_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 1.778) (xy -1.27 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.032 -1.27)
+					(mid 0 -0.5572)
+					(end -2.032 -1.27)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CP1_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 3.302)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -3555,13 +3705,19 @@
 		)
 	)
 	(junction
+		(at 132.08 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00b57e68-f5d3-40e6-9146-bb34d0e29618")
+	)
+	(junction
 		(at 24.13 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08195d33-ac8c-4fe7-b5c0-0778b2266fd3")
 	)
 	(junction
-		(at 139.7 182.88)
+		(at 139.7 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2c95b9a6-9c71-4108-9cde-57ddfdd2dd19")
@@ -3591,7 +3747,7 @@
 		(uuid "a3412f8a-d2a6-43cd-99a0-8c48b2f0d036")
 	)
 	(junction
-		(at 147.32 182.88)
+		(at 147.32 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a64aeb89-c24a-493b-9aab-87a6be930bde")
@@ -3607,6 +3763,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b35ef140-7811-4c55-b6fb-654504c2c371")
+	)
+	(junction
+		(at 132.08 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d665ec69-c67d-41d6-9655-cccd54634461")
 	)
 	(junction
 		(at 24.13 138.43)
@@ -3696,7 +3858,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 184.15) (xy 147.32 182.88)
+			(xy 147.32 182.88) (xy 147.32 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3733,6 +3895,16 @@
 			(type default)
 		)
 		(uuid "2165c9a4-eb84-4cb6-a870-2fdc39d2511b")
+	)
+	(wire
+		(pts
+			(xy 123.19 190.5) (xy 132.08 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23f2b7f4-ee77-4508-a61a-ec5566ebf012")
 	)
 	(wire
 		(pts
@@ -3796,7 +3968,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 180.34) (xy 147.32 182.88)
+			(xy 147.32 177.8) (xy 147.32 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3936,7 +4108,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 190.5) (xy 132.08 189.23)
+			(xy 132.08 190.5) (xy 132.08 187.96)
 		)
 		(stroke
 			(width 0)
@@ -4083,6 +4255,16 @@
 			(type default)
 		)
 		(uuid "4e9738af-e8ba-4ced-b663-f99130b6faa1")
+	)
+	(wire
+		(pts
+			(xy 123.19 180.34) (xy 132.08 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ef45db1-dd01-445d-a44b-32dce1bc21e0")
 	)
 	(wire
 		(pts
@@ -4256,7 +4438,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 189.23) (xy 147.32 190.5)
+			(xy 147.32 187.96) (xy 147.32 190.5)
 		)
 		(stroke
 			(width 0)
@@ -4326,7 +4508,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 184.15) (xy 139.7 182.88)
+			(xy 139.7 182.88) (xy 139.7 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4336,7 +4518,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 184.15) (xy 132.08 182.88)
+			(xy 132.08 182.88) (xy 132.08 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4566,7 +4748,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 182.88) (xy 147.32 182.88)
+			(xy 139.7 180.34) (xy 147.32 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4636,7 +4818,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 189.23) (xy 139.7 190.5)
+			(xy 139.7 187.96) (xy 139.7 190.5)
 		)
 		(stroke
 			(width 0)
@@ -4866,6 +5048,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 181.61) (xy 123.19 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc7e397e-78e5-4dae-9f4c-6a2967280580")
+	)
+	(wire
+		(pts
 			(xy 137.16 72.39) (xy 137.16 73.66)
 		)
 		(stroke
@@ -4916,6 +5108,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 189.23) (xy 123.19 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0cee266-6664-495c-826a-e2b49683276c")
+	)
+	(wire
+		(pts
 			(xy 144.78 90.17) (xy 158.75 90.17)
 		)
 		(stroke
@@ -4956,7 +5158,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 182.88) (xy 139.7 182.88)
+			(xy 132.08 180.34) (xy 139.7 180.34)
 		)
 		(stroke
 			(width 0)
@@ -6259,7 +6461,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 139.7 186.69 180)
+		(at 139.7 185.42 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6267,7 +6469,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f78dcaf")
 		(property "Reference" "C2"
-			(at 142.24 184.15 0)
+			(at 142.24 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6275,7 +6477,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 143.51 189.23 0)
+			(at 143.51 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6283,7 +6485,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
-			(at 139.7 194.31 0)
+			(at 128.27 200.914 0)
 			(effects
 				(font
 					(size 0.508 0.508)
@@ -6291,7 +6493,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 139.7 186.69 0)
+			(at 139.7 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6300,7 +6502,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 186.69 0)
+			(at 139.7 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6325,7 +6527,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 147.32 186.69 180)
+		(at 147.32 185.42 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6333,7 +6535,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f78dd11")
 		(property "Reference" "C3"
-			(at 149.86 184.15 0)
+			(at 149.86 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6341,7 +6543,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 151.13 189.23 0)
+			(at 151.13 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6349,7 +6551,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
-			(at 147.32 191.77 0)
+			(at 128.27 200.152 0)
 			(effects
 				(font
 					(size 0.508 0.508)
@@ -6357,7 +6559,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 186.69 0)
+			(at 147.32 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6366,7 +6568,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 147.32 186.69 0)
+			(at 147.32 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6391,7 +6593,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 132.08 186.69 180)
+		(at 132.08 185.42 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6399,7 +6601,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f78dd79")
 		(property "Reference" "C1"
-			(at 134.62 184.15 0)
+			(at 134.62 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6407,7 +6609,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 135.89 189.23 0)
+			(at 135.89 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6415,7 +6617,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm"
-			(at 132.08 193.04 0)
+			(at 128.27 201.676 0)
 			(effects
 				(font
 					(size 0.508 0.508)
@@ -6423,7 +6625,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 132.08 186.69 0)
+			(at 132.08 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6432,7 +6634,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 186.69 0)
+			(at 132.08 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7303,7 +7505,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 147.32 180.34 0)
+		(at 147.32 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7312,7 +7514,7 @@
 		(fields_autoplaced yes)
 		(uuid "669837ae-e503-4901-a37c-838ac4fe5041")
 		(property "Reference" "#PWR0109"
-			(at 147.32 184.15 0)
+			(at 147.32 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7321,7 +7523,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 147.32 176.7355 0)
+			(at 147.32 174.1955 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7329,7 +7531,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 180.34 0)
+			(at 147.32 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7338,7 +7540,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 180.34 0)
+			(at 147.32 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7347,7 +7549,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 147.32 180.34 0)
+			(at 147.32 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7577,16 +7779,15 @@
 	)
 	(symbol
 		(lib_id "LandBoards:COUPON")
-		(at 110.49 191.77 0)
+		(at 91.44 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "778130e2-5dcf-4ba4-bd77-4acc3a461105")
 		(property "Reference" "TEST1"
-			(at 116.205 187.5303 0)
+			(at 97.155 187.5303 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7595,7 +7796,7 @@
 			)
 		)
 		(property "Value" "COUPON"
-			(at 116.205 190.8093 0)
+			(at 97.155 190.8093 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7604,15 +7805,15 @@
 			)
 		)
 		(property "Footprint" "LandBoards_Marking:TEST_BLK-REAR"
-			(at 110.49 191.77 0)
+			(at 90.678 193.548 0)
 			(effects
 				(font
-					(size 1.524 1.524)
+					(size 0.762 0.762)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 191.77 0)
+			(at 91.44 191.77 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -7620,7 +7821,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 110.49 191.77 0)
+			(at 91.44 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8031,6 +8232,73 @@
 			(project "LB-MEM-02"
 				(path "/f9403623-c00c-4b71-bc5c-d763ff009386"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:CP1")
+		(at 123.19 185.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7aba3a8-6aef-4491-a307-8349b9c2cee4")
+		(property "Reference" "C4"
+			(at 124.46 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF"
+			(at 124.46 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 127 199.39 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 185.42 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "68062ca3-f390-46f2-bf4c-a3b73c7b03f3")
+		)
+		(pin "2"
+			(uuid "081f82bc-9e0c-45d9-baa9-6e52433b522c")
+		)
+		(instances
+			(project "LB-MEM-02"
+				(path "/f9403623-c00c-4b71-bc5c-d763ff009386"
+					(reference "C4")
 					(unit 1)
 				)
 			)

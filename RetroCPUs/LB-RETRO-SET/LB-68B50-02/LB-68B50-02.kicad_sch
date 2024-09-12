@@ -6590,6 +6590,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:CP1")
+		(at 21.59 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53ad8a30-b771-4e72-9e39-5eab4467f665")
+		(property "Reference" "C4"
+			(at 22.86 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF"
+			(at 22.86 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 22.352 199.898 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 186.69 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 21.59 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "914cefa2-1505-4afd-b55a-044a6a4814a9")
+		)
+		(pin "2"
+			(uuid "a881fae2-a546-4e40-a693-2df08d399fd9")
+		)
+		(instances
+			(project "LB-68B50-02"
+				(path "/f9403623-c00c-4b71-bc5c-d763ff009386"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
 		(at 146.05 21.59 0)
 		(unit 1)
@@ -6650,73 +6717,6 @@
 			(project "LB-68B50-02"
 				(path "/f9403623-c00c-4b71-bc5c-d763ff009386"
 					(reference "#PWR0103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:CP1")
-		(at 21.59 186.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5fb5e9b1-a6b6-4d78-8838-99467728c6e8")
-		(property "Reference" "C4"
-			(at 22.86 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47uF"
-			(at 22.86 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P2.50mm"
-			(at 23.368 196.85 0)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 21.59 186.69 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 21.59 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cc387c8d-ae78-4ff3-b4b9-f719833c5ecb")
-		)
-		(pin "2"
-			(uuid "affd8a04-ecc2-4705-821e-1622f06d4c71")
-		)
-		(instances
-			(project "LB-68B50-02"
-				(path "/f9403623-c00c-4b71-bc5c-d763ff009386"
-					(reference "C4")
 					(unit 1)
 				)
 			)
