@@ -4670,6 +4670,16 @@
 	)
 	(wire
 		(pts
+			(xy 196.85 76.2) (xy 212.09 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01bf7ad1-ee77-4102-967f-7b78ebb4cf15")
+	)
+	(wire
+		(pts
 			(xy 120.65 45.72) (xy 120.65 48.26)
 		)
 		(stroke
@@ -6392,6 +6402,19 @@
 		)
 		(uuid "b3eebb03-af8c-48e8-a7d9-5ec3741206fa")
 	)
+	(text "Rev 3:\nAdd bulk electrolytic cap, C8\nMake reset switch vertical\nAdd LED"
+		(exclude_from_sim no)
+		(at 159.004 160.782 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "de9a5bfc-3e23-4220-8b30-a591cc8e8ec6")
+	)
 	(label "VPA"
 		(at 171.45 83.82 0)
 		(fields_autoplaced yes)
@@ -7428,6 +7451,17 @@
 			(justify left bottom)
 		)
 		(uuid "eed466bf-cd88-4860-9abf-41a594ca08bd")
+	)
+	(label "CPUD0"
+		(at 199.39 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef971455-ca18-4831-9378-1d5095006b40")
 	)
 	(label "VPA"
 		(at 199.39 71.12 0)

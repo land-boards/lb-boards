@@ -1,18 +1,18 @@
-Name       LB-68B50-02_68XX_PLD;
+Name       LB-68B50-02_6XXX_PLD;
 Partno     ATF16V8B;
-Date       09/03/24;
+Date       09/012/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
-Assembly   LB-68B50-02_68XX_U2;
+Assembly   LB-68B50-02_6XXX_U2;
 Location   Rustbelt, US;
 Device     G16V8;
 
 /*
-	68B50 Control for LB-6809-01 and LB-6802-01 CPU boards
+	68B50 Control for LB-6809-01, LB-6802-01, and LB-65CXX CPU boards
 	VDA is PH2OUT 
 	PH2OUT high during read/write cycles
-	0x8000-0x8FFF - 4KB I/O space
+	0x8000-0xBFFF - 16KB I/O space
 */
 
 /* Control inputs */
