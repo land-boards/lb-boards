@@ -1,0 +1,27 @@
+== Software ==
+
+* [https://github.com/land-boards/lb-boards/blob/master/RetroCPUs/SIMPLE-Z80/SOFTWARE/ROM.HEX ROM.HEX] - ROM file
+* Nascom 2 Computer BASIC Microsoft BASIC 4.7 modified to remove all hardware-specific code
+
+=== Source files ===
+
+* intmini.asm - the interupt driven mini startup program needed to boot into BASIC
+* basic.asm - BASIC 4.7b - a conversion of Microsoft BASIC 4.7, as used on the Nascom computers (see below for details)
+
+=== Output files ===
+
+* INTMINI.HEX
+* BASIC.HEX
+* ROM.HEX - the complete 8K ROM ready for burning to an EPROM - the unused contents are filled with FF values.
+* Within the ROM, the serial handler is first (starting at address 0000H), followed by the BASIC interpreter (starting at 0100H).
+
+=== Assembler files (for Windows/DOS) ===
+
+* _ASSEMBLE.BAT - double-click in Windows to run the assembly if needed
+* TASM.EXE
+* TASM80.TAB
+
+=== Acknowledgements ===
+
+* BASIC is Microsoft BASIC 4.7 for the NASCOM, heavily modified by Grant to remove references to different monitors, screen handlers and keyboard matrix reading
+* TASM assembler is a partial distribution of the package from Speech Technology Incorporated
