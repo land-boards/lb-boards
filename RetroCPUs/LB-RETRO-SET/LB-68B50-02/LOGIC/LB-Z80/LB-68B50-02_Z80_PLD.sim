@@ -1,0 +1,36 @@
+%SIGNAL
+PIN  17 =  ACIACS0 
+PIN  16 =  ACIACS1 
+PIN  19 =  ACIAE 
+PIN  18 =  ACIARS 
+PIN   8 =  CPUA0 
+PIN   7 =  CPUA1 
+PIN   6 =  CPUA10 
+PIN   5 =  CPUA11 
+PIN   4 =  CPUA12 
+PIN   3 =  CPUA13 
+PIN   2 =  CPUA14 
+PIN   1 =  CPUA15 
+PIN   9 = !IOCS 
+PIN  13 = !IORQ 
+PIN  11 =  VDA 
+PIN  12 =  VPB 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+ACIACS0 =>
+    !IOCS & !IORQ
+
+ACIACS1 =>
+    !IOCS & !IORQ
+
+ACIAE =>
+    !IOCS & !IORQ
+
+ACIARS =>
+    CPUA0
+
+%END

@@ -5,7 +5,9 @@ PIN   3 =  CPUA13
 PIN   4 =  CPUA14 
 PIN   5 =  CPUA15 
 PIN   6 =  CPUREAD 
+PIN  11 =  D0 
 PIN  13 = !IOCS 
+PIN  17 =  LED 
 PIN  15 = !MEMRD 
 PIN  16 = !RAMCS 
 PIN  18 =  RDY 
@@ -19,8 +21,15 @@ PIN   8 =  VPA
 
 %EQUATION
 IOCS =>
-    !CPUA12 & CPUA13 & !CPUA14 & CPUA15 & CPUREAD
-  # !CPUA12 & CPUA13 & !CPUA14 & CPUA15 & !CPUREAD & VDA
+    !CPUA14 & CPUA15 & CPUREAD
+  # !CPUA14 & CPUA15 & !CPUREAD & VDA
+
+LED =>
+    CPUA14 & CPUA15 & !CPUREAD & D0 & VDA
+  # !CPUA15 & LED
+  # !CPUA14 & LED
+  # CPUREAD & LED
+  # LED & !VDA
 
 MEMRD =>
     CPUREAD
@@ -34,5 +43,23 @@ RDY =>
 
 ROMCS =>
     CPUA14 & CPUA15 & CPUREAD
+
+IOCS.oe  =>
+    1 
+
+LED.oe  =>
+    1 
+
+MEMRD.oe  =>
+    1 
+
+RAMCS.oe  =>
+    1 
+
+RDY.oe  =>
+    1 
+
+ROMCS.oe  =>
+    1 
 
 %END

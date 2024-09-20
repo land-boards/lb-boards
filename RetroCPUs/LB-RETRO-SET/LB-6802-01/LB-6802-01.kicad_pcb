@@ -9084,8 +9084,8 @@
 			(uuid "48126003-77dd-4f7b-ac90-9ec225dc192a")
 			(effects
 				(font
-					(size 1.524 1.524)
-					(thickness 0.3048)
+					(size 1.397 1.397)
+					(thickness 0.3175)
 				)
 				(justify mirror)
 			)
@@ -10850,13 +10850,13 @@
 		(descr "LED, diameter 5.0mm z-position of LED center 3.0mm, 2 pins, diameter 5.0mm z-position of LED center 3.0mm, 2 pins, diameter 5.0mm z-position of LED center 3.0mm, 2 pins, diameter 5.0mm z-position of LED center 9.0mm, 2 pins, diameter 5.0mm z-position of LED center 9.0mm, 2 pins")
 		(tags "LED diameter 5.0mm z-position of LED center 3.0mm 2 pins diameter 5.0mm z-position of LED center 3.0mm 2 pins diameter 5.0mm z-position of LED center 3.0mm 2 pins diameter 5.0mm z-position of LED center 9.0mm 2 pins diameter 5.0mm z-position of LED center 9.0mm 2 pins")
 		(property "Reference" "D1"
-			(at 1.27 -1.96 90)
+			(at -2.535 -0.092 180)
 			(layer "F.SilkS")
 			(uuid "7e4ca6f4-6f83-4d61-ba05-ace344394481")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.397 1.397)
+					(thickness 0.3175)
 				)
 			)
 		)
@@ -11668,18 +11668,18 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=7.62mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 7.62mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R7"
-			(at 9.652 0 360)
+			(at 9.906 0 0)
 			(layer "F.SilkS")
 			(uuid "740bb807-0f08-4e82-99b5-89e9669a4ba6")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 1.397 1.397)
+					(thickness 0.3175)
 				)
 			)
 		)
 		(property "Value" "1.8K"
-			(at 3.81 0 360)
+			(at 3.81 0 0)
 			(layer "F.SilkS")
 			(uuid "95a6443e-6923-406a-95e0-445ae622e531")
 			(effects
@@ -11894,7 +11894,7 @@
 			(uuid "e272f98f-ca4d-4b22-a864-bcb73af8b5f6")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 3.81 0 360)
+			(at 3.81 0 0)
 			(layer "F.Fab")
 			(uuid "8dad51b7-dc8b-4f71-885b-97bb804b80d9")
 			(effects
@@ -12747,10 +12747,34 @@
 			(justify mirror)
 		)
 	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 179.324 50.038 0)
+		(layer "B.SilkS")
+		(uuid "c5390acf-f1ce-4355-b109-c6adfadd97b9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "RESET"
 		(at 143.51 127 90)
 		(layer "F.SilkS")
 		(uuid "03efc05b-39a3-47f0-b9a6-70a75ac536a0")
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.635)
+			)
+		)
+	)
+	(gr_text "STATUS"
+		(at 149.098 55.626 90)
+		(layer "F.SilkS")
+		(uuid "10f1cc95-26b1-4da5-b6c8-b59a915e7a28")
 		(effects
 			(font
 				(size 2.54 2.54)

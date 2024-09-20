@@ -1,6 +1,6 @@
 Name       LB-Z80-01_PLD;
 Partno     ATF16V8B;
-Date       09/17/20;
+Date       09/19/20;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
@@ -32,9 +32,21 @@ PIN    18  = !WAIT;
 
 ROMCS = !CPUA15 & !CPUA14 & !CPUA13 & MREQ & CPURD;
 
+/* 56KB SRAM */
+/*
 RAMCS = CPUA15 & MREQ
 #       CPUA14 & MREQ
 #       CPUA13 & MREQ;
+*/
+
+/* 32KB SRAM */
+RAMCS = CPUA15 & MREQ;
+
+/*
+RAMCS = CPUA15 & MREQ
+#       CPUA14 & MREQ
+#       CPUA13 & MREQ;
+*/
 
 IOCS = !M1 & IORQ;
 

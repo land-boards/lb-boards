@@ -1,6 +1,6 @@
 Name       LB-65CXX-01_PLD;
 Partno     ATF16V8B;
-Date       09/12/24;
+Date       09/14/24;
 Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
@@ -21,22 +21,27 @@ PIN    5   = CPUA15;
 PIN    6   = CPUREAD;
 PIN    8   = VPA;
 PIN    9   = VDA;		/* Pin 39, PH2OUT - Enable line */
+PIN   11   = D0;
 
 /* Address Decode and Chip Select outputs */
 PIN    13  = !IOCS;
 PIN    14  = !ROMCS;
 PIN    15  = !MEMRD;
 PIN    16  = !RAMCS;
+PIN    17  = LED;
 PIN    18  = RDY;
 
 RAMCS = !CPUA15 & CPUREAD		/* 0x0000-0x7FFF */
 #       !CPUA15 & !CPUREAD & VDA;
 
-IOCS = CPUA15 & !CPUA14 & CPUA13 & !CPUA12 & CPUREAD	/* 0x8000-0x8FFF */
-#      CPUA15 & !CPUA14 & CPUA13 & !CPUA12 & !CPUREAD & VDA;
+IOCS = CPUA15 & !CPUA14 &  CPUREAD	/* 0x8000-0xBFFF */
+#      CPUA15 & !CPUA14 & !CPUREAD & VDA;
 
 ROMCS = CPUA15 & CPUA14 & CPUREAD;	/* 0xC000-0xFFFF (16KB space)		*/
 
 RDY = VDA;
 
 MEMRD = CPUREAD;
+
+LED =  CPUA15 & CPUA14 & !CPUREAD & VDA & D0
+#      LED & !(CPUA15 & CPUA14 & !CPUREAD & VDA);
