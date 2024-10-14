@@ -5,7 +5,7 @@
   {Program "CUPL(WM) Version 5.0a"}
   {DBtype "Schematic"}
   {DBvrev 1.01}
-  {DBtime "Mon Oct 14 14:59:40 2024 "}
+  {DBtime "Thu Sep 19 12:57:02 2024 "}
   {DBunit "MIL"}
   {DBgrid 10}
   {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
@@ -33,30 +33,31 @@
  {SYMBOL
   {PIN_DEF
    [Ly "PINCON"]
-   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
-   {P CPUA13 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
-   {P CPUA14 {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
-   {P CPUA15 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
-   {P MREQ' {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
-   {P IORQ' {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
-   {P M1' {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
-   {P CPURD' {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
-   {P CPUWR' {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
-   {P CPUD0 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
-   {P ROMCS' {Pt "I/O"}{Lq 0}{Ploc 310 20}}
-   {P IOCS' {Pt "I/O"}{Lq 0}{Ploc 310 40}}
-   {P RAMCS' {Pt "I/O"}{Lq 0}{Ploc 310 60}}
-   {P MEMRD' {Pt "I/O"}{Lq 0}{Ploc 310 80}}
-   {P LED {Pt "I/O"}{Lq 0}{Ploc 310 100}}
+   {P CLK {Pt "INPUT"}{Lq 0}{Ploc 100 240}}
+   {P CPUA13 {Pt "INPUT"}{Lq 0}{Ploc 100 220}}
+   {P CPUA14 {Pt "INPUT"}{Lq 0}{Ploc 100 200}}
+   {P CPUA15 {Pt "INPUT"}{Lq 0}{Ploc 100 180}}
+   {P MREQ' {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P IORQ' {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P M1' {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P CPURD' {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P CPUWR' {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P ROMCS' {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P IOCS' {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P WAIT' {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P RAMCS' {Pt "I/O"}{Lq 0}{Ploc 310 20}}
+   {P MEMRD' {Pt "I/O"}{Lq 0}{Ploc 310 40}}
   }
 
   {PKG
    [Ly "REFDES"]
    [Ts 25][Tj "CB"][Tr 0][Tm "N"]
-   {Rdl 205 230}
+   {Rdl 205 270}
 
    [Ly "PINNUM"]
    [Ts 15][Tj "RC"]
+   {Pnl 120 250}
+   {Pnl 120 230}
    {Pnl 120 210}
    {Pnl 120 190}
    {Pnl 120 170}
@@ -70,21 +71,22 @@
    [Ts 15][Tj "LC"]
    {Pnl 290 30}
    {Pnl 290 50}
-   {Pnl 290 70}
-   {Pnl 290 90}
-   {Pnl 290 110}
 
-   {Sd A 1 2 3 4 5 6 7 8 9 11 13 14 15 16 18}
+   {Sd A 1 2 3 4 5 6 7 8 9 13 14 18 15 16}
   }
 
   {PIC
    [Ly "GATE"]
    [Ts 15][Tj "LC"][Tr 0][Tm "N"]
-   {R 130 220 280 0}
+   {R 130 260 280 0}
+   {L 130 240 100 240}
+   {L 130 220 100 220}
    {L 130 200 100 200}
    {L 130 180 100 180}
-   {L 130 160 100 160}
-   {L 130 140 100 140}
+   {L 120 160 100 160}
+   {C 125 160 5}
+   {L 120 140 100 140}
+   {C 125 140 5}
    {L 120 120 100 120}
    {C 125 120 5}
    {L 120 100 100 100}
@@ -95,37 +97,32 @@
    {C 125 60 5}
    {L 120 40 100 40}
    {C 125 40 5}
-   {L 130 20 100 20}
+   {L 120 20 100 20}
+   {C 125 20 5}
    {C 285 20 5}
    {L 290 20 310 20}
    {C 285 40 5}
    {L 290 40 310 40}
-   {C 285 60 5}
-   {L 290 60 310 60}
-   {C 285 80 5}
-   {L 290 80 310 80}
-   {L 280 100 310 100}
    [Ly "PINNAM"]
    [Tj "LC"]
-   {T "CLK" 140 200}
-   {T "CPUA13" 140 180}
-   {T "CPUA14" 140 160}
-   {T "CPUA15" 140 140}
-   {T "MREQ'" 140 120}
-   {T "IORQ'" 140 100}
-   {T "M1'" 140 80}
-   {T "CPURD'" 140 60}
-   {T "CPUWR'" 140 40}
-   {T "CPUD0" 140 20}
+   {T "CLK" 140 240}
+   {T "CPUA13" 140 220}
+   {T "CPUA14" 140 200}
+   {T "CPUA15" 140 180}
+   {T "MREQ'" 140 160}
+   {T "IORQ'" 140 140}
+   {T "M1'" 140 120}
+   {T "CPURD'" 140 100}
+   {T "CPUWR'" 140 80}
+   {T "ROMCS'" 140 60}
+   {T "IOCS'" 140 40}
+   {T "WAIT'" 140 20}
    [Tj "RC"]
-   {T "ROMCS'" 270 20}
-   {T "IOCS'" 270 40}
-   {T "RAMCS'" 270 60}
-   {T "MEMRD'" 270 80}
-   {T "LED" 270 100}
+   {T "RAMCS'" 270 20}
+   {T "MEMRD'" 270 40}
    [Ly "DEVICE"]
    [Tj "CT"]
-   {T "G16V8MA" 205 -10}
+   {T "G16V8S" 205 -10}
   }
 
   {ATR
@@ -136,7 +133,7 @@
    {EX
     [Ly "ATTR2"]
     [Ts 12][Tj "CT"][Tr 0][Tm "N"]
-    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\LB-RETRO-SET\LB-Z80-01\LOGIC\LB-Z80-01_PLD 205 220}
+    {At PLD C:\USERS\HPZ420\DOCUMENTS\GITHUB\LAND-BOARDS\LB-BOARDS\RETROCPUS\LB-RETRO-SET\LB-Z80-01\LOGIC\LB-Z80-01_PLD 205 260}
    }
   }
  }
@@ -164,17 +161,15 @@
    }
    {N CPUWR'
    }
-   {N CPUD0
-   }
    {N ROMCS'
    }
    {N IOCS'
    }
+   {N WAIT'
+   }
    {N RAMCS'
    }
    {N MEMRD'
-   }
-   {N LED
    }
   }
 

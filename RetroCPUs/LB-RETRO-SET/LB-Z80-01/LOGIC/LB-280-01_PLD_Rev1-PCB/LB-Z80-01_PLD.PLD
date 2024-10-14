@@ -1,14 +1,14 @@
 Name       LB-Z80-01_PLD;
 Partno     ATF16V8B;
-Date       10/14/24;
-Revision   02;
+Date       09/19/20;
+Revision   01;
 Designer   DOUG G;
 Company    LAND BOARDS LLC;
 Assembly   LB-Z80-01_U2;
 Location   Rustbelt, US;
 Device     G16V8;
 
-/* Rev 2 PCB
+/*
 */
 
 
@@ -22,15 +22,13 @@ PIN    6   = !IORQ;
 PIN    7   = !M1;
 PIN    8   = !CPURD;
 PIN    9   = !CPUWR;
-PIN    11  = CPUD0;
 
 /* Address Decode and Chip Select outputs */
 PIN    13  = !ROMCS;
 PIN    14  = !IOCS;
-PIN    15  = !RAMCS;
 PIN    16  = !MEMRD;
-/* PIN    17  = !WAIT; */
-PIN    18  = LED;
+PIN    15  = !RAMCS;
+PIN    18  = !WAIT;
 
 ROMCS = !CPUA15 & !CPUA14 & !CPUA13 & MREQ & CPURD;
 
@@ -52,11 +50,6 @@ RAMCS = CPUA15 & MREQ
 
 IOCS = !M1 & IORQ;
 
-/*
 WAIT = !MREQ # !IORQ;
-*/
 
 MEMRD = CPURD;
-
-LED =     !CPUA15 & !CPUA14 & !CPUA13 & MREQ & CPUWR & CPUD0
-# LED & !(!CPUA15 & !CPUA14 & !CPUA13 & MREQ & CPUWR);
