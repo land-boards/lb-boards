@@ -25,7 +25,7 @@ PIN    8   = CPUA0;
 PIN    9   = !IOCS;	/* IOCS is IO space decoded on all CPU cards 	*/
 PIN    11   = VDA;	/* Not used in any version	*/
 PIN    12   = VPB;	/* VPB is enable on 6802, 6809 AND 6502 (Rev 2 rwk) CPUs */
-PIN    14   = !IORQ;	/* IORQ* is enable on Z80 cards	*/
+PIN    13   = !IORQ;	/* IORQ* is enable on Z80 cards	*/
 
 /* Address Decode and Chip Select outputs */
 PIN    16  = ACIACS1;

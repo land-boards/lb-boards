@@ -1,0 +1,48 @@
+Name       LB-68B50-02_PLD;
+Partno     ATF16V8B;
+Date       10/15/24;
+Revision   01;
+Designer   DOUG G;
+Company    LAND BOARDS LLC;
+Assembly   LB-68B50-02_U2;
+Location   Rustbelt, US;
+Device     G16V8;
+
+/*
+	With LB-6809-01, LB-6802-01, LB-65CXX CPU boards
+		0x8000-0xBFFF - 16KB I/O space
+	With LB-Z80-01 CPU Board
+*/
+
+/* Control inputs */
+PIN    1   = CPUA15;
+PIN    2   = CPUA14;
+PIN    3   = CPUA13;
+PIN    4   = CPUA12;
+PIN    5   = CPUA11;
+PIN    6   = CPUA10;
+PIN    7   = CPUA1;
+PIN    8   = CPUA0;
+PIN    9   = !IOCS;	/* IOCS is IO space decoded on all CPU cards 	*/
+PIN    11   = VDA;		/* Not used in any version	*/
+PIN    12   = VPB;		/* VPB is enable on 6802, 6809 AND 6502 (Rev 2 rwk) CPUs */
+PIN    13   = !IORQ;	/* IORQ* is enable on Z80 cards			*/
+PIN    14   = CFP6XXX;	/* 1 = 6502, 6802, 6809. 0 = Z80		*/
+PIN    15   = LED;		/* LED output		*/
+
+/* Address Decode and Chip Select outputs */
+PIN    16  = ACIACS1;
+PIN    17  = ACIACS0;
+PIN    18  = ACIARS;
+PIN    19  = ACIAE;
+
+ACIACS1 = CFP6XXX & CPUA15 & !CPUA14 & IOCS
+#        !CFP6XXX & IOCS & IORQ;
+
+ACIACS0 = CFP6XXX & CPUA15 & !CPUA14 & IOCS
+#        !CFP6XXX & IOCS & IORQ;
+
+ACIARS = CPUA0;
+
+ACIAE = CFP6XXX & CPUA15 & !CPUA14 & IOCS & VPB
+#      !CFP6XXX & IOCS & IORQ;
