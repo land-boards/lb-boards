@@ -43,5 +43,5 @@ RDY = VPB;
 
 MEMRD = CPUREAD;
 
-LED =  CPUA15 & CPUA14 & !CPUREAD & VPB & D0
-#      LED & !(CPUA15 & CPUA14 & !CPUREAD & VPB);
+LED = CPUA15 & CPUA14 &  CPUA13 & !CPUREAD & VPB   /* Write 0xe000 (57344) to set */
+# LED & !(CPUA15 & CPUA14 & !CPUA13 & !CPUREAD & VPB); /* Write 0xc000 (49152) to clear */
